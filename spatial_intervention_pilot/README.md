@@ -1,4 +1,31 @@
-# Spatial Intervention Pilot — Phase 0–3
+# Spatial Intervention Pilot — Phase 0–3.5
+
+## Phase 3.5：错误来源定位（已完成）
+
+本轮只使用原六核心样本，派生 24 张 NONE/A/B/AB 后态图和 6 个独立目标重叠问题。
+后态图只包含当前几何、障碍和 Start/Goal，不含编辑标记、类别、真值或求解器路径。
+诊断模型只读专用清单与图像，不读私有映射、旧预测或真值；独立评估在全部推理结束后进行。
+沿用 Phase 3 的模型、revision、环境、随机种子与解码参数，使用预先冻结的两个新英文 prompt。
+
+- [phase3_5_diagnostic.md：结论、限制、逐样本比较和原文链接](reports/phase3_5/phase3_5_diagnostic.md)
+- [24 张后态诊断图预览](reports/phase3_5/poststate_inputs_montage.png)
+- [原始回答、解析错误、耗时和显存](outputs/phase3_5/predictions.jsonl)
+- [配对评估与独立重叠检查](reports/phase3_5/evaluation.json)
+- [输入清单与派生图](diagnostics/phase3_5/inputs/)；[独立几何敏感性与半径能力诊断](diagnostics/phase3_5/private/geometry_diagnostics.json)
+
+模型对 24 图全部回答不可达，14/24 正确，与恒不可达基线相同；10 个可达图全部漏判。
+18 项配对由旧 6/18 变为新 8/18，但 7 项恢复伴随 5 项退化，不能据此隔离编辑后状态想象困难。
+重叠检查正确 40/54、误报 14 项；因 54 项真实重叠全为否，不据此声称一般空间感知能力。
+物体尺寸±5%和机器人半径±0.02m、两分辨率下的240次搜索无标签翻转。见证路径可贴边至约1.25mm，
+而可达图的网格圆盘容量约0.80/0.90m，不能把见证最小裕量当通道余量。
+
+新结果分置于 `diagnostics/phase3_5/`、`outputs/phase3_5/`、`reports/phase3_5/`，没有混入原 data 或覆盖 Phase 3。
+阶段命令为 `bash scripts/run_phase3_5.sh prepare|geometry|infer|evaluate`，报告入口为
+`PYTHONPATH="$PWD/src" .venv/bin/python scripts/report_phase3_5.py`。已有产物拒绝覆盖。
+测试：`PYTHONPATH="$PWD/src" .venv/bin/python -m pytest tests tests_vlm tests_phase3_5`，94项全部通过。
+本轮停止，等待研究者复核；不训练、不扩充基础场景、不升级环境。
+
+以下 Phase 3 与 Phase 0–2 记录保留作历史说明。
 
 这是离线诊断性先导实验。Checkpoint B 已经研究者检查，Phase 3 部署与六核心样本推理冒烟现已完成。
 几何环境和原始数据完整保留；VLM 采用独立 `.venv-vlm`，不训练、不扩充正式数据，也不修改已有 ROS/CUDA/驱动。

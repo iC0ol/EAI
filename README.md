@@ -1,5 +1,14 @@
 # EAI — Spatial Intervention Pilot
 
+**Phase 3.5 错误来源定位已完成，等待研究者复核。**
+[完整诊断报告](spatial_intervention_pilot/reports/phase3_5/phase3_5_diagnostic.md) ·
+[独立后态图预览](spatial_intervention_pilot/reports/phase3_5/poststate_inputs_montage.png) ·
+[30 次诊断原始结果](spatial_intervention_pilot/outputs/phase3_5/predictions.jsonl)。
+
+24 张后态图全部被模型判为不可达，14/24 正确，等同恒不可达基线；18 项与旧实验配对，7 项恢复、5 项退化。
+独立目标重叠诊断有 14/54 个假阳性（真值全为负例）；240 次几何扰动搜索无标签变化。
+这些结果不支持把错误单独归因于组合推理。原 Phase 3 全部结果保留，94 项测试通过，环境未升级。
+
 用于 VLM 空间可执行性与假设场景编辑诊断的离线先导实验。**Phase 0–2 / Checkpoint B 已经研究者检查**，
 已完成 Phase 3：独立部署 Qwen3-VL-4B-Instruct，并对六核心样本做固定 prompt 的推理冒烟。
 不训练、不微调、不扩充研究数据集。

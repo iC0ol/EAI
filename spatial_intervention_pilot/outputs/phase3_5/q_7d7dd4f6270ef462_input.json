@@ -1,0 +1,20 @@
+{
+  "query_id": "q_7d7dd4f6270ef462",
+  "source_image": "data/images/s_6850ce92ab65.png",
+  "input_image_sha256": "fee58c860654197b0e5e67ef7055e507043aba1f32a5e46b1d42e6186c7464ab",
+  "prompt_text": "Independently check proposed target-footprint overlap in the single original map image.\nSolid A and B are original object footprints. Dashed A' and B' are proposed final footprints, not movement trajectories.\nFor target A', check overlap with the Start footprint, Goal footprint, walls, and the other object's ORIGINAL footprint (B).\nFor target B', check overlap with the Start footprint, Goal footprint, walls, and the other object's ORIGINAL footprint (A).\nStart and Goal footprints are disks of the stated robot radius. Overlap means a positive shared area; boundary-only touching is not overlap.\nAlso check whether the two target footprints A' and B' overlap each other when both edits are applied.\nJudge only these geometric overlaps. Do not judge a route or assume that an object blocks a route merely because it moves.\nReturn exactly one JSON object with exactly the keys A, B, AB_targets, and explanation.\nA and B must each be an object with exactly the keys start, goal, walls, and other_original.\nThose eight fields and AB_targets must be JSON booleans, or null when evidence is insufficient.\nexplanation must be a short string of at most 35 words. Do not add markdown fences or text outside the JSON object.\n\nPublic task information:\n{\"candidate_edits\": {\"A\": \"Translate object A (footprint 0.70 x 1.50 m) from center (4.00, 3.00) to (2.70, 1.05) m; keep orientation.\", \"B\": \"Translate object B (footprint 0.70 x 1.50 m) from center (8.00, 9.00) to (9.30, 10.95) m; keep orientation.\"}, \"candidate_geometry\": {\"A\": {\"display_id\": \"A\", \"target_geometry\": {\"coordinates\": [[[3.0500000000000003, 0.30000000000000004], [3.0500000000000003, 1.8], [2.35, 1.8], [2.35, 0.30000000000000004], [3.0500000000000003, 0.30000000000000004]]], \"type\": \"Polygon\"}}, \"B\": {\"display_id\": \"B\", \"target_geometry\": {\"coordinates\": [[[9.65, 10.2], [9.65, 11.7], [8.950000000000001, 11.7], [8.950000000000001, 10.2], [9.65, 10.2]]], \"type\": \"Polygon\"}}}, \"image_legend\": \"Solid colored rectangles are current objects A/B. Dashed A'/B' are proposed final footprints, not post-edit observations or movement paths.\", \"robot_radius_m\": 0.25, \"units\": \"m\"}\n",
+  "prompt_sha256": "9405335a2607f9cbd002dc59c134bae76fa0c7455bcd3e0fd9e0090e6169114f",
+  "pixel_values_shape": [
+    2304,
+    1536
+  ],
+  "image_grid_thw": [
+    [
+      1,
+      48,
+      48
+    ]
+  ],
+  "image_token_count": 576,
+  "input_token_count": 1298
+}

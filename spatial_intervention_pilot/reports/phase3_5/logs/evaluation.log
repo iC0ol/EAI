@@ -1,0 +1,119 @@
+{
+  "evaluated_at": "2026-10-21T00:54:36.867371+08:00",
+  "model_id": "Qwen/Qwen3-VL-4B-Instruct",
+  "model_revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+  "predictions_sha256": "394febe7167ce34b8120e9ccc4dc9046b691df43a7e498d6702dbdaa4a784d84",
+  "poststate_all": {
+    "correct": 14,
+    "denominator": 24,
+    "accuracy": 0.5833333333333334
+  },
+  "poststate_paired": {
+    "correct": 8,
+    "denominator": 18,
+    "accuracy": 0.4444444444444444
+  },
+  "phase3_paired": {
+    "correct": 6,
+    "denominator": 18,
+    "accuracy": 0.3333333333333333
+  },
+  "poststate_by_state": {
+    "NONE": {
+      "correct": 6,
+      "denominator": 6,
+      "accuracy": 1.0
+    },
+    "A": {
+      "correct": 2,
+      "denominator": 6,
+      "accuracy": 0.3333333333333333
+    },
+    "B": {
+      "correct": 4,
+      "denominator": 6,
+      "accuracy": 0.6666666666666666
+    },
+    "AB": {
+      "correct": 2,
+      "denominator": 6,
+      "accuracy": 0.3333333333333333
+    }
+  },
+  "paired_categories": {
+    "phase3_wrong_poststate_correct": 7,
+    "phase3_correct_poststate_wrong": 5,
+    "both_wrong": 5,
+    "both_correct": 1
+  },
+  "families": {
+    "parallel": {
+      "phase3_paired": {
+        "correct": 2,
+        "denominator": 6,
+        "accuracy": 0.3333333333333333
+      },
+      "poststate_paired": {
+        "correct": 0,
+        "denominator": 6,
+        "accuracy": 0.0
+      },
+      "poststate_all": {
+        "correct": 2,
+        "denominator": 8,
+        "accuracy": 0.25
+      }
+    },
+    "serial": {
+      "phase3_paired": {
+        "correct": 2,
+        "denominator": 6,
+        "accuracy": 0.3333333333333333
+      },
+      "poststate_paired": {
+        "correct": 4,
+        "denominator": 6,
+        "accuracy": 0.6666666666666666
+      },
+      "poststate_all": {
+        "correct": 6,
+        "denominator": 8,
+        "accuracy": 0.75
+      }
+    },
+    "side_effect": {
+      "phase3_paired": {
+        "correct": 2,
+        "denominator": 6,
+        "accuracy": 0.3333333333333333
+      },
+      "poststate_paired": {
+        "correct": 4,
+        "denominator": 6,
+        "accuracy": 0.6666666666666666
+      },
+      "poststate_all": {
+        "correct": 6,
+        "denominator": 8,
+        "accuracy": 0.75
+      }
+    }
+  },
+  "overlap_atomic": {
+    "correct": 40,
+    "denominator": 54,
+    "accuracy": 0.7407407407407407
+  },
+  "overlap_truth_positive_count": 0,
+  "overlap_false_positive_count": 14,
+  "overlap_unknown_count": 0,
+  "parse_failures": 0,
+  "sensitivity_label_flips": [],
+  "sensitivity_unresolved_or_illegal": [],
+  "interpretation_limits": [
+    "Paired recovery is consistent with hypothetical-edit/state-prediction burden but not causal proof.",
+    "Prompt, rendering and supplied post-state observation differ; direct errors do not separate perception from route reasoning.",
+    "Overlap truth set contains no positive overlaps; accuracy alone cannot establish overlap-detection sensitivity.",
+    "Six base examples with controlled views; no statistical or generalization conclusion."
+  ]
+}

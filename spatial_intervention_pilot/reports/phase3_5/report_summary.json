@@ -1,0 +1,37 @@
+{
+  "poststate_prediction_counts": {
+    "False": 24
+  },
+  "poststate_truth_counts": {
+    "False": 14,
+    "True": 10
+  },
+  "constant_negative_baseline_correct": 14,
+  "poststate_confusion": {
+    "true_positive": 0,
+    "false_positive": 0,
+    "true_negative": 14,
+    "false_negative": 10
+  },
+  "runtime": {
+    "poststate": {
+      "queries": 24,
+      "generation_total_seconds": 50.726121379993856,
+      "generation_mean_seconds": 2.1135883908330775
+    },
+    "overlap": {
+      "queries": 6,
+      "generation_total_seconds": 36.995205310871825,
+      "generation_mean_seconds": 6.165867551811971
+    },
+    "peak_allocated_mib": 8811.904296875,
+    "peak_reserved_mib": 8940.0,
+    "nvidia_peak_device_used_mib": 9897,
+    "hit_token_limits": 0,
+    "vision_forward_calls": 30
+  },
+  "protected_file_count": 209,
+  "changed_historical_files": [],
+  "tests": 94,
+  "test_failures": 0
+}

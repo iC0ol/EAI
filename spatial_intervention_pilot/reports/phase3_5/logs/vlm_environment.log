@@ -1,0 +1,7 @@
+{
+  "packages_unchanged": true,
+  "package_count": 42,
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "gpu": "NVIDIA GeForce RTX 3090"
+}

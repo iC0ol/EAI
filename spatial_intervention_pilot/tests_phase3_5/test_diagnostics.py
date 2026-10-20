@@ -9,6 +9,7 @@ from shapely.geometry import box
 from spatial_pilot.diagnostic_data import render_poststate,query_id
 from spatial_pilot.diagnostic_geometry import pair_overlap,radius_capacity,perturbed,overlap_truth
 from spatial_pilot.diagnostic_io import parse_response,load_inputs
+from spatial_pilot.diagnostic_evaluate import pair_classification,match_queries,metrics
 from spatial_pilot.edits import apply_edits
 from spatial_pilot.geometry import geo
 from spatial_pilot.render import png_bytes
@@ -33,7 +34,7 @@ def test_images_have_no_answer_metadata_or_route_color():
     for row,path in load_inputs(ROOT,'poststate'):
         with Image.open(path) as image:
             assert image.size==(768,768) and image.mode=='RGB' and image.info=={}
-            assert (22,160,133) not in image.getdata()  # original oracle green #16A085
+            assert (22,160,133) not in {color for count,color in image.getcolors(768*768)}
 
 
 def test_poststate_renderer_ignores_all_private_metadata_and_candidate_annotations():
@@ -138,3 +139,30 @@ def test_query_ids_are_opaque_and_reproducible():
     value=query_id('poststate','s_80e62d24efbf','AB')
     assert value==query_id('poststate','s_80e62d24efbf','AB')
     assert 'AB' not in value and '80e62d' not in value
+
+
+def test_pair_comparison_distinguishes_recovery_persistence_and_regression():
+    assert pair_classification(False,True,True)=='phase3_wrong_poststate_correct'
+    assert pair_classification(False,False,True)=='both_wrong'
+    assert pair_classification(True,False,True)=='phase3_correct_poststate_wrong'
+    assert pair_classification(True,True,True)=='both_correct'
+    assert pair_classification(None,False,False)=='unknown_in_one_or_both'
+
+
+def test_evaluation_does_not_discard_missing_or_duplicate_queries():
+    with pytest.raises(ValueError,match='exactly one'):
+        match_queries([{'query_id':'x'},{'query_id':'x'}],{'x':{},'y':{}})
+
+
+def test_unknown_predictions_stay_in_metric_denominator():
+    result=metrics([{'correct':True},{'correct':False}])
+    assert result=={'correct':1,'denominator':2,'accuracy':.5}
+
+
+def test_model_and_generation_parameters_match_phase3():
+    import yaml
+    old=yaml.safe_load((ROOT/'configs/vlm_smoke.yaml').read_text())
+    new=yaml.safe_load((ROOT/'configs/phase3_5.yaml').read_text())
+    for key in ['model_id','model_revision','model_local_dir','dtype','device','attention','seed','batch_size',
+                'max_new_tokens','do_sample','use_model_defaults','temperature','top_p','top_k','num_beams','min_pixels','max_pixels']:
+        assert old[key]==new[key]

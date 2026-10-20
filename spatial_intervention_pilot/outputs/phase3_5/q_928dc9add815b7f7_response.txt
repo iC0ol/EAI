@@ -1,0 +1,16 @@
+{
+  "A": {
+    "start": false,
+    "goal": false,
+    "walls": false,
+    "other_original": true
+  },
+  "B": {
+    "start": false,
+    "goal": false,
+    "walls": false,
+    "other_original": false
+  },
+  "AB_targets": false,
+  "explanation": "A' overlaps B; B' overlaps walls; A' and B' overlap each other."
+}

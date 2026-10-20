@@ -1,0 +1,1437 @@
+{
+  "evaluated_at": "2026-10-21T00:54:36.867371+08:00",
+  "model_id": "Qwen/Qwen3-VL-4B-Instruct",
+  "model_revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+  "predictions_sha256": "394febe7167ce34b8120e9ccc4dc9046b691df43a7e498d6702dbdaa4a784d84",
+  "poststate_all": {
+    "correct": 14,
+    "denominator": 24,
+    "accuracy": 0.5833333333333334
+  },
+  "poststate_paired": {
+    "correct": 8,
+    "denominator": 18,
+    "accuracy": 0.4444444444444444
+  },
+  "phase3_paired": {
+    "correct": 6,
+    "denominator": 18,
+    "accuracy": 0.3333333333333333
+  },
+  "poststate_by_state": {
+    "NONE": {
+      "correct": 6,
+      "denominator": 6,
+      "accuracy": 1.0
+    },
+    "A": {
+      "correct": 2,
+      "denominator": 6,
+      "accuracy": 0.3333333333333333
+    },
+    "B": {
+      "correct": 4,
+      "denominator": 6,
+      "accuracy": 0.6666666666666666
+    },
+    "AB": {
+      "correct": 2,
+      "denominator": 6,
+      "accuracy": 0.3333333333333333
+    }
+  },
+  "paired_categories": {
+    "phase3_wrong_poststate_correct": 7,
+    "phase3_correct_poststate_wrong": 5,
+    "both_wrong": 5,
+    "both_correct": 1
+  },
+  "families": {
+    "parallel": {
+      "phase3_paired": {
+        "correct": 2,
+        "denominator": 6,
+        "accuracy": 0.3333333333333333
+      },
+      "poststate_paired": {
+        "correct": 0,
+        "denominator": 6,
+        "accuracy": 0.0
+      },
+      "poststate_all": {
+        "correct": 2,
+        "denominator": 8,
+        "accuracy": 0.25
+      }
+    },
+    "serial": {
+      "phase3_paired": {
+        "correct": 2,
+        "denominator": 6,
+        "accuracy": 0.3333333333333333
+      },
+      "poststate_paired": {
+        "correct": 4,
+        "denominator": 6,
+        "accuracy": 0.6666666666666666
+      },
+      "poststate_all": {
+        "correct": 6,
+        "denominator": 8,
+        "accuracy": 0.75
+      }
+    },
+    "side_effect": {
+      "phase3_paired": {
+        "correct": 2,
+        "denominator": 6,
+        "accuracy": 0.3333333333333333
+      },
+      "poststate_paired": {
+        "correct": 4,
+        "denominator": 6,
+        "accuracy": 0.6666666666666666
+      },
+      "poststate_all": {
+        "correct": 6,
+        "denominator": 8,
+        "accuracy": 0.75
+      }
+    }
+  },
+  "overlap_atomic": {
+    "correct": 40,
+    "denominator": 54,
+    "accuracy": 0.7407407407407407
+  },
+  "overlap_truth_positive_count": 0,
+  "overlap_false_positive_count": 14,
+  "overlap_unknown_count": 0,
+  "parse_failures": 0,
+  "sensitivity_label_flips": [],
+  "sensitivity_unresolved_or_illegal": [],
+  "poststate_cases": [
+    {
+      "query_id": "q_fd042cab06675ef7",
+      "sample_id": "s_80e62d24efbf",
+      "state": "NONE",
+      "family": "serial",
+      "truth": false,
+      "prediction": false,
+      "phase3_prediction": null,
+      "correct": true,
+      "phase3_correct": null,
+      "pair_classification": null,
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal, with no clear route avoiding walls and obstacles.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal, with no clear route avoiding walls and obstacles.\"\n}",
+      "inference_seconds": 2.8902005250565708,
+      "peak_allocated_mib": 8715.42626953125
+    },
+    {
+      "query_id": "q_e90d9a4811a8c61e",
+      "sample_id": "s_80e62d24efbf",
+      "state": "A",
+      "family": "serial",
+      "truth": false,
+      "prediction": false,
+      "phase3_prediction": true,
+      "correct": true,
+      "phase3_correct": false,
+      "pair_classification": "phase3_wrong_poststate_correct",
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.\"\n}",
+      "inference_seconds": 1.8504067598842084,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_a3adfae9b700dabc",
+      "sample_id": "s_80e62d24efbf",
+      "state": "B",
+      "family": "serial",
+      "truth": false,
+      "prediction": false,
+      "phase3_prediction": true,
+      "correct": true,
+      "phase3_correct": false,
+      "pair_classification": "phase3_wrong_poststate_correct",
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.\"\n}",
+      "inference_seconds": 1.889257722068578,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_f6948d24943da4f8",
+      "sample_id": "s_80e62d24efbf",
+      "state": "AB",
+      "family": "serial",
+      "truth": true,
+      "prediction": false,
+      "phase3_prediction": true,
+      "correct": false,
+      "phase3_correct": true,
+      "pair_classification": "phase3_correct_poststate_wrong",
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.\"\n}",
+      "inference_seconds": 1.8549499330110848,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_8392bfaae1c32c2c",
+      "sample_id": "s_6850ce92ab65",
+      "state": "NONE",
+      "family": "parallel",
+      "truth": false,
+      "prediction": false,
+      "phase3_prediction": null,
+      "correct": true,
+      "phase3_correct": null,
+      "pair_classification": null,
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.\"\n}",
+      "inference_seconds": 1.9672337379306555,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_74438e9d2b8c3859",
+      "sample_id": "s_6850ce92ab65",
+      "state": "A",
+      "family": "parallel",
+      "truth": true,
+      "prediction": false,
+      "phase3_prediction": false,
+      "correct": false,
+      "phase3_correct": false,
+      "pair_classification": "both_wrong",
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal, with no clear route avoiding walls or obstacles.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal, with no clear route avoiding walls or obstacles.\"\n}",
+      "inference_seconds": 2.377237663138658,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_04a4e6c2a1471593",
+      "sample_id": "s_6850ce92ab65",
+      "state": "B",
+      "family": "parallel",
+      "truth": true,
+      "prediction": false,
+      "phase3_prediction": true,
+      "correct": false,
+      "phase3_correct": true,
+      "pair_classification": "phase3_correct_poststate_wrong",
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path between Start and Goal.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path between Start and Goal.\"\n}",
+      "inference_seconds": 1.8811995030846447,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_c7f22b6327606f2e",
+      "sample_id": "s_6850ce92ab65",
+      "state": "AB",
+      "family": "parallel",
+      "truth": true,
+      "prediction": false,
+      "phase3_prediction": false,
+      "correct": false,
+      "phase3_correct": false,
+      "pair_classification": "both_wrong",
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path between Start and Goal.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path between Start and Goal.\"\n}",
+      "inference_seconds": 1.8704513798002154,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_4ef02de480c99b8c",
+      "sample_id": "s_9fe7791779c0",
+      "state": "NONE",
+      "family": "side_effect",
+      "truth": false,
+      "prediction": false,
+      "phase3_prediction": null,
+      "correct": true,
+      "phase3_correct": null,
+      "pair_classification": null,
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.\"\n}",
+      "inference_seconds": 1.932534088846296,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_a0d649d840760658",
+      "sample_id": "s_9fe7791779c0",
+      "state": "A",
+      "family": "side_effect",
+      "truth": true,
+      "prediction": false,
+      "phase3_prediction": true,
+      "correct": false,
+      "phase3_correct": true,
+      "pair_classification": "phase3_correct_poststate_wrong",
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.\"\n}",
+      "inference_seconds": 1.9036071279551834,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_d9846a34f31a3cb6",
+      "sample_id": "s_9fe7791779c0",
+      "state": "B",
+      "family": "side_effect",
+      "truth": false,
+      "prediction": false,
+      "phase3_prediction": true,
+      "correct": true,
+      "phase3_correct": false,
+      "pair_classification": "phase3_wrong_poststate_correct",
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal, with no clear route avoiding walls and obstacles.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal, with no clear route avoiding walls and obstacles.\"\n}",
+      "inference_seconds": 2.4025454809889197,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_28b9478a692656ff",
+      "sample_id": "s_9fe7791779c0",
+      "state": "AB",
+      "family": "side_effect",
+      "truth": false,
+      "prediction": false,
+      "phase3_prediction": true,
+      "correct": true,
+      "phase3_correct": false,
+      "pair_classification": "phase3_wrong_poststate_correct",
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.\"\n}",
+      "inference_seconds": 1.982889065053314,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_94f0013e85a61222",
+      "sample_id": "s_f5dc98934220",
+      "state": "NONE",
+      "family": "serial",
+      "truth": false,
+      "prediction": false,
+      "phase3_prediction": null,
+      "correct": true,
+      "phase3_correct": null,
+      "pair_classification": null,
+      "parse_ok": true,
+      "explanation": "Obstacles block direct path; robot cannot navigate from Start to Goal without colliding with walls or obstacles.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Obstacles block direct path; robot cannot navigate from Start to Goal without colliding with walls or obstacles.\"\n}",
+      "inference_seconds": 2.2605949190910906,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_1689148b116b0a06",
+      "sample_id": "s_f5dc98934220",
+      "state": "A",
+      "family": "serial",
+      "truth": false,
+      "prediction": false,
+      "phase3_prediction": false,
+      "correct": true,
+      "phase3_correct": true,
+      "pair_classification": "both_correct",
+      "parse_ok": true,
+      "explanation": "Obstacles block direct path; robot cannot navigate from Start to Goal without colliding with walls or obstacles.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Obstacles block direct path; robot cannot navigate from Start to Goal without colliding with walls or obstacles.\"\n}",
+      "inference_seconds": 2.2141148678492755,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_22ec932a51c12652",
+      "sample_id": "s_f5dc98934220",
+      "state": "B",
+      "family": "serial",
+      "truth": false,
+      "prediction": false,
+      "phase3_prediction": true,
+      "correct": true,
+      "phase3_correct": false,
+      "pair_classification": "phase3_wrong_poststate_correct",
+      "parse_ok": true,
+      "explanation": "Obstacles block direct path; robot cannot navigate from Start to Goal without colliding with walls or obstacles.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Obstacles block direct path; robot cannot navigate from Start to Goal without colliding with walls or obstacles.\"\n}",
+      "inference_seconds": 2.212832735851407,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_8eacefe0cc16d312",
+      "sample_id": "s_f5dc98934220",
+      "state": "AB",
+      "family": "serial",
+      "truth": true,
+      "prediction": false,
+      "phase3_prediction": false,
+      "correct": false,
+      "phase3_correct": false,
+      "pair_classification": "both_wrong",
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.\"\n}",
+      "inference_seconds": 1.9327270830981433,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_c05166480f70e012",
+      "sample_id": "s_8bbc91f1568a",
+      "state": "NONE",
+      "family": "parallel",
+      "truth": false,
+      "prediction": false,
+      "phase3_prediction": null,
+      "correct": true,
+      "phase3_correct": null,
+      "pair_classification": null,
+      "parse_ok": true,
+      "explanation": "Obstacles block direct path; robot cannot navigate from Start to Goal without colliding with walls or obstacles.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Obstacles block direct path; robot cannot navigate from Start to Goal without colliding with walls or obstacles.\"\n}",
+      "inference_seconds": 2.3670998050365597,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_a920380ba7c7c764",
+      "sample_id": "s_8bbc91f1568a",
+      "state": "A",
+      "family": "parallel",
+      "truth": true,
+      "prediction": false,
+      "phase3_prediction": false,
+      "correct": false,
+      "phase3_correct": false,
+      "pair_classification": "both_wrong",
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.\"\n}",
+      "inference_seconds": 1.8973420010879636,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_8fe2c0963898fe0a",
+      "sample_id": "s_8bbc91f1568a",
+      "state": "B",
+      "family": "parallel",
+      "truth": true,
+      "prediction": false,
+      "phase3_prediction": true,
+      "correct": false,
+      "phase3_correct": true,
+      "pair_classification": "phase3_correct_poststate_wrong",
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.\"\n}",
+      "inference_seconds": 1.8807010881137103,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_94fce3408af4906d",
+      "sample_id": "s_8bbc91f1568a",
+      "state": "AB",
+      "family": "parallel",
+      "truth": true,
+      "prediction": false,
+      "phase3_prediction": false,
+      "correct": false,
+      "phase3_correct": false,
+      "pair_classification": "both_wrong",
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path between Start and Goal.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path between Start and Goal.\"\n}",
+      "inference_seconds": 1.9652528800070286,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_53dfb06e180cfba9",
+      "sample_id": "s_8ed968aae7fe",
+      "state": "NONE",
+      "family": "side_effect",
+      "truth": false,
+      "prediction": false,
+      "phase3_prediction": null,
+      "correct": true,
+      "phase3_correct": null,
+      "pair_classification": null,
+      "parse_ok": true,
+      "explanation": "Obstacles block direct path; robot cannot navigate from Start to Goal without colliding with walls or obstacles.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Obstacles block direct path; robot cannot navigate from Start to Goal without colliding with walls or obstacles.\"\n}",
+      "inference_seconds": 2.2165728649124503,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_b94d87a1c24f949c",
+      "sample_id": "s_8ed968aae7fe",
+      "state": "A",
+      "family": "side_effect",
+      "truth": true,
+      "prediction": false,
+      "phase3_prediction": true,
+      "correct": false,
+      "phase3_correct": true,
+      "pair_classification": "phase3_correct_poststate_wrong",
+      "parse_ok": true,
+      "explanation": "Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Robot cannot navigate due to solid obstacles blocking direct path from Start to Goal.\"\n}",
+      "inference_seconds": 1.957144167041406,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_66926c4e8fe38f33",
+      "sample_id": "s_8ed968aae7fe",
+      "state": "B",
+      "family": "side_effect",
+      "truth": false,
+      "prediction": false,
+      "phase3_prediction": true,
+      "correct": true,
+      "phase3_correct": false,
+      "pair_classification": "phase3_wrong_poststate_correct",
+      "parse_ok": true,
+      "explanation": "Obstacles block direct path; robot cannot navigate from Start to Goal without colliding with walls or obstacles.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Obstacles block direct path; robot cannot navigate from Start to Goal without colliding with walls or obstacles.\"\n}",
+      "inference_seconds": 2.326479386072606,
+      "peak_allocated_mib": 8716.75830078125
+    },
+    {
+      "query_id": "q_bc78754aff933279",
+      "sample_id": "s_8ed968aae7fe",
+      "state": "AB",
+      "family": "side_effect",
+      "truth": false,
+      "prediction": false,
+      "phase3_prediction": true,
+      "correct": true,
+      "phase3_correct": false,
+      "pair_classification": "phase3_wrong_poststate_correct",
+      "parse_ok": true,
+      "explanation": "Obstacles block direct path; robot cannot navigate from Start to Goal without colliding with walls or obstacles.",
+      "raw_response": "{\n  \"passable\": false,\n  \"explanation\": \"Obstacles block direct path; robot cannot navigate from Start to Goal without colliding with walls or obstacles.\"\n}",
+      "inference_seconds": 2.6927465950138867,
+      "peak_allocated_mib": 8716.75830078125
+    }
+  ],
+  "overlap_cases": [
+    {
+      "query_id": "q_928dc9add815b7f7",
+      "sample_id": "s_80e62d24efbf",
+      "parse_ok": true,
+      "fields": [
+        {
+          "field": "A.start",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.goal",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.walls",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.other_original",
+          "truth": false,
+          "prediction": true,
+          "correct": false
+        },
+        {
+          "field": "B.start",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.goal",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.walls",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.other_original",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "AB_targets",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        }
+      ],
+      "explanation": "A' overlaps B; B' overlaps walls; A' and B' overlap each other.",
+      "raw_response": "{\n  \"A\": {\n    \"start\": false,\n    \"goal\": false,\n    \"walls\": false,\n    \"other_original\": true\n  },\n  \"B\": {\n    \"start\": false,\n    \"goal\": false,\n    \"walls\": false,\n    \"other_original\": false\n  },\n  \"AB_targets\": false,\n  \"explanation\": \"A' overlaps B; B' overlaps walls; A' and B' overlap each other.\"\n}",
+      "geometry": {
+        "answers": {
+          "A": {
+            "start": false,
+            "goal": false,
+            "walls": false,
+            "other_original": false
+          },
+          "B": {
+            "start": false,
+            "goal": false,
+            "walls": false,
+            "other_original": false
+          },
+          "AB_targets": false
+        },
+        "details": {
+          "A": {
+            "start": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 4.035150248044843,
+              "distance_to_robot_center_m": 4.285148772213166
+            },
+            "goal": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 8.302339414552833,
+              "distance_to_robot_center_m": 8.552338861387566
+            },
+            "walls": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 0.20000000000000004
+            },
+            "other_original": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 7.9222787125927345
+            }
+          },
+          "B": {
+            "start": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 8.302339414552835,
+              "distance_to_robot_center_m": 8.552338861387568
+            },
+            "goal": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 4.035150248044843,
+              "distance_to_robot_center_m": 4.285148772213165
+            },
+            "walls": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 0.20000000000000107
+            },
+            "other_original": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 7.922278712592735
+            }
+          },
+          "AB_targets": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 10.264989040422789
+          }
+        },
+        "definition": "positive-area intersection; boundary contact is recorded separately",
+        "robot_disk_quad_segs": 128
+      },
+      "phase3_explanation": {
+        "A": "A moved left, clears path to Goal without collision.",
+        "B": "B moved right, clears path to Goal without collision.",
+        "AB": "Both moved, path remains clear with no overlaps."
+      }
+    },
+    {
+      "query_id": "q_7d7dd4f6270ef462",
+      "sample_id": "s_6850ce92ab65",
+      "parse_ok": true,
+      "fields": [
+        {
+          "field": "A.start",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.goal",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.walls",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.other_original",
+          "truth": false,
+          "prediction": true,
+          "correct": false
+        },
+        {
+          "field": "B.start",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.goal",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.walls",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.other_original",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "AB_targets",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        }
+      ],
+      "explanation": "A' overlaps B; B' overlaps walls; A' and B' do not overlap.",
+      "raw_response": "{\n  \"A\": {\n    \"start\": false,\n    \"goal\": false,\n    \"walls\": false,\n    \"other_original\": true\n  },\n  \"B\": {\n    \"start\": false,\n    \"goal\": false,\n    \"walls\": false,\n    \"other_original\": false\n  },\n  \"AB_targets\": false,\n  \"explanation\": \"A' overlaps B; B' overlaps walls; A' and B' do not overlap.\"\n}",
+      "geometry": {
+        "answers": {
+          "A": {
+            "start": false,
+            "goal": false,
+            "walls": false,
+            "other_original": false
+          },
+          "B": {
+            "start": false,
+            "goal": false,
+            "walls": false,
+            "other_original": false
+          },
+          "AB_targets": false
+        },
+        "details": {
+          "A": {
+            "start": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 4.035150248044843,
+              "distance_to_robot_center_m": 4.285148772213166
+            },
+            "goal": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 8.302339414552833,
+              "distance_to_robot_center_m": 8.552338861387566
+            },
+            "walls": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 0.20000000000000004
+            },
+            "other_original": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 7.9222787125927345
+            }
+          },
+          "B": {
+            "start": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 8.302339414552835,
+              "distance_to_robot_center_m": 8.552338861387568
+            },
+            "goal": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 4.035150248044843,
+              "distance_to_robot_center_m": 4.285148772213165
+            },
+            "walls": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 0.20000000000000107
+            },
+            "other_original": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 7.922278712592735
+            }
+          },
+          "AB_targets": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 10.264989040422789
+          }
+        },
+        "definition": "positive-area intersection; boundary contact is recorded separately",
+        "robot_disk_quad_segs": 128
+      },
+      "phase3_explanation": {
+        "A": "A' collides with Start and Goal region.",
+        "B": "B' clears path to Goal without collision.",
+        "AB": "A' and B' overlap, blocking route."
+      }
+    },
+    {
+      "query_id": "q_2da3523757621eb2",
+      "sample_id": "s_9fe7791779c0",
+      "parse_ok": true,
+      "fields": [
+        {
+          "field": "A.start",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.goal",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.walls",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.other_original",
+          "truth": false,
+          "prediction": true,
+          "correct": false
+        },
+        {
+          "field": "B.start",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.goal",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.walls",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.other_original",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "AB_targets",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        }
+      ],
+      "explanation": "A' overlaps B; B' doesn't overlap Start/Goal/walls or A. A' and B' don't overlap.",
+      "raw_response": "{\n  \"A\": {\n    \"start\": false,\n    \"goal\": false,\n    \"walls\": false,\n    \"other_original\": true\n  },\n  \"B\": {\n    \"start\": false,\n    \"goal\": false,\n    \"walls\": false,\n    \"other_original\": false\n  },\n  \"AB_targets\": false,\n  \"explanation\": \"A' overlaps B; B' doesn't overlap Start/Goal/walls or A. A' and B' don't overlap.\"\n}",
+      "geometry": {
+        "answers": {
+          "A": {
+            "start": false,
+            "goal": false,
+            "walls": false,
+            "other_original": false
+          },
+          "B": {
+            "start": false,
+            "goal": false,
+            "walls": false,
+            "other_original": false
+          },
+          "AB_targets": false
+        },
+        "details": {
+          "A": {
+            "start": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 4.035150248044843,
+              "distance_to_robot_center_m": 4.285148772213166
+            },
+            "goal": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 8.302339414552833,
+              "distance_to_robot_center_m": 8.552338861387566
+            },
+            "walls": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 0.20000000000000004
+            },
+            "other_original": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 10.264989040422789
+            }
+          },
+          "B": {
+            "start": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 6.298667440267682,
+              "distance_to_robot_center_m": 6.548663985882922
+            },
+            "goal": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 2.8620737143000436,
+              "distance_to_robot_center_m": 3.1120732639190876
+            },
+            "walls": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 0.050000000000000704
+            },
+            "other_original": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 5.580322571321482
+            }
+          },
+          "AB_targets": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 7.9222787125927345
+          }
+        },
+        "definition": "positive-area intersection; boundary contact is recorded separately",
+        "robot_disk_quad_segs": 128
+      },
+      "phase3_explanation": {
+        "A": "A moved left, clears path to Goal without collision.",
+        "B": "B moved down-left, clears path to Goal without collision.",
+        "AB": "Both moved, path remains clear with no overlaps."
+      }
+    },
+    {
+      "query_id": "q_f71711eca0d14040",
+      "sample_id": "s_f5dc98934220",
+      "parse_ok": true,
+      "fields": [
+        {
+          "field": "A.start",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.goal",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.walls",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.other_original",
+          "truth": false,
+          "prediction": true,
+          "correct": false
+        },
+        {
+          "field": "B.start",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.goal",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.walls",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.other_original",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "AB_targets",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        }
+      ],
+      "explanation": "A' overlaps B's original footprint; B' does not overlap Start or Goal. A' and B' do not overlap.",
+      "raw_response": "{\n  \"A\": {\n    \"start\": false,\n    \"goal\": false,\n    \"walls\": false,\n    \"other_original\": true\n  },\n  \"B\": {\n    \"start\": false,\n    \"goal\": false,\n    \"walls\": false,\n    \"other_original\": false\n  },\n  \"AB_targets\": false,\n  \"explanation\": \"A' overlaps B's original footprint; B' does not overlap Start or Goal. A' and B' do not overlap.\"\n}",
+      "geometry": {
+        "answers": {
+          "A": {
+            "start": false,
+            "goal": false,
+            "walls": false,
+            "other_original": false
+          },
+          "B": {
+            "start": false,
+            "goal": false,
+            "walls": false,
+            "other_original": false
+          },
+          "AB_targets": false
+        },
+        "details": {
+          "A": {
+            "start": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 3.937185169018987,
+              "distance_to_robot_center_m": 4.187182823808867
+            },
+            "goal": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 8.253675676106973,
+              "distance_to_robot_center_m": 8.503675675847473
+            },
+            "walls": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 0.09999999999999966
+            },
+            "other_original": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 7.760315715227055
+            }
+          },
+          "B": {
+            "start": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 8.253675676106974,
+              "distance_to_robot_center_m": 8.503675675847475
+            },
+            "goal": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 3.937185169018987,
+              "distance_to_robot_center_m": 4.187182823808867
+            },
+            "walls": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 0.10000000000000142
+            },
+            "other_original": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 7.760315715227056
+            }
+          },
+          "AB_targets": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 10.101980003939822
+          }
+        },
+        "definition": "positive-area intersection; boundary contact is recorded separately",
+        "robot_disk_quad_segs": 128
+      },
+      "phase3_explanation": {
+        "A": "A's new position overlaps with Goal, blocking path.",
+        "B": "B's new position clears path to Goal without collision.",
+        "AB": "A and B's new positions block path to Goal together."
+      }
+    },
+    {
+      "query_id": "q_337ae8ced82a25c2",
+      "sample_id": "s_8bbc91f1568a",
+      "parse_ok": true,
+      "fields": [
+        {
+          "field": "A.start",
+          "truth": false,
+          "prediction": true,
+          "correct": false
+        },
+        {
+          "field": "A.goal",
+          "truth": false,
+          "prediction": true,
+          "correct": false
+        },
+        {
+          "field": "A.walls",
+          "truth": false,
+          "prediction": true,
+          "correct": false
+        },
+        {
+          "field": "A.other_original",
+          "truth": false,
+          "prediction": true,
+          "correct": false
+        },
+        {
+          "field": "B.start",
+          "truth": false,
+          "prediction": true,
+          "correct": false
+        },
+        {
+          "field": "B.goal",
+          "truth": false,
+          "prediction": true,
+          "correct": false
+        },
+        {
+          "field": "B.walls",
+          "truth": false,
+          "prediction": true,
+          "correct": false
+        },
+        {
+          "field": "B.other_original",
+          "truth": false,
+          "prediction": true,
+          "correct": false
+        },
+        {
+          "field": "AB_targets",
+          "truth": false,
+          "prediction": true,
+          "correct": false
+        }
+      ],
+      "explanation": "A' overlaps Start, Goal, walls, B; B' overlaps Start, Goal, walls, A. A' and B' overlap.",
+      "raw_response": "{\n  \"A\": {\n    \"start\": true,\n    \"goal\": true,\n    \"walls\": true,\n    \"other_original\": true\n  },\n  \"B\": {\n    \"start\": true,\n    \"goal\": true,\n    \"walls\": true,\n    \"other_original\": true\n  },\n  \"AB_targets\": true,\n  \"explanation\": \"A' overlaps Start, Goal, walls, B; B' overlaps Start, Goal, walls, A. A' and B' overlap.\"\n}",
+      "geometry": {
+        "answers": {
+          "A": {
+            "start": false,
+            "goal": false,
+            "walls": false,
+            "other_original": false
+          },
+          "B": {
+            "start": false,
+            "goal": false,
+            "walls": false,
+            "other_original": false
+          },
+          "AB_targets": false
+        },
+        "details": {
+          "A": {
+            "start": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 3.937185169018987,
+              "distance_to_robot_center_m": 4.187182823808867
+            },
+            "goal": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 8.253675676106973,
+              "distance_to_robot_center_m": 8.503675675847473
+            },
+            "walls": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 0.09999999999999966
+            },
+            "other_original": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 7.760315715227055
+            }
+          },
+          "B": {
+            "start": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 8.253675676106974,
+              "distance_to_robot_center_m": 8.503675675847475
+            },
+            "goal": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 3.937185169018987,
+              "distance_to_robot_center_m": 4.187182823808867
+            },
+            "walls": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 0.10000000000000142
+            },
+            "other_original": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 7.760315715227056
+            }
+          },
+          "AB_targets": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 10.101980003939822
+          }
+        },
+        "definition": "positive-area intersection; boundary contact is recorded separately",
+        "robot_disk_quad_segs": 128
+      },
+      "phase3_explanation": {
+        "A": "A's new position overlaps with Goal, blocking path.",
+        "B": "B's new position clears path to Goal without collision.",
+        "AB": "A and B together block path; A overlaps Goal."
+      }
+    },
+    {
+      "query_id": "q_8dfd080ee01a7d29",
+      "sample_id": "s_8ed968aae7fe",
+      "parse_ok": true,
+      "fields": [
+        {
+          "field": "A.start",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.goal",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.walls",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "A.other_original",
+          "truth": false,
+          "prediction": true,
+          "correct": false
+        },
+        {
+          "field": "B.start",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.goal",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.walls",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "B.other_original",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        },
+        {
+          "field": "AB_targets",
+          "truth": false,
+          "prediction": false,
+          "correct": true
+        }
+      ],
+      "explanation": "A' overlaps B's original footprint; B' does not overlap Start or Goal. A' and B' do not overlap.",
+      "raw_response": "{\n  \"A\": {\n    \"start\": false,\n    \"goal\": false,\n    \"walls\": false,\n    \"other_original\": true\n  },\n  \"B\": {\n    \"start\": false,\n    \"goal\": false,\n    \"walls\": false,\n    \"other_original\": false\n  },\n  \"AB_targets\": false,\n  \"explanation\": \"A' overlaps B's original footprint; B' does not overlap Start or Goal. A' and B' do not overlap.\"\n}",
+      "geometry": {
+        "answers": {
+          "A": {
+            "start": false,
+            "goal": false,
+            "walls": false,
+            "other_original": false
+          },
+          "B": {
+            "start": false,
+            "goal": false,
+            "walls": false,
+            "other_original": false
+          },
+          "AB_targets": false
+        },
+        "details": {
+          "A": {
+            "start": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 3.937185169018987,
+              "distance_to_robot_center_m": 4.187182823808867
+            },
+            "goal": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 8.253675676106973,
+              "distance_to_robot_center_m": 8.503675675847473
+            },
+            "walls": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 0.09999999999999966
+            },
+            "other_original": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 10.101980003939822
+            }
+          },
+          "B": {
+            "start": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 6.264985946542934,
+              "distance_to_robot_center_m": 6.514982732133678
+            },
+            "goal": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 2.7905591591021555,
+              "distance_to_robot_center_m": 3.040559159102155
+            },
+            "walls": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 0.05000000000000071
+            },
+            "other_original": {
+              "overlap": false,
+              "intersection_area_m2": 0.0,
+              "touches_without_area": false,
+              "minimum_separation_m": 5.420332093147062
+            }
+          },
+          "AB_targets": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 7.760315715227055
+          }
+        },
+        "definition": "positive-area intersection; boundary contact is recorded separately",
+        "robot_disk_quad_segs": 128
+      },
+      "phase3_explanation": {
+        "A": "A's new position doesn't block path to goal.",
+        "B": "B's new position doesn't block path to goal.",
+        "AB": "Both A and B's new positions don't block path to goal."
+      }
+    }
+  ],
+  "interpretation_limits": [
+    "Paired recovery is consistent with hypothetical-edit/state-prediction burden but not causal proof.",
+    "Prompt, rendering and supplied post-state observation differ; direct errors do not separate perception from route reasoning.",
+    "Overlap truth set contains no positive overlaps; accuracy alone cannot establish overlap-detection sensitivity.",
+    "Six base examples with controlled views; no statistical or generalization conclusion."
+  ]
+}

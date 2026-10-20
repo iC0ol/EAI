@@ -2,6 +2,7 @@
 
 Scope: Checkpoint B approved; Phase 3 Qwen3-VL-4B-Instruct deployment and six-core smoke inference only.
 Phase 3 reviewed; Phase 3.5 diagnostics are now authorized on the same six samples with the same installed model/environment.
+Stop after Phase 3.5 delivery and GitHub synchronization; await researcher review before the next phase.
 No training, fine-tuning, model substitution or dataset expansion. Report OOM/dependency issues before corrective changes.
 Research files, environments and caches stay in this project directory under /home/asus/EAI.
 Git metadata is at /home/asus/EAI/.git, following the user's explicit workspace preference.

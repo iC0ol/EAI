@@ -5,6 +5,7 @@ Keep all experiments and Python environments under this EAI workspace; do not cr
 Do not modify inspection_robot*, ROS2, system Python, NVIDIA drivers or system CUDA.
 Checkpoint B was reviewed and the user authorized Phase 3 deployment and six-core VLM smoke inference.
 Phase 3 was reviewed. The user now authorizes Phase 3.5 error-source diagnostics on the same six core samples.
+After Phase 3.5 delivery, stop and await the researcher's review before further experiments.
 Preserve Phase 0–2 geometry/data/requirements.lock. Use a separate VLM environment. No training or dataset expansion.
 Inference may read only public_inputs.jsonl and data/images; private labels are read only by a separate post-inference evaluator.
 For Phase 3.5 only, inference may also read diagnostics/phase3_5/inputs and its clean post-state images.

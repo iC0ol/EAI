@@ -1,0 +1,12 @@
+{
+  "derivative_only": true,
+  "base_samples": 6,
+  "poststate_images": 24,
+  "overlap_queries": 6,
+  "render_version": "poststate-clean-v1",
+  "rendered_text": [
+    "Start",
+    "Goal"
+  ],
+  "no_labels_paths_state_or_family_on_images": true
+}

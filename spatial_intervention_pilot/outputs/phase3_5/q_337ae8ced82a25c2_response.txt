@@ -1,0 +1,16 @@
+{
+  "A": {
+    "start": true,
+    "goal": true,
+    "walls": true,
+    "other_original": true
+  },
+  "B": {
+    "start": true,
+    "goal": true,
+    "walls": true,
+    "other_original": true
+  },
+  "AB_targets": true,
+  "explanation": "A' overlaps Start, Goal, walls, B; B' overlaps Start, Goal, walls, A. A' and B' overlap."
+}
