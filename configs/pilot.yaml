@@ -1,0 +1,16 @@
+schema_version: 1
+seed: 20261020
+phase_limit: 2
+variants_per_family: 4
+robot_radius_m: 0.25
+grid_resolution_m: 0.10
+fine_resolution_m: 0.05
+boundary_margin_trigger_m: 0.12
+buffer_quad_segs: 32
+contact_epsilon_m: 0.000001
+connectivity: 4
+image_size_px: 768
+render_version: pillow-topdown-v1
+model_id: null
+model_revision: null
+prompt_version: null

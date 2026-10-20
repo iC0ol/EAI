@@ -1,0 +1,10 @@
+.venv/
+.runtime/
+.tools/
+.cache/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+reproductions/
+reports/final_revision.json
+reports/logs/final_git_status.log
