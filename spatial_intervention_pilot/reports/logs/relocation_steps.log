@@ -1,0 +1,3 @@
+Project moved from /home/asus/research/spatial_intervention_pilot to /home/asus/EAI/spatial_intervention_pilot.
+First bootstrap redirection was attempted from /home/asus/EAI and failed before execution: reports/logs/relocation_environment.log: No such file or directory.
+Correction: rerun bootstrap from the actual relocated project root. No packages were changed by the failed invocation.

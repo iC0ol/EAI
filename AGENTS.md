@@ -1,11 +1,8 @@
-# Spatial Intervention Pilot
+# EAI workspace
 
-Scope: Phase 0–2, CPU geometry only. Wait for the user's scene/label review before VLM work.
-All writes, environments and caches must stay in this independent project directory.
-Never change inspection_robot*, ROS2, system Python, drivers or system CUDA. No sudo.
-No model weights, training, external upload or remote repository creation.
-Use Python 3.11 in .venv; scripts must use its absolute interpreter or scripts/run.sh.
-Compute labels with geometry, never copy expected family labels into results.
-Illegal/conflicting edits must raise explicit errors, never become F=0.
-Private QC labels and paths must never enter data/images or public_inputs.jsonl.
-Preserve failure logs, seeds, environment locks and source revisions.
+The Spatial Intervention Pilot is in spatial_intervention_pilot/. Read its AGENTS.md before editing.
+Keep all experiments and Python environments under this EAI workspace; do not create another workspace or worktree.
+Do not modify inspection_robot*, ROS2, system Python, NVIDIA drivers or system CUDA.
+Current authorized work stops at Phase 2; await user scene/label review before VLM deployment or training.
+The user explicitly requested PUBLIC GitHub synchronization to iC0ol/EAI, including generated results.
+Never commit Python runtimes, virtual environments, caches or credentials.

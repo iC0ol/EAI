@@ -85,6 +85,8 @@ def main():
 ## 隔离与边界
 
 项目根目录：`{ROOT}`。Python 运行时、venv、uv、下载缓存、临时文件均在此目录中。
+Git 元数据位于父目录 `/home/asus/EAI/.git`；按用户要求，源码和结果同步到公开 GitHub 仓库 iC0ol/EAI。
+历史日志保留迁移前路径，当前路径以本报告和当前解释器为准。
 venv 不继承 system site-packages；run.sh 只在子进程中排除 ROS 与动态库搜索变量。
 没有执行 sudo、修改系统包/驱动/Toolkit、激活或修改旧 conda、操作机器人、下载权重或安装训练/推理框架。
 
@@ -197,7 +199,7 @@ AB 顺序无关测试仅针对合法相容场景；另有“分别合法、合�
 ## 版本与重现
 
 - 随机种子：{manifest['config']['seed']}；配置哈希：`{manifest['config_sha256']}`。
-- 生成时源代码 commit：`{manifest.get('source_commit')}`；源文件状态：`{manifest.get('source_status_at_generation')}`。
+- 生成时源代码 commit：`{manifest.get('source_commit')}`；源文件状态：`{manifest.get('source_status_at_generation') or 'clean'}`。
 - Python {platform.python_version()}，{uv}，GEOS {shapely.geos_version_string}；完整版本见 environment.md / dependencies.json / requirements.lock。
 - 单命令：`cd {ROOT} && bash scripts/run.sh all`。
 - 模型 ID / revision / prompt version：null；原因是按授权停在 Phase 2，后续未部署。
