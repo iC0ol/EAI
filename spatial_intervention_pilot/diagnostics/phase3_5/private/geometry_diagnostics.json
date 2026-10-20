@@ -1,0 +1,4763 @@
+{
+  "sample_count": 6,
+  "state_count": 24,
+  "conditions_per_state": 5,
+  "attempted_sensitivity_searches": 240,
+  "illegal_perturbations": [],
+  "overlap": {
+    "s_80e62d24efbf": {
+      "answers": {
+        "A": {
+          "start": false,
+          "goal": false,
+          "walls": false,
+          "other_original": false
+        },
+        "B": {
+          "start": false,
+          "goal": false,
+          "walls": false,
+          "other_original": false
+        },
+        "AB_targets": false
+      },
+      "details": {
+        "A": {
+          "start": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 4.035150248044843,
+            "distance_to_robot_center_m": 4.285148772213166
+          },
+          "goal": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 8.302339414552833,
+            "distance_to_robot_center_m": 8.552338861387566
+          },
+          "walls": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 0.20000000000000004
+          },
+          "other_original": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 7.9222787125927345
+          }
+        },
+        "B": {
+          "start": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 8.302339414552835,
+            "distance_to_robot_center_m": 8.552338861387568
+          },
+          "goal": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 4.035150248044843,
+            "distance_to_robot_center_m": 4.285148772213165
+          },
+          "walls": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 0.20000000000000107
+          },
+          "other_original": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 7.922278712592735
+          }
+        },
+        "AB_targets": {
+          "overlap": false,
+          "intersection_area_m2": 0.0,
+          "touches_without_area": false,
+          "minimum_separation_m": 10.264989040422789
+        }
+      },
+      "definition": "positive-area intersection; boundary contact is recorded separately",
+      "robot_disk_quad_segs": 128
+    },
+    "s_6850ce92ab65": {
+      "answers": {
+        "A": {
+          "start": false,
+          "goal": false,
+          "walls": false,
+          "other_original": false
+        },
+        "B": {
+          "start": false,
+          "goal": false,
+          "walls": false,
+          "other_original": false
+        },
+        "AB_targets": false
+      },
+      "details": {
+        "A": {
+          "start": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 4.035150248044843,
+            "distance_to_robot_center_m": 4.285148772213166
+          },
+          "goal": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 8.302339414552833,
+            "distance_to_robot_center_m": 8.552338861387566
+          },
+          "walls": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 0.20000000000000004
+          },
+          "other_original": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 7.9222787125927345
+          }
+        },
+        "B": {
+          "start": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 8.302339414552835,
+            "distance_to_robot_center_m": 8.552338861387568
+          },
+          "goal": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 4.035150248044843,
+            "distance_to_robot_center_m": 4.285148772213165
+          },
+          "walls": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 0.20000000000000107
+          },
+          "other_original": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 7.922278712592735
+          }
+        },
+        "AB_targets": {
+          "overlap": false,
+          "intersection_area_m2": 0.0,
+          "touches_without_area": false,
+          "minimum_separation_m": 10.264989040422789
+        }
+      },
+      "definition": "positive-area intersection; boundary contact is recorded separately",
+      "robot_disk_quad_segs": 128
+    },
+    "s_9fe7791779c0": {
+      "answers": {
+        "A": {
+          "start": false,
+          "goal": false,
+          "walls": false,
+          "other_original": false
+        },
+        "B": {
+          "start": false,
+          "goal": false,
+          "walls": false,
+          "other_original": false
+        },
+        "AB_targets": false
+      },
+      "details": {
+        "A": {
+          "start": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 4.035150248044843,
+            "distance_to_robot_center_m": 4.285148772213166
+          },
+          "goal": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 8.302339414552833,
+            "distance_to_robot_center_m": 8.552338861387566
+          },
+          "walls": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 0.20000000000000004
+          },
+          "other_original": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 10.264989040422789
+          }
+        },
+        "B": {
+          "start": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 6.298667440267682,
+            "distance_to_robot_center_m": 6.548663985882922
+          },
+          "goal": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 2.8620737143000436,
+            "distance_to_robot_center_m": 3.1120732639190876
+          },
+          "walls": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 0.050000000000000704
+          },
+          "other_original": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 5.580322571321482
+          }
+        },
+        "AB_targets": {
+          "overlap": false,
+          "intersection_area_m2": 0.0,
+          "touches_without_area": false,
+          "minimum_separation_m": 7.9222787125927345
+        }
+      },
+      "definition": "positive-area intersection; boundary contact is recorded separately",
+      "robot_disk_quad_segs": 128
+    },
+    "s_f5dc98934220": {
+      "answers": {
+        "A": {
+          "start": false,
+          "goal": false,
+          "walls": false,
+          "other_original": false
+        },
+        "B": {
+          "start": false,
+          "goal": false,
+          "walls": false,
+          "other_original": false
+        },
+        "AB_targets": false
+      },
+      "details": {
+        "A": {
+          "start": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 3.937185169018987,
+            "distance_to_robot_center_m": 4.187182823808867
+          },
+          "goal": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 8.253675676106973,
+            "distance_to_robot_center_m": 8.503675675847473
+          },
+          "walls": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 0.09999999999999966
+          },
+          "other_original": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 7.760315715227055
+          }
+        },
+        "B": {
+          "start": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 8.253675676106974,
+            "distance_to_robot_center_m": 8.503675675847475
+          },
+          "goal": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 3.937185169018987,
+            "distance_to_robot_center_m": 4.187182823808867
+          },
+          "walls": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 0.10000000000000142
+          },
+          "other_original": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 7.760315715227056
+          }
+        },
+        "AB_targets": {
+          "overlap": false,
+          "intersection_area_m2": 0.0,
+          "touches_without_area": false,
+          "minimum_separation_m": 10.101980003939822
+        }
+      },
+      "definition": "positive-area intersection; boundary contact is recorded separately",
+      "robot_disk_quad_segs": 128
+    },
+    "s_8bbc91f1568a": {
+      "answers": {
+        "A": {
+          "start": false,
+          "goal": false,
+          "walls": false,
+          "other_original": false
+        },
+        "B": {
+          "start": false,
+          "goal": false,
+          "walls": false,
+          "other_original": false
+        },
+        "AB_targets": false
+      },
+      "details": {
+        "A": {
+          "start": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 3.937185169018987,
+            "distance_to_robot_center_m": 4.187182823808867
+          },
+          "goal": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 8.253675676106973,
+            "distance_to_robot_center_m": 8.503675675847473
+          },
+          "walls": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 0.09999999999999966
+          },
+          "other_original": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 7.760315715227055
+          }
+        },
+        "B": {
+          "start": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 8.253675676106974,
+            "distance_to_robot_center_m": 8.503675675847475
+          },
+          "goal": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 3.937185169018987,
+            "distance_to_robot_center_m": 4.187182823808867
+          },
+          "walls": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 0.10000000000000142
+          },
+          "other_original": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 7.760315715227056
+          }
+        },
+        "AB_targets": {
+          "overlap": false,
+          "intersection_area_m2": 0.0,
+          "touches_without_area": false,
+          "minimum_separation_m": 10.101980003939822
+        }
+      },
+      "definition": "positive-area intersection; boundary contact is recorded separately",
+      "robot_disk_quad_segs": 128
+    },
+    "s_8ed968aae7fe": {
+      "answers": {
+        "A": {
+          "start": false,
+          "goal": false,
+          "walls": false,
+          "other_original": false
+        },
+        "B": {
+          "start": false,
+          "goal": false,
+          "walls": false,
+          "other_original": false
+        },
+        "AB_targets": false
+      },
+      "details": {
+        "A": {
+          "start": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 3.937185169018987,
+            "distance_to_robot_center_m": 4.187182823808867
+          },
+          "goal": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 8.253675676106973,
+            "distance_to_robot_center_m": 8.503675675847473
+          },
+          "walls": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 0.09999999999999966
+          },
+          "other_original": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 10.101980003939822
+          }
+        },
+        "B": {
+          "start": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 6.264985946542934,
+            "distance_to_robot_center_m": 6.514982732133678
+          },
+          "goal": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 2.7905591591021555,
+            "distance_to_robot_center_m": 3.040559159102155
+          },
+          "walls": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 0.05000000000000071
+          },
+          "other_original": {
+            "overlap": false,
+            "intersection_area_m2": 0.0,
+            "touches_without_area": false,
+            "minimum_separation_m": 5.420332093147062
+          }
+        },
+        "AB_targets": {
+          "overlap": false,
+          "intersection_area_m2": 0.0,
+          "touches_without_area": false,
+          "minimum_separation_m": 7.760315715227055
+        }
+      },
+      "definition": "positive-area intersection; boundary contact is recorded separately",
+      "robot_disk_quad_segs": 128
+    }
+  },
+  "states": [
+    {
+      "sample_id": "s_80e62d24efbf",
+      "state": "NONE",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.30074999999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.15087499999999998,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.07593749999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.038468749999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.019734375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.029101562499999997,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.024417968749999998,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.024417968749999998,
+        "max_radius_infeasible_upper_m": 0.029101562499999997,
+        "radius_bracket_width_m": 0.004683593749999999,
+        "usable_radius_margin_lower_m": -0.22558203125,
+        "usable_radius_margin_upper_m": -0.2208984375,
+        "effective_disk_diameter_bracket_m": [
+          0.048835937499999996,
+          0.058203124999999994
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_80e62d24efbf",
+      "state": "A",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.30074999999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.15087499999999998,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.07593749999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.038468749999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.019734375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.029101562499999997,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.024417968749999998,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.024417968749999998,
+        "max_radius_infeasible_upper_m": 0.029101562499999997,
+        "radius_bracket_width_m": 0.004683593749999999,
+        "usable_radius_margin_lower_m": -0.22558203125,
+        "usable_radius_margin_upper_m": -0.2208984375,
+        "effective_disk_diameter_bracket_m": [
+          0.048835937499999996,
+          0.058203124999999994
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_80e62d24efbf",
+      "state": "B",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.30074999999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.15087499999999998,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.07593749999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.038468749999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.019734375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.029101562499999997,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.024417968749999998,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.024417968749999998,
+        "max_radius_infeasible_upper_m": 0.029101562499999997,
+        "radius_bracket_width_m": 0.004683593749999999,
+        "usable_radius_margin_lower_m": -0.22558203125,
+        "usable_radius_margin_upper_m": -0.2208984375,
+        "effective_disk_diameter_bracket_m": [
+          0.048835937499999996,
+          0.058203124999999994
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_80e62d24efbf",
+      "state": "AB",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679638536
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0012468905280214049
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679638536
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0012468905280214049
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679638536
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0012468905280214049
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.019999999999999074
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0004886114323218727
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.012842712474618934
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.00041634565979897786
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.90025,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.750375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8253125,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.78784375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8065781249999999,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.7972109374999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8018945312499999,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.7972109374999999,
+        "max_radius_infeasible_upper_m": 0.8018945312499999,
+        "radius_bracket_width_m": 0.004683593749999937,
+        "usable_radius_margin_lower_m": 0.5472109374999999,
+        "usable_radius_margin_upper_m": 0.5518945312499999,
+        "effective_disk_diameter_bracket_m": [
+          1.5944218749999999,
+          1.6037890624999998
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_6850ce92ab65",
+      "state": "NONE",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.30074999999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.15087499999999998,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.07593749999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.038468749999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.019734375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.029101562499999997,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.024417968749999998,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.024417968749999998,
+        "max_radius_infeasible_upper_m": 0.029101562499999997,
+        "radius_bracket_width_m": 0.004683593749999999,
+        "usable_radius_margin_lower_m": -0.22558203125,
+        "usable_radius_margin_upper_m": -0.2208984375,
+        "effective_disk_diameter_bracket_m": [
+          0.048835937499999996,
+          0.058203124999999994
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_6850ce92ab65",
+      "state": "A",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679638869
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528021849
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679638869
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528021849
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679638869
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528021849
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.019999999999999518
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0004886114323218727
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.012842712474618934
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.00041634565979897786
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.90025,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.750375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8253125,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.78784375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8065781249999999,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.7972109374999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8018945312499999,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.7972109374999999,
+        "max_radius_infeasible_upper_m": 0.8018945312499999,
+        "radius_bracket_width_m": 0.004683593749999937,
+        "usable_radius_margin_lower_m": 0.5472109374999999,
+        "usable_radius_margin_upper_m": 0.5518945312499999,
+        "effective_disk_diameter_bracket_m": [
+          1.5944218749999999,
+          1.6037890624999998
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_6850ce92ab65",
+      "state": "B",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639369
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528022293
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639369
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528022293
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639369
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528022293
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.01999999999999999
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0004886114323224
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.012842712474619877
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.00041634565979947746
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.90025,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.750375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8253125,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.78784375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8065781249999999,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.7972109374999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8018945312499999,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.7972109374999999,
+        "max_radius_infeasible_upper_m": 0.8018945312499999,
+        "radius_bracket_width_m": 0.004683593749999937,
+        "usable_radius_margin_lower_m": 0.5472109374999999,
+        "usable_radius_margin_upper_m": 0.5518945312499999,
+        "effective_disk_diameter_bracket_m": [
+          1.5944218749999999,
+          1.6037890624999998
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_6850ce92ab65",
+      "state": "AB",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639369
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528022293
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639369
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528022293
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639369
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528022293
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.01999999999999999
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0004886114323224
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.012842712474619877
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.00041634565979947746
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.90025,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.750375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8253125,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.78784375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8065781249999999,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.7972109374999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8018945312499999,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.7972109374999999,
+        "max_radius_infeasible_upper_m": 0.8018945312499999,
+        "radius_bracket_width_m": 0.004683593749999937,
+        "usable_radius_margin_lower_m": 0.5472109374999999,
+        "usable_radius_margin_upper_m": 0.5518945312499999,
+        "effective_disk_diameter_bracket_m": [
+          1.5944218749999999,
+          1.6037890624999998
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_9fe7791779c0",
+      "state": "NONE",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.30074999999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.15087499999999998,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.07593749999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.038468749999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.019734375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.029101562499999997,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.024417968749999998,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.024417968749999998,
+        "max_radius_infeasible_upper_m": 0.029101562499999997,
+        "radius_bracket_width_m": 0.004683593749999999,
+        "usable_radius_margin_lower_m": -0.22558203125,
+        "usable_radius_margin_upper_m": -0.2208984375,
+        "effective_disk_diameter_bracket_m": [
+          0.048835937499999996,
+          0.058203124999999994
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_9fe7791779c0",
+      "state": "A",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679638536
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0012468905280214049
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679638536
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0012468905280214049
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679638536
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0012468905280214049
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.019999999999999074
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0004886114323218727
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.012842712474618934
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.00041634565979897786
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.90025,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.750375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8253125,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.78784375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8065781249999999,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.7972109374999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8018945312499999,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.7972109374999999,
+        "max_radius_infeasible_upper_m": 0.8018945312499999,
+        "radius_bracket_width_m": 0.004683593749999937,
+        "usable_radius_margin_lower_m": 0.5472109374999999,
+        "usable_radius_margin_upper_m": 0.5518945312499999,
+        "effective_disk_diameter_bracket_m": [
+          1.5944218749999999,
+          1.6037890624999998
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_9fe7791779c0",
+      "state": "B",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.30074999999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.15087499999999998,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.07593749999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.038468749999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.019734375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.029101562499999997,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.024417968749999998,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.024417968749999998,
+        "max_radius_infeasible_upper_m": 0.029101562499999997,
+        "radius_bracket_width_m": 0.004683593749999999,
+        "usable_radius_margin_lower_m": -0.22558203125,
+        "usable_radius_margin_upper_m": -0.2208984375,
+        "effective_disk_diameter_bracket_m": [
+          0.048835937499999996,
+          0.058203124999999994
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_9fe7791779c0",
+      "state": "AB",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.30074999999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.15087499999999998,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.07593749999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.038468749999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.019734375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.029101562499999997,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.024417968749999998,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.024417968749999998,
+        "max_radius_infeasible_upper_m": 0.029101562499999997,
+        "radius_bracket_width_m": 0.004683593749999999,
+        "usable_radius_margin_lower_m": -0.22558203125,
+        "usable_radius_margin_upper_m": -0.2208984375,
+        "effective_disk_diameter_bracket_m": [
+          0.048835937499999996,
+          0.058203124999999994
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_f5dc98934220",
+      "state": "NONE",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.30074999999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.15087499999999998,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.07593749999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.038468749999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.019734375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.029101562499999997,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.024417968749999998,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.024417968749999998,
+        "max_radius_infeasible_upper_m": 0.029101562499999997,
+        "radius_bracket_width_m": 0.004683593749999999,
+        "usable_radius_margin_lower_m": -0.22558203125,
+        "usable_radius_margin_upper_m": -0.2208984375,
+        "effective_disk_diameter_bracket_m": [
+          0.048835937499999996,
+          0.058203124999999994
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_f5dc98934220",
+      "state": "A",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.30074999999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.15087499999999998,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.07593749999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.038468749999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.019734375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.029101562499999997,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.024417968749999998,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.024417968749999998,
+        "max_radius_infeasible_upper_m": 0.029101562499999997,
+        "radius_bracket_width_m": 0.004683593749999999,
+        "usable_radius_margin_lower_m": -0.22558203125,
+        "usable_radius_margin_upper_m": -0.2208984375,
+        "effective_disk_diameter_bracket_m": [
+          0.048835937499999996,
+          0.058203124999999994
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_f5dc98934220",
+      "state": "B",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.30074999999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.15087499999999998,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.07593749999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.038468749999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.019734375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.029101562499999997,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.024417968749999998,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.024417968749999998,
+        "max_radius_infeasible_upper_m": 0.029101562499999997,
+        "radius_bracket_width_m": 0.004683593749999999,
+        "usable_radius_margin_lower_m": -0.22558203125,
+        "usable_radius_margin_upper_m": -0.2208984375,
+        "effective_disk_diameter_bracket_m": [
+          0.048835937499999996,
+          0.058203124999999994
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_f5dc98934220",
+      "state": "AB",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639313
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528022293
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639313
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528022293
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639313
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528022293
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.01999999999999999
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0004886114323224
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.012842712474619267
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.00041634565979947746
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.90025,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.750375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8253125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.86278125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.881515625,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8908828125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.89556640625,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.89556640625,
+        "max_radius_infeasible_upper_m": 0.90025,
+        "radius_bracket_width_m": 0.004683593750000048,
+        "usable_radius_margin_lower_m": 0.64556640625,
+        "usable_radius_margin_upper_m": 0.65025,
+        "effective_disk_diameter_bracket_m": [
+          1.7911328125,
+          1.8005
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_8bbc91f1568a",
+      "state": "NONE",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.30074999999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.15087499999999998,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.07593749999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.038468749999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.019734375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.029101562499999997,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.024417968749999998,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.024417968749999998,
+        "max_radius_infeasible_upper_m": 0.029101562499999997,
+        "radius_bracket_width_m": 0.004683593749999999,
+        "usable_radius_margin_lower_m": -0.22558203125,
+        "usable_radius_margin_upper_m": -0.2208984375,
+        "effective_disk_diameter_bracket_m": [
+          0.048835937499999996,
+          0.058203124999999994
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_8bbc91f1568a",
+      "state": "A",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.05000000000000071
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.025000000000000355
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.05000000000000071
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.025000000000000355
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.05000000000000071
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.025000000000000355
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.019999999999999962
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.019999999999999962
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.030000000000000693
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0050000000000003375
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.90025,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.750375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8253125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.86278125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.881515625,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8908828125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.89556640625,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.89556640625,
+        "max_radius_infeasible_upper_m": 0.90025,
+        "radius_bracket_width_m": 0.004683593750000048,
+        "usable_radius_margin_lower_m": 0.64556640625,
+        "usable_radius_margin_upper_m": 0.65025,
+        "effective_disk_diameter_bracket_m": [
+          1.7911328125,
+          1.8005
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_8bbc91f1568a",
+      "state": "B",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639202
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0012468905280222375
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639202
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0012468905280222375
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639202
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0012468905280222375
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.01999999999999999
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0004886114323218727
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.012842712474618934
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0004163456597990889
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.90025,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.750375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8253125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.86278125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.881515625,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8908828125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.89556640625,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.89556640625,
+        "max_radius_infeasible_upper_m": 0.90025,
+        "radius_bracket_width_m": 0.004683593750000048,
+        "usable_radius_margin_lower_m": 0.64556640625,
+        "usable_radius_margin_upper_m": 0.65025,
+        "effective_disk_diameter_bracket_m": [
+          1.7911328125,
+          1.8005
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_8bbc91f1568a",
+      "state": "AB",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.05000000000000071
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.025000000000000355
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.05000000000000071
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.025000000000000355
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.05000000000000071
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.025000000000000355
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.019999999999999962
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.019999999999999962
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.030000000000000693
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0050000000000003375
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.90025,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.750375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8253125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.86278125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.881515625,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8908828125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.89556640625,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.89556640625,
+        "max_radius_infeasible_upper_m": 0.90025,
+        "radius_bracket_width_m": 0.004683593750000048,
+        "usable_radius_margin_lower_m": 0.64556640625,
+        "usable_radius_margin_upper_m": 0.65025,
+        "effective_disk_diameter_bracket_m": [
+          1.7911328125,
+          1.8005
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_8ed968aae7fe",
+      "state": "NONE",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.30074999999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.15087499999999998,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.07593749999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.038468749999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.019734375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.029101562499999997,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.024417968749999998,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.024417968749999998,
+        "max_radius_infeasible_upper_m": 0.029101562499999997,
+        "radius_bracket_width_m": 0.004683593749999999,
+        "usable_radius_margin_lower_m": -0.22558203125,
+        "usable_radius_margin_upper_m": -0.2208984375,
+        "effective_disk_diameter_bracket_m": [
+          0.048835937499999996,
+          0.058203124999999994
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_8ed968aae7fe",
+      "state": "A",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639313
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528022293
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639313
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528022293
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.004950975679639313
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.001246890528022293
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.01999999999999999
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.0004886114323224
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": true,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.012842712474619267
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": true,
+              "status": "reachable_on_grid",
+              "path_min_clearance_m": 0.00041634565979947746
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.90025,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.750375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8253125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.86278125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.881515625,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.8908828125,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.89556640625,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.89556640625,
+        "max_radius_infeasible_upper_m": 0.90025,
+        "radius_bracket_width_m": 0.004683593750000048,
+        "usable_radius_margin_lower_m": 0.64556640625,
+        "usable_radius_margin_upper_m": 0.65025,
+        "effective_disk_diameter_bracket_m": [
+          1.7911328125,
+          1.8005
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_8ed968aae7fe",
+      "state": "B",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.30074999999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.15087499999999998,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.07593749999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.038468749999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.019734375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.029101562499999997,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.024417968749999998,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.024417968749999998,
+        "max_radius_infeasible_upper_m": 0.029101562499999997,
+        "radius_bracket_width_m": 0.004683593749999999,
+        "usable_radius_margin_lower_m": -0.22558203125,
+        "usable_radius_margin_upper_m": -0.2208984375,
+        "effective_disk_diameter_bracket_m": [
+          0.048835937499999996,
+          0.058203124999999994
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    },
+    {
+      "sample_id": "s_8ed968aae7fe",
+      "state": "AB",
+      "sensitivity": [
+        {
+          "condition": "baseline",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_0.95",
+          "object_scale": 0.95,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "object_scale_1.05",
+          "object_scale": 1.05,
+          "robot_radius_m": 0.25,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_-0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.23,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        },
+        {
+          "condition": "radius_offset_0.02",
+          "object_scale": 1.0,
+          "robot_radius_m": 0.27,
+          "status": "verified",
+          "passable": false,
+          "resolutions": [
+            {
+              "resolution_m": 0.05,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            },
+            {
+              "resolution_m": 0.025,
+              "passable": false,
+              "status": "unreachable_on_grid",
+              "path_min_clearance_m": null
+            }
+          ]
+        }
+      ],
+      "capacity": {
+        "status": "bracketed",
+        "resolution_m": 0.025,
+        "trace": [
+          {
+            "radius_m": 0.001,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 1.2,
+            "passable": false,
+            "status": "endpoint_in_collision"
+          },
+          {
+            "radius_m": 0.6004999999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.30074999999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.15087499999999998,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.07593749999999999,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.038468749999999996,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.019734375,
+            "passable": true,
+            "status": "reachable_on_grid"
+          },
+          {
+            "radius_m": 0.029101562499999997,
+            "passable": false,
+            "status": "unreachable_on_grid"
+          },
+          {
+            "radius_m": 0.024417968749999998,
+            "passable": true,
+            "status": "reachable_on_grid"
+          }
+        ],
+        "max_radius_feasible_lower_m": 0.024417968749999998,
+        "max_radius_infeasible_upper_m": 0.029101562499999997,
+        "radius_bracket_width_m": 0.004683593749999999,
+        "usable_radius_margin_lower_m": -0.22558203125,
+        "usable_radius_margin_upper_m": -0.2208984375,
+        "effective_disk_diameter_bracket_m": [
+          0.048835937499999996,
+          0.058203124999999994
+        ],
+        "continuous_channel_width_claimed": false
+      }
+    }
+  ],
+  "elapsed_seconds": 66.15338626201265,
+  "notes": [
+    "Radius perturbation changes obstacle buffer AND workspace inset; not object-only physical inflation.",
+    "Capacity is a conservative finite-grid feasible/infeasible radius bracket, not a continuous-space proof.",
+    "Returned BFS witness clearance is distinct from the best feasible radius margin."
+  ]
+}

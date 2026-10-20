@@ -1,0 +1,14 @@
+Independently check proposed target-footprint overlap in the single original map image.
+Solid A and B are original object footprints. Dashed A' and B' are proposed final footprints, not movement trajectories.
+For target A', check overlap with the Start footprint, Goal footprint, walls, and the other object's ORIGINAL footprint (B).
+For target B', check overlap with the Start footprint, Goal footprint, walls, and the other object's ORIGINAL footprint (A).
+Start and Goal footprints are disks of the stated robot radius. Overlap means a positive shared area; boundary-only touching is not overlap.
+Also check whether the two target footprints A' and B' overlap each other when both edits are applied.
+Judge only these geometric overlaps. Do not judge a route or assume that an object blocks a route merely because it moves.
+Return exactly one JSON object with exactly the keys A, B, AB_targets, and explanation.
+A and B must each be an object with exactly the keys start, goal, walls, and other_original.
+Those eight fields and AB_targets must be JSON booleans, or null when evidence is insufficient.
+explanation must be a short string of at most 35 words. Do not add markdown fences or text outside the JSON object.
+
+Public task information:
+{{CONTEXT_JSON}}
