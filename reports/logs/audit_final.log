@@ -1,0 +1,26 @@
+{
+  "time": "2026-10-20T16:55:04.473611+08:00",
+  "audit_python": "3.10.12",
+  "conda_path": "/home/asus/anaconda3/bin/conda",
+  "cuda_driver_api": {
+    "cuInit_returncode": 0,
+    "cuDeviceGetCount_returncode": 0,
+    "device_count": 1,
+    "cuDriverGetVersion_returncode": 0,
+    "driver_api_version": 12040
+  },
+  "network": [
+    {
+      "url": "https://huggingface.co/api/models/Qwen/Qwen3-VL-4B-Instruct",
+      "method": "HEAD",
+      "status": 200
+    },
+    {
+      "url": "https://pypi.org/simple/shapely/",
+      "method": "HEAD",
+      "status": 200
+    }
+  ],
+  "protected_file_count": 113,
+  "note": "CUDA driver API tested only; no PyTorch/kernel/model inference test. Network HEAD only, no weights."
+}

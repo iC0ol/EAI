@@ -1,0 +1,16 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0 -- /home/asus/research/spatial_intervention_pilot/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/asus/research/spatial_intervention_pilot
+configfile: pyproject.toml
+collecting ... collected 27 items / 21 deselected / 6 selected
+
+tests/test_oracle.py::test_core_six[serial-0] PASSED                     [ 16%]
+tests/test_oracle.py::test_core_six[serial-1] PASSED                     [ 33%]
+tests/test_oracle.py::test_core_six[parallel-0] PASSED                   [ 50%]
+tests/test_oracle.py::test_core_six[parallel-1] PASSED                   [ 66%]
+tests/test_oracle.py::test_core_six[side_effect-0] PASSED                [ 83%]
+tests/test_oracle.py::test_core_six[side_effect-1] PASSED                [100%]
+
+- generated xml file: /home/asus/research/spatial_intervention_pilot/reports/core_tests.xml -
+======================= 6 passed, 21 deselected in 1.86s =======================

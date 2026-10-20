@@ -1,0 +1,594 @@
+{
+  "schema_version": 1,
+  "sample_id": "s_098c6dc6abbc",
+  "family": "serial",
+  "family_id": "serial_layout_1",
+  "base_layout": 1,
+  "variant": 3,
+  "core_acceptance": false,
+  "matched_pair_group": "pair_v3",
+  "seed": 20261020,
+  "rng_seed": 20264047,
+  "units": "m",
+  "workspace": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          0.0,
+          12.0
+        ],
+        [
+          12.0,
+          12.0
+        ],
+        [
+          12.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          12.0
+        ]
+      ]
+    ]
+  },
+  "walls": [
+    {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            12.0,
+            0.0
+          ],
+          [
+            12.0,
+            12.0
+          ],
+          [
+            0.0,
+            12.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.1,
+            3.3
+          ],
+          [
+            2.1,
+            3.3
+          ],
+          [
+            2.1,
+            7.300000000000001
+          ],
+          [
+            8.1,
+            7.300000000000001
+          ],
+          [
+            8.1,
+            8.7
+          ],
+          [
+            8.1,
+            9.6
+          ],
+          [
+            5.1,
+            9.6
+          ],
+          [
+            5.1,
+            11.4
+          ],
+          [
+            6.0,
+            11.4
+          ],
+          [
+            9.9,
+            11.4
+          ],
+          [
+            9.9,
+            9.9
+          ],
+          [
+            11.9,
+            9.9
+          ],
+          [
+            11.9,
+            8.7
+          ],
+          [
+            9.9,
+            8.7
+          ],
+          [
+            9.9,
+            5.5
+          ],
+          [
+            3.9,
+            5.5
+          ],
+          [
+            3.9,
+            3.3
+          ],
+          [
+            3.9,
+            2.4
+          ],
+          [
+            6.9,
+            2.4
+          ],
+          [
+            6.9,
+            0.6
+          ],
+          [
+            6.0,
+            0.6
+          ],
+          [
+            2.1,
+            0.6
+          ],
+          [
+            2.1,
+            2.1
+          ],
+          [
+            0.1,
+            2.1
+          ],
+          [
+            0.1,
+            3.3
+          ]
+        ]
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "crate_k",
+      "display_id": "A",
+      "color": "#916DCC",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2.15,
+              4.35
+            ],
+            [
+              3.85,
+              4.35
+            ],
+            [
+              3.85,
+              3.65
+            ],
+            [
+              2.15,
+              3.65
+            ],
+            [
+              2.15,
+              4.35
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id": "crate_m",
+      "display_id": "B",
+      "color": "#E79536",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              8.15,
+              8.35
+            ],
+            [
+              9.85,
+              8.35
+            ],
+            [
+              9.85,
+              7.65
+            ],
+            [
+              8.15,
+              7.65
+            ],
+            [
+              8.15,
+              8.35
+            ]
+          ]
+        ]
+      }
+    }
+  ],
+  "start": [
+    6.0,
+    1.5
+  ],
+  "goal": [
+    6.0,
+    10.5
+  ],
+  "robot_radius_m": 0.25,
+  "robot_model": "holonomic circular footprint; hypothetical final geometry only",
+  "task_rules": {
+    "task": "Reach Goal from Start inside the workspace without robot contact with walls or objects.",
+    "edits": "Only listed final-pose translations are allowed. Object interiors may not overlap walls or each other. Boundary contact of objects is allowed.",
+    "motion": "A circular robot may translate in any planar direction; no heading or differential-drive constraint.",
+    "intervention": "Editing movement trajectories and the physical ability to move an object are not evaluated."
+  },
+  "edits": {
+    "A": {
+      "object_id": "crate_k",
+      "target_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0.20000000000000007,
+              3.0500000000000003
+            ],
+            [
+              1.9,
+              3.0500000000000003
+            ],
+            [
+              1.9,
+              2.35
+            ],
+            [
+              0.20000000000000007,
+              2.35
+            ],
+            [
+              0.20000000000000007,
+              3.0500000000000003
+            ]
+          ]
+        ]
+      }
+    },
+    "B": {
+      "object_id": "crate_m",
+      "target_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              10.1,
+              9.65
+            ],
+            [
+              11.799999999999999,
+              9.65
+            ],
+            [
+              11.799999999999999,
+              8.950000000000001
+            ],
+            [
+              10.1,
+              8.950000000000001
+            ],
+            [
+              10.1,
+              9.65
+            ]
+          ]
+        ]
+      }
+    }
+  },
+  "counterbalance": {
+    "rotation_deg": 90,
+    "mirror_x": true,
+    "palette_index": 1,
+    "id_order": [
+      "crate_k",
+      "crate_m"
+    ]
+  },
+  "render": {
+    "size_px": 768,
+    "version": "pillow-topdown-v1"
+  },
+  "post_edit_objects": {
+    "NONE": [
+      {
+        "id": "crate_k",
+        "display_id": "A",
+        "color": "#916DCC",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                2.15,
+                4.35
+              ],
+              [
+                3.85,
+                4.35
+              ],
+              [
+                3.85,
+                3.65
+              ],
+              [
+                2.15,
+                3.65
+              ],
+              [
+                2.15,
+                4.35
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "id": "crate_m",
+        "display_id": "B",
+        "color": "#E79536",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                8.15,
+                8.35
+              ],
+              [
+                9.85,
+                8.35
+              ],
+              [
+                9.85,
+                7.65
+              ],
+              [
+                8.15,
+                7.65
+              ],
+              [
+                8.15,
+                8.35
+              ]
+            ]
+          ]
+        }
+      }
+    ],
+    "A": [
+      {
+        "id": "crate_k",
+        "display_id": "A",
+        "color": "#916DCC",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                0.20000000000000007,
+                3.0500000000000003
+              ],
+              [
+                1.9,
+                3.0500000000000003
+              ],
+              [
+                1.9,
+                2.35
+              ],
+              [
+                0.20000000000000007,
+                2.35
+              ],
+              [
+                0.20000000000000007,
+                3.0500000000000003
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "id": "crate_m",
+        "display_id": "B",
+        "color": "#E79536",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                8.15,
+                8.35
+              ],
+              [
+                9.85,
+                8.35
+              ],
+              [
+                9.85,
+                7.65
+              ],
+              [
+                8.15,
+                7.65
+              ],
+              [
+                8.15,
+                8.35
+              ]
+            ]
+          ]
+        }
+      }
+    ],
+    "B": [
+      {
+        "id": "crate_k",
+        "display_id": "A",
+        "color": "#916DCC",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                2.15,
+                4.35
+              ],
+              [
+                3.85,
+                4.35
+              ],
+              [
+                3.85,
+                3.65
+              ],
+              [
+                2.15,
+                3.65
+              ],
+              [
+                2.15,
+                4.35
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "id": "crate_m",
+        "display_id": "B",
+        "color": "#E79536",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                10.1,
+                9.65
+              ],
+              [
+                11.799999999999999,
+                9.65
+              ],
+              [
+                11.799999999999999,
+                8.950000000000001
+              ],
+              [
+                10.1,
+                8.950000000000001
+              ],
+              [
+                10.1,
+                9.65
+              ]
+            ]
+          ]
+        }
+      }
+    ],
+    "AB": [
+      {
+        "id": "crate_k",
+        "display_id": "A",
+        "color": "#916DCC",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                0.20000000000000007,
+                3.0500000000000003
+              ],
+              [
+                1.9,
+                3.0500000000000003
+              ],
+              [
+                1.9,
+                2.35
+              ],
+              [
+                0.20000000000000007,
+                2.35
+              ],
+              [
+                0.20000000000000007,
+                3.0500000000000003
+              ]
+            ]
+          ]
+        }
+      },
+      {
+        "id": "crate_m",
+        "display_id": "B",
+        "color": "#E79536",
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                10.1,
+                9.65
+              ],
+              [
+                11.799999999999999,
+                9.65
+              ],
+              [
+                11.799999999999999,
+                8.950000000000001
+              ],
+              [
+                10.1,
+                8.950000000000001
+              ],
+              [
+                10.1,
+                9.65
+              ]
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}

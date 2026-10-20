@@ -1,0 +1,48 @@
+{
+  "recorded_at": "2026-10-20T16:58:17.052129+08:00",
+  "python": "3.11.17",
+  "python_executable": "/home/asus/research/spatial_intervention_pilot/.venv/bin/python",
+  "prefix": "/home/asus/research/spatial_intervention_pilot/.venv",
+  "base_prefix": "/home/asus/research/spatial_intervention_pilot/.runtime/python/cpython-3.11.17-linux-x86_64-gnu",
+  "uv": "uv 0.13.3 (x86_64-unknown-linux-gnu)",
+  "packages": {
+    "pillow": "13.0.0",
+    "fonttools": "4.67.0",
+    "kiwisolver": "1.5.1",
+    "packaging": "26.3",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.6",
+    "Pygments": "2.21.0",
+    "pluggy": "1.7.0",
+    "numpy": "2.4.6",
+    "pytest": "9.1.1",
+    "six": "1.17.0",
+    "python-dateutil": "2.9.0.post0",
+    "cycler": "0.12.1",
+    "iniconfig": "2.3.1",
+    "shapely": "2.2.0",
+    "PyYAML": "6.0.3",
+    "pyparsing": "3.3.3",
+    "tqdm": "4.70.1",
+    "contourpy": "1.3.3"
+  },
+  "geos_version": "3.14.1",
+  "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+  "font_sha256": "690243adfefe0ce154b547db6205794bd30ac4277275179517a90994f4980648",
+  "gpu_query": "NVIDIA GeForce RTX 3090, 550.144.03, 24576, 949",
+  "memory_snapshot": [
+    "MemTotal:       32729176 kB",
+    "MemFree:         1695616 kB",
+    "MemAvailable:   23142448 kB"
+  ],
+  "disk_free_gib": 285.73,
+  "requirements_lock_sha256": "34357e4ad1ed531bb4926881703cbb0694fd0ab17fa3cb55e96d766a2e3861e2",
+  "cuda_driver_api": {
+    "cuInit_returncode": 0,
+    "cuDeviceGetCount_returncode": 0,
+    "device_count": 1,
+    "cuDriverGetVersion_returncode": 0,
+    "driver_api_version": 12040
+  },
+  "system_site_packages": false
+}

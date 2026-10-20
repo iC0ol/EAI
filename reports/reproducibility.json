@@ -1,0 +1,7 @@
+{
+  "seed": 20261020,
+  "compared_files": 26,
+  "mismatches": [],
+  "pass": true,
+  "scope": "all data files: original PNGs, scene JSON, public inputs and private labels; timestamps in reports excluded"
+}

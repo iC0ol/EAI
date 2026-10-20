@@ -1,0 +1,11 @@
+numpy: 2.4.6 | /home/asus/research/spatial_intervention_pilot/.venv/lib/python3.11/site-packages/numpy/__init__.py
+PIL: 13.0.0 | /home/asus/research/spatial_intervention_pilot/.venv/lib/python3.11/site-packages/PIL/__init__.py
+matplotlib: 3.11.2 | /home/asus/research/spatial_intervention_pilot/.venv/lib/python3.11/site-packages/matplotlib/__init__.py
+shapely: 2.2.0 | /home/asus/research/spatial_intervention_pilot/.venv/lib/python3.11/site-packages/shapely/__init__.py
+pandas: 3.0.6 | /home/asus/research/spatial_intervention_pilot/.venv/lib/python3.11/site-packages/pandas/__init__.py
+yaml: 6.0.3 | /home/asus/research/spatial_intervention_pilot/.venv/lib/python3.11/site-packages/yaml/__init__.py
+pytest: 9.1.1 | /home/asus/research/spatial_intervention_pilot/.venv/lib/python3.11/site-packages/pytest/__init__.py
+tqdm: 4.70.1 | /home/asus/research/spatial_intervention_pilot/.venv/lib/python3.11/site-packages/tqdm/__init__.py
+executable: /home/asus/research/spatial_intervention_pilot/.venv/bin/python
+prefix: /home/asus/research/spatial_intervention_pilot/.venv
+base_prefix: /home/asus/research/spatial_intervention_pilot/.runtime/python/cpython-3.11.17-linux-x86_64-gnu

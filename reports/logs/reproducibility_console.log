@@ -1,0 +1,19 @@
+s_80e62d24efbf serial v0: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
+s_f5dc98934220 serial v1: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
+s_a04a9d7fb334 serial v2: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
+s_098c6dc6abbc serial v3: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
+s_6850ce92ab65 parallel v0: {'F_NONE': False, 'F_A': True, 'F_B': True, 'F_AB': True} [verified]
+s_8bbc91f1568a parallel v1: {'F_NONE': False, 'F_A': True, 'F_B': True, 'F_AB': True} [verified]
+s_76d69b1b609f parallel v2: {'F_NONE': False, 'F_A': True, 'F_B': True, 'F_AB': True} [verified]
+s_32f513dc936f parallel v3: {'F_NONE': False, 'F_A': True, 'F_B': True, 'F_AB': True} [verified]
+s_9fe7791779c0 side_effect v0: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_AB': False} [verified]
+s_8ed968aae7fe side_effect v1: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_AB': False} [verified]
+s_cee2a0e74c9f side_effect v2: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_AB': False} [verified]
+s_6304605d5049 side_effect v3: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_AB': False} [verified]
+{
+  "seed": 20261020,
+  "compared_files": 26,
+  "mismatches": [],
+  "pass": true,
+  "scope": "all data files: original PNGs, scene JSON, public inputs and private labels; timestamps in reports excluded"
+}

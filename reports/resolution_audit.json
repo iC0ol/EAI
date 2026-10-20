@@ -1,0 +1,391 @@
+{
+  "checked_states": 48,
+  "disagreements": 0,
+  "continuous_unreachability_claimed": false,
+  "results": [
+    {
+      "sample_id": "s_80e62d24efbf",
+      "state": "NONE",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_80e62d24efbf",
+      "state": "A",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_80e62d24efbf",
+      "state": "B",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_80e62d24efbf",
+      "state": "AB",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.0012468905280214049
+    },
+    {
+      "sample_id": "s_f5dc98934220",
+      "state": "NONE",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_f5dc98934220",
+      "state": "A",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_f5dc98934220",
+      "state": "B",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_f5dc98934220",
+      "state": "AB",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.001246890528022293
+    },
+    {
+      "sample_id": "s_a04a9d7fb334",
+      "state": "NONE",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_a04a9d7fb334",
+      "state": "A",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_a04a9d7fb334",
+      "state": "B",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_a04a9d7fb334",
+      "state": "AB",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.0012468905280212939
+    },
+    {
+      "sample_id": "s_098c6dc6abbc",
+      "state": "NONE",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_098c6dc6abbc",
+      "state": "A",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_098c6dc6abbc",
+      "state": "B",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_098c6dc6abbc",
+      "state": "AB",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.0012468905280217935
+    },
+    {
+      "sample_id": "s_6850ce92ab65",
+      "state": "NONE",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_6850ce92ab65",
+      "state": "A",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.001246890528021849
+    },
+    {
+      "sample_id": "s_6850ce92ab65",
+      "state": "B",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.001246890528022293
+    },
+    {
+      "sample_id": "s_6850ce92ab65",
+      "state": "AB",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.001246890528022293
+    },
+    {
+      "sample_id": "s_8bbc91f1568a",
+      "state": "NONE",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_8bbc91f1568a",
+      "state": "A",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.025000000000000355
+    },
+    {
+      "sample_id": "s_8bbc91f1568a",
+      "state": "B",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.0012468905280222375
+    },
+    {
+      "sample_id": "s_8bbc91f1568a",
+      "state": "AB",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.025000000000000355
+    },
+    {
+      "sample_id": "s_76d69b1b609f",
+      "state": "NONE",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_76d69b1b609f",
+      "state": "A",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.0012468905280219045
+    },
+    {
+      "sample_id": "s_76d69b1b609f",
+      "state": "B",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.025000000000000355
+    },
+    {
+      "sample_id": "s_76d69b1b609f",
+      "state": "AB",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.025000000000000355
+    },
+    {
+      "sample_id": "s_32f513dc936f",
+      "state": "NONE",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_32f513dc936f",
+      "state": "A",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.0012468905280222375
+    },
+    {
+      "sample_id": "s_32f513dc936f",
+      "state": "B",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.025000000000000355
+    },
+    {
+      "sample_id": "s_32f513dc936f",
+      "state": "AB",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.025000000000000355
+    },
+    {
+      "sample_id": "s_9fe7791779c0",
+      "state": "NONE",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_9fe7791779c0",
+      "state": "A",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.0012468905280214049
+    },
+    {
+      "sample_id": "s_9fe7791779c0",
+      "state": "B",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_9fe7791779c0",
+      "state": "AB",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_8ed968aae7fe",
+      "state": "NONE",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_8ed968aae7fe",
+      "state": "A",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.001246890528022293
+    },
+    {
+      "sample_id": "s_8ed968aae7fe",
+      "state": "B",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_8ed968aae7fe",
+      "state": "AB",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_cee2a0e74c9f",
+      "state": "NONE",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_cee2a0e74c9f",
+      "state": "A",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.0012468905280212939
+    },
+    {
+      "sample_id": "s_cee2a0e74c9f",
+      "state": "B",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_cee2a0e74c9f",
+      "state": "AB",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_6304605d5049",
+      "state": "NONE",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_6304605d5049",
+      "state": "A",
+      "resolution_m": 0.025,
+      "passable": true,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": 0.0012468905280217935
+    },
+    {
+      "sample_id": "s_6304605d5049",
+      "state": "B",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    },
+    {
+      "sample_id": "s_6304605d5049",
+      "state": "AB",
+      "resolution_m": 0.025,
+      "passable": false,
+      "agrees_with_primary": true,
+      "witness_min_clearance_m": null
+    }
+  ]
+}

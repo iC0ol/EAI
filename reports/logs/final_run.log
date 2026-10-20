@@ -1,0 +1,193 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0 -- /home/asus/research/spatial_intervention_pilot/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/asus/research/spatial_intervention_pilot
+configfile: pyproject.toml
+collecting ... collected 27 items / 21 deselected / 6 selected
+
+tests/test_oracle.py::test_core_six[serial-0] PASSED                     [ 16%]
+tests/test_oracle.py::test_core_six[serial-1] PASSED                     [ 33%]
+tests/test_oracle.py::test_core_six[parallel-0] PASSED                   [ 50%]
+tests/test_oracle.py::test_core_six[parallel-1] PASSED                   [ 66%]
+tests/test_oracle.py::test_core_six[side_effect-0] PASSED                [ 83%]
+tests/test_oracle.py::test_core_six[side_effect-1] PASSED                [100%]
+
+- generated xml file: /home/asus/research/spatial_intervention_pilot/reports/core_tests.xml -
+======================= 6 passed, 21 deselected in 1.86s =======================
+s_80e62d24efbf serial v0: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
+s_f5dc98934220 serial v1: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
+s_a04a9d7fb334 serial v2: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
+s_098c6dc6abbc serial v3: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
+s_6850ce92ab65 parallel v0: {'F_NONE': False, 'F_A': True, 'F_B': True, 'F_AB': True} [verified]
+s_8bbc91f1568a parallel v1: {'F_NONE': False, 'F_A': True, 'F_B': True, 'F_AB': True} [verified]
+s_76d69b1b609f parallel v2: {'F_NONE': False, 'F_A': True, 'F_B': True, 'F_AB': True} [verified]
+s_32f513dc936f parallel v3: {'F_NONE': False, 'F_A': True, 'F_B': True, 'F_AB': True} [verified]
+s_9fe7791779c0 side_effect v0: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_AB': False} [verified]
+s_8ed968aae7fe side_effect v1: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_AB': False} [verified]
+s_cee2a0e74c9f side_effect v2: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_AB': False} [verified]
+s_6304605d5049 side_effect v3: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_AB': False} [verified]
+{
+  "schema_version": 1,
+  "created_at": "2026-10-20T16:57:55.986533+08:00",
+  "config": {
+    "schema_version": 1,
+    "seed": 20261020,
+    "phase_limit": 2,
+    "variants_per_family": 4,
+    "robot_radius_m": 0.25,
+    "grid_resolution_m": 0.1,
+    "fine_resolution_m": 0.05,
+    "boundary_margin_trigger_m": 0.12,
+    "buffer_quad_segs": 32,
+    "contact_epsilon_m": 1e-06,
+    "connectivity": 4,
+    "image_size_px": 768,
+    "render_version": "pillow-topdown-v1",
+    "model_id": null,
+    "model_revision": null,
+    "prompt_version": null
+  },
+  "config_sha256": "2b2483bb166e8c382ffcc9d700df782bcb50b18be7d1d195389e35c9a607620f",
+  "attempted": 12,
+  "succeeded": 12,
+  "failed": 0,
+  "verified": 12,
+  "oracle_unresolved": 0,
+  "family_counts": {
+    "serial": 4,
+    "parallel": 4,
+    "side_effect": 4
+  },
+  "core_acceptance_samples": [
+    "s_80e62d24efbf",
+    "s_f5dc98934220",
+    "s_6850ce92ab65",
+    "s_8bbc91f1568a",
+    "s_9fe7791779c0",
+    "s_8ed968aae7fe"
+  ],
+  "matched_pairs": [
+    [
+      "s_80e62d24efbf",
+      "s_6850ce92ab65"
+    ],
+    [
+      "s_f5dc98934220",
+      "s_8bbc91f1568a"
+    ],
+    [
+      "s_a04a9d7fb334",
+      "s_76d69b1b609f"
+    ],
+    [
+      "s_098c6dc6abbc",
+      "s_32f513dc936f"
+    ]
+  ],
+  "python": "3.11.17 (main, Oct 14 2026, 01:05:33) [Clang 23.1.3 ]",
+  "phase_completed": 2,
+  "vlm_status": "not_started_awaiting_user_review",
+  "model_id": null,
+  "model_revision": null,
+  "independence_note": "12 samples are 3 families x 2 geometric parameter sets x 2 views, not 12 independent topologies.",
+  "source_commit": "a07ff7c8efbe9c8e7cec29ab88cb51154f8a2f4f",
+  "source_status_at_generation": ""
+}
+============================= test session starts ==============================
+platform linux -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0 -- /home/asus/research/spatial_intervention_pilot/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/asus/research/spatial_intervention_pilot
+configfile: pyproject.toml
+testpaths: tests
+collecting ... collected 62 items
+
+tests/test_dataset.py::test_fixed_seed_scene_and_render_are_reproducible PASSED [  1%]
+tests/test_dataset.py::test_seed_is_recorded_and_affects_sample_identity PASSED [  3%]
+tests/test_dataset.py::test_public_inputs_have_no_private_labels_or_family PASSED [  4%]
+tests/test_dataset.py::test_public_images_ignore_answers_paths_ids_and_file_labels PASSED [  6%]
+tests/test_dataset.py::test_proposed_and_actual_new_obstacle_are_drawn PASSED [  8%]
+tests/test_dataset.py::test_generation_failure_is_counted_and_preserved PASSED [  9%]
+tests/test_dataset.py::test_serialized_artifacts_roundtrip_and_hashes PASSED [ 11%]
+tests/test_edits.py::test_compatible_edits_commute[serial-0] PASSED      [ 12%]
+tests/test_edits.py::test_compatible_edits_commute[serial-1] PASSED      [ 14%]
+tests/test_edits.py::test_compatible_edits_commute[serial-2] PASSED      [ 16%]
+tests/test_edits.py::test_compatible_edits_commute[serial-3] PASSED      [ 17%]
+tests/test_edits.py::test_compatible_edits_commute[parallel-0] PASSED    [ 19%]
+tests/test_edits.py::test_compatible_edits_commute[parallel-1] PASSED    [ 20%]
+tests/test_edits.py::test_compatible_edits_commute[parallel-2] PASSED    [ 22%]
+tests/test_edits.py::test_compatible_edits_commute[parallel-3] PASSED    [ 24%]
+tests/test_edits.py::test_compatible_edits_commute[side_effect-0] PASSED [ 25%]
+tests/test_edits.py::test_compatible_edits_commute[side_effect-1] PASSED [ 27%]
+tests/test_edits.py::test_compatible_edits_commute[side_effect-2] PASSED [ 29%]
+tests/test_edits.py::test_compatible_edits_commute[side_effect-3] PASSED [ 30%]
+tests/test_edits.py::test_illegal_destination_not_zero_label[offset0] PASSED [ 32%]
+tests/test_edits.py::test_illegal_destination_not_zero_label[offset1] PASSED [ 33%]
+tests/test_edits.py::test_shape_change_cannot_masquerade_as_translation PASSED [ 35%]
+tests/test_edits.py::test_unknown_edit_and_unknown_object_are_errors PASSED [ 37%]
+tests/test_edits.py::test_same_object_writes_conflict PASSED             [ 38%]
+tests/test_edits.py::test_valid_individual_edits_can_conflict_jointly PASSED [ 40%]
+tests/test_edits.py::test_duplicate_edit_is_not_ignored PASSED           [ 41%]
+tests/test_edits.py::test_illegal_edit_does_not_enter_oracle_as_false PASSED [ 43%]
+tests/test_edits.py::test_new_blockage_has_geometry_and_route_effect[0] PASSED [ 45%]
+tests/test_edits.py::test_new_blockage_has_geometry_and_route_effect[1] PASSED [ 46%]
+tests/test_edits.py::test_new_blockage_has_geometry_and_route_effect[2] PASSED [ 48%]
+tests/test_edits.py::test_new_blockage_has_geometry_and_route_effect[3] PASSED [ 50%]
+tests/test_edits.py::test_pairs_have_same_local_edit_geometry[0] PASSED  [ 51%]
+tests/test_edits.py::test_pairs_have_same_local_edit_geometry[1] PASSED  [ 53%]
+tests/test_edits.py::test_pairs_have_same_local_edit_geometry[2] PASSED  [ 54%]
+tests/test_edits.py::test_pairs_have_same_local_edit_geometry[3] PASSED  [ 56%]
+tests/test_oracle.py::test_core_six[serial-0] PASSED                     [ 58%]
+tests/test_oracle.py::test_core_six[serial-1] PASSED                     [ 59%]
+tests/test_oracle.py::test_core_six[parallel-0] PASSED                   [ 61%]
+tests/test_oracle.py::test_core_six[parallel-1] PASSED                   [ 62%]
+tests/test_oracle.py::test_core_six[side_effect-0] PASSED                [ 64%]
+tests/test_oracle.py::test_core_six[side_effect-1] PASSED                [ 66%]
+tests/test_oracle.py::test_additional_views[serial-2] PASSED             [ 67%]
+tests/test_oracle.py::test_additional_views[serial-3] PASSED             [ 69%]
+tests/test_oracle.py::test_additional_views[parallel-2] PASSED           [ 70%]
+tests/test_oracle.py::test_additional_views[parallel-3] PASSED           [ 72%]
+tests/test_oracle.py::test_additional_views[side_effect-2] PASSED        [ 74%]
+tests/test_oracle.py::test_additional_views[side_effect-3] PASSED        [ 75%]
+tests/test_oracle.py::test_paths_are_valid_full_segments[serial] PASSED  [ 77%]
+tests/test_oracle.py::test_paths_are_valid_full_segments[parallel] PASSED [ 79%]
+tests/test_oracle.py::test_paths_are_valid_full_segments[side_effect] PASSED [ 80%]
+tests/test_oracle.py::test_no_diagonal_adjacency PASSED                  [ 82%]
+tests/test_oracle.py::test_thin_wall_blocks_edges_between_free_nodes PASSED [ 83%]
+tests/test_oracle.py::test_diagonally_touching_walls_cannot_be_corner_cut PASSED [ 85%]
+tests/test_oracle.py::test_exact_start_is_not_silently_snapped_out_of_collision PASSED [ 87%]
+tests/test_oracle.py::test_arbitrary_endpoints_use_checked_connectors PASSED [ 88%]
+tests/test_oracle.py::test_robot_contact_is_collision PASSED             [ 90%]
+tests/test_oracle.py::test_coarse_fine_disagreement_marks_unresolved PASSED [ 91%]
+tests/test_oracle.py::test_actual_narrow_corridor_requires_finer_grid PASSED [ 93%]
+tests/test_oracle.py::test_color_and_object_ids_do_not_change_geometry_labels[serial] PASSED [ 95%]
+tests/test_oracle.py::test_color_and_object_ids_do_not_change_geometry_labels[parallel] PASSED [ 96%]
+tests/test_oracle.py::test_color_and_object_ids_do_not_change_geometry_labels[side_effect] PASSED [ 98%]
+tests/test_oracle.py::test_swapping_candidate_ids_permutates_labels PASSED [100%]
+
+- generated xml file: /home/asus/research/spatial_intervention_pilot/reports/tests.xml -
+============================== 62 passed in 5.26s ==============================
+s_80e62d24efbf serial v0: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
+s_f5dc98934220 serial v1: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
+s_a04a9d7fb334 serial v2: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
+s_098c6dc6abbc serial v3: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
+s_6850ce92ab65 parallel v0: {'F_NONE': False, 'F_A': True, 'F_B': True, 'F_AB': True} [verified]
+s_8bbc91f1568a parallel v1: {'F_NONE': False, 'F_A': True, 'F_B': True, 'F_AB': True} [verified]
+s_76d69b1b609f parallel v2: {'F_NONE': False, 'F_A': True, 'F_B': True, 'F_AB': True} [verified]
+s_32f513dc936f parallel v3: {'F_NONE': False, 'F_A': True, 'F_B': True, 'F_AB': True} [verified]
+s_9fe7791779c0 side_effect v0: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_AB': False} [verified]
+s_8ed968aae7fe side_effect v1: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_AB': False} [verified]
+s_cee2a0e74c9f side_effect v2: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_AB': False} [verified]
+s_6304605d5049 side_effect v3: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_AB': False} [verified]
+{
+  "seed": 20261020,
+  "compared_files": 26,
+  "mismatches": [],
+  "pass": true,
+  "scope": "all data files: original PNGs, scene JSON, public inputs and private labels; timestamps in reports excluded"
+}
+{
+  "checked_states": 48,
+  "disagreements": 0,
+  "continuous_unreachability_claimed": false
+}
+{"tests": {"tests": 62, "failures": 0, "errors": 0, "skipped": 0}, "generated": 12, "reports_updated": true}
