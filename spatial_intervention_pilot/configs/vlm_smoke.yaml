@@ -9,6 +9,10 @@ seed: 20261020
 batch_size: 1
 max_new_tokens: 256
 do_sample: false
+use_model_defaults: false
+temperature: null
+top_p: null
+top_k: null
 num_beams: 1
 min_pixels: 65536
 max_pixels: 589824

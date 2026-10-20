@@ -1,0 +1,5 @@
+{
+  "excluded_from_evaluation": true,
+  "reason": "Transformers 4.57.1 model-specific defaults replaced default-valued do_sample=False with True. Recorded intended decoding config in this debug attempt was not the effective config. No prompt/model/answer-based change.",
+  "evidence": "reports/phase3/logs/debug_sampling_defaults.log"
+}

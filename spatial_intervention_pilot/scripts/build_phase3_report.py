@@ -99,7 +99,9 @@ def main():
 
 1. single：s_80e62d24efbf，一次真实单图推理。
 2. three：复用 single 的第一条原始结果，新增 s_6850ce92ab65 与 s_9fe7791779c0。
-3. core：原样复用 three 的三条结果，再推理另三个已指定核心样本。总共只对六张图各调用一次模型。
+3. core：原样复用 three 的三条结果，再推理另三个已指定核心样本。正式结果对六张图各调用一次模型。
+   此前另有一次 single 调试尝试，因 Transformers 覆盖生成默认项而排除；原文和日志完整保留在
+   outputs/phase3/debug_sampling_defaults。总计七次模型调用，没有基于答案挑选结果。
 4. 所有六条推理完成后，单独 CPU 进程执行 evaluate.py，此时才读取 private_labels。
 
 输入加载器只读取 data/public_inputs.jsonl 与本阶段选中的 data/images 文件；不把样本 ID、场景类型、文件名或答案传入 prompt。
@@ -149,6 +151,10 @@ JSON 解析失败：{result['parse_failures']}。所有未知/格式失败均保
 本次共 {tests} 项，失败/错误 {failures}。原几何 .venv 与 requirements.lock 没有安装或升级任何包。
 最初安装命令缺少 cu124 索引导致找不到 torch；已先报告并保留 install_attempt1_missing_index.log，
 随后只显式补上同一官方索引，模型、依赖版本、驱动和系统 CUDA 均未更换。
+首个单图调试还暴露 Transformers 4.57.1 的 model-specific generation defaults 回填行为：
+初始 GenerationConfig 中处于默认值的 do_sample=false 被模型仓库的 true 覆盖。
+已先报告、完整保留并排除这次尝试；随后固定 use_model_defaults=false，并直接向 generate 传递
+do_sample=false、num_beams=1 和禁用的采样参数，核验 prepare 后的实际值。prompt 内容与 SHA256 完全不变。
 全部安装/下载/加载/推理/评估日志位于 logs/。大权重、.venv-vlm 与缓存被 Git 忽略。
 
 ## 重现

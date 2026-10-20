@@ -109,8 +109,15 @@ def main():
                             ['torch','torchvision','transformers','accelerate','huggingface-hub','pillow','numpy']}})
         generation = GenerationConfig(do_sample=False,num_beams=1,max_new_tokens=cfg['max_new_tokens'],
             use_cache=True,eos_token_id=model.generation_config.eos_token_id,
-            pad_token_id=model.generation_config.pad_token_id,bos_token_id=model.generation_config.bos_token_id)
-        session['generation_config'] = generation.to_dict()
+            pad_token_id=model.generation_config.pad_token_id,bos_token_id=model.generation_config.bos_token_id,
+            temperature=None,top_p=None,top_k=None)
+        explicit_decoding = {key:cfg[key] for key in ['do_sample','num_beams','max_new_tokens',
+                                                     'use_model_defaults','temperature','top_p','top_k']}
+        prepared_generation,_ = model._prepare_generation_config(generation,**explicit_decoding)
+        assert prepared_generation.do_sample is False and prepared_generation.num_beams == 1
+        assert prepared_generation.max_new_tokens == cfg['max_new_tokens']
+        session['generation_config'] = prepared_generation.to_dict()
+        session['explicit_generate_kwargs'] = explicit_decoding
         vision_calls = [0]
         hook = model.model.visual.register_forward_pre_hook(lambda module,inputs:vision_calls.__setitem__(0,vision_calls[0]+1))
         for sid in selected:
@@ -125,7 +132,8 @@ def main():
             row = {'sample_id':sid,**provenance,'input_image_sha256':record['input_image_sha256'],
                    'stage_first_inferred':args.stage,'reused_from_stage':None,'response_text':None,
                    'parsed_output':None,'parse_ok':False,'parse_error':None,'status':'running',
-                   'decoding_config':{'do_sample':False,'num_beams':1,'max_new_tokens':cfg['max_new_tokens']}}
+                   'decoding_config':explicit_decoding,
+                   'effective_generation_config':prepared_generation.to_dict()}
             start = time.perf_counter()
             try:
                 prompt = build_prompt(record,template)
@@ -153,7 +161,7 @@ def main():
                     calls_before = vision_calls[0]
                     generation_started = time.perf_counter()
                     with torch.inference_mode():
-                        generated = model.generate(**inputs,generation_config=generation)
+                        generated = model.generate(**inputs,generation_config=prepared_generation,**explicit_decoding)
                     torch.cuda.synchronize()
                     row['inference_seconds'] = time.perf_counter()-generation_started
                     row['vision_forward_calls'] = vision_calls[0]-calls_before

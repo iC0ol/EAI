@@ -1,0 +1,10 @@
+{
+  "F_A": false,
+  "F_B": false,
+  "F_AB": false,
+  "explanation": {
+    "A": "A' overlaps Start area, blocking path.",
+    "B": "B' near Goal, blocking direct route.",
+    "AB": "A' and B' together block entire path to Goal."
+  }
+}

@@ -1,12 +1,13 @@
 {
-  "frozen_at": "2026-10-20T17:26:40.981522+08:00",
+  "frozen_at": "2026-10-20T17:28:48.150612+08:00",
   "baseline_commit": "c395aa418f9e8c5aa252f124058b7691ac69d9f9",
   "sha256": {
-    "configs/vlm_smoke.yaml": "cd9c95305c43690a362dd268b548c1aefb755a6009dacb6a362f29039dff7658",
+    "configs/vlm_smoke.yaml": "670d17af09ed966a6e295ecc6e43c6fbc5047a8dc4c245a30d34a56bacc31667",
     "prompts/spatial_smoke_en_v1.txt": "5d8b0a86cf5f28089fed94ae61f32c2ac34bd91bb39112dce5bbe8c31d871fca",
     "requirements-vlm.in": "29938713b4be41d4be13e6cda3f6420fd0dba493290e6beded661dae87effbe7",
     "requirements-vlm.lock": "17a6d9e10e7aa2417df27148de62c996f2584de5ee008de9716187ab03c994e5",
-    "src/spatial_pilot/infer_vlm.py": "fcc6ecba55534091717ea2b6c058ee2ff11d0267226fa5d1d5d4abe0c8fb1646",
+    "src/spatial_pilot/infer_vlm.py": "dc233650171a1c7c42722adb728efb77ee6caf8f62ebf092b201b9d8220841fe",
     "src/spatial_pilot/vlm_io.py": "d863ac64b82325f78f17a65241d0e243fe03770b5dcc806ff6d78cff7324239e"
-  }
+  },
+  "correction": "Disable model-default fallback; prompt unchanged"
 }
