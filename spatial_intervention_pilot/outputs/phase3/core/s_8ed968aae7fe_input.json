@@ -1,0 +1,26 @@
+{
+  "sample_id": "s_8ed968aae7fe",
+  "source_image": "data/images/s_8ed968aae7fe.png",
+  "input_image_sha256": "90dd428e807077b85537291ccea7e889121cd89302bbab357e76f8f66180ab98",
+  "original_image_size": [
+    768,
+    768
+  ],
+  "prompt_text": "Evaluate hypothetical final-pose edits for the circular mobile robot in the single original scene image.\nUse only this image and the public task information below. Do not assume that any edit has already occurred.\nSolid colored objects A and B are at their original positions. Dashed footprints A' and B' mark only the proposed destinations.\nFor each condition, decide whether a collision-free route from Start to Goal would exist after the listed final-pose translations:\n- F_A: apply A only, with B left at its original position.\n- F_B: apply B only, with A left at its original position.\n- F_AB: apply both A and B, placing both objects at their proposed destinations.\nUse the given robot radius and task rules. Assess the entire route and account for every object at its final position.\nThis question concerns the hypothetical final geometry, not whether a robot can physically move an object along an editing trajectory.\nIf the visible evidence is insufficient, return null for the affected prediction rather than inventing facts.\nReply with exactly one JSON object, without markdown fences or text outside the object.\nThe object must have exactly four keys: F_A, F_B, F_AB, and explanation.\nEach prediction must be a JSON boolean (true or false), or null if uncertain.\nThe explanation value must be an object with exactly the keys A, B, and AB, each containing a short reason of at most 20 words.\n\nPublic task information:\n{\"candidate_edits\": {\"A\": \"Translate object A (footprint 1.70 x 0.70 m) from center (9.00, 4.00) to (10.95, 2.70) m; keep orientation.\", \"B\": \"Translate object B (footprint 1.70 x 0.70 m) from center (1.05, 9.30) to (3.00, 8.00) m; keep orientation.\"}, \"candidate_geometry\": {\"A\": {\"display_id\": \"A\", \"target_geometry\": {\"coordinates\": [[[11.8, 3.0500000000000003], [10.1, 3.0500000000000003], [10.1, 2.35], [11.8, 2.35], [11.8, 3.0500000000000003]]], \"type\": \"Polygon\"}}, \"B\": {\"display_id\": \"B\", \"target_geometry\": {\"coordinates\": [[[3.8499999999999996, 8.35], [2.1500000000000004, 8.35], [2.1500000000000004, 7.65], [3.8499999999999996, 7.65], [3.8499999999999996, 8.35]]], \"type\": \"Polygon\"}}}, \"image_legend\": \"Solid colored rectangles are current objects A/B. Dashed A'/B' are proposed final footprints, not post-edit observations or movement paths.\", \"robot_radius_m\": 0.25, \"task_rules\": {\"edits\": \"Only listed final-pose translations are allowed. Object interiors may not overlap walls or each other. Boundary contact of objects is allowed.\", \"intervention\": \"Editing movement trajectories and the physical ability to move an object are not evaluated.\", \"motion\": \"A circular robot may translate in any planar direction; no heading or differential-drive constraint.\", \"task\": \"Reach Goal from Start inside the workspace without robot contact with walls or objects.\"}, \"units\": \"m\"}\n",
+  "prompt_sha256": "5d8b0a86cf5f28089fed94ae61f32c2ac34bd91bb39112dce5bbe8c31d871fca",
+  "model_revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+  "pixel_values_shape": [
+    2304,
+    1536
+  ],
+  "image_grid_thw": [
+    [
+      1,
+      48,
+      48
+    ]
+  ],
+  "image_token_count": 576,
+  "input_token_count": 1429,
+  "vision_forward_calls": 1
+}

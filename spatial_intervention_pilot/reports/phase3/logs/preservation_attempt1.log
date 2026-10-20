@@ -1,0 +1,6 @@
+Initial read-only environment metadata check used the inherited workstation PYTHONPATH instead of the isolated runner settings.
+It observed 193 distributions rather than the 19 distributions in the geometry environment and stopped before staging or pushing.
+Traceback (most recent call last):
+  File "<stdin>", line 17, in <module>
+AssertionError: geometry_environment_packages_unchanged=False; geometry_environment_package_count=193
+Correction: repeat the metadata check with PYTHONPATH=project/src and PYTHONNOUSERSITE=1, matching scripts/run.sh and scripts/run_vlm.sh. No package changes made.

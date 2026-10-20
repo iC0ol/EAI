@@ -1,0 +1,10 @@
+{
+  "F_A": false,
+  "F_B": true,
+  "F_AB": false,
+  "explanation": {
+    "A": "A' collides with Start and Goal region.",
+    "B": "B' clears path to Goal without collision.",
+    "AB": "A' and B' overlap, blocking route."
+  }
+}

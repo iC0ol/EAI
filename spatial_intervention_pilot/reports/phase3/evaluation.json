@@ -1,0 +1,267 @@
+{
+  "n_samples": 6,
+  "per_state": {
+    "F_A": {
+      "correct": 3,
+      "denominator": 6,
+      "unknown": 0,
+      "accuracy": 0.5
+    },
+    "F_B": {
+      "correct": 2,
+      "denominator": 6,
+      "unknown": 0,
+      "accuracy": 0.3333333333333333
+    },
+    "F_AB": {
+      "correct": 1,
+      "denominator": 6,
+      "unknown": 0,
+      "accuracy": 0.16666666666666666
+    }
+  },
+  "all_state_decisions_correct": 6,
+  "all_state_decisions_denominator": 18,
+  "full_combination_correct": 0,
+  "full_combination_denominator": 6,
+  "both_singles_correct_ab_wrong_count": 0,
+  "parse_failures": 0,
+  "cases": [
+    {
+      "sample_id": "s_80e62d24efbf",
+      "family": "serial",
+      "prediction": {
+        "F_A": true,
+        "F_B": true,
+        "F_AB": true
+      },
+      "truth": {
+        "F_A": false,
+        "F_B": false,
+        "F_AB": true
+      },
+      "correct": {
+        "F_A": false,
+        "F_B": false,
+        "F_AB": true
+      },
+      "full_combination_correct": false,
+      "both_singles_correct_ab_wrong": false,
+      "parse_ok": true,
+      "status": "ok",
+      "response_text": "{\n  \"F_A\": true,\n  \"F_B\": true,\n  \"F_AB\": true,\n  \"explanation\": {\n    \"A\": \"A moved left, clears path to Goal without collision.\",\n    \"B\": \"B moved right, clears path to Goal without collision.\",\n    \"AB\": \"Both moved, path remains clear with no overlaps.\"\n  }\n}",
+      "parsed_output": {
+        "F_A": true,
+        "F_B": true,
+        "F_AB": true,
+        "explanation": {
+          "A": "A moved left, clears path to Goal without collision.",
+          "B": "B moved right, clears path to Goal without collision.",
+          "AB": "Both moved, path remains clear with no overlaps."
+        }
+      },
+      "parse_error": null,
+      "inference_seconds": 4.9967394429259,
+      "peak_vram_mb": 8834.4765625,
+      "nvidia_peak_device_used_mib": 9912
+    },
+    {
+      "sample_id": "s_6850ce92ab65",
+      "family": "parallel",
+      "prediction": {
+        "F_A": false,
+        "F_B": true,
+        "F_AB": false
+      },
+      "truth": {
+        "F_A": true,
+        "F_B": true,
+        "F_AB": true
+      },
+      "correct": {
+        "F_A": false,
+        "F_B": true,
+        "F_AB": false
+      },
+      "full_combination_correct": false,
+      "both_singles_correct_ab_wrong": false,
+      "parse_ok": true,
+      "status": "ok",
+      "response_text": "{\n  \"F_A\": false,\n  \"F_B\": true,\n  \"F_AB\": false,\n  \"explanation\": {\n    \"A\": \"A' collides with Start and Goal region.\",\n    \"B\": \"B' clears path to Goal without collision.\",\n    \"AB\": \"A' and B' overlap, blocking route.\"\n  }\n}",
+      "parsed_output": {
+        "F_A": false,
+        "F_B": true,
+        "F_AB": false,
+        "explanation": {
+          "A": "A' collides with Start and Goal region.",
+          "B": "B' clears path to Goal without collision.",
+          "AB": "A' and B' overlap, blocking route."
+        }
+      },
+      "parse_error": null,
+      "inference_seconds": 5.061309539014474,
+      "peak_vram_mb": 8834.4765625,
+      "nvidia_peak_device_used_mib": 9908
+    },
+    {
+      "sample_id": "s_9fe7791779c0",
+      "family": "side_effect",
+      "prediction": {
+        "F_A": true,
+        "F_B": true,
+        "F_AB": true
+      },
+      "truth": {
+        "F_A": true,
+        "F_B": false,
+        "F_AB": false
+      },
+      "correct": {
+        "F_A": true,
+        "F_B": false,
+        "F_AB": false
+      },
+      "full_combination_correct": false,
+      "both_singles_correct_ab_wrong": false,
+      "parse_ok": true,
+      "status": "ok",
+      "response_text": "{\n  \"F_A\": true,\n  \"F_B\": true,\n  \"F_AB\": true,\n  \"explanation\": {\n    \"A\": \"A moved left, clears path to Goal without collision.\",\n    \"B\": \"B moved down-left, clears path to Goal without collision.\",\n    \"AB\": \"Both moved, path remains clear with no overlaps.\"\n  }\n}",
+      "parsed_output": {
+        "F_A": true,
+        "F_B": true,
+        "F_AB": true,
+        "explanation": {
+          "A": "A moved left, clears path to Goal without collision.",
+          "B": "B moved down-left, clears path to Goal without collision.",
+          "AB": "Both moved, path remains clear with no overlaps."
+        }
+      },
+      "parse_error": null,
+      "inference_seconds": 4.633316521998495,
+      "peak_vram_mb": 8832.76806640625,
+      "nvidia_peak_device_used_mib": 9936
+    },
+    {
+      "sample_id": "s_f5dc98934220",
+      "family": "serial",
+      "prediction": {
+        "F_A": false,
+        "F_B": true,
+        "F_AB": false
+      },
+      "truth": {
+        "F_A": false,
+        "F_B": false,
+        "F_AB": true
+      },
+      "correct": {
+        "F_A": true,
+        "F_B": false,
+        "F_AB": false
+      },
+      "full_combination_correct": false,
+      "both_singles_correct_ab_wrong": false,
+      "parse_ok": true,
+      "status": "ok",
+      "response_text": "{\n  \"F_A\": false,\n  \"F_B\": true,\n  \"F_AB\": false,\n  \"explanation\": {\n    \"A\": \"A's new position overlaps with Goal, blocking path.\",\n    \"B\": \"B's new position clears path to Goal without collision.\",\n    \"AB\": \"A and B's new positions block path to Goal together.\"\n  }\n}",
+      "parsed_output": {
+        "F_A": false,
+        "F_B": true,
+        "F_AB": false,
+        "explanation": {
+          "A": "A's new position overlaps with Goal, blocking path.",
+          "B": "B's new position clears path to Goal without collision.",
+          "AB": "A and B's new positions block path to Goal together."
+        }
+      },
+      "parse_error": null,
+      "inference_seconds": 5.165854065213352,
+      "peak_vram_mb": 8842.2392578125,
+      "nvidia_peak_device_used_mib": 9935
+    },
+    {
+      "sample_id": "s_8bbc91f1568a",
+      "family": "parallel",
+      "prediction": {
+        "F_A": false,
+        "F_B": true,
+        "F_AB": false
+      },
+      "truth": {
+        "F_A": true,
+        "F_B": true,
+        "F_AB": true
+      },
+      "correct": {
+        "F_A": false,
+        "F_B": true,
+        "F_AB": false
+      },
+      "full_combination_correct": false,
+      "both_singles_correct_ab_wrong": false,
+      "parse_ok": true,
+      "status": "ok",
+      "response_text": "{\n  \"F_A\": false,\n  \"F_B\": true,\n  \"F_AB\": false,\n  \"explanation\": {\n    \"A\": \"A's new position overlaps with Goal, blocking path.\",\n    \"B\": \"B's new position clears path to Goal without collision.\",\n    \"AB\": \"A and B together block path; A overlaps Goal.\"\n  }\n}",
+      "parsed_output": {
+        "F_A": false,
+        "F_B": true,
+        "F_AB": false,
+        "explanation": {
+          "A": "A's new position overlaps with Goal, blocking path.",
+          "B": "B's new position clears path to Goal without collision.",
+          "AB": "A and B together block path; A overlaps Goal."
+        }
+      },
+      "parse_error": null,
+      "inference_seconds": 4.665785636054352,
+      "peak_vram_mb": 8841.6845703125,
+      "nvidia_peak_device_used_mib": 9992
+    },
+    {
+      "sample_id": "s_8ed968aae7fe",
+      "family": "side_effect",
+      "prediction": {
+        "F_A": true,
+        "F_B": true,
+        "F_AB": true
+      },
+      "truth": {
+        "F_A": true,
+        "F_B": false,
+        "F_AB": false
+      },
+      "correct": {
+        "F_A": true,
+        "F_B": false,
+        "F_AB": false
+      },
+      "full_combination_correct": false,
+      "both_singles_correct_ab_wrong": false,
+      "parse_ok": true,
+      "status": "ok",
+      "response_text": "{\n  \"F_A\": true,\n  \"F_B\": true,\n  \"F_AB\": true,\n  \"explanation\": {\n    \"A\": \"A's new position doesn't block path to goal.\",\n    \"B\": \"B's new position doesn't block path to goal.\",\n    \"AB\": \"Both A and B's new positions don't block path to goal.\"\n  }\n}",
+      "parsed_output": {
+        "F_A": true,
+        "F_B": true,
+        "F_AB": true,
+        "explanation": {
+          "A": "A's new position doesn't block path to goal.",
+          "B": "B's new position doesn't block path to goal.",
+          "AB": "Both A and B's new positions don't block path to goal."
+        }
+      },
+      "parse_error": null,
+      "inference_seconds": 4.90721492189914,
+      "peak_vram_mb": 8834.8427734375,
+      "nvidia_peak_device_used_mib": 9992
+    }
+  ],
+  "interpretation": "Six selected smoke samples only; no statistical significance or H1/H2 research conclusion.",
+  "evaluated_at": "2026-10-20T17:31:00.175460+08:00",
+  "predictions_sha256": "80efd48e840a98c2af4adeacf9dd1a11acd58025372ce52f22f4538d25bbb51a",
+  "truth_sha256": "85a4738c603e0ec87d779d910ebed15e1afc229471897c4e35915b2f8dd83498",
+  "model_id": "Qwen/Qwen3-VL-4B-Instruct",
+  "model_revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+  "prompt_version": "spatial-smoke-en-v1",
+  "prompt_sha256": "5d8b0a86cf5f28089fed94ae61f32c2ac34bd91bb39112dce5bbe8c31d871fca"
+}

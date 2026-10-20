@@ -1,0 +1,10 @@
+{
+  "F_A": true,
+  "F_B": true,
+  "F_AB": true,
+  "explanation": {
+    "A": "A's new position doesn't block path to goal.",
+    "B": "B's new position doesn't block path to goal.",
+    "AB": "Both A and B's new positions don't block path to goal."
+  }
+}

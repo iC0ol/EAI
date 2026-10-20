@@ -1,13 +1,22 @@
 # EAI — Spatial Intervention Pilot
 
-用于 VLM 空间可执行性与假设场景编辑诊断的离线先导实验。目前完成 **Phase 0–2 / Checkpoint B**，
-等待研究者检查场景和标签，再进行 VLM 部署。没有下载模型权重或进行训练。
+用于 VLM 空间可执行性与假设场景编辑诊断的离线先导实验。**Phase 0–2 / Checkpoint B 已经研究者检查**，
+已完成 Phase 3：独立部署 Qwen3-VL-4B-Instruct，并对六核心样本做固定 prompt 的推理冒烟。
+不训练、不微调、不扩充研究数据集。
+
+Phase 3 的实际结果：F_A 3/6、F_B 2/6、F_AB 1/6，完整三状态组合 0/6；JSON 解析 6/6 成功。
+没有出现“F_A 与 F_B 均正确而 F_AB 错误”的样本，不能据此独立确认纯组合推理错误。
+单次生成平均 4.91 秒，torch 峰值显存 8842.2MiB，没有 OOM。原 62 项几何测试及新增 13 项测试全部通过。
+这只是六样本冒烟，不构成统计结论；已停止，等待研究者检查。
 
 全部项目文件位于 [`spatial_intervention_pilot/`](spatial_intervention_pilot/)，
 Python 环境独立，不修改已有 inspection_robot、ROS2、NVIDIA 驱动或系统 CUDA。
 
 - [项目结构与重现说明](spatial_intervention_pilot/README.md)
-- [实验结果与限制](spatial_intervention_pilot/reports/pilot_summary.md)
+- [Phase 3 模型实际结果与错误案例](spatial_intervention_pilot/reports/phase3/smoke_report.md)
+- [六核心原始回答与结构化预测](spatial_intervention_pilot/outputs/phase3/core/predictions.jsonl)
+- [75 项 Phase 3 完整测试日志](spatial_intervention_pilot/reports/phase3/logs/all_tests.log)
+- [Phase 0–2 几何结果与限制（历史）](spatial_intervention_pilot/reports/pilot_summary.md)
 - [工作站与环境审计](spatial_intervention_pilot/reports/environment.md)
 - [62 项自动测试日志](spatial_intervention_pilot/reports/logs/tests.log)
 - [六个核心实例的四状态对照图](spatial_intervention_pilot/reports/qc_core_edits.png)

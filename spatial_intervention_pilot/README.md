@@ -1,8 +1,47 @@
-# Spatial Intervention Pilot — Phase 0 / 1 / 2
+# Spatial Intervention Pilot — Phase 0–3
 
-这是离线诊断性先导实验。当前只交付几何场景与有限分辨率标签，等待研究者检查。
-没有安装 PyTorch/Transformers、下载 VLM 权重、训练、执行机器人操作或修改已有 ROS/CUDA/驱动。
+这是离线诊断性先导实验。Checkpoint B 已经研究者检查，Phase 3 部署与六核心样本推理冒烟现已完成。
+几何环境和原始数据完整保留；VLM 采用独立 `.venv-vlm`，不训练、不扩充正式数据，也不修改已有 ROS/CUDA/驱动。
 交接说明原文保留在 `docs/handoff_v0.1.md`。
+
+## Phase 3：独立 VLM 冒烟
+
+模型为 `Qwen/Qwen3-VL-4B-Instruct`，revision `ebb281ec70b05090aa6165b016eac8ec08e71b17`。
+torch 2.6.0+cu124、torchvision 0.21.0+cu124、Transformers 4.57.1，独立依赖见 `requirements-vlm.in` 和
+`requirements-vlm.lock`，不会改原 `requirements.lock` 或 `.venv`。
+
+实际准确率为 F_A=3/6、F_B=2/6、F_AB=1/6，完整组合=0/6。全部结构化回答可解析，没有 OOM；
+生成平均 4.905 秒，torch peak allocated 8842.2MiB。结果暴露了空间判断错误，但不能从这六例独立归因于纯组合推理。
+当前停止，等待研究者检查。
+
+- [Phase 3 实际结果、错误案例与显存/耗时报告](reports/phase3/smoke_report.md)
+- [六核心原始预测、解析结果和错误字段](outputs/phase3/core/predictions.jsonl)
+- [独立后评估结果](reports/phase3/evaluation.json)
+- [首次模型调用前冻结的配置与 prompt 哈希](reports/phase3/frozen_run.json)
+
+推理只读取 `public_inputs.jsonl` 与选中原图，不读取私有标签/scene/QC/类型；进程审计钩子会拒绝这些读取。
+固定英文 prompt：`prompts/spatial_smoke_en_v1.txt`。每条推理保留 prompt 全文、图像哈希、图像张量网格、
+图像 token 数、视觉编码器调用次数，以及实际生效的 greedy 参数。
+
+```bash
+bash scripts/bootstrap_vlm.sh
+bash scripts/run_vlm.sh download
+bash scripts/run_vlm.sh single
+bash scripts/run_vlm.sh three
+bash scripts/run_vlm.sh core
+PYTHONPATH="$PWD/src" .venv/bin/python -m spatial_pilot.evaluate
+PYTHONPATH="$PWD/src" .venv/bin/python scripts/build_phase3_report.py
+```
+
+先单图，再指定三样本，最后六核心；前一阶段的结果原样复用，每个正式样本只生成一次。
+另一次模型生成默认值异常的调试尝试单独归档在 `outputs/phase3/debug_sampling_defaults`，不计入评估，
+prompt 在修正前后不变。已有输出不会被覆盖，复跑前必须保留历史结果。
+仅在全部六核心推理结束后，独立 CPU 评估程序才读取私有标签。
+测试命令：`PYTHONPATH="$PWD/src" .venv/bin/python -m pytest tests tests_vlm`，保留原 62 项并新增 13 项。
+新增文件分组为 `requirements-vlm.*`、`configs/vlm_smoke.yaml`、`prompts/`、`tests_vlm/`、
+`outputs/phase3/` 与 `reports/phase3/`；本地环境 `.venv-vlm/` 与 `.cache/vlm/` 不入 Git。
+
+以下为 Phase 0–2 几何流程；`reports/pilot_summary.md` 保留为 Checkpoint B 的历史报告。
 
 ## 运行
 
@@ -34,7 +73,7 @@ spatial_intervention_pilot/
 ├── src/spatial_pilot/
 │   ├── geometry.py, edits.py, scenes.py, oracle.py
 │   ├── render.py, make_dataset.py
-│   └── infer_vlm.py, evaluate.py       # 明确禁用的后续阶段入口
+│   └── infer_vlm.py, evaluate.py       # Phase 3 公开输入推理 / 独立后评估
 ├── scripts/
 │   ├── bootstrap.sh, run.sh, audit_environment.py
 │   ├── check_reproducibility.py, check_resolution.py, build_reports.py
@@ -44,7 +83,7 @@ spatial_intervention_pilot/
 │   ├── scenes/<opaque_id>/scene.json   # 完整私有几何与各编辑后位姿
 │   ├── public_inputs.jsonl            # 仅原图、规则、半径、候选编辑，无答案/类型
 │   └── private_labels.jsonl           # 四状态真值、合法性、路径、净空与局部效应
-├── outputs/predictions.jsonl          # 空文件；尚未推理，不能当失败预测
+├── outputs/predictions.jsonl          # Phase 2 历史空文件；Phase 3 见 outputs/phase3/
 └── reports/
     ├── environment.md, dependencies.json, environment raw logs
     ├── qc_montage.png                 # 12 张原图与私有标签总览
@@ -92,8 +131,8 @@ reproducibility 检查重新生成后的全部 data 文件（含 PNG）逐字节
 Python 运行时、环境与缓存不上传。历史审计日志保留迁移前路径，当前运行路径以最新报告为准。
 这里的“private_labels / 私有 QC”表示不向模型输入暴露的评估真值，不表示这些文件不在公开仓库中。
 
-下一步只能在研究者确认场景与标签后进行。infer_vlm / evaluate 当前只返回明确的“未开始”提示；
-Phase 3–5 逻辑尚未实现，不能解读为已经验证 VLM、JSON 解析或评估指标。
+Phase 3 只针对六个获准核心样本；没有实现正式 Phase 4/5 全集研究、学习基线或训练。
+六样本冒烟不构成统计结论。完成并同步结果后停止，等待研究者检查。
 
 实现时查阅的主文档：[Shapely buffer](https://shapely.readthedocs.io/en/stable/reference/shapely.buffer.html)、
 [Shapely covers](https://shapely.readthedocs.io/en/stable/reference/shapely.covers.html)、

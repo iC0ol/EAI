@@ -1,0 +1,10 @@
+{
+  "F_A": false,
+  "F_B": true,
+  "F_AB": false,
+  "explanation": {
+    "A": "A's new position overlaps with Goal, blocking path.",
+    "B": "B's new position clears path to Goal without collision.",
+    "AB": "A and B's new positions block path to Goal together."
+  }
+}

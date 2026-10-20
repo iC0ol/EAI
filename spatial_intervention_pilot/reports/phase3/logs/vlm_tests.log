@@ -1,0 +1,22 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0 -- /home/asus/EAI/spatial_intervention_pilot/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/asus/EAI/spatial_intervention_pilot
+configfile: pyproject.toml
+collecting ... collected 12 items
+
+tests_vlm/test_vlm_io.py::test_exact_json_and_uncertainty_preserved PASSED [  8%]
+tests_vlm/test_vlm_io.py::test_malformed_output_never_repaired[```json\n{"F_A": true, "F_B": false, "F_AB": null, "explanation": {"A": "A reason", "B": "B reason", "AB": "insufficient evidence"}}\n```] PASSED [ 16%]
+tests_vlm/test_vlm_io.py::test_malformed_output_never_repaired[{"F_A": 1, "F_B": false, "F_AB": null, "explanation": {"A": "A reason", "B": "B reason", "AB": "insufficient evidence"}}] PASSED [ 25%]
+tests_vlm/test_vlm_io.py::test_malformed_output_never_repaired[{"F_A": "true", "F_B": false, "F_AB": null, "explanation": {"A": "A reason", "B": "B reason", "AB": "insufficient evidence"}}] PASSED [ 33%]
+tests_vlm/test_vlm_io.py::test_malformed_output_never_repaired[{"F_A": true, "F_B": false, "F_AB": null, "explanation": {"A": "A reason", "B": "B reason", "AB": "insufficient evidence"}, "extra": "x"}] PASSED [ 41%]
+tests_vlm/test_vlm_io.py::test_malformed_output_never_repaired[{"F_A":true,"F_A":false,"F_B":false,"F_AB":true,"explanation":{"A":"a","B":"b","AB":"c"}}] PASSED [ 50%]
+tests_vlm/test_vlm_io.py::test_malformed_output_never_repaired[{"F_A":NaN,"F_B":false,"F_AB":true,"explanation":{"A":"a","B":"b","AB":"c"}}] PASSED [ 58%]
+tests_vlm/test_vlm_io.py::test_prompt_allowlist_excludes_ids_and_injected_private_fields PASSED [ 66%]
+tests_vlm/test_vlm_io.py::test_public_reader_rejects_path_escape_and_hash_tamper PASSED [ 75%]
+tests_vlm/test_vlm_io.py::test_audit_guard_denies_private_data_and_qc_reads PASSED [ 83%]
+tests_vlm/test_vlm_io.py::test_evaluation_keeps_failed_and_unknown_in_denominator PASSED [ 91%]
+tests_vlm/test_vlm_io.py::test_evaluation_rejects_duplicate_or_missing_samples PASSED [100%]
+
+- generated xml file: /home/asus/EAI/spatial_intervention_pilot/reports/phase3/vlm_tests.xml -
+============================== 12 passed in 0.08s ==============================

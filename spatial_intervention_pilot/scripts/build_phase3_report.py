@@ -70,6 +70,7 @@ def main():
     for case in cases:
         explanations.append(f"### {case['sample_id']} ({case['family']})\n\n"
                             f"Oracle A/B/AB = {bits(case['truth'])}; prediction = {bits(case['prediction'])}.\n\n"
+                            f"[原始模型输入](../../data/images/{case['sample_id']}.png)\n\n"
                             f"```json\n{case['response_text']}\n```\n")
     conditional = [r['sample_id'] for r in cases if r['both_singles_correct_ab_wrong']]
     suites = list(ET.parse(OUT/'all_tests.xml').getroot().iter('testsuite'))
@@ -135,6 +136,9 @@ JSON 解析失败：{result['parse_failures']}。所有未知/格式失败均保
 {note}
 这个计数仅描述输出与标签的模式。即使单独编辑判断正确，也不能证明模型已正确识别全部局部几何；
 若单独编辑也判断错误，更不能只凭六个样本把错误归因为组合推理。错误案例和模型原文见 error_cases.jsonl 与下文。
+在可见原图/公开编辑信息中，模型多次声称 A' 与 Goal 重叠，或 A' 与 B' 重叠，但目标区域实际相隔明显距离；
+这提示视觉定位或局部几何理解错误可能参与其中，不能把全部 F_AB 错误归为组合逻辑。
+两个副作用样本都预测 1/1/1，漏判 B 后态带来的通道阻塞；因为 F_B 本身也错，这不是单独隔离出来的组合错误证据。
 不根据这些样本报告统计显著性、泛化能力、H1/H2 成立或方法创新。
 
 ## 耗时与显存
@@ -143,11 +147,11 @@ JSON 解析失败：{result['parse_failures']}。所有未知/格式失败均保
 - 单独模型加载耗时：{json.dumps(runtime['model_load_seconds_by_stage'])} 秒，不混入生成耗时。
 - torch peak allocated 最大 {runtime['peak_allocated_mib']:.1f}MiB；peak reserved 最大 {runtime['peak_reserved_mib']:.1f}MiB。
 - nvidia-smi 0.5 秒采样的全 GPU 显存最大 {runtime['nvidia_peak_total_device_mib']}MiB，含桌面和其他进程，不能当作模型独占占用。
-- 测量包含图像预处理与每次生成前后 CUDA synchronize，另保存 sample elapsed；首次冷运行与后续运行差异不能解释为样本难度。
+- 生成耗时在调用前后做 CUDA synchronize；图像预处理耗时与 sample elapsed 分开保存。首次冷运行与后续运行差异不能解释为样本难度。
 
 ## 保留与故障记录
 
-原 Phase 0–2 的 {len(baseline)} 个几何/数据/测试/锁定文件哈希全部不变。原 62 项几何测试保留，新增 12 项边界/解析/评估测试，
+原 Phase 0–2 的 {len(baseline)} 个几何/数据/测试/锁定文件哈希全部不变。原 62 项几何测试保留，新增 13 项边界/解析/评估测试，
 本次共 {tests} 项，失败/错误 {failures}。原几何 .venv 与 requirements.lock 没有安装或升级任何包。
 最初安装命令缺少 cu124 索引导致找不到 torch；已先报告并保留 install_attempt1_missing_index.log，
 随后只显式补上同一官方索引，模型、依赖版本、驱动和系统 CUDA 均未更换。

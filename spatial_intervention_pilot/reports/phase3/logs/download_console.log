@@ -1,0 +1,8 @@
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files:  15%|█▌        | 2/13 [00:01<00:08,  1.37it/s]Fetching 13 files:  31%|███       | 4/13 [00:02<00:04,  1.90it/s]Fetching 13 files:  38%|███▊      | 5/13 [00:19<00:31,  4.00s/it]Fetching 13 files:  46%|████▌     | 6/13 [03:25<04:00, 34.33s/it]Fetching 13 files:  54%|█████▍    | 7/13 [03:26<02:57, 29.52s/it]Fetching 13 files:  62%|██████▏   | 8/13 [03:27<02:09, 25.91s/it]Fetching 13 files:  69%|██████▉   | 9/13 [03:27<01:32, 23.11s/it]Fetching 13 files:  77%|███████▋  | 10/13 [03:28<01:02, 20.86s/it]Fetching 13 files:  85%|████████▍ | 11/13 [03:29<00:38, 19.04s/it]Fetching 13 files:  92%|█████████▏| 12/13 [03:30<00:17, 17.52s/it]Fetching 13 files: 100%|██████████| 13/13 [04:15<00:00, 19.67s/it]Fetching 13 files: 100%|██████████| 13/13 [04:15<00:00, 19.67s/it]
+{
+  "model_id": "Qwen/Qwen3-VL-4B-Instruct",
+  "model_revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+  "source": "https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct",
+  "download_seconds": 256.39070107298903,
+  "total_bytes": 8887291213
+}

@@ -1,0 +1,36 @@
+{
+  "generation_total_seconds": 29.430220127105713,
+  "generation_mean_seconds": 4.905036687850952,
+  "generation_min_seconds": 4.633316521998495,
+  "generation_max_seconds": 5.165854065213352,
+  "peak_allocated_mib": 8842.2392578125,
+  "peak_reserved_mib": 8986.0,
+  "nvidia_peak_total_device_mib": 9992,
+  "model_load_seconds_by_stage": {
+    "single": 3.148322151042521,
+    "three": 2.5603574998676777,
+    "core": 2.4354030839167535
+  },
+  "by_family": {
+    "serial": {
+      "samples": 2,
+      "decisions_correct": 2,
+      "decisions_denominator": 6,
+      "full_combination_correct": 0
+    },
+    "parallel": {
+      "samples": 2,
+      "decisions_correct": 2,
+      "decisions_denominator": 6,
+      "full_combination_correct": 0
+    },
+    "side_effect": {
+      "samples": 2,
+      "decisions_correct": 2,
+      "decisions_denominator": 6,
+      "full_combination_correct": 0
+    }
+  },
+  "geometry_preserved_files": 38,
+  "changed_geometry_files": []
+}

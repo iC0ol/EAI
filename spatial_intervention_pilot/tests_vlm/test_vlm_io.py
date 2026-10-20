@@ -92,3 +92,24 @@ def test_evaluation_keeps_failed_and_unknown_in_denominator():
 def test_evaluation_rejects_duplicate_or_missing_samples():
     with pytest.raises(ValueError,match='exactly one'):
         evaluate_rows([{'sample_id':'x'},{'sample_id':'x'}],[],['x','y'])
+
+
+@pytest.mark.skipif(not (ROOT/'.venv-vlm/bin/python').exists(),reason='isolated VLM environment not installed')
+def test_explicit_greedy_configuration_overrides_model_sampling_defaults():
+    script = '''
+from pathlib import Path
+from types import SimpleNamespace
+import yaml
+from transformers import GenerationConfig
+from transformers.generation.utils import GenerationMixin
+config=yaml.safe_load(Path('configs/vlm_smoke.yaml').read_text())
+model=SimpleNamespace(generation_config=GenerationConfig(do_sample=True,temperature=.7,top_p=.8,top_k=20))
+model.generation_config.transformers_version='4.57.1'
+kwargs={key:config[key] for key in ['do_sample','num_beams','max_new_tokens','use_model_defaults','temperature','top_p','top_k']}
+prepared,_=GenerationMixin._prepare_generation_config(model,GenerationConfig(),**kwargs)
+assert prepared.do_sample is False and prepared.num_beams==1
+assert prepared.max_new_tokens==256
+assert prepared.temperature is None and prepared.top_p is None and prepared.top_k is None
+'''
+    result = subprocess.run([str(ROOT/'.venv-vlm/bin/python'),'-c',script],cwd=ROOT,capture_output=True,text=True)
+    assert result.returncode==0,result.stderr
