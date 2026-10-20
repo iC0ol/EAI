@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "created_at": "2026-10-20T16:57:55.986533+08:00",
+  "created_at": "2026-10-20T17:02:41.464967+08:00",
   "config": {
     "schema_version": 1,
     "seed": 20261020,
@@ -62,6 +62,6 @@
   "model_id": null,
   "model_revision": null,
   "independence_note": "12 samples are 3 families x 2 geometric parameter sets x 2 views, not 12 independent topologies.",
-  "source_commit": "a07ff7c8efbe9c8e7cec29ab88cb51154f8a2f4f",
+  "source_commit": "3347954ea7991b63a3bdeee80f2aadaa20dda642",
   "source_status_at_generation": ""
 }

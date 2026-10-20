@@ -1,9 +1,9 @@
 {
-  "recorded_at": "2026-10-20T16:58:17.052129+08:00",
+  "recorded_at": "2026-10-20T17:03:01.688729+08:00",
   "python": "3.11.17",
-  "python_executable": "/home/asus/research/spatial_intervention_pilot/.venv/bin/python",
-  "prefix": "/home/asus/research/spatial_intervention_pilot/.venv",
-  "base_prefix": "/home/asus/research/spatial_intervention_pilot/.runtime/python/cpython-3.11.17-linux-x86_64-gnu",
+  "python_executable": "/home/asus/EAI/spatial_intervention_pilot/.venv/bin/python",
+  "prefix": "/home/asus/EAI/spatial_intervention_pilot/.venv",
+  "base_prefix": "/home/asus/EAI/spatial_intervention_pilot/.runtime/python/cpython-3.11.17-linux-x86_64-gnu",
   "uv": "uv 0.13.3 (x86_64-unknown-linux-gnu)",
   "packages": {
     "pillow": "13.0.0",
@@ -29,13 +29,13 @@
   "geos_version": "3.14.1",
   "font_path": "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
   "font_sha256": "690243adfefe0ce154b547db6205794bd30ac4277275179517a90994f4980648",
-  "gpu_query": "NVIDIA GeForce RTX 3090, 550.144.03, 24576, 949",
+  "gpu_query": "NVIDIA GeForce RTX 3090, 550.144.03, 24576, 952",
   "memory_snapshot": [
     "MemTotal:       32729176 kB",
-    "MemFree:         1695616 kB",
-    "MemAvailable:   23142448 kB"
+    "MemFree:         1586644 kB",
+    "MemAvailable:   23075580 kB"
   ],
-  "disk_free_gib": 285.73,
+  "disk_free_gib": 285.7,
   "requirements_lock_sha256": "34357e4ad1ed531bb4926881703cbb0694fd0ab17fa3cb55e96d766a2e3861e2",
   "cuda_driver_api": {
     "cuInit_returncode": 0,

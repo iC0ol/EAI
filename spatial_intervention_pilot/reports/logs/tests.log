@@ -1,7 +1,7 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0 -- /home/asus/research/spatial_intervention_pilot/.venv/bin/python
+platform linux -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0 -- /home/asus/EAI/spatial_intervention_pilot/.venv/bin/python
 cachedir: .pytest_cache
-rootdir: /home/asus/research/spatial_intervention_pilot
+rootdir: /home/asus/EAI/spatial_intervention_pilot
 configfile: pyproject.toml
 testpaths: tests
 collecting ... collected 62 items
@@ -69,5 +69,5 @@ tests/test_oracle.py::test_color_and_object_ids_do_not_change_geometry_labels[pa
 tests/test_oracle.py::test_color_and_object_ids_do_not_change_geometry_labels[side_effect] PASSED [ 98%]
 tests/test_oracle.py::test_swapping_candidate_ids_permutates_labels PASSED [100%]
 
-- generated xml file: /home/asus/research/spatial_intervention_pilot/reports/tests.xml -
-============================== 62 passed in 5.26s ==============================
+- generated xml file: /home/asus/EAI/spatial_intervention_pilot/reports/tests.xml -
+============================== 62 passed in 4.98s ==============================

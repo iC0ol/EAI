@@ -1,7 +1,7 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0 -- /home/asus/research/spatial_intervention_pilot/.venv/bin/python
+platform linux -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0 -- /home/asus/EAI/spatial_intervention_pilot/.venv/bin/python
 cachedir: .pytest_cache
-rootdir: /home/asus/research/spatial_intervention_pilot
+rootdir: /home/asus/EAI/spatial_intervention_pilot
 configfile: pyproject.toml
 collecting ... collected 27 items / 21 deselected / 6 selected
 
@@ -12,8 +12,8 @@ tests/test_oracle.py::test_core_six[parallel-1] PASSED                   [ 66%]
 tests/test_oracle.py::test_core_six[side_effect-0] PASSED                [ 83%]
 tests/test_oracle.py::test_core_six[side_effect-1] PASSED                [100%]
 
-- generated xml file: /home/asus/research/spatial_intervention_pilot/reports/core_tests.xml -
-======================= 6 passed, 21 deselected in 1.86s =======================
+- generated xml file: /home/asus/EAI/spatial_intervention_pilot/reports/core_tests.xml -
+======================= 6 passed, 21 deselected in 1.72s =======================
 s_80e62d24efbf serial v0: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
 s_f5dc98934220 serial v1: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
 s_a04a9d7fb334 serial v2: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
@@ -28,7 +28,7 @@ s_cee2a0e74c9f side_effect v2: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_A
 s_6304605d5049 side_effect v3: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_AB': False} [verified]
 {
   "schema_version": 1,
-  "created_at": "2026-10-20T16:57:55.986533+08:00",
+  "created_at": "2026-10-20T17:02:41.464967+08:00",
   "config": {
     "schema_version": 1,
     "seed": 20261020,
@@ -90,13 +90,13 @@ s_6304605d5049 side_effect v3: {'F_NONE': False, 'F_A': True, 'F_B': False, 'F_A
   "model_id": null,
   "model_revision": null,
   "independence_note": "12 samples are 3 families x 2 geometric parameter sets x 2 views, not 12 independent topologies.",
-  "source_commit": "a07ff7c8efbe9c8e7cec29ab88cb51154f8a2f4f",
+  "source_commit": "3347954ea7991b63a3bdeee80f2aadaa20dda642",
   "source_status_at_generation": ""
 }
 ============================= test session starts ==============================
-platform linux -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0 -- /home/asus/research/spatial_intervention_pilot/.venv/bin/python
+platform linux -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0 -- /home/asus/EAI/spatial_intervention_pilot/.venv/bin/python
 cachedir: .pytest_cache
-rootdir: /home/asus/research/spatial_intervention_pilot
+rootdir: /home/asus/EAI/spatial_intervention_pilot
 configfile: pyproject.toml
 testpaths: tests
 collecting ... collected 62 items
@@ -164,8 +164,8 @@ tests/test_oracle.py::test_color_and_object_ids_do_not_change_geometry_labels[pa
 tests/test_oracle.py::test_color_and_object_ids_do_not_change_geometry_labels[side_effect] PASSED [ 98%]
 tests/test_oracle.py::test_swapping_candidate_ids_permutates_labels PASSED [100%]
 
-- generated xml file: /home/asus/research/spatial_intervention_pilot/reports/tests.xml -
-============================== 62 passed in 5.26s ==============================
+- generated xml file: /home/asus/EAI/spatial_intervention_pilot/reports/tests.xml -
+============================== 62 passed in 4.98s ==============================
 s_80e62d24efbf serial v0: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
 s_f5dc98934220 serial v1: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]
 s_a04a9d7fb334 serial v2: {'F_NONE': False, 'F_A': False, 'F_B': False, 'F_AB': True} [verified]

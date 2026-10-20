@@ -1,6 +1,6 @@
 # 环境审计 — Phase 0 / 1
 
-记录时间：2026-10-20T16:58:17.052129+08:00（Asia/Shanghai）。所有结果来自实际工作站检查。
+记录时间：2026-10-20T17:03:01.688729+08:00（Asia/Shanghai）。所有结果来自实际工作站检查。
 
 | 项目 | 实测结果 |
 |---|---|
@@ -11,7 +11,7 @@
 | 系统 Toolkit | /usr/local/cuda-11.8，nvcc 11.8.89 |
 | CUDA 可用性 | cuInit=0，cuDeviceGetCount=0，设备 1 个，Driver API=12040；没有测试 PyTorch 或模型 CUDA kernel |
 | 物理内存 | 初始 free -h 总量 31GiB，可用 21GiB |
-| 磁盘 | 初始 df -h 可用 287G；报告时可用 285.73 GiB |
+| 磁盘 | 初始 df -h 可用 287G；报告时可用 285.7 GiB |
 | 默认 Python | /home/asus/anaconda3 的 Python 3.9.13 |
 | 系统 Python | /usr/bin/python3，3.10.12 |
 | 已有 conda | /home/asus/anaconda3/bin/conda，22.9.0；没有修改已有环境 |
@@ -23,7 +23,9 @@
 
 ## 隔离与边界
 
-项目根目录：`/home/asus/research/spatial_intervention_pilot`。Python 运行时、venv、uv、下载缓存、临时文件均在此目录中。
+项目根目录：`/home/asus/EAI/spatial_intervention_pilot`。Python 运行时、venv、uv、下载缓存、临时文件均在此目录中。
+Git 元数据位于父目录 `/home/asus/EAI/.git`；按用户要求，源码和结果同步到公开 GitHub 仓库 iC0ol/EAI。
+历史日志保留迁移前路径，当前路径以本报告和当前解释器为准。
 venv 不继承 system site-packages；run.sh 只在子进程中排除 ROS 与动态库搜索变量。
 没有执行 sudo、修改系统包/驱动/Toolkit、激活或修改旧 conda、操作机器人、下载权重或安装训练/推理框架。
 
@@ -93,7 +95,7 @@ UBUNTU_CODENAME=jammy
 
 
 $ nvidia-smi
-Tue Oct 20 16:55:03 2026       
+Tue Oct 20 17:02:32 2026       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 550.144.03             Driver Version: 550.144.03     CUDA Version: 12.4     |
 |-----------------------------------------+------------------------+----------------------+
@@ -102,7 +104,7 @@ Tue Oct 20 16:55:03 2026
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
 |   0  NVIDIA GeForce RTX 3090        Off |   00000000:01:00.0  On |                  N/A |
-| 35%   60C    P2            123W /  350W |     930MiB /  24576MiB |     16%      Default |
+| 35%   60C    P2            122W /  350W |     951MiB /  24576MiB |     15%      Default |
 |                                         |                        |                  N/A |
 +-----------------------------------------+------------------------+----------------------+
                                                                                          
@@ -112,11 +114,11 @@ Tue Oct 20 16:55:03 2026
 |        ID   ID                                                               Usage      |
 |=========================================================================================|
 |    0   N/A  N/A      2233      G   /usr/lib/xorg/Xorg                            133MiB |
-|    0   N/A  N/A      2431      G   /usr/bin/gnome-shell                           75MiB |
+|    0   N/A  N/A      2431      G   /usr/bin/gnome-shell                           87MiB |
 |    0   N/A  N/A    122903      G   clash-verge                                     4MiB |
 |    0   N/A  N/A    569251      C   python                                        296MiB |
 |    0   N/A  N/A   1794285    C+G   /opt/todesk/bin/ToDesk_Session                312MiB |
-|    0   N/A  N/A   2973769      G   ...cess-track-uuid=3190708988185955192         81MiB |
+|    0   N/A  N/A   2973769      G   ...cess-track-uuid=3190708988185955192         89MiB |
 +-----------------------------------------------------------------------------------------+
 
 
@@ -139,7 +141,7 @@ $ df -h /home/asus
 
 $ free -h
                total        used        free      shared  buff/cache   available
-内存：       31Gi       8.5Gi       1.7Gi       107Mi        21Gi        22Gi
+内存：       31Gi       8.7Gi       1.5Gi       109Mi        21Gi        21Gi
 交换：      2.0Gi       1.0Mi       2.0Gi
 
 

@@ -1,6 +1,6 @@
 # Spatial Intervention Pilot — Checkpoint B
 
-更新时间：2026-10-20T16:58:17.052129+08:00。Phase 0、1、2 已完成；停在场景/标签人工检查点。
+更新时间：2026-10-20T17:03:01.688729+08:00。Phase 0、1、2 已完成；停在场景/标签人工检查点。
 没有运行 VLM；H1/H2、模型准确率、分类型误差、危险误通过率、推理耗时/显存全部尚未评估。
 推理与评估入口明确禁用，outputs/predictions.jsonl 保持为空，不伪造预测或失败记录。
 
@@ -75,9 +75,9 @@ AB 顺序无关测试仅针对合法相容场景；另有“分别合法、合�
 ## 版本与重现
 
 - 随机种子：20261020；配置哈希：`2b2483bb166e8c382ffcc9d700df782bcb50b18be7d1d195389e35c9a607620f`。
-- 生成时源代码 commit：`a07ff7c8efbe9c8e7cec29ab88cb51154f8a2f4f`；源文件状态：``。
+- 生成时源代码 commit：`3347954ea7991b63a3bdeee80f2aadaa20dda642`；源文件状态：`clean`。
 - Python 3.11.17，uv 0.13.3 (x86_64-unknown-linux-gnu)，GEOS 3.14.1；完整版本见 environment.md / dependencies.json / requirements.lock。
-- 单命令：`cd /home/asus/research/spatial_intervention_pilot && bash scripts/run.sh all`。
+- 单命令：`cd /home/asus/EAI/spatial_intervention_pilot && bash scripts/run.sh all`。
 - 模型 ID / revision / prompt version：null；原因是按授权停在 Phase 2，后续未部署。
 
 ## 下一检查点
