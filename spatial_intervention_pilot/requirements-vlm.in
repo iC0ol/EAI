@@ -1,0 +1,12 @@
+# Isolated Phase 3 stack; original geometry requirements.lock is immutable.
+# CUDA user-space wheels are from the official PyTorch cu124 index.
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.6.0+cu124
+torchvision==0.21.0+cu124
+transformers==4.57.1
+accelerate==1.10.1
+huggingface-hub==0.36.0
+safetensors==0.6.2
+numpy==2.2.6
+pillow==11.3.0
+pyyaml==6.0.3

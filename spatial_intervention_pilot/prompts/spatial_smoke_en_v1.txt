@@ -1,0 +1,17 @@
+Evaluate hypothetical final-pose edits for the circular mobile robot in the single original scene image.
+Use only this image and the public task information below. Do not assume that any edit has already occurred.
+Solid colored objects A and B are at their original positions. Dashed footprints A' and B' mark only the proposed destinations.
+For each condition, decide whether a collision-free route from Start to Goal would exist after the listed final-pose translations:
+- F_A: apply A only, with B left at its original position.
+- F_B: apply B only, with A left at its original position.
+- F_AB: apply both A and B, placing both objects at their proposed destinations.
+Use the given robot radius and task rules. Assess the entire route and account for every object at its final position.
+This question concerns the hypothetical final geometry, not whether a robot can physically move an object along an editing trajectory.
+If the visible evidence is insufficient, return null for the affected prediction rather than inventing facts.
+Reply with exactly one JSON object, without markdown fences or text outside the object.
+The object must have exactly four keys: F_A, F_B, F_AB, and explanation.
+Each prediction must be a JSON boolean (true or false), or null if uncertain.
+The explanation value must be an object with exactly the keys A, B, and AB, each containing a short reason of at most 20 words.
+
+Public task information:
+{{PUBLIC_TASK_JSON}}
