@@ -1,0 +1,72 @@
+{
+  "total": 16,
+  "correct": 12,
+  "accuracy": 0.75,
+  "categories": {
+    "A": {
+      "correct": 4,
+      "total": 4
+    },
+    "B": {
+      "correct": 1,
+      "total": 4
+    },
+    "C": {
+      "correct": 3,
+      "total": 4
+    },
+    "D": {
+      "correct": 4,
+      "total": 4
+    }
+  },
+  "confusion_matrix_truth_rows_prediction_columns": {
+    "reachable": {
+      "reachable": 5,
+      "unreachable": 3,
+      "unknown": 0
+    },
+    "unreachable": {
+      "reachable": 1,
+      "unreachable": 7,
+      "unknown": 0
+    }
+  },
+  "parse_success": 16,
+  "parse_success_rate": 1.0,
+  "prediction_reachable": 6,
+  "prediction_unreachable": 10,
+  "prediction_unknown": 0,
+  "constant_unreachable": false,
+  "all_obvious_straight_recognized": true,
+  "always_reachable_baseline": {
+    "correct": 8,
+    "total": 16
+  },
+  "always_unreachable_baseline": {
+    "correct": 8,
+    "total": 16
+  },
+  "unknown_and_parse_errors_kept_in_denominator": true,
+  "timing": {
+    "total_inference_seconds": 35.201662303414196,
+    "mean_inference_seconds": 2.2001038939633872,
+    "min_inference_seconds": 1.9260204972233623,
+    "max_inference_seconds": 2.4934460557997227,
+    "model_load_seconds": 2.932824262883514
+  },
+  "memory": {
+    "peak_allocated_mib": 8717.10791015625,
+    "peak_reserved_mib": 8742.0,
+    "nvidia_peak_device_used_mib": 9695
+  },
+  "vision_forward_calls": 16,
+  "token_limit_hits": 0,
+  "evaluation": {
+    "labels_opened_at": "2026-10-21T01:30:28.685259+00:00",
+    "inference_finished_at": "2026-10-21T09:30:03.297993+08:00",
+    "separate_cpu_process": true,
+    "session_sha256": "f210b7170093e1077a0eadf3e13e3ef99f0b46c574e24b27b1cd639dbdaaf90f",
+    "predictions_sha256": "70a43ef1f50083c58142128d98dfe4d63fa053c641f697e2f62769a107528036"
+  }
+}

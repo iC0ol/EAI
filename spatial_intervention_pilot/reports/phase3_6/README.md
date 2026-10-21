@@ -10,7 +10,7 @@ configs/phase3_6.yaml                       # 模型参数沿用 3.5，独立几
 prompts/phase3_6/                          # 原 poststate-reach-en-v1 的逐字节副本及版本记录
 src/spatial_pilot/control_*.py              # 新场景、输入隔离、推理、独立评估与环境审计
 scripts/run_phase3_6.sh, freeze_phase3_6.py
-tests_phase3_6/                            # 33 项新增测试
+tests_phase3_6/                            # 33 项控制测试 + 5 项推理后证据测试
 diagnostics/phase3_6/
   inputs/                                 # 中性公开清单、固定顺序、推理冻结哈希
   images/                                 # 16 张干净 768×768 模型输入
@@ -32,10 +32,13 @@ scene_overview.png 含研究者用类别/ID；private_path_overview.png 和 priv
 ```bash
 bash scripts/run_phase3_6.sh prepare
 bash scripts/run_phase3_6.sh audit
-PYTHONPATH="$PWD/src" PYTHONNOUSERSITE=1 .venv/bin/python -m pytest tests tests_vlm tests_phase3_5 tests_phase3_6 --basetemp=.cache/pytest-phase3_6-before --junitxml=reports/phase3_6/tests_before.xml
+PYTHONPATH="$PWD/src" PYTHONNOUSERSITE=1 .venv/bin/python -m pytest tests tests_vlm tests_phase3_5 tests_phase3_6/test_controls.py --basetemp=.cache/pytest-phase3_6-before --junitxml=reports/phase3_6/tests_before.xml
 PYTHONPATH="$PWD/src" PYTHONNOUSERSITE=1 .venv/bin/python scripts/freeze_phase3_6.py
 bash scripts/run_phase3_6.sh infer
 bash scripts/run_phase3_6.sh evaluate
+PYTHONPATH="$PWD/src" PYTHONNOUSERSITE=1 .venv/bin/python -m pytest tests tests_vlm tests_phase3_5 tests_phase3_6 --basetemp=.cache/pytest-phase3_6-after --junitxml=reports/phase3_6/tests_after.xml
+PYTHONPATH="$PWD/src" PYTHONNOUSERSITE=1 .venv/bin/python -c "from spatial_pilot.control_audit import audit; audit(output_name='environment_after.json')"
+PYTHONPATH="$PWD/src" PYTHONNOUSERSITE=1 .venv/bin/python scripts/report_phase3_6.py
 ```
 
 模型推理与评估为两个独立进程；只有全部 16 次推理成功结束后，评估器才打开私有标签。

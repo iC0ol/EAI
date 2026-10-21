@@ -1,0 +1,4 @@
+{
+  "passable": true,
+  "explanation": "Robot can move from Start to Goal without touching walls or obstacles, as there's clear space around both points."
+}

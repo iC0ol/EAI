@@ -1,0 +1,4 @@
+{
+  "passable": false,
+  "explanation": "Robot cannot navigate through the triangle obstacle; its circular footprint would intersect the wall or obstacle."
+}

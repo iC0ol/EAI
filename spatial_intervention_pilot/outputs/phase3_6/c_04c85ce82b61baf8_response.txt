@@ -1,0 +1,4 @@
+{
+  "passable": false,
+  "explanation": "Robot cannot reach goal; obstacle blocks direct path, and robot radius prevents passage through narrow space."
+}

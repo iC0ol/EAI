@@ -1,0 +1,105 @@
+{
+  "reviewed_after_inference": true,
+  "method": "Human-readable analyst review of literal explanation claims against frozen private geometry and certified witnesses; not a model score or causal attribution.",
+  "explicit_route_claim_contradictions": 3,
+  "wrong_conclusion_with_literal_true_subclaim": 1,
+  "correct_answer_with_unsupported_narrow_gap_mechanism": 1,
+  "cases": [
+    {
+      "sample_id": "c_420721a541d6c8f6",
+      "explanation": "Robot can move from Start to Goal without touching walls or obstacles, as there's clear space around both points.",
+      "assessment": "compatible_generic",
+      "reason": "可达结论正确；仅说两个端点周围空旷不足以独立证明整条路，几何另行确认直线可行。"
+    },
+    {
+      "sample_id": "c_3a66b326d8d8b200",
+      "explanation": "Robot can navigate from Start to Goal by moving around obstacles, as clear paths exist without touching walls or obstacles.",
+      "assessment": "compatible_generic",
+      "reason": "可达正确。虽说绕障，图中也存在直线；绕障路线并非不可能，不能判为事实矛盾。"
+    },
+    {
+      "sample_id": "c_bb98f5efe818a730",
+      "explanation": "Robot can move straight from Start to Goal, avoiding walls, as the path is clear with sufficient clearance.",
+      "assessment": "compatible_specific",
+      "reason": "准确提到 straight；宽 5m 竖直通道内直线净空至少 1.25m。"
+    },
+    {
+      "sample_id": "c_83726b927b14d976",
+      "explanation": "Robot can navigate around obstacles by moving in open space between them, avoiding walls and obstacles.",
+      "assessment": "compatible_generic",
+      "reason": "可达正确；around obstacles 也可行，但未明确识别已存在的直线。"
+    },
+    {
+      "sample_id": "c_345724ed30668b5a",
+      "explanation": "Obstacle blocks direct path; robot cannot navigate around it without touching it, given its radius and fixed positions.",
+      "assessment": "explicit_route_claim_contradicted",
+      "reason": "cannot navigate around it 与下绕参考路线冲突；参考净空 1.25m，非半径卡住。"
+    },
+    {
+      "sample_id": "c_2c2b0c3cc18e3654",
+      "explanation": "Robot can navigate from Start to Goal via open space, avoiding walls and obstacles with sufficient clearance.",
+      "assessment": "compatible_generic",
+      "reason": "正确判断直线被挡的 L 走廊可达；泛化解释未给出转弯路线，不能证明内部搜索过程。"
+    },
+    {
+      "sample_id": "c_2184817332118390",
+      "explanation": "Robot cannot navigate around obstacles; path blocked by walls and solid barriers between Start and Goal.",
+      "assessment": "explicit_route_claim_contradicted",
+      "reason": "cannot navigate around obstacles 与跨越上下两端的合法 S 形参考路线冲突，净空 0.75m。"
+    },
+    {
+      "sample_id": "c_f51bd07ab8bde035",
+      "explanation": "Robot cannot navigate through the central obstacle; path blocked by walls and solid barriers.",
+      "assessment": "wrong_conclusion_literal_subclaim_true",
+      "reason": "不能穿过实体墙的字面说法正确，但不能据此否定经 U 顶端出口及外侧绕行的路线；参考净空 0.65m。"
+    },
+    {
+      "sample_id": "c_08e3afbd7775b63d",
+      "explanation": "Robot cannot pass through the central wall; no path exists between Start and Goal without touching it.",
+      "assessment": "compatible_specific",
+      "reason": "竖墙贯通上下边界，Start/Goal 位于两侧；与隔断证据一致。"
+    },
+    {
+      "sample_id": "c_f98cd85288588484",
+      "explanation": "Robot can navigate from Start to Goal by moving around the obstacle, staying within workspace boundaries.",
+      "assessment": "explicit_route_claim_contradicted",
+      "reason": "宣称 staying within workspace boundaries 仍可绕过；实际 x=0..12、y=5.6..6.4 的墙完全贯通左右边界，无法在地图内绕过。"
+    },
+    {
+      "sample_id": "c_b291462aa30a05ee",
+      "explanation": "Robot cannot navigate around the solid obstacle due to its size and the wall's position blocking direct path to goal.",
+      "assessment": "compatible_generic",
+      "reason": "不可达结论与折线墙连接左右边界的证据一致；仅提 direct path 不足以证明已理解全局隔断。"
+    },
+    {
+      "sample_id": "c_8de8b856871af457",
+      "explanation": "Diagonal wall blocks direct path; robot cannot navigate around it without touching obstacle or wall.",
+      "assessment": "compatible_specific",
+      "reason": "识别 diagonal wall；墙带连到边界、原始自由域分离，与否定结论一致。"
+    },
+    {
+      "sample_id": "c_04c85ce82b61baf8",
+      "explanation": "Robot cannot reach goal; obstacle blocks direct path, and robot radius prevents passage through narrow space.",
+      "assessment": "unsupported_mechanism_correct_answer",
+      "reason": "不可达正确，但 narrow space/robot radius 的机制缺乏支持：矩形墙环完全闭合，不是存在狭窄入口；点机器人也被隔断。"
+    },
+    {
+      "sample_id": "c_176b6b1ac9e0795f",
+      "explanation": "Robot cannot navigate through the triangle obstacle; its circular footprint would intersect the wall or obstacle.",
+      "assessment": "compatible_generic",
+      "reason": "封闭三角形墙环内的 Goal 无法进入；不可达及需穿墙的说法相容，不能推断详细拓扑表征。"
+    },
+    {
+      "sample_id": "c_26f70bd705a42b31",
+      "explanation": "Robot's circular footprint cannot navigate around the central obstacle to reach Goal without touching walls or obstacles.",
+      "assessment": "compatible_generic",
+      "reason": "Goal 在闭合环内；不可达相容，但没有明确解释封闭孔洞。"
+    },
+    {
+      "sample_id": "c_b78a7b68823d5d1f",
+      "explanation": "Robot cannot navigate around the obstacle; path blocked by solid wall and obstacle, preventing movement from Start to Goal.",
+      "assessment": "compatible_generic",
+      "reason": "不可达与非凸闭合墙环一致，解释较笼统。"
+    }
+  ]
+}

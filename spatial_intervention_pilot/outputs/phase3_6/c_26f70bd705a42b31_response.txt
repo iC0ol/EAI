@@ -1,0 +1,1 @@
+{"passable": false, "explanation": "Robot's circular footprint cannot navigate around the central obstacle to reach Goal without touching walls or obstacles."}

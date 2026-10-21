@@ -1,0 +1,15 @@
+{
+  "generation_attempts": 16,
+  "verified": 16,
+  "generation_failures": 0,
+  "illegal_geometries": 0,
+  "resolution_disagreements": 0,
+  "unresolved_samples": 0,
+  "grid_runs": 48,
+  "positive_reference_margin_min_m": 0.6500000000000004,
+  "positive_reference_margin_max_m": 1.75,
+  "BFS_witness_margin_min_m": 0.001246890528022182,
+  "BFS_witness_margin_max_m": 1.25,
+  "raw_negative_component_separation_count": 8,
+  "note": "Counts reconcile generation_attempts and all three saved grid results; Shapely validity checked again. No sample replacement or additional model call."
+}

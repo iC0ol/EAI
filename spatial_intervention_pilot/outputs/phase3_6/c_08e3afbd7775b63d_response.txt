@@ -1,0 +1,4 @@
+{
+  "passable": false,
+  "explanation": "Robot cannot pass through the central wall; no path exists between Start and Goal without touching it."
+}
