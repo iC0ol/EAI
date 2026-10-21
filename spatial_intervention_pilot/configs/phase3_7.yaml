@@ -1,0 +1,61 @@
+schema_version: 1
+phase: '3.7'
+dtype: bfloat16
+device: cuda:0
+attention: sdpa
+seed: 20261020
+batch_size: 1
+max_new_tokens: 256
+do_sample: false
+use_model_defaults: false
+temperature: null
+top_p: null
+top_k: null
+num_beams: 1
+min_pixels: 65536
+max_pixels: 589824
+prompts:
+  poststate:
+    version: poststate-reach-en-v1
+    path: prompts/phase3_7/poststate_reach_en_v1.txt
+  intervention:
+    version: spatial-smoke-en-v1
+    path: prompts/phase3_7/spatial_smoke_en_v1.txt
+geometry:
+  robot_radius_m: 0.25
+  workspace_dimensions_m:
+  - 12
+  - 12
+  resolutions_m:
+  - 0.1
+  - 0.05
+  - 0.025
+  buffer_quad_segs: 32
+  contact_epsilon_m: 1.0e-06
+  positive_reference_clearance_min_m: 0.5
+  image_size_px: 768
+  generation_seed: 202610217
+  sample_count: 24
+  per_category: 6
+models:
+  4b:
+    model_id: Qwen/Qwen3-VL-4B-Instruct
+    model_revision: ebb281ec70b05090aa6165b016eac8ec08e71b17
+    model_local_dir: .cache/vlm/model
+  8b:
+    model_id: Qwen/Qwen3-VL-8B-Instruct
+    model_revision: 0c351dd01ed87e9c1b53cbc748cba10e6187ff3b
+    model_local_dir: .cache/phase3_7/model8b
+gate:
+  part_c_min_correct_new_detours: 4
+  part_c_min_correct_new_negatives: 10
+  stop_if_new_detours_at_most: 2
+  ambiguous_three_of_six: stop; improvement gate not met
+  requires_both_vlm_and_image_runs_complete: true
+image_planner:
+  version: rgb-grid-v1
+  segmentation: fixed-public-palette-v1
+  grid_stride_pixels: 2
+  conservative_margin_pixels: 2.0
+  connectivity: 4
+  robot_contact_is_collision: true

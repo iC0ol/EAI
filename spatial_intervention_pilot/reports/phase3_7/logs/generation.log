@@ -1,0 +1,35 @@
+{"sample_id": "p_002cf8f8b6fb4833", "category": "A", "passable": true, "margin": 0.9499999999999993}
+{"sample_id": "p_a02b937d3404a3bf", "category": "A", "passable": true, "margin": 1.164213562373095}
+{"sample_id": "p_32d6a22ec7c2ec8f", "category": "A", "passable": true, "margin": 1.25}
+{"sample_id": "p_919fb990d3286e6c", "category": "A", "passable": true, "margin": 1.25}
+{"sample_id": "p_b3c9449bc928c1da", "category": "A", "passable": true, "margin": 1.2499999999999998}
+{"sample_id": "p_93ec4f8c39917948", "category": "A", "passable": true, "margin": 1.25}
+{"sample_id": "p_7573e6e10d3a96ab", "category": "B", "passable": true, "margin": 1.25}
+{"sample_id": "p_b49e1b1f3d1fd436", "category": "B", "passable": true, "margin": 1.75}
+{"sample_id": "p_6448a7dd95c0b28c", "category": "B", "passable": true, "margin": 1.25}
+{"sample_id": "p_e6f1ddef95e00ff7", "category": "B", "passable": true, "margin": 0.8499999999999996}
+{"sample_id": "p_de448527dd8433ec", "category": "B", "passable": true, "margin": 1.1500000000000004}
+{"sample_id": "p_59b41661cf7aea8b", "category": "B", "passable": true, "margin": 0.75}
+{"sample_id": "p_171faa66c412cd1c", "category": "C", "passable": false, "margin": null}
+{"sample_id": "p_e596a8b82ab15e4a", "category": "C", "passable": false, "margin": null}
+{"sample_id": "p_559dfa67928cd176", "category": "C", "passable": false, "margin": null}
+{"sample_id": "p_517e245773f472d1", "category": "C", "passable": false, "margin": null}
+{"sample_id": "p_f91468e769c290bb", "category": "C", "passable": false, "margin": null}
+{"sample_id": "p_426760d9a33537bf", "category": "C", "passable": false, "margin": null}
+{"sample_id": "p_0a449fbb0b4cc886", "category": "D", "passable": false, "margin": null}
+{"sample_id": "p_e9d59eb2777fc8fe", "category": "D", "passable": false, "margin": null}
+{"sample_id": "p_70c5c792dd442f3c", "category": "D", "passable": false, "margin": null}
+{"sample_id": "p_e9d5826d33e4bfdb", "category": "D", "passable": false, "margin": null}
+{"sample_id": "p_412eb82fa7aa1df7", "category": "D", "passable": false, "margin": null}
+{"sample_id": "p_77f35ea841afab94", "category": "D", "passable": false, "margin": null}
+{
+  "attempted": 24,
+  "verified": 24,
+  "failed": 0,
+  "not_attempted": 0,
+  "automatic_replacements": 0,
+  "seed": 202610217,
+  "status": "completed",
+  "seconds": 17.001583109842613,
+  "source_commit": "0101dedfe4e191eb23eb0094c630c9e1503bc7f3"
+}

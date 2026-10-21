@@ -1,0 +1,16 @@
+{
+  "phase": "3.7",
+  "main": {
+    "version": "poststate-reach-en-v1",
+    "source": "prompts/poststate_reach_en_v1.txt",
+    "copy": "prompts/phase3_7/poststate_reach_en_v1.txt",
+    "sha256": "0b28e77b7730da560df6f7f78f1c58298c002808955b55b7821f3310cfc7c0c7"
+  },
+  "conditional_part_c": {
+    "version": "spatial-smoke-en-v1",
+    "source": "prompts/spatial_smoke_en_v1.txt",
+    "copy": "prompts/phase3_7/spatial_smoke_en_v1.txt",
+    "sha256": "5d8b0a86cf5f28089fed94ae61f32c2ac34bd91bb39112dce5bbe8c31d871fca"
+  },
+  "answer_based_changes": false
+}

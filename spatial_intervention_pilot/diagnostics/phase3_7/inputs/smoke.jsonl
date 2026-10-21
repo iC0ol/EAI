@@ -1,0 +1,1 @@
+{"context": {"robot_radius_m": 0.25, "units": "m", "workspace_dimensions_m": [12, 12]}, "image": "diagnostics/phase3_7/smoke/public_smoke.png", "input_image_sha256": "af14425b63a4e1147eb6c3044b651f87157b57e9da5e05e1f8c71e90ec2a64b9", "query_id": "unscored_smoke"}

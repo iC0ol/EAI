@@ -1,0 +1,6 @@
+{
+  "not_scored": true,
+  "selection": "Standalone public image constructed before any 8B call, excluded from both scored sets",
+  "criterion": "model loads BF16, visual encoder executes, strict passable/explanation JSON; answer correctness not selected or tuned",
+  "image_sha256": "af14425b63a4e1147eb6c3044b651f87157b57e9da5e05e1f8c71e90ec2a64b9"
+}
