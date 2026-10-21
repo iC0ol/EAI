@@ -1,0 +1,9 @@
+{
+  "phase": "3.6",
+  "version": "poststate-reach-en-v1",
+  "source": "prompts/poststate_reach_en_v1.txt",
+  "sha256": "0b28e77b7730da560df6f7f78f1c58298c002808955b55b7821f3310cfc7c0c7",
+  "changes_from_phase3_5": "none; byte-identical copy",
+  "context_keys": ["units", "workspace_dimensions_m", "robot_radius_m"],
+  "answer_based_prompt_tuning": false
+}

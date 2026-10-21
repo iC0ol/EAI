@@ -1,0 +1,15 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.17, pytest-9.1.1, pluggy-1.7.0
+rootdir: /home/asus/EAI/spatial_intervention_pilot
+configfile: pyproject.toml
+collected 127 items
+
+tests/test_dataset.py .......                                            [  5%]
+tests/test_edits.py ............................                         [ 27%]
+tests/test_oracle.py ...........................                         [ 48%]
+tests_vlm/test_vlm_io.py .............                                   [ 59%]
+tests_phase3_5/test_diagnostics.py ...................                   [ 74%]
+tests_phase3_6/test_controls.py .................................        [100%]
+
+- generated xml file: /home/asus/EAI/spatial_intervention_pilot/reports/phase3_6/tests_before.xml -
+============================= 127 passed in 9.14s ==============================

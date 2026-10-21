@@ -1,0 +1,27 @@
+{"sample_id": "c_420721a541d6c8f6", "category": "A", "passable": true, "reference_clearance_m": 1.25}
+{"sample_id": "c_3a66b326d8d8b200", "category": "A", "passable": true, "reference_clearance_m": 1.75}
+{"sample_id": "c_bb98f5efe818a730", "category": "A", "passable": true, "reference_clearance_m": 1.25}
+{"sample_id": "c_83726b927b14d976", "category": "A", "passable": true, "reference_clearance_m": 1.25}
+{"sample_id": "c_345724ed30668b5a", "category": "B", "passable": true, "reference_clearance_m": 1.25}
+{"sample_id": "c_2c2b0c3cc18e3654", "category": "B", "passable": true, "reference_clearance_m": 1.25}
+{"sample_id": "c_2184817332118390", "category": "B", "passable": true, "reference_clearance_m": 0.75}
+{"sample_id": "c_f51bd07ab8bde035", "category": "B", "passable": true, "reference_clearance_m": 0.6500000000000004}
+{"sample_id": "c_08e3afbd7775b63d", "category": "C", "passable": false, "reference_clearance_m": null}
+{"sample_id": "c_f98cd85288588484", "category": "C", "passable": false, "reference_clearance_m": null}
+{"sample_id": "c_b291462aa30a05ee", "category": "C", "passable": false, "reference_clearance_m": null}
+{"sample_id": "c_8de8b856871af457", "category": "C", "passable": false, "reference_clearance_m": null}
+{"sample_id": "c_04c85ce82b61baf8", "category": "D", "passable": false, "reference_clearance_m": null}
+{"sample_id": "c_176b6b1ac9e0795f", "category": "D", "passable": false, "reference_clearance_m": null}
+{"sample_id": "c_26f70bd705a42b31", "category": "D", "passable": false, "reference_clearance_m": null}
+{"sample_id": "c_b78a7b68823d5d1f", "category": "D", "passable": false, "reference_clearance_m": null}
+{
+  "attempted": 16,
+  "verified": 16,
+  "failed": 0,
+  "not_attempted": 0,
+  "automatic_replacements": 0,
+  "seed": 20261021,
+  "status": "completed",
+  "seconds": 11.956205806927755,
+  "source_commit": "239a14e511ce3620df6b2f55db144008d6410986"
+}
