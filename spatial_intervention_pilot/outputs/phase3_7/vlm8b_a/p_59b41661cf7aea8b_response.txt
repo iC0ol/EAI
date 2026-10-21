@@ -1,0 +1,4 @@
+{
+  "passable": false,
+  "explanation": "Robot radius 0.25m means it cannot fit between the wall and the tall obstacle, nor around the small obstacle to reach goal."
+}

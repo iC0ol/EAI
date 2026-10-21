@@ -1,0 +1,4 @@
+{
+  "passable": false,
+  "explanation": "Robot's circular footprint cannot navigate from Start to Goal due to diagonal wall obstruction."
+}

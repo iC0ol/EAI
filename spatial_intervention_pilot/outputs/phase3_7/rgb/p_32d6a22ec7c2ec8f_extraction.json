@@ -1,0 +1,22 @@
+{
+  "frame_px": [
+    72,
+    44,
+    696,
+    668
+  ],
+  "markers": {
+    "start": [
+      156.0,
+      546.0
+    ],
+    "goal": [
+      156.0,
+      78.0
+    ]
+  },
+  "scale": 52.0,
+  "robot_radius_px": 13.0,
+  "conservative_margin_px": 2.0,
+  "stride_px": 2
+}

@@ -1,0 +1,1 @@
+{"passable": true, "explanation": "Robot can navigate around obstacles without touching them, given its small radius and open paths between start, goal, and obstacles."}

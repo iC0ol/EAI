@@ -1,0 +1,1 @@
+{"passable": false, "explanation": "Robot radius 0.25m cannot navigate around walls to reach goal without touching obstacles or walls."}

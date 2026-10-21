@@ -1,0 +1,4 @@
+{
+  "passable": false,
+  "explanation": "Robot radius 0.25m and narrow wall prevent path from Start to Goal without collision."
+}

@@ -1,0 +1,4 @@
+{
+  "passable": true,
+  "explanation": "Robot can navigate from Start to Goal avoiding walls and obstacles with sufficient clearance."
+}

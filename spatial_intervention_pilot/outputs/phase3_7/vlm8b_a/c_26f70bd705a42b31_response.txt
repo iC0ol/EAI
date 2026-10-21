@@ -1,0 +1,4 @@
+{
+  "passable": false,
+  "explanation": "Robot cannot pass through the thick circular obstacle without touching it, as its radius is 0.25m and the obstacle is solid."
+}

@@ -1,0 +1,1 @@
+{"passable": true, "explanation": "Robot can move vertically through central corridor without touching walls or obstacles."}

@@ -1,0 +1,4 @@
+{
+  "passable": true,
+  "explanation": "Robot can navigate around the triangle obstacle from Start to Goal without touching walls or obstacles."
+}

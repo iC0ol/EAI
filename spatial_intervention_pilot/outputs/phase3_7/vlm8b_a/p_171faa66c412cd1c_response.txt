@@ -1,0 +1,1 @@
+{"passable": false, "explanation": "Robot's path must avoid walls and obstacles. The V-shaped obstacle blocks direct route from Start to Goal without touching obstacles or walls."}

@@ -1,0 +1,22 @@
+{
+  "attempted": 24,
+  "verified": 24,
+  "failed": 0,
+  "illegal_geometry": 0,
+  "resolution_disagreement": 0,
+  "unresolved": 0,
+  "automatic_replacements": 0,
+  "three_resolution_searches": 72,
+  "positive_controls": 12,
+  "negative_controls": 12,
+  "positive_reference_clearance_min_m": 0.75,
+  "positive_reference_clearance_max_m": 1.75,
+  "image_pipeline_failures": 0,
+  "bfs_astar_prediction_disagreements": 0,
+  "posthoc_obstacle_iou_min": 0.9734371828699006,
+  "posthoc_obstacle_iou_mean": 0.9900840839551425,
+  "posthoc_max_endpoint_error_m": 0.013867504905630863,
+  "rgb_positive_paths_checked": 40,
+  "rgb_invalid_positive_paths": 0,
+  "rgb_returned_path_min_clearance_m": 0.019230769230769162
+}

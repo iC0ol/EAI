@@ -1,0 +1,1 @@
+{"passable": false, "explanation": "Obstacles block all direct paths from Start to Goal. Robot radius prevents navigating around them without collision."}

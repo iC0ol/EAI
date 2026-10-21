@@ -1,0 +1,1 @@
+{"passable": false, "explanation": "Robot's radius is 0.25m. Start and Goal are too close to walls and obstacles, making a path impossible without touching them."}

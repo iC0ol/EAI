@@ -1,0 +1,4 @@
+{
+  "passable": false,
+  "explanation": "Robot cannot navigate around hexagon obstacle; required clearance exceeds available space at all potential paths."
+}

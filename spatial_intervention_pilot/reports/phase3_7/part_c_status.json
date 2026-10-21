@@ -1,0 +1,27 @@
+{
+  "status": "not_executed",
+  "reason": "8B new detour controls 0/6, meeting the user stop rule (0\u20132/6). Also 9/12 new negatives, below predeclared 10/12 guard.",
+  "gate": {
+    "policy": {
+      "part_c_min_correct_new_detours": 4,
+      "part_c_min_correct_new_negatives": 10,
+      "stop_if_new_detours_at_most": 2,
+      "ambiguous_three_of_six": "stop; improvement gate not met",
+      "requires_both_vlm_and_image_runs_complete": true
+    },
+    "new8b_detour_correct": 0,
+    "new8b_negative_correct": 9,
+    "part_c_permitted": false,
+    "status": "No-Go: basic reliability gate not met; do not execute Part C"
+  },
+  "original_core_8b_calls": 0,
+  "new_matched_intervention_scenes_generated": 0,
+  "new_matched_intervention_vlm_calls": 0,
+  "counterfactual_image_planner_runs": 0,
+  "F_A_accuracy": null,
+  "F_B_accuracy": null,
+  "F_AB_accuracy": null,
+  "full_combination_accuracy": null,
+  "both_singles_correct_joint_wrong": null,
+  "interpretation": "Not measured, not zero. No new evidence isolates an independent counterfactual/compositional defect."
+}

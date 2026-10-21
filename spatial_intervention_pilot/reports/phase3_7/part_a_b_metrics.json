@@ -1,0 +1,355 @@
+{
+  "evaluated_at": "2026-10-21T02:30:55.634596+00:00",
+  "private_labels_opened_after_all_inference": true,
+  "sets": {
+    "old16": {
+      "4b": {
+        "total": 16,
+        "correct": 12,
+        "accuracy": 0.75,
+        "TP": 5,
+        "FP": 1,
+        "TN": 7,
+        "FN": 3,
+        "unknown": 0,
+        "reachable_recall": 0.625,
+        "unreachable_recognition_rate": 0.875,
+        "categories": {
+          "A": {
+            "correct": 4,
+            "total": 4
+          },
+          "B": {
+            "correct": 1,
+            "total": 4
+          },
+          "C": {
+            "correct": 3,
+            "total": 4
+          },
+          "D": {
+            "correct": 4,
+            "total": 4
+          }
+        },
+        "prediction_reachable": 6,
+        "prediction_unreachable": 10,
+        "end_to_end_mean_seconds": 2.222225574616459,
+        "end_to_end_total_seconds": 35.55560919386335,
+        "failures": 0,
+        "parse_success": 16,
+        "always_reachable_correct": 8,
+        "always_unreachable_correct": 8
+      },
+      "8b": {
+        "total": 16,
+        "correct": 13,
+        "accuracy": 0.8125,
+        "TP": 5,
+        "FP": 0,
+        "TN": 8,
+        "FN": 3,
+        "unknown": 0,
+        "reachable_recall": 0.625,
+        "unreachable_recognition_rate": 1.0,
+        "categories": {
+          "A": {
+            "correct": 4,
+            "total": 4
+          },
+          "B": {
+            "correct": 1,
+            "total": 4
+          },
+          "C": {
+            "correct": 4,
+            "total": 4
+          },
+          "D": {
+            "correct": 4,
+            "total": 4
+          }
+        },
+        "prediction_reachable": 5,
+        "prediction_unreachable": 11,
+        "end_to_end_mean_seconds": 2.267005236353725,
+        "end_to_end_total_seconds": 36.2720837816596,
+        "failures": 0,
+        "parse_success": 16,
+        "always_reachable_correct": 8,
+        "always_unreachable_correct": 8
+      },
+      "bfs": {
+        "total": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "TP": 8,
+        "FP": 0,
+        "TN": 8,
+        "FN": 0,
+        "unknown": 0,
+        "reachable_recall": 1.0,
+        "unreachable_recognition_rate": 1.0,
+        "categories": {
+          "A": {
+            "correct": 4,
+            "total": 4
+          },
+          "B": {
+            "correct": 4,
+            "total": 4
+          },
+          "C": {
+            "correct": 4,
+            "total": 4
+          },
+          "D": {
+            "correct": 4,
+            "total": 4
+          }
+        },
+        "prediction_reachable": 8,
+        "prediction_unreachable": 8,
+        "end_to_end_mean_seconds": 0.2702767049049726,
+        "end_to_end_total_seconds": 4.324427278479561,
+        "failures": 0,
+        "parse_success": 16,
+        "always_reachable_correct": 8,
+        "always_unreachable_correct": 8
+      },
+      "astar": {
+        "total": 16,
+        "correct": 16,
+        "accuracy": 1.0,
+        "TP": 8,
+        "FP": 0,
+        "TN": 8,
+        "FN": 0,
+        "unknown": 0,
+        "reachable_recall": 1.0,
+        "unreachable_recognition_rate": 1.0,
+        "categories": {
+          "A": {
+            "correct": 4,
+            "total": 4
+          },
+          "B": {
+            "correct": 4,
+            "total": 4
+          },
+          "C": {
+            "correct": 4,
+            "total": 4
+          },
+          "D": {
+            "correct": 4,
+            "total": 4
+          }
+        },
+        "prediction_reachable": 8,
+        "prediction_unreachable": 8,
+        "end_to_end_mean_seconds": 0.27390680003736634,
+        "end_to_end_total_seconds": 4.382508800597861,
+        "failures": 0,
+        "parse_success": 16,
+        "always_reachable_correct": 8,
+        "always_unreachable_correct": 8
+      },
+      "oracle_reference": {
+        "labels": 16,
+        "three_resolution_agreement": true,
+        "not_an_independent_image_method": true,
+        "accuracy_not_reported_as_performance": true
+      }
+    },
+    "new24": {
+      "4b": {
+        "total": 24,
+        "correct": 14,
+        "accuracy": 0.5833333333333334,
+        "TP": 7,
+        "FP": 5,
+        "TN": 7,
+        "FN": 5,
+        "unknown": 0,
+        "reachable_recall": 0.5833333333333334,
+        "unreachable_recognition_rate": 0.5833333333333334,
+        "categories": {
+          "A": {
+            "correct": 4,
+            "total": 6
+          },
+          "B": {
+            "correct": 3,
+            "total": 6
+          },
+          "C": {
+            "correct": 3,
+            "total": 6
+          },
+          "D": {
+            "correct": 4,
+            "total": 6
+          }
+        },
+        "prediction_reachable": 12,
+        "prediction_unreachable": 12,
+        "end_to_end_mean_seconds": 2.1444171289913356,
+        "end_to_end_total_seconds": 51.466011095792055,
+        "failures": 0,
+        "parse_success": 24,
+        "always_reachable_correct": 12,
+        "always_unreachable_correct": 12
+      },
+      "8b": {
+        "total": 24,
+        "correct": 14,
+        "accuracy": 0.5833333333333334,
+        "TP": 5,
+        "FP": 3,
+        "TN": 9,
+        "FN": 7,
+        "unknown": 0,
+        "reachable_recall": 0.4166666666666667,
+        "unreachable_recognition_rate": 0.75,
+        "categories": {
+          "A": {
+            "correct": 5,
+            "total": 6
+          },
+          "B": {
+            "correct": 0,
+            "total": 6
+          },
+          "C": {
+            "correct": 6,
+            "total": 6
+          },
+          "D": {
+            "correct": 3,
+            "total": 6
+          }
+        },
+        "prediction_reachable": 8,
+        "prediction_unreachable": 16,
+        "end_to_end_mean_seconds": 2.333023593237158,
+        "end_to_end_total_seconds": 55.99256623769179,
+        "failures": 0,
+        "parse_success": 24,
+        "always_reachable_correct": 12,
+        "always_unreachable_correct": 12
+      },
+      "bfs": {
+        "total": 24,
+        "correct": 24,
+        "accuracy": 1.0,
+        "TP": 12,
+        "FP": 0,
+        "TN": 12,
+        "FN": 0,
+        "unknown": 0,
+        "reachable_recall": 1.0,
+        "unreachable_recognition_rate": 1.0,
+        "categories": {
+          "A": {
+            "correct": 6,
+            "total": 6
+          },
+          "B": {
+            "correct": 6,
+            "total": 6
+          },
+          "C": {
+            "correct": 6,
+            "total": 6
+          },
+          "D": {
+            "correct": 6,
+            "total": 6
+          }
+        },
+        "prediction_reachable": 12,
+        "prediction_unreachable": 12,
+        "end_to_end_mean_seconds": 0.25594317066133954,
+        "end_to_end_total_seconds": 6.142636095872149,
+        "failures": 0,
+        "parse_success": 24,
+        "always_reachable_correct": 12,
+        "always_unreachable_correct": 12
+      },
+      "astar": {
+        "total": 24,
+        "correct": 24,
+        "accuracy": 1.0,
+        "TP": 12,
+        "FP": 0,
+        "TN": 12,
+        "FN": 0,
+        "unknown": 0,
+        "reachable_recall": 1.0,
+        "unreachable_recognition_rate": 1.0,
+        "categories": {
+          "A": {
+            "correct": 6,
+            "total": 6
+          },
+          "B": {
+            "correct": 6,
+            "total": 6
+          },
+          "C": {
+            "correct": 6,
+            "total": 6
+          },
+          "D": {
+            "correct": 6,
+            "total": 6
+          }
+        },
+        "prediction_reachable": 12,
+        "prediction_unreachable": 12,
+        "end_to_end_mean_seconds": 0.25567503183265217,
+        "end_to_end_total_seconds": 6.136200763983652,
+        "failures": 0,
+        "parse_success": 24,
+        "always_reachable_correct": 12,
+        "always_unreachable_correct": 12
+      },
+      "oracle_reference": {
+        "labels": 24,
+        "three_resolution_agreement": true,
+        "not_an_independent_image_method": true,
+        "accuracy_not_reported_as_performance": true
+      }
+    }
+  },
+  "paired": {
+    "old16": {
+      "4b_wrong_8b_right": 2,
+      "4b_right_8b_wrong": 1,
+      "both_correct": 11,
+      "both_wrong": 2,
+      "prediction_agreements": 13
+    },
+    "new24": {
+      "4b_wrong_8b_right": 4,
+      "4b_right_8b_wrong": 4,
+      "both_correct": 10,
+      "both_wrong": 6,
+      "prediction_agreements": 16
+    }
+  },
+  "part_c_gate": {
+    "policy": {
+      "part_c_min_correct_new_detours": 4,
+      "part_c_min_correct_new_negatives": 10,
+      "stop_if_new_detours_at_most": 2,
+      "ambiguous_three_of_six": "stop; improvement gate not met",
+      "requires_both_vlm_and_image_runs_complete": true
+    },
+    "new8b_detour_correct": 0,
+    "new8b_negative_correct": 9,
+    "part_c_permitted": false,
+    "status": "No-Go: basic reliability gate not met; do not execute Part C"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "passable": false,
+  "explanation": "Robot cannot pass through the circular wall without touching it, and no path exists around the obstacle to reach the goal."
+}

@@ -1,0 +1,4 @@
+{
+  "passable": false,
+  "explanation": "Circular robot cannot navigate around the obstacle; path blocked by wall and obstacle, no clearance for movement."
+}

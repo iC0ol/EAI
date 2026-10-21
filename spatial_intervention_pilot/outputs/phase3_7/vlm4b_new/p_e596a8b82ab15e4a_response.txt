@@ -1,0 +1,4 @@
+{
+  "passable": false,
+  "explanation": "Robot cannot navigate around the L-shaped obstacle due to its size and the narrow passage."
+}

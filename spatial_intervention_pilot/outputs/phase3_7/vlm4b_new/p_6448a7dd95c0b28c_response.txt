@@ -1,0 +1,4 @@
+{
+  "passable": false,
+  "explanation": "Robot cannot navigate due to solid obstacles blocking direct path between Start and Goal."
+}

@@ -1,0 +1,4 @@
+{
+  "passable": true,
+  "explanation": "Robot can navigate through open space between walls, avoiding obstacles with sufficient clearance."
+}

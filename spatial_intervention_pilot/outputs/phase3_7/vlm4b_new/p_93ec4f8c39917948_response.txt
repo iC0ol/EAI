@@ -1,0 +1,4 @@
+{
+  "passable": true,
+  "explanation": "Robot can navigate around obstacles; path exists from Start to Goal without touching walls or obstacles."
+}

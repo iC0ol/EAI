@@ -1,0 +1,4 @@
+{
+  "passable": true,
+  "explanation": "Robot can navigate from Start to Goal by moving around the obstacle, staying within workspace boundaries."
+}

@@ -1,0 +1,4 @@
+{
+  "passable": false,
+  "explanation": "Start and Goal are separated by solid walls; robot cannot navigate through obstacles without touching them."
+}

@@ -1,0 +1,4 @@
+{
+  "passable": false,
+  "explanation": "Robot radius 0.25m means it cannot fit inside the hexagon without touching walls or obstacles."
+}

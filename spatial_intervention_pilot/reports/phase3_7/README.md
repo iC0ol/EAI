@@ -40,12 +40,15 @@ PYTHONPATH="$PWD/src" PYTHONNOUSERSITE=1 HF_HOME="$PWD/.cache/phase3_7/huggingfa
 bash scripts/run_phase3_7.sh prepare
 # 独立公开 smoke PNG 及清单在第一次调用前已保存，不能用正式评分图挑选部署参数
 bash scripts/run_phase3_7.sh smoke
-PYTHONPATH="$PWD/src" PYTHONNOUSERSITE=1 .venv/bin/python -m pytest tests tests_vlm tests_phase3_5 tests_phase3_6 tests_phase3_7/test_protocol.py --junitxml=reports/phase3_7/tests_before_final.xml
+PYTHONPATH="$PWD/src" PYTHONNOUSERSITE=1 .venv/bin/python -m pytest tests tests_vlm tests_phase3_5 tests_phase3_6 tests_phase3_7/test_protocol.py --basetemp=.cache/pytest-phase3_7-final-before --junitxml=reports/phase3_7/tests_before_final.xml
 PYTHONPATH="$PWD/src" PYTHONNOUSERSITE=1 .venv/bin/python scripts/freeze_phase3_7.py
 bash scripts/run_phase3_7.sh infer8b
 bash scripts/run_phase3_7.sh infer4b
 bash scripts/run_phase3_7.sh rgb
 bash scripts/run_phase3_7.sh evaluate
+PYTHONPATH="$PWD/src" PYTHONNOUSERSITE=1 .venv/bin/python -m pytest tests tests_vlm tests_phase3_5 tests_phase3_6 tests_phase3_7 --basetemp=.cache/pytest-phase3_7-after --junitxml=reports/phase3_7/tests_after.xml
+PYTHONPATH="$PWD/src" PYTHONNOUSERSITE=1 .venv/bin/python scripts/verify_phase3_7_delivery.py
+PYTHONPATH="$PWD/src" PYTHONNOUSERSITE=1 MPLCONFIGDIR="$PWD/.cache/phase3_7/matplotlib" .venv/bin/python scripts/report_phase3_7.py
 ```
 
 RGB 规则 rgb-grid-v1：RGB 容差4，帧色 #182332、墙 #445060、矩形障碍 #DD9350、Start #2475C4、Goal #16805B；深色文字为注释，不当障碍。

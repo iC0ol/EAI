@@ -1,0 +1,1 @@
+{"passable": false, "explanation": "Robot's path is blocked by walls and obstacles; no clear route exists from Start to Goal without touching barriers."}

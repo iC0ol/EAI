@@ -1,0 +1,1 @@
+{"passable": true, "explanation": "Robot can navigate inward through gaps between concentric squares without touching walls or obstacles."}

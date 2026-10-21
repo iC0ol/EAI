@@ -1,0 +1,1 @@
+{"passable": false, "explanation": "Robot cannot pass through the diagonal wall blocking direct path from Start to Goal without touching obstacles."}

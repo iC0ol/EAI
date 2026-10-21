@@ -1,0 +1,1 @@
+{"passable": false, "explanation": "Robot cannot pass through the triangular obstacle without touching it or going outside the workspace."}

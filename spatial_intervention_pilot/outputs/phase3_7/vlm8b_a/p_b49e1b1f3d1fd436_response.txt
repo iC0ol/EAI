@@ -1,0 +1,1 @@
+{"passable": false, "explanation": "Robot cannot navigate around the triangle obstacle to reach goal without touching it or walls."}

@@ -1,0 +1,1 @@
+{"passable": false, "explanation": "Robot cannot reach goal without touching walls or obstacles due to its size and the L-shaped barrier."}
