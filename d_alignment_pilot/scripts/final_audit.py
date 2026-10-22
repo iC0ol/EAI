@@ -24,6 +24,46 @@ assert sha256(ROOT / initial["path"]) == initial["sha256"]
 expected_trials = read_json(ROOT / "data/manifests/eval_seeds.json")["seeds"]
 initial_by_seed = {v["seed"]: v for v in initial["initial_conditions"]}
 comparison = read_json(ROOT / "outputs/gate1/comparison.json")
+retry_authorized = "retry_authorization" in comparison
+archived = comparison.get("archived_attempts", [])
+if retry_authorized:
+    auth = read_json(ROOT / "data/manifests/retry_authorization.json")
+    assert auth == comparison["retry_authorization"]
+    assert auth["authorized_additional_training_attempts"] == 1
+    assert auth["config_sha256"] == sha256(ROOT / "configs/gate1.json")
+    assert auth["train_code_sha256"] == sha256(ROOT / "src/d_alignment/train.py")
+    assert auth["evaluation_code_sha256"] == sha256(ROOT / "src/d_alignment/evaluate.py")
+    assert auth["frozen_protocol_sha256"] == sha256(ROOT / "data/manifests/frozen_protocol.json")
+    previous_files_verified = 0
+    for previous_name in comparison["runs"]:
+        if previous_name == auth["retry_run"]:
+            continue
+        for filename in ("run.json", "metrics.jsonl", "evaluation.jsonl", "evaluation_summary.json"):
+            relative = f"outputs/gate1/{previous_name}/{filename}"
+            previous_bytes = subprocess.check_output(["git", "show", f'{auth["previous_public_result_commit"]}:d_alignment_pilot/{relative}'], cwd=ROOT)
+            assert (ROOT / relative).read_bytes() == previous_bytes, relative
+            previous_files_verified += 1
+    assert len(archived) == 1 and auth["overall_attempt_number"] == 7
+    archive = ROOT / auth["archived_attempt"]
+    for path, expected in auth["archived_files_sha256"].items():
+        assert sha256(archive / path) == expected
+    assert archived[0]["training"] == read_json(archive / "run.json")
+    assert archived[0]["training"]["status"] == "interrupted"
+    assert archived[0]["training"]["updates_completed"] == 42400
+    retry_status = read_json(ROOT / "outputs/gate1/retry_status.json")
+    assert retry_status["state"] == "completed"
+    assert retry_status["training_exit_code"] == retry_status["evaluation_exit_code"] == 0
+    original_metrics = [json.loads(line) for line in (archive / "metrics.jsonl").read_text().splitlines()]
+    retry_metrics = [json.loads(line) for line in (ROOT / "outputs/gate1" / auth["retry_run"] / "metrics.jsonl").read_text().splitlines()]
+    original_by_update = {m["update"]: m for m in original_metrics}
+    retry_by_update = {m["update"]: m for m in retry_metrics}
+    assert set(original_by_update) <= set(retry_by_update)
+    retry_prefix_comparison = {
+        "logged_updates_compared": len(original_by_update),
+        "last_common_update": max(original_by_update),
+        "maximum_train_noise_mse_absolute_difference": max(abs(m["train_noise_mse"] - retry_by_update[u]["train_noise_mse"]) for u, m in original_by_update.items()),
+        "scope": "Scalar loss-log comparison only; does not assert identical unrecorded model tensors or cross-hardware determinism.",
+    }
 preservation = read_json(ROOT / "reports/gate1/preservation_check.json")
 assert preservation["original_tracked_files"] == 903 and preservation["changed"] == []
 assert subprocess.check_output(["git", "rev-parse", "main"], cwd=ROOT, text=True).strip() == frozen["git_parent"]
@@ -85,21 +125,28 @@ for name, value in comparison["runs"].items():
         assert evidence["additional_optimizer_updates"] == 0
     records[name] = rec
 assert len(records) == cfg["max_policy_trainings"] == 6
-assert sum(r["training_status"] == "completed" for r in records.values()) == 5
-assert sum(r["evaluated_episodes"] for r in records.values()) == 250
+expected_complete = 6 if retry_authorized else 5
+assert sum(r["training_status"] == "completed" for r in records.values()) == expected_complete
+assert sum(r["evaluated_episodes"] for r in records.values()) == expected_complete * 50
 assert comparison["step_d_eligible_conditions"] == []
 assert not (ROOT / "reports/gate1/lag_identification.md").exists()
 report = {"observed_at_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-          "status": "passed_with_explicitly_incomplete_sixth_training",
+          "status": "passed_six_policies_plus_archived_interruption" if retry_authorized else "passed_with_explicitly_incomplete_sixth_training",
           "frozen_files_and_manifests_verified": len(frozen_inputs),
           "original_tracked_files_unchanged": 903,
           "spatial_intervention_pilot_tree": old_tree,
           "source_hdf5_sha256": versions["dataset"]["sha256"],
           "derived_action_files_verified": len(injection["conditions"]),
           "eval_initial_conditions_sha256": initial["sha256"],
-          "runs": records, "formal_policy_episodes": 250, "formal_control_steps": 100000,
+          "runs": records, "formal_policy_episodes": expected_complete * 50, "formal_control_steps": expected_complete * 50 * 400,
+          "total_training_attempts": len(records) + len(archived),
+          "archived_interrupted_attempts": len(archived),
+          "confirmed_optimizer_updates_across_attempts": sum(r["last_confirmed_updates"] for r in records.values()) + sum(a["training"]["updates_completed"] for a in archived),
           "additional_optimizer_updates": 0, "additional_environment_steps": 0,
           "step_d_executed": False,
           "scope": "Artifact consistency and local hash audit; not new training, rollouts, or lag estimation."}
+if retry_authorized:
+    report["retry_prefix_comparison"] = retry_prefix_comparison
+    report["unchanged_previous_policy_result_files_verified"] = previous_files_verified
 write_json(ROOT / "reports/gate1/final_audit.json", report)
 print(json.dumps(report, indent=2))

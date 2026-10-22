@@ -1,16 +1,18 @@
 {
+  "archived_interrupted_attempt": "outputs/gate1/interrupted_attempts/larger_lag_seed43_attempt1",
   "completed": [
+    "clean_seed42",
     "clean_seed43",
+    "larger_lag_seed42",
+    "larger_lag_seed43",
     "mixed_small_lag_seed42",
-    "mixed_small_lag_seed43",
-    "larger_lag_seed42"
+    "mixed_small_lag_seed43"
   ],
-  "interrupted_run": "larger_lag_seed43",
-  "last_confirmed_update": 42400,
-  "note": "Six training attempts started, five completed; no retraining or partial-policy evaluation.",
+  "completed_training_runs": 6,
+  "formal_policy_episodes": 300,
   "phase": "done",
-  "policy_training_budget": 6,
-  "run": "larger_lag_seed43",
-  "state": "stopped_after_interruption",
-  "termination_cause": "unknown"
+  "retry_status": "outputs/gate1/retry_status.json",
+  "state": "all_condition_seed_policies_completed_after_authorized_retry",
+  "step_d_eligible_conditions": [],
+  "total_training_attempts": 7
 }

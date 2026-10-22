@@ -1,5 +1,6 @@
 {
-  "completed_training_runs": 5,
-  "evaluated_policy_runs": 5,
+  "completed_training_runs": 6,
+  "total_training_attempts_including_archives": 7,
+  "evaluated_policy_runs": 6,
   "step_d_eligible_conditions": []
 }

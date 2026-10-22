@@ -56,6 +56,9 @@ if evaluated:
     ax.set_xticks(xx, [f'{labels[r["training"]["condition"]]}\nseed {r["training"]["seed"]}' for _, r in evaluated], fontsize=9)
     ax.set(ylabel="Closed-loop success (%)", ylim=(-3, 110), title="50 frozen initial conditions per policy; Wilson 95% CI")
     ax.grid(axis="y", alpha=.2)
-    fig.supxlabel("Larger lag seed 43: interrupted; no policy evaluation", fontsize=9)
+    if result.get("retry_authorization"):
+        fig.supxlabel("Seed 43 replacement authorized; interrupted attempt retained", fontsize=9)
+    elif any(r["training"]["status"] != "completed" for r in result["runs"].values()):
+        fig.supxlabel("Larger lag seed 43: interrupted; no policy evaluation", fontsize=9)
     save_figure(fig, "closed_loop_success")
     plt.close(fig)

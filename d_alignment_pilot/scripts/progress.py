@@ -3,7 +3,8 @@ import json
 
 from d_alignment.io import ROOT, read_json
 
-path = ROOT / "outputs/gate1/pipeline_status.json"
+retry = ROOT / "outputs/gate1/retry_status.json"
+path = retry if retry.exists() else ROOT / "outputs/gate1/pipeline_status.json"
 state = read_json(path) if path.exists() else {"state": "not_started"}
 result = {k: state[k] for k in ("state", "phase", "run", "error") if k in state}
 name = state.get("run", "")

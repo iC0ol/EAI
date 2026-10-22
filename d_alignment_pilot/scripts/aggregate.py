@@ -15,6 +15,18 @@ expected_tests = read_json(ROOT / "data/manifests/eval_seeds.json")["seeds"]
 result = {"runs": {}, "comparisons": {}, "step_d_eligible_conditions": [],
     "bootstrap_seed": cfg["bootstrap_seed"], "bootstrap_replicates": cfg["bootstrap_replicates"],
     "ci_scope": "Initial-condition uncertainty conditional on the actually trained policies; two training seeds do not identify training-population variance."}
+authorization = ROOT / "data/manifests/retry_authorization.json"
+if authorization.exists():
+    auth = read_json(authorization)
+    archive = ROOT / auth["archived_attempt"]
+    for name, expected in auth["archived_files_sha256"].items():
+        assert sha256(archive / name) == expected, name
+    result["retry_authorization"] = auth
+    result["archived_attempts"] = [{"path": auth["archived_attempt"],
+        "training": read_json(archive / "run.json"),
+        "metrics_sha256": sha256(archive / "metrics.jsonl")}]
+else:
+    result["archived_attempts"] = []
 outcomes = {}
 for condition in conditions:
     for seed in seeds:
@@ -25,7 +37,8 @@ for condition in conditions:
         record = {"training": read_json(path / "run.json")}
         record["local_stdout"] = {}
         for phase in ("train", "eval"):
-            log = ROOT / "reports/gate1/logs" / f"{phase}_{name}.txt"
+            suffix = "_retry1" if authorization.exists() and name == result["retry_authorization"]["retry_run"] else ""
+            log = ROOT / "reports/gate1/logs" / f"{phase}_{name}{suffix}.txt"
             if log.exists():
                 record["local_stdout"][phase] = {"path": str(log), "sha256": sha256(log)}
         if (path / "evaluation_summary.json").exists():
@@ -91,4 +104,5 @@ with open(ROOT / "outputs/gate1/paired_outcomes.csv", "w", newline="") as f:
         writer.writerow([test_seed] + [int(outcomes[n][i]) for n in names])
 
 print(json.dumps({"completed_training_runs": sum(r["training"]["status"]=="completed" for r in result["runs"].values()),
+                  "total_training_attempts_including_archives": len(result["runs"]) + len(result["archived_attempts"]),
                   "evaluated_policy_runs": len(outcomes), "step_d_eligible_conditions": result["step_d_eligible_conditions"]}, indent=2))

@@ -1,6 +1,6 @@
 {
-  "observed_at_utc": "2026-10-22T16:44:48.960921+00:00",
-  "status": "passed_with_explicitly_incomplete_sixth_training",
+  "observed_at_utc": "2026-10-22T17:28:54.919652+00:00",
+  "status": "passed_six_policies_plus_archived_interruption",
   "frozen_files_and_manifests_verified": 29,
   "original_tracked_files_unchanged": 903,
   "spatial_intervention_pilot_tree": "3caa29cb1f2435aa9d3f27f45789f2f41b86953a",
@@ -36,10 +36,13 @@
       "local_trace_hashes_verified": 50
     },
     "larger_lag_seed43": {
-      "training_status": "interrupted",
-      "last_confirmed_updates": 42400,
-      "metrics_sha256": "b0dcd5ddea5d35491ce5c6e225c80827abfc94c872c13520e622defb1834cc5d",
-      "evaluated_episodes": 0
+      "training_status": "completed",
+      "last_confirmed_updates": 50000,
+      "metrics_sha256": "2803fdf3d4f0a344b0861aba5b9c0078e03e64e050b2673754e325889a0b6ae8",
+      "evaluated_episodes": 50,
+      "evaluation_sha256": "73f6a79dc60401bc9c3ac96e8d98c97aac342a202b4faf06e0125181bf445a83",
+      "checkpoint_sha256": "ed147d7581b0c9c8afadafb0e54860ab70159a9c51f16c0bc7ca46124b37958c",
+      "local_trace_hashes_verified": 50
     },
     "mixed_small_lag_seed42": {
       "training_status": "completed",
@@ -60,10 +63,20 @@
       "local_trace_hashes_verified": 50
     }
   },
-  "formal_policy_episodes": 250,
-  "formal_control_steps": 100000,
+  "formal_policy_episodes": 300,
+  "formal_control_steps": 120000,
+  "total_training_attempts": 7,
+  "archived_interrupted_attempts": 1,
+  "confirmed_optimizer_updates_across_attempts": 342400,
   "additional_optimizer_updates": 0,
   "additional_environment_steps": 0,
   "step_d_executed": false,
-  "scope": "Artifact consistency and local hash audit; not new training, rollouts, or lag estimation."
+  "scope": "Artifact consistency and local hash audit; not new training, rollouts, or lag estimation.",
+  "retry_prefix_comparison": {
+    "logged_updates_compared": 425,
+    "last_common_update": 42400,
+    "maximum_train_noise_mse_absolute_difference": 0.0,
+    "scope": "Scalar loss-log comparison only; does not assert identical unrecorded model tensors or cross-hardware determinism."
+  },
+  "unchanged_previous_policy_result_files_verified": 20
 }

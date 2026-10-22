@@ -51,7 +51,9 @@
 不计入闭环策略评估回合。明细见 `eval_reset_integrity.json`。
 
 结案时执行只读 `final_audit.py`：29 个冻结文件/manifest、三个派生动作文件、
-原始数据、初态、5 个 checkpoint 与 250 份本地完整轨迹的哈希及记录一致。
+原始数据、初态、6 个 checkpoint 与 300 份本地完整轨迹的哈希及记录一致。
 核对了正式每回合 400 步、CSV 成功/失败、初态 state hash 和 reset 容差；
-没有增加 optimizer update、环境步或 lag 估计。第六次训练的中断显式保留，
-不会因工件一致性审计通过而被计为完成。结果见 `final_audit.json`。
+该审计没有增加 optimizer update、环境步或 lag 估计。旧第六次尝试的中断
+在归档中显式保留；研究者授权的第七次尝试完成了同一条件/种子。旧尝试的
+哈希及其余五个策略的 20 个结果文件也核对与先前提交一致，总尝试数为 7，
+正式策略为 6，未把中断尝试计成完整策略。结果见 `final_audit.json`。

@@ -3,6 +3,9 @@
 工作目录为 `/home/asus/EAI`。每条训练命令只有在对应前置审计和 gate 通过后才能运行。
 本文件随实际执行更新；没有结果文件的训练不算完成。
 
+本文件保留首次交付和后续授权的时间顺序。最新状态为：研究者授权补跑后，
+七次尝试、六个完整条件/种子策略、300 个完整回合；旧中断尝试单独归档。
+
 ## 部署和源码审查（已执行）
 
 ```bash
@@ -155,3 +158,80 @@ HDF5、冻结初态、五个本地 checkpoint、250 个本地 NPZ 的 SHA256；�
 先前实际通过的 14 项数据/时序测试未因报告编辑而冒充重新执行。Step D 未达门槛，
 没有 lag 估计命令或 `lag_identification.md`。所有最终 checkpoint 路径/SHA 在
 对应 `outputs/gate1/*/run.json`；中断尝试不具备最终 checkpoint。
+
+## 2026-10-23：研究者授权补跑 Larger seed 43
+
+研究者随后明确要求重训 Larger-Lag seed 43 并重新判断、push。这次授权只增加
+一个尝试；总计七次，不改原六个条件/种子组合、冻结配置或 Step D 门槛。
+先归档旧尝试并提交授权，再开始 optimizer 更新：
+
+```bash
+bash d_alignment_pilot/scripts/run.sh scripts/prepare_authorized_retry.py > d_alignment_pilot/reports/gate1/logs/prepare_retry.txt 2>&1
+bash d_alignment_pilot/scripts/run.sh scripts/audit_interruption_usage.py > d_alignment_pilot/reports/gate1/logs/interruption_usage_audit.txt 2>&1
+git commit -m "Authorize one unchanged Larger-Lag seed 43 retry and preserve failed attempt"
+```
+
+授权和归档提交为 `52b1dcc`，在补跑前产生。新 manifest 保存原尝试文件哈希；
+29 个原冻结文件/manifest 未改。原训练器计数顶层 run 槽位；旧槽位被归档后的
+替换仅用于本次授权，不隐去中断尝试，资源汇总继续计入其耗时下界。
+
+本次实际用 Python `subprocess.Popen` 启动以下 supervisor，参数为
+`stdin=DEVNULL, start_new_session=True`，stdout/stderr 指向 `logs/retry_supervisor.txt`，
+初始 PID 3132326。它不依赖交互工具会话持续存活，也不自动重试：
+
+```bash
+bash d_alignment_pilot/scripts/run.sh scripts/run_authorized_retry.py
+```
+
+supervisor 实际顺序调用同一冻结实现：
+
+```bash
+bash d_alignment_pilot/scripts/run.sh -m d_alignment.train --condition larger_lag --seed 43
+```
+
+训练完整完成后才启动固定 50 初态的评估；实际是否完成以 `retry_status.json`
+和 run 工件为准。训练 stdout 为本地 `logs/train_larger_lag_seed43_retry1.txt`，
+完整 loss 为新 run 的 `metrics.jsonl`。旧 metrics/run 保存在
+`outputs/gate1/interrupted_attempts/larger_lag_seed43_attempt1/`，未覆盖。
+
+额度检查读取本任务历史 JSONL 的 token_count 和 task_complete 错误字段，
+只导出最少的用量和错误事实，不导出原始私有会话或账户 ID。历史明确返回
+`usage_limit_exceeded`；当前额度允许工作，未兑换重置券。另实际只读执行：
+
+```bash
+journalctl -k --since '2026-10-22 23:15:00' --until '2026-10-22 23:35:00' --no-pager -o short-iso
+```
+
+返回 `-- No entries --`，不足以建立或排除 OOM/驱动问题。训练进程的直接
+终止原因仍未知，智能体轮次因额度耗尽结束则有明确日志证据。
+
+补跑实际完成 50,000 更新，训练子进程退出码为 0。supervisor 随后实际调用：
+
+```bash
+bash d_alignment_pilot/scripts/run.sh -m d_alignment.evaluate --condition larger_lag --seed 43
+```
+
+评估 stdout 为本地 `logs/eval_larger_lag_seed43_retry1.txt`；成功/失败和完整
+回合耗时在当前 run 的 `evaluation.jsonl`。`retry_status.json` 保存训练与评估
+两个子进程的实际退出码。旧尝试没有正式评估，不能将其另计为一个测试策略。
+
+训练和评估均实际完成且退出码为 0。补跑最终为 23/50（46%）；运行阶段为
+2026-10-23 00:55:49–01:25:15 +08:00。补跑 GPU 占用墙钟 0.330972 h，
+评估仿真及 reset CPU 墙钟 336.160 s、推理墙钟 228.842 s。
+总计 342,400 次已确认 optimizer updates（含旧中断尝试），没有第八次尝试。
+
+完成后实际执行以下纯分析和核验命令，重写当前报告与统计，未增加环境步或训练：
+
+```bash
+bash d_alignment_pilot/scripts/run.sh scripts/aggregate.py > d_alignment_pilot/reports/gate1/logs/aggregate.txt 2>&1
+bash d_alignment_pilot/scripts/run.sh scripts/write_baseline_report.py > d_alignment_pilot/reports/gate1/logs/baseline_report.txt 2>&1
+bash d_alignment_pilot/scripts/run.sh scripts/write_go_no_go.py > d_alignment_pilot/reports/gate1/logs/go_no_go_report.txt 2>&1
+bash d_alignment_pilot/scripts/run.sh scripts/plot_results.py > d_alignment_pilot/reports/gate1/logs/plot_results.txt 2>&1
+bash d_alignment_pilot/scripts/run.sh scripts/final_audit.py > d_alignment_pilot/reports/gate1/logs/final_audit.txt 2>&1
+git diff --check
+```
+
+当前 final audit 核验 6 个 checkpoint、300 份轨迹、原有 903 个文件、29 个
+原冻结文件/manifest、其余五个策略的 20 个结果文件和旧中断文件哈希。
+新旧尝试截至 42,400 更新的 425 条训练 loss 标量记录逐值一致；这不等同于
+未保存 tensor 的逐 bit 证明。Step D 条件门槛仍未通过，因此未执行 lag 估计。

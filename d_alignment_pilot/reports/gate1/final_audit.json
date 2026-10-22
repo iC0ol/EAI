@@ -1,13 +1,21 @@
 {
   "additional_environment_steps": 0,
   "additional_optimizer_updates": 0,
+  "archived_interrupted_attempts": 1,
+  "confirmed_optimizer_updates_across_attempts": 342400,
   "derived_action_files_verified": 3,
   "eval_initial_conditions_sha256": "8376d0387cd8ef952016ac884ed768dbe29a2b40a792efa616db1a8cdb56d919",
-  "formal_control_steps": 100000,
-  "formal_policy_episodes": 250,
+  "formal_control_steps": 120000,
+  "formal_policy_episodes": 300,
   "frozen_files_and_manifests_verified": 29,
-  "observed_at_utc": "2026-10-22T16:44:48.960921+00:00",
+  "observed_at_utc": "2026-10-22T17:28:54.919652+00:00",
   "original_tracked_files_unchanged": 903,
+  "retry_prefix_comparison": {
+    "last_common_update": 42400,
+    "logged_updates_compared": 425,
+    "maximum_train_noise_mse_absolute_difference": 0.0,
+    "scope": "Scalar loss-log comparison only; does not assert identical unrecorded model tensors or cross-hardware determinism."
+  },
   "runs": {
     "clean_seed42": {
       "checkpoint_sha256": "1b4cdec2acc38977c6d3be0ab651dad595a67ccdee97be5d41b2ebebd230bae9",
@@ -37,10 +45,13 @@
       "training_status": "completed"
     },
     "larger_lag_seed43": {
-      "evaluated_episodes": 0,
-      "last_confirmed_updates": 42400,
-      "metrics_sha256": "b0dcd5ddea5d35491ce5c6e225c80827abfc94c872c13520e622defb1834cc5d",
-      "training_status": "interrupted"
+      "checkpoint_sha256": "ed147d7581b0c9c8afadafb0e54860ab70159a9c51f16c0bc7ca46124b37958c",
+      "evaluated_episodes": 50,
+      "evaluation_sha256": "73f6a79dc60401bc9c3ac96e8d98c97aac342a202b4faf06e0125181bf445a83",
+      "last_confirmed_updates": 50000,
+      "local_trace_hashes_verified": 50,
+      "metrics_sha256": "2803fdf3d4f0a344b0861aba5b9c0078e03e64e050b2673754e325889a0b6ae8",
+      "training_status": "completed"
     },
     "mixed_small_lag_seed42": {
       "checkpoint_sha256": "045d993a4c8f6141287bcc1daeb769c88d107d0143e4fd9e35709d81973ef641",
@@ -64,6 +75,8 @@
   "scope": "Artifact consistency and local hash audit; not new training, rollouts, or lag estimation.",
   "source_hdf5_sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951",
   "spatial_intervention_pilot_tree": "3caa29cb1f2435aa9d3f27f45789f2f41b86953a",
-  "status": "passed_with_explicitly_incomplete_sixth_training",
-  "step_d_executed": false
+  "status": "passed_six_policies_plus_archived_interruption",
+  "step_d_executed": false,
+  "total_training_attempts": 7,
+  "unchanged_previous_policy_result_files_verified": 20
 }

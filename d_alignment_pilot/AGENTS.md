@@ -23,3 +23,9 @@ Run offline simple lag identification only after reproducible material closed-lo
 degradation. Distinguish deployment failure, insufficient statistical evidence,
 and scientific No-Go. Preserve actual errors and executed commands. Never invent
 results. Stop after Gate 1 delivery and push without rewriting main or force push.
+
+On 2026-10-23 the researcher explicitly authorized one replacement training of
+Larger-Lag seed 43 and an updated push. Preserve the interrupted attempt in
+outputs/gate1/interrupted_attempts/; count seven total attempts, with at most six
+completed condition/seed policies. Keep every frozen scientific input unchanged.
+See data/manifests/retry_authorization.json. No automatic eighth attempt.

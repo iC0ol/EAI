@@ -46,5 +46,12 @@ report = {
     "official_documentation": "https://learn.chatgpt.com/docs/pricing#what-happens-when-you-hit-usage-limits",
     "documentation_scope": "Current docs allow continuing active turns subject to fair use; they do not diagnose this historical local-process exit.",
 }
+kernel = ROOT / ".cache/kernel_interruption_window.txt"
+if kernel.exists():
+    report["kernel_journal_check"] = {
+        "window_local": "2026-10-22 23:15:00 to 23:35:00 Asia/Shanghai",
+        "result": kernel.read_text().strip() if kernel.read_text().strip() == "-- No entries --" else "See local diagnostic; raw system journal is not exported.",
+        "scope": "No retained entries were returned. This cannot establish or exclude OOM/driver faults.",
+    }
 write_json(ROOT / "reports/gate1/interruption_diagnosis.json", report)
 print(json.dumps(report, indent=2))
