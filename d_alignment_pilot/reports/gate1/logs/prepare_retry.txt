@@ -1,0 +1,2 @@
+outputs/gate1/interrupted_attempts/larger_lag_seed43_attempt1
+Recorded human-authorized attempt 7; all 29 frozen inputs unchanged
