@@ -1,0 +1,1 @@
+Verified all frozen action files without starting a simulator

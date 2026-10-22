@@ -11,11 +11,15 @@
 
 ```bash
 bash d_alignment_pilot/scripts/bootstrap.sh > d_alignment_pilot/reports/gate1/logs/bootstrap_reproduction.txt 2>&1
-bash d_alignment_pilot/scripts/run.sh scripts/audit_data.py
-bash d_alignment_pilot/scripts/run.sh -m d_alignment.data
+bash d_alignment_pilot/scripts/run.sh scripts/materialize_frozen_data.py
 bash d_alignment_pilot/scripts/run.sh -m pytest tests -q --junitxml=reports/gate1/tests.xml
-bash d_alignment_pilot/scripts/run.sh scripts/freeze_eval.py
 ```
+
+Git 中已有冻结 manifest，`materialize_frozen_data.py` 从记录重建被忽略的 HDF5，
+不会重新抽样 delta、episode 或测试初态，并验证原始 SHA256。原始预登记创建
+命令（`audit_data.py`、`d_alignment.data`、`freeze_eval.py`）见执行记录，不应在
+已有 manifest 上重新抽样。XML 内含绝对资产路径，逐 byte 复现需沿用记录中的
+`/home/asus/EAI` 位置与源码布局；跨位置复现应另做路径规范化审计，不能冒充原哈希。
 
 冻结文件和已完成结果不可覆盖。重新执行完整实验应先由研究者决定如何保留已有
 结果，不能直接删除重跑。训练与最终测试命令、实际状态和错误见

@@ -15,3 +15,5 @@ __pycache__/
 *.ckpt
 *.mp4
 *.egg-info/
+reports/gate1/logs/train_*.txt
+reports/gate1/logs/eval_*.txt

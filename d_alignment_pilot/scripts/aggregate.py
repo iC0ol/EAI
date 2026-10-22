@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 from scipy.stats import binomtest
 
-from d_alignment.io import ROOT, read_json, write_json
+from d_alignment.io import ROOT, read_json, write_json, sha256
 
 cfg = read_json(ROOT / "configs/gate1.json")
 conditions = ["clean", "mixed_small_lag", "larger_lag"]
@@ -23,6 +23,11 @@ for condition in conditions:
         if not (path / "run.json").exists():
             continue
         record = {"training": read_json(path / "run.json")}
+        record["local_stdout"] = {}
+        for phase in ("train", "eval"):
+            log = ROOT / "reports/gate1/logs" / f"{phase}_{name}.txt"
+            if log.exists():
+                record["local_stdout"][phase] = {"path": str(log), "sha256": sha256(log)}
         if (path / "evaluation_summary.json").exists():
             rows = [json.loads(line) for line in (path / "evaluation.jsonl").read_text().splitlines()]
             assert sorted(r["test_seed"] for r in rows) == expected_tests

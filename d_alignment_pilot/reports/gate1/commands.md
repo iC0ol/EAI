@@ -81,4 +81,12 @@ bash d_alignment_pilot/scripts/run.sh -m d_alignment.train --condition clean --s
 bash d_alignment_pilot/scripts/run.sh scripts/validate_resets.py > d_alignment_pilot/reports/gate1/logs/validate_resets.txt 2>&1
 ```
 
-其余策略训练和闭环评估命令只在实际执行后列出。
+```bash
+bash d_alignment_pilot/scripts/run.sh -m d_alignment.evaluate --condition clean --seed 42 > d_alignment_pilot/reports/gate1/logs/eval_clean_seed42.txt 2>&1
+bash d_alignment_pilot/scripts/run.sh scripts/clean_gate.py > d_alignment_pilot/reports/gate1/logs/clean_gate_seed42.txt 2>&1
+bash d_alignment_pilot/scripts/run.sh scripts/materialize_frozen_data.py --verify-reconstruction --actions-only > d_alignment_pilot/reports/gate1/logs/reconstruction_actions.txt 2>&1
+```
+
+策略 stdout 与完整 metrics/evaluation JSONL 重复的部分只留本地；Git 保存完整
+`metrics.jsonl`、逐初态 `evaluation.jsonl` 与 stdout 路径/SHA。若发生错误，另保留
+不重复的大致错误栈。其余策略训练和闭环评估命令只在实际执行后列出。

@@ -1,0 +1,21 @@
+{
+  "all_clean_seeds_evaluated": false,
+  "checks": [
+    {
+      "episodes": 50,
+      "pass": true,
+      "reason": "usable_success_range",
+      "seed": 42,
+      "successes": 22
+    }
+  ],
+  "clean_seeds_evaluated": [
+    42
+  ],
+  "pass": true,
+  "rule": {
+    "ceiling_successes_at_least": 48,
+    "near_failure_successes_at_most": 5,
+    "required_episodes": 50
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "condition": "clean",
+  "config_sha256": "aaaecb915ca53e2bbd54f38fc5e91fe415bc4583d069ef2cacefebe1e1fae824",
+  "episodes": 50,
+  "inference_wall_seconds": 232.37106235790998,
+  "initial_conditions_sha256": "8376d0387cd8ef952016ac884ed768dbe29a2b40a792efa616db1a8cdb56d919",
+  "simulation_cpu_wall_seconds": 330.1901033085305,
+  "success_rate": 0.44,
+  "successes": 22,
+  "total_wall_seconds": 566.9802648089826,
+  "train_seed": 42
+}
