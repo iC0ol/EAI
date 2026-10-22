@@ -1,0 +1,5 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /home/asus/EAI/d_alignment_pilot/external/robosuite-51cc01785bab80ffeed20da15e67d7dd4140e76a/robosuite/scripts/setup_macros.py (macros.py:55)
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+{'python': '3.9.13 (main, Aug 25 2022, 23:26:10) \n[GCC 11.2.0]', 'python_prefix': '/home/asus/EAI/d_alignment_pilot/.venv', 'torch': '2.2.2+cu121', 'torch_cuda': '12.1', 'numpy': '1.26.4', 'h5py': '3.11.0', 'mujoco': '3.2.3', 'robomimic': '0.4.0', 'robosuite': '1.5.1', 'source_paths': {'robomimic': '/home/asus/EAI/d_alignment_pilot/external/robomimic-7c66e7a41b5d9dcc905b1a68346bfee1b49b79c9/robomimic/__init__.py', 'robosuite': '/home/asus/EAI/d_alignment_pilot/external/robosuite-51cc01785bab80ffeed20da15e67d7dd4140e76a/robosuite/__init__.py', 'diffusion_policy': None}}

@@ -38,6 +38,9 @@
 完整 transitive pins 见 `requirements.lock`。框架通过固定源码路径导入，并未以
 可浮动的 pip 最新版本替代。`pip check` 实际通过，记录见 `logs/pip_check.txt`。
 PyTorch 自带 cu121 用户态库安装在独立 venv 中，不是系统 CUDA 升级。
+实际模块路径与运行时版本另存 `runtime_versions.json`。训练启用 TF32、关闭
+cuDNN benchmark，没有强制 deterministic algorithms；固定种子与哈希用于追溯，
+不保证跨硬件或驱动的逐 bit checkpoint 重现。
 
 审查当前官方仓库及 v0.5 release 后，发现
 [v0.5 lang_utils](https://github.com/ARISE-Initiative/robomimic/blob/ae5799f0fae05c4559ee1f9645b0f77eb5251929/robomimic/utils/lang_utils.py)

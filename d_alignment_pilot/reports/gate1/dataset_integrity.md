@@ -46,3 +46,6 @@
 
 原始 HDF5、派生 HDF5、50 个含 XML 的初态均仅存本地且被 Git 忽略。Git 仅保存
 小型 manifest、测试、代码、配置和统计证据。checkpoint 同样仅限本地路径和哈希。
+另外执行 `validate_resets.py`，50 个互异初态经正式评估 reset_to 路径逐一复核，
+所选状态分量均在 1e−5 容差内。该检查为 0 策略 episodes、0 action steps，
+不计入闭环策略评估回合。明细见 `eval_reset_integrity.json`。

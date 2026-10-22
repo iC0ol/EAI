@@ -1,0 +1,22 @@
+{
+  "python": "3.9.13 (main, Aug 25 2022, 23:26:10) \n[GCC 11.2.0]",
+  "python_prefix": "/home/asus/EAI/d_alignment_pilot/.venv",
+  "torch": "2.2.2+cu121",
+  "torch_cuda": "12.1",
+  "numpy": "1.26.4",
+  "h5py": "3.11.0",
+  "mujoco": "3.2.3",
+  "robomimic": "0.4.0",
+  "robosuite": "1.5.1",
+  "source_paths": {
+    "robomimic": "/home/asus/EAI/d_alignment_pilot/external/robomimic-7c66e7a41b5d9dcc905b1a68346bfee1b49b79c9/robomimic/__init__.py",
+    "robosuite": "/home/asus/EAI/d_alignment_pilot/external/robosuite-51cc01785bab80ffeed20da15e67d7dd4140e76a/robosuite/__init__.py",
+    "diffusion_policy": null
+  },
+  "diffusion_policy_network_source": "/home/asus/EAI/d_alignment_pilot/external/diffusion_policy-5ba07ac6661db573af695b419a7947ecb704690f/diffusion_policy/model/diffusion/conditional_unet1d.py",
+  "training_backend_flags": {
+    "cudnn_benchmark": false,
+    "allow_tf32": true,
+    "strict_deterministic_algorithms": false
+  }
+}

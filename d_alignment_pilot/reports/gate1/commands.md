@@ -72,3 +72,13 @@ bash d_alignment_pilot/scripts/run.sh scripts/freeze_protocol.py
 干净复现时 `gate1.json` 已包含最终 16 维选择，因此不需要运行一次性的
 `finalize_observation_selection.py`；该脚本只用于本次审计过程的可追溯修订。
 先审计、准备数据、测试、冻结初态与协议，再训练。已存在的冻结文件不可覆盖。
+
+训练前预登记提交：`fb74d1b0b16387feb127101fce67eddeec81ed40`。
+冻结后只追加分析和报告代码，不改变模型、加载器、配置或协议。
+
+```bash
+bash d_alignment_pilot/scripts/run.sh -m d_alignment.train --condition clean --seed 42 > d_alignment_pilot/reports/gate1/logs/train_clean_seed42.txt 2>&1
+bash d_alignment_pilot/scripts/run.sh scripts/validate_resets.py > d_alignment_pilot/reports/gate1/logs/validate_resets.txt 2>&1
+```
+
+其余策略训练和闭环评估命令只在实际执行后列出。
