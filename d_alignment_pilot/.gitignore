@@ -1,0 +1,17 @@
+.venv/
+.cache/
+external/
+data/raw/
+data/derived/
+outputs/gate1/checkpoints/
+outputs/gate1/trajectories/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.hdf5
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.mp4
+*.egg-info/

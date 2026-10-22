@@ -1,0 +1,3 @@
+Looking in indexes: https://mirrors.aliyun.com/pypi/simple
+Collecting numpy==1.26.4 (from -r d_alignment_pilot/requirements.in (line 1))
+  Downloading https://mirrors.aliyun.com/pypi/packages/54/30/c2a907b9443cf42b90c17ad10c1e8fa801975f01cb9764f3f8eb8aea638b/numpy-1.26.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)

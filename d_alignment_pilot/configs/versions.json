@@ -1,0 +1,6 @@
+{
+  "robomimic": {"repository": "https://github.com/ARISE-Initiative/robomimic", "version": "0.4.0", "commit": "7c66e7a41b5d9dcc905b1a68346bfee1b49b79c9", "head_at_audit": "d309eaecc18acf4152a830a895a6984b8ac71b05", "v0.5_audited_commit": "ae5799f0fae05c4559ee1f9645b0f77eb5251929", "selection_reason": "v0.5 lang_utils downloads CLIP weights at import; v0.4 supports robosuite 1.5 without that side effect"},
+  "robosuite": {"repository": "https://github.com/ARISE-Initiative/robosuite", "version": "1.5.1", "commit": "51cc01785bab80ffeed20da15e67d7dd4140e76a", "head_at_audit": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c"},
+  "diffusion_policy": {"repository": "https://github.com/real-stanford/diffusion_policy", "version": "official main snapshot", "commit": "5ba07ac6661db573af695b419a7947ecb704690f"},
+  "dataset": {"repository": "https://huggingface.co/datasets/robomimic/robomimic_datasets", "revision": "74fa018461f479cd9fd15b924a16103012096203", "file": "v1.5/square/ph/low_dim_v15.hdf5", "sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951"}
+}

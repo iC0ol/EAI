@@ -1,0 +1,2 @@
+Initial /usr/bin/python3 -m venv failed: ensurepip unavailable; no apt/sudo used. Created isolated venv using existing Anaconda Python 3.9.13 -m venv --clear instead.
+Default configured Aliyun pip mirror stalled on numpy download; stopped that task-owned pip process and retrying the identical pins using official https://pypi.org/simple.

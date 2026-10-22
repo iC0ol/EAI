@@ -1,0 +1,11 @@
+{
+  "cuda": "12.1",
+  "forward_backward_seconds_including_cold_start": 0.4395737729500979,
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "optimizer_updates": 0,
+  "parameters": 16553233,
+  "peak_allocated_bytes": 490484736,
+  "peak_reserved_bytes": 671088640,
+  "torch": "2.2.2+cu121",
+  "untrained_noise_mse": 1.1143187284469604
+}

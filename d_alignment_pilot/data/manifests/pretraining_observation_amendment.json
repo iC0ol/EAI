@@ -1,0 +1,12 @@
+{
+  "evidence": "reports/gate1/observation_cache_summary.json",
+  "final_config_sha256": "aaaecb915ca53e2bbd54f38fc5e91fe415bc4583d069ef2cacefebe1e1fae824",
+  "optimizer_updates_before_amendment": 0,
+  "previous_config_sha256": "cb6969ef3d063e2f451bd4e7999bf1522a9e9e627126b9652a22754357454be8",
+  "reason": "raw absolute object pose plus proprioception; exclude cache-dependent relative object fields before training, without changing any selected value",
+  "unchanged_action_file_sha256": {
+    "clean": "0b639d054b21c3dadeffaee386b93615969c8c7bf7edb489a1b2abff4e2c8bb3",
+    "larger_lag": "f57c4239919871cd16d030fcf58392fba93ba7fa4c7bf363a0df5d45ccf7d1fa",
+    "mixed_small_lag": "92fe5215e8c3fce81a178bb19347580d6ba4e859da00356d552509696f9bf078"
+  }
+}

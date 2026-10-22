@@ -1,0 +1,272 @@
+Collecting numpy==1.26.4 (from -r d_alignment_pilot/requirements.in (line 1))
+  Downloading numpy-1.26.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+Collecting h5py==3.11.0 (from -r d_alignment_pilot/requirements.in (line 2))
+  Downloading h5py-3.11.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.5 kB)
+Collecting scipy==1.13.1 (from -r d_alignment_pilot/requirements.in (line 3))
+  Downloading scipy-1.13.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+Collecting numba==0.60.0 (from -r d_alignment_pilot/requirements.in (line 4))
+  Downloading numba-0.60.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+Collecting mujoco==3.2.3 (from -r d_alignment_pilot/requirements.in (line 5))
+  Downloading mujoco-3.2.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (44 kB)
+Collecting mink==0.0.5 (from -r d_alignment_pilot/requirements.in (line 6))
+  Downloading mink-0.0.5-py3-none-any.whl.metadata (5.5 kB)
+Collecting opencv-python-headless==4.10.0.84 (from -r d_alignment_pilot/requirements.in (line 7))
+  Downloading opencv_python_headless-4.10.0.84-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting pynput==1.7.7 (from -r d_alignment_pilot/requirements.in (line 8))
+  Downloading pynput-1.7.7-py2.py3-none-any.whl.metadata (31 kB)
+Collecting termcolor==2.4.0 (from -r d_alignment_pilot/requirements.in (line 9))
+  Downloading termcolor-2.4.0-py3-none-any.whl.metadata (6.1 kB)
+Collecting tqdm==4.66.5 (from -r d_alignment_pilot/requirements.in (line 10))
+  Downloading tqdm-4.66.5-py3-none-any.whl.metadata (57 kB)
+Collecting pytest==8.3.5 (from -r d_alignment_pilot/requirements.in (line 11))
+  Downloading pytest-8.3.5-py3-none-any.whl.metadata (7.6 kB)
+Collecting psutil==6.0.0 (from -r d_alignment_pilot/requirements.in (line 12))
+  Downloading psutil-6.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (21 kB)
+Collecting einops==0.8.0 (from -r d_alignment_pilot/requirements.in (line 13))
+  Downloading einops-0.8.0-py3-none-any.whl.metadata (12 kB)
+Collecting diffusers==0.11.1 (from -r d_alignment_pilot/requirements.in (line 14))
+  Downloading diffusers-0.11.1-py3-none-any.whl.metadata (29 kB)
+Collecting huggingface-hub==0.23.4 (from -r d_alignment_pilot/requirements.in (line 15))
+  Downloading huggingface_hub-0.23.4-py3-none-any.whl.metadata (12 kB)
+Collecting zarr==2.18.2 (from -r d_alignment_pilot/requirements.in (line 16))
+  Downloading zarr-2.18.2-py3-none-any.whl.metadata (5.7 kB)
+Collecting numcodecs==0.12.1 (from -r d_alignment_pilot/requirements.in (line 17))
+  Downloading numcodecs-0.12.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+Collecting dill==0.3.8 (from -r d_alignment_pilot/requirements.in (line 18))
+  Downloading dill-0.3.8-py3-none-any.whl.metadata (10 kB)
+Collecting hydra-core==1.3.2 (from -r d_alignment_pilot/requirements.in (line 19))
+  Downloading hydra_core-1.3.2-py3-none-any.whl.metadata (5.5 kB)
+Collecting imageio==2.35.1 (from -r d_alignment_pilot/requirements.in (line 20))
+  Downloading imageio-2.35.1-py3-none-any.whl.metadata (4.9 kB)
+Collecting imageio-ffmpeg==0.5.1 (from -r d_alignment_pilot/requirements.in (line 21))
+  Downloading imageio_ffmpeg-0.5.1-py3-none-manylinux2010_x86_64.whl.metadata (1.6 kB)
+Collecting matplotlib==3.9.2 (from -r d_alignment_pilot/requirements.in (line 22))
+  Downloading matplotlib-3.9.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting tensorboard==2.18.0 (from -r d_alignment_pilot/requirements.in (line 23))
+  Downloading tensorboard-2.18.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting tensorboardX==2.6.2.2 (from -r d_alignment_pilot/requirements.in (line 24))
+  Downloading tensorboardX-2.6.2.2-py2.py3-none-any.whl.metadata (5.8 kB)
+Collecting egl-probe==1.0.2 (from -r d_alignment_pilot/requirements.in (line 25))
+  Downloading egl_probe-1.0.2.tar.gz (217 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting llvmlite<0.44,>=0.43.0dev0 (from numba==0.60.0->-r d_alignment_pilot/requirements.in (line 4))
+  Downloading llvmlite-0.43.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.8 kB)
+Collecting absl-py (from mujoco==3.2.3->-r d_alignment_pilot/requirements.in (line 5))
+  Downloading absl_py-2.3.1-py3-none-any.whl.metadata (3.3 kB)
+Collecting etils[epath] (from mujoco==3.2.3->-r d_alignment_pilot/requirements.in (line 5))
+  Downloading etils-1.5.2-py3-none-any.whl.metadata (6.3 kB)
+Collecting glfw (from mujoco==3.2.3->-r d_alignment_pilot/requirements.in (line 5))
+  Downloading glfw-2.11.0-py2.py3-none-manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting pyopengl (from mujoco==3.2.3->-r d_alignment_pilot/requirements.in (line 5))
+  Downloading pyopengl-3.1.10-py3-none-any.whl.metadata (3.3 kB)
+Collecting qpsolvers>=4.3.1 (from qpsolvers[quadprog]>=4.3.1->mink==0.0.5->-r d_alignment_pilot/requirements.in (line 6))
+  Downloading qpsolvers-4.8.2-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: typing_extensions in ./d_alignment_pilot/.venv/lib/python3.9/site-packages (from mink==0.0.5->-r d_alignment_pilot/requirements.in (line 6)) (4.16.0)
+Collecting six (from pynput==1.7.7->-r d_alignment_pilot/requirements.in (line 8))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting evdev>=1.3 (from pynput==1.7.7->-r d_alignment_pilot/requirements.in (line 8))
+  Downloading evdev-1.9.3.tar.gz (32 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting python-xlib>=0.17 (from pynput==1.7.7->-r d_alignment_pilot/requirements.in (line 8))
+  Downloading python_xlib-0.33-py2.py3-none-any.whl.metadata (6.2 kB)
+Collecting exceptiongroup>=1.0.0rc8 (from pytest==8.3.5->-r d_alignment_pilot/requirements.in (line 11))
+  Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+Collecting iniconfig (from pytest==8.3.5->-r d_alignment_pilot/requirements.in (line 11))
+  Downloading iniconfig-2.1.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting packaging (from pytest==8.3.5->-r d_alignment_pilot/requirements.in (line 11))
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pluggy<2,>=1.5 (from pytest==8.3.5->-r d_alignment_pilot/requirements.in (line 11))
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting tomli>=1 (from pytest==8.3.5->-r d_alignment_pilot/requirements.in (line 11))
+  Downloading tomli-2.5.0-py3-none-any.whl.metadata (10 kB)
+Collecting importlib-metadata (from diffusers==0.11.1->-r d_alignment_pilot/requirements.in (line 14))
+  Downloading importlib_metadata-8.7.1-py3-none-any.whl.metadata (4.7 kB)
+Requirement already satisfied: filelock in ./d_alignment_pilot/.venv/lib/python3.9/site-packages (from diffusers==0.11.1->-r d_alignment_pilot/requirements.in (line 14)) (3.19.1)
+Collecting regex!=2019.12.17 (from diffusers==0.11.1->-r d_alignment_pilot/requirements.in (line 14))
+  Downloading regex-2026.1.15-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting requests (from diffusers==0.11.1->-r d_alignment_pilot/requirements.in (line 14))
+  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Requirement already satisfied: Pillow in ./d_alignment_pilot/.venv/lib/python3.9/site-packages (from diffusers==0.11.1->-r d_alignment_pilot/requirements.in (line 14)) (11.3.0)
+Requirement already satisfied: fsspec>=2023.5.0 in ./d_alignment_pilot/.venv/lib/python3.9/site-packages (from huggingface-hub==0.23.4->-r d_alignment_pilot/requirements.in (line 15)) (2025.10.0)
+Collecting pyyaml>=5.1 (from huggingface-hub==0.23.4->-r d_alignment_pilot/requirements.in (line 15))
+  Downloading pyyaml-6.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting asciitree (from zarr==2.18.2->-r d_alignment_pilot/requirements.in (line 16))
+  Downloading asciitree-0.3.3.tar.gz (4.0 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting fasteners (from zarr==2.18.2->-r d_alignment_pilot/requirements.in (line 16))
+  Downloading fasteners-0.20-py3-none-any.whl.metadata (4.8 kB)
+Collecting omegaconf<2.4,>=2.2 (from hydra-core==1.3.2->-r d_alignment_pilot/requirements.in (line 19))
+  Downloading omegaconf-2.3.1-py3-none-any.whl.metadata (4.5 kB)
+Collecting antlr4-python3-runtime==4.9.* (from hydra-core==1.3.2->-r d_alignment_pilot/requirements.in (line 19))
+  Downloading antlr4-python3-runtime-4.9.3.tar.gz (117 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: setuptools in ./d_alignment_pilot/.venv/lib/python3.9/site-packages (from imageio-ffmpeg==0.5.1->-r d_alignment_pilot/requirements.in (line 21)) (75.8.0)
+Collecting contourpy>=1.0.1 (from matplotlib==3.9.2->-r d_alignment_pilot/requirements.in (line 22))
+  Downloading contourpy-1.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.4 kB)
+Collecting cycler>=0.10 (from matplotlib==3.9.2->-r d_alignment_pilot/requirements.in (line 22))
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib==3.9.2->-r d_alignment_pilot/requirements.in (line 22))
+  Downloading fonttools-4.60.2-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (113 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib==3.9.2->-r d_alignment_pilot/requirements.in (line 22))
+  Downloading kiwisolver-1.4.7-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.3 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib==3.9.2->-r d_alignment_pilot/requirements.in (line 22))
+  Downloading pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting python-dateutil>=2.7 (from matplotlib==3.9.2->-r d_alignment_pilot/requirements.in (line 22))
+  Downloading python_dateutil-3.0.0-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting importlib-resources>=3.2.0 (from matplotlib==3.9.2->-r d_alignment_pilot/requirements.in (line 22))
+  Downloading importlib_resources-6.5.2-py3-none-any.whl.metadata (3.9 kB)
+Collecting grpcio>=1.48.2 (from tensorboard==2.18.0->-r d_alignment_pilot/requirements.in (line 23))
+  Downloading grpcio-1.80.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.8 kB)
+Collecting markdown>=2.6.8 (from tensorboard==2.18.0->-r d_alignment_pilot/requirements.in (line 23))
+  Downloading markdown-3.9-py3-none-any.whl.metadata (5.1 kB)
+Collecting protobuf!=4.24.0,>=3.19.6 (from tensorboard==2.18.0->-r d_alignment_pilot/requirements.in (line 23))
+  Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard==2.18.0->-r d_alignment_pilot/requirements.in (line 23))
+  Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl.metadata (1.1 kB)
+Collecting werkzeug>=1.0.1 (from tensorboard==2.18.0->-r d_alignment_pilot/requirements.in (line 23))
+  Downloading werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+Collecting zipp>=3.1.0 (from importlib-resources>=3.2.0->matplotlib==3.9.2->-r d_alignment_pilot/requirements.in (line 22))
+  Downloading zipp-3.23.1-py3-none-any.whl.metadata (3.6 kB)
+Collecting tzdata (from python-dateutil>=2.7->matplotlib==3.9.2->-r d_alignment_pilot/requirements.in (line 22))
+  Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting quadprog>=0.1.11 (from qpsolvers[quadprog]>=4.3.1->mink==0.0.5->-r d_alignment_pilot/requirements.in (line 6))
+  Downloading quadprog-0.1.13-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.2 kB)
+Requirement already satisfied: markupsafe>=2.1.1 in ./d_alignment_pilot/.venv/lib/python3.9/site-packages (from werkzeug>=1.0.1->tensorboard==2.18.0->-r d_alignment_pilot/requirements.in (line 23)) (3.0.2)
+Collecting charset_normalizer<4,>=2 (from requests->diffusers==0.11.1->-r d_alignment_pilot/requirements.in (line 14))
+  Downloading charset_normalizer-3.5.2-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+Collecting idna<4,>=2.5 (from requests->diffusers==0.11.1->-r d_alignment_pilot/requirements.in (line 14))
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->diffusers==0.11.1->-r d_alignment_pilot/requirements.in (line 14))
+  Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2017.4.17 (from requests->diffusers==0.11.1->-r d_alignment_pilot/requirements.in (line 14))
+  Downloading certifi-2026.10.19-py3-none-any.whl.metadata (2.5 kB)
+Downloading numpy-1.26.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 6.1 MB/s  0:00:03
+Downloading h5py-3.11.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 3.6 MB/s  0:00:01
+Downloading scipy-1.13.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.6/38.6 MB 4.1 MB/s  0:00:10
+Downloading numba-0.60.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.7/3.7 MB 3.4 MB/s  0:00:01
+Downloading mujoco-3.2.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.1/6.1 MB 4.2 MB/s  0:00:01
+Downloading mink-0.0.5-py3-none-any.whl (896 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 896.8/896.8 kB 3.7 MB/s  0:00:00
+Downloading opencv_python_headless-4.10.0.84-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (49.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.9/49.9 MB 4.6 MB/s  0:00:11
+Downloading pynput-1.7.7-py2.py3-none-any.whl (90 kB)
+Downloading termcolor-2.4.0-py3-none-any.whl (7.7 kB)
+Downloading tqdm-4.66.5-py3-none-any.whl (78 kB)
+Downloading pytest-8.3.5-py3-none-any.whl (343 kB)
+Downloading psutil-6.0.0-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (290 kB)
+Downloading einops-0.8.0-py3-none-any.whl (43 kB)
+Downloading diffusers-0.11.1-py3-none-any.whl (524 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 524.9/524.9 kB 2.6 MB/s  0:00:00
+Downloading huggingface_hub-0.23.4-py3-none-any.whl (402 kB)
+Downloading zarr-2.18.2-py3-none-any.whl (210 kB)
+Downloading numcodecs-0.12.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.7/7.7 MB 2.9 MB/s  0:00:03
+Downloading dill-0.3.8-py3-none-any.whl (116 kB)
+Downloading hydra_core-1.3.2-py3-none-any.whl (154 kB)
+Downloading imageio-2.35.1-py3-none-any.whl (315 kB)
+Downloading imageio_ffmpeg-0.5.1-py3-none-manylinux2010_x86_64.whl (26.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 26.9/26.9 MB 5.6 MB/s  0:00:05
+Downloading matplotlib-3.9.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 4.2 MB/s  0:00:02
+Downloading tensorboard-2.18.0-py3-none-any.whl (5.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 6.4 MB/s  0:00:01
+Downloading tensorboardX-2.6.2.2-py2.py3-none-any.whl (101 kB)
+Downloading llvmlite-0.43.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (43.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.9/43.9 MB 5.8 MB/s  0:00:08
+Downloading omegaconf-2.3.1-py3-none-any.whl (79 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 5.2 MB/s  0:00:01
+Downloading absl_py-2.3.1-py3-none-any.whl (135 kB)
+Downloading contourpy-1.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (321 kB)
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Downloading fonttools-4.60.2-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 3.9 MB/s  0:00:01
+Downloading grpcio-1.80.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.8/6.8 MB 3.8 MB/s  0:00:02
+Downloading importlib_resources-6.5.2-py3-none-any.whl (37 kB)
+Downloading kiwisolver-1.4.7-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 2.6 MB/s  0:00:00
+Downloading markdown-3.9-py3-none-any.whl (107 kB)
+Downloading importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+Downloading python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+Downloading python_xlib-0.33-py2.py3-none-any.whl (182 kB)
+Downloading pyyaml-6.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (750 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 750.8/750.8 kB 740.7 kB/s  0:00:01
+Downloading qpsolvers-4.8.2-py3-none-any.whl (92 kB)
+Downloading quadprog-0.1.13-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (509 kB)
+Downloading regex-2026.1.15-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (791 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 791.3/791.3 kB 8.0 MB/s  0:00:01
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading tomli-2.5.0-py3-none-any.whl (14 kB)
+Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+Downloading zipp-3.23.1-py3-none-any.whl (10 kB)
+Downloading etils-1.5.2-py3-none-any.whl (140 kB)
+Downloading fasteners-0.20-py3-none-any.whl (18 kB)
+Downloading glfw-2.11.0-py2.py3-none-manylinux_2_28_x86_64.whl (248 kB)
+Downloading iniconfig-2.1.0-py3-none-any.whl (6.0 kB)
+Downloading pyopengl-3.1.10-py3-none-any.whl (3.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 6.9 MB/s  0:00:01
+Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.5.2-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (271 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+Downloading certifi-2026.10.19-py3-none-any.whl (136 kB)
+Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+Building wheels for collected packages: egl-probe, antlr4-python3-runtime, evdev, asciitree
+  Building wheel for egl-probe (pyproject.toml): started
+  Building wheel for egl-probe (pyproject.toml): finished with status 'done'
+  Created wheel for egl-probe: filename=egl_probe-1.0.2-cp39-cp39-linux_x86_64.whl size=475353 sha256=e2cd8dc6e61f22c6f9f04737699ff3eda5134f53e22e317453760c05f849fe3f
+  Stored in directory: /home/asus/EAI/d_alignment_pilot/.cache/pip/wheels/bf/40/09/d04302cddc381edeab0edba9c3dae6c03be48012bbc103b9e9
+  Building wheel for antlr4-python3-runtime (pyproject.toml): started
+  Building wheel for antlr4-python3-runtime (pyproject.toml): finished with status 'done'
+  Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.9.3-py3-none-any.whl size=144590 sha256=eb437899279861e945f2530110934c54624706a5551aaa4f1d89e1c20d2ac885
+  Stored in directory: /home/asus/EAI/d_alignment_pilot/.cache/pip/wheels/23/cf/80/f3efa822e6ab23277902ee9165fe772eeb1dfb8014f359020a
+  Building wheel for evdev (pyproject.toml): started
+  Building wheel for evdev (pyproject.toml): finished with status 'done'
+  Created wheel for evdev: filename=evdev-1.9.3-cp39-cp39-linux_x86_64.whl size=74217 sha256=16473d71bd3050545a313dc47cb41cf1a86bd034cc62139e616fb85daf0ec51c
+  Stored in directory: /home/asus/EAI/d_alignment_pilot/.cache/pip/wheels/75/d5/f4/93f8fdc054ac0bde25009497b748ec60351049f7880d397845
+  Building wheel for asciitree (pyproject.toml): started
+  Building wheel for asciitree (pyproject.toml): finished with status 'done'
+  Created wheel for asciitree: filename=asciitree-0.3.3-py3-none-any.whl size=5095 sha256=bd49f48b34481006d40ed15394ce6467de46767492be1c5b131c92202843f5f6
+  Stored in directory: /home/asus/EAI/d_alignment_pilot/.cache/pip/wheels/07/00/bc/937e878be0d781a569792a1e0e5acf149e463d4536453ec978
+Successfully built egl-probe antlr4-python3-runtime evdev asciitree
+Installing collected packages: pyopengl, glfw, egl-probe, asciitree, antlr4-python3-runtime, zipp, werkzeug, urllib3, tzdata, tqdm, tomli, termcolor, tensorboard-data-server, six, regex, pyyaml, pyparsing, psutil, protobuf, pluggy, packaging, numpy, llvmlite, kiwisolver, iniconfig, imageio-ffmpeg, idna, grpcio, fonttools, fasteners, exceptiongroup, evdev, etils, einops, dill, cycler, charset_normalizer, certifi, absl-py, tensorboardX, scipy, requests, quadprog, python-xlib, python-dateutil, pytest, opencv-python-headless, omegaconf, numcodecs, numba, importlib-resources, importlib-metadata, imageio, h5py, contourpy, zarr, qpsolvers, pynput, matplotlib, markdown, hydra-core, huggingface-hub, tensorboard, mujoco, diffusers, mink
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.0.2
+    Uninstalling numpy-2.0.2:
+      Successfully uninstalled numpy-2.0.2
+
+Successfully installed absl-py-2.3.1 antlr4-python3-runtime-4.9.3 asciitree-0.3.3 certifi-2026.10.19 charset_normalizer-3.5.2 contourpy-1.3.0 cycler-0.12.1 diffusers-0.11.1 dill-0.3.8 egl-probe-1.0.2 einops-0.8.0 etils-1.5.2 evdev-1.9.3 exceptiongroup-1.3.1 fasteners-0.20 fonttools-4.60.2 glfw-2.11.0 grpcio-1.80.0 h5py-3.11.0 huggingface-hub-0.23.4 hydra-core-1.3.2 idna-3.20 imageio-2.35.1 imageio-ffmpeg-0.5.1 importlib-metadata-8.7.1 importlib-resources-6.5.2 iniconfig-2.1.0 kiwisolver-1.4.7 llvmlite-0.43.0 markdown-3.9 matplotlib-3.9.2 mink-0.0.5 mujoco-3.2.3 numba-0.60.0 numcodecs-0.12.1 numpy-1.26.4 omegaconf-2.3.1 opencv-python-headless-4.10.0.84 packaging-26.3 pluggy-1.6.0 protobuf-6.33.6 psutil-6.0.0 pynput-1.7.7 pyopengl-3.1.10 pyparsing-3.3.3 pytest-8.3.5 python-dateutil-3.0.0 python-xlib-0.33 pyyaml-6.0.3 qpsolvers-4.8.2 quadprog-0.1.13 regex-2026.1.15 requests-2.32.5 scipy-1.13.1 six-1.17.0 tensorboard-2.18.0 tensorboard-data-server-0.7.2 tensorboardX-2.6.2.2 termcolor-2.4.0 tomli-2.5.0 tqdm-4.66.5 tzdata-2026.5 urllib3-2.6.3 werkzeug-3.1.9 zarr-2.18.2 zipp-3.23.1
+
+[notice] A new release of pip is available: 25.3 -> 26.0.1
+[notice] To update, run: /home/asus/EAI/d_alignment_pilot/.venv/bin/python -m pip install --upgrade pip

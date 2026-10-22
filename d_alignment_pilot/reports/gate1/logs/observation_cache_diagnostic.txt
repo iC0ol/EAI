@@ -1,0 +1,23 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /home/asus/EAI/d_alignment_pilot/external/robosuite-51cc01785bab80ffeed20da15e67d7dd4140e76a/robosuite/scripts/setup_macros.py (macros.py:55)
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_eef_pos', 'robot0_eef_quat', 'object', 'robot0_gripper_qpos']
+demo_0 first/raw [0.02023239 0.17068019 0.89741325 1.38778132 0.93170407 0.07070518
+ 0.0403408  0.         0.         0.         0.         0.
+ 0.         0.        ] second/raw [0.02023239 0.17068019 0.89741325 1.38778132 0.93170407 0.07070518
+ 0.0403408  0.         0.         0.         0.         0.
+ 0.         0.        ]
+demo_1 first/raw [0.02901149 0.12379871 0.89501013 1.98805493 0.11539348 0.1602664
+ 0.00613872 0.         0.         0.         0.         0.
+ 0.         0.        ] second/raw [0.02901149 0.12379871 0.89501013 1.98808587 0.20072532 0.1602664
+ 0.01546993 0.         0.         0.         0.         0.
+ 0.         0.        ]
+demo_2 first/raw [0.04559912 0.14744045 0.89856517 1.96740997 0.21388561 0.08293221
+ 0.00200839 0.         0.         0.         0.         0.
+ 0.         0.        ] second/raw [0.04559912 0.14744045 0.89856517 1.99701458 0.21388561 0.11076359
+ 0.0078057  0.         0.         0.         0.         0.
+ 0.         0.        ]

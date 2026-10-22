@@ -1,0 +1,37 @@
+{
+  "data_manifests": {
+    "data/manifests/eval_initial_conditions.json": "98a2727b14f788abd56507897e56e71c43d0a12e12921bfc0a04ce08ba5ec75c",
+    "data/manifests/eval_seeds.json": "9eb6c0ec6324fee6c0fe3f16ff90a7e3ae05bdacc921b63c5475244b3390ac57",
+    "data/manifests/injection_truth.json": "e1a3e18f63b75debe6a6f6175009fd8ecc1c946ee806b27c18ff6d1310d1d9b2",
+    "data/manifests/normalization.json": "623a58f62e9432d229c081e1b910a35487a8a62e2a3a64bba9257678fc7f5c28",
+    "data/manifests/pretraining_observation_amendment.json": "6f1b78ff226727775e27563913a34817378d5aa1500b5aed2f7092739d463d24",
+    "data/manifests/splits.json": "d07f1a9633b8e7f130e59b79afd48dae4c73b64bfa30eaddea3ae908a1b83eee"
+  },
+  "files": {
+    "configs/gate1.json": "aaaecb915ca53e2bbd54f38fc5e91fe415bc4583d069ef2cacefebe1e1fae824",
+    "configs/versions.json": "2279d9c71ab1427bfb1a71018eabf1c655231a4b9a6bbe56dc554fea498e44f2",
+    "reports/gate1/experiment_protocol.md": "51c833928c8560991cffe06fe537287f556db7bc57076ccbe9aa8240f3bc6833",
+    "requirements.lock": "df49be7683ae40d4d5c21388c04086273bd5504af0a82b907ab8aebbbe59a2c7",
+    "scripts/audit_data.py": "e5a68bcf51daea2839a15a91216a765fb6d81af2ed3806cdcfdf2ddb0a7843b0",
+    "scripts/bootstrap.sh": "2f6c340cfd52c9a3399de9c3f05015d96398fd8b6edf1eb02df2d7349422dd1d",
+    "scripts/clean_gate.py": "8c5c6b2e65016552fe90c94f8385da2ac26cc678c91b5079f40756ec43ff75e1",
+    "scripts/diagnose_observation_cache.py": "7dedd6d855adb63dc8a2ab3b0bf83e6b539b8521f41b4e31f7bdeaeb0a18a30e",
+    "scripts/finalize_observation_selection.py": "8d20cc3df1ac17a53c8637c75b176f2c65168e8730608a9ca03bfa0237a3c070",
+    "scripts/freeze_eval.py": "51d6a6fc9d8a950bfc4f98ddfec468045f6c7c0ec6cf32dbca8b5610bc84a28a",
+    "scripts/freeze_protocol.py": "4ea3e7c732a526a597dbf4755be11bb3843426b41801b1bc8c51c4b321bf824f",
+    "scripts/preservation.py": "7f26f82946af796e6e87b919329df7519c18fdfcc6bbae6f551770af7ec470bf",
+    "scripts/profile.py": "a3fa60029221bce0e6479123f1cb8522ec00ba5ada6363917c17e3605280d1cd",
+    "scripts/run.sh": "733ad27be053523dba3d19e909b23daaff05de0f220bb729be87ded94bb4d254",
+    "src/d_alignment/__init__.py": "70e4aef2b553ee64e3088eeee4c7b7b4b25b6c531730b1bcc56a1e972c3af52f",
+    "src/d_alignment/data.py": "a786c48f0970db7bf4eb554e4af9f52005f01bb24c12919e84358d47d26b059c",
+    "src/d_alignment/environment.py": "24bec80fe1f813f46defe0f73e07b3f7300b6b449391a49e36c635d2f00bbc0e",
+    "src/d_alignment/evaluate.py": "ab5d733a0738c744dcd1b7016824819ab06496ccb1ed5dcee971e75088167723",
+    "src/d_alignment/io.py": "b6958a7361094cfe7b8b22a9b3e1254bd265c74b4efcc534553a61bbf7b206d4",
+    "src/d_alignment/policy.py": "e98af53d7f779c1ea7df7ee40c2351e097ccd835b6017b2cde44f149c2952f81",
+    "src/d_alignment/train.py": "c3ec943416d33281aa46dcbe05727d8af7c71d4793d5c3967c626f414299226c",
+    "tests/test_data.py": "b49dae82fce5a458fcab0b7c5cd5bb9c6a5c9914523c3cca9f3865d4f7655053",
+    "tests/test_policy_time.py": "006e5bc64ecb73bb6ba95f5597f53f673eb9f4c7411ad693e3846a9f6426872a"
+  },
+  "git_parent": "687d75d53c0f30ea630762312b65dd3d0ff06d8b",
+  "status": "frozen before first optimizer update"
+}

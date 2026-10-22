@@ -1,0 +1,23 @@
+{
+  "demo_0": {
+    "absolute_object_max": 0.0,
+    "common_first_position_raw_max_m": 3.1389532750836224e-08,
+    "common_first_quat_raw_max": 3.5762786865234375e-07,
+    "common_second_position_raw_max_m": 0.030785891358810935,
+    "eef_pos_max": 5.551115123125783e-16
+  },
+  "demo_1": {
+    "absolute_object_max": 0.0,
+    "common_first_position_raw_max_m": 4.3384611347896396e-08,
+    "common_first_quat_raw_max": 1.1920928955078125e-07,
+    "common_second_position_raw_max_m": 0.02260202167194092,
+    "eef_pos_max": 5.551115123125783e-16
+  },
+  "demo_2": {
+    "absolute_object_max": 0.0,
+    "common_first_position_raw_max_m": 4.65001637195428e-08,
+    "common_first_quat_raw_max": 1.2665987014770508e-07,
+    "common_second_position_raw_max_m": 0.020405905286163706,
+    "eef_pos_max": 4.440892098500626e-16
+  }
+}

@@ -1,0 +1,400 @@
+{
+  "cuda_available": true,
+  "data_attrs": {
+    "total": 30154
+  },
+  "demo": "demo_0",
+  "demo_count": 200,
+  "env_args": {
+    "env_kwargs": {
+      "camera_depths": false,
+      "camera_heights": 84,
+      "camera_widths": 84,
+      "control_freq": 20,
+      "controller_configs": {
+        "body_parts": {
+          "right": {
+            "control_delta": true,
+            "damping": 1,
+            "damping_limits": [
+              0,
+              10
+            ],
+            "gripper": {
+              "type": "GRIP"
+            },
+            "impedance_mode": "fixed",
+            "input_max": 1,
+            "input_min": -1,
+            "input_ref_frame": "world",
+            "interpolation": null,
+            "kp": 150,
+            "kp_limits": [
+              0,
+              300
+            ],
+            "orientation_limits": null,
+            "output_max": [
+              0.05,
+              0.05,
+              0.05,
+              0.5,
+              0.5,
+              0.5
+            ],
+            "output_min": [
+              -0.05,
+              -0.05,
+              -0.05,
+              -0.5,
+              -0.5,
+              -0.5
+            ],
+            "position_limits": null,
+            "ramp_ratio": 0.2,
+            "type": "OSC_POSE",
+            "uncouple_pos_ori": true
+          }
+        },
+        "type": "BASIC"
+      },
+      "has_offscreen_renderer": false,
+      "has_renderer": false,
+      "ignore_done": true,
+      "lite_physics": false,
+      "reward_shaping": false,
+      "robots": [
+        "Panda"
+      ],
+      "use_camera_obs": false,
+      "use_object_obs": true
+    },
+    "env_name": "NutAssemblySquare",
+    "env_version": "1.5.1",
+    "type": 1
+  },
+  "episode_keys": [
+    "actions",
+    "dones",
+    "next_obs",
+    "obs",
+    "rewards",
+    "states"
+  ],
+  "episode_shapes": {
+    "actions": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        7
+      ]
+    },
+    "dones": {
+      "dtype": "int64",
+      "shape": [
+        127
+      ]
+    },
+    "next_obs/object": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        14
+      ]
+    },
+    "next_obs/robot0_eef_pos": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        3
+      ]
+    },
+    "next_obs/robot0_eef_quat": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        4
+      ]
+    },
+    "next_obs/robot0_eef_quat_site": {
+      "dtype": "float32",
+      "shape": [
+        127,
+        4
+      ]
+    },
+    "next_obs/robot0_gripper_qpos": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        2
+      ]
+    },
+    "next_obs/robot0_gripper_qvel": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        2
+      ]
+    },
+    "next_obs/robot0_joint_pos": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        7
+      ]
+    },
+    "next_obs/robot0_joint_pos_cos": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        7
+      ]
+    },
+    "next_obs/robot0_joint_pos_sin": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        7
+      ]
+    },
+    "next_obs/robot0_joint_vel": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        7
+      ]
+    },
+    "obs/object": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        14
+      ]
+    },
+    "obs/robot0_eef_pos": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        3
+      ]
+    },
+    "obs/robot0_eef_quat": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        4
+      ]
+    },
+    "obs/robot0_eef_quat_site": {
+      "dtype": "float32",
+      "shape": [
+        127,
+        4
+      ]
+    },
+    "obs/robot0_gripper_qpos": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        2
+      ]
+    },
+    "obs/robot0_gripper_qvel": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        2
+      ]
+    },
+    "obs/robot0_joint_pos": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        7
+      ]
+    },
+    "obs/robot0_joint_pos_cos": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        7
+      ]
+    },
+    "obs/robot0_joint_pos_sin": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        7
+      ]
+    },
+    "obs/robot0_joint_vel": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        7
+      ]
+    },
+    "rewards": {
+      "dtype": "float64",
+      "shape": [
+        127
+      ]
+    },
+    "states": {
+      "dtype": "float64",
+      "shape": [
+        127,
+        45
+      ]
+    }
+  },
+  "gpu": "NVIDIA GeForce RTX 3090",
+  "length_range": [
+    107,
+    236
+  ],
+  "mask_counts": {
+    "20_percent": 40,
+    "20_percent_train": 36,
+    "20_percent_valid": 4,
+    "50_percent": 100,
+    "50_percent_train": 90,
+    "50_percent_valid": 10,
+    "train": 180,
+    "valid": 20
+  },
+  "next_obs_to_following_obs_max_abs": {
+    "object": 0.0,
+    "robot0_eef_pos": 0.0,
+    "robot0_eef_quat": 0.0,
+    "robot0_eef_quat_site": 0.0,
+    "robot0_gripper_qpos": 0.0,
+    "robot0_gripper_qvel": 0.0,
+    "robot0_joint_pos": 0.0,
+    "robot0_joint_pos_cos": 0.0,
+    "robot0_joint_pos_sin": 0.0,
+    "robot0_joint_vel": 0.0
+  },
+  "python": "3.9.13",
+  "raw_action_replay": {
+    "eef_error_max_m": 0.014500883468471858,
+    "eef_error_median_m": 0.0007144381643457707,
+    "first_success_step": 123,
+    "steps": 127,
+    "success": true,
+    "wall_seconds": 15.05162658705376
+  },
+  "root_keys": [
+    "data",
+    "mask"
+  ],
+  "runtime_action_dim": 7,
+  "runtime_control_freq": 20,
+  "runtime_control_timestep": 0.05,
+  "runtime_model_timestep": 0.002,
+  "source_sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951",
+  "state_restore_max_abs": {
+    "0": {
+      "object": 1.3877813220024109,
+      "robot0_eef_pos": 8.023096076392733e-17,
+      "robot0_eef_quat": 5.551115123125783e-17,
+      "robot0_gripper_qpos": 0.0
+    },
+    "10": {
+      "object": 0.06005079840902827,
+      "robot0_eef_pos": 1.0755285551056204e-16,
+      "robot0_eef_quat": 2.259477327459791e-16,
+      "robot0_gripper_qpos": 0.0
+    },
+    "63": {
+      "object": 0.05296958237886429,
+      "robot0_eef_pos": 1.6653345369377348e-16,
+      "robot0_eef_quat": 2.220446049250313e-16,
+      "robot0_gripper_qpos": 0.0
+    }
+  },
+  "states_time_differences_demo0": [
+    0.05
+  ],
+  "torch": "2.2.2+cu121",
+  "torch_cuda": "12.1",
+  "total_transitions": 30154,
+  "transition_example_t10": {
+    "action": [
+      -0.002,
+      0.357,
+      -0.243,
+      0.013544748537242413,
+      0.040544286370277405,
+      0.14203102886676788,
+      -1.0
+    ],
+    "next_obs": {
+      "object": [
+        -0.036042849213256636,
+        -0.15232111702110143,
+        0.16337193558076923,
+        0.3561951518058777,
+        0.9341562390327454,
+        0.008658085018396378,
+        0.02004718780517578,
+        -0.11118778208622741,
+        0.17443972590908607,
+        0.8299509163678482,
+        -1.4484284536516751e-06,
+        -6.327446387085888e-07,
+        0.9163762358804849,
+        -0.4003181163912218
+      ],
+      "robot0_eef_pos": [
+        -0.06799979332713937,
+        0.02586078375531311,
+        0.9949995445730371
+      ],
+      "robot0_eef_quat": [
+        0.9986300561690373,
+        0.04755096648175692,
+        0.021838221597449137,
+        -9.26279430050916e-05
+      ],
+      "robot0_gripper_qpos": [
+        0.03890616324552557,
+        -0.03878530130257072
+      ]
+    },
+    "obs": {
+      "object": [
+        -0.03824809253405126,
+        -0.157621774711274,
+        0.16601491518500855,
+        0.36337360739707947,
+        0.9312748312950134,
+        0.010957184247672558,
+        0.02380419336259365,
+        -0.11118778850856066,
+        0.17443971897453564,
+        0.8299228632100667,
+        -1.8854791057469625e-06,
+        -8.236698143765121e-07,
+        0.91637623587969,
+        -0.4003181163908745
+      ],
+      "robot0_eef_pos": [
+        -0.06927598462440769,
+        0.020184002458174765,
+        0.9981434336200723
+      ],
+      "robot0_eef_quat": [
+        0.9988631659873942,
+        0.03981916807104438,
+        0.02620209680378754,
+        0.0005095202188167562
+      ],
+      "robot0_gripper_qpos": [
+        0.03878841276017864,
+        -0.03866262275992962
+      ]
+    }
+  }
+}

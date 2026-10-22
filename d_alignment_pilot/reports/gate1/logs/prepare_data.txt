@@ -1,0 +1,1 @@
+{'train': 156, 'validation': 20, 'anchors': 8, 'lag_test': 16, 'corrupted': 78}
