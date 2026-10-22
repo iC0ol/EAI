@@ -4,6 +4,20 @@
 独立分支 `research/d-gate1`；`spatial_intervention_pilot/` 为已结束项目，保持不变。
 范围与停止规则见 [预登记协议](reports/gate1/experiment_protocol.md)。
 
+本轮结案：**Insufficient evidence / Stop at Gate 1**。六次训练已启动，五次完成；
+Larger seed 43 在最后确认 42,400/50,000 更新后中断，原因未知，无最终权重。
+已评估五个策略共 250 个完整回合，没有重跑或缩短回合。
+
+| 条件 | seed 42 成功/50 | seed 43 成功/50 |
+|---|---:|---:|
+| Clean | 22 | 34 |
+| Mixed Small Lag | 19 | 27 |
+| Larger-Lag Control | 22 | 未执行测试 |
+
+Mixed 的配对差方向一致但区间跨零；Larger 第二种子缺失。没有达到执行传统
+lag 检查的预登记门槛，Q2 未评估。不建议当前进入 Gate 2；这不等于证明日志
+错位无害或简单方法已解决问题。详见 [判断与限制](reports/gate1/go_no_go.md)。
+
 ## 重现入口
 
 所有命令从 `/home/asus/EAI` 执行。独立环境、源码依赖、缓存、数据和 checkpoint

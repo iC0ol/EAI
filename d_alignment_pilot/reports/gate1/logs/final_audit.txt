@@ -1,0 +1,69 @@
+{
+  "observed_at_utc": "2026-10-22T16:44:48.960921+00:00",
+  "status": "passed_with_explicitly_incomplete_sixth_training",
+  "frozen_files_and_manifests_verified": 29,
+  "original_tracked_files_unchanged": 903,
+  "spatial_intervention_pilot_tree": "3caa29cb1f2435aa9d3f27f45789f2f41b86953a",
+  "source_hdf5_sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951",
+  "derived_action_files_verified": 3,
+  "eval_initial_conditions_sha256": "8376d0387cd8ef952016ac884ed768dbe29a2b40a792efa616db1a8cdb56d919",
+  "runs": {
+    "clean_seed42": {
+      "training_status": "completed",
+      "last_confirmed_updates": 50000,
+      "metrics_sha256": "17b934622c9919e9d2e3db36b3eb7fd4bbb01d44275a0db55718b36f21512646",
+      "evaluated_episodes": 50,
+      "evaluation_sha256": "f8e4159fc1bad3f657e74ca4216bc4d76291676aaa234ee6e7f3c8cc13cbc315",
+      "checkpoint_sha256": "1b4cdec2acc38977c6d3be0ab651dad595a67ccdee97be5d41b2ebebd230bae9",
+      "local_trace_hashes_verified": 50
+    },
+    "clean_seed43": {
+      "training_status": "completed",
+      "last_confirmed_updates": 50000,
+      "metrics_sha256": "cb782a3c9650258d6a88cbcefc3d8185e1ff8d221eebea65bc76b73510b768ac",
+      "evaluated_episodes": 50,
+      "evaluation_sha256": "8c33a14ef112b4ea9c6d3edb40e47692e60d26b86bcdbf65d691c179483e4f1b",
+      "checkpoint_sha256": "619d80882072f1a94e413e449736a9febab05d4c503238ede2cb758f686d8ade",
+      "local_trace_hashes_verified": 50
+    },
+    "larger_lag_seed42": {
+      "training_status": "completed",
+      "last_confirmed_updates": 50000,
+      "metrics_sha256": "38ea9c59b73712ff908655deae510f08ddd47e65d462c50e234899dd4e857990",
+      "evaluated_episodes": 50,
+      "evaluation_sha256": "dbebe023a0dbafb5cd9c06a7a3ecd4929274ea93d778188017724b8cde7b3f93",
+      "checkpoint_sha256": "81848d61458dbae73a51cbe46602745fbc2fe427eebd06927dc6d2f341dcaf36",
+      "local_trace_hashes_verified": 50
+    },
+    "larger_lag_seed43": {
+      "training_status": "interrupted",
+      "last_confirmed_updates": 42400,
+      "metrics_sha256": "b0dcd5ddea5d35491ce5c6e225c80827abfc94c872c13520e622defb1834cc5d",
+      "evaluated_episodes": 0
+    },
+    "mixed_small_lag_seed42": {
+      "training_status": "completed",
+      "last_confirmed_updates": 50000,
+      "metrics_sha256": "a92def9649c3af668abb3f67eb33b9cd118acc5ca42faaf21111f37638a2dcee",
+      "evaluated_episodes": 50,
+      "evaluation_sha256": "f92f8064c7e2fcb014e7adeecf5eea00496da0bc807358b03b1e1d8a15da4018",
+      "checkpoint_sha256": "045d993a4c8f6141287bcc1daeb769c88d107d0143e4fd9e35709d81973ef641",
+      "local_trace_hashes_verified": 50
+    },
+    "mixed_small_lag_seed43": {
+      "training_status": "completed",
+      "last_confirmed_updates": 50000,
+      "metrics_sha256": "846696bc7366a01cb88b7cc7b44124d83143bd511890a1a738c662a1cf32b2d5",
+      "evaluated_episodes": 50,
+      "evaluation_sha256": "54eba4ecc2e3f29f91050003a14c169d291c44026a48469f464b00a9d56f8665",
+      "checkpoint_sha256": "4dc7150d16111d1f812f1bfe9c91b47ff3102573798ea5ac2caee3e6b019a3e2",
+      "local_trace_hashes_verified": 50
+    }
+  },
+  "formal_policy_episodes": 250,
+  "formal_control_steps": 100000,
+  "additional_optimizer_updates": 0,
+  "additional_environment_steps": 0,
+  "step_d_executed": false,
+  "scope": "Artifact consistency and local hash audit; not new training, rollouts, or lag estimation."
+}

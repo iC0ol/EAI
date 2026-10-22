@@ -1,0 +1,6 @@
+{
+  "interrupted_run": "larger_lag_seed43",
+  "last_confirmed_update": 42400,
+  "gpu_hours_lower_bound": 0.26682136063638606,
+  "additional_optimizer_updates": 0
+}

@@ -83,8 +83,8 @@ for condition in conditions[1:]:
     result["comparisons"][condition] = comparison
 
 write_json(ROOT / "outputs/gate1/comparison.json", result)
-with open(ROOT / "outputs/gate1/paired_outcomes.csv", "w") as f:
-    writer = csv.writer(f)
+with open(ROOT / "outputs/gate1/paired_outcomes.csv", "w", newline="") as f:
+    writer = csv.writer(f, lineterminator="\n")
     names = sorted(outcomes)
     writer.writerow(["test_seed"] + names)
     for i, test_seed in enumerate(expected_tests):

@@ -1,0 +1,1189 @@
+{
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 9012,
+  "ci_scope": "Initial-condition uncertainty conditional on the actually trained policies; two training seeds do not identify training-population variance.",
+  "comparisons": {
+    "larger_lag": {
+      "all_train_seeds_available": false,
+      "by_train_seed": {
+        "42": {
+          "both_failure": 19,
+          "both_success": 13,
+          "clean_minus_corrupt_pp": 0.0,
+          "clean_only_success": 9,
+          "corrupt_only_success": 9,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "paired_bootstrap_95ci_pp": [
+            -16.0,
+            16.0
+          ],
+          "predeclared_material_drop": false
+        }
+      },
+      "step_d_eligible": false
+    },
+    "mixed_small_lag": {
+      "all_train_seeds_available": true,
+      "by_train_seed": {
+        "42": {
+          "both_failure": 22,
+          "both_success": 13,
+          "clean_minus_corrupt_pp": 6.0,
+          "clean_only_success": 9,
+          "corrupt_only_success": 6,
+          "exact_mcnemar_two_sided_p": 0.6072387695312499,
+          "paired_bootstrap_95ci_pp": [
+            -8.0,
+            22.0
+          ],
+          "predeclared_material_drop": false
+        },
+        "43": {
+          "both_failure": 8,
+          "both_success": 19,
+          "clean_minus_corrupt_pp": 14.000000000000002,
+          "clean_only_success": 15,
+          "corrupt_only_success": 8,
+          "exact_mcnemar_two_sided_p": 0.21003961563110352,
+          "paired_bootstrap_95ci_pp": [
+            -4.0,
+            32.0
+          ],
+          "predeclared_material_drop": false
+        }
+      },
+      "direction_consistent": true,
+      "mean_clean_minus_corrupt_pp": 10.0,
+      "paired_initial_condition_cluster_bootstrap_95ci_pp": [
+        -3.0,
+        22.0
+      ],
+      "step_d_eligible": false
+    }
+  },
+  "runs": {
+    "clean_seed42": {
+      "auxiliary_means": {
+        "gripper_sign_flips": 11.74,
+        "max_contact_count": 61.42,
+        "mean_action_delta_norm": 0.23186680644750596,
+        "mean_translation_command_delta_norm": 0.18429212957620622,
+        "min_nut_z": 0.8222345998919542
+      },
+      "evaluation": {
+        "condition": "clean",
+        "config_sha256": "aaaecb915ca53e2bbd54f38fc5e91fe415bc4583d069ef2cacefebe1e1fae824",
+        "episodes": 50,
+        "inference_wall_seconds": 232.37106235790998,
+        "initial_conditions_sha256": "8376d0387cd8ef952016ac884ed768dbe29a2b40a792efa616db1a8cdb56d919",
+        "simulation_cpu_wall_seconds": 330.1901033085305,
+        "success_rate": 0.44,
+        "successes": 22,
+        "total_wall_seconds": 566.9802648089826,
+        "train_seed": 42
+      },
+      "local_stdout": {
+        "eval": {
+          "path": "/home/asus/EAI/d_alignment_pilot/reports/gate1/logs/eval_clean_seed42.txt",
+          "sha256": "f3d0c01df01ef566134ea34800dc139bd4a4c33d00190783de9de6124540a951"
+        },
+        "train": {
+          "path": "/home/asus/EAI/d_alignment_pilot/reports/gate1/logs/train_clean_seed42.txt",
+          "sha256": "17b934622c9919e9d2e3db36b3eb7fd4bbb01d44275a0db55718b36f21512646"
+        }
+      },
+      "nut_below_table_proxy_trials": 0,
+      "training": {
+        "checkpoint": "/home/asus/EAI/d_alignment_pilot/outputs/gate1/checkpoints/clean_seed42.pt",
+        "checkpoint_sha256": "1b4cdec2acc38977c6d3be0ab651dad595a67ccdee97be5d41b2ebebd230bae9",
+        "condition": "clean",
+        "config": {
+          "anchor_episodes": 8,
+          "batch_size": 256,
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 9012,
+          "clean_gate": {
+            "ceiling_successes_at_least": 48,
+            "near_failure_successes_at_most": 5,
+            "required_episodes": 50
+          },
+          "contamination_seed": 731902,
+          "corruption_fraction": 0.5,
+          "dataset": "Square PH low_dim_v15",
+          "definition": "corrupted_action[t] = clean_action[t + delta]",
+          "ema": {
+            "inv_gamma": 1.0,
+            "max_value": 0.9999,
+            "power": 0.75
+          },
+          "eval_max_steps": 400,
+          "eval_parallel_envs": 1,
+          "eval_seeds": {
+            "count": 50,
+            "start": 100000
+          },
+          "eval_success": "ever env.is_success()['task'] during 400 normal control steps; record first hit and run full horizon",
+          "horizon": 16,
+          "lag_test_episodes": 16,
+          "large_deltas": [
+            -4,
+            4
+          ],
+          "lr_scheduler": "cosine",
+          "max_policy_trainings": 6,
+          "max_shift": 4,
+          "mixed_deltas": [
+            -1,
+            1,
+            -2,
+            2,
+            -4,
+            4
+          ],
+          "model": {
+            "cond_predict_scale": true,
+            "diffusion_step_embed_dim": 128,
+            "down_dims": [
+              128,
+              256,
+              512
+            ],
+            "kernel_size": 5,
+            "n_groups": 8
+          },
+          "n_action_steps": 8,
+          "n_latency_steps": 0,
+          "n_obs_steps": 2,
+          "normalization": "actions identity (already normalized OSC commands, official DP relative-action convention); obs shared clean training common-window per-coordinate limits [-1,1]; constant dimensions identity",
+          "oa_step_convention": true,
+          "object_slice": [
+            7,
+            14
+          ],
+          "obs_dim": 16,
+          "obs_keys": [
+            "object",
+            "robot0_eef_pos",
+            "robot0_eef_quat",
+            "robot0_gripper_qpos"
+          ],
+          "observation_selection_reason": "raw absolute object pose plus proprioception; exclude cache-dependent relative object fields before training, without changing any selected value",
+          "optimizer": {
+            "betas": [
+              0.95,
+              0.999
+            ],
+            "eps": 1e-08,
+            "lr": 0.0001,
+            "weight_decay": 1e-06
+          },
+          "pad_after": 0,
+          "pad_before": 0,
+          "preserve_official_validation": true,
+          "scheduler": {
+            "beta_schedule": "squaredcos_cap_v2",
+            "clip_sample": true,
+            "eta": 0.0,
+            "inference": "DDIM",
+            "num_inference_steps": 16,
+            "num_train_timesteps": 100,
+            "prediction_type": "epsilon"
+          },
+          "selection": "fixed final EMA; no rollout-based checkpoint selection or hyperparameter changes",
+          "source_path": "data/raw/square_ph_low_dim_v15.hdf5",
+          "split_seed": 20261022,
+          "step_d_gate": {
+            "direction_consistent_both_seeds": true,
+            "min_drop_percentage_points_each_seed": 10,
+            "paired_bootstrap_95ci_lower_greater_than_zero": true
+          },
+          "task": "NutAssemblySquare",
+          "torch_cpu_threads": 2,
+          "train_seeds": [
+            42,
+            43
+          ],
+          "updates": 50000,
+          "validation_batches": 20,
+          "validation_every": 1000,
+          "warmup_updates": 500
+        },
+        "config_sha256": "aaaecb915ca53e2bbd54f38fc5e91fe415bc4583d069ef2cacefebe1e1fae824",
+        "git_commit_at_start": "fb74d1b0b16387feb127101fce67eddeec81ed40",
+        "gpu_allocated_wall_hours": 0.32840194158637637,
+        "parameters": 16553233,
+        "peak_gpu_allocated_bytes": 707224576,
+        "peak_gpu_reserved_bytes": 771751936,
+        "seed": 42,
+        "source_sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951",
+        "status": "completed",
+        "train_sequences": 20009,
+        "updates_completed": 50000,
+        "validation_sequences": 2529,
+        "versions": {
+          "dataset": {
+            "file": "v1.5/square/ph/low_dim_v15.hdf5",
+            "repository": "https://huggingface.co/datasets/robomimic/robomimic_datasets",
+            "revision": "74fa018461f479cd9fd15b924a16103012096203",
+            "sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951"
+          },
+          "diffusion_policy": {
+            "commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+            "repository": "https://github.com/real-stanford/diffusion_policy",
+            "version": "official main snapshot"
+          },
+          "robomimic": {
+            "commit": "7c66e7a41b5d9dcc905b1a68346bfee1b49b79c9",
+            "head_at_audit": "d309eaecc18acf4152a830a895a6984b8ac71b05",
+            "repository": "https://github.com/ARISE-Initiative/robomimic",
+            "selection_reason": "v0.5 lang_utils downloads CLIP weights at import; v0.4 supports robosuite 1.5 without that side effect",
+            "v0.5_audited_commit": "ae5799f0fae05c4559ee1f9645b0f77eb5251929",
+            "version": "0.4.0"
+          },
+          "robosuite": {
+            "commit": "51cc01785bab80ffeed20da15e67d7dd4140e76a",
+            "head_at_audit": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
+            "repository": "https://github.com/ARISE-Initiative/robosuite",
+            "version": "1.5.1"
+          }
+        },
+        "wall_seconds": 1182.8041014880873
+      },
+      "wilson_success_95ci": [
+        0.3116219921125717,
+        0.5769397197834315
+      ]
+    },
+    "clean_seed43": {
+      "auxiliary_means": {
+        "gripper_sign_flips": 13.82,
+        "max_contact_count": 60.06,
+        "mean_action_delta_norm": 0.23694297701120376,
+        "mean_translation_command_delta_norm": 0.18876679882407188,
+        "min_nut_z": 0.8222179413751621
+      },
+      "evaluation": {
+        "condition": "clean",
+        "config_sha256": "aaaecb915ca53e2bbd54f38fc5e91fe415bc4583d069ef2cacefebe1e1fae824",
+        "episodes": 50,
+        "inference_wall_seconds": 229.41269587446004,
+        "initial_conditions_sha256": "8376d0387cd8ef952016ac884ed768dbe29a2b40a792efa616db1a8cdb56d919",
+        "simulation_cpu_wall_seconds": 327.68141771061346,
+        "success_rate": 0.68,
+        "successes": 34,
+        "total_wall_seconds": 561.5581141449511,
+        "train_seed": 43
+      },
+      "local_stdout": {
+        "eval": {
+          "path": "/home/asus/EAI/d_alignment_pilot/reports/gate1/logs/eval_clean_seed43.txt",
+          "sha256": "f33d0c32b8f3c9457eb904a5a86a898c75dce10261c64dd034f7c1ad1b487be8"
+        },
+        "train": {
+          "path": "/home/asus/EAI/d_alignment_pilot/reports/gate1/logs/train_clean_seed43.txt",
+          "sha256": "cb782a3c9650258d6a88cbcefc3d8185e1ff8d221eebea65bc76b73510b768ac"
+        }
+      },
+      "nut_below_table_proxy_trials": 0,
+      "training": {
+        "checkpoint": "/home/asus/EAI/d_alignment_pilot/outputs/gate1/checkpoints/clean_seed43.pt",
+        "checkpoint_sha256": "619d80882072f1a94e413e449736a9febab05d4c503238ede2cb758f686d8ade",
+        "condition": "clean",
+        "config": {
+          "anchor_episodes": 8,
+          "batch_size": 256,
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 9012,
+          "clean_gate": {
+            "ceiling_successes_at_least": 48,
+            "near_failure_successes_at_most": 5,
+            "required_episodes": 50
+          },
+          "contamination_seed": 731902,
+          "corruption_fraction": 0.5,
+          "dataset": "Square PH low_dim_v15",
+          "definition": "corrupted_action[t] = clean_action[t + delta]",
+          "ema": {
+            "inv_gamma": 1.0,
+            "max_value": 0.9999,
+            "power": 0.75
+          },
+          "eval_max_steps": 400,
+          "eval_parallel_envs": 1,
+          "eval_seeds": {
+            "count": 50,
+            "start": 100000
+          },
+          "eval_success": "ever env.is_success()['task'] during 400 normal control steps; record first hit and run full horizon",
+          "horizon": 16,
+          "lag_test_episodes": 16,
+          "large_deltas": [
+            -4,
+            4
+          ],
+          "lr_scheduler": "cosine",
+          "max_policy_trainings": 6,
+          "max_shift": 4,
+          "mixed_deltas": [
+            -1,
+            1,
+            -2,
+            2,
+            -4,
+            4
+          ],
+          "model": {
+            "cond_predict_scale": true,
+            "diffusion_step_embed_dim": 128,
+            "down_dims": [
+              128,
+              256,
+              512
+            ],
+            "kernel_size": 5,
+            "n_groups": 8
+          },
+          "n_action_steps": 8,
+          "n_latency_steps": 0,
+          "n_obs_steps": 2,
+          "normalization": "actions identity (already normalized OSC commands, official DP relative-action convention); obs shared clean training common-window per-coordinate limits [-1,1]; constant dimensions identity",
+          "oa_step_convention": true,
+          "object_slice": [
+            7,
+            14
+          ],
+          "obs_dim": 16,
+          "obs_keys": [
+            "object",
+            "robot0_eef_pos",
+            "robot0_eef_quat",
+            "robot0_gripper_qpos"
+          ],
+          "observation_selection_reason": "raw absolute object pose plus proprioception; exclude cache-dependent relative object fields before training, without changing any selected value",
+          "optimizer": {
+            "betas": [
+              0.95,
+              0.999
+            ],
+            "eps": 1e-08,
+            "lr": 0.0001,
+            "weight_decay": 1e-06
+          },
+          "pad_after": 0,
+          "pad_before": 0,
+          "preserve_official_validation": true,
+          "scheduler": {
+            "beta_schedule": "squaredcos_cap_v2",
+            "clip_sample": true,
+            "eta": 0.0,
+            "inference": "DDIM",
+            "num_inference_steps": 16,
+            "num_train_timesteps": 100,
+            "prediction_type": "epsilon"
+          },
+          "selection": "fixed final EMA; no rollout-based checkpoint selection or hyperparameter changes",
+          "source_path": "data/raw/square_ph_low_dim_v15.hdf5",
+          "split_seed": 20261022,
+          "step_d_gate": {
+            "direction_consistent_both_seeds": true,
+            "min_drop_percentage_points_each_seed": 10,
+            "paired_bootstrap_95ci_lower_greater_than_zero": true
+          },
+          "task": "NutAssemblySquare",
+          "torch_cpu_threads": 2,
+          "train_seeds": [
+            42,
+            43
+          ],
+          "updates": 50000,
+          "validation_batches": 20,
+          "validation_every": 1000,
+          "warmup_updates": 500
+        },
+        "config_sha256": "aaaecb915ca53e2bbd54f38fc5e91fe415bc4583d069ef2cacefebe1e1fae824",
+        "git_commit_at_start": "575a7a630ba3b9ed993813d879d5b140c99fd5af",
+        "gpu_allocated_wall_hours": 0.3296918920236122,
+        "parameters": 16553233,
+        "peak_gpu_allocated_bytes": 707224576,
+        "peak_gpu_reserved_bytes": 771751936,
+        "seed": 43,
+        "source_sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951",
+        "status": "completed",
+        "train_sequences": 20009,
+        "updates_completed": 50000,
+        "validation_sequences": 2529,
+        "versions": {
+          "dataset": {
+            "file": "v1.5/square/ph/low_dim_v15.hdf5",
+            "repository": "https://huggingface.co/datasets/robomimic/robomimic_datasets",
+            "revision": "74fa018461f479cd9fd15b924a16103012096203",
+            "sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951"
+          },
+          "diffusion_policy": {
+            "commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+            "repository": "https://github.com/real-stanford/diffusion_policy",
+            "version": "official main snapshot"
+          },
+          "robomimic": {
+            "commit": "7c66e7a41b5d9dcc905b1a68346bfee1b49b79c9",
+            "head_at_audit": "d309eaecc18acf4152a830a895a6984b8ac71b05",
+            "repository": "https://github.com/ARISE-Initiative/robomimic",
+            "selection_reason": "v0.5 lang_utils downloads CLIP weights at import; v0.4 supports robosuite 1.5 without that side effect",
+            "v0.5_audited_commit": "ae5799f0fae05c4559ee1f9645b0f77eb5251929",
+            "version": "0.4.0"
+          },
+          "robosuite": {
+            "commit": "51cc01785bab80ffeed20da15e67d7dd4140e76a",
+            "head_at_audit": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
+            "repository": "https://github.com/ARISE-Initiative/robosuite",
+            "version": "1.5.1"
+          }
+        },
+        "wall_seconds": 1187.429295015987
+      },
+      "wilson_success_95ci": [
+        0.5418970269185592,
+        0.7924178373934316
+      ]
+    },
+    "larger_lag_seed42": {
+      "auxiliary_means": {
+        "gripper_sign_flips": 7.64,
+        "max_contact_count": 61.32,
+        "mean_action_delta_norm": 0.21206721141934395,
+        "mean_translation_command_delta_norm": 0.17873640581965447,
+        "min_nut_z": 0.8222027386149577
+      },
+      "evaluation": {
+        "condition": "larger_lag",
+        "config_sha256": "aaaecb915ca53e2bbd54f38fc5e91fe415bc4583d069ef2cacefebe1e1fae824",
+        "episodes": 50,
+        "inference_wall_seconds": 220.1120205782354,
+        "initial_conditions_sha256": "8376d0387cd8ef952016ac884ed768dbe29a2b40a792efa616db1a8cdb56d919",
+        "simulation_cpu_wall_seconds": 327.6982791852206,
+        "success_rate": 0.44,
+        "successes": 22,
+        "total_wall_seconds": 551.8336313019972,
+        "train_seed": 42
+      },
+      "local_stdout": {
+        "eval": {
+          "path": "/home/asus/EAI/d_alignment_pilot/reports/gate1/logs/eval_larger_lag_seed42.txt",
+          "sha256": "6248ba42a8951297b25812ebeb47b360a1268948d2f0aa48f1aaf3d60321a359"
+        },
+        "train": {
+          "path": "/home/asus/EAI/d_alignment_pilot/reports/gate1/logs/train_larger_lag_seed42.txt",
+          "sha256": "38ea9c59b73712ff908655deae510f08ddd47e65d462c50e234899dd4e857990"
+        }
+      },
+      "nut_below_table_proxy_trials": 0,
+      "training": {
+        "checkpoint": "/home/asus/EAI/d_alignment_pilot/outputs/gate1/checkpoints/larger_lag_seed42.pt",
+        "checkpoint_sha256": "81848d61458dbae73a51cbe46602745fbc2fe427eebd06927dc6d2f341dcaf36",
+        "condition": "larger_lag",
+        "config": {
+          "anchor_episodes": 8,
+          "batch_size": 256,
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 9012,
+          "clean_gate": {
+            "ceiling_successes_at_least": 48,
+            "near_failure_successes_at_most": 5,
+            "required_episodes": 50
+          },
+          "contamination_seed": 731902,
+          "corruption_fraction": 0.5,
+          "dataset": "Square PH low_dim_v15",
+          "definition": "corrupted_action[t] = clean_action[t + delta]",
+          "ema": {
+            "inv_gamma": 1.0,
+            "max_value": 0.9999,
+            "power": 0.75
+          },
+          "eval_max_steps": 400,
+          "eval_parallel_envs": 1,
+          "eval_seeds": {
+            "count": 50,
+            "start": 100000
+          },
+          "eval_success": "ever env.is_success()['task'] during 400 normal control steps; record first hit and run full horizon",
+          "horizon": 16,
+          "lag_test_episodes": 16,
+          "large_deltas": [
+            -4,
+            4
+          ],
+          "lr_scheduler": "cosine",
+          "max_policy_trainings": 6,
+          "max_shift": 4,
+          "mixed_deltas": [
+            -1,
+            1,
+            -2,
+            2,
+            -4,
+            4
+          ],
+          "model": {
+            "cond_predict_scale": true,
+            "diffusion_step_embed_dim": 128,
+            "down_dims": [
+              128,
+              256,
+              512
+            ],
+            "kernel_size": 5,
+            "n_groups": 8
+          },
+          "n_action_steps": 8,
+          "n_latency_steps": 0,
+          "n_obs_steps": 2,
+          "normalization": "actions identity (already normalized OSC commands, official DP relative-action convention); obs shared clean training common-window per-coordinate limits [-1,1]; constant dimensions identity",
+          "oa_step_convention": true,
+          "object_slice": [
+            7,
+            14
+          ],
+          "obs_dim": 16,
+          "obs_keys": [
+            "object",
+            "robot0_eef_pos",
+            "robot0_eef_quat",
+            "robot0_gripper_qpos"
+          ],
+          "observation_selection_reason": "raw absolute object pose plus proprioception; exclude cache-dependent relative object fields before training, without changing any selected value",
+          "optimizer": {
+            "betas": [
+              0.95,
+              0.999
+            ],
+            "eps": 1e-08,
+            "lr": 0.0001,
+            "weight_decay": 1e-06
+          },
+          "pad_after": 0,
+          "pad_before": 0,
+          "preserve_official_validation": true,
+          "scheduler": {
+            "beta_schedule": "squaredcos_cap_v2",
+            "clip_sample": true,
+            "eta": 0.0,
+            "inference": "DDIM",
+            "num_inference_steps": 16,
+            "num_train_timesteps": 100,
+            "prediction_type": "epsilon"
+          },
+          "selection": "fixed final EMA; no rollout-based checkpoint selection or hyperparameter changes",
+          "source_path": "data/raw/square_ph_low_dim_v15.hdf5",
+          "split_seed": 20261022,
+          "step_d_gate": {
+            "direction_consistent_both_seeds": true,
+            "min_drop_percentage_points_each_seed": 10,
+            "paired_bootstrap_95ci_lower_greater_than_zero": true
+          },
+          "task": "NutAssemblySquare",
+          "torch_cpu_threads": 2,
+          "train_seeds": [
+            42,
+            43
+          ],
+          "updates": 50000,
+          "validation_batches": 20,
+          "validation_every": 1000,
+          "warmup_updates": 500
+        },
+        "config_sha256": "aaaecb915ca53e2bbd54f38fc5e91fe415bc4583d069ef2cacefebe1e1fae824",
+        "git_commit_at_start": "575a7a630ba3b9ed993813d879d5b140c99fd5af",
+        "gpu_allocated_wall_hours": 0.3202359338011593,
+        "parameters": 16553233,
+        "peak_gpu_allocated_bytes": 707224576,
+        "peak_gpu_reserved_bytes": 771751936,
+        "seed": 42,
+        "source_sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951",
+        "status": "completed",
+        "train_sequences": 20009,
+        "updates_completed": 50000,
+        "validation_sequences": 2529,
+        "versions": {
+          "dataset": {
+            "file": "v1.5/square/ph/low_dim_v15.hdf5",
+            "repository": "https://huggingface.co/datasets/robomimic/robomimic_datasets",
+            "revision": "74fa018461f479cd9fd15b924a16103012096203",
+            "sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951"
+          },
+          "diffusion_policy": {
+            "commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+            "repository": "https://github.com/real-stanford/diffusion_policy",
+            "version": "official main snapshot"
+          },
+          "robomimic": {
+            "commit": "7c66e7a41b5d9dcc905b1a68346bfee1b49b79c9",
+            "head_at_audit": "d309eaecc18acf4152a830a895a6984b8ac71b05",
+            "repository": "https://github.com/ARISE-Initiative/robomimic",
+            "selection_reason": "v0.5 lang_utils downloads CLIP weights at import; v0.4 supports robosuite 1.5 without that side effect",
+            "v0.5_audited_commit": "ae5799f0fae05c4559ee1f9645b0f77eb5251929",
+            "version": "0.4.0"
+          },
+          "robosuite": {
+            "commit": "51cc01785bab80ffeed20da15e67d7dd4140e76a",
+            "head_at_audit": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
+            "repository": "https://github.com/ARISE-Initiative/robosuite",
+            "version": "1.5.1"
+          }
+        },
+        "wall_seconds": 1153.4021911821328
+      },
+      "wilson_success_95ci": [
+        0.3116219921125717,
+        0.5769397197834315
+      ]
+    },
+    "larger_lag_seed43": {
+      "local_stdout": {
+        "train": {
+          "path": "/home/asus/EAI/d_alignment_pilot/reports/gate1/logs/train_larger_lag_seed43.txt",
+          "sha256": "b0dcd5ddea5d35491ce5c6e225c80827abfc94c872c13520e622defb1834cc5d"
+        }
+      },
+      "training": {
+        "condition": "larger_lag",
+        "config": {
+          "anchor_episodes": 8,
+          "batch_size": 256,
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 9012,
+          "clean_gate": {
+            "ceiling_successes_at_least": 48,
+            "near_failure_successes_at_most": 5,
+            "required_episodes": 50
+          },
+          "contamination_seed": 731902,
+          "corruption_fraction": 0.5,
+          "dataset": "Square PH low_dim_v15",
+          "definition": "corrupted_action[t] = clean_action[t + delta]",
+          "ema": {
+            "inv_gamma": 1.0,
+            "max_value": 0.9999,
+            "power": 0.75
+          },
+          "eval_max_steps": 400,
+          "eval_parallel_envs": 1,
+          "eval_seeds": {
+            "count": 50,
+            "start": 100000
+          },
+          "eval_success": "ever env.is_success()['task'] during 400 normal control steps; record first hit and run full horizon",
+          "horizon": 16,
+          "lag_test_episodes": 16,
+          "large_deltas": [
+            -4,
+            4
+          ],
+          "lr_scheduler": "cosine",
+          "max_policy_trainings": 6,
+          "max_shift": 4,
+          "mixed_deltas": [
+            -1,
+            1,
+            -2,
+            2,
+            -4,
+            4
+          ],
+          "model": {
+            "cond_predict_scale": true,
+            "diffusion_step_embed_dim": 128,
+            "down_dims": [
+              128,
+              256,
+              512
+            ],
+            "kernel_size": 5,
+            "n_groups": 8
+          },
+          "n_action_steps": 8,
+          "n_latency_steps": 0,
+          "n_obs_steps": 2,
+          "normalization": "actions identity (already normalized OSC commands, official DP relative-action convention); obs shared clean training common-window per-coordinate limits [-1,1]; constant dimensions identity",
+          "oa_step_convention": true,
+          "object_slice": [
+            7,
+            14
+          ],
+          "obs_dim": 16,
+          "obs_keys": [
+            "object",
+            "robot0_eef_pos",
+            "robot0_eef_quat",
+            "robot0_gripper_qpos"
+          ],
+          "observation_selection_reason": "raw absolute object pose plus proprioception; exclude cache-dependent relative object fields before training, without changing any selected value",
+          "optimizer": {
+            "betas": [
+              0.95,
+              0.999
+            ],
+            "eps": 1e-08,
+            "lr": 0.0001,
+            "weight_decay": 1e-06
+          },
+          "pad_after": 0,
+          "pad_before": 0,
+          "preserve_official_validation": true,
+          "scheduler": {
+            "beta_schedule": "squaredcos_cap_v2",
+            "clip_sample": true,
+            "eta": 0.0,
+            "inference": "DDIM",
+            "num_inference_steps": 16,
+            "num_train_timesteps": 100,
+            "prediction_type": "epsilon"
+          },
+          "selection": "fixed final EMA; no rollout-based checkpoint selection or hyperparameter changes",
+          "source_path": "data/raw/square_ph_low_dim_v15.hdf5",
+          "split_seed": 20261022,
+          "step_d_gate": {
+            "direction_consistent_both_seeds": true,
+            "min_drop_percentage_points_each_seed": 10,
+            "paired_bootstrap_95ci_lower_greater_than_zero": true
+          },
+          "task": "NutAssemblySquare",
+          "torch_cpu_threads": 2,
+          "train_seeds": [
+            42,
+            43
+          ],
+          "updates": 50000,
+          "validation_batches": 20,
+          "validation_every": 1000,
+          "warmup_updates": 500
+        },
+        "config_sha256": "aaaecb915ca53e2bbd54f38fc5e91fe415bc4583d069ef2cacefebe1e1fae824",
+        "git_commit_at_start": "575a7a630ba3b9ed993813d879d5b140c99fd5af",
+        "gpu_allocated_wall_hours_lower_bound": 0.26682136063638606,
+        "interruption_evidence": "reports/gate1/interruption.json",
+        "parameters": 16553233,
+        "seed": 43,
+        "source_sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951",
+        "status": "interrupted",
+        "termination_cause": "unknown; process absent, final checkpoint absent, no captured traceback or exit status",
+        "train_sequences": 20009,
+        "updates_completed": 42400,
+        "validation_sequences": 2529,
+        "versions": {
+          "dataset": {
+            "file": "v1.5/square/ph/low_dim_v15.hdf5",
+            "repository": "https://huggingface.co/datasets/robomimic/robomimic_datasets",
+            "revision": "74fa018461f479cd9fd15b924a16103012096203",
+            "sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951"
+          },
+          "diffusion_policy": {
+            "commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+            "repository": "https://github.com/real-stanford/diffusion_policy",
+            "version": "official main snapshot"
+          },
+          "robomimic": {
+            "commit": "7c66e7a41b5d9dcc905b1a68346bfee1b49b79c9",
+            "head_at_audit": "d309eaecc18acf4152a830a895a6984b8ac71b05",
+            "repository": "https://github.com/ARISE-Initiative/robomimic",
+            "selection_reason": "v0.5 lang_utils downloads CLIP weights at import; v0.4 supports robosuite 1.5 without that side effect",
+            "v0.5_audited_commit": "ae5799f0fae05c4559ee1f9645b0f77eb5251929",
+            "version": "0.4.0"
+          },
+          "robosuite": {
+            "commit": "51cc01785bab80ffeed20da15e67d7dd4140e76a",
+            "head_at_audit": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
+            "repository": "https://github.com/ARISE-Initiative/robosuite",
+            "version": "1.5.1"
+          }
+        },
+        "wall_seconds_lower_bound": 961.103653436061
+      }
+    },
+    "mixed_small_lag_seed42": {
+      "auxiliary_means": {
+        "gripper_sign_flips": 12.1,
+        "max_contact_count": 61.56,
+        "mean_action_delta_norm": 0.22154970347881317,
+        "mean_translation_command_delta_norm": 0.17676446795463563,
+        "min_nut_z": 0.8222151349580469
+      },
+      "evaluation": {
+        "condition": "mixed_small_lag",
+        "config_sha256": "aaaecb915ca53e2bbd54f38fc5e91fe415bc4583d069ef2cacefebe1e1fae824",
+        "episodes": 50,
+        "inference_wall_seconds": 228.9628613840323,
+        "initial_conditions_sha256": "8376d0387cd8ef952016ac884ed768dbe29a2b40a792efa616db1a8cdb56d919",
+        "simulation_cpu_wall_seconds": 327.532308654394,
+        "success_rate": 0.38,
+        "successes": 19,
+        "total_wall_seconds": 560.9669567078818,
+        "train_seed": 42
+      },
+      "local_stdout": {
+        "eval": {
+          "path": "/home/asus/EAI/d_alignment_pilot/reports/gate1/logs/eval_mixed_small_lag_seed42.txt",
+          "sha256": "f264bc6bd522b8795e695cff91238bb892446849aa2f618583aaa4241105f7eb"
+        },
+        "train": {
+          "path": "/home/asus/EAI/d_alignment_pilot/reports/gate1/logs/train_mixed_small_lag_seed42.txt",
+          "sha256": "a92def9649c3af668abb3f67eb33b9cd118acc5ca42faaf21111f37638a2dcee"
+        }
+      },
+      "nut_below_table_proxy_trials": 0,
+      "training": {
+        "checkpoint": "/home/asus/EAI/d_alignment_pilot/outputs/gate1/checkpoints/mixed_small_lag_seed42.pt",
+        "checkpoint_sha256": "045d993a4c8f6141287bcc1daeb769c88d107d0143e4fd9e35709d81973ef641",
+        "condition": "mixed_small_lag",
+        "config": {
+          "anchor_episodes": 8,
+          "batch_size": 256,
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 9012,
+          "clean_gate": {
+            "ceiling_successes_at_least": 48,
+            "near_failure_successes_at_most": 5,
+            "required_episodes": 50
+          },
+          "contamination_seed": 731902,
+          "corruption_fraction": 0.5,
+          "dataset": "Square PH low_dim_v15",
+          "definition": "corrupted_action[t] = clean_action[t + delta]",
+          "ema": {
+            "inv_gamma": 1.0,
+            "max_value": 0.9999,
+            "power": 0.75
+          },
+          "eval_max_steps": 400,
+          "eval_parallel_envs": 1,
+          "eval_seeds": {
+            "count": 50,
+            "start": 100000
+          },
+          "eval_success": "ever env.is_success()['task'] during 400 normal control steps; record first hit and run full horizon",
+          "horizon": 16,
+          "lag_test_episodes": 16,
+          "large_deltas": [
+            -4,
+            4
+          ],
+          "lr_scheduler": "cosine",
+          "max_policy_trainings": 6,
+          "max_shift": 4,
+          "mixed_deltas": [
+            -1,
+            1,
+            -2,
+            2,
+            -4,
+            4
+          ],
+          "model": {
+            "cond_predict_scale": true,
+            "diffusion_step_embed_dim": 128,
+            "down_dims": [
+              128,
+              256,
+              512
+            ],
+            "kernel_size": 5,
+            "n_groups": 8
+          },
+          "n_action_steps": 8,
+          "n_latency_steps": 0,
+          "n_obs_steps": 2,
+          "normalization": "actions identity (already normalized OSC commands, official DP relative-action convention); obs shared clean training common-window per-coordinate limits [-1,1]; constant dimensions identity",
+          "oa_step_convention": true,
+          "object_slice": [
+            7,
+            14
+          ],
+          "obs_dim": 16,
+          "obs_keys": [
+            "object",
+            "robot0_eef_pos",
+            "robot0_eef_quat",
+            "robot0_gripper_qpos"
+          ],
+          "observation_selection_reason": "raw absolute object pose plus proprioception; exclude cache-dependent relative object fields before training, without changing any selected value",
+          "optimizer": {
+            "betas": [
+              0.95,
+              0.999
+            ],
+            "eps": 1e-08,
+            "lr": 0.0001,
+            "weight_decay": 1e-06
+          },
+          "pad_after": 0,
+          "pad_before": 0,
+          "preserve_official_validation": true,
+          "scheduler": {
+            "beta_schedule": "squaredcos_cap_v2",
+            "clip_sample": true,
+            "eta": 0.0,
+            "inference": "DDIM",
+            "num_inference_steps": 16,
+            "num_train_timesteps": 100,
+            "prediction_type": "epsilon"
+          },
+          "selection": "fixed final EMA; no rollout-based checkpoint selection or hyperparameter changes",
+          "source_path": "data/raw/square_ph_low_dim_v15.hdf5",
+          "split_seed": 20261022,
+          "step_d_gate": {
+            "direction_consistent_both_seeds": true,
+            "min_drop_percentage_points_each_seed": 10,
+            "paired_bootstrap_95ci_lower_greater_than_zero": true
+          },
+          "task": "NutAssemblySquare",
+          "torch_cpu_threads": 2,
+          "train_seeds": [
+            42,
+            43
+          ],
+          "updates": 50000,
+          "validation_batches": 20,
+          "validation_every": 1000,
+          "warmup_updates": 500
+        },
+        "config_sha256": "aaaecb915ca53e2bbd54f38fc5e91fe415bc4583d069ef2cacefebe1e1fae824",
+        "git_commit_at_start": "575a7a630ba3b9ed993813d879d5b140c99fd5af",
+        "gpu_allocated_wall_hours": 0.33071332364194356,
+        "parameters": 16553233,
+        "peak_gpu_allocated_bytes": 707224576,
+        "peak_gpu_reserved_bytes": 771751936,
+        "seed": 42,
+        "source_sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951",
+        "status": "completed",
+        "train_sequences": 20009,
+        "updates_completed": 50000,
+        "validation_sequences": 2529,
+        "versions": {
+          "dataset": {
+            "file": "v1.5/square/ph/low_dim_v15.hdf5",
+            "repository": "https://huggingface.co/datasets/robomimic/robomimic_datasets",
+            "revision": "74fa018461f479cd9fd15b924a16103012096203",
+            "sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951"
+          },
+          "diffusion_policy": {
+            "commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+            "repository": "https://github.com/real-stanford/diffusion_policy",
+            "version": "official main snapshot"
+          },
+          "robomimic": {
+            "commit": "7c66e7a41b5d9dcc905b1a68346bfee1b49b79c9",
+            "head_at_audit": "d309eaecc18acf4152a830a895a6984b8ac71b05",
+            "repository": "https://github.com/ARISE-Initiative/robomimic",
+            "selection_reason": "v0.5 lang_utils downloads CLIP weights at import; v0.4 supports robosuite 1.5 without that side effect",
+            "v0.5_audited_commit": "ae5799f0fae05c4559ee1f9645b0f77eb5251929",
+            "version": "0.4.0"
+          },
+          "robosuite": {
+            "commit": "51cc01785bab80ffeed20da15e67d7dd4140e76a",
+            "head_at_audit": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
+            "repository": "https://github.com/ARISE-Initiative/robosuite",
+            "version": "1.5.1"
+          }
+        },
+        "wall_seconds": 1191.1186517919414
+      },
+      "wilson_success_95ci": [
+        0.25862789310193596,
+        0.5184955306900703
+      ]
+    },
+    "mixed_small_lag_seed43": {
+      "auxiliary_means": {
+        "gripper_sign_flips": 13.76,
+        "max_contact_count": 61.1,
+        "mean_action_delta_norm": 0.22446480691432952,
+        "mean_translation_command_delta_norm": 0.17980726152658463,
+        "min_nut_z": 0.822234137498974
+      },
+      "evaluation": {
+        "condition": "mixed_small_lag",
+        "config_sha256": "aaaecb915ca53e2bbd54f38fc5e91fe415bc4583d069ef2cacefebe1e1fae824",
+        "episodes": 50,
+        "inference_wall_seconds": 229.78327412949875,
+        "initial_conditions_sha256": "8376d0387cd8ef952016ac884ed768dbe29a2b40a792efa616db1a8cdb56d919",
+        "simulation_cpu_wall_seconds": 329.01722355466336,
+        "success_rate": 0.54,
+        "successes": 27,
+        "total_wall_seconds": 563.2337384889834,
+        "train_seed": 43
+      },
+      "local_stdout": {
+        "eval": {
+          "path": "/home/asus/EAI/d_alignment_pilot/reports/gate1/logs/eval_mixed_small_lag_seed43.txt",
+          "sha256": "f43156d828471b2d7a4dfaad5b470bb8511da71c84fafce33617dc8ff754ddc4"
+        },
+        "train": {
+          "path": "/home/asus/EAI/d_alignment_pilot/reports/gate1/logs/train_mixed_small_lag_seed43.txt",
+          "sha256": "846696bc7366a01cb88b7cc7b44124d83143bd511890a1a738c662a1cf32b2d5"
+        }
+      },
+      "nut_below_table_proxy_trials": 0,
+      "training": {
+        "checkpoint": "/home/asus/EAI/d_alignment_pilot/outputs/gate1/checkpoints/mixed_small_lag_seed43.pt",
+        "checkpoint_sha256": "4dc7150d16111d1f812f1bfe9c91b47ff3102573798ea5ac2caee3e6b019a3e2",
+        "condition": "mixed_small_lag",
+        "config": {
+          "anchor_episodes": 8,
+          "batch_size": 256,
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 9012,
+          "clean_gate": {
+            "ceiling_successes_at_least": 48,
+            "near_failure_successes_at_most": 5,
+            "required_episodes": 50
+          },
+          "contamination_seed": 731902,
+          "corruption_fraction": 0.5,
+          "dataset": "Square PH low_dim_v15",
+          "definition": "corrupted_action[t] = clean_action[t + delta]",
+          "ema": {
+            "inv_gamma": 1.0,
+            "max_value": 0.9999,
+            "power": 0.75
+          },
+          "eval_max_steps": 400,
+          "eval_parallel_envs": 1,
+          "eval_seeds": {
+            "count": 50,
+            "start": 100000
+          },
+          "eval_success": "ever env.is_success()['task'] during 400 normal control steps; record first hit and run full horizon",
+          "horizon": 16,
+          "lag_test_episodes": 16,
+          "large_deltas": [
+            -4,
+            4
+          ],
+          "lr_scheduler": "cosine",
+          "max_policy_trainings": 6,
+          "max_shift": 4,
+          "mixed_deltas": [
+            -1,
+            1,
+            -2,
+            2,
+            -4,
+            4
+          ],
+          "model": {
+            "cond_predict_scale": true,
+            "diffusion_step_embed_dim": 128,
+            "down_dims": [
+              128,
+              256,
+              512
+            ],
+            "kernel_size": 5,
+            "n_groups": 8
+          },
+          "n_action_steps": 8,
+          "n_latency_steps": 0,
+          "n_obs_steps": 2,
+          "normalization": "actions identity (already normalized OSC commands, official DP relative-action convention); obs shared clean training common-window per-coordinate limits [-1,1]; constant dimensions identity",
+          "oa_step_convention": true,
+          "object_slice": [
+            7,
+            14
+          ],
+          "obs_dim": 16,
+          "obs_keys": [
+            "object",
+            "robot0_eef_pos",
+            "robot0_eef_quat",
+            "robot0_gripper_qpos"
+          ],
+          "observation_selection_reason": "raw absolute object pose plus proprioception; exclude cache-dependent relative object fields before training, without changing any selected value",
+          "optimizer": {
+            "betas": [
+              0.95,
+              0.999
+            ],
+            "eps": 1e-08,
+            "lr": 0.0001,
+            "weight_decay": 1e-06
+          },
+          "pad_after": 0,
+          "pad_before": 0,
+          "preserve_official_validation": true,
+          "scheduler": {
+            "beta_schedule": "squaredcos_cap_v2",
+            "clip_sample": true,
+            "eta": 0.0,
+            "inference": "DDIM",
+            "num_inference_steps": 16,
+            "num_train_timesteps": 100,
+            "prediction_type": "epsilon"
+          },
+          "selection": "fixed final EMA; no rollout-based checkpoint selection or hyperparameter changes",
+          "source_path": "data/raw/square_ph_low_dim_v15.hdf5",
+          "split_seed": 20261022,
+          "step_d_gate": {
+            "direction_consistent_both_seeds": true,
+            "min_drop_percentage_points_each_seed": 10,
+            "paired_bootstrap_95ci_lower_greater_than_zero": true
+          },
+          "task": "NutAssemblySquare",
+          "torch_cpu_threads": 2,
+          "train_seeds": [
+            42,
+            43
+          ],
+          "updates": 50000,
+          "validation_batches": 20,
+          "validation_every": 1000,
+          "warmup_updates": 500
+        },
+        "config_sha256": "aaaecb915ca53e2bbd54f38fc5e91fe415bc4583d069ef2cacefebe1e1fae824",
+        "git_commit_at_start": "575a7a630ba3b9ed993813d879d5b140c99fd5af",
+        "gpu_allocated_wall_hours": 0.3294700735322355,
+        "parameters": 16553233,
+        "peak_gpu_allocated_bytes": 707224576,
+        "peak_gpu_reserved_bytes": 771751936,
+        "seed": 43,
+        "source_sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951",
+        "status": "completed",
+        "train_sequences": 20009,
+        "updates_completed": 50000,
+        "validation_sequences": 2529,
+        "versions": {
+          "dataset": {
+            "file": "v1.5/square/ph/low_dim_v15.hdf5",
+            "repository": "https://huggingface.co/datasets/robomimic/robomimic_datasets",
+            "revision": "74fa018461f479cd9fd15b924a16103012096203",
+            "sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951"
+          },
+          "diffusion_policy": {
+            "commit": "5ba07ac6661db573af695b419a7947ecb704690f",
+            "repository": "https://github.com/real-stanford/diffusion_policy",
+            "version": "official main snapshot"
+          },
+          "robomimic": {
+            "commit": "7c66e7a41b5d9dcc905b1a68346bfee1b49b79c9",
+            "head_at_audit": "d309eaecc18acf4152a830a895a6984b8ac71b05",
+            "repository": "https://github.com/ARISE-Initiative/robomimic",
+            "selection_reason": "v0.5 lang_utils downloads CLIP weights at import; v0.4 supports robosuite 1.5 without that side effect",
+            "v0.5_audited_commit": "ae5799f0fae05c4559ee1f9645b0f77eb5251929",
+            "version": "0.4.0"
+          },
+          "robosuite": {
+            "commit": "51cc01785bab80ffeed20da15e67d7dd4140e76a",
+            "head_at_audit": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c",
+            "repository": "https://github.com/ARISE-Initiative/robosuite",
+            "version": "1.5.1"
+          }
+        },
+        "wall_seconds": 1186.6398363690823
+      },
+      "wilson_success_95ci": [
+        0.40398871399157477,
+        0.6703034780777566
+      ]
+    }
+  },
+  "step_d_eligible_conditions": []
+}

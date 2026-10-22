@@ -49,3 +49,9 @@
 另外执行 `validate_resets.py`，50 个互异初态经正式评估 reset_to 路径逐一复核，
 所选状态分量均在 1e−5 容差内。该检查为 0 策略 episodes、0 action steps，
 不计入闭环策略评估回合。明细见 `eval_reset_integrity.json`。
+
+结案时执行只读 `final_audit.py`：29 个冻结文件/manifest、三个派生动作文件、
+原始数据、初态、5 个 checkpoint 与 250 份本地完整轨迹的哈希及记录一致。
+核对了正式每回合 400 步、CSV 成功/失败、初态 state hash 和 reset 容差；
+没有增加 optimizer update、环境步或 lag 估计。第六次训练的中断显式保留，
+不会因工件一致性审计通过而被计为完成。结果见 `final_audit.json`。

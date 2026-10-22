@@ -1,0 +1,26 @@
+{
+  "policy_training_updates": 0,
+  "records": [
+    {
+      "artifact": "clean",
+      "matches": true,
+      "sha256": "0b639d054b21c3dadeffaee386b93615969c8c7bf7edb489a1b2abff4e2c8bb3"
+    },
+    {
+      "artifact": "larger_lag",
+      "matches": true,
+      "sha256": "f57c4239919871cd16d030fcf58392fba93ba7fa4c7bf363a0df5d45ccf7d1fa"
+    },
+    {
+      "artifact": "mixed_small_lag",
+      "matches": true,
+      "sha256": "92fe5215e8c3fce81a178bb19347580d6ba4e859da00356d552509696f9bf078"
+    },
+    {
+      "artifact": "eval_initial_states",
+      "matches": true,
+      "sha256": "8376d0387cd8ef952016ac884ed768dbe29a2b40a792efa616db1a8cdb56d919"
+    }
+  ],
+  "resampling": false
+}

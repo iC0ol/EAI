@@ -90,3 +90,68 @@ bash d_alignment_pilot/scripts/run.sh scripts/materialize_frozen_data.py --verif
 策略 stdout 与完整 metrics/evaluation JSONL 重复的部分只留本地；Git 保存完整
 `metrics.jsonl`、逐初态 `evaluation.jsonl` 与 stdout 路径/SHA。若发生错误，另保留
 不重复的大致错误栈。其余策略训练和闭环评估命令只在实际执行后列出。
+
+## 有界顺序执行器与中断（已实际执行）
+
+Clean seed 42 通过 50 回合门槛后启动下列命令。driver 不重试、不重新调参，
+先按冻结 manifest 重新构建校验，再逐一执行下面的训练/测试。
+
+```bash
+bash d_alignment_pilot/scripts/run.sh scripts/run_remaining.py > d_alignment_pilot/reports/gate1/logs/pipeline.txt 2>&1
+```
+
+driver 实际调用的等价单项命令如下（**记录已执行顺序，不应在本 checkout 重跑**；
+run 目录及测试行存在时程序会拒绝覆盖）：
+
+```bash
+bash d_alignment_pilot/scripts/run.sh scripts/materialize_frozen_data.py --verify-reconstruction
+bash d_alignment_pilot/scripts/run.sh -m d_alignment.train --condition clean --seed 43
+bash d_alignment_pilot/scripts/run.sh -m d_alignment.evaluate --condition clean --seed 43
+bash d_alignment_pilot/scripts/run.sh scripts/clean_gate.py
+bash d_alignment_pilot/scripts/run.sh -m d_alignment.train --condition mixed_small_lag --seed 42
+bash d_alignment_pilot/scripts/run.sh -m d_alignment.evaluate --condition mixed_small_lag --seed 42
+bash d_alignment_pilot/scripts/run.sh -m d_alignment.train --condition mixed_small_lag --seed 43
+bash d_alignment_pilot/scripts/run.sh -m d_alignment.evaluate --condition mixed_small_lag --seed 43
+bash d_alignment_pilot/scripts/run.sh -m d_alignment.train --condition larger_lag --seed 42
+bash d_alignment_pilot/scripts/run.sh -m d_alignment.evaluate --condition larger_lag --seed 42
+bash d_alignment_pilot/scripts/run.sh -m d_alignment.train --condition larger_lag --seed 43
+```
+
+| 实际尝试 | 训练状态 | 最后确认更新 | 正式测试 |
+|---|---|---:|---:|
+| clean_seed42 | 完成 | 50,000 | 50×400 步 |
+| clean_seed43 | 完成 | 50,000 | 50×400 步 |
+| mixed_small_lag_seed42 | 完成 | 50,000 | 50×400 步 |
+| mixed_small_lag_seed43 | 完成 | 50,000 | 50×400 步 |
+| larger_lag_seed42 | 完成 | 50,000 | 50×400 步 |
+| larger_lag_seed43 | 中断，原因未知 | 42,400 | 未执行 |
+
+2026-10-23 继续时，`ps` 中无本实验 train/evaluate/driver 进程；旧执行会话返回
+`Unknown process id 19893`。最后 metric 写入时间为 2026-10-22 23:28:08 +08:00；
+没有最终 checkpoint、退出状态或 traceback。不能把缺失状态归因于 CUDA OOM、
+机器故障、模型发散或用户操作。`record_interruption.py` 仅核对现有工件并追加
+中断状态，保存原始 metadata，不运行 optimizer，不修改冻结训练代码。
+最后已确认工作量是 5×50,000+42,400=292,400 updates；未知额外工作不外推。
+
+driver 在第六次训练处中断，**没有**执行其后 Larger seed 43 评估、aggregate
+或 plot 分支。以下分析由本次续办单独执行，训练预算仍为六次，闭环仍为 250 回合。
+已有输出的统计预览也未触发训练或测试。
+
+```bash
+bash d_alignment_pilot/scripts/run.sh scripts/record_interruption.py > d_alignment_pilot/reports/gate1/logs/record_interruption.txt 2>&1
+bash d_alignment_pilot/scripts/run.sh scripts/aggregate.py > d_alignment_pilot/reports/gate1/logs/aggregate.txt 2>&1
+bash d_alignment_pilot/scripts/run.sh scripts/write_baseline_report.py
+bash d_alignment_pilot/scripts/run.sh scripts/plot_results.py > d_alignment_pilot/reports/gate1/logs/plot_results.txt 2>&1
+bash d_alignment_pilot/scripts/run.sh scripts/preservation.py > d_alignment_pilot/reports/gate1/logs/preservation_final.txt 2>&1
+bash d_alignment_pilot/scripts/run.sh scripts/final_audit.py > d_alignment_pilot/reports/gate1/logs/final_audit.txt 2>&1
+git diff --check
+```
+
+最终审计为只读工件检查：29 个冻结文件/manifest、三个派生动作 HDF5、原始
+HDF5、冻结初态、五个本地 checkpoint、250 个本地 NPZ 的 SHA256；核对所有
+测试 seed、400 步形状、成功记录、CSV 配对一致性、903 个原有文件和 main。
+详见 `final_audit.json`，它不是额外 rollout 或 lag recovery 测试。
+
+先前实际通过的 14 项数据/时序测试未因报告编辑而冒充重新执行。Step D 未达门槛，
+没有 lag 估计命令或 `lag_identification.md`。所有最终 checkpoint 路径/SHA 在
+对应 `outputs/gate1/*/run.json`；中断尝试不具备最终 checkpoint。

@@ -1,5 +1,5 @@
 {
-  "all_clean_seeds_evaluated": false,
+  "all_clean_seeds_evaluated": true,
   "checks": [
     {
       "episodes": 50,
@@ -7,10 +7,18 @@
       "reason": "usable_success_range",
       "seed": 42,
       "successes": 22
+    },
+    {
+      "episodes": 50,
+      "pass": true,
+      "reason": "usable_success_range",
+      "seed": 43,
+      "successes": 34
     }
   ],
   "clean_seeds_evaluated": [
-    42
+    42,
+    43
   ],
   "pass": true,
   "rule": {

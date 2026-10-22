@@ -64,3 +64,12 @@ GPU 已实际完成一次 batch=256 的 forward/backward，**0 次 optimizer upd
 
 启动器禁用 WandB、HF/Transformers 网络下载，缓存及未来临时构建目录均指向本项目。
 原始 HDF5、external、venv、缓存和 checkpoint 被本目录 `.gitignore` 排除。
+
+## 结案执行障碍
+
+部署本身成功，5 次训练及完整闭环评估完成。第六次 Larger seed 43 最后记录
+42,400 更新；2026-10-23 续办时其进程和 driver 均不存在，无最终 checkpoint，
+也无 traceback/退出状态。终止原因未知，不推断为驱动、显存、CPU 或数据问题。
+没有可恢复的 optimizer/EMA/RNG 状态，且六次尝试已耗尽，故不从头重跑。
+这是执行不完整，不能作为研究假设被否定的证据；见 `interruption.json`。
+结案可用磁盘约 245GiB，RAM available 约 23GiB；不能据此推断终止时资源状态。
