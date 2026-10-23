@@ -1,0 +1,4 @@
+# Preserve the preregistered CSV bytes; CSV writers use standard CRLF records.
+outputs/gate0/*.csv whitespace=cr-at-eol
+# Matplotlib emits trailing spaces inside SVG path strings.
+reports/gate0/*.svg -whitespace

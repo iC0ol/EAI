@@ -1,0 +1,27 @@
+{
+  "no_new_environment_or_policy_steps": true,
+  "read_only_post_stop_investigations": 1,
+  "initial_sim_state_byte_identical": true,
+  "expert_prefix_actions_byte_identical": true,
+  "initial_obs_max_abs": 0.0,
+  "time_error_max_s": 0.0,
+  "first_state_difference_step": 1,
+  "largest_flat_state_difference": {
+    "step": 42,
+    "index": 36,
+    "abs_error": 0.9318486625746405,
+    "component": "SquareNut free-joint angular velocity x (rad/s)"
+  },
+  "square_qpos_fork_position_error_m": 0.0017785352046943684,
+  "square_qpos_max_position_error_m": 0.002831568519374271,
+  "square_qpos_fork_geodesic_rotation_rad": 0.009121751926728806,
+  "square_qpos_max_geodesic_rotation_rad": 0.010503221474730668,
+  "live_observation_max_position_cache_gap_m": 0.0038297671905027342,
+  "source_observation_max_position_cache_gap_m": 0.0,
+  "early_step2": {
+    "observed_nut_error_m": 0.003829777240753174,
+    "direct_qpos_nut_error_m": 2.1382408121453044e-09,
+    "live_observation_to_qpos_gap_m": 0.0038297671905027342
+  },
+  "causal_claim_limit": "Early observed gap is predominantly sensor-cache timing; later physical drift is also present. Exact cause of physical drift is unresolved without a new authorized reconstruction study."
+}

@@ -1,0 +1,2 @@
+{"event": "started", "time": 1792739833.4167228, "branch_id": "A_S00_repeat0", "block": "A", "state_id": "S00", "checkpoint_seed": 42, "direction": "nominal", "sign": 0, "radius": 0.0, "stream": 0}
+{"event": "finished", "time": 1792739844.7578158, "branch_id": "A_S00_repeat0", "block": "A", "status": "invalid", "prefix_steps": 52, "suffix_steps": 0, "result_sha256": "a7c1d404ba43f058ea7a3fd90300ffd9ad7092df6188185206e134c8d0989c49"}

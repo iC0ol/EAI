@@ -1,0 +1,26 @@
+{
+  "decision": "Invalid / Engineering blocked",
+  "protocol_unchanged": true,
+  "all_12_states_retained": true,
+  "all_120_B_rows_retained": true,
+  "all_144_planned_branch_rows_retained": true,
+  "no_missing_Y_coerced_to_failure": true,
+  "budget_reservations": {
+    "A": 1,
+    "B": 0,
+    "total": 1
+  },
+  "complete_suffixes": 0,
+  "prefix_steps": 52,
+  "no_B_or_training": true,
+  "protected_tree_diff": [],
+  "preserved_branch_heads": {
+    "main": "687d75d53c0f30ea630762312b65dd3d0ff06d8b",
+    "research/d-gate1": "cea2502eee1dd6504035f4fcde47af1833a90b93",
+    "research/d-gate1-q2": "75c02714961460c9ec8ceb1aeb1c8c569869e798"
+  },
+  "local_trace_sha256_verified": true,
+  "read_only_diagnostic_simulation_steps": 0,
+  "registration_commit_verified": "b2a64fb3ad2f72b945233d76f7ad1fff84c27ad6",
+  "suffix_execution_commit": "946091eee089a5a5ebeddc5649a4d4afda0274a5"
+}

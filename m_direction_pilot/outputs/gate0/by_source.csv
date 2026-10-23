@@ -1,0 +1,7 @@
+source_episode,split,planned_states,prefix_attempts,prefix_fidelity_failures,complete_A_suffixes,complete_B_suffixes,observed_Y_pairs,scientific_evidence
+demo_191,development,2,1,1,0,0,0,unavailable
+demo_21,development,2,0,0,0,0,0,unavailable
+demo_56,development,2,0,0,0,0,0,unavailable
+demo_32,development,2,0,0,0,0,0,unavailable
+demo_105,held-out,2,0,0,0,0,0,unavailable
+demo_27,held-out,2,0,0,0,0,0,unavailable

@@ -1,0 +1,18 @@
+test_all_denominators_and_missing_labels (test_delivery.DeliveryTests) ... ok
+test_no_inference_after_fidelity_stop (test_delivery.DeliveryTests) ... ok
+test_registration_and_protected_trees (test_delivery.DeliveryTests) ... ok
+test_boundary_is_rejected_not_clipped (test_gate0.Gate0Tests) ... ok
+test_exclusive_outputs_and_budget_attempt_guard (test_gate0.Gate0Tests) ... ok
+test_frozen_episode_split_and_exact_budget (test_gate0.Gate0Tests) ... ok
+test_geodesic_angle_and_frame_rotation (test_gate0.Gate0Tests) ... ok
+test_hash_includes_dtype_shape_and_content (test_gate0.Gate0Tests) ... ok
+test_missing_outcomes_and_signed_improvements (test_gate0.Gate0Tests) ... ok
+test_original_policy_action_time_slice_and_rng (test_gate0.Gate0Tests) ... ok
+test_prefix_replays_real_expert_time_and_live_history (test_gate0.Gate0Tests) ... ok
+test_signed_mixed_norms_and_expert_other_coordinates (test_gate0.Gate0Tests) ... ok
+test_zero_repeat_rejects_success_flip (test_gate0.Gate0Tests) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.423s
+
+OK

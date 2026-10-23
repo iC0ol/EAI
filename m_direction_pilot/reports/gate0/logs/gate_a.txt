@@ -1,0 +1,10 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /home/asus/EAI/d_alignment_pilot/external/robosuite-51cc01785bab80ffeed20da15e67d7dd4140e76a/robosuite/scripts/setup_macros.py (macros.py:55)
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['object', 'robot0_eef_quat', 'robot0_gripper_qpos', 'robot0_eef_pos']
+{"branch_id": "A_S00_repeat0", "status": "invalid", "prefix_steps": 52, "suffix_steps": 0, "ever_success": null, "final_success": null, "error": "Expert prefix fidelity rejected: {'selected_observation_max_abs': 0.0048607345670461655, 'object_position_m': 0.003829777240753174, 'object_rotation_rad': 0.011237904239509466, 'state_max_abs': 0.9318486625746405}; already successful=False", "wall_seconds": 11.30867337808013}
+{"status": "Invalid/Engineering blocked", "comparisons": [], "attempted": 1, "completed_suffixes": 0, "stop_branch": "A_S00_repeat0", "reason": "Expert prefix fidelity rejected: {'selected_observation_max_abs': 0.0048607345670461655, 'object_position_m': 0.003829777240753174, 'object_rotation_rad': 0.011237904239509466, 'state_max_abs': 0.9318486625746405}; already successful=False", "wall_seconds": 11.51719924598001}

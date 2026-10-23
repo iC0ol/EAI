@@ -14,9 +14,18 @@ from m_direction.audit import Ledger, compare_zero
 from m_direction.assets import demo_obs
 from m_direction.policy import make_policy, predict
 from m_direction.replay import prefix_replay
+from m_direction.metrics import delta_loss
 
 
 class Gate0Tests(unittest.TestCase):
+    def test_missing_outcomes_and_signed_improvements(self):
+        self.assertIsNone(delta_loss(None, False))
+        self.assertIsNone(delta_loss(True, None))
+        self.assertEqual(delta_loss(False, True), -1)
+        self.assertEqual(delta_loss(True, False), 1)
+        self.assertEqual(delta_loss(True, True), 0)
+        with self.assertRaises(ValueError): delta_loss(3, True)
+
     def test_signed_mixed_norms_and_expert_other_coordinates(self):
         expert = np.array([.21, -.34, .13, .27, -.18, .04, 1.])
         for r in [.1, .2]:

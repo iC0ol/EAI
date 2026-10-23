@@ -11,3 +11,4 @@ __pycache__/
 *.npy
 *.mp4
 .venv*/
+.ledger.lock

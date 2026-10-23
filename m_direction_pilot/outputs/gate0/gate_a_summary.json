@@ -1,0 +1,9 @@
+{
+  "status": "Invalid/Engineering blocked",
+  "comparisons": [],
+  "attempted": 1,
+  "completed_suffixes": 0,
+  "stop_branch": "A_S00_repeat0",
+  "reason": "Expert prefix fidelity rejected: {'selected_observation_max_abs': 0.0048607345670461655, 'object_position_m': 0.003829777240753174, 'object_rotation_rad': 0.011237904239509466, 'state_max_abs': 0.9318486625746405}; already successful=False",
+  "wall_seconds": 11.51719924598001
+}
