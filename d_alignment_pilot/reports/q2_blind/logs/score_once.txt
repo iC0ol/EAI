@@ -1,0 +1,23 @@
+{
+  "methods": {
+    "xcorr": {
+      "exact": 0.8928571428571428,
+      "mae_steps": 0.10714285714285714
+    },
+    "arx": {
+      "exact": 1.0,
+      "mae_steps": 0.0
+    },
+    "zero": {
+      "exact": 0.14285714285714285,
+      "mae_steps": 2.0
+    }
+  },
+  "decision": {
+    "category": "A",
+    "decision": "No-Go for D posterior-supervision necessity in this setting",
+    "sufficient_methods": [
+      "arx"
+    ]
+  }
+}

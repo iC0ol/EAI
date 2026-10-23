@@ -1,0 +1,13 @@
+{
+  "anchor_fit_wall_seconds": 0.8843060149811208,
+  "blind_prediction_wall_seconds": 24.383516625966877,
+  "budget_start_utc": "2026-10-23T02:08:00+00:00",
+  "conservative_elapsed_seconds": 2979.484318,
+  "eight_hour_limit_seconds": 28800,
+  "new_environment_steps": 0,
+  "new_models_downloaded": 0,
+  "new_simulation_episodes": 0,
+  "policy_trainings": 0,
+  "report_generated_at_utc": "2026-10-23T02:57:39.484318+00:00",
+  "within_limit": true
+}

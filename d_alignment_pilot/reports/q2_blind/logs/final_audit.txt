@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-23T02:57:40.610100+00:00",
+  "conservative_elapsed_seconds": 2980.6101,
+  "within_eight_hours": true,
+  "original_tracked_files_unchanged": 1047,
+  "gate1_frozen_files_unchanged": 29,
+  "original_six_policy_checkpoint_hashes_unchanged": true,
+  "original_branch_tips_unchanged": {
+    "main": "687d75d53c0f30ea630762312b65dd3d0ff06d8b",
+    "research/d-gate1": "cea2502eee1dd6504035f4fcde47af1833a90b93"
+  },
+  "protocol_and_config_unchanged_since_preregistration": true,
+  "safe_estimator_code_unchanged_since_model_freeze": true,
+  "prediction_commit": "6c9b83c44f90f0dcb8f1add0f3f0943d9bb1458c",
+  "prediction_commit_precedes_truth_scoring": true,
+  "raw_prediction_records": 224,
+  "derived_conditions": 112,
+  "independent_sources": 16,
+  "same_times_per_candidate_and_method": true,
+  "all_112_blind_packet_hashes_verified": true,
+  "arx_oracle_action_exact_conditions": 112,
+  "new_policy_trainings": 0,
+  "new_simulation_episodes": 0,
+  "scope": "Artifact/hash/order audit only. No refit, estimator rerun, or second private-truth scoring."
+}
