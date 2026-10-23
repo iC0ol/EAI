@@ -1,0 +1,8 @@
+local/
+.cache/
+__pycache__/
+*.pyc
+.ledger.lock
+*.npz
+*.pt
+*.hdf5
