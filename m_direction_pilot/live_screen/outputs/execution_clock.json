@@ -1,0 +1,6 @@
+{
+  "utc_start": "2026-10-23T09:27:10.887534+00:00",
+  "start_unix": 1792747630.887512,
+  "deadline_unix": 1792789240,
+  "definition": "entire new execution, including model loading/prefixes; stricter absolute12h ceiling"
+}

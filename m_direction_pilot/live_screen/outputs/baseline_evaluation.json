@@ -1,0 +1,160 @@
+{
+  "scalar": {
+    "available": true,
+    "matrix": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "reason": "no parameters; all equal-norm scores tie",
+    "dev": {
+      "available_informative_states": [
+        [
+          "S04",
+          "demo_56"
+        ]
+      ],
+      "by_state": [
+        {
+          "state_id": "S04",
+          "source_episode": "demo_56",
+          "pairs": 11,
+          "correct": 0,
+          "violation": 0,
+          "tie": 11
+        }
+      ],
+      "raw_pairs": [
+        {
+          "state_id": "S04",
+          "source_episode": "demo_56",
+          "failed_branch": "LB1_S04_x_-1",
+          "safe_branch": "LB1_S04_x_+1",
+          "margin": 0.0,
+          "ranking": "tie"
+        },
+        {
+          "state_id": "S04",
+          "source_episode": "demo_56",
+          "failed_branch": "LB1_S04_x_-1",
+          "safe_branch": "LB1_S04_y_+1",
+          "margin": 0.0,
+          "ranking": "tie"
+        },
+        {
+          "state_id": "S04",
+          "source_episode": "demo_56",
+          "failed_branch": "LB1_S04_x_-1",
+          "safe_branch": "LB1_S04_y_-1",
+          "margin": 0.0,
+          "ranking": "tie"
+        },
+        {
+          "state_id": "S04",
+          "source_episode": "demo_56",
+          "failed_branch": "LB1_S04_x_-1",
+          "safe_branch": "LB1_S04_z_+1",
+          "margin": 0.0,
+          "ranking": "tie"
+        },
+        {
+          "state_id": "S04",
+          "source_episode": "demo_56",
+          "failed_branch": "LB1_S04_x_-1",
+          "safe_branch": "LB1_S04_z_-1",
+          "margin": 0.0,
+          "ranking": "tie"
+        },
+        {
+          "state_id": "S04",
+          "source_episode": "demo_56",
+          "failed_branch": "LB1_S04_x_-1",
+          "safe_branch": "LB2_S04_xy_+1",
+          "margin": 2.220446049250313e-16,
+          "ranking": "tie"
+        },
+        {
+          "state_id": "S04",
+          "source_episode": "demo_56",
+          "failed_branch": "LB1_S04_x_-1",
+          "safe_branch": "LB2_S04_xy_-1",
+          "margin": 2.220446049250313e-16,
+          "ranking": "tie"
+        },
+        {
+          "state_id": "S04",
+          "source_episode": "demo_56",
+          "failed_branch": "LB1_S04_x_-1",
+          "safe_branch": "LB2_S04_xz_+1",
+          "margin": 2.220446049250313e-16,
+          "ranking": "tie"
+        },
+        {
+          "state_id": "S04",
+          "source_episode": "demo_56",
+          "failed_branch": "LB1_S04_x_-1",
+          "safe_branch": "LB2_S04_xz_-1",
+          "margin": 2.220446049250313e-16,
+          "ranking": "tie"
+        },
+        {
+          "state_id": "S04",
+          "source_episode": "demo_56",
+          "failed_branch": "LB1_S04_x_-1",
+          "safe_branch": "LB2_S04_yz_+1",
+          "margin": 2.220446049250313e-16,
+          "ranking": "tie"
+        },
+        {
+          "state_id": "S04",
+          "source_episode": "demo_56",
+          "failed_branch": "LB1_S04_x_-1",
+          "safe_branch": "LB2_S04_yz_-1",
+          "margin": 2.220446049250313e-16,
+          "ranking": "tie"
+        }
+      ],
+      "informative_episodes": [
+        "demo_56"
+      ],
+      "all_comparable_ranks_correct": false
+    },
+    "heldout": null
+  },
+  "world_diag": {
+    "available": false,
+    "reason": "not fitted: earlier preregistered stage gate closed; not counted as defeated"
+  },
+  "world_full_PSD3x3": {
+    "available": false,
+    "reason": "not fitted: earlier preregistered stage gate closed; not counted as defeated"
+  },
+  "object_diag": {
+    "available": false,
+    "reason": "not fitted: earlier preregistered stage gate closed; not counted as defeated"
+  },
+  "object_full_PSD3x3": {
+    "available": false,
+    "reason": "not fitted: earlier preregistered stage gate closed; not counted as defeated"
+  },
+  "task_full_PSD3x3": {
+    "available": false,
+    "reason": "not fitted: earlier preregistered stage gate closed; not counted as defeated"
+  },
+  "contact_full_PSD3x3_if_reliable": {
+    "available": false,
+    "reason": "not fitted: earlier preregistered stage gate closed; not counted as defeated"
+  }
+}

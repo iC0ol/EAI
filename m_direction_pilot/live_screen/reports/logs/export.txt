@@ -1,0 +1,41 @@
+{
+  "utc": "2026-10-23T09:51:28.850713+00:00",
+  "passed": true,
+  "protected_historical_files": 113,
+  "original_branch_refs_unchanged": {
+    "main": "687d75d53c0f30ea630762312b65dd3d0ff06d8b",
+    "research/d-gate1": "cea2502eee1dd6504035f4fcde47af1833a90b93",
+    "research/d-gate1-q2": "75c02714961460c9ec8ceb1aeb1c8c569869e798",
+    "research/m-gate0": "537e6a6db79ed1e8aa884b4bad8a44f08b17c480",
+    "research/m-gate0-replay-recovery": "89d89fbcd6458e50ae875746dd1adcdb032ec121"
+  },
+  "attempts": 108,
+  "completed": 108,
+  "unused_allocations": 52,
+  "prefix_control_steps": 10080,
+  "suffix_control_steps": 33120,
+  "prefix_integration_steps": 252000,
+  "suffix_integration_steps": 828000,
+  "partial_integration_steps": 0,
+  "inference_calls": 4178,
+  "sum_branch_wall_seconds": 1369.8662543669343,
+  "sum_branch_process_cpu_seconds": 1420.8515994509992,
+  "sum_inference_wall_seconds": 564.3159052217379,
+  "sum_inference_gpu_seconds": 564.0343888549804,
+  "sum_simulation_wall_seconds": 493.3787492085248,
+  "peak_cuda_allocated_bytes": 100873216,
+  "peak_cuda_reserved_bytes": 111149056,
+  "execution_elapsed_seconds": 1440.8295257091522,
+  "execution_deadline_unix": 1792789240,
+  "forbidden_activity": {
+    "training_steps": 0,
+    "seed43_suffixes": 0,
+    "Gate1_suffixes": 0,
+    "source_state_restore_variants": 0,
+    "extra_states": 0,
+    "extra_radii": 0,
+    "new_data_collection": 0
+  },
+  "final_stage": "B2",
+  "decision": "Stop: directional information from fewer than two dev sources"
+}

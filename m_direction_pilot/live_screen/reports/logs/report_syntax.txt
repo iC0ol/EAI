@@ -1,0 +1,1 @@
+All live-screen script syntax parsed; zero simulation calls

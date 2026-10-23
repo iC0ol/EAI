@@ -1,0 +1,7 @@
+test_allocation_missingness_ledger_and_preserved_protocol (__main__.DeliveryTests) ... ok
+test_public_trace_roundtrip_every_array_and_branch (__main__.DeliveryTests) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 5.694s
+
+OK

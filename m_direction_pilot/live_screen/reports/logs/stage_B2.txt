@@ -1,0 +1,245 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /home/asus/EAI/d_alignment_pilot/external/robosuite-51cc01785bab80ffeed20da15e67d7dd4140e76a/robosuite/scripts/setup_macros.py (macros.py:55)
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S00_xy_-1", "status": "completed", "suffix_control_steps": 348, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 14.542106208857149}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S00_xy_+1", "status": "completed", "suffix_control_steps": 348, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.162015279289335}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S00_xz_-1", "status": "completed", "suffix_control_steps": 348, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.245929786004126}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S00_xz_+1", "status": "completed", "suffix_control_steps": 348, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.127013654913753}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S00_yz_-1", "status": "completed", "suffix_control_steps": 348, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.303618317004293}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S00_yz_+1", "status": "completed", "suffix_control_steps": 348, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.271400750149041}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S01_xy_-1", "status": "completed", "suffix_control_steps": 293, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.261027005966753}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S01_xy_+1", "status": "completed", "suffix_control_steps": 293, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.304423697758466}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S01_xz_-1", "status": "completed", "suffix_control_steps": 293, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.310596677940339}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S01_xz_+1", "status": "completed", "suffix_control_steps": 293, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.24522890523076}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S01_yz_-1", "status": "completed", "suffix_control_steps": 293, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.22104973020032}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S01_yz_+1", "status": "completed", "suffix_control_steps": 293, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.315753865987062}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S02_xy_-1", "status": "completed", "suffix_control_steps": 335, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.415211180225015}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S02_xy_+1", "status": "completed", "suffix_control_steps": 335, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.00102037936449}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S02_xz_-1", "status": "completed", "suffix_control_steps": 335, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.322298678569496}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S02_xz_+1", "status": "completed", "suffix_control_steps": 335, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.982273243833333}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S02_yz_-1", "status": "completed", "suffix_control_steps": 335, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.057289058808237}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S02_yz_+1", "status": "completed", "suffix_control_steps": 335, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.20455482089892}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S03_xy_-1", "status": "completed", "suffix_control_steps": 235, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 11.433874155860394}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S03_xy_+1", "status": "completed", "suffix_control_steps": 235, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 11.554112772922963}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S03_xz_-1", "status": "completed", "suffix_control_steps": 235, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 11.413961465004832}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S03_xz_+1", "status": "completed", "suffix_control_steps": 235, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 11.413318298757076}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S03_yz_-1", "status": "completed", "suffix_control_steps": 235, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 11.708237898070365}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S03_yz_+1", "status": "completed", "suffix_control_steps": 235, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 11.570494756102562}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S04_xy_-1", "status": "completed", "suffix_control_steps": 345, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.185037810821086}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S04_xy_+1", "status": "completed", "suffix_control_steps": 345, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.062936549074948}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S04_xz_-1", "status": "completed", "suffix_control_steps": 345, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.142528454307467}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S04_xz_+1", "status": "completed", "suffix_control_steps": 345, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.07705643819645}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S04_yz_-1", "status": "completed", "suffix_control_steps": 345, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.368006219156086}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S04_yz_+1", "status": "completed", "suffix_control_steps": 345, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.306808380875736}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S05_xy_-1", "status": "completed", "suffix_control_steps": 290, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.26493170298636}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S05_xy_+1", "status": "completed", "suffix_control_steps": 290, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.656404561828822}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S05_xz_-1", "status": "completed", "suffix_control_steps": 290, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.57386950403452}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S05_xz_+1", "status": "completed", "suffix_control_steps": 290, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.324697305914015}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S05_yz_-1", "status": "completed", "suffix_control_steps": 290, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.154263397213072}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S05_yz_+1", "status": "completed", "suffix_control_steps": 290, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.200151719152927}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S06_xy_-1", "status": "completed", "suffix_control_steps": 339, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.138317503035069}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S06_xy_+1", "status": "completed", "suffix_control_steps": 339, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.91858912911266}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S06_xz_-1", "status": "completed", "suffix_control_steps": 339, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.228377882856876}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S06_xz_+1", "status": "completed", "suffix_control_steps": 339, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.200901423115283}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S06_yz_-1", "status": "completed", "suffix_control_steps": 339, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.19614306697622}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S06_yz_+1", "status": "completed", "suffix_control_steps": 339, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 13.029577240813524}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S07_xy_-1", "status": "completed", "suffix_control_steps": 273, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.116690965835005}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S07_xy_+1", "status": "completed", "suffix_control_steps": 273, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 11.995427133981138}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S07_xz_-1", "status": "completed", "suffix_control_steps": 273, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.045235477853566}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S07_xz_+1", "status": "completed", "suffix_control_steps": 273, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.204105307813734}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S07_yz_-1", "status": "completed", "suffix_control_steps": 273, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 11.88200641516596}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_gripper_qpos', 'object', 'robot0_eef_quat', 'robot0_eef_pos']
+{"branch_id": "LB2_S07_yz_+1", "status": "completed", "suffix_control_steps": 273, "ever_success": true, "final_success": true, "error": null, "wall_seconds": 12.2787647228688}
+{"stage": "B2", "status": "Stop: directional information from fewer than two dev sources", "continue": false, "completed": 48, "attempted": 48, "wall_seconds": 624.1377702150494, "process_cpu_seconds": 642.357263784, "utc_finish": "2026-10-23T09:51:11.716293+00:00"}

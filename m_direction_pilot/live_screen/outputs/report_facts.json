@@ -1,0 +1,3491 @@
+{
+  "stages": {
+    "A": {
+      "stage": "A",
+      "status": "Technical qualification passed for proxy states only",
+      "continue": true,
+      "completed": 4,
+      "attempted": 4,
+      "comparisons": [
+        {
+          "state_id": "S00",
+          "initial_obs_max_abs": 0.0,
+          "trajectory_obs_max_abs": 0.0,
+          "trajectory_action_max_abs": 0.0,
+          "trajectory_position_m": 0.0,
+          "trajectory_rotation_rad": 4.2146848510894035e-08,
+          "state_max_abs": 0.0,
+          "noise_and_replan_identical": true,
+          "ever_success_identical": true,
+          "final_success_identical": true,
+          "all_success_flags_identical": true,
+          "all_actions_byte_identical": true,
+          "all_states_byte_identical": true,
+          "fork_snapshot_identical": true,
+          "passed": true,
+          "prefix_obs_max_abs": 0.0,
+          "prefix_action_max_abs": 0.0,
+          "prefix_raw_state_max_abs": 0.0,
+          "prefix_physical_position_m": 0.0,
+          "prefix_physical_rotation_rad": 0.0,
+          "prefix_controller_goal_max_abs": 0.0,
+          "prefix_gripper_action_max_abs": 0.0,
+          "suffix_raw_state_max_abs": 0.0,
+          "suffix_physical_position_m": 0.0,
+          "suffix_physical_rotation_rad": 0.0,
+          "suffix_controller_goal_max_abs": 0.0,
+          "suffix_gripper_action_max_abs": 0.0,
+          "history_max_abs": 0.0
+        },
+        {
+          "state_id": "S03",
+          "initial_obs_max_abs": 0.0,
+          "trajectory_obs_max_abs": 0.0,
+          "trajectory_action_max_abs": 0.0,
+          "trajectory_position_m": 0.0,
+          "trajectory_rotation_rad": 4.2146848510894035e-08,
+          "state_max_abs": 0.0,
+          "noise_and_replan_identical": true,
+          "ever_success_identical": true,
+          "final_success_identical": true,
+          "all_success_flags_identical": true,
+          "all_actions_byte_identical": true,
+          "all_states_byte_identical": true,
+          "fork_snapshot_identical": true,
+          "passed": true,
+          "prefix_obs_max_abs": 0.0,
+          "prefix_action_max_abs": 0.0,
+          "prefix_raw_state_max_abs": 0.0,
+          "prefix_physical_position_m": 0.0,
+          "prefix_physical_rotation_rad": 0.0,
+          "prefix_controller_goal_max_abs": 0.0,
+          "prefix_gripper_action_max_abs": 0.0,
+          "suffix_raw_state_max_abs": 0.0,
+          "suffix_physical_position_m": 0.0,
+          "suffix_physical_rotation_rad": 0.0,
+          "suffix_controller_goal_max_abs": 0.0,
+          "suffix_gripper_action_max_abs": 0.0,
+          "history_max_abs": 0.0
+        }
+      ],
+      "wall_seconds": 59.1860111951828,
+      "process_cpu_seconds": 61.26469315,
+      "utc_finish": "2026-10-23T09:28:10.074427+00:00"
+    },
+    "B1": {
+      "stage": "B1",
+      "status": "Eligible for B2",
+      "continue": true,
+      "completed": 56,
+      "attempted": 56,
+      "comparisons": [],
+      "directional_summary": {
+        "states": [
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 6,
+            "directionally_informative": false,
+            "all_perturbations_equal_nominal": true,
+            "perturbed_successes": 6,
+            "damage": 0,
+            "improvement": 0
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 6,
+            "directionally_informative": false,
+            "all_perturbations_equal_nominal": true,
+            "perturbed_successes": 6,
+            "damage": 0,
+            "improvement": 0
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 6,
+            "directionally_informative": false,
+            "all_perturbations_equal_nominal": true,
+            "perturbed_successes": 6,
+            "damage": 0,
+            "improvement": 0
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 6,
+            "directionally_informative": false,
+            "all_perturbations_equal_nominal": true,
+            "perturbed_successes": 6,
+            "damage": 0,
+            "improvement": 0
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 6,
+            "directionally_informative": true,
+            "all_perturbations_equal_nominal": false,
+            "perturbed_successes": 5,
+            "damage": 1,
+            "improvement": 0
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 6,
+            "directionally_informative": false,
+            "all_perturbations_equal_nominal": true,
+            "perturbed_successes": 6,
+            "damage": 0,
+            "improvement": 0
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 6,
+            "directionally_informative": false,
+            "all_perturbations_equal_nominal": true,
+            "perturbed_successes": 6,
+            "damage": 0,
+            "improvement": 0
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 6,
+            "directionally_informative": false,
+            "all_perturbations_equal_nominal": true,
+            "perturbed_successes": 6,
+            "damage": 0,
+            "improvement": 0
+          }
+        ],
+        "signed_rows": [
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S00_x_+1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S00_x_-1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S00_y_+1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S00_y_-1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S00_z_+1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S00_z_-1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S01_x_+1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S01_x_-1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S01_y_+1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S01_y_-1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S01_z_+1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S01_z_-1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S02_x_+1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S02_x_-1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S02_y_+1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S02_y_-1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S02_z_+1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S02_z_-1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S03_x_+1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S03_x_-1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S03_y_+1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S03_y_-1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S03_z_+1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S03_z_-1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S04_x_+1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 0,
+            "delta_Y": 1,
+            "branch_id": "LB1_S04_x_-1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S04_y_+1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S04_y_-1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S04_z_+1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S04_z_-1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S05_x_+1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S05_x_-1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S05_y_+1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S05_y_-1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S05_z_+1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S05_z_-1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S06_x_+1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S06_x_-1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S06_y_+1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S06_y_-1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S06_z_+1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S06_z_-1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S07_x_+1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S07_x_-1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S07_y_+1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S07_y_-1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S07_z_+1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S07_z_-1"
+          }
+        ],
+        "asymmetries": [
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "x",
+            "minus_Y": 0,
+            "plus_Y": 1
+          }
+        ],
+        "improvements": [],
+        "strong_asymmetry_warning": false,
+        "strong_improvement_warning": false,
+        "strong_symmetric_PSD_warning": false,
+        "directional_source_episodes": [
+          "demo_56"
+        ]
+      },
+      "wall_seconds": 725.4805012177676,
+      "process_cpu_seconds": 747.497570313,
+      "utc_finish": "2026-10-23T09:40:35.551585+00:00"
+    },
+    "B2": {
+      "stage": "B2",
+      "status": "Stop: directional information from fewer than two dev sources",
+      "continue": false,
+      "completed": 48,
+      "attempted": 48,
+      "comparisons": [],
+      "directional_summary": {
+        "states": [
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 12,
+            "directionally_informative": false,
+            "all_perturbations_equal_nominal": true,
+            "perturbed_successes": 12,
+            "damage": 0,
+            "improvement": 0
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 12,
+            "directionally_informative": false,
+            "all_perturbations_equal_nominal": true,
+            "perturbed_successes": 12,
+            "damage": 0,
+            "improvement": 0
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 12,
+            "directionally_informative": false,
+            "all_perturbations_equal_nominal": true,
+            "perturbed_successes": 12,
+            "damage": 0,
+            "improvement": 0
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 12,
+            "directionally_informative": false,
+            "all_perturbations_equal_nominal": true,
+            "perturbed_successes": 12,
+            "damage": 0,
+            "improvement": 0
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 12,
+            "directionally_informative": true,
+            "all_perturbations_equal_nominal": false,
+            "perturbed_successes": 11,
+            "damage": 1,
+            "improvement": 0
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 12,
+            "directionally_informative": false,
+            "all_perturbations_equal_nominal": true,
+            "perturbed_successes": 12,
+            "damage": 0,
+            "improvement": 0
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 12,
+            "directionally_informative": false,
+            "all_perturbations_equal_nominal": true,
+            "perturbed_successes": 12,
+            "damage": 0,
+            "improvement": 0
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "split": "development",
+            "nominal_Y": 1,
+            "perturbations": 12,
+            "directionally_informative": false,
+            "all_perturbations_equal_nominal": true,
+            "perturbed_successes": 12,
+            "damage": 0,
+            "improvement": 0
+          }
+        ],
+        "signed_rows": [
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S00_x_+1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S00_x_-1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S00_y_+1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S00_y_-1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S00_z_+1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S00_z_-1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "xy",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S00_xy_+1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "xy",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S00_xy_-1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "xz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S00_xz_+1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "xz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S00_xz_-1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "yz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S00_yz_+1"
+          },
+          {
+            "state_id": "S00",
+            "source_episode": "demo_191",
+            "direction": "yz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S00_yz_-1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S01_x_+1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S01_x_-1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S01_y_+1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S01_y_-1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S01_z_+1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S01_z_-1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "xy",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S01_xy_+1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "xy",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S01_xy_-1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "xz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S01_xz_+1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "xz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S01_xz_-1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "yz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S01_yz_+1"
+          },
+          {
+            "state_id": "S01",
+            "source_episode": "demo_191",
+            "direction": "yz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S01_yz_-1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S02_x_+1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S02_x_-1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S02_y_+1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S02_y_-1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S02_z_+1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S02_z_-1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "xy",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S02_xy_+1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "xy",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S02_xy_-1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "xz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S02_xz_+1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "xz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S02_xz_-1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "yz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S02_yz_+1"
+          },
+          {
+            "state_id": "S02",
+            "source_episode": "demo_21",
+            "direction": "yz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S02_yz_-1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S03_x_+1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S03_x_-1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S03_y_+1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S03_y_-1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S03_z_+1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S03_z_-1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "xy",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S03_xy_+1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "xy",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S03_xy_-1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "xz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S03_xz_+1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "xz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S03_xz_-1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "yz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S03_yz_+1"
+          },
+          {
+            "state_id": "S03",
+            "source_episode": "demo_21",
+            "direction": "yz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S03_yz_-1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S04_x_+1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 0,
+            "delta_Y": 1,
+            "branch_id": "LB1_S04_x_-1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S04_y_+1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S04_y_-1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S04_z_+1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S04_z_-1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "xy",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S04_xy_+1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "xy",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S04_xy_-1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "xz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S04_xz_+1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "xz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S04_xz_-1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "yz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S04_yz_+1"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "yz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S04_yz_-1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S05_x_+1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S05_x_-1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S05_y_+1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S05_y_-1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S05_z_+1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S05_z_-1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "xy",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S05_xy_+1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "xy",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S05_xy_-1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "xz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S05_xz_+1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "xz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S05_xz_-1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "yz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S05_yz_+1"
+          },
+          {
+            "state_id": "S05",
+            "source_episode": "demo_56",
+            "direction": "yz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S05_yz_-1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S06_x_+1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S06_x_-1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S06_y_+1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S06_y_-1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S06_z_+1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S06_z_-1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "xy",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S06_xy_+1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "xy",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S06_xy_-1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "xz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S06_xz_+1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "xz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S06_xz_-1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "yz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S06_yz_+1"
+          },
+          {
+            "state_id": "S06",
+            "source_episode": "demo_32",
+            "direction": "yz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S06_yz_-1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "x",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S07_x_+1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "x",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S07_x_-1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "y",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S07_y_+1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "y",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S07_y_-1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "z",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S07_z_+1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "z",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB1_S07_z_-1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "xy",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S07_xy_+1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "xy",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S07_xy_-1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "xz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S07_xz_+1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "xz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S07_xz_-1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "yz",
+            "sign": 1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S07_yz_+1"
+          },
+          {
+            "state_id": "S07",
+            "source_episode": "demo_32",
+            "direction": "yz",
+            "sign": -1,
+            "Y_nominal": 1,
+            "Y_perturbed": 1,
+            "delta_Y": 0,
+            "branch_id": "LB2_S07_yz_-1"
+          }
+        ],
+        "asymmetries": [
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "direction": "x",
+            "minus_Y": 0,
+            "plus_Y": 1
+          }
+        ],
+        "improvements": [],
+        "strong_asymmetry_warning": false,
+        "strong_improvement_warning": false,
+        "strong_symmetric_PSD_warning": false,
+        "directional_source_episodes": [
+          "demo_56"
+        ]
+      },
+      "wall_seconds": 624.1377702150494,
+      "process_cpu_seconds": 642.357263784,
+      "utc_finish": "2026-10-23T09:51:11.716293+00:00"
+    }
+  },
+  "summary": {
+    "states": [
+      {
+        "state_id": "S00",
+        "source_episode": "demo_191",
+        "split": "development",
+        "nominal_Y": 1,
+        "perturbations": 12,
+        "directionally_informative": false,
+        "all_perturbations_equal_nominal": true,
+        "perturbed_successes": 12,
+        "damage": 0,
+        "improvement": 0
+      },
+      {
+        "state_id": "S01",
+        "source_episode": "demo_191",
+        "split": "development",
+        "nominal_Y": 1,
+        "perturbations": 12,
+        "directionally_informative": false,
+        "all_perturbations_equal_nominal": true,
+        "perturbed_successes": 12,
+        "damage": 0,
+        "improvement": 0
+      },
+      {
+        "state_id": "S02",
+        "source_episode": "demo_21",
+        "split": "development",
+        "nominal_Y": 1,
+        "perturbations": 12,
+        "directionally_informative": false,
+        "all_perturbations_equal_nominal": true,
+        "perturbed_successes": 12,
+        "damage": 0,
+        "improvement": 0
+      },
+      {
+        "state_id": "S03",
+        "source_episode": "demo_21",
+        "split": "development",
+        "nominal_Y": 1,
+        "perturbations": 12,
+        "directionally_informative": false,
+        "all_perturbations_equal_nominal": true,
+        "perturbed_successes": 12,
+        "damage": 0,
+        "improvement": 0
+      },
+      {
+        "state_id": "S04",
+        "source_episode": "demo_56",
+        "split": "development",
+        "nominal_Y": 1,
+        "perturbations": 12,
+        "directionally_informative": true,
+        "all_perturbations_equal_nominal": false,
+        "perturbed_successes": 11,
+        "damage": 1,
+        "improvement": 0
+      },
+      {
+        "state_id": "S05",
+        "source_episode": "demo_56",
+        "split": "development",
+        "nominal_Y": 1,
+        "perturbations": 12,
+        "directionally_informative": false,
+        "all_perturbations_equal_nominal": true,
+        "perturbed_successes": 12,
+        "damage": 0,
+        "improvement": 0
+      },
+      {
+        "state_id": "S06",
+        "source_episode": "demo_32",
+        "split": "development",
+        "nominal_Y": 1,
+        "perturbations": 12,
+        "directionally_informative": false,
+        "all_perturbations_equal_nominal": true,
+        "perturbed_successes": 12,
+        "damage": 0,
+        "improvement": 0
+      },
+      {
+        "state_id": "S07",
+        "source_episode": "demo_32",
+        "split": "development",
+        "nominal_Y": 1,
+        "perturbations": 12,
+        "directionally_informative": false,
+        "all_perturbations_equal_nominal": true,
+        "perturbed_successes": 12,
+        "damage": 0,
+        "improvement": 0
+      }
+    ],
+    "signed_rows": [
+      {
+        "state_id": "S00",
+        "source_episode": "demo_191",
+        "direction": "x",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S00_x_+1"
+      },
+      {
+        "state_id": "S00",
+        "source_episode": "demo_191",
+        "direction": "x",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S00_x_-1"
+      },
+      {
+        "state_id": "S00",
+        "source_episode": "demo_191",
+        "direction": "y",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S00_y_+1"
+      },
+      {
+        "state_id": "S00",
+        "source_episode": "demo_191",
+        "direction": "y",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S00_y_-1"
+      },
+      {
+        "state_id": "S00",
+        "source_episode": "demo_191",
+        "direction": "z",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S00_z_+1"
+      },
+      {
+        "state_id": "S00",
+        "source_episode": "demo_191",
+        "direction": "z",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S00_z_-1"
+      },
+      {
+        "state_id": "S00",
+        "source_episode": "demo_191",
+        "direction": "xy",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S00_xy_+1"
+      },
+      {
+        "state_id": "S00",
+        "source_episode": "demo_191",
+        "direction": "xy",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S00_xy_-1"
+      },
+      {
+        "state_id": "S00",
+        "source_episode": "demo_191",
+        "direction": "xz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S00_xz_+1"
+      },
+      {
+        "state_id": "S00",
+        "source_episode": "demo_191",
+        "direction": "xz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S00_xz_-1"
+      },
+      {
+        "state_id": "S00",
+        "source_episode": "demo_191",
+        "direction": "yz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S00_yz_+1"
+      },
+      {
+        "state_id": "S00",
+        "source_episode": "demo_191",
+        "direction": "yz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S00_yz_-1"
+      },
+      {
+        "state_id": "S01",
+        "source_episode": "demo_191",
+        "direction": "x",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S01_x_+1"
+      },
+      {
+        "state_id": "S01",
+        "source_episode": "demo_191",
+        "direction": "x",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S01_x_-1"
+      },
+      {
+        "state_id": "S01",
+        "source_episode": "demo_191",
+        "direction": "y",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S01_y_+1"
+      },
+      {
+        "state_id": "S01",
+        "source_episode": "demo_191",
+        "direction": "y",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S01_y_-1"
+      },
+      {
+        "state_id": "S01",
+        "source_episode": "demo_191",
+        "direction": "z",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S01_z_+1"
+      },
+      {
+        "state_id": "S01",
+        "source_episode": "demo_191",
+        "direction": "z",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S01_z_-1"
+      },
+      {
+        "state_id": "S01",
+        "source_episode": "demo_191",
+        "direction": "xy",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S01_xy_+1"
+      },
+      {
+        "state_id": "S01",
+        "source_episode": "demo_191",
+        "direction": "xy",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S01_xy_-1"
+      },
+      {
+        "state_id": "S01",
+        "source_episode": "demo_191",
+        "direction": "xz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S01_xz_+1"
+      },
+      {
+        "state_id": "S01",
+        "source_episode": "demo_191",
+        "direction": "xz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S01_xz_-1"
+      },
+      {
+        "state_id": "S01",
+        "source_episode": "demo_191",
+        "direction": "yz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S01_yz_+1"
+      },
+      {
+        "state_id": "S01",
+        "source_episode": "demo_191",
+        "direction": "yz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S01_yz_-1"
+      },
+      {
+        "state_id": "S02",
+        "source_episode": "demo_21",
+        "direction": "x",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S02_x_+1"
+      },
+      {
+        "state_id": "S02",
+        "source_episode": "demo_21",
+        "direction": "x",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S02_x_-1"
+      },
+      {
+        "state_id": "S02",
+        "source_episode": "demo_21",
+        "direction": "y",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S02_y_+1"
+      },
+      {
+        "state_id": "S02",
+        "source_episode": "demo_21",
+        "direction": "y",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S02_y_-1"
+      },
+      {
+        "state_id": "S02",
+        "source_episode": "demo_21",
+        "direction": "z",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S02_z_+1"
+      },
+      {
+        "state_id": "S02",
+        "source_episode": "demo_21",
+        "direction": "z",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S02_z_-1"
+      },
+      {
+        "state_id": "S02",
+        "source_episode": "demo_21",
+        "direction": "xy",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S02_xy_+1"
+      },
+      {
+        "state_id": "S02",
+        "source_episode": "demo_21",
+        "direction": "xy",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S02_xy_-1"
+      },
+      {
+        "state_id": "S02",
+        "source_episode": "demo_21",
+        "direction": "xz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S02_xz_+1"
+      },
+      {
+        "state_id": "S02",
+        "source_episode": "demo_21",
+        "direction": "xz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S02_xz_-1"
+      },
+      {
+        "state_id": "S02",
+        "source_episode": "demo_21",
+        "direction": "yz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S02_yz_+1"
+      },
+      {
+        "state_id": "S02",
+        "source_episode": "demo_21",
+        "direction": "yz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S02_yz_-1"
+      },
+      {
+        "state_id": "S03",
+        "source_episode": "demo_21",
+        "direction": "x",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S03_x_+1"
+      },
+      {
+        "state_id": "S03",
+        "source_episode": "demo_21",
+        "direction": "x",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S03_x_-1"
+      },
+      {
+        "state_id": "S03",
+        "source_episode": "demo_21",
+        "direction": "y",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S03_y_+1"
+      },
+      {
+        "state_id": "S03",
+        "source_episode": "demo_21",
+        "direction": "y",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S03_y_-1"
+      },
+      {
+        "state_id": "S03",
+        "source_episode": "demo_21",
+        "direction": "z",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S03_z_+1"
+      },
+      {
+        "state_id": "S03",
+        "source_episode": "demo_21",
+        "direction": "z",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S03_z_-1"
+      },
+      {
+        "state_id": "S03",
+        "source_episode": "demo_21",
+        "direction": "xy",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S03_xy_+1"
+      },
+      {
+        "state_id": "S03",
+        "source_episode": "demo_21",
+        "direction": "xy",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S03_xy_-1"
+      },
+      {
+        "state_id": "S03",
+        "source_episode": "demo_21",
+        "direction": "xz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S03_xz_+1"
+      },
+      {
+        "state_id": "S03",
+        "source_episode": "demo_21",
+        "direction": "xz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S03_xz_-1"
+      },
+      {
+        "state_id": "S03",
+        "source_episode": "demo_21",
+        "direction": "yz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S03_yz_+1"
+      },
+      {
+        "state_id": "S03",
+        "source_episode": "demo_21",
+        "direction": "yz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S03_yz_-1"
+      },
+      {
+        "state_id": "S04",
+        "source_episode": "demo_56",
+        "direction": "x",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S04_x_+1"
+      },
+      {
+        "state_id": "S04",
+        "source_episode": "demo_56",
+        "direction": "x",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 0,
+        "delta_Y": 1,
+        "branch_id": "LB1_S04_x_-1"
+      },
+      {
+        "state_id": "S04",
+        "source_episode": "demo_56",
+        "direction": "y",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S04_y_+1"
+      },
+      {
+        "state_id": "S04",
+        "source_episode": "demo_56",
+        "direction": "y",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S04_y_-1"
+      },
+      {
+        "state_id": "S04",
+        "source_episode": "demo_56",
+        "direction": "z",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S04_z_+1"
+      },
+      {
+        "state_id": "S04",
+        "source_episode": "demo_56",
+        "direction": "z",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S04_z_-1"
+      },
+      {
+        "state_id": "S04",
+        "source_episode": "demo_56",
+        "direction": "xy",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S04_xy_+1"
+      },
+      {
+        "state_id": "S04",
+        "source_episode": "demo_56",
+        "direction": "xy",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S04_xy_-1"
+      },
+      {
+        "state_id": "S04",
+        "source_episode": "demo_56",
+        "direction": "xz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S04_xz_+1"
+      },
+      {
+        "state_id": "S04",
+        "source_episode": "demo_56",
+        "direction": "xz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S04_xz_-1"
+      },
+      {
+        "state_id": "S04",
+        "source_episode": "demo_56",
+        "direction": "yz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S04_yz_+1"
+      },
+      {
+        "state_id": "S04",
+        "source_episode": "demo_56",
+        "direction": "yz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S04_yz_-1"
+      },
+      {
+        "state_id": "S05",
+        "source_episode": "demo_56",
+        "direction": "x",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S05_x_+1"
+      },
+      {
+        "state_id": "S05",
+        "source_episode": "demo_56",
+        "direction": "x",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S05_x_-1"
+      },
+      {
+        "state_id": "S05",
+        "source_episode": "demo_56",
+        "direction": "y",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S05_y_+1"
+      },
+      {
+        "state_id": "S05",
+        "source_episode": "demo_56",
+        "direction": "y",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S05_y_-1"
+      },
+      {
+        "state_id": "S05",
+        "source_episode": "demo_56",
+        "direction": "z",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S05_z_+1"
+      },
+      {
+        "state_id": "S05",
+        "source_episode": "demo_56",
+        "direction": "z",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S05_z_-1"
+      },
+      {
+        "state_id": "S05",
+        "source_episode": "demo_56",
+        "direction": "xy",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S05_xy_+1"
+      },
+      {
+        "state_id": "S05",
+        "source_episode": "demo_56",
+        "direction": "xy",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S05_xy_-1"
+      },
+      {
+        "state_id": "S05",
+        "source_episode": "demo_56",
+        "direction": "xz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S05_xz_+1"
+      },
+      {
+        "state_id": "S05",
+        "source_episode": "demo_56",
+        "direction": "xz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S05_xz_-1"
+      },
+      {
+        "state_id": "S05",
+        "source_episode": "demo_56",
+        "direction": "yz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S05_yz_+1"
+      },
+      {
+        "state_id": "S05",
+        "source_episode": "demo_56",
+        "direction": "yz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S05_yz_-1"
+      },
+      {
+        "state_id": "S06",
+        "source_episode": "demo_32",
+        "direction": "x",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S06_x_+1"
+      },
+      {
+        "state_id": "S06",
+        "source_episode": "demo_32",
+        "direction": "x",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S06_x_-1"
+      },
+      {
+        "state_id": "S06",
+        "source_episode": "demo_32",
+        "direction": "y",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S06_y_+1"
+      },
+      {
+        "state_id": "S06",
+        "source_episode": "demo_32",
+        "direction": "y",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S06_y_-1"
+      },
+      {
+        "state_id": "S06",
+        "source_episode": "demo_32",
+        "direction": "z",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S06_z_+1"
+      },
+      {
+        "state_id": "S06",
+        "source_episode": "demo_32",
+        "direction": "z",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S06_z_-1"
+      },
+      {
+        "state_id": "S06",
+        "source_episode": "demo_32",
+        "direction": "xy",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S06_xy_+1"
+      },
+      {
+        "state_id": "S06",
+        "source_episode": "demo_32",
+        "direction": "xy",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S06_xy_-1"
+      },
+      {
+        "state_id": "S06",
+        "source_episode": "demo_32",
+        "direction": "xz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S06_xz_+1"
+      },
+      {
+        "state_id": "S06",
+        "source_episode": "demo_32",
+        "direction": "xz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S06_xz_-1"
+      },
+      {
+        "state_id": "S06",
+        "source_episode": "demo_32",
+        "direction": "yz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S06_yz_+1"
+      },
+      {
+        "state_id": "S06",
+        "source_episode": "demo_32",
+        "direction": "yz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S06_yz_-1"
+      },
+      {
+        "state_id": "S07",
+        "source_episode": "demo_32",
+        "direction": "x",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S07_x_+1"
+      },
+      {
+        "state_id": "S07",
+        "source_episode": "demo_32",
+        "direction": "x",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S07_x_-1"
+      },
+      {
+        "state_id": "S07",
+        "source_episode": "demo_32",
+        "direction": "y",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S07_y_+1"
+      },
+      {
+        "state_id": "S07",
+        "source_episode": "demo_32",
+        "direction": "y",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S07_y_-1"
+      },
+      {
+        "state_id": "S07",
+        "source_episode": "demo_32",
+        "direction": "z",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S07_z_+1"
+      },
+      {
+        "state_id": "S07",
+        "source_episode": "demo_32",
+        "direction": "z",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB1_S07_z_-1"
+      },
+      {
+        "state_id": "S07",
+        "source_episode": "demo_32",
+        "direction": "xy",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S07_xy_+1"
+      },
+      {
+        "state_id": "S07",
+        "source_episode": "demo_32",
+        "direction": "xy",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S07_xy_-1"
+      },
+      {
+        "state_id": "S07",
+        "source_episode": "demo_32",
+        "direction": "xz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S07_xz_+1"
+      },
+      {
+        "state_id": "S07",
+        "source_episode": "demo_32",
+        "direction": "xz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S07_xz_-1"
+      },
+      {
+        "state_id": "S07",
+        "source_episode": "demo_32",
+        "direction": "yz",
+        "sign": 1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S07_yz_+1"
+      },
+      {
+        "state_id": "S07",
+        "source_episode": "demo_32",
+        "direction": "yz",
+        "sign": -1,
+        "Y_nominal": 1,
+        "Y_perturbed": 1,
+        "delta_Y": 0,
+        "branch_id": "LB2_S07_yz_-1"
+      }
+    ],
+    "asymmetries": [
+      {
+        "state_id": "S04",
+        "source_episode": "demo_56",
+        "direction": "x",
+        "minus_Y": 0,
+        "plus_Y": 1
+      }
+    ],
+    "improvements": [],
+    "strong_asymmetry_warning": false,
+    "strong_improvement_warning": false,
+    "strong_symmetric_PSD_warning": false,
+    "directional_source_episodes": [
+      "demo_56"
+    ]
+  },
+  "audit": {
+    "utc": "2026-10-23T09:51:28.850713+00:00",
+    "passed": true,
+    "protected_historical_files": 113,
+    "original_branch_refs_unchanged": {
+      "main": "687d75d53c0f30ea630762312b65dd3d0ff06d8b",
+      "research/d-gate1": "cea2502eee1dd6504035f4fcde47af1833a90b93",
+      "research/d-gate1-q2": "75c02714961460c9ec8ceb1aeb1c8c569869e798",
+      "research/m-gate0": "537e6a6db79ed1e8aa884b4bad8a44f08b17c480",
+      "research/m-gate0-replay-recovery": "89d89fbcd6458e50ae875746dd1adcdb032ec121"
+    },
+    "attempts": 108,
+    "completed": 108,
+    "unused_allocations": 52,
+    "prefix_control_steps": 10080,
+    "suffix_control_steps": 33120,
+    "prefix_integration_steps": 252000,
+    "suffix_integration_steps": 828000,
+    "partial_integration_steps": 0,
+    "inference_calls": 4178,
+    "sum_branch_wall_seconds": 1369.8662543669343,
+    "sum_branch_process_cpu_seconds": 1420.8515994509992,
+    "sum_inference_wall_seconds": 564.3159052217379,
+    "sum_inference_gpu_seconds": 564.0343888549804,
+    "sum_simulation_wall_seconds": 493.3787492085248,
+    "peak_cuda_allocated_bytes": 100873216,
+    "peak_cuda_reserved_bytes": 111149056,
+    "execution_elapsed_seconds": 1440.8295257091522,
+    "execution_deadline_unix": 1792789240,
+    "forbidden_activity": {
+      "training_steps": 0,
+      "seed43_suffixes": 0,
+      "Gate1_suffixes": 0,
+      "source_state_restore_variants": 0,
+      "extra_states": 0,
+      "extra_radii": 0,
+      "new_data_collection": 0
+    },
+    "final_stage": "B2",
+    "decision": "Stop: directional information from fewer than two dev sources"
+  },
+  "states": [
+    {
+      "state_id": "S00",
+      "source_episode": "demo_191",
+      "t": 52,
+      "split": "development",
+      "source_phase": "grasp",
+      "attempts": 15,
+      "completed": 15,
+      "nominal_Y": 1,
+      "perturbations": 12,
+      "perturbed_successes": 12,
+      "damage": 0,
+      "improvements": 0,
+      "within_state_Y_heterogeneity": false,
+      "contact_frame_available": true,
+      "contact_reason": ""
+    },
+    {
+      "state_id": "S01",
+      "source_episode": "demo_191",
+      "t": 107,
+      "split": "development",
+      "source_phase": "insertion",
+      "attempts": 13,
+      "completed": 13,
+      "nominal_Y": 1,
+      "perturbations": 12,
+      "perturbed_successes": 12,
+      "damage": 0,
+      "improvements": 0,
+      "within_state_Y_heterogeneity": false,
+      "contact_frame_available": true,
+      "contact_reason": ""
+    },
+    {
+      "state_id": "S02",
+      "source_episode": "demo_21",
+      "t": 65,
+      "split": "development",
+      "source_phase": "grasp",
+      "attempts": 13,
+      "completed": 13,
+      "nominal_Y": 1,
+      "perturbations": 12,
+      "perturbed_successes": 12,
+      "damage": 0,
+      "improvements": 0,
+      "within_state_Y_heterogeneity": false,
+      "contact_frame_available": false,
+      "contact_reason": "ambiguous contact-normal second moment"
+    },
+    {
+      "state_id": "S03",
+      "source_episode": "demo_21",
+      "t": 165,
+      "split": "development",
+      "source_phase": "insertion",
+      "attempts": 15,
+      "completed": 15,
+      "nominal_Y": 1,
+      "perturbations": 12,
+      "perturbed_successes": 12,
+      "damage": 0,
+      "improvements": 0,
+      "within_state_Y_heterogeneity": false,
+      "contact_frame_available": true,
+      "contact_reason": ""
+    },
+    {
+      "state_id": "S04",
+      "source_episode": "demo_56",
+      "t": 55,
+      "split": "development",
+      "source_phase": "grasp",
+      "attempts": 13,
+      "completed": 13,
+      "nominal_Y": 1,
+      "perturbations": 12,
+      "perturbed_successes": 11,
+      "damage": 1,
+      "improvements": 0,
+      "within_state_Y_heterogeneity": true,
+      "contact_frame_available": true,
+      "contact_reason": ""
+    },
+    {
+      "state_id": "S05",
+      "source_episode": "demo_56",
+      "t": 110,
+      "split": "development",
+      "source_phase": "insertion",
+      "attempts": 13,
+      "completed": 13,
+      "nominal_Y": 1,
+      "perturbations": 12,
+      "perturbed_successes": 12,
+      "damage": 0,
+      "improvements": 0,
+      "within_state_Y_heterogeneity": false,
+      "contact_frame_available": true,
+      "contact_reason": ""
+    },
+    {
+      "state_id": "S06",
+      "source_episode": "demo_32",
+      "t": 61,
+      "split": "development",
+      "source_phase": "grasp",
+      "attempts": 13,
+      "completed": 13,
+      "nominal_Y": 1,
+      "perturbations": 12,
+      "perturbed_successes": 12,
+      "damage": 0,
+      "improvements": 0,
+      "within_state_Y_heterogeneity": false,
+      "contact_frame_available": true,
+      "contact_reason": ""
+    },
+    {
+      "state_id": "S07",
+      "source_episode": "demo_32",
+      "t": 127,
+      "split": "development",
+      "source_phase": "insertion",
+      "attempts": 13,
+      "completed": 13,
+      "nominal_Y": 1,
+      "perturbations": 12,
+      "perturbed_successes": 12,
+      "damage": 0,
+      "improvements": 0,
+      "within_state_Y_heterogeneity": false,
+      "contact_frame_available": true,
+      "contact_reason": ""
+    },
+    {
+      "state_id": "S08",
+      "source_episode": "demo_105",
+      "t": 71,
+      "split": "held-out",
+      "source_phase": "grasp",
+      "attempts": 0,
+      "completed": 0,
+      "nominal_Y": "",
+      "perturbations": 0,
+      "perturbed_successes": "",
+      "damage": "",
+      "improvements": "",
+      "within_state_Y_heterogeneity": "",
+      "contact_frame_available": "",
+      "contact_reason": "not measured"
+    },
+    {
+      "state_id": "S09",
+      "source_episode": "demo_105",
+      "t": 126,
+      "split": "held-out",
+      "source_phase": "insertion",
+      "attempts": 0,
+      "completed": 0,
+      "nominal_Y": "",
+      "perturbations": 0,
+      "perturbed_successes": "",
+      "damage": "",
+      "improvements": "",
+      "within_state_Y_heterogeneity": "",
+      "contact_frame_available": "",
+      "contact_reason": "not measured"
+    },
+    {
+      "state_id": "S10",
+      "source_episode": "demo_27",
+      "t": 78,
+      "split": "held-out",
+      "source_phase": "grasp",
+      "attempts": 0,
+      "completed": 0,
+      "nominal_Y": "",
+      "perturbations": 0,
+      "perturbed_successes": "",
+      "damage": "",
+      "improvements": "",
+      "within_state_Y_heterogeneity": "",
+      "contact_frame_available": "",
+      "contact_reason": "not measured"
+    },
+    {
+      "state_id": "S11",
+      "source_episode": "demo_27",
+      "t": 155,
+      "split": "held-out",
+      "source_phase": "insertion",
+      "attempts": 0,
+      "completed": 0,
+      "nominal_Y": "",
+      "perturbations": 0,
+      "perturbed_successes": "",
+      "damage": "",
+      "improvements": "",
+      "within_state_Y_heterogeneity": "",
+      "contact_frame_available": "",
+      "contact_reason": "not measured"
+    }
+  ],
+  "source_deviation": [
+    {
+      "state_id": "S00",
+      "source_episode": "demo_191",
+      "t": 52,
+      "native_selected_observation_max_abs": 0.0047179097309708595,
+      "native_eef_position_m": 0.00043872272362932563,
+      "native_object_position_m": 0.0020408586133271456,
+      "native_eef_rotation_rad": 0.0008102236712332018,
+      "native_object_rotation_rad": 0.009689744732768834,
+      "native_state_max_abs": 0.01839922038254653,
+      "native_time_s": 0.0,
+      "physical_selected_observation_max_abs": 0.0044581836074730225,
+      "physical_eef_position_m": 0.00020886298613250867,
+      "physical_object_position_m": 0.0017785376752543697,
+      "physical_eef_rotation_rad": 9.549191480009482e-05,
+      "physical_object_rotation_rad": 0.009121752663427305,
+      "physical_state_max_abs": 0.01839922038254653,
+      "physical_time_s": 0.0,
+      "native_physical_nut_gap_m": 0.0002851358070816248,
+      "native_physical_eef_gap_m": 0.00025813850001862144
+    },
+    {
+      "state_id": "S01",
+      "source_episode": "demo_191",
+      "t": 107,
+      "native_selected_observation_max_abs": 0.0023085791617631912,
+      "native_eef_position_m": 0.0023311905097216368,
+      "native_object_position_m": 0.0009362736018374562,
+      "native_eef_rotation_rad": 0.0005991453726797411,
+      "native_object_rotation_rad": 0.006494054287463273,
+      "native_state_max_abs": 0.08139210191395632,
+      "native_time_s": 0.0,
+      "physical_selected_observation_max_abs": 0.0020151807503530107,
+      "physical_eef_position_m": 0.0021197728524827235,
+      "physical_object_position_m": 0.0007029215555798474,
+      "physical_eef_rotation_rad": 0.0008993404021705939,
+      "physical_object_rotation_rad": 0.005669409339752938,
+      "physical_state_max_abs": 0.08139210191395632,
+      "physical_time_s": 0.0,
+      "native_physical_nut_gap_m": 0.00026099571221882323,
+      "native_physical_eef_gap_m": 0.0002679031787025302
+    },
+    {
+      "state_id": "S02",
+      "source_episode": "demo_21",
+      "t": 65,
+      "native_selected_observation_max_abs": 0.0007450729608535767,
+      "native_eef_position_m": 0.00010382266191300005,
+      "native_object_position_m": 0.00012032211088808253,
+      "native_eef_rotation_rad": 0.0006562072357764097,
+      "native_object_rotation_rad": 0.0015007618492812443,
+      "native_state_max_abs": 0.0037784746243851378,
+      "native_time_s": 0.0,
+      "physical_selected_observation_max_abs": 0.0009065159826585831,
+      "physical_eef_position_m": 9.792310516452595e-05,
+      "physical_object_position_m": 0.0001321051492507234,
+      "physical_eef_rotation_rad": 0.0003738631207742383,
+      "physical_object_rotation_rad": 0.0018396331585457274,
+      "physical_state_max_abs": 0.0037784746243851378,
+      "physical_time_s": 0.0,
+      "native_physical_nut_gap_m": 2.2626790737039435e-05,
+      "native_physical_eef_gap_m": 8.708901560333682e-06
+    },
+    {
+      "state_id": "S03",
+      "source_episode": "demo_21",
+      "t": 165,
+      "native_selected_observation_max_abs": 0.009680770337581635,
+      "native_eef_position_m": 0.003670817706733942,
+      "native_object_position_m": 0.003769260598346591,
+      "native_eef_rotation_rad": 0.00317332213704063,
+      "native_object_rotation_rad": 0.019816753707720357,
+      "native_state_max_abs": 0.030066350360404975,
+      "native_time_s": 0.0,
+      "physical_selected_observation_max_abs": 0.00956324207624,
+      "physical_eef_position_m": 0.0033958131646817493,
+      "physical_object_position_m": 0.0034305316044148937,
+      "physical_eef_rotation_rad": 0.0034399677934331637,
+      "physical_object_rotation_rad": 0.01945978302844421,
+      "physical_state_max_abs": 0.030066350360404975,
+      "physical_time_s": 0.0,
+      "native_physical_nut_gap_m": 0.0003432176184894559,
+      "native_physical_eef_gap_m": 0.0002847257576521119
+    },
+    {
+      "state_id": "S04",
+      "source_episode": "demo_56",
+      "t": 55,
+      "native_selected_observation_max_abs": 0.001335609587840736,
+      "native_eef_position_m": 0.00012347209849394858,
+      "native_object_position_m": 0.0004724460013676435,
+      "native_eef_rotation_rad": 0.00011831624458138822,
+      "native_object_rotation_rad": 0.0026716910222923367,
+      "native_state_max_abs": 1.364977755332117,
+      "native_time_s": 0.0,
+      "physical_selected_observation_max_abs": 0.001448569443246703,
+      "physical_eef_position_m": 4.699042920496934e-05,
+      "physical_object_position_m": 0.0001777399457146672,
+      "physical_eef_rotation_rad": 0.00014440642355421286,
+      "physical_object_rotation_rad": 0.002904570243668193,
+      "physical_state_max_abs": 1.364977755332117,
+      "physical_time_s": 0.0,
+      "native_physical_nut_gap_m": 0.0003011409276523982,
+      "native_physical_eef_gap_m": 0.0001701668059871436
+    },
+    {
+      "state_id": "S05",
+      "source_episode": "demo_56",
+      "t": 110,
+      "native_selected_observation_max_abs": 0.0034200921654701233,
+      "native_eef_position_m": 0.004205569624900818,
+      "native_object_position_m": 0.004423340316861868,
+      "native_eef_rotation_rad": 0.004913667078309023,
+      "native_object_rotation_rad": 0.007147322533819483,
+      "native_state_max_abs": 0.07234575336143051,
+      "native_time_s": 0.0,
+      "physical_selected_observation_max_abs": 0.003490364164078011,
+      "physical_eef_position_m": 0.004000962955961539,
+      "physical_object_position_m": 0.004171166888341676,
+      "physical_eef_rotation_rad": 0.005133601321814341,
+      "physical_object_rotation_rad": 0.007467436660231272,
+      "physical_state_max_abs": 0.07234575336143051,
+      "physical_time_s": 0.0,
+      "native_physical_nut_gap_m": 0.0005262905713243896,
+      "native_physical_eef_gap_m": 0.0006557288329146113
+    },
+    {
+      "state_id": "S06",
+      "source_episode": "demo_32",
+      "t": 61,
+      "native_selected_observation_max_abs": 0.00210723839700222,
+      "native_eef_position_m": 0.000223907467443496,
+      "native_object_position_m": 0.0009162052883766592,
+      "native_eef_rotation_rad": 0.0014665961071399986,
+      "native_object_rotation_rad": 0.0055404421014151545,
+      "native_state_max_abs": 0.0057799048329465474,
+      "native_time_s": 0.0,
+      "physical_selected_observation_max_abs": 0.0024105197157858922,
+      "physical_eef_position_m": 0.0004631639945042508,
+      "physical_object_position_m": 0.0008092725019329134,
+      "physical_eef_rotation_rad": 0.0007561805485862687,
+      "physical_object_rotation_rad": 0.005481811575624076,
+      "physical_state_max_abs": 0.0057799048329465474,
+      "physical_time_s": 0.0,
+      "native_physical_nut_gap_m": 0.0004291058286212852,
+      "native_physical_eef_gap_m": 0.0003523917966244977
+    },
+    {
+      "state_id": "S07",
+      "source_episode": "demo_32",
+      "t": 127,
+      "native_selected_observation_max_abs": 0.07657288759946823,
+      "native_eef_position_m": 0.025273997336626053,
+      "native_object_position_m": 0.02902578003704548,
+      "native_eef_rotation_rad": 0.023427581192846592,
+      "native_object_rotation_rad": 0.15571927198686306,
+      "native_state_max_abs": 0.12146435980656226,
+      "native_time_s": 0.0,
+      "physical_selected_observation_max_abs": 0.07666118673085182,
+      "physical_eef_position_m": 0.02529771603323421,
+      "physical_object_position_m": 0.028999214980077594,
+      "physical_eef_rotation_rad": 0.023007846398715958,
+      "physical_object_rotation_rad": 0.1558329262003561,
+      "physical_state_max_abs": 0.12146435980656226,
+      "physical_time_s": 0.0,
+      "native_physical_nut_gap_m": 0.0002141065834237227,
+      "native_physical_eef_gap_m": 0.00023024357518066434
+    }
+  ],
+  "episodes": [
+    {
+      "source_episode": "demo_105",
+      "split": "held-out",
+      "frozen_states": 2,
+      "attempts": 0,
+      "completed": 0,
+      "informative_states": 0,
+      "sign_asymmetries": 0,
+      "improvements": 0
+    },
+    {
+      "source_episode": "demo_191",
+      "split": "development",
+      "frozen_states": 2,
+      "attempts": 28,
+      "completed": 28,
+      "informative_states": 0,
+      "sign_asymmetries": 0,
+      "improvements": 0
+    },
+    {
+      "source_episode": "demo_21",
+      "split": "development",
+      "frozen_states": 2,
+      "attempts": 28,
+      "completed": 28,
+      "informative_states": 0,
+      "sign_asymmetries": 0,
+      "improvements": 0
+    },
+    {
+      "source_episode": "demo_27",
+      "split": "held-out",
+      "frozen_states": 2,
+      "attempts": 0,
+      "completed": 0,
+      "informative_states": 0,
+      "sign_asymmetries": 0,
+      "improvements": 0
+    },
+    {
+      "source_episode": "demo_32",
+      "split": "development",
+      "frozen_states": 2,
+      "attempts": 26,
+      "completed": 26,
+      "informative_states": 0,
+      "sign_asymmetries": 0,
+      "improvements": 0
+    },
+    {
+      "source_episode": "demo_56",
+      "split": "development",
+      "frozen_states": 2,
+      "attempts": 26,
+      "completed": 26,
+      "informative_states": 1,
+      "sign_asymmetries": 1,
+      "improvements": 0
+    }
+  ],
+  "baseline": {
+    "scalar": {
+      "available": true,
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "reason": "no parameters; all equal-norm scores tie",
+      "dev": {
+        "available_informative_states": [
+          [
+            "S04",
+            "demo_56"
+          ]
+        ],
+        "by_state": [
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "pairs": 11,
+            "correct": 0,
+            "violation": 0,
+            "tie": 11
+          }
+        ],
+        "raw_pairs": [
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "failed_branch": "LB1_S04_x_-1",
+            "safe_branch": "LB1_S04_x_+1",
+            "margin": 0.0,
+            "ranking": "tie"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "failed_branch": "LB1_S04_x_-1",
+            "safe_branch": "LB1_S04_y_+1",
+            "margin": 0.0,
+            "ranking": "tie"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "failed_branch": "LB1_S04_x_-1",
+            "safe_branch": "LB1_S04_y_-1",
+            "margin": 0.0,
+            "ranking": "tie"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "failed_branch": "LB1_S04_x_-1",
+            "safe_branch": "LB1_S04_z_+1",
+            "margin": 0.0,
+            "ranking": "tie"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "failed_branch": "LB1_S04_x_-1",
+            "safe_branch": "LB1_S04_z_-1",
+            "margin": 0.0,
+            "ranking": "tie"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "failed_branch": "LB1_S04_x_-1",
+            "safe_branch": "LB2_S04_xy_+1",
+            "margin": 2.220446049250313e-16,
+            "ranking": "tie"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "failed_branch": "LB1_S04_x_-1",
+            "safe_branch": "LB2_S04_xy_-1",
+            "margin": 2.220446049250313e-16,
+            "ranking": "tie"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "failed_branch": "LB1_S04_x_-1",
+            "safe_branch": "LB2_S04_xz_+1",
+            "margin": 2.220446049250313e-16,
+            "ranking": "tie"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "failed_branch": "LB1_S04_x_-1",
+            "safe_branch": "LB2_S04_xz_-1",
+            "margin": 2.220446049250313e-16,
+            "ranking": "tie"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "failed_branch": "LB1_S04_x_-1",
+            "safe_branch": "LB2_S04_yz_+1",
+            "margin": 2.220446049250313e-16,
+            "ranking": "tie"
+          },
+          {
+            "state_id": "S04",
+            "source_episode": "demo_56",
+            "failed_branch": "LB1_S04_x_-1",
+            "safe_branch": "LB2_S04_yz_-1",
+            "margin": 2.220446049250313e-16,
+            "ranking": "tie"
+          }
+        ],
+        "informative_episodes": [
+          "demo_56"
+        ],
+        "all_comparable_ranks_correct": false
+      },
+      "heldout": null
+    },
+    "world_diag": {
+      "available": false,
+      "reason": "not fitted: earlier preregistered stage gate closed; not counted as defeated"
+    },
+    "world_full_PSD3x3": {
+      "available": false,
+      "reason": "not fitted: earlier preregistered stage gate closed; not counted as defeated"
+    },
+    "object_diag": {
+      "available": false,
+      "reason": "not fitted: earlier preregistered stage gate closed; not counted as defeated"
+    },
+    "object_full_PSD3x3": {
+      "available": false,
+      "reason": "not fitted: earlier preregistered stage gate closed; not counted as defeated"
+    },
+    "task_full_PSD3x3": {
+      "available": false,
+      "reason": "not fitted: earlier preregistered stage gate closed; not counted as defeated"
+    },
+    "contact_full_PSD3x3_if_reliable": {
+      "available": false,
+      "reason": "not fitted: earlier preregistered stage gate closed; not counted as defeated"
+    }
+  }
+}
