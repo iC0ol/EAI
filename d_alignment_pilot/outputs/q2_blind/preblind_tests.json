@@ -1,0 +1,10 @@
+{
+  "failures": 0,
+  "junit_xml_path": "reports/q2_blind/preblind_tests_v2.xml",
+  "junit_xml_sha256": "3cd6b72a7dc904d84cf722b32119937781cb8f51eea10c740e6afb33b015308d",
+  "passed": true,
+  "revision_note": "Added three decision-rule tests before query construction; no estimator/model/protocol changes",
+  "test_data": "Synthetic fixtures only; zero independent lag-test labels or actions",
+  "test_source_sha256": "62d7b8e5cb6bef45b2cc4be0916fec10af27873ccc88dc5df1e76a2f8ffe934e",
+  "tests": 43
+}

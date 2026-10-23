@@ -1,0 +1,18 @@
+{
+  "anchor_access_probe_passed": true,
+  "fit_wall_seconds": 0.8843060149811208,
+  "frozen_at_utc": "2026-10-23T02:37:10.982640+00:00",
+  "model_sha256": "f3dd8adbd111911f5a35b5411f71d9fe1777c05029fb098af974072c1dc98243",
+  "query_samples_available_to_fitter": 0,
+  "safe_code_sha256": {
+    "__init__.py": "64102846acac9d6cae7171b1fe9a39cc08ecc4de2ae0c80a4236644285199082",
+    "common.py": "018dec4c3806aa0a88a827f2a5d8ae4147460fbd8d19e0ea1d137a8aaa8e00a7",
+    "estimate.py": "dd047510daeae7cae434432da7c54c20f9840db00e6db07e12dc221ba2a64b33",
+    "fit.py": "98dc62ffe2135b41fca4f439d65a087324f048df9bbff937345aae2f08a0e771",
+    "models.py": "e33e83dffe41138197a2745092154f6ff8cc28071e33b9e5cd8df199fcf1c22d",
+    "probe.py": "cc44c1fd7652580172e6aaf3e1a0636a6893d5f2c9cf2aed5f7722f4e467772b",
+    "signals.py": "dbd2cb13cb76dacee1596fe1c8177f24f8a66450f752acc296a5e16f75e1a5e2"
+  },
+  "selection_sha256": "bea13522117fe7bb4bc7ee77412a88f84c2a254dd62667a938a031ea9a856e51",
+  "settings_sha256": "8964e98140fd70eb179e689633b227b1d8c5a945cbea7a9b1a2aa7fe90f3eba9"
+}

@@ -1,0 +1,1 @@
+Anchor fit and active access probes passed; model frozen before query construction

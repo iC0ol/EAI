@@ -1,0 +1,37 @@
+{
+  "all_forbidden_reads_denied": true,
+  "gpu_devices_mounted": false,
+  "network_namespace": "unshared by bubblewrap",
+  "probes": [
+    {
+      "denied": true,
+      "exception": "FileNotFoundError",
+      "path": "/home/asus/EAI/d_alignment_pilot/data/raw/square_ph_low_dim_v15.hdf5"
+    },
+    {
+      "denied": true,
+      "exception": "FileNotFoundError",
+      "path": "/home/asus/EAI/d_alignment_pilot/data/manifests/injection_truth.json"
+    },
+    {
+      "denied": true,
+      "exception": "FileNotFoundError",
+      "path": "/home/asus/EAI/d_alignment_pilot/data/derived/q2_blind/private/truth.json"
+    },
+    {
+      "denied": true,
+      "exception": "FileNotFoundError",
+      "path": "/home/asus/EAI/d_alignment_pilot/configs/q2_blind/experiment.json"
+    },
+    {
+      "denied": true,
+      "exception": "FileNotFoundError",
+      "path": "/code/d_alignment/q2/build.py"
+    },
+    {
+      "denied": true,
+      "exception": "FileNotFoundError",
+      "path": "/code/d_alignment/q2/score.py"
+    }
+  ]
+}
