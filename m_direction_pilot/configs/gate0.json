@@ -1,0 +1,49 @@
+{
+  "version": "M-Gate0-v2",
+  "base_commit": "cea2502eee1dd6504035f4fcde47af1833a90b93",
+  "task": "NutAssemblySquare",
+  "data": "../d_alignment_pilot/data/raw/square_ph_low_dim_v15.hdf5",
+  "data_sha256": "45d8cabb6d57a4c03e839aa5e4b3e58fb60fe8bd20e1951fec563a2abfd14951",
+  "checkpoint_sha256": {
+    "42": "1b4cdec2acc38977c6d3be0ab651dad595a67ccdee97be5d41b2ebebd230bae9",
+    "43": "619d80882072f1a94e413e449736a9febab05d4c503238ede2cb758f686d8ade"
+  },
+  "selection_seed": 202610230,
+  "source_mask": "valid",
+  "source_episodes": 6,
+  "development_episodes": 4,
+  "r1": 0.2,
+  "r2": 0.1,
+  "b2_states": ["S08", "S09", "S10"],
+  "b3_states": ["S00", "S03"],
+  "b3_axis": "z",
+  "b4_states": ["S01", "S09"],
+  "max_B_suffixes": 120,
+  "max_A_suffixes": 30,
+  "A_primary_suffixes": 24,
+  "A_repair_max_suffixes": 6,
+  "episode_horizon": 400,
+  "torch_threads": 2,
+  "observation_dim": 16,
+  "n_obs_steps": 2,
+  "n_action_steps": 8,
+  "obs_keys": ["object", "robot0_eef_pos", "robot0_eef_quat", "robot0_gripper_qpos"],
+  "prefix_tolerances": {
+    "selected_observation_max_abs": 0.001,
+    "eef_position_m": 0.001,
+    "object_position_m": 0.001,
+    "eef_rotation_rad": 0.01,
+    "object_rotation_rad": 0.01,
+    "state_max_abs": 0.01,
+    "time_s": 1e-8
+  },
+  "zero_repeat_tolerances": {
+    "initial_obs_max_abs": 1e-5,
+    "trajectory_obs_max_abs": 1e-5,
+    "trajectory_action_max_abs": 1e-5,
+    "trajectory_position_m": 1e-5,
+    "trajectory_rotation_rad": 1e-4,
+    "state_max_abs": 1e-4
+  },
+  "wall_limit_hours": 48
+}
