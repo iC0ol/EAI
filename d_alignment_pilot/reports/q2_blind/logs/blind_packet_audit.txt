@@ -1,0 +1,1 @@
+Blind audit passed for 112 packets / 16 sources; no truth read

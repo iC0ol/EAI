@@ -1,0 +1,15 @@
+{
+  "all_candidate_history_phase_indices_in_bounds": true,
+  "all_numeric_inputs_finite": true,
+  "anonymous_sources": 16,
+  "cases_per_source": 7,
+  "nan_edge_count_in_all_inputs": 0,
+  "observations_unchanged_across_seven_conditions": true,
+  "passed": true,
+  "raw_clean_test_actions_opened": false,
+  "same_scoring_times_for_all_candidates": true,
+  "samples": 112,
+  "scope": "Anonymous input schema/shape/guard audit only; no truth or original HDF5 read",
+  "seven_conditions_equal_length_per_source": true,
+  "truth_opened": false
+}
