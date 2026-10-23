@@ -1,0 +1,11 @@
+attempt_id,kind,state_id,source_episode,planned,attempted,status,technical_pass,control_steps,integration_steps,wall_seconds,process_cpu_seconds,gpu_inference_calls,Y_ever,Y_final
+D1_P1_S00,prefix,S00,demo_191,True,True,completed,False,52,1300,7.407823374029249,7.744229314,0,,
+D2_P2_S00,prefix,S00,demo_191,True,True,completed,False,52,1300,5.318553913384676,5.550814522,0,,
+D3_P1_S02,prefix,S02,demo_21,True,False,not_run_R1_technical_gate_failed,,0,0,0.0,0.0,0,,
+D4_P1_S09,prefix,S09,demo_105,True,False,not_run_R1_technical_gate_failed,,0,0,0.0,0.0,0,,
+D5_P1_S02_repeat,prefix,S02,demo_21,True,False,not_run_R1_technical_gate_failed,,0,0,0.0,0.0,0,,
+D6_P1_S09_repeat,prefix,S09,demo_105,True,False,not_run_R1_technical_gate_failed,,0,0,0.0,0.0,0,,
+Z1_S02,suffix,S02,demo_21,True,False,not_run_R1_technical_gate_failed,,0,0,0.0,0.0,0,,
+Z2_S02_repeat,suffix,S02,demo_21,True,False,not_run_R1_technical_gate_failed,,0,0,0.0,0.0,0,,
+Z3_S09,suffix,S09,demo_105,True,False,not_run_R1_technical_gate_failed,,0,0,0.0,0.0,0,,
+Z4_S09_repeat,suffix,S09,demo_105,True,False,not_run_R1_technical_gate_failed,,0,0,0.0,0.0,0,,

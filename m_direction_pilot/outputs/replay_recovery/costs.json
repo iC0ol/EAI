@@ -1,0 +1,22 @@
+{
+  "prefix_attempts": 2,
+  "complete_prefixes": 2,
+  "invalid_attempts": 0,
+  "expert_control_steps": 104,
+  "integration_steps": 2600,
+  "simulated_prefix_seconds": 5.2,
+  "prefix_wall_seconds_sum": 12.726377287413925,
+  "prefix_process_cpu_seconds_sum": 13.295043836,
+  "run_loop_wall_seconds": 14.09877448529005,
+  "run_loop_process_cpu_seconds": 14.321875950999999,
+  "complete_zero_suffixes": 0,
+  "zero_control_steps": 0,
+  "gpu_inference_calls": 0,
+  "new_training": 0,
+  "directional_interventions": 0,
+  "Gate_B_branches": 0,
+  "preflight_real_integration_steps": 0,
+  "remaining_prefix_slots_not_used": 4,
+  "remaining_suffix_slots_not_used": 4,
+  "timing_scope": "Run loop excludes Python imports; each prefix includes creation/reset/telemetry, excludes final NPZ/hash saving. Full terminal wall not independently timed."
+}

@@ -1,0 +1,6 @@
+{
+  "max_flat_state_difference": 0.0,
+  "threshold": 1e-12,
+  "identical": true,
+  "scope": "P2 forced sensor calls, same registered initialization/expert commands; not a control rollout"
+}

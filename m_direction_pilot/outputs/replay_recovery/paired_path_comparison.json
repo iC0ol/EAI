@@ -1,0 +1,43 @@
+{
+  "P0_P1_states": {
+    "byte_identical": true,
+    "max_abs": 0.0
+  },
+  "P0_P1_native_obs": {
+    "byte_identical": true,
+    "max_abs": 0.0
+  },
+  "P0_P1_received_actions": {
+    "byte_identical": true,
+    "max_abs": 0.0
+  },
+  "P1_P2_states": {
+    "byte_identical": true,
+    "max_abs": 0.0
+  },
+  "physical_metrics": {
+    "fork_position_m": 0.0017785352046943684,
+    "max_position_m": 0.002831568519374271,
+    "fork_geodesic_rad": 0.009121751926728806,
+    "max_geodesic_rad": 0.010503221474730668,
+    "source_kinematic_observer_max_abs": 0.0
+  },
+  "lag_examples": [
+    {
+      "control_state_index": 1,
+      "boundary_time_s": 0.05000000000000003,
+      "native_nut_value_matches_preintegration_qpos_time": 0.04600000000000003,
+      "native_qpos_value_max_abs": 0.0,
+      "forced_nut_value_matches_preintegration_qpos_time": 0.04800000000000003,
+      "forced_qpos_value_max_abs": 0.0
+    },
+    {
+      "control_state_index": 2,
+      "boundary_time_s": 0.10000000000000007,
+      "native_nut_value_matches_preintegration_qpos_time": 0.09600000000000007,
+      "native_qpos_value_max_abs": 0.0,
+      "forced_nut_value_matches_preintegration_qpos_time": 0.09800000000000007,
+      "forced_qpos_value_max_abs": 0.0
+    }
+  ]
+}

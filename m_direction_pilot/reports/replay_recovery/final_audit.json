@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-23T08:26:55.757202+00:00",
+  "decision": "R-Fail / Engineering blocked",
+  "protocol_commit": "cdb04a6751652e7d497f6b5daabf73b0efa42b8a",
+  "execution_commit": "b906e6e86acb67871f1527ec38faee566280a851",
+  "new_simulation_steps_after_stop": 0,
+  "old_M_files_verified": 56,
+  "old_asset_hashes_verified": true,
+  "old_dependencies_and_D_spatial_unchanged": true,
+  "changed_paths_within_three_authorized_directories": true,
+  "old_branch_heads": {
+    "main": "687d75d53c0f30ea630762312b65dd3d0ff06d8b",
+    "research/d-gate1": "cea2502eee1dd6504035f4fcde47af1833a90b93",
+    "research/d-gate1-q2": "75c02714961460c9ec8ceb1aeb1c8c569869e798",
+    "research/m-gate0": "537e6a6db79ed1e8aa884b4bad8a44f08b17c480"
+  },
+  "prefix_attempts": 2,
+  "complete_prefixes": 2,
+  "prefix_control_steps": 104,
+  "integration_steps": 2600,
+  "suffix_attempts": 0,
+  "DP_inference_calls": 0,
+  "no_training_or_directional_interventions": true,
+  "R2_correctly_gated": true,
+  "raw_local_files_verified": 8,
+  "preflight_tests_passed": 6,
+  "post_stop_delivery_tests_passed": 5
+}

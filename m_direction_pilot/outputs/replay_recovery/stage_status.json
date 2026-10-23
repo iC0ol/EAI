@@ -1,0 +1,6 @@
+{
+  "R0": "read-only complete; 0 simulation steps",
+  "R1": "failed technical gate",
+  "R2": "not run; R1 physical reconstruction failed",
+  "zero_repeat": "not run; no technically valid fork"
+}

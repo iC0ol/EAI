@@ -1,0 +1,12 @@
+{
+  "technical_pass": false,
+  "P1_technical_pass": false,
+  "P2_executed": true,
+  "physical_thresholds_unchanged": true,
+  "new_failures": {
+    "state_max_abs": 0.9318486625746405,
+    "object_position_m": 0.002831564284861088,
+    "object_rotation_rad": 0.010503223786890557,
+    "state_aligned_obs_max_abs": 0.0047013480216264725
+  }
+}

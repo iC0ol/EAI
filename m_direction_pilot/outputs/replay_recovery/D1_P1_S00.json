@@ -1,0 +1,113 @@
+{
+  "attempt_id": "D1_P1_S00",
+  "stage": "R1",
+  "path": "P1",
+  "state_id": "S00",
+  "source_episode": "demo_191",
+  "t": 52,
+  "status": "completed",
+  "protocol_commit": "cdb04a6751652e7d497f6b5daabf73b0efa42b8a",
+  "execution_commit": "b906e6e86acb67871f1527ec38faee566280a851",
+  "cpu_seconds": 7.744229314,
+  "wall_seconds": 7.407823374029249,
+  "expert_control_steps": 52,
+  "integration_steps": 1300,
+  "gpu_inference_calls": 0,
+  "code_sha256": {
+    "scripts/replay_recovery/common.py": "b8cf2152d97e9a362a8f758991cae79a2e8bd5fee2fb2fc691fe09b362772700",
+    "scripts/replay_recovery/diagnostics.py": "d18cf8df90544119579db26c93f8c3b6aa5b22b4062dc4c9691fa39c5b2df57a",
+    "scripts/replay_recovery/r0.py": "0febabce8f259c9c4a7ae895d5a025a3e05c6b0401ee6c183262f0a47053ed63",
+    "scripts/replay_recovery/register.py": "cdbf00b3632912cbce3233de5ea84f2470116b785a359dc08030f7d8c278bdbb",
+    "scripts/replay_recovery/run_diagnostics.py": "d93cd13bf8afcfd1622eb53859d20ebe6b075e9e1921cc4a3521c7c366170741",
+    "scripts/replay_recovery/test_recovery.py": "f82c49b47bdce9246860c992b1fc12bd26a8ce4c7c368ee5f5ec7118ad855b48",
+    "scripts/replay_recovery/zero.py": "45fe99fadb7c6c32e9a3ac1094965b3c6e0c614d96e4e043ffd0611ab43aaa41"
+  },
+  "model": {
+    "nq": 23,
+    "nv": 21,
+    "na": 0,
+    "timestep": 0.002,
+    "integrator_enum": 0,
+    "solver_enum": 2,
+    "solver_iterations": 100,
+    "solver_tolerance": 1e-08,
+    "nut_qpos_adr": 9,
+    "nut_dof_adr": 9
+  },
+  "source_sync_observer_max_abs": 0.0,
+  "new_max_errors": {
+    "time_s": 0.0,
+    "state_max_abs": 0.9318486625746405,
+    "eef_position_m": 0.0003048677172046155,
+    "object_position_m": 0.002831564284861088,
+    "eef_rotation_rad": 0.00028173298219897583,
+    "object_rotation_rad": 0.010503223786890557,
+    "state_aligned_obs_max_abs": 0.0047013480216264725
+  },
+  "old_max_errors": {
+    "selected_observation_max_abs": 0.0048607345670461655,
+    "eef_position_m": 0.0009923662291839719,
+    "object_position_m": 0.003829777240753174,
+    "eef_rotation_rad": 0.001513428721394821,
+    "object_rotation_rad": 0.011237904239509466,
+    "state_max_abs": 0.9318486625746405,
+    "time_s": 0.0
+  },
+  "old_at_fork": {
+    "selected_observation_max_abs": 0.0047179097309708595,
+    "eef_position_m": 0.00043872272362932563,
+    "object_position_m": 0.0020408586133271456,
+    "eef_rotation_rad": 0.0008102236712332018,
+    "object_rotation_rad": 0.009689744732768834,
+    "state_max_abs": 0.01839922038254653,
+    "time_s": 0.0
+  },
+  "new_at_fork": {
+    "time_s": 0.0,
+    "state_max_abs": 0.01839922038254653,
+    "eef_position_m": 0.00020886631682515144,
+    "object_position_m": 0.0017785450909286737,
+    "eef_rotation_rad": 9.548927325540805e-05,
+    "object_rotation_rad": 0.009121752081546497,
+    "state_aligned_obs_max_abs": 0.0044581834226846695
+  },
+  "new_failures": {
+    "state_max_abs": 0.9318486625746405,
+    "object_position_m": 0.002831564284861088,
+    "object_rotation_rad": 0.010503223786890557,
+    "state_aligned_obs_max_abs": 0.0047013480216264725
+  },
+  "old_gate_A_would_pass": false,
+  "source_actions_byte_identical": true,
+  "already_successful_at_fork": false,
+  "technical_pass": false,
+  "fork_snapshot": {
+    "physical": "b27576b5561cfba7cc9ffa797b9b62a3d9ea0bcd677bee89bf31741e73245673",
+    "controller": "281da53dead8cdc3f3822dad5ec39fa8250710bb2ad33bcc1594982255096be6",
+    "synchronous_history": "364081d6435c5ef0073bfe6e0488f4eb14a8c03681619daf809f83f96531a9d8",
+    "cache": "7c1ce8c442bac33ef31c5caca27a25b3ba43842daf181777533e945c327d7f70"
+  },
+  "partial_control_integration_steps": 0,
+  "local_files": [
+    {
+      "path": "local/replay_recovery/D1_P1_S00/boundaries.json",
+      "sha256": "3cfff7471a07f47ee36db2f5df800bc8345cc1f38e5ce30b7d768cd676b69afd",
+      "bytes": 764973
+    },
+    {
+      "path": "local/replay_recovery/D1_P1_S00/reset_snapshots.json",
+      "sha256": "53111209062aebd1f4bcd29c56e43d1d53bc5b18ceb30beb389bee31e8d5e8d5",
+      "bytes": 36696
+    },
+    {
+      "path": "local/replay_recovery/D1_P1_S00/substeps.jsonl.gz",
+      "sha256": "61309946501aceeb32f324cca779bb6408648c5f2eefec8dec66028761c03bac",
+      "bytes": 5059671
+    },
+    {
+      "path": "local/replay_recovery/D1_P1_S00/trace.npz",
+      "sha256": "3260bbac1374fe363cb8690a22290d88d47cf145876fc3b128bb9d5b877b2990",
+      "bytes": 41784
+    }
+  ]
+}

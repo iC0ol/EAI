@@ -1,0 +1,10 @@
+test_all_local_telemetry_hashes_and_sample_lags (__main__.DeliveryTests) ... ok
+test_contact_normals_and_substeps_have_real_records (__main__.DeliveryTests) ... ok
+test_exact_budget_and_gated_suffixes (__main__.DeliveryTests) ... ok
+test_old_record_and_protocol_integrity (__main__.DeliveryTests) ... ok
+test_path_comparison_cannot_be_called_source_fidelity (__main__.DeliveryTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.068s
+
+OK

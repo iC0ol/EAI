@@ -1,0 +1,15 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /home/asus/EAI/d_alignment_pilot/external/robosuite-51cc01785bab80ffeed20da15e67d7dd4140e76a/robosuite/scripts/setup_macros.py (macros.py:55)
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_eef_pos', 'robot0_eef_quat', 'object', 'robot0_gripper_qpos']
+{"attempt_id": "D1_P1_S00", "status": "completed", "expert_control_steps": 52, "integration_steps": 1300, "technical_pass": false, "new_failures": {"state_max_abs": 0.9318486625746405, "object_position_m": 0.002831564284861088, "object_rotation_rad": 0.010503223786890557, "state_aligned_obs_max_abs": 0.0047013480216264725}, "error": null, "wall_seconds": 7.407823374029249}
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_eef_pos', 'robot0_eef_quat', 'object', 'robot0_gripper_qpos']
+{"attempt_id": "D2_P2_S00", "status": "completed", "expert_control_steps": 52, "integration_steps": 1300, "technical_pass": false, "new_failures": {"state_max_abs": 0.9318486625746405, "object_position_m": 0.002831564284861088, "object_rotation_rad": 0.010503223786890557, "state_aligned_obs_max_abs": 0.0047013480216264725}, "error": null, "wall_seconds": 5.318553913384676}
+{"status": "R-Fail / Engineering blocked", "utc_start": "2026-10-23T08:13:20.083955+00:00", "prefix_results": ["D1_P1_S00", "D2_P2_S00"], "suffix_results": [], "zero_comparisons": [], "reason": "Fixed official initialization leaves genuine physical reconstruction errors", "utc_finish": "2026-10-23T08:13:34.182687+00:00", "wall_seconds": 14.09877448529005, "cpu_seconds": 14.321875950999999, "new_training": 0, "directional_interventions": 0, "Gate_B_executed": false}

@@ -1,0 +1,17 @@
+{
+  "status": "R-Fail / Engineering blocked",
+  "utc_start": "2026-10-23T08:13:20.083955+00:00",
+  "prefix_results": [
+    "D1_P1_S00",
+    "D2_P2_S00"
+  ],
+  "suffix_results": [],
+  "zero_comparisons": [],
+  "reason": "Fixed official initialization leaves genuine physical reconstruction errors",
+  "utc_finish": "2026-10-23T08:13:34.182687+00:00",
+  "wall_seconds": 14.09877448529005,
+  "cpu_seconds": 14.321875950999999,
+  "new_training": 0,
+  "directional_interventions": 0,
+  "Gate_B_executed": false
+}

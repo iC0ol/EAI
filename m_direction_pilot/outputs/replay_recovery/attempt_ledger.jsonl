@@ -1,0 +1,4 @@
+{"utc": "2026-10-23T08:13:20.636446+00:00", "event": "start", "kind": "prefix", "attempt_id": "D1_P1_S00", "stage": "R1", "path": "P1", "state_id": "S00", "source_episode": "demo_191", "t": 52}
+{"utc": "2026-10-23T08:13:28.143030+00:00", "event": "finish", "kind": "prefix", "attempt_id": "D1_P1_S00", "status": "completed", "expert_control_steps": 52, "integration_steps": 1300, "result_sha256": "f77c756ee3a12d5633dfe20217f80744d167fc842583323f381b9a4f003aab82"}
+{"utc": "2026-10-23T08:13:28.611710+00:00", "event": "start", "kind": "prefix", "attempt_id": "D2_P2_S00", "stage": "R1", "path": "P2", "state_id": "S00", "source_episode": "demo_191", "t": 52}
+{"utc": "2026-10-23T08:13:34.028107+00:00", "event": "finish", "kind": "prefix", "attempt_id": "D2_P2_S00", "status": "completed", "expert_control_steps": 52, "integration_steps": 1300, "result_sha256": "c8255718cc680ef24a37f55db61354a6bffafaba2919203fe52a47978561c636"}

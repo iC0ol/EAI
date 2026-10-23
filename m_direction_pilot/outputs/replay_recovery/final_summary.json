@@ -1,0 +1,77 @@
+{
+  "decision": "R-Fail / Engineering blocked",
+  "scientific_M_verdict": "untested",
+  "protocol_commit": "cdb04a6751652e7d497f6b5daabf73b0efa42b8a",
+  "execution_commit": "b906e6e86acb67871f1527ec38faee566280a851",
+  "costs": {
+    "prefix_attempts": 2,
+    "complete_prefixes": 2,
+    "invalid_attempts": 0,
+    "expert_control_steps": 104,
+    "integration_steps": 2600,
+    "simulated_prefix_seconds": 5.2,
+    "prefix_wall_seconds_sum": 12.726377287413925,
+    "prefix_process_cpu_seconds_sum": 13.295043836,
+    "run_loop_wall_seconds": 14.09877448529005,
+    "run_loop_process_cpu_seconds": 14.321875950999999,
+    "complete_zero_suffixes": 0,
+    "zero_control_steps": 0,
+    "gpu_inference_calls": 0,
+    "new_training": 0,
+    "directional_interventions": 0,
+    "Gate_B_branches": 0,
+    "preflight_real_integration_steps": 0,
+    "remaining_prefix_slots_not_used": 4,
+    "remaining_suffix_slots_not_used": 4,
+    "timing_scope": "Run loop excludes Python imports; each prefix includes creation/reset/telemetry, excludes final NPZ/hash saving. Full terminal wall not independently timed."
+  },
+  "P0_P1": {
+    "P0_P1_states": {
+      "byte_identical": true,
+      "max_abs": 0.0
+    },
+    "P0_P1_native_obs": {
+      "byte_identical": true,
+      "max_abs": 0.0
+    },
+    "P0_P1_received_actions": {
+      "byte_identical": true,
+      "max_abs": 0.0
+    },
+    "P1_P2_states": {
+      "byte_identical": true,
+      "max_abs": 0.0
+    },
+    "physical_metrics": {
+      "fork_position_m": 0.0017785352046943684,
+      "max_position_m": 0.002831568519374271,
+      "fork_geodesic_rad": 0.009121751926728806,
+      "max_geodesic_rad": 0.010503221474730668,
+      "source_kinematic_observer_max_abs": 0.0
+    },
+    "lag_examples": [
+      {
+        "control_state_index": 1,
+        "boundary_time_s": 0.05000000000000003,
+        "native_nut_value_matches_preintegration_qpos_time": 0.04600000000000003,
+        "native_qpos_value_max_abs": 0.0,
+        "forced_nut_value_matches_preintegration_qpos_time": 0.04800000000000003,
+        "forced_qpos_value_max_abs": 0.0
+      },
+      {
+        "control_state_index": 2,
+        "boundary_time_s": 0.10000000000000007,
+        "native_nut_value_matches_preintegration_qpos_time": 0.09600000000000007,
+        "native_qpos_value_max_abs": 0.0,
+        "forced_nut_value_matches_preintegration_qpos_time": 0.09800000000000007,
+        "forced_qpos_value_max_abs": 0.0
+      }
+    ]
+  },
+  "R2_executed": false,
+  "zero_repeat_executed": false,
+  "historical_M_hashes_unchanged": 56,
+  "source_missing_data_prevents_exact_causal_attribution": true,
+  "new_simulation_steps_during_analysis": 0,
+  "stop_for_researcher_review": true
+}
