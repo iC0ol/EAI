@@ -1,0 +1,21 @@
+test_attempt_guard_includes_failures_and_stage_caps (__main__.CoreTests) ... ok
+test_fixed_fits_are_dev_only_and_contact_missing_is_unavailable (__main__.CoreTests) ... FAIL
+test_full3x3_design_and_frame_norm (__main__.CoreTests) ... ok
+test_improvement_is_negative_and_uninformative_stops (__main__.CoreTests) ... ok
+test_perturbations_equal_norm_other4_unchanged_and_clip_rejected (__main__.CoreTests) ... ok
+test_plan_split_and_all160_nominal_accounting (__main__.CoreTests) ... ok
+test_preregistration_and_absolute_deadline (__main__.CoreTests) ... ok
+test_warning_requires_different_sources_and_directions (__main__.CoreTests) ... ok
+
+======================================================================
+FAIL: test_fixed_fits_are_dev_only_and_contact_missing_is_unavailable (__main__.CoreTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/asus/EAI/m_direction_pilot/live_screen/scripts/test_core.py", line 91, in test_fixed_fits_are_dev_only_and_contact_missing_is_unavailable
+    self.assertTrue(fits[name]['available'],fits[name])
+AssertionError: False is not true : {'available': False, 'matrix': None, 'optimizer_success': False, 'optimizer_message': 'Iteration limit reached', 'objective': 0.12614832995390354, 'iterations': 2000, 'scope': 'dev-only shared fixed-frame exploratory binary ranking, not probability/Q/Hessian', 'dev_ranks': None}
+
+----------------------------------------------------------------------
+Ran 8 tests in 6.917s
+
+FAILED (failures=1)
