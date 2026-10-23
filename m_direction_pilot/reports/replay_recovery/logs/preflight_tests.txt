@@ -1,0 +1,19 @@
+test_historical_M_all_files_readonly (__main__.RecoveryTests) ... ok
+test_ledger_budget_duplicate_and_exclusive_results (__main__.RecoveryTests) ... ok
+test_real_kinematic_observer_preflight_zero_steps (__main__.RecoveryTests) ... [robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /home/asus/EAI/d_alignment_pilot/external/robosuite-51cc01785bab80ffeed20da15e67d7dd4140e76a/robosuite/scripts/setup_macros.py (macros.py:55)
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+ok
+test_registered_budget_counts_suffix_prefixes (__main__.RecoveryTests) ... ok
+test_sensor_wrapper_preserves_modality_and_values (__main__.RecoveryTests) ... ok
+test_step_guard_disallows_unregistered_initialization (__main__.RecoveryTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 3.986s
+
+OK
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['object', 'robot0_eef_quat', 'robot0_gripper_qpos', 'robot0_eef_pos']
