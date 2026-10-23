@@ -1,0 +1,13 @@
+2026-10-23; command: bash m_direction_pilot/scripts/run.sh m_direction_pilot/tests/test_gate0.py
+Before all real M prefix steps and suffixes.
+test_boundary_is_rejected_not_clipped ... ok
+test_exclusive_outputs_and_budget_attempt_guard ... ok
+test_frozen_episode_split_and_exact_budget ... ok
+test_geodesic_angle_and_frame_rotation ... ok
+test_hash_includes_dtype_shape_and_content ... ok
+test_original_policy_action_time_slice_and_rng ... ok
+test_prefix_replays_real_expert_time_and_live_history ... ok
+test_signed_mixed_norms_and_expert_other_coordinates ... ok
+test_zero_repeat_rejects_success_flip ... ok
+Ran 9 tests in 0.393s; OK; exit_code=0.
+This is a compact transcription of the captured command output, not a second run.

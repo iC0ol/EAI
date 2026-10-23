@@ -4,7 +4,7 @@ from scipy.spatial.transform import Rotation
 
 def quat_angle(a, b):
     """Geodesic angle, xyzw; sign invariant, never quaternion subtraction."""
-    a, b = np.asarray(a), np.asarray(b)
+    a, b = np.asarray(a, dtype=np.float64), np.asarray(b, dtype=np.float64)
     dot = np.abs(np.sum(a * b, axis=-1) / (np.linalg.norm(a, axis=-1) * np.linalg.norm(b, axis=-1)))
     return 2 * np.arccos(np.clip(dot, 0., 1.))
 

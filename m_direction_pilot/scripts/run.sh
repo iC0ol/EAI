@@ -10,6 +10,7 @@ export HF_HOME="$M_ROOT/.cache/huggingface" HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLIN
 export WANDB_MODE=disabled WANDB_DISABLED=true
 export OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 NUMBA_NUM_THREADS=2
 export NUMBA_CACHE_DIR="$M_ROOT/.cache/numba" MUJOCO_GL=egl
+export CUBLAS_WORKSPACE_CONFIG=:4096:8
 export MPLCONFIGDIR="$M_ROOT/.cache/matplotlib"
 mkdir -p "$TMPDIR" "$NUMBA_CACHE_DIR"
 exec "$D_ROOT/.venv/bin/python" "$@"
