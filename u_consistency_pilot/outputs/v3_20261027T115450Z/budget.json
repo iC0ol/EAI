@@ -1,23 +1,23 @@
 {
   "run_id": "20261027T115450Z",
   "started_at_utc": "2026-10-27T11:54:50+00:00",
-  "ended_at_utc": "2026-10-27T16:53:46.304929+00:00",
+  "ended_at_utc": "2026-10-27T17:02:16.000067+00:00",
   "timezone_for_user": "Asia/Shanghai",
-  "wall_seconds_through_finalization": 17936.304929,
+  "wall_seconds_through_finalization": 18446.000067,
   "wall_limit_seconds": 43200,
   "report_reserve_seconds": 2700,
-  "gpu_process_seconds_upper_bound": 145.76314286189154,
+  "gpu_process_seconds_upper_bound": 183.595561303664,
   "gpu_limit_seconds": 36000,
   "gpu_accounting": "2-second samples; counts entire lifetime of this task CUDA processes, including idle context time; interval edges conservatively padded by a sample",
   "resource_watch": {
     "started_at_utc": "2026-10-27T12:06:44.434815+00:00",
-    "gpu_process_card_seconds_upper_bound": 145.76314286189154,
+    "gpu_process_card_seconds_upper_bound": 183.595561303664,
     "peak_task_process_rss_sum_bytes": 1625194496,
     "peak_task_vram_bytes": 759169024,
     "peak_foreign_vram_bytes": 742391808,
     "minimum_host_mem_available_bytes": 24553209856,
-    "peak_task_disk_allocated_bytes": 28247547904,
-    "samples": 8490,
+    "peak_task_disk_allocated_bytes": 66567041024,
+    "samples": 8690,
     "gpu_intervals": [
       {
         "started_at_utc": "2026-10-27T12:20:07.537889+00:00",
@@ -90,17 +90,16 @@
         "ended_at_utc": "2026-10-27T14:24:23.480323+00:00"
       }
     ],
-    "last_at_utc": "2026-10-27T16:53:44.248269+00:00",
+    "last_at_utc": "2026-10-27T17:02:13.267886+00:00",
     "task_pids": [
-      1304773,
-      1548335
+      1549074
     ],
-    "task_rss_sum_bytes": 423878656,
+    "task_rss_sum_bytes": 20709376,
     "task_vram_bytes": 0,
     "foreign_vram_bytes": 310378496,
-    "host_mem_available_bytes": 25877708800,
-    "disk_free_bytes": 243819765760,
-    "disk_allocated_bytes": 20265385984,
+    "host_mem_available_bytes": 26118168576,
+    "disk_free_bytes": 197495336960,
+    "disk_allocated_bytes": 66567041024,
     "gpu_query_error": null,
     "open_gpu_interval": null,
     "legacy_sampled_gpu_seconds": 28.50008324580267,
@@ -157,6 +156,19 @@
         "peak_process_rss_kib": 1272848,
         "peak_torch_allocated_bytes": 105427968,
         "peak_torch_reserved_bytes": 109051904
+      },
+      {
+        "pid": 1549080,
+        "start_epoch": 1793120168.0839868,
+        "started_at_utc": "2026-10-27T16:56:08.083990+00:00",
+        "stage": "assets",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793120205.9164052,
+        "ended_at_utc": "2026-10-27T16:56:45.916406+00:00",
+        "peak_process_rss_kib": 436064,
+        "peak_torch_allocated_bytes": 0,
+        "peak_torch_reserved_bytes": 0
       },
       {
         "pid": 1200955,
@@ -225,7 +237,7 @@
       }
     ],
     "gpu_accounting_method": "Explicit process context-init-to-exit lifetime union on one card; early engineering sampled windows plus 30-second conservative uncertainty allowance",
-    "ended_at_utc": "2026-10-27T16:53:46.250336+00:00"
+    "ended_at_utc": "2026-10-27T17:02:15.269475+00:00"
   },
   "download_payload_bytes_counted": 14089613322,
   "download_limit_bytes": 35000000000,
@@ -493,17 +505,20 @@
         "engineering_smoke_candidate_integration_steps": 400
       },
       "assets:pid_1304799": {},
-      "decompress:pid_1548335": {}
+      "decompress:pid_1548335": {},
+      "assets:pid_1549080": {},
+      "decompress:pid_1549590": {},
+      "semantics:pid_1552884": {}
     },
     "total": {
-      "engineering_smoke_candidate_control_steps": 200,
-      "prefix_control_steps": 1800,
       "physics_integration_steps": 20090,
-      "engineering_smoke_candidate_integration_steps": 400,
-      "control_steps": 2000,
-      "prefix_integration_steps": 3600,
       "environment_resets": 45,
-      "reset_integration_steps": 90
+      "engineering_smoke_candidate_control_steps": 200,
+      "reset_integration_steps": 90,
+      "engineering_smoke_candidate_integration_steps": 400,
+      "prefix_control_steps": 1800,
+      "control_steps": 2000,
+      "prefix_integration_steps": 3600
     },
     "legacy_note": "Four successful prior engineering-only smoke invocations before counter flush was added; reconstructed from observed successful commands. Each had9 resets and400 control steps. These are one repeated engineering source,32 related candidate branches, outside the formal6-root replay and research splits.",
     "recorded_at_utc": "2026-10-27T13:12:06.932013+00:00"
