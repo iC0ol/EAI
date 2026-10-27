@@ -22,17 +22,63 @@
     "decompress:pid_1548335": {},
     "assets:pid_1549080": {},
     "decompress:pid_1549590": {},
-    "semantics:pid_1552884": {}
+    "semantics:pid_1552884": {},
+    "ENGINEERING_COLOR_0A:pid_1554414": {
+      "physics_integration_steps": 2,
+      "reset_integration_steps": 2,
+      "environment_resets": 1
+    },
+    "assets:pid_1554103": {},
+    "decompress:pid_1554729": {},
+    "semantics:pid_1555640": {
+      "physics_integration_steps": 57080,
+      "reset_integration_steps": 280,
+      "environment_resets": 140,
+      "control_steps": 5680,
+      "prefix_control_steps": 5560,
+      "prefix_integration_steps": 55600,
+      "engineering_candidate_control_steps": 60,
+      "engineering_candidate_integration_steps": 600,
+      "engineering_next_probe_control_steps": 60,
+      "engineering_next_probe_integration_steps": 600
+    },
+    "ENGINEERING_TRUSTED_FAILURE_RECONSTRUCTED_17h09": {
+      "control_steps": 85,
+      "prefix_control_steps": 80,
+      "candidate_engineering_trusted_control_steps": 5,
+      "physics_integration_steps": 854,
+      "environment_resets": 2,
+      "prefix_integration_steps": 800,
+      "candidate_engineering_trusted_integration_steps": 50,
+      "reset_integration_steps": 4
+    },
+    "ENGINEERING_TRUSTED_PIPELINE:pid_1557040": {
+      "physics_integration_steps": 4018,
+      "reset_integration_steps": 18,
+      "environment_resets": 9,
+      "control_steps": 400,
+      "prefix_control_steps": 360,
+      "prefix_integration_steps": 3600,
+      "candidate_engineering_trusted_control_steps": 40,
+      "candidate_engineering_trusted_integration_steps": 400
+    },
+    "prepare:pid_1556184": {}
   },
   "total": {
-    "physics_integration_steps": 20090,
-    "environment_resets": 45,
-    "engineering_smoke_candidate_control_steps": 200,
-    "reset_integration_steps": 90,
+    "physics_integration_steps": 82044,
+    "engineering_candidate_integration_steps": 600,
+    "environment_resets": 197,
+    "engineering_next_probe_integration_steps": 600,
+    "reset_integration_steps": 394,
     "engineering_smoke_candidate_integration_steps": 400,
-    "prefix_control_steps": 1800,
-    "control_steps": 2000,
-    "prefix_integration_steps": 3600
+    "prefix_integration_steps": 63600,
+    "engineering_candidate_control_steps": 60,
+    "prefix_control_steps": 7800,
+    "candidate_engineering_trusted_integration_steps": 450,
+    "engineering_next_probe_control_steps": 60,
+    "engineering_smoke_candidate_control_steps": 200,
+    "candidate_engineering_trusted_control_steps": 45,
+    "control_steps": 8165
   },
   "legacy_note": "Four successful prior engineering-only smoke invocations before counter flush was added; reconstructed from observed successful commands. Each had9 resets and400 control steps. These are one repeated engineering source,32 related candidate branches, outside the formal6-root replay and research splits.",
   "recorded_at_utc": "2026-10-27T13:12:06.932013+00:00"

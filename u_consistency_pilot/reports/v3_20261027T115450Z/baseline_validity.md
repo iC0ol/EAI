@@ -1,14 +1,3 @@
-# baseline_validity
+# 前序run基线状态
 
-NOT_RUN / 阶段未完成：RuntimeError: STAGE_FAILED_decompress_EXIT_1 Traceback (most recent call last):
-  File "$EAI/u_consistency_pilot/scripts/u_stage_v3.py", line 575, in <module>
-    if __name__=='__main__':main()
-                            ^^^^^^
-  File "$EAI/u_consistency_pilot/scripts/u_stage_v3.py", line 572, in main
-    try:mapping[STAGE]()
-        ^^^^^^^^^^^^^^^^
-  File "$EAI/u_consistency_pilot/scripts/u_stage_v3.py", line 81, in decompress
-    b=reader.read(16*1024*1024)
-      ^^^^^^^^^^^^^^^^^^^^^^^^^
-zstd.ZstdError: zstd decompress error: Frame requires too much memory for decoding
-。没有据此作科学否定。
+NOT_RUN：G训练尚未开始。来源谱系复核发现185初始状态家族各101轨迹，旧metadata episode分组被保守家族分组替代，原编码子集已作废。有效实验转至20261027T172105Z_sourcefix，原资源累计不重置。没有算法负结论。

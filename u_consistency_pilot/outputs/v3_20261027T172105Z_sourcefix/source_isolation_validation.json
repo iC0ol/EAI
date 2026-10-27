@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-27T17:30:38.899070+00:00",
+  "status": "PASS",
+  "scope": "Before G training; actual selected block indices and source-family isolation audit",
+  "unique_selected_inverse_blocks": 18000,
+  "block_counts": {
+    "train": 10000,
+    "val": 2000,
+    "audit": 6000
+  },
+  "source_family_counts": {
+    "train": 148,
+    "val": 18,
+    "audit": 19
+  },
+  "metadata_episode_counts": {
+    "train": 7123,
+    "val": 1212,
+    "audit": 1764
+  },
+  "source_family_intersections": [],
+  "all_101_family_trajectories_follow_same_group": true,
+  "actual_block_index_checks": 18000,
+  "split_manifest_sha256": "5b84c28b6bfe9dccb2208bdb4d5aa0f992636e8d4c9b75040890909e2e58fa7a",
+  "source_group_manifest_sha256": "69823b5286eacd581c371f29fb1c53e2eece6d429bda7a10feccff80d316b2a8",
+  "predecessor_identity_warning_resolved_by": "Conservative family grouping and global exact inverse-transition dedup before fresh latent encoding; no metadata-only independence claim."
+}

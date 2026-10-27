@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-27T17:41:03.369869+00:00",
+  "reason": "Source-family isolation required before G fitting; metadata-episode split replaced",
+  "old_split_manifest_sha256": "e1c87b98716d57ab091617117936a8fb9e850b81c72bf5f98b9f1bbf00499fa2",
+  "old_latent_cache_size_bytes": 54235520,
+  "old_partial_latent_cursor": {
+    "admission": "a21e3ad36fd64d960de01de65598d24bc1238d37fd3dcce077c39581e621a1d2",
+    "completed_frames": 22592,
+    "total_frames": 70619
+  },
+  "old_cache_scientific_validity": "INVALIDATED_NOT_USED_FOR_TRAINING",
+  "root_level_G_checkpoints_present": [],
+  "G_dataset_tensor_exists": false,
+  "new_run_id": "20261027T172105Z_sourcefix",
+  "budgets_reset": false
+}

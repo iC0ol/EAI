@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-27T17:10:31.216184+00:00",
+  "root_count": 112,
+  "roots_sha256": "e40e511e73a5c913490643430a3e343608b8ca6c0ccc88153a62708e9a0760bd",
+  "images_sha256": "10d6ccf12daba7f8999a0a6503a65fabbb9c09558498eb3c2595f29f67cfe476",
+  "generator_sha256": "a210a770657bfa745324e3dccd00a72e189f30951f1a568400195fd1e2740ae2",
+  "selection": "prescoring geometry only; no candidate outcomes or F/G scores",
+  "engineering_rejected_count": 0
+}

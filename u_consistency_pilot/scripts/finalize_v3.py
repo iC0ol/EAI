@@ -30,6 +30,20 @@ def main():
         if load('resource_watch.json',{}).get('ended_at_utc'):break
         time.sleep(1)
     resources=load('resource_watch.json',{});download=load('download_bytes.json',{})
+    # Publish the actual pre-execution cal freezes, not a reconstruction from
+    # future labels. Their original timestamps and hashes remain unchanged.
+    cal_freezes=[];cal_export_errors=[]
+    for path in sorted((BASE/'.work'/a.run_id).glob('cal_cal_*_freeze.json')):
+        try:
+            record=json.loads(path.read_text());original_hash=record.get('hash');payload={k:v for k,v in record.items() if k!='hash'}
+            digest=hashlib.sha256(json.dumps(payload,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
+            if digest!=original_hash:raise RuntimeError('CAL_FREEZE_EXPORT_HASH_INVALID')
+            cal_freezes.append(record)
+        except (OSError,ValueError,RuntimeError) as e:cal_export_errors.append({'file':path.name,'error':clean(str(e))})
+    if cal_freezes:
+        (run/'calibration_frozen_predictions.jsonl').write_text(''.join(json.dumps(row,separators=(',',':'),allow_nan=False)+'\n' for row in cal_freezes))
+    if cal_export_errors:
+        atomic(run/'cal_freeze_export_errors.json',{'status':'INVALID_EVIDENCE','errors':cal_export_errors});a.reason='TECHNICAL_CAL_FREEZE_EVIDENCE_INVALID '+json.dumps(cal_export_errors)
     result=load('scientific_summary.json',{})
     status=load('status.json',{});reason=clean(a.reason)
     if result.get('final_status') and a.reason=='COMPLETE':disposition=result['final_status']
@@ -65,6 +79,7 @@ def main():
     write_missing(run/'missing_candidates.csv',missing)
     test_complete=(counts['test']['independent_roots']==64 and counts['test']['valid_candidate_records']==512 and counts['test']['duplicate_valid_records']==0 and 'analyze_test' in status.get('completed_stages',[]) and result.get('test_n_roots')==64)
     summary={**result,'run_id':a.run_id,'final_status':disposition,'reason':reason,'completed_stages':status.get('completed_stages',[]),'counts':counts,'ended_at_utc':end.isoformat(),'ended_at_Asia_Shanghai':end.astimezone(ZoneInfo('Asia/Shanghai')).isoformat(),'test_complete':test_complete,'primary_comparison':result.get('primary_comparison'),'evaluation_status':'COMPLETE' if test_complete else 'NOT_RUN_OR_PARTIAL','scientific_claim_scope':'One frozen LeWM, one G training seed, short-horizon shared-pool choice only','next_action':'STOP_AND_AWAIT_RESEARCHER_REVIEW','unrun_metrics_policy':'null / NOT_RUN, never synthetic zeros'}
+    summary['optional_work_status']={k:'NOT_RUN' for k in ['dev_lambda_sensitivity','plots_videos','extra_capacity_sweeps','multiple_G_training_seeds','closed_loop','U1','Cube']}
     atomic(run/'summary.json',summary)
     stepcounts=load('step_counts.json',{})
     budget={'run_id':a.run_id,'started_at_utc':cfg['task_started_at_utc'],'ended_at_utc':end.isoformat(),'timezone_for_user':'Asia/Shanghai','wall_seconds_through_finalization':(end-start).total_seconds(),'wall_limit_seconds':43200,'report_reserve_seconds':2700,'gpu_process_seconds_upper_bound':resources.get('gpu_process_card_seconds_upper_bound'),'gpu_limit_seconds':36000,'gpu_accounting':'2-second samples; counts entire lifetime of this task CUDA processes, including idle context time; interval edges conservatively padded by a sample','resource_watch':resources,'download_payload_bytes_counted':download.get('payload_bytes_received'),'download_limit_bytes':35000000000,'download_accounting_limitations':load('preparation_accounting.json',{}),'step_counts':stepcounts,'scientific_stage_missing_counts':'NOT_RUN if absent; actual executed counters remain explicit','limits':cfg['boundaries']}
@@ -88,6 +103,8 @@ def main():
     baseline_report=report/'baseline_validity.md'
     if strong and 'V3_MATCHED_G_FINAL' not in baseline_report.read_text():
         with baseline_report.open('a') as f:f.write('\n\n<!-- V3_MATCHED_G_FINAL -->\n匹配历史/额外标签加强 G 的实际结果（cal-val 只验证；192 个独特 cal-fit 标签的重复加权不计作新样本）：\n\n```json\n'+json.dumps(strong,ensure_ascii=False,indent=2)+'\n```\n')
+    if prep and 'V3_SOURCE_ANCESTRY_FINAL' not in baseline_report.read_text():
+        with baseline_report.open('a') as f:f.write('\n\n<!-- V3_SOURCE_ANCESTRY_FINAL -->\n来源隔离使用保守的精确初始状态家族，各家族101条metadata轨迹整体随组；未宣称掌握原始采集者全部谱系。实际独立分组数：'+json.dumps(prep.get('source_counts'),ensure_ascii=False)+'；metadata episode数：'+json.dumps(prep.get('metadata_episode_counts'),ensure_ascii=False)+'。18000个逆转移按原始current/successor/action精确去重，源分组交集为空。详见source_isolation_validation.json；前序缓存在G训练前已作废，F预训练见过全部公开分布。\n')
     if not (run/'per_root_metrics.csv').exists():
         (run/'per_root_metrics.csv').write_text('split,root,source,method,selected_index,R,J,block_only,success,status,reason\n')
     atomic(run/'status.json',{**status,'status':'FINALIZED','final_status':disposition,'ended_at_utc':end.isoformat(),'failure':None if a.reason=='COMPLETE' else reason,'publication':'attempted by finalizer; see delivery receipt'})

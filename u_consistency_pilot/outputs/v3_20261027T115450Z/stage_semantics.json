@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "stage": "semantics",
+  "at": "2026-10-27T17:10:31.488796+00:00",
+  "code_hash": "10056e104a5c78aeaec9da28769d4cb329002251a8109ff175917852df63cf69",
+  "config_hash": "61dc08499b810935e6b28d29ea03d59494be60a00207e8eb4ae15b96c150c981",
+  "outputs": {
+    "outputs/v3_20261027T115450Z/semantics.json": "24f740832be8ec86285d140a11d9f2f8472b025a2bc645dbd5d98426e664f1e9",
+    "outputs/v3_20261027T115450Z/action_scaler.json": "d27ac19b4b1228bbeedfd2ef35ace035416dc4e6834792d305bc4af38388513a",
+    "outputs/v3_20261027T115450Z/original_action_alignment.json": "73f6748e5adc0a9ac353f643131ae2d504c8f16836e294efc182f3e1bf74b17b",
+    "outputs/v3_20261027T115450Z/replay_check.csv": "c557796c6a3c19478a5f3fcf55e49b340b1d9e54bf5ef40b7ebeffbd6d5277c4",
+    "outputs/v3_20261027T115450Z/root_manifest.csv": "f57abc4aafc9056a910e3e0dc2bdbb65d4ac9a3d020ce71a8f01914ed9d1bfb9",
+    "outputs/v3_20261027T115450Z/roots_frozen.json": "e40e511e73a5c913490643430a3e343608b8ca6c0ccc88153a62708e9a0760bd",
+    "outputs/v3_20261027T115450Z/root_manifest_seal.json": "3f0f22bc82e0c173f86f42b18cda5d8d780e3d7108cb27e47c808a3d58961701",
+    ".work/20261027T115450Z/root_images.npz": "10d6ccf12daba7f8999a0a6503a65fabbb9c09558498eb3c2595f29f67cfe476"
+  }
+}

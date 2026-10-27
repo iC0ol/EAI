@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-27T17:39:49.321160+00:00",
+  "scope": "Read-only hardware/driver evidence; no changes to system components",
+  "gpu_driver_query": "0, NVIDIA GeForce RTX 3090, 550.144.03, 24576",
+  "kernel": "6.8.0-60-generic",
+  "machine": "x86_64",
+  "RAM_total_bytes": 33514676224,
+  "native_system_python_modified": false,
+  "existing_project_environments_modified": false,
+  "experiment_interpreter": "EAI/u_consistency_pilot/.venv-v3/bin/python",
+  "driver_CUDA_ROS_modified": false
+}

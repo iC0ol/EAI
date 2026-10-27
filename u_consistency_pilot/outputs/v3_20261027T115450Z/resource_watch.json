@@ -1,12 +1,12 @@
 {
   "started_at_utc": "2026-10-27T12:06:44.434815+00:00",
-  "gpu_process_card_seconds_upper_bound": 183.595561303664,
-  "peak_task_process_rss_sum_bytes": 1625194496,
+  "gpu_process_card_seconds_upper_bound": 825.4372024913318,
+  "peak_task_process_rss_sum_bytes": 1977999360,
   "peak_task_vram_bytes": 759169024,
   "peak_foreign_vram_bytes": 742391808,
   "minimum_host_mem_available_bytes": 24553209856,
-  "peak_task_disk_allocated_bytes": 66567041024,
-  "samples": 8690,
+  "peak_task_disk_allocated_bytes": 66678886400,
+  "samples": 9099,
   "gpu_intervals": [
     {
       "started_at_utc": "2026-10-27T12:20:07.537889+00:00",
@@ -77,18 +77,34 @@
         1339901
       ],
       "ended_at_utc": "2026-10-27T14:24:23.480323+00:00"
+    },
+    {
+      "started_at_utc": "2026-10-27T17:10:12.872871+00:00",
+      "task_pids_first_seen": [
+        1555640
+      ],
+      "ended_at_utc": "2026-10-27T17:10:33.127187+00:00"
+    },
+    {
+      "started_at_utc": "2026-10-27T17:10:39.238987+00:00",
+      "task_pids_first_seen": [
+        1556184,
+        1556215
+      ],
+      "ended_at_utc": "2026-10-27T17:20:25.588354+00:00"
     }
   ],
-  "last_at_utc": "2026-10-27T17:02:13.267886+00:00",
+  "last_at_utc": "2026-10-27T17:20:23.586509+00:00",
   "task_pids": [
-    1549074
+    1554096,
+    1556184
   ],
-  "task_rss_sum_bytes": 20709376,
-  "task_vram_bytes": 0,
+  "task_rss_sum_bytes": 1295761408,
+  "task_vram_bytes": 744488960,
   "foreign_vram_bytes": 310378496,
-  "host_mem_available_bytes": 26118168576,
-  "disk_free_bytes": 197495336960,
-  "disk_allocated_bytes": 66567041024,
+  "host_mem_available_bytes": 25305038848,
+  "disk_free_bytes": 197396713472,
+  "disk_allocated_bytes": 66678886400,
   "gpu_query_error": null,
   "open_gpu_interval": null,
   "legacy_sampled_gpu_seconds": 28.50008324580267,
@@ -108,6 +124,19 @@
       "peak_torch_reserved_bytes": 90177536
     },
     {
+      "pid": 1556215,
+      "start_epoch": 1793121039.077082,
+      "started_at_utc": "2026-10-27T17:10:39.077084+00:00",
+      "stage": "ENGINEERING_TRUSTED_PIPELINE",
+      "scope": "TEST_ONLY",
+      "card": 0,
+      "end_epoch": 1793121039.8198867,
+      "ended_at_utc": "2026-10-27T17:10:39.819888+00:00",
+      "peak_process_rss_kib": 1301128,
+      "peak_torch_allocated_bytes": 90762240,
+      "peak_torch_reserved_bytes": 106954752
+    },
+    {
       "pid": 1339901,
       "start_epoch": 1793111060.487349,
       "started_at_utc": "2026-10-27T14:24:20.487352+00:00",
@@ -119,6 +148,19 @@
       "peak_process_rss_kib": 1106012,
       "peak_torch_allocated_bytes": 284008960,
       "peak_torch_reserved_bytes": 436207616
+    },
+    {
+      "pid": 1555640,
+      "start_epoch": 1793121012.2479427,
+      "started_at_utc": "2026-10-27T17:10:12.247945+00:00",
+      "stage": "semantics",
+      "scope": "task",
+      "card": 0,
+      "end_epoch": 1793121031.4915035,
+      "ended_at_utc": "2026-10-27T17:10:31.491504+00:00",
+      "peak_process_rss_kib": 1019104,
+      "peak_torch_allocated_bytes": 72737280,
+      "peak_torch_reserved_bytes": 77594624
     },
     {
       "pid": 1239623,
@@ -199,6 +241,32 @@
       "peak_torch_reserved_bytes": 90177536
     },
     {
+      "pid": 1554103,
+      "start_epoch": 1793120834.80296,
+      "started_at_utc": "2026-10-27T17:07:14.802963+00:00",
+      "stage": "assets",
+      "scope": "task",
+      "card": 0,
+      "end_epoch": 1793120872.7639828,
+      "ended_at_utc": "2026-10-27T17:07:52.763983+00:00",
+      "peak_process_rss_kib": 436040,
+      "peak_torch_allocated_bytes": 0,
+      "peak_torch_reserved_bytes": 0
+    },
+    {
+      "pid": 1557040,
+      "start_epoch": 1793121133.1673112,
+      "started_at_utc": "2026-10-27T17:12:13.167313+00:00",
+      "stage": "ENGINEERING_TRUSTED_PIPELINE",
+      "scope": "TEST_ONLY",
+      "card": 0,
+      "end_epoch": 1793121134.0457687,
+      "ended_at_utc": "2026-10-27T17:12:14.045770+00:00",
+      "peak_process_rss_kib": 1303760,
+      "peak_torch_allocated_bytes": 115987968,
+      "peak_torch_reserved_bytes": 127926272
+    },
+    {
       "pid": 1304799,
       "start_epoch": 1793119984.2316163,
       "started_at_utc": "2026-10-27T16:53:04.231618+00:00",
@@ -223,8 +291,16 @@
       "peak_process_rss_kib": 715136,
       "peak_torch_allocated_bytes": 59896320,
       "peak_torch_reserved_bytes": 60817408
+    },
+    {
+      "pid": 1556184,
+      "start_epoch": 1793121038.9493456,
+      "started_at_utc": "2026-10-27T17:10:38.949348+00:00",
+      "stage": "prepare",
+      "scope": "task",
+      "card": 0
     }
   ],
   "gpu_accounting_method": "Explicit process context-init-to-exit lifetime union on one card; early engineering sampled windows plus 30-second conservative uncertainty allowance",
-  "ended_at_utc": "2026-10-27T17:02:15.269475+00:00"
+  "ended_at_utc": "2026-10-27T17:20:25.588367+00:00"
 }

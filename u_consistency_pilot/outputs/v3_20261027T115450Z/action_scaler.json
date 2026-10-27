@@ -1,0 +1,73 @@
+{
+  "provenance": "All finite action rows in pinned original pretrained PushT HDF5; streamed StandardScaler.partial_fit",
+  "source_revision": "655cd446b9929369d7d406001da85c15d1457850",
+  "source_compressed_sha256": "7cfbd6d90fa2f27876379a5ff169715a36ed82edbda64f9e5b5bfa34d212f318",
+  "source_total_rows": 2336736,
+  "finite_rows": 2336736,
+  "nan_or_nonfinite_rows": 0,
+  "mean": [
+    -0.00781256437991617,
+    0.006860687229453028
+  ],
+  "std_ddof0": [
+    0.20846744284501517,
+    0.20674862637362246
+  ],
+  "variance_ddof0": [
+    0.043458674726339665,
+    0.04274499450737974
+  ],
+  "std_ddof1_same_exact_population": [
+    0.2084674874515753,
+    0.206748670612401
+  ],
+  "ddof1_minus_ddof0": [
+    4.4606560140048046e-08,
+    4.423877852932634e-08
+  ],
+  "ddof1_relative_difference": [
+    2.1397374827536453e-07,
+    2.1397374827536453e-07
+  ],
+  "ddof_note": "Bessel formula fields isolate ddof difference; exact original-dtype torch helper statistics additionally saved, including numeric rounding",
+  "adopted_path": "Original eval.py StandardScaler ddof=0; train helper utils.py torch.std defaults correction=1",
+  "original_dtype": "float32",
+  "raw_min": [
+    -1.4947075843811035,
+    -1.4655311107635498
+  ],
+  "raw_max": [
+    2.0426697731018066,
+    1.7920565605163574
+  ],
+  "relative": true,
+  "raw_action_clip": [
+    -1.0,
+    1.0
+  ],
+  "control_hz": 10,
+  "physics_dt": 0.01,
+  "relative_target_scale_pixels": 100,
+  "flatten": "C-order time-major: [u_t.x,u_t.y,u_t+1.x,u_t+1.y,...,u_t+4.x,u_t+4.y]",
+  "recorded_coordinate_fraction_outside_declared_candidate_clip": 0.0006224494337400545,
+  "recorded_action_row_fraction_outside_declared_candidate_clip": 0.0012427591306848527,
+  "original_statistics_actions_clipped": false,
+  "unit_identification": "Exact source10-microstep PD/state timing, not min/max range",
+  "train_helper_exact_mean": [
+    -0.007812565192580223,
+    0.006860686466097832
+  ],
+  "train_helper_exact_std_correction1": [
+    0.2084674835205078,
+    0.20674866437911987
+  ],
+  "train_helper_actual_minus_eval_scale": [
+    4.067549264075154e-08,
+    3.800549741583836e-08
+  ],
+  "train_helper_mean_minus_eval_mean": [
+    -8.12664052371459e-10,
+    -7.633551958943774e-10
+  ],
+  "helper_measurement": "HDF5 read streamed into small action-only memmap; exact original-dtype torch.mean/std on its finite rows; no RGB materialization"
+}
