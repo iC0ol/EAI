@@ -1,0 +1,10 @@
+{
+  "scope": "TEST_ONLY private fixtures, no scientific records",
+  "status": "PASS",
+  "checks": [
+    "64 partially executed roots never marked full64",
+    "complete test requires512 unique candidates plus analyze_test",
+    "explicit missing candidate actions/nulls",
+    "missing primary metrics remain null"
+  ]
+}

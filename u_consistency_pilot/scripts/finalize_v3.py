@@ -53,14 +53,14 @@ def main():
         expected={'cal':32,'dev':16,'test':64}[split]
         complete_roots=[root for root in {r['root'] for r in valid} if all((root,j) in by for j in range(8))]
         counts[split]={'valid_candidate_records':len(by),'duplicate_valid_records':len(valid)-len(by),'independent_roots_with_any_valid_candidate':len({r['root'] for r in valid}),'independent_roots':len(complete_roots),'independent_sources':len({r['source'] for r in valid if r['root'] in complete_roots}),'target_roots':expected}
-        frozen={r['root']:r for r in load_lines(run/f'frozen_predictions_{split}.jsonl')}
+        frozen={(r['root'],r['candidate']):r for r in load_lines(run/f'frozen_predictions_{split}.jsonl')}
         known={r['root']:r for r in prospective if r['split']==split}
         for index in range(expected):
             root=f'{split}_{index:03d}'
             for candidate in range(8):
                 if (root,candidate) in by:continue
-                score=frozen.get(root,{});actions=score.get('action_block',score.get('raw_A'))
-                missing.append({'split':split,'root':root,'source':known.get(root,{}).get('source'),'seed':known.get(root,{}).get('seed'),'candidate':candidate,'action_block':None if actions is None else actions[candidate],'status':'NOT_RUN','reason':reason,'J':None})
+                score=frozen.get((root,candidate),{});actions=score.get('action_block')
+                missing.append({'split':split,'root':root,'source':known.get(root,{}).get('source'),'seed':known.get(root,{}).get('seed'),'candidate':candidate,'action_block':actions,'status':'NOT_RUN','reason':reason,'J':None})
     write_missing(run/'missing_candidates.csv',missing)
     test_complete=(counts['test']['independent_roots']==64 and counts['test']['valid_candidate_records']==512 and counts['test']['duplicate_valid_records']==0 and 'analyze_test' in status.get('completed_stages',[]) and result.get('test_n_roots')==64)
     summary={**result,'run_id':a.run_id,'final_status':disposition,'reason':reason,'completed_stages':status.get('completed_stages',[]),'counts':counts,'ended_at_utc':end.isoformat(),'test_complete':test_complete,'primary_comparison':result.get('primary_comparison'),'evaluation_status':'COMPLETE' if test_complete else 'NOT_RUN_OR_PARTIAL','scientific_claim_scope':'One frozen LeWM, one G training seed, short-horizon shared-pool choice only','next_action':'STOP_AND_AWAIT_RESEARCHER_REVIEW','unrun_metrics_policy':'null / NOT_RUN, never synthetic zeros'}
