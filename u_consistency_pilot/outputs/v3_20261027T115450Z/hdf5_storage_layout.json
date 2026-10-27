@@ -1,0 +1,64 @@
+{
+  "scope": "0A verified HDF5 storage metadata only",
+  "physical_file_bytes": 46300921856,
+  "datasets": {
+    "pixels": {
+      "shape": [
+        2336736,
+        224,
+        224,
+        3
+      ],
+      "dtype": "uint8",
+      "chunks": [
+        100,
+        224,
+        224,
+        3
+      ],
+      "storage_size_bytes": 36473871122,
+      "filters": [
+        [
+          32001,
+          1,
+          [
+            2,
+            2,
+            1,
+            15052800,
+            5,
+            1,
+            1
+          ],
+          "blosc"
+        ]
+      ]
+    },
+    "action": {
+      "shape": [
+        2336736,
+        2
+      ],
+      "dtype": "float32",
+      "chunks": [
+        1000,
+        2
+      ],
+      "storage_size_bytes": 18696000,
+      "filters": []
+    },
+    "state": {
+      "shape": [
+        2336736,
+        7
+      ],
+      "dtype": "float32",
+      "chunks": [
+        1000,
+        7
+      ],
+      "storage_size_bytes": 65436000,
+      "filters": []
+    }
+  }
+}

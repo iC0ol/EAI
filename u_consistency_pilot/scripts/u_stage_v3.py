@@ -104,13 +104,20 @@ def compute_action_scaler(data):
     arr.flush()
     if valid_count<2 or (fit.scale_<=0).any():raise RuntimeError('INVALID_ORIGINAL_ACTION_STATISTICS')
     # Match the original raw units; never rescale input from a new small dataset.
-    relative=bool(np.max(np.abs(np.r_[amin,amax]))<=1.00001)
-    if not relative and not (amin.min()>=0 and amax.max()<=512.0001):raise RuntimeError('ACTION_UNITS_UNRESOLVED')
+    # Recorded actions can exceed the declared Box because the environment's
+    # step method does not itself clip. Infer units from exact PD/state timing,
+    # never from a guessed numerical range or a research candidate outcome.
+    probes={str(mode):original_action_alignment(data,{'relative':mode},record_name='action_unit_probe_'+str(mode)+'.json',enforce=False) for mode in [True,False]}
+    compatible=[mode for mode in [True,False] if probes[str(mode)]['expected_leaving_action_row_q95_max_coord_error_pixels']<=.001]
+    if len(compatible)!=1:raise RuntimeError('ACTION_UNITS_UNRESOLVED_BY_ORIGINAL_PD_STATE_TIMING')
+    relative=compatible[0]
+    write(RUN/'action_unit_selection.json',{'relative':relative,'criterion':'Unique source PD/state model q95<=.001pixel; same preregistered temporal tolerance','probes':probes,'raw_extrema_are_not_action_space_bounds':True,'study_outcomes_used':False})
     std1=fit.scale_*np.sqrt(valid_count/(valid_count-1))
     helper=torch.from_numpy(np.asarray(arr));helper=helper[~torch.isnan(helper).any(dim=1)]
     helper_mean=helper.mean(0).numpy();helper_std=helper.std(0,correction=1).numpy()
     result={'provenance':'All finite action rows in pinned original pretrained PushT HDF5; streamed StandardScaler.partial_fit','source_revision':'655cd446b9929369d7d406001da85c15d1457850','source_compressed_sha256':'7cfbd6d90fa2f27876379a5ff169715a36ed82edbda64f9e5b5bfa34d212f318','source_total_rows':n,'finite_rows':valid_count,'nan_or_nonfinite_rows':bad,'mean':fit.mean_.tolist(),'std_ddof0':fit.scale_.tolist(),'variance_ddof0':fit.var_.tolist(),'std_ddof1_same_exact_population':std1.tolist(),'ddof1_minus_ddof0':(std1-fit.scale_).tolist(),'ddof1_relative_difference':(std1/fit.scale_-1).tolist(),'ddof_note':'Bessel formula fields isolate ddof difference; exact original-dtype torch helper statistics additionally saved, including numeric rounding','adopted_path':'Original eval.py StandardScaler ddof=0; train helper utils.py torch.std defaults correction=1','original_dtype':str(column.dtype),'raw_min':amin.tolist(),'raw_max':amax.tolist(),'relative':relative,'raw_action_clip':[-1.,1.] if relative else [0.,512.],'control_hz':10,'physics_dt':.01,'relative_target_scale_pixels':100,'flatten':'C-order time-major: [u_t.x,u_t.y,u_t+1.x,u_t+1.y,...,u_t+4.x,u_t+4.y]'}
-    result.update({'train_helper_exact_mean':helper_mean.tolist(),'train_helper_exact_std_correction1':helper_std.tolist(),'train_helper_actual_minus_eval_scale':(helper_std-fit.scale_).tolist(),'train_helper_mean_minus_eval_mean':(helper_mean-fit.mean_).tolist(),'helper_measurement':'HDF5 read streamed into small action-only memmap; exact original-dtype torch.mean/std on its finite rows; no RGB materialization'})
+    lower,upper=result['raw_action_clip'];raw=np.asarray(arr)
+    result.update({'recorded_coordinate_fraction_outside_declared_candidate_clip':float(np.mean((raw<lower)|(raw>upper))),'recorded_action_row_fraction_outside_declared_candidate_clip':float(np.mean(np.any((raw<lower)|(raw>upper),axis=1))),'original_statistics_actions_clipped':False,'unit_identification':'Exact source10-microstep PD/state timing, not min/max range','train_helper_exact_mean':helper_mean.tolist(),'train_helper_exact_std_correction1':helper_std.tolist(),'train_helper_actual_minus_eval_scale':(helper_std-fit.scale_).tolist(),'train_helper_mean_minus_eval_mean':(helper_mean-fit.mean_).tolist(),'helper_measurement':'HDF5 read streamed into small action-only memmap; exact original-dtype torch.mean/std on its finite rows; no RGB materialization'})
     write(RUN/'action_scaler.json',result);return result
 
 def roots_for_split(split,n,base,relative):
@@ -131,7 +138,7 @@ def roots_for_split(split,n,base,relative):
         chosen+=accepted
     return sorted(chosen,key=lambda x:x['root']),rejected
 
-def original_action_alignment(data,s):
+def original_action_alignment(data,s,record_name='original_action_alignment.json',enforce=True):
     # Agent is kinematic. Its PD update can be checked independently of hidden
     # object/contact state, using exactly the fixed source's integration rule.
     if 'state' not in data.f or data.f['state'].shape[1] not in [5,7]:raise RuntimeError('STATE_COLUMNS_FOR_ACTION_ALIGNMENT_UNAVAILABLE')
@@ -162,8 +169,8 @@ def original_action_alignment(data,s):
         if len(errors)>=1000:break
     if len(errors)<20:raise RuntimeError('ACTION_ALIGNMENT_INSUFFICIENT_FINITE_ORIGINAL_SAMPLES')
     result={'scope':'original public data temporal/control audit; not research performance','sample_count':len(errors),'expected_leaving_action_row_q95_max_coord_error_pixels':float(np.quantile(errors,.95)),'expected_leaving_action_row_max_error_pixels':float(max(errors)),'next_row_action_q95_error_pixels':float(np.quantile(shift_errors,.95)),'acceptance_q95_pixels':.001,'examples':examples,'formula':'same 10 source PD micro-integrations; p += v*.01 after v += (100*(target-p)-20*v)*.01; kinematic agent; reconstruct initial velocity from previous position and previous known action, supports both original 5D and extended 7D public state','PD_coefficients':{'alpha':alpha,'beta':beta,'gamma':gamma,'eta':eta},'relative':s['relative']}
-    write(RUN/'original_action_alignment.json',result)
-    if result['expected_leaving_action_row_q95_max_coord_error_pixels']>.001:raise RuntimeError('ACTION_TIME_OR_PHYSICS_SEMANTICS_MISMATCH_NEEDS_REPAIR')
+    write(RUN/record_name,result)
+    if enforce and result['expected_leaving_action_row_q95_max_coord_error_pixels']>.001:raise RuntimeError('ACTION_TIME_OR_PHYSICS_SEMANTICS_MISMATCH_NEEDS_REPAIR')
     return result
 
 def semantics():
