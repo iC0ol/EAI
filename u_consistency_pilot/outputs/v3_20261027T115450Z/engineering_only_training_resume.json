@@ -1,0 +1,14 @@
+{
+  "scope": "TEST_ONLY",
+  "status": "PASS",
+  "checks": [
+    "read-only original-layout HDF5 row/block alignment",
+    "source boundary guards",
+    "float32 RGB order",
+    "actual flow update/checkpoint",
+    "optimizer+RNG resume",
+    "skip already completed valid update budget"
+  ],
+  "toy_updates": 21,
+  "test_files_not_research_inputs": true
+}

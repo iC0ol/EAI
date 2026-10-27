@@ -1,0 +1,11 @@
+{
+  "scope": "TEST_ONLY",
+  "status": "PASS",
+  "checks": [
+    "paired improvement sign",
+    "root bootstrap n instead of branch n",
+    "cluster source bootstrap",
+    "score stage refuses future file before loading F/G",
+    "test seal refuses already touched test"
+  ]
+}

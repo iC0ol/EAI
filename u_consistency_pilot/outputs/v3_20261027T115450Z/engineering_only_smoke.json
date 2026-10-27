@@ -1,0 +1,170 @@
+{
+  "scope": "ENGINEERING_ONLY; no research use",
+  "strict_missing_keys": [],
+  "strict_unexpected_keys": [],
+  "CUDA_matrix": "PASS",
+  "single_image_encoding_shape": [
+    3,
+    192
+  ],
+  "block_prediction_shape": [
+    8,
+    192
+  ],
+  "official_rollout_max_difference": 0.0,
+  "repeat_F_max_difference": 0.0,
+  "latent_std_across_3_frames": 8.731149137020111e-09,
+  "pred_std_across_candidates": 0.07486923784017563,
+  "future_information_boundary": "G.sample receives endpoints and independent noise; no candidate A; only b is permitted candidate A",
+  "frozen_before_real": true,
+  "frozen_hash": "5c3e4c64b80e179e5d5958a57486ed2d94b1b11247c41342a65e8f0c754615c9",
+  "actual": [
+    {
+      "candidate": 0,
+      "state": [
+        301.13300476622805,
+        193.84326488899603,
+        280.502545116839,
+        203.74338095320405,
+        0.6621908500017879,
+        -70.37540336828805,
+        -20.53586653549234
+      ],
+      "J": 11.431791879503152,
+      "block_only": 9.20517843347724,
+      "success": false,
+      "joint_position_error": 228.63583759006303,
+      "block_position_error": 184.10356866954479,
+      "periodic_angle_error": 0.9382542743277531
+    },
+    {
+      "candidate": 1,
+      "state": [
+        321.1894877961625,
+        214.5299402180622,
+        274.1615330500875,
+        212.0514783010852,
+        0.6643223168690344,
+        105.75098043359603,
+        91.65890358696599
+      ],
+      "J": 11.023514827295244,
+      "block_only": 9.076910557806114,
+      "success": false,
+      "joint_position_error": 220.4702965459049,
+      "block_position_error": 181.5382111561223,
+      "periodic_angle_error": 0.9361228074605066
+    },
+    {
+      "candidate": 2,
+      "state": [
+        278.60008636877603,
+        166.47379103705123,
+        280.502545116839,
+        203.74338095320405,
+        0.6621908500017879,
+        56.3732748717218,
+        -136.21471981954107
+      ],
+      "J": 11.958528020130698,
+      "block_only": 9.20517843347724,
+      "success": false,
+      "joint_position_error": 239.17056040261397,
+      "block_position_error": 184.10356866954479,
+      "periodic_angle_error": 0.9382542743277531
+    },
+    {
+      "candidate": 3,
+      "state": [
+        332.52171986800596,
+        165.36458170696525,
+        280.502545116839,
+        203.74338095320405,
+        0.6621908500017879,
+        -0.13880256284797676,
+        100.75787713650972
+      ],
+      "J": 10.449040185077347,
+      "block_only": 9.20517843347724,
+      "success": false,
+      "joint_position_error": 208.98080370154693,
+      "block_position_error": 184.10356866954479,
+      "periodic_angle_error": 0.9382542743277531
+    },
+    {
+      "candidate": 4,
+      "state": [
+        297.24849976723675,
+        213.5558641237542,
+        274.33356932945253,
+        213.63020751042075,
+        0.6903008825725543,
+        -47.90965293575563,
+        25.358608446135072
+      ],
+      "J": 11.60111548747283,
+      "block_only": 9.01104612248978,
+      "success": false,
+      "joint_position_error": 232.0223097494566,
+      "block_position_error": 180.2209224497956,
+      "periodic_angle_error": 0.9101442417569867
+    },
+    {
+      "candidate": 5,
+      "state": [
+        293.2070585005817,
+        188.47559360056317,
+        267.92786061963864,
+        217.6515547614685,
+        0.6250582412535124,
+        121.6357646844049,
+        -37.75817351638679
+      ],
+      "J": 11.513739687205504,
+      "block_only": 9.072669538097175,
+      "success": false,
+      "joint_position_error": 230.27479374411007,
+      "block_position_error": 181.4533907619435,
+      "periodic_angle_error": 0.9753868830760286
+    },
+    {
+      "candidate": 6,
+      "state": [
+        327.5844143325734,
+        192.40193101542138,
+        280.502545116839,
+        203.74338095320405,
+        0.6621908500017879,
+        39.28475049541581,
+        -67.7166068073253
+      ],
+      "J": 10.724192276096344,
+      "block_only": 9.20517843347724,
+      "success": false,
+      "joint_position_error": 214.4838455219269,
+      "block_position_error": 184.10356866954479,
+      "periodic_angle_error": 0.9382542743277531
+    },
+    {
+      "candidate": 7,
+      "state": [
+        274.7365285638851,
+        153.00866636148004,
+        280.502545116839,
+        203.74338095320405,
+        0.6621908500017879,
+        -146.25968999553865,
+        -144.03185627736386
+      ],
+      "J": 12.066858603010626,
+      "block_only": 9.20517843347724,
+      "success": false,
+      "joint_position_error": 241.3371720602125,
+      "block_position_error": 184.10356866954479,
+      "periodic_angle_error": 0.9382542743277531
+    }
+  ],
+  "elapsed_seconds": 2.8130711470730603,
+  "physics_control_steps": 400,
+  "physics_integration_steps": 4018
+}

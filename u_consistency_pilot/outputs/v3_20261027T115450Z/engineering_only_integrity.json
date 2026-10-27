@@ -1,0 +1,12 @@
+{
+  "scope": "TEST_ONLY",
+  "status": "PASS",
+  "checks": [
+    "syntax",
+    "5x2 time-major roundtrip",
+    "78 feature whitelist",
+    "G inference candidate exclusion",
+    "history-only endpoint exclusion",
+    "root-block label shuffle slots preserved"
+  ]
+}

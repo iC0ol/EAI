@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+U_BASE="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+unset PYTHONPATH
+export PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1
+export OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 NUMEXPR_NUM_THREADS=4
+export SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy PYGAME_HIDE_SUPPORT_PROMPT=1
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 TOKENIZERS_PARALLELISM=false
+export HF_HOME="$U_BASE/.cache/v3/hf" TORCH_HOME="$U_BASE/.cache/v3/torch"
+export XDG_CACHE_HOME="$U_BASE/.cache/v3" TMPDIR="$U_BASE/.cache/v3/tmp"
+export PIP_CACHE_DIR="$U_BASE/.cache/v3/pip" PIP_DISABLE_PIP_VERSION_CHECK=1
+exec "$U_BASE/.venv-v3/bin/python" -B "$@"

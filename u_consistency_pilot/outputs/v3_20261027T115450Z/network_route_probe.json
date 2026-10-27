@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-27T13:28:40.829819+00:00",
+  "scope": "Bounded public official-URL connection troubleshooting; no global proxy or authentication change",
+  "results": [
+    {
+      "mode": "configured_proxy",
+      "bytes_received": 4194304,
+      "elapsed_seconds": 46.603874533902854,
+      "bytes_per_second": 89999.03960580246,
+      "status": "OK"
+    },
+    {
+      "mode": "direct_official",
+      "bytes_received": 4194304,
+      "elapsed_seconds": 53.37410597410053,
+      "bytes_per_second": 78583.12335744489,
+      "status": "OK"
+    }
+  ]
+}

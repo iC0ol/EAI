@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-27T13:04:06.048092+00:00",
+  "mode": "verify-existing",
+  "model_sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",
+  "python_interpreter_alias": "EAI/U/.venv-v3/bin/python",
+  "minimal_requirements_sha256": "2f323079f2edcdc22c6e5f473d4e76e436568133a1badea876d3565bccb1673e",
+  "old_environments_modified": false,
+  "dataset_transfer_separate": true
+}

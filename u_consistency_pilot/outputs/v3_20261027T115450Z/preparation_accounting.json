@@ -1,0 +1,243 @@
+{
+  "at": "2026-10-27T12:25:39.363262+00:00",
+  "early_first_pip_download_interrupted_by_agent": true,
+  "first_pip_payload_exact": "NOT_MEASURED; budget charged conservative 500 MB; successful files shown in captured preparation output total less than this",
+  "pip_wheel_files": [
+    {
+      "filename": "jinja2-3.1.6-py3-none-any.whl",
+      "bytes": 134899,
+      "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67"
+    },
+    {
+      "filename": "gymnasium-1.0.0-py3-none-any.whl",
+      "bytes": 958120,
+      "sha256": "b6f40e1e24c5bd419361e1a5b86a9117d2499baecc3a660d44dfff4c465393ad"
+    },
+    {
+      "filename": "h5py-3.12.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 5452688,
+      "sha256": "018a4597f35092ae3fb28ee851fdc756d2b88c96336b8480e124ce1ac6fb9166"
+    },
+    {
+      "filename": "mpmath-1.3.0-py3-none-any.whl",
+      "bytes": 536198,
+      "sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"
+    },
+    {
+      "filename": "pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 806638,
+      "sha256": "b8bb0864c5a28024fac8a632c443c87c5aa6f215c0b126c449ae1a150412f31d"
+    },
+    {
+      "filename": "zstandard-0.23.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 5442927,
+      "sha256": "fd30d9c67d13d891f2360b2a120186729c111238ac63b43dbd37a5a40670b8ca"
+    },
+    {
+      "filename": "regex-2026.9.29-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 804978,
+      "sha256": "612b709381c0355b70d89cdb51b7f670591ed5cbbc0e3b5337488019dc667b65"
+    },
+    {
+      "filename": "idna-3.20-py3-none-any.whl",
+      "bytes": 69583,
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c"
+    },
+    {
+      "filename": "farama_notifications-0.0.6-py3-none-any.whl",
+      "bytes": 2897,
+      "sha256": "f84839188efa1ce5bb361c2a84881b2dc2c0d0d7fb661ff00421820170930935"
+    },
+    {
+      "filename": "wheel-0.45.1-py3-none-any.whl",
+      "bytes": 72494,
+      "sha256": "708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248"
+    },
+    {
+      "filename": "hdf5plugin-5.1.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 45876035,
+      "sha256": "6da81b0b168f271b0cf995a12c28cf01b381587fed21f25fd91b2c90d5108425"
+    },
+    {
+      "filename": "urllib3-2.8.0-py3-none-any.whl",
+      "bytes": 135717,
+      "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+    },
+    {
+      "filename": "requests-2.34.2-py3-none-any.whl",
+      "bytes": 73075,
+      "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"
+    },
+    {
+      "filename": "sympy-1.13.1-py3-none-any.whl",
+      "bytes": 6189177,
+      "sha256": "db36cdc64bf61b9b24578b6f7bab1ecdd2452cf008f34faa33776680c26d66f8"
+    },
+    {
+      "filename": "fsspec-2026.9.0-py3-none-any.whl",
+      "bytes": 221738,
+      "sha256": "8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f"
+    },
+    {
+      "filename": "einops-0.8.0-py3-none-any.whl",
+      "bytes": 43223,
+      "sha256": "9572fb63046264a862693b0a87088af3bdc8c068fde03de63453cbbde245465f"
+    },
+    {
+      "filename": "pillow-13.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 7140667,
+      "sha256": "a625df9a2a5597fa5e5266e01aefc82604bb85d291e3547981e863560d75da6c"
+    },
+    {
+      "filename": "numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 18252005,
+      "sha256": "666dbfb6ec68962c033a450943ded891bed2d54e6755e35e5835d63f4f6931d5"
+    },
+    {
+      "filename": "opencv_python_headless-4.10.0.84-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 49858781,
+      "sha256": "377d08a7e48a1405b5e84afcbe4798464ce7ee17081c1c23619c8b398ff18295"
+    },
+    {
+      "filename": "tokenizers-0.21.4-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 3115426,
+      "sha256": "51b7eabb104f46c1c50b486520555715457ae833d5aee9ff6ae853d1130506ff"
+    },
+    {
+      "filename": "joblib-1.6.0-py3-none-any.whl",
+      "bytes": 306115,
+      "sha256": "3dbbf9f6e4b592a2357b854608e980fe6390d131d7a82f011a377ef2ebef7aba"
+    },
+    {
+      "filename": "pycparser-3.12-py3-none-any.whl",
+      "bytes": 62600,
+      "sha256": "a076f3f489b39b43ed13563a1dafe42447445bec2e294154ec5c57fcdda4c85e"
+    },
+    {
+      "filename": "h5py-3.16.0-cp311-cp311-manylinux_2_28_x86_64.whl",
+      "bytes": 5027150,
+      "sha256": "fb1720028d99040792bb2fb31facb8da44a6f29df7697e0b84f0d79aff2e9bd3"
+    },
+    {
+      "filename": "omegaconf-2.4.0-py3-none-any.whl",
+      "bytes": 254152,
+      "sha256": "f141a664c777582405e3cc6e0545ecc79429e79f844995b1a6e71c35946a025c"
+    },
+    {
+      "filename": "threadpoolctl-3.7.0-py3-none-any.whl",
+      "bytes": 26362,
+      "sha256": "cd8b60b5641b45c67bbf73c64c843235fc2d8a480c87389f52f5dbee893b86be"
+    },
+    {
+      "filename": "pygame-2.6.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 13977107,
+      "sha256": "ce8cc108b92de9b149b344ad2e25eedbe773af0dc41dfb24d1f07f679b558c60"
+    },
+    {
+      "filename": "pymunk-7.2.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 1011065,
+      "sha256": "51bd7fbd553473f7503d7a84bec58386c1e299ee25587c72f1dd2f945d7984c3"
+    },
+    {
+      "filename": "filelock-4.2.4-py3-none-any.whl",
+      "bytes": 162475,
+      "sha256": "301241438c57936ef93f4243a94f2559022268bfcf9b375a9a72eb0f8db8358e"
+    },
+    {
+      "filename": "numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 16918164,
+      "sha256": "89cd468399cfd2504718f0ba50e410dca55a170b61a02ad92bb18c8a65186e93"
+    },
+    {
+      "filename": "networkx-3.6.1-py3-none-any.whl",
+      "bytes": 2068504,
+      "sha256": "d47fbf302e7d9cbbb9e2555a0d267983d2aa476bac30e90dfbe5669bd57f3762"
+    },
+    {
+      "filename": "hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "bytes": 4212180,
+      "sha256": "2814a6e999d13464c4d679b788cc5d784eb5a4edfc638a31f10e9a11ab531ef8"
+    },
+    {
+      "filename": "scipy-1.14.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 41165244,
+      "sha256": "fef8c87f8abfb884dac04e97824b61299880c43f4ce675dd2cbeadd3c9b466d2"
+    },
+    {
+      "filename": "cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "bytes": 217807,
+      "sha256": "34e261f78cb6ceaaa36f42f2613f4380d94d9c759a9c73c769ee6e0247364632"
+    },
+    {
+      "filename": "psutil-6.1.1-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 287477,
+      "sha256": "97f7cb9921fbec4904f522d972f0c0e1f4fabbdd4e0287813b21215074a0f160"
+    },
+    {
+      "filename": "scikit_learn-1.5.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 13322034,
+      "sha256": "f8b0ccd4a902836493e026c03256e8b206656f91fbcc4fde28c57a5b752561f1"
+    },
+    {
+      "filename": "transformers-4.50.3-py3-none-any.whl",
+      "bytes": 10180411,
+      "sha256": "6111610a43dec24ef32c3df0632c6b25b07d9711c01d9e1077bdd2ff6b14a38c"
+    },
+    {
+      "filename": "typing_extensions-4.16.0-py3-none-any.whl",
+      "bytes": 45571,
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+    },
+    {
+      "filename": "cloudpickle-3.1.2-py3-none-any.whl",
+      "bytes": 22228,
+      "sha256": "9acb47f6afd73f60dc1df93bb801b472f05ff42fa6c84167d25cb206be1fbf4a"
+    },
+    {
+      "filename": "huggingface_hub-0.36.2-py3-none-any.whl",
+      "bytes": 566395,
+      "sha256": "48f0c8eac16145dfce371e9d2d7772854a4f591bcb56c9cf548accf531d54270"
+    },
+    {
+      "filename": "shapely-2.0.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 2528334,
+      "sha256": "b3dc9fb0eb56498912025f5eb352b5126f04801ed0e8bdbd867d21bdbfd7cbd0"
+    },
+    {
+      "filename": "charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 269972,
+      "sha256": "211d5a3eb6af8f513b8d4ca19a8c1b7accab1b5f0d3175f9826b03c1a920dc1f"
+    },
+    {
+      "filename": "safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "bytes": 516040,
+      "sha256": "fd6f3f93c9a0a7cc2788ee63fb763353d4bd2e89b0751bc78fcf7dda00bea774"
+    },
+    {
+      "filename": "markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "bytes": 22961,
+      "sha256": "6da83a088f8ef93b2d483a8232a4dbf4d69d3d8496b568a03c56becac43e1808"
+    },
+    {
+      "filename": "certifi-2026.10.23-py3-none-any.whl",
+      "bytes": 135082,
+      "sha256": "e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1"
+    },
+    {
+      "filename": "tqdm-4.70.1-py3-none-any.whl",
+      "bytes": 80199,
+      "sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73"
+    },
+    {
+      "filename": "packaging-26.3-py3-none-any.whl",
+      "bytes": 129956,
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+    }
+  ],
+  "metadata_overhead_budget_charge_bytes": 10000000,
+  "all_future_downloads_metered": true,
+  "initial_pip_temporary_and_http_cache_location": "First attempt inherited pip defaults outside EAI before correction; no experiment result was produced. Subsequent attempt/cache/tmp are inside U. Existing outside caches were not deleted or edited for cleanup.",
+  "inherited_PYTHONPATH": "Initial pip resolver saw external ROS metadata; cleared before all model/env tests and scientific execution. No ROS code or files modified.",
+  "source_archive_repair": "SWM archive capped at 50 MB; preserved partial, fetched selected files from pinned commit instead. Anonymous GitHub API 403 rate limit followed by permitted authenticated metadata request using existing account.",
+  "dependency_combinations": "Combination 1 download only (pymunk6.11/transformers4.48) abandoned before install on reading source. Combination 2 installed pymunk7.2/transformers4.50.3. Torch2.6/CUDA12.4 binary copies from existing VLM environment; missing cusparselt directory copied after real import caught it. No existing environment upgraded."
+}

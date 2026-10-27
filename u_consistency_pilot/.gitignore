@@ -6,3 +6,12 @@ __pycache__/
 data/
 models/
 checkpoints/
+external/
+.work/
+*.partial
+outputs/v3_*/private/
+outputs/v3_*/logs/
+outputs/v3_*/.lock
+outputs/v3_*/.control/
+outputs/v3_*/log_*.txt
+outputs/v3_*/.download.lock

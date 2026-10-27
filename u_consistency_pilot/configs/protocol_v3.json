@@ -1,0 +1,405 @@
+{
+  "schema_version": 3,
+  "study": "U: true-transition-residual calibration of action consistency",
+  "registration_status": "V3_EXECUTION_DESIGN_REGISTERED_BEFORE_RESEARCH; runtime0A still must pass",
+  "phase_order": [
+    "bootstrap-and-implementation-in-parallel",
+    "0A-semantic-and-replay",
+    "0B-IDM",
+    "32-calibration-and-matched-G",
+    "16-dev-and-freeze-selection",
+    "64-test-independent-of-dev-sign",
+    "summarize-and-push"
+  ],
+  "boundaries": {
+    "D_M_terminated": true,
+    "workstation_only": true,
+    "same_EAI_workspace_required": true,
+    "new_workspace_or_worktree": false,
+    "new_isolated_environment_inside_EAI": true,
+    "download_public_matching_assets_and_minimal_dependencies": true,
+    "model_dataset_code_dependency_download_limit_bytes": 35000000000,
+    "new_disk_usage_limit_bytes": 160000000000,
+    "disk_free_floor_bytes": 40000000000,
+    "wall_limit_seconds": 43200,
+    "report_reserve_seconds": 2700,
+    "preparation_allocation_seconds": 14400,
+    "gpu_process_limit_seconds_per_card_sum": 36000,
+    "ram_target_bytes": 24000000000,
+    "ram_stop_bytes": 28000000000,
+    "vram_target_bytes": 20000000000,
+    "vram_stop_bytes": 22000000000,
+    "default_gpu_count": 1,
+    "missing_cache_response": "DOWNLOAD_PINNED_ASSET; not a stop condition",
+    "preserve_system_python_drivers_CUDA_and_old_environments": true,
+    "may_repair_semantics_preserving_interfaces": true,
+    "may_change_task_metrics_or_information_boundaries": false,
+    "U1_automatic": false,
+    "Cube_automatic": false,
+    "stop_after_final_result": true
+  },
+  "upstream_pins": {
+    "lewm": {
+      "url": "https://github.com/lucas-maes/le-wm",
+      "commit": "8edfeb336732b5f3ce7b8b210d0ba370a09e2cac",
+      "verification": "USER_SUPPLIED_NOT_LOCALLY_CHECKED_OUT"
+    },
+    "stable_worldmodel": {
+      "url": "https://github.com/galilai-group/stable-worldmodel",
+      "commit": "21446f1ede6d5284e981bd7b47f432b994e6d812",
+      "verification": "USER_SUPPLIED_COMPATIBILITY_NOT_VALIDATED"
+    },
+    "ACID": {
+      "url": "https://arxiv.org/pdf/2607.02403",
+      "sections": "3,4.6,A.5,B,J",
+      "read_this_run": false,
+      "scope": "ACID-style diagnostic; not official numerical reproduction"
+    },
+    "ATM": {
+      "url": "https://arxiv.org/pdf/2606.09028v2",
+      "read_this_run": false
+    },
+    "WAV": {
+      "url": "https://arxiv.org/pdf/2604.01985v2",
+      "pages": "3-5",
+      "read_this_run": false
+    }
+  },
+  "required_assets": [
+    {
+      "id": "lewm_pusht_weights",
+      "url": "https://huggingface.co/quentinll/lewm-pusht",
+      "revision": "22b330c28c27ead4bfd1888615af1340e3fe9052",
+      "filename": "weights.pt",
+      "bytes": 72290721,
+      "sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607"
+    },
+    {
+      "id": "lewm_pusht_training_data_or_trusted_statistics",
+      "url": "https://huggingface.co/datasets/quentinll/lewm-pusht",
+      "revision": "655cd446b9929369d7d406001da85c15d1457850",
+      "filename": "pusht_expert_train.h5.zst",
+      "bytes": 13136247974,
+      "sha256": "7cfbd6d90fa2f27876379a5ff169715a36ed82edbda64f9e5b5bfa34d212f318",
+      "trusted_cache_alternative": "Must establish original scaler provenance and matching usable training blocks; no local substitute data"
+    }
+  ],
+  "semantic_requirements": {
+    "F_frozen": true,
+    "strict_load_missing_unexpected_keys": "both empty required after allowed semantic-preserving API adaptation",
+    "nominal_history": 3,
+    "nominal_frame_skip": 5,
+    "nominal_action_input_dim": 10,
+    "nominal_action_block_shape": [
+      5,
+      2
+    ],
+    "nominal_values_provenance": "user instruction; not model-interface validation",
+    "action_scaler": "original matching data/cache only; quantify sklearn ddof=0 vs torch helper before adopting path",
+    "runtime_indices_flatten_units_frequency_and_goal": "PENDING_RUNTIME_VALIDATION_BEFORE_RESEARCH",
+    "restore": "fresh seeded environment + full prefix replay; public state insufficient",
+    "repeat_engineering_roots": 6,
+    "repeat_branches_per_root": 2,
+    "repeat_state_atol": 1e-06,
+    "repeat_render_rule": "pixel-exact",
+    "delta_J": "max(1e-3,10*engineering_max_repeat_J_difference)",
+    "delta_J_measured_value": null,
+    "G_prohibited_inputs": [
+      "candidate A",
+      "future microstep images not predicted by F"
+    ],
+    "baseline_future_info_audit_required": true,
+    "replay_policy": "Repeat seed and exact prefix; patch adapter bugs only; preserve physical semantics; no real-future input leaks"
+  },
+  "0B_requirements": {
+    "unique_block_limits": {
+      "idm_train": 10000,
+      "idm_val": 2000,
+      "offline_audit": 6000,
+      "candidate_matched_calibration": 256,
+      "total": 18256
+    },
+    "split_unit": "source episode including all derived windows",
+    "train_source_target_minimum": 100,
+    "offline_audit_used_to_fit_b": false,
+    "flow_reference": {
+      "layers": 4,
+      "width": 192,
+      "heads": 3
+    },
+    "mlp_fitting_check": {
+      "layers": 2,
+      "width": 256
+    },
+    "timing_probe_steps": 1000,
+    "max_updates_per_model": 20000,
+    "early_stop": "validation",
+    "strengthened_G": "same legal history and extra cal-fit labels; cal-val validation; never candidate A",
+    "additional_capacity_or_data_sweep": false,
+    "prediction_checks": [
+      "constant action",
+      "current legal history only",
+      "history plus true successor"
+    ],
+    "flow_K_main": 1,
+    "real_pred_sampling": "common paired random numbers",
+    "flow_K_extra": 4
+  },
+  "candidate_and_calibration_requirements": {
+    "generator_implementation": "TO_IMPLEMENT",
+    "same_generator_clipping_support_across_splits": true,
+    "candidate_count": 8,
+    "sources": {
+      "official_CEM_initial_distribution": 4,
+      "fixed_training_real_action_block_draws": 4
+    },
+    "selection_pool_shared_by_all_methods": true,
+    "cal_roots": 32,
+    "cal_fit_roots": 24,
+    "cal_val_roots": 8,
+    "contact_noncontact_target": "half each based only on prescoring geometry/contact",
+    "root_seed_prefix_goal_history_and_support_rules": "Freeze prospective seed lists, prefix and goal rules before candidate outcomes; bounded prescoring contact selection only",
+    "e_real": "A-G(z,E(o_next))",
+    "e_pred": "A-G(z,F(H,A))",
+    "b_target": "E[e_real|H,A]",
+    "c_U": "squared_norm(e_pred-b(H,A))",
+    "B2": "cal-fit mean e_real constant 10-vector",
+    "B3": {
+      "kind": "ridge",
+      "input_dim": 78,
+      "features": "3*16 PCA pooled observation latent + 2*10 executed past action blocks + current 10-action candidate",
+      "PCA_fit_split": "IDM-train only",
+      "feature_standardization_fit_split": "cal-fit only",
+      "alphas": [
+        0.01,
+        0.1,
+        1,
+        10,
+        100
+      ],
+      "selection": "cal-val residual prediction MSE only"
+    },
+    "B6": "same ridge capacity and alpha selection; fixed-seed root-block permutation across 24 cal-fit roots, preserving candidate source/slot; true cal-val labels",
+    "shuffle_seed_and_permutation": "Fixed seed 270701; save actual root-block permutation",
+    "forbidden_b_inputs": [
+      "true endpoint",
+      "F true endpoint error",
+      "true J",
+      "posthoc O"
+    ],
+    "calibration_MLP": false,
+    "prefix_control_steps_cap": 100
+  },
+  "dev_requirements": {
+    "roots": 16,
+    "methods": {
+      "B0": "goal only",
+      "B1": "original inverse residual",
+      "B2": "constant calibrated",
+      "B3": "ridge calibrated",
+      "B4": "matched-history/label strengthened G original residual",
+      "B5a": "flow K=4 mean",
+      "B5b": "flow K=4 nearest action distance",
+      "B6": "root-shuffled ridge",
+      "O": "posthoc squared_norm(G(real)-G(pred)); not deployable, not strict upper bound, not trigger"
+    },
+    "lambda_main": 0.07,
+    "lambda_B0": 0,
+    "lambda_sensitivity_descriptive_only": [
+      0,
+      0.02,
+      0.07,
+      0.2
+    ],
+    "total_cost": "c_goal + lambda*sigma_goal/max(sigma_c,epsilon)*c",
+    "epsilon": 1e-08,
+    "low_variance_disable": "sigma_c<=epsilon or sigma_goal<=epsilon; use goal-only, log occurrence; population std over shared 8-candidate pool",
+    "freeze_scores_selection_hash_before_execution": true,
+    "future_leak_response": "invalidate round and STOP",
+    "J": "max(joint_agent_block_position_error/tau_position,periodic_angle_error/tau_angle)",
+    "J_source_thresholds_and_official_success_equivalence": "PENDING_RUNTIME_VALIDATION_BEFORE_RESEARCH",
+    "regret": "(J_selected-min_J)/max(max_J-min_J,0.05)",
+    "uninformative_candidate_range_max": 0.001,
+    "uninformative_kept_in_primary_table": true,
+    "harmful_flip": "some j has true J at least delta_J better than B1-selected k, goal_j<=goal_k, inverse term reverses order; count once per root; no low e_real requirement",
+    "posthoc": [
+      "d_F=norm(F-E(real))",
+      "d_G=G(pred)-G(real)",
+      "e_pred=e_real-d_G"
+    ],
+    "posthoc_causal_claims": false,
+    "role": "method selection and diagnostic; no positive-effect requirement for independent test"
+  },
+  "test_requirements": {
+    "roots": 64,
+    "one_use_only": true,
+    "freeze_before_test": [
+      "U*",
+      "dev-selected best uncalibrated comparator",
+      "all checkpoints/scalers",
+      "candidate and metric configs/hashes"
+    ],
+    "root_paired_bootstrap_resamples_minimum": 2000,
+    "confidence": 0.95,
+    "shared_source_cluster_bootstrap": true,
+    "GO_MECHANISM_REVIEW": "point improvement>=0.05 and CI lower>0 vs dev-chosen best noncalibrated comparator; raw J consistent; if ridge, B6 CI lower>0; candidate-level evidence supports proposed real-domain-bias mechanism; data/semantics/budget valid",
+    "exclude_current_practical_benefit": "CI upper<0.05 and baseline/measurement valid; no-scoring-range is INCONCLUSIVE-MEASUREMENT, not global scientific NO-GO",
+    "wide_or_cross_zero": "INCONCLUSIVE",
+    "automatic_expansion_or_U1": false,
+    "evidence_scope": "Single frozen model, one training seed, short-horizon candidate selection; no paper novelty or cross-task claim"
+  },
+  "revision_basis": {
+    "date": "2026-10-27",
+    "timezone": "Asia/Shanghai",
+    "user_request": "Run the experiment on the unattended workstation overnight; allow necessary preparation; aim for interpretable next-morning results",
+    "supersedes": "v2 resource-absence stop and dev-positive-only test trigger",
+    "source_commit": "6e215fdfd350e8c5b03784dd17be904feb898339"
+  },
+  "task_started_at_utc": "2026-10-27T11:54:50+00:00",
+  "bootstrap": {
+    "cache_search_minutes": 10,
+    "max_pinned_dependency_combinations": 2,
+    "same_error_max_repetitions": 2,
+    "network_retry_backoff_seconds": [
+      30,
+      120,
+      300
+    ],
+    "network_stall_seconds": 600,
+    "resume_partial_downloads": true,
+    "verify_expected_asset_hashes": true,
+    "archive_format": "pusht_expert_train.h5.zst is a zstd-compressed single HDF5 file; inspect magic, do not assume tar",
+    "extract_streaming": true,
+    "training_data_read": "HDF5 action/statistic columns stream; only selected RGB/latent frames cached",
+    "decoder_and_environment_only": "PushT minimum stack; do not install all env extras or unrelated simulators",
+    "logging_external_service": false,
+    "parallelize": [
+      "public download",
+      "isolated dependency resolution",
+      "implement driver/train/branch/eval code"
+    ],
+    "gpu_busy_response": "Preserve foreign processes, wait or use otherwise idle authorized GPU; do CPU work while waiting",
+    "hard_deadline": "T0 + 12 hours unless user supplies an earlier explicit deadline; stop launching long stages with 45min remaining"
+  },
+  "overnight_execution": {
+    "implementation_required": true,
+    "old_run_gate_is_resource_audit_only": true,
+    "proposed_runner": "scripts/run_overnight_v3.py",
+    "proposed_stage_runner": "scripts/u_stage_v3.py",
+    "process_supervision": "tmux, user service or equivalent detached supervisor; logging plus exit code plus singleton run lock",
+    "heartbeat_seconds": 60,
+    "status_atomic_write": true,
+    "checkpoint_interval_max_seconds": 600,
+    "failure_finalizer": true,
+    "resume_verify": [
+      "input hashes",
+      "code hash",
+      "config hash",
+      "checkpoint and optimizer and RNG",
+      "completed root/branch ids"
+    ],
+    "do_not_wait_for_human_between_stages": true,
+    "optional_work_to_drop_first": [
+      "plots and videos",
+      "descriptive lambda sweep",
+      "extra capacity sweeps"
+    ],
+    "core_comparisons_required": true,
+    "state_semantic_repairs_invalidate_downstream_artifacts": true
+  },
+  "dev_diagnostic_reference_only": {
+    "0A_baseline_budget": "PASS",
+    "informative_dev_roots_minimum": 12,
+    "independent_harmful_flip_roots_minimum": 4,
+    "harmful_flip_candidate_evidence": "real-domain residuals and F error; F error alone does not establish U",
+    "U_selection": "if abs(mean_R_B2-mean_R_B3)<=0.01 choose B2, else lower mean_R",
+    "mean_R_improvement_vs_best_B0_B1_B4_B5_minimum": 0.05,
+    "improved_roots_minimum": 4,
+    "raw_J_same_direction": true,
+    "not_entirely_largest_outlier": true,
+    "ridge_must_beat_B6": true,
+    "not_entirely_high_clipping_or_out_of_support": true,
+    "source_strata_prespecified_no_posthoc_drops": true
+  },
+  "test_execution_gate": {
+    "required": [
+      "0A passed",
+      "baseline valid and full comparison set implemented",
+      "prospective roots and candidate generator frozen",
+      "U* and comparator fixed using dev only",
+      "no test outcomes inspected",
+      "measured estimated time plus reporting reserve fits deadline",
+      "resource safety limits satisfied"
+    ],
+    "not_required": [
+      "positive dev improvement",
+      "at least 4 harmful flips",
+      "at least 12 informative dev pools"
+    ],
+    "test_target_roots": 64,
+    "no_peeking_or_early_stop_based_on_effect": true,
+    "incomplete_test_report": "PARTIAL / INCONCLUSIVE; show completed n and frozen traversal order, not a full Gate result"
+  },
+  "allowed_dispositions": [
+    "GO-MECHANISM-REVIEW",
+    "NO-GO-CURRENT-SCOPE",
+    "INCONCLUSIVE",
+    "INCONCLUSIVE-MEASUREMENT",
+    "PARTIAL-DEADLINE",
+    "BASELINE-UNSUPPORTED",
+    "TECHNICAL-BLOCK-AFTER-REPAIR",
+    "RESOURCE-BLOCK",
+    "NETWORK-BLOCK",
+    "AUTHORIZATION-BLOCK"
+  ],
+  "run_id": "20261027T115450Z",
+  "hard_deadline_utc": "2026-10-27T23:54:50+00:00",
+  "report_cutoff_utc": "2026-10-27T23:09:50+00:00",
+  "attachment_sha256": "5e5179487f60f08e5677fef4a8de81d9a6937fbbf249d0a2db875f5d4a7dc9bb",
+  "attachment_role": "Design input; user message controls authorization and supersedes v2.",
+  "implementation_decisions": {
+    "registered_before_any_research_outcome": true,
+    "root_generator": "40 control-step approach/hold; prescoring contact gap<=2, noncontact>=35; finite512 seeds per stratum; official unaltered reset goal",
+    "root_seed_bases": {
+      "engineering": 701100,
+      "cal": 702000,
+      "dev": 703000,
+      "test": 704000
+    },
+    "IDM_episode_split_fractions": [
+      0.8,
+      0.1,
+      0.1
+    ],
+    "IDM_split_seed": 270700,
+    "G_training_seed": 270727,
+    "G_effective_batch": 256,
+    "G_microbatch": 64,
+    "flow_lr": 0.0001,
+    "flow_updates_cap": 20000,
+    "MLP_updates_cap": 20000,
+    "history_only_updates_cap": 12000,
+    "strong_base_updates_cap": 12000,
+    "strong_cal_updates_cap": 8000,
+    "strong_cal_lr": 5e-05,
+    "strong_cal_original_vs_extra_label_weight": "approximately 50/50; repeated cal-fit examples are not additional unique blocks",
+    "validation_every_updates": 250,
+    "checkpoint_every_updates": 500,
+    "minimum_early_stop_step": 1000,
+    "early_stop_patience_validations": 12,
+    "gross_baseline_failure_guard": "nonfinite, MLP val MSE>1.5*constant, flow K4mean val MSE>2*constant; not an inverse uniqueness threshold",
+    "support_reference": "95th percentile nearest IDM-train action distance among6000 offline-audit blocks",
+    "original_data_action_time_acceptance": "1000 finite consecutive row comparisons; q95 PD kinematic-agent max-coordinate error<=.001 pixels; inspect/repair before freezing if failed",
+    "test_classification": "All same-effect pools -> INCONCLUSIVE-MEASUREMENT; otherwise CI upper<.05 -> current-scope NO-GO; positive primary stats require candidate flip evidence and supported/unclipped improvements for mechanism-review classification",
+    "bootstrap_resamples": 5000,
+    "bootstrap_seed": 270901,
+    "matched_G_gross_failure_guard": "cal-val MSE>1.5*same-extra-label constant MSE -> baseline unsupported; not an inverse uniqueness threshold",
+    "GO_support_diagnostic": "require at least one improved root with both U and comparator selections supported and unclipped, plus prescribed source strata report; full main pool retained",
+    "source_stratification": "describe both four-candidate source restrictions using original frozen8-pool scores, never resample/drop primary roots",
+    "contact_float_tolerance": 1e-06,
+    "throughput_scheduler": "At1000 updates measure process throughput; cap remaining updates using fair share of remaining wall/GPU budgets after evaluation reserve; no dev/test information; maintain original max20k caps and log all changes",
+    "TERM": "request stop between complete control steps; save counters/checkpoints; independent supervisor finalizes even if worker killed",
+    "stage_progress_timeout_seconds": 900,
+    "inverse_residual_units": "raw environment control units in the flattened5x2 block. G trains in original F standardized coordinates, then is de-normalized at inference. e_real,e_pred,d_G,O and all B1-B6 costs use the raw coordinates. PCA/ridge action features use original standardized inputs before cal-fit feature standardization."
+  }
+}
