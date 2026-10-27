@@ -76,7 +76,9 @@ def decompress():
     params=zstd.get_frame_parameters(header);known=zstd.frame_content_size(header)
     if known not in [zstd.CONTENTSIZE_UNKNOWN,zstd.CONTENTSIZE_ERROR] and known>140000000000:raise RuntimeError('RESOURCE-BLOCK_KNOWN_DECOMPRESSED_SIZE_OVER_STORAGE_ALLOCATION')
     started=time.monotonic();written=0
-    with source.open('rb') as inp,partial.open('wb') as out,zstd.ZstdDecompressor(max_window_size=2*1024*1024).stream_reader(inp) as reader:
+    # python-zstandard0.23 uses bytes here: honor the verified frame's actual
+    # window (8MiB for this pinned asset), rather than a smaller guessed limit.
+    with source.open('rb') as inp,partial.open('wb') as out,zstd.ZstdDecompressor(max_window_size=params.window_size).stream_reader(inp) as reader:
         while True:
             b=reader.read(16*1024*1024)
             if not b:break

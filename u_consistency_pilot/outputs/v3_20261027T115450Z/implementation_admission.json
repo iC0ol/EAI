@@ -1,5 +1,5 @@
 {
-  "at": "2026-10-27T13:58:44.711921+00:00",
+  "at": "2026-10-27T16:55:12.996776+00:00",
   "scope": "code/environment readiness only; scientific 0A still must execute",
   "code_files": [
     "scripts/download_v3.py",
@@ -19,7 +19,7 @@
     "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/wm/lewm/lewm.py",
     "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/wm/lewm/module.py"
   ],
-  "code_hash": "8512575060b84fea6c10f05a9dd3d5067d0f0e5f05612749de3a1f52c2b80622",
+  "code_hash": "33fa50db294b445400f7c2988d76521c99b052d6ed013584355dec8dfe9726cd",
   "config_hash": "61dc08499b810935e6b28d29ea03d59494be60a00207e8eb4ae15b96c150c981",
   "static_inputs": {
     "models/v3/weights.pt": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",

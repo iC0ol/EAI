@@ -34,6 +34,7 @@ def main():
     previous=time.monotonic();previous_gpu=False;last_save=0;last_du=0;new_disk=0
     saved=run/'resource_watch.json'
     state=json.loads(saved.read_text()) if saved.exists() else {'started_at_utc':utc(),'gpu_process_card_seconds_upper_bound':0,'peak_task_process_rss_sum_bytes':0,'peak_task_vram_bytes':0,'peak_foreign_vram_bytes':0,'minimum_host_mem_available_bytes':None,'peak_task_disk_allocated_bytes':0,'samples':0,'gpu_intervals':[]}
+    state.pop('ended_at_utc',None) # A recovered guardian continues prior counters.
     if 'legacy_sampled_gpu_seconds' not in state:
         state['legacy_sampled_gpu_seconds']=state['gpu_process_card_seconds_upper_bound'];state['legacy_brief_context_uncertainty_budget_seconds']=30
     def explicit_budget():
