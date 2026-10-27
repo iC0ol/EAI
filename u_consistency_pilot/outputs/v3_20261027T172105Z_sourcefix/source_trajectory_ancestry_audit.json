@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-27T17:15:56.327117+00:00",
+  "scope": "0A ancestry/dedup audit before G training",
+  "metadata_episodes": 18685,
+  "unique_full_state_action_trajectories": 18685,
+  "identical_full_trajectory_duplicate_groups": 0,
+  "initial_state_clusters": 185,
+  "initial_state_cluster_size_distribution": {
+    "101": 185
+  },
+  "unique_trajectories_per_initial_state_distribution": {
+    "101": 185
+  },
+  "exact_trajectory_representative_total_window_capacity": 1981721
+}

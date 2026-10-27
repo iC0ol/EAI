@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-27T17:14:24.914137+00:00",
+  "scope": "Read-only source identity audit before G training, no study outcomes",
+  "metadata_episodes": 18685,
+  "unique_episode_idx_values": 18685,
+  "mixed_episode_idx_within_metadata_episode": [],
+  "nonzero_or_nonconsecutive_step_idx_episodes": [],
+  "duplicate_exact_initial_state_groups": 185,
+  "max_identical_initial_state_multiplicity": 101,
+  "claim_limit": "Source metadata and exact initial states checked; original collection seeds/extra undocumented ancestry are not asserted independent.",
+  "status": "NEEDS_SOURCE_REVIEW"
+}

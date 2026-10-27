@@ -119,7 +119,7 @@
       "candidate_matched_calibration": 256,
       "total": 18256
     },
-    "split_unit": "source episode including all derived windows",
+    "split_unit": "Conservative exact initial-state family; all101 metadata trajectories and all derived windows together. Deduplicate exact current-state/successor-state/action inverse pairs globally.",
     "train_source_target_minimum": 100,
     "offline_audit_used_to_fit_b": false,
     "flow_reference": {
@@ -352,7 +352,7 @@
     "NETWORK-BLOCK",
     "AUTHORIZATION-BLOCK"
   ],
-  "run_id": "20261027T115450Z",
+  "run_id": "20261027T172105Z_sourcefix",
   "hard_deadline_utc": "2026-10-27T23:54:50+00:00",
   "report_cutoff_utc": "2026-10-27T23:09:50+00:00",
   "attachment_sha256": "5e5179487f60f08e5677fef4a8de81d9a6937fbbf249d0a2db875f5d4a7dc9bb",
@@ -400,6 +400,19 @@
     "throughput_scheduler": "At1000 updates measure process throughput; cap remaining updates using fair share of remaining wall/GPU budgets after evaluation reserve; no dev/test information; maintain original max20k caps and log all changes",
     "TERM": "request stop between complete control steps; save counters/checkpoints; independent supervisor finalizes even if worker killed",
     "stage_progress_timeout_seconds": 900,
-    "inverse_residual_units": "raw environment control units in the flattened5x2 block. G trains in original F standardized coordinates, then is de-normalized at inference. e_real,e_pred,d_G,O and all B1-B6 costs use the raw coordinates. PCA/ridge action features use original standardized inputs before cal-fit feature standardization."
-  }
+    "inverse_residual_units": "raw environment control units in the flattened5x2 block. G trains in original F standardized coordinates, then is de-normalized at inference. e_real,e_pred,d_G,O and all B1-B6 costs use the raw coordinates. PCA/ridge action features use original standardized inputs before cal-fit feature standardization.",
+    "source_ancestry_addendum": {
+      "registered_before_G_training_or_cal_dev_test": true,
+      "finding": "18685 metadata episodes,185 exact initial-state families,101 distinct full trajectories per family",
+      "split_rule": "seed270700, 80/10/10 over185 families:148train/18val/19audit; source metadata alone insufficient ancestry evidence",
+      "exact_transition_dedup": "SHA256(original raw current7Dstate bytes +state after5controls7Dbytes +raw5x2 action bytes), global across train/val/audit; preserve selected history from same trajectory",
+      "old_latent_cache": "INVALIDATED_SOURCE_ANCESTRY_SPLIT, never used for G training",
+      "prior_code_hash": "10056e104a5c78aeaec9da28769d4cb329002251a8109ff175917852df63cf69",
+      "all_other_scientific_choices_unchanged": true,
+      "initial_state_family_is_conservative_proxy": "Original collection ancestry not explicitly supplied, so same initial condition is treated as a common source rather than independent data."
+    }
+  },
+  "supersedes_run_id": "20261027T115450Z",
+  "successor_created_at_utc": "2026-10-27T17:22:16.403654+00:00",
+  "budget_clock_policy": "Cumulative original T0=2026-10-27T11:54:50Z and all prior GPU/download/disk work carried forward; no reset."
 }

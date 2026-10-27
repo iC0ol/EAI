@@ -223,10 +223,20 @@ def prepare():
     from sklearn.decomposition import PCA
     from sklearn.neighbors import NearestNeighbors
     data=H5Data();s=load_scaler();all_actions=np.load(WORK/'all_actions.npy',mmap_mode='r')
-    rng=np.random.default_rng(270700);episodes=rng.permutation(len(data.lengths));cut1=int(.8*len(episodes));cut2=int(.9*len(episodes))
-    groups={'train':episodes[:cut1],'val':episodes[cut1:cut2],'audit':episodes[cut2:]};sizes={'train':10000,'val':2000,'audit':6000}
+    # The original asset contains101 trajectories at each of185 exact initial
+    # states. Conservatively keep each whole initial-state family in one split;
+    # metadata episode IDs alone do not establish independent source ancestry.
+    source_states=np.asarray(data.f['state'][:])
+    initial_hashes=[hashlib.sha256(source_states[off].tobytes()).hexdigest() for off in data.offsets]
+    unique_groups=sorted(set(initial_hashes));group_index={h:i for i,h in enumerate(unique_groups)}
+    episode_groups=np.array([group_index[h] for h in initial_hashes],dtype=np.int64)
+    rng=np.random.default_rng(270700);family_order=rng.permutation(len(unique_groups));cut1=int(.8*len(family_order));cut2=int(.9*len(family_order))
+    families={'train':family_order[:cut1],'val':family_order[cut1:cut2],'audit':family_order[cut2:]}
+    groups={split:np.flatnonzero(np.isin(episode_groups,ids)) for split,ids in families.items()};sizes={'train':10000,'val':2000,'audit':6000}
     if any(set(groups[a])&set(groups[b]) for a,b in [('train','val'),('train','audit'),('val','audit')]):raise RuntimeError('SOURCE_SPLIT_LEAK')
-    records=[];images_indices=[];actions=[];past=[];invalid=0
+    source_rows=[{'source_group':group_index[h],'initial_state_sha256':h,'metadata_episodes':np.flatnonzero(episode_groups==group_index[h]).tolist(),'split':next(split for split,ids in families.items() if group_index[h] in ids)} for h in unique_groups]
+    csvwrite(RUN/'source_group_manifest.csv',source_rows)
+    records=[];images_indices=[];actions=[];past=[];invalid=0;duplicate_skips=0;seen_inverse_blocks=set()
     for split in ['train','val','audit']:
         counts=np.maximum(data.lengths[groups[split]]-19,0)
         candidates_total=int(counts.sum())
@@ -238,13 +248,19 @@ def prepare():
             ep=int(eps[index]);start=int(starts[index]);off=int(data.offsets[ep]);block=np.asarray(all_actions[off+start:off+start+15])
             if not np.isfinite(block).all():invalid+=1;continue
             t=start+10;rows=data.window_indices(ep,start).tolist()
-            record={'split':split,'source_episode':ep,'window_start':start,'current_t':t,'history_local_indices':[start,start+5,start+10],'endpoint_local_index':start+15,'action_local_indices':list(range(t,t+5)),'frame_global_rows':rows,'action_block_id':f'episode_{ep}:t_{t}','status':'OK'}
+            fingerprint=hashlib.sha256(source_states[off+t].tobytes()+source_states[off+t+5].tobytes()+np.asarray(block[10:15],dtype=all_actions.dtype).tobytes()).hexdigest()
+            if fingerprint in seen_inverse_blocks:duplicate_skips+=1;continue
+            seen_inverse_blocks.add(fingerprint)
+            record={'split':split,'source_episode':ep,'source_group':int(episode_groups[ep]),'inverse_block_sha256':fingerprint,'window_start':start,'current_t':t,'history_local_indices':[start,start+5,start+10],'endpoint_local_index':start+15,'action_local_indices':list(range(t,t+5)),'frame_global_rows':rows,'action_block_id':f'episode_{ep}:t_{t}','status':'OK'}
             records.append(record);images_indices.append(rows);actions.append(block[10:15].copy());past.append(block[:10].reshape(2,5,2).copy());selected+=1
             if selected==sizes[split]:break
         if selected!=sizes[split]:raise RuntimeError('INSUFFICIENT_FINITE_BLOCKS_'+split)
     if len({r['action_block_id'] for r in records})!=18000:raise RuntimeError('DUPLICATE_BLOCK_ID')
     csvwrite(RUN/'split_manifest.csv',records)
-    actual_sources={split:len({r['source_episode'] for r in records if r['split']==split}) for split in groups}
+    actual_sources={split:len({r['source_group'] for r in records if r['split']==split}) for split in groups}
+    metadata_sources={split:len({r['source_episode'] for r in records if r['split']==split}) for split in groups}
+    if len(seen_inverse_blocks)!=18000:raise RuntimeError('DUPLICATE_OR_MISSING_UNIQUE_INVERSE_TRANSITIONS')
+    if any({r['source_group'] for r in records if r['split']==a}&{r['source_group'] for r in records if r['split']==b} for a,b in [('train','val'),('train','audit'),('val','audit')]):raise RuntimeError('SOURCE_FAMILY_SPLIT_LEAK')
     index_array=np.asarray(images_indices,dtype=np.int64);unique,inverse=np.unique(index_array,return_inverse=True);inverse=inverse.reshape(-1,4)
     F=FrozenF();latent_path=WORK/'unique_latents.npy';cursor_path=WORK/'latent_cursor.json';cursor=0
     admission=stable_hash({'rows':unique,'model_sha256':sha(BASE/'models/v3/weights.pt'),'code_hash':os.environ['U_CODE_HASH']})
@@ -262,7 +278,7 @@ def prepare():
             progress('prepare',encoded_frames=lo+len(idx),total_frames=len(unique),frames_per_second=(lo+len(idx)-cursor)/max(time.monotonic()-began,1e-6))
     Z=np.asarray(latents[inverse]);Araw=np.asarray(actions,dtype=np.float64);Praw=np.asarray(past,dtype=np.float64);A=norm_actions(Araw,s);P=norm_actions(Praw,s)
     if not np.isfinite(Z).all() or float(Z[:10000].std(axis=(0,1)).mean())<1e-5:raise RuntimeError('NONFINITE_OR_CONSTANT_TRAIN_LATENTS')
-    np.savez(WORK/'dataset.npz',Z=Z,A=A,past=P,raw_actions=Araw,source=np.array([r['source_episode'] for r in records]),window_start=np.array([r['window_start'] for r in records]))
+    np.savez(WORK/'dataset.npz',Z=Z,A=A,past=P,raw_actions=Araw,source=np.array([r['source_group'] for r in records]),metadata_episode=np.array([r['source_episode'] for r in records]),window_start=np.array([r['window_start'] for r in records]))
     training=Z[:10000,:3].reshape(-1,192)
     pca=PCA(n_components=16,svd_solver='full');pca.fit(training)
     np.savez(WORK/'pca.npz',mean=pca.mean_,components=pca.components_)
@@ -271,9 +287,9 @@ def prepare():
     reference=NearestNeighbors(n_neighbors=1,n_jobs=4).fit(A[:10000]);dist=[]
     for lo in range(12000,18000,128):dist.extend(reference.kneighbors(A[lo:lo+128],return_distance=True)[0][:,0].tolist())
     write(RUN/'support_reference.json',{'definition':'Euclidean nearest training-action-block distance in original F standardized 10-action coordinates; proxy only','fit_split':'IDM-train 10000','reference_split':'offline audit 6000, never used for b training','outside_support_threshold':float(np.quantile(dist,.95)),'reference_q50':float(np.quantile(dist,.5)),'reference_q95':float(np.quantile(dist,.95)),'n_reference_blocks':6000})
-    write(RUN/'data_preparation.json',{'status':'PASS','counts':sizes,'source_counts':actual_sources,'split_seed':270700,'source_episode_disjoint':True,'all_derived_windows_follow_source':True,'nonfinite_window_candidates_skipped':invalid,'unique_frames_encoded':len(unique),'latent_cache_bytes':latent_path.stat().st_size,'PCA_fit':'IDM-train historical observations only','PCA_explained_variance_ratio':pca.explained_variance_ratio_.tolist(),'PCA_sha256':sha(WORK/'pca.npz'),'latent_scaler_sha256':sha(WORK/'latent_scaler.npz'),'dataset_tensor_sha256':sha(WORK/'dataset.npz'),'F_pretraining_disclosure':'F was pretrained on this public original distribution, including source episodes held out from G. G train/val/audit remain source-disjoint; online roots use new independent seeds.','encode_elapsed_seconds':time.monotonic()-began})
+    write(RUN/'data_preparation.json',{'status':'PASS','counts':sizes,'source_counts':actual_sources,'metadata_episode_counts':metadata_sources,'total_initial_state_families':len(unique_groups),'source_unit':'Conservative exact initial-state family, all101 trajectories together; underlying collection IDs beyond metadata are unavailable','split_seed':270700,'source_episode_disjoint':True,'source_family_disjoint':True,'all_derived_windows_follow_source':True,'exact_inverse_block_dedup':'SHA256(original current7Dstate +5-control-end7Dstate +raw5x2 action block), global across all three splits; conservative physical-transition identity, no study outcomes','duplicate_inverse_block_candidates_skipped':duplicate_skips,'nonfinite_window_candidates_skipped':invalid,'unique_frames_encoded':len(unique),'latent_cache_bytes':latent_path.stat().st_size,'PCA_fit':'IDM-train historical observations only','PCA_explained_variance_ratio':pca.explained_variance_ratio_.tolist(),'PCA_sha256':sha(WORK/'pca.npz'),'latent_scaler_sha256':sha(WORK/'latent_scaler.npz'),'dataset_tensor_sha256':sha(WORK/'dataset.npz'),'F_pretraining_disclosure':'F was pretrained on this public original distribution, including families held out from G. G train/val/audit remain family-disjoint; online roots use new independent seeds.','encode_elapsed_seconds':time.monotonic()-began})
     write(RUN/'eta.json',{'train':3600,'cal_collect':600,'cal_fit':1200,'score_dev':300,'execute_dev':300,'analyze_dev':300,'seal_test':30,'score_test':600,'execute_test':1200,'analyze_test':300})
-    data.close();done(RUN/'split_manifest.csv',RUN/'data_preparation.json',RUN/'support_reference.json',WORK/'dataset.npz',WORK/'pca.npz',WORK/'latent_scaler.npz')
+    data.close();done(RUN/'source_group_manifest.csv',RUN/'split_manifest.csv',RUN/'data_preparation.json',RUN/'support_reference.json',WORK/'dataset.npz',WORK/'pca.npz',WORK/'latent_scaler.npz')
 
 def training_curves():
     rows=readlines(RUN/'training_progress.jsonl')

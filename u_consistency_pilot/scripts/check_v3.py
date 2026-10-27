@@ -135,8 +135,35 @@ def budget_probe():
     atomic(RUN/'engineering_only_budget_probe.json',{'scope':'TEST_ONLY; synthetic latents/actions and synthetic remaining-budget record, real GPU cost included in task monitor','status':'PASS','actual_updates':1000,'elapsed_seconds':time.monotonic()-begin,'actual_updates_per_second':1000/(time.monotonic()-begin),'scheduler_reduced1100_cap_to1000':True,'scientific_data_used':False})
     print('TEST_ONLY real1000-update throughput / budget scheduler PASS')
 
+def trusted_smoke():
+    # Full engineering path with the now verified original-data action scaler.
+    # G is deliberately untrained: this validates wiring, never baseline quality.
+    from u_core_v3 import H5Data,norm_actions,denorm_actions,denorm_g
+    from u_train_v3 import FlowG
+    import u_stage_v3 as stage
+    D=H5Data();scaler_path=RUN/'action_scaler.json';s=json.loads(scaler_path.read_text()) if scaler_path.exists() else stage.compute_action_scaler(D)
+    F=FrozenF();root=prefix_for_seed(701199,'contact',s['relative']);root.update({'root':'engineering_trusted_000','source':'independent_seed_701199','split':'engineering_trusted','candidate_seed':701200});H=F.encode(root['history_raw_frames']);goal=F.encode(root['goal_image'][None])[0]
+    past=norm_actions(root['past_raw_blocks'],s);rng=np.random.default_rng(701200)
+    proposed=np.concatenate([denorm_actions(rng.standard_normal((4,10)),s),np.stack([D.actions(0,t) for t in [0,5,10,15]])]);raw=np.clip(proposed,*s['raw_action_clip']);A=norm_actions(raw,s);pred=F.predict(H,past,A)
+    torch.manual_seed(701199);G=FlowG().cuda().eval();epsilon=torch.as_tensor(rng.standard_normal((8,10)),dtype=torch.float32,device='cuda')
+    def recover(next_z):
+        cond=torch.as_tensor(np.stack([np.broadcast_to(H[-1],next_z.shape),next_z],axis=1),dtype=torch.float32,device='cuda')
+        with torch.inference_mode():return denorm_g(G.sample(cond,epsilon).cpu().numpy(),s)
+    gp=recover(pred);ep=raw.reshape(8,10)-gp;goal_cost=np.sum((pred-goal)**2,axis=1);inverse=np.sum(ep**2,axis=1);disabled=min(np.std(goal_cost),np.std(inverse))<=1e-8
+    total=goal_cost+(0. if disabled else .07*np.std(goal_cost)/np.std(inverse))*inverse
+    frozen={'scope':'ENGINEERING_ONLY_UNTRAINED_G_ACTUAL_SCALER','at':utc(),'root_seed':root['seed'],'candidate_seed':701200,'raw_actions':raw.tolist(),'standardized_actions':A.tolist(),'goal_cost':goal_cost.tolist(),'inverse_cost':inverse.tolist(),'total_cost':total.tolist(),'selected_index':int(np.argmin(total)),'action_scaler_sha256':sha(RUN/'action_scaler.json'),'scoring_script_sha256':sha(Path(__file__))}
+    frozen['hash']=stable_hash(frozen);atomic(RUN/'engineering_only_trusted_frozen.json',frozen)
+    actual=[];images=[]
+    for candidate in range(8):
+        image,result=stage.live_branch(root,raw[candidate],s['relative'],'engineering_trusted',candidate);images.append(image);actual.append(result)
+    gr=recover(F.encode(np.asarray(images)));er=raw.reshape(8,10)-gr;dg=gp-gr
+    assert np.allclose(ep,er-dg,atol=1e-6,rtol=1e-6) and np.isfinite(total).all()
+    assert len(actual)==8 and all(r['status']=='OK' for r in actual)
+    atomic(RUN/'engineering_only_trusted_pipeline.json',{'at':utc(),'scope':'ENGINEERING_ONLY, untrained inverse network; no scientific fit/cal/dev/test data or efficacy claim','status':'PASS','uses_original_verified_scaler':True,'scaler_sha256':sha(RUN/'action_scaler.json'),'strict_missing':F.missing_keys,'strict_unexpected':F.unexpected_keys,'action_block_shape':[8,5,2],'raw_residual_units':True,'frozen_hash':frozen['hash'],'frozen_before_execution':True,'branches':actual,'common_noise_paired':True,'residual_identity_max_error':float(np.max(np.abs(ep-(er-dg)))),'G_trained':False})
+    D.close();flush_counts('ENGINEERING_TRUSTED_PIPELINE');print('ENGINEERING_ONLY actual-scaler8-branch loading/scoring/execution/summary PASS')
+
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--kind',choices=['smoke','integrity','data-training','statistics-guard','budget-probe'],required=True);a=p.parse_args()
-    try:{'smoke':smoke,'integrity':integrity,'data-training':data_and_training,'statistics-guard':statistics_and_leak_guard,'budget-probe':budget_probe}[a.kind]()
+    p=argparse.ArgumentParser();p.add_argument('--kind',choices=['smoke','integrity','data-training','statistics-guard','budget-probe','trusted-smoke'],required=True);a=p.parse_args()
+    try:{'smoke':smoke,'integrity':integrity,'data-training':data_and_training,'statistics-guard':statistics_and_leak_guard,'budget-probe':budget_probe,'trusted-smoke':trusted_smoke}[a.kind]()
     finally:
-        if a.kind=='smoke':flush_counts('ENGINEERING_ONLY_SMOKE')
+        if a.kind in ['smoke','trusted-smoke']:flush_counts('ENGINEERING_ONLY_SMOKE' if a.kind=='smoke' else 'ENGINEERING_TRUSTED_PIPELINE')

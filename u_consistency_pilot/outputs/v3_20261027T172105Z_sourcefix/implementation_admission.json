@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-27T17:22:18.181441+00:00",
+  "scope": "code/environment readiness only; scientific 0A still must execute",
+  "code_files": [
+    "scripts/download_v3.py",
+    "scripts/u_core_v3.py",
+    "scripts/u_train_v3.py",
+    "scripts/u_stage_v3.py",
+    "scripts/with_env_v3.sh",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/data/dataset.py",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/data/formats/hdf5.py",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/data/formats/lance.py",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/envs/pusht/env.py",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/envs/pusht/expert_policy.py",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/envs/utils.py",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/planning/solver/cem.py",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/spaces.py",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/utils.py",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/wm/lewm/lewm.py",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/wm/lewm/module.py"
+  ],
+  "code_hash": "8be017e86517a9da4e4a9a2d75548a8aec7ce4d8cedc26dfd1263fcb41745406",
+  "config_hash": "aa3f5f7e329aa762ddaacc5fe8753c3d44fbcb83c2a82c7472d0013ef19eb51f",
+  "static_inputs": {
+    "models/v3/weights.pt": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",
+    "models/v3/config.json": "2564086e961e7b5c7c04dffc451091115b389a590645ff19653c64fd0bc16e09",
+    "configs/requirements_v3_min.txt": "2f323079f2edcdc22c6e5f473d4e76e436568133a1badea876d3565bccb1673e"
+  }
+}
