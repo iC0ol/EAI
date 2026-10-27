@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-27T14:26:07.707992+00:00",
+  "time_display_timezone": "Asia/Shanghai",
+  "observed_data_bytes": 7475298304,
+  "observed_rate_Bps_since_last_worker_restart": 550284.0950319296,
+  "estimated_data_wait_seconds": 10287.321987148349,
+  "estimated_data_verified_utc": "2026-10-27T17:19:05.029970+00:00",
+  "estimated_data_verified_Asia_Shanghai": "2026-10-28T01:19:05.029970+08:00",
+  "preparation_plan_original_seconds": 14400,
+  "reallocation": "Data transfer likely exceeds planned4h preparation; use authorized reallocation within original12h deadline. No change to deadline/report reserve/GPU/download caps.",
+  "remaining_science_provisional_seconds_range": [
+    3600,
+    7200
+  ],
+  "remaining_science_estimate_basis": "Actual engineer F encoding1521frames/s syntheticRGB, actual1000flowupdates28/s; all18k data IO, real fitting/early stop and formal branch timing not yet measured. These are estimates, not completed experimental work.",
+  "preparation_implemented": true,
+  "formal_0A": "NOT_RUN",
+  "training": "NOT_RUN",
+  "cal_dev_test": "NOT_RUN"
+}

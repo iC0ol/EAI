@@ -1,0 +1,252 @@
+{"at": "2026-10-27T11:57:03.763788+00:00", "asset": "dataset", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T11:57:03.808338+00:00", "asset": "lewm", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T11:57:18.164765+00:00", "asset": "swm", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T11:57:45.284681+00:00", "asset": "paper_ACID", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T11:59:04.201448+00:00", "asset": "paper_ATM", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T11:59:08.813362+00:00", "asset": "paper_WAV", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T11:59:19.196287+00:00", "asset": "swm", "attempt": 0, "event": "ERROR", "error": "RuntimeError: ASSET_SIZE_CAP"}
+{"at": "2026-10-27T11:59:26.128885+00:00", "asset": "swm_tree", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T11:59:27.506631+00:00", "asset": "swm_tree", "attempt": 0, "event": "ERROR", "error": "HTTPError: HTTP Error 403: rate limit exceeded"}
+{"at": "2026-10-27T11:59:58.582666+00:00", "asset": "model_config_json", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T11:59:59.974952+00:00", "asset": "model_weights_pt", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:01:12.704968+00:00", "asset": "swm_pyproject_toml", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:01:13.285506+00:00", "asset": "swm_stable_worldmodel_envs_pusht_env_py", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:01:14.106038+00:00", "asset": "swm_stable_worldmodel_envs_pusht_expert_policy_py", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:01:14.657565+00:00", "asset": "swm_stable_worldmodel_planning_solver_cem_py", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:01:15.661498+00:00", "asset": "swm_docs_envs_pusht_md", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:01:59.088041+00:00", "asset": "swm_stable_worldmodel_envs_utils_py", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:02:00.512866+00:00", "asset": "swm_stable_worldmodel_spaces_py", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:02:01.582696+00:00", "asset": "swm_stable_worldmodel_wm_lewm_lewm_py", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:02:02.217670+00:00", "asset": "swm_stable_worldmodel_wm_lewm_module_py", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:02:03.279911+00:00", "asset": "spt_utils", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:06:24.972910+00:00", "asset": "dataset_range", "range": [574619648, 708837375], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:06:25.144204+00:00", "asset": "dataset_range", "range": [440401920, 574619647], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:06:25.149925+00:00", "asset": "dataset_range", "range": [171966464, 306184191], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:06:25.415273+00:00", "asset": "dataset_range", "range": [306184192, 440401919], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:06:25.543053+00:00", "asset": "dataset_range", "range": [843055104, 977272831], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:06:25.550768+00:00", "asset": "dataset_range", "range": [708837376, 843055103], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:11:06.360833+00:00", "asset": "swm_stable_worldmodel_utils_py", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:11:07.024999+00:00", "asset": "swm_stable_worldmodel_data_formats_hdf5_py", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:11:43.351297+00:00", "asset": "swm_stable_worldmodel_data_dataset_py", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:11:44.313495+00:00", "asset": "swm_stable_worldmodel_data_formats_lance_py", "attempt": 0, "resume_offset": 0, "event": "REQUEST"}
+{"at": "2026-10-27T12:13:10.032721+00:00", "asset": "dataset_range", "range": [1111490560, 1245708287], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:13:10.052349+00:00", "asset": "dataset_range", "range": [977272832, 1111490559], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:13:10.090862+00:00", "asset": "dataset_range", "range": [1379926016, 1514143743], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:13:10.876509+00:00", "asset": "dataset_range", "range": [1648361472, 1782579199], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:13:11.253385+00:00", "asset": "dataset_range", "range": [1245708288, 1379926015], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:13:11.255877+00:00", "asset": "dataset_range", "range": [1514143744, 1648361471], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:21:41.142750+00:00", "asset": "dataset_range", "range": [1782579200, 1916796927], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:21:41.155129+00:00", "asset": "dataset_range", "range": [1916796928, 2051014655], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:21:41.683702+00:00", "asset": "dataset_range", "range": [2185232384, 2319450111], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:21:41.779210+00:00", "asset": "dataset_range", "range": [2319450112, 2453667839], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:21:41.989290+00:00", "asset": "dataset_range", "range": [2453667840, 2587885567], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:21:41.989700+00:00", "asset": "dataset_range", "range": [2051014656, 2185232383], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:27:22.398139+00:00", "asset": "dataset_range", "range": [2722103296, 2856321023], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:27:22.481158+00:00", "asset": "dataset_range", "range": [2587885568, 2722103295], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:27:23.422317+00:00", "asset": "dataset_range", "range": [3124756480, 3258974207], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:27:23.595941+00:00", "asset": "dataset_range", "range": [2856321024, 2990538751], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:27:23.806449+00:00", "asset": "dataset_range", "range": [3258974208, 3393191935], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:27:24.237118+00:00", "asset": "dataset_range", "range": [2990538752, 3124756479], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:36:12.212641+00:00", "asset": "dataset_range", "range": [3393191936, 3527409663], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:36:12.626286+00:00", "asset": "dataset_range", "range": [3527409664, 3661627391], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:36:27.674909+00:00", "asset": "dataset_range", "range": [3661627392, 3795845119], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:36:29.350367+00:00", "asset": "dataset_range", "range": [3930062848, 4064280575], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:36:30.040514+00:00", "asset": "dataset_range", "range": [3795845120, 3930062847], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:36:30.311778+00:00", "asset": "dataset_range", "range": [4064280576, 4198498303], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:41:43.672033+00:00", "asset": "dataset_range", "range": [3393191936, 3527409663], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:41:44.679209+00:00", "asset": "dataset_range", "range": [3527409664, 3661627391], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:41:59.368755+00:00", "asset": "dataset_range", "range": [3661627392, 3795845119], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:42:01.436558+00:00", "asset": "dataset_range", "range": [3795845120, 3930062847], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:42:01.509515+00:00", "asset": "dataset_range", "range": [3930062848, 4064280575], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:42:01.592335+00:00", "asset": "dataset_range", "range": [4064280576, 4198498303], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:52:32.100492+00:00", "asset": "dataset_range", "range": [4198498304, 4332716031], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:52:40.202202+00:00", "asset": "dataset_range", "range": [4332716032, 4466933759], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:53:40.595857+00:00", "asset": "dataset_range", "range": [4466933760, 4601151487], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:53:43.166479+00:00", "asset": "dataset_range", "range": [4601151488, 4735369215], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:53:45.198276+00:00", "asset": "dataset_range", "range": [4735369216, 4869586943], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T12:53:45.982337+00:00", "asset": "dataset_range", "range": [4869586944, 5003804671], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:02:21.345489+00:00", "asset": "dataset_range", "range": [4601151488, 4735369215], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:02:21.380286+00:00", "asset": "dataset_range", "range": [4869586944, 5003804671], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:02:21.433687+00:00", "asset": "dataset_range", "range": [5003804672, 5138022399], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:02:21.670075+00:00", "asset": "dataset_range", "range": [4198498304, 4332716031], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:02:21.745232+00:00", "asset": "dataset_range", "range": [5138022400, 5272240127], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:02:22.087625+00:00", "asset": "dataset_range", "range": [4735369216, 4869586943], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:02:22.194307+00:00", "asset": "dataset_range", "range": [4466933760, 4601151487], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:02:22.980536+00:00", "asset": "dataset_range", "range": [4332716032, 4466933759], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:07:52.909235+00:00", "asset": "dataset_range", "range": [4601151488, 4735369215], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:07:53.085153+00:00", "asset": "dataset_range", "range": [5003804672, 5138022399], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:07:53.700099+00:00", "asset": "dataset_range", "range": [4735369216, 4869586943], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:07:53.704504+00:00", "asset": "dataset_range", "range": [4198498304, 4332716031], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:07:53.704809+00:00", "asset": "dataset_range", "range": [5138022400, 5272240127], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:07:53.746983+00:00", "asset": "dataset_range", "range": [4869586944, 5003804671], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:07:53.747233+00:00", "asset": "dataset_range", "range": [4466933760, 4601151487], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:07:54.670190+00:00", "asset": "dataset_range", "range": [4332716032, 4466933759], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:14:54.995164+00:00", "asset": "dataset_range", "range": [4601151488, 4735369215], "attempt": 2, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:14:55.086480+00:00", "asset": "dataset_range", "range": [5003804672, 5138022399], "attempt": 2, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:14:55.150275+00:00", "asset": "dataset_range", "range": [4466933760, 4601151487], "attempt": 2, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:14:56.377721+00:00", "asset": "dataset_range", "range": [4198498304, 4332716031], "attempt": 2, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:14:56.378905+00:00", "asset": "dataset_range", "range": [5138022400, 5272240127], "attempt": 2, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:14:56.384839+00:00", "asset": "dataset_range", "range": [4869586944, 5003804671], "attempt": 2, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:14:56.385568+00:00", "asset": "dataset_range", "range": [4735369216, 4869586943], "attempt": 2, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:14:56.880253+00:00", "asset": "dataset_range", "range": [4332716032, 4466933759], "attempt": 2, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:24:56.696833+00:00", "asset": "dataset_range", "range": [5003804672, 5138022399], "attempt": 3, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:24:58.577095+00:00", "asset": "dataset_range", "range": [5138022400, 5272240127], "attempt": 3, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:26:23.791145+00:00", "asset": "dataset_range", "range": [5272240128, 5406457855], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:26:34.452891+00:00", "asset": "dataset_range", "range": [5406457856, 5540675583], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:29:17.892999+00:00", "asset": "dataset_range", "range": [5540675584, 5674893311], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:29:23.506322+00:00", "asset": "dataset_range", "range": [5674893312, 5809111039], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:29:30.038613+00:00", "asset": "dataset_range", "range": [5809111040, 5943328767], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:29:44.790508+00:00", "asset": "dataset_range", "range": [5943328768, 6077546495], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:29:58.940281+00:00", "asset": "dataset_range", "range": [6077546496, 6211764223], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:30:00.009141+00:00", "asset": "dataset_range", "range": [6211764224, 6345981951], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:31:55.658585+00:00", "asset": "dataset_range", "range": [5272240128, 5406457855], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:32:07.881641+00:00", "asset": "dataset_range", "range": [5406457856, 5540675583], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T13:59:56.629357+00:00", "asset": "dataset_range", "range": [7059013632, 7067402239], "storage_chunk": [7017070592, 7151288319], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T14:00:26.877897+00:00", "asset": "dataset_range", "range": [7059013632, 7067402239], "storage_chunk": [7017070592, 7151288319], "attempt": 1, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T14:00:44.246303+00:00", "asset": "dataset_range", "range": [6396313600, 6404702207], "storage_chunk": [6345981952, 6480199679], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T14:00:45.372441+00:00", "asset": "dataset_range", "range": [6530531328, 6538919935], "storage_chunk": [6480199680, 6614417407], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T14:00:54.399661+00:00", "asset": "dataset_range", "range": [6664749056, 6673137663], "storage_chunk": [6614417408, 6748635135], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T14:01:01.310624+00:00", "asset": "dataset_range", "range": [6205264914, 6211764223], "storage_chunk": [6077546496, 6211764223], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T14:01:03.903927+00:00", "asset": "dataset_range", "range": [6339383794, 6345981951], "storage_chunk": [6211764224, 6345981951], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T14:01:05.340617+00:00", "asset": "dataset_range", "range": [6798966784, 6807355391], "storage_chunk": [6748635136, 6882852863], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T14:01:06.300827+00:00", "asset": "dataset_range", "range": [6933184512, 6941573119], "storage_chunk": [6882852864, 7017070591], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T14:53:46.753215+00:00", "asset": "dataset_range", "range": [8812232704, 8820621311], "storage_chunk": [8761901056, 8896118783], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T14:54:44.027836+00:00", "asset": "dataset_range", "range": [8032092160, 8040480767], "storage_chunk": [7956594688, 8090812415], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T14:54:45.545019+00:00", "asset": "dataset_range", "range": [7495221248, 7503609855], "storage_chunk": [7419723776, 7553941503], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T14:54:47.357182+00:00", "asset": "dataset_range", "range": [7629438976, 7637827583], "storage_chunk": [7553941504, 7688159231], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T14:54:48.617512+00:00", "asset": "dataset_range", "range": [8946450432, 8954839039], "storage_chunk": [8896118784, 9030336511], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T14:54:49.864724+00:00", "asset": "dataset_range", "range": [7897874432, 7906263039], "storage_chunk": [7822376960, 7956594687], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T14:54:49.865071+00:00", "asset": "dataset_range", "range": [8434745344, 8443133951], "storage_chunk": [8359247872, 8493465599], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T14:54:51.603887+00:00", "asset": "dataset_range", "range": [8166309888, 8174698495], "storage_chunk": [8090812416, 8225030143], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T14:54:53.620307+00:00", "asset": "dataset_range", "range": [7763656704, 7772045311], "storage_chunk": [7688159232, 7822376959], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T14:54:54.408375+00:00", "asset": "dataset_range", "range": [9080668160, 9089056767], "storage_chunk": [9030336512, 9164554239], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T14:54:57.211687+00:00", "asset": "dataset_range", "range": [8300527616, 8308916223], "storage_chunk": [8225030144, 8359247871], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:00:34.562607+00:00", "asset": "dataset_range", "range": [8040480768, 8048869375], "storage_chunk": [7956594688, 8090812415], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:00:38.621955+00:00", "asset": "dataset_range", "range": [7503609856, 7511998463], "storage_chunk": [7419723776, 7553941503], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:00:42.499222+00:00", "asset": "dataset_range", "range": [7637827584, 7646216191], "storage_chunk": [7553941504, 7688159231], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:00:43.436160+00:00", "asset": "dataset_range", "range": [8560574464, 8568963071], "storage_chunk": [8493465600, 8627683327], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:00:43.726521+00:00", "asset": "dataset_range", "range": [8174698496, 8183087103], "storage_chunk": [8090812416, 8225030143], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:00:45.810691+00:00", "asset": "dataset_range", "range": [8954839040, 8963227647], "storage_chunk": [8896118784, 9030336511], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:00:48.711559+00:00", "asset": "dataset_range", "range": [7772045312, 7780433919], "storage_chunk": [7688159232, 7822376959], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:00:48.714064+00:00", "asset": "dataset_range", "range": [8443133952, 8451522559], "storage_chunk": [8359247872, 8493465599], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:07:33.467615+00:00", "asset": "dataset_range", "range": [9315549184, 9323937791], "storage_chunk": [9298771968, 9432989695], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:07:35.543592+00:00", "asset": "dataset_range", "range": [9449766912, 9458155519], "storage_chunk": [9432989696, 9567207423], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:08:11.428220+00:00", "asset": "dataset_range", "range": [8837398528, 8845787135], "storage_chunk": [8761901056, 8896118783], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:10:08.320593+00:00", "asset": "dataset_range", "range": [8325693440, 8334082047], "storage_chunk": [8225030144, 8359247871], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:10:13.694731+00:00", "asset": "dataset_range", "range": [9105833984, 9114222591], "storage_chunk": [9030336512, 9164554239], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:10:15.718290+00:00", "asset": "dataset_range", "range": [7923040256, 7931428863], "storage_chunk": [7822376960, 7956594687], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:10:38.435604+00:00", "asset": "dataset_range", "range": [8711569408, 8719958015], "storage_chunk": [8627683328, 8761901055], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:10:56.098156+00:00", "asset": "dataset_range", "range": [8057257984, 8065646591], "storage_chunk": [7956594688, 8090812415], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:11:02.020631+00:00", "asset": "dataset_range", "range": [7520387072, 7528775679], "storage_chunk": [7419723776, 7553941503], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:11:10.479541+00:00", "asset": "dataset_range", "range": [8577351680, 8585740287], "storage_chunk": [8493465600, 8627683327], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:11:11.550088+00:00", "asset": "dataset_range", "range": [8191475712, 8199864319], "storage_chunk": [8090812416, 8225030143], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:11:12.050061+00:00", "asset": "dataset_range", "range": [7654604800, 7662993407], "storage_chunk": [7553941504, 7688159231], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:11:12.326382+00:00", "asset": "dataset_range", "range": [8971616256, 8980004863], "storage_chunk": [8896118784, 9030336511], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:11:13.855523+00:00", "asset": "dataset_range", "range": [7788822528, 7797211135], "storage_chunk": [7688159232, 7822376959], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:11:15.660044+00:00", "asset": "dataset_range", "range": [8459911168, 8468299775], "storage_chunk": [8359247872, 8493465599], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:11:29.921039+00:00", "asset": "dataset_range", "range": [9231663104, 9240051711], "storage_chunk": [9164554240, 9298771967], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:13:21.436729+00:00", "asset": "dataset_range", "range": [9323937792, 9332326399], "storage_chunk": [9298771968, 9432989695], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:13:22.013431+00:00", "asset": "dataset_range", "range": [9458155520, 9466544127], "storage_chunk": [9432989696, 9567207423], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:13:55.503569+00:00", "asset": "dataset_range", "range": [8845787136, 8854175743], "storage_chunk": [8761901056, 8896118783], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:16:43.540594+00:00", "asset": "dataset_range", "range": [8065646592, 8074035199], "storage_chunk": [7956594688, 8090812415], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:16:49.962882+00:00", "asset": "dataset_range", "range": [7528775680, 7537164287], "storage_chunk": [7419723776, 7553941503], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:17:10.068623+00:00", "asset": "dataset_range", "range": [7662993408, 7671382015], "storage_chunk": [7553941504, 7688159231], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:17:10.420993+00:00", "asset": "dataset_range", "range": [8199864320, 8208252927], "storage_chunk": [8090812416, 8225030143], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:17:13.353810+00:00", "asset": "dataset_range", "range": [8468299776, 8476688383], "storage_chunk": [8359247872, 8493465599], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:17:13.821818+00:00", "asset": "dataset_range", "range": [7797211136, 7805599743], "storage_chunk": [7688159232, 7822376959], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:24:31.721046+00:00", "asset": "dataset_range", "range": [9567207424, 9575596031], "storage_chunk": [9567207424, 9701425151], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T15:24:31.721231+00:00", "asset": "dataset_range", "range": [9701425152, 9709813759], "storage_chunk": [9701425152, 9835642879], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T15:24:31.721400+00:00", "asset": "dataset_range", "range": [9139388416, 9147777023], "storage_chunk": [9030336512, 9164554239], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T15:24:39.645598+00:00", "asset": "dataset_range", "range": [8745123840, 8753512447], "storage_chunk": [8627683328, 8761901055], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T15:25:02.786123+00:00", "asset": "dataset_range", "range": [9701425152, 9709813759], "storage_chunk": [9701425152, 9835642879], "attempt": 1, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T15:25:02.786315+00:00", "asset": "dataset_range", "range": [9139388416, 9147777023], "storage_chunk": [9030336512, 9164554239], "attempt": 1, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T15:25:02.902491+00:00", "asset": "dataset_range", "range": [9567207424, 9575596031], "storage_chunk": [9567207424, 9701425151], "attempt": 1, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T15:25:10.633206+00:00", "asset": "dataset_range", "range": [8745123840, 8753512447], "storage_chunk": [8627683328, 8761901055], "attempt": 1, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T15:25:22.273899+00:00", "asset": "dataset_range", "range": [8610906112, 8619294719], "storage_chunk": [8493465600, 8627683327], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T15:25:26.369687+00:00", "asset": "dataset_range", "range": [9005170688, 9013559295], "storage_chunk": [8896118784, 9030336511], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T15:25:31.086563+00:00", "asset": "dataset_range", "range": [9265217536, 9273606143], "storage_chunk": [9164554240, 9298771967], "attempt": 0, "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)>"}
+{"at": "2026-10-27T15:30:41.777465+00:00", "asset": "dataset_range", "range": [9835642880, 9844031487], "storage_chunk": [9835642880, 9969860607], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:30:48.221580+00:00", "asset": "dataset_range", "range": [9969860608, 9978249215], "storage_chunk": [9969860608, 10104078335], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:30:55.393193+00:00", "asset": "dataset_range", "range": [8610906112, 8619294719], "storage_chunk": [8493465600, 8627683327], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:30:58.613397+00:00", "asset": "dataset_range", "range": [9005170688, 9013559295], "storage_chunk": [8896118784, 9030336511], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:31:00.825809+00:00", "asset": "dataset_range", "range": [10104078336, 10112466943], "storage_chunk": [10104078336, 10238296063], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:31:01.124110+00:00", "asset": "dataset_range", "range": [10238296064, 10246684671], "storage_chunk": [10238296064, 10372513791], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:31:03.172510+00:00", "asset": "dataset_range", "range": [9265217536, 9273606143], "storage_chunk": [9164554240, 9298771967], "attempt": 1, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:31:03.539004+00:00", "asset": "dataset_range", "range": [10372513792, 10380902399], "storage_chunk": [10372513792, 10506731519], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:31:03.754667+00:00", "asset": "dataset_range", "range": [10506731520, 10515120127], "storage_chunk": [10506731520, 10640949247], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:45:13.882090+00:00", "asset": "dataset_range", "range": [9860808704, 9869197311], "storage_chunk": [9835642880, 9969860607], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:45:19.817946+00:00", "asset": "dataset_range", "range": [9995026432, 10003415039], "storage_chunk": [9969860608, 10104078335], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:45:32.580425+00:00", "asset": "dataset_range", "range": [9382658048, 9391046655], "storage_chunk": [9298771968, 9432989695], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:45:36.566216+00:00", "asset": "dataset_range", "range": [9516875776, 9525264383], "storage_chunk": [9432989696, 9567207423], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:45:57.774715+00:00", "asset": "dataset_range", "range": [9592373248, 9600761855], "storage_chunk": [9567207424, 9701425151], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:45:58.494952+00:00", "asset": "dataset_range", "range": [10263461888, 10271850495], "storage_chunk": [10238296064, 10372513791], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:45:58.495264+00:00", "asset": "dataset_range", "range": [9726590976, 9734979583], "storage_chunk": [9701425152, 9835642879], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:46:00.033662+00:00", "asset": "dataset_range", "range": [10129244160, 10137632767], "storage_chunk": [10104078336, 10238296063], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:46:00.619003+00:00", "asset": "dataset_range", "range": [11043602432, 11051991039], "storage_chunk": [11043602432, 11177820159], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:46:01.799793+00:00", "asset": "dataset_range", "range": [10397679616, 10406068223], "storage_chunk": [10372513792, 10506731519], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:46:04.121052+00:00", "asset": "dataset_range", "range": [10531897344, 10540285951], "storage_chunk": [10506731520, 10640949247], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:46:04.121605+00:00", "asset": "dataset_range", "range": [10649337856, 10657726463], "storage_chunk": [10640949248, 10775166975], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:46:09.408153+00:00", "asset": "dataset_range", "range": [10783555584, 10791944191], "storage_chunk": [10775166976, 10909384703], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:51:11.736811+00:00", "asset": "dataset_range", "range": [9869197312, 9877585919], "storage_chunk": [9835642880, 9969860607], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:51:15.510605+00:00", "asset": "dataset_range", "range": [10003415040, 10011803647], "storage_chunk": [9969860608, 10104078335], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:51:22.124460+00:00", "asset": "dataset_range", "range": [9391046656, 9399435263], "storage_chunk": [9298771968, 9432989695], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:51:22.301881+00:00", "asset": "dataset_range", "range": [9525264384, 9533652991], "storage_chunk": [9432989696, 9567207423], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:51:48.536181+00:00", "asset": "dataset_range", "range": [9734979584, 9743368191], "storage_chunk": [9701425152, 9835642879], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:51:49.761463+00:00", "asset": "dataset_range", "range": [9600761856, 9609150463], "storage_chunk": [9567207424, 9701425151], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:51:49.906271+00:00", "asset": "dataset_range", "range": [10271850496, 10280239103], "storage_chunk": [10238296064, 10372513791], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:51:51.127680+00:00", "asset": "dataset_range", "range": [10137632768, 10146021375], "storage_chunk": [10104078336, 10238296063], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:51:51.176718+00:00", "asset": "dataset_range", "range": [10657726464, 10666115071], "storage_chunk": [10640949248, 10775166975], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:51:52.828011+00:00", "asset": "dataset_range", "range": [11051991040, 11060379647], "storage_chunk": [11043602432, 11177820159], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:51:53.180255+00:00", "asset": "dataset_range", "range": [10791944192, 10800332799], "storage_chunk": [10775166976, 10909384703], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:51:55.078868+00:00", "asset": "dataset_range", "range": [10406068224, 10414456831], "storage_chunk": [10372513792, 10506731519], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:51:55.381307+00:00", "asset": "dataset_range", "range": [10540285952, 10548674559], "storage_chunk": [10506731520, 10640949247], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:52:22.621980+00:00", "asset": "dataset_range", "range": [10926161920, 10934550527], "storage_chunk": [10909384704, 11043602431], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:52:23.853749+00:00", "asset": "dataset_range", "range": [11312037888, 11320426495], "storage_chunk": [11312037888, 11446255615], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:52:33.204600+00:00", "asset": "dataset_range", "range": [11186208768, 11194597375], "storage_chunk": [11177820160, 11312037887], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:57:06.424381+00:00", "asset": "dataset_range", "range": [9877585920, 9885974527], "storage_chunk": [9835642880, 9969860607], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:57:08.653900+00:00", "asset": "dataset_range", "range": [10011803648, 10020192255], "storage_chunk": [9969860608, 10104078335], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:57:18.645575+00:00", "asset": "dataset_range", "range": [9533652992, 9542041599], "storage_chunk": [9432989696, 9567207423], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:57:18.922647+00:00", "asset": "dataset_range", "range": [9399435264, 9407823871], "storage_chunk": [9298771968, 9432989695], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:58:25.543556+00:00", "asset": "dataset_range", "range": [9743368192, 9751756799], "storage_chunk": [9701425152, 9835642879], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:58:30.491715+00:00", "asset": "dataset_range", "range": [10280239104, 10288627711], "storage_chunk": [10238296064, 10372513791], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:58:31.577029+00:00", "asset": "dataset_range", "range": [9609150464, 9617539071], "storage_chunk": [9567207424, 9701425151], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:58:34.893095+00:00", "asset": "dataset_range", "range": [10800332800, 10808721407], "storage_chunk": [10775166976, 10909384703], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:58:34.975470+00:00", "asset": "dataset_range", "range": [10146021376, 10154409983], "storage_chunk": [10104078336, 10238296063], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:58:36.210521+00:00", "asset": "dataset_range", "range": [10666115072, 10674503679], "storage_chunk": [10640949248, 10775166975], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:58:36.994016+00:00", "asset": "dataset_range", "range": [11060379648, 11068768255], "storage_chunk": [11043602432, 11177820159], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:58:39.009617+00:00", "asset": "dataset_range", "range": [10548674560, 10557063167], "storage_chunk": [10506731520, 10640949247], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:58:41.085399+00:00", "asset": "dataset_range", "range": [10414456832, 10422845439], "storage_chunk": [10372513792, 10506731519], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:58:42.427347+00:00", "asset": "dataset_range", "range": [10934550528, 10942939135], "storage_chunk": [10909384704, 11043602431], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:58:44.676005+00:00", "asset": "dataset_range", "range": [11320426496, 11328815103], "storage_chunk": [11312037888, 11446255615], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T15:58:50.298182+00:00", "asset": "dataset_range", "range": [11194597376, 11202985983], "storage_chunk": [11177820160, 11312037887], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:03:38.634729+00:00", "asset": "dataset_range", "range": [10020192256, 10028580863], "storage_chunk": [9969860608, 10104078335], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:03:47.482644+00:00", "asset": "dataset_range", "range": [9407823872, 9416212479], "storage_chunk": [9298771968, 9432989695], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:03:47.593763+00:00", "asset": "dataset_range", "range": [9542041600, 9550430207], "storage_chunk": [9432989696, 9567207423], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:04:38.641795+00:00", "asset": "dataset_range", "range": [9751756800, 9760145407], "storage_chunk": [9701425152, 9835642879], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:04:45.532261+00:00", "asset": "dataset_range", "range": [11202985984, 11211374591], "storage_chunk": [11177820160, 11312037887], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:04:53.221342+00:00", "asset": "dataset_range", "range": [10288627712, 10297016319], "storage_chunk": [10238296064, 10372513791], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:04:59.044521+00:00", "asset": "dataset_range", "range": [9617539072, 9625927679], "storage_chunk": [9567207424, 9701425151], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:05:01.352796+00:00", "asset": "dataset_range", "range": [10154409984, 10162798591], "storage_chunk": [10104078336, 10238296063], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:05:03.344072+00:00", "asset": "dataset_range", "range": [10942939136, 10951327743], "storage_chunk": [10909384704, 11043602431], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:05:04.789138+00:00", "asset": "dataset_range", "range": [11068768256, 11077156863], "storage_chunk": [11043602432, 11177820159], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:05:04.804950+00:00", "asset": "dataset_range", "range": [10674503680, 10682892287], "storage_chunk": [10640949248, 10775166975], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:05:04.988523+00:00", "asset": "dataset_range", "range": [10422845440, 10431234047], "storage_chunk": [10372513792, 10506731519], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:05:05.283235+00:00", "asset": "dataset_range", "range": [10557063168, 10565451775], "storage_chunk": [10506731520, 10640949247], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:05:05.283654+00:00", "asset": "dataset_range", "range": [11328815104, 11337203711], "storage_chunk": [11312037888, 11446255615], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:05:09.167560+00:00", "asset": "dataset_range", "range": [10808721408, 10817110015], "storage_chunk": [10775166976, 10909384703], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:08:33.923146+00:00", "asset": "dataset_range", "range": [9894363136, 9902751743], "storage_chunk": [9835642880, 9969860607], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:09:15.731153+00:00", "asset": "dataset_range", "range": [10028580864, 10036969471], "storage_chunk": [9969860608, 10104078335], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:09:43.025714+00:00", "asset": "dataset_range", "range": [9550430208, 9558818815], "storage_chunk": [9432989696, 9567207423], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:11:15.065380+00:00", "asset": "dataset_range", "range": [9760145408, 9768534015], "storage_chunk": [9701425152, 9835642879], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:11:30.796019+00:00", "asset": "dataset_range", "range": [11211374592, 11219763199], "storage_chunk": [11177820160, 11312037887], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:11:44.657174+00:00", "asset": "dataset_range", "range": [10297016320, 10305404927], "storage_chunk": [10238296064, 10372513791], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:12:04.477175+00:00", "asset": "dataset_range", "range": [9625927680, 9634316287], "storage_chunk": [9567207424, 9701425151], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:12:07.425986+00:00", "asset": "dataset_range", "range": [10951327744, 10959716351], "storage_chunk": [10909384704, 11043602431], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:12:09.189570+00:00", "asset": "dataset_range", "range": [10431234048, 10439622655], "storage_chunk": [10372513792, 10506731519], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:12:09.229281+00:00", "asset": "dataset_range", "range": [10817110016, 10825498623], "storage_chunk": [10775166976, 10909384703], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:12:09.229667+00:00", "asset": "dataset_range", "range": [10162798592, 10171187199], "storage_chunk": [10104078336, 10238296063], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:12:10.331158+00:00", "asset": "dataset_range", "range": [10565451776, 10573840383], "storage_chunk": [10506731520, 10640949247], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:12:12.547131+00:00", "asset": "dataset_range", "range": [11337203712, 11345592319], "storage_chunk": [11312037888, 11446255615], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:12:13.336139+00:00", "asset": "dataset_range", "range": [11077156864, 11085545471], "storage_chunk": [11043602432, 11177820159], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:12:13.992300+00:00", "asset": "dataset_range", "range": [10682892288, 10691280895], "storage_chunk": [10640949248, 10775166975], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}
+{"at": "2026-10-27T16:18:06.032462+00:00", "asset": "dataset_range", "range": [10439622656, 10448011263], "storage_chunk": [10372513792, 10506731519], "attempt": 0, "error": "RuntimeError: RANGE_SIZE_INCOMPLETE"}

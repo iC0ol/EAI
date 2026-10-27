@@ -1,0 +1,33 @@
+{
+  "payload_bytes_received": 14089613322,
+  "limit_bytes": 35000000000,
+  "by_asset": {
+    "lewm": 5512561,
+    "dataset": 13136247974,
+    "swm": 50331648,
+    "paper_ACID": 29333551,
+    "paper_ATM": 1746859,
+    "paper_WAV": 16690818,
+    "model_config_json": 1313,
+    "model_weights_pt": 72290721,
+    "swm_tree_authenticated": 107178,
+    "swm_pyproject_toml": 2476,
+    "swm_stable_worldmodel_envs_pusht_env_py": 31607,
+    "swm_stable_worldmodel_envs_pusht_expert_policy_py": 3097,
+    "swm_stable_worldmodel_planning_solver_cem_py": 10409,
+    "swm_docs_envs_pusht_md": 5812,
+    "swm_stable_worldmodel_envs_utils_py": 8006,
+    "swm_stable_worldmodel_spaces_py": 26893,
+    "swm_stable_worldmodel_wm_lewm_lewm_py": 4773,
+    "swm_stable_worldmodel_wm_lewm_module_py": 8088,
+    "spt_utils": 62547,
+    "swm_stable_worldmodel_utils_py": 4655,
+    "swm_stable_worldmodel_data_formats_hdf5_py": 12956,
+    "swm_stable_worldmodel_data_dataset_py": 23499,
+    "swm_stable_worldmodel_data_formats_lance_py": 54421,
+    "pip_attempt1_conservative_upper_bound": 500000000,
+    "pip_download2_and_filters_wheel_payloads": 258702851,
+    "bootstrap_http_metadata_and_range_probe_upper_allowance": 10000001,
+    "official_route_probe": 8388608
+  }
+}

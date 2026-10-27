@@ -1,0 +1,42 @@
+{
+  "run_id": "20261027T115450Z",
+  "final_status": "TECHNICAL-BLOCK-AFTER-REPAIR",
+  "reason": "RuntimeError: STAGE_FAILED_decompress_EXIT_1 Traceback (most recent call last):\n  File \"$EAI/u_consistency_pilot/scripts/u_stage_v3.py\", line 575, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"$EAI/u_consistency_pilot/scripts/u_stage_v3.py\", line 572, in main\n    try:mapping[STAGE]()\n        ^^^^^^^^^^^^^^^^\n  File \"$EAI/u_consistency_pilot/scripts/u_stage_v3.py\", line 81, in decompress\n    b=reader.read(16*1024*1024)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^\nzstd.ZstdError: zstd decompress error: Frame requires too much memory for decoding\n",
+  "completed_stages": [
+    "assets"
+  ],
+  "counts": {
+    "cal": {
+      "valid_candidate_records": 0,
+      "duplicate_valid_records": 0,
+      "independent_roots_with_any_valid_candidate": 0,
+      "independent_roots": 0,
+      "independent_sources": 0,
+      "target_roots": 32
+    },
+    "dev": {
+      "valid_candidate_records": 0,
+      "duplicate_valid_records": 0,
+      "independent_roots_with_any_valid_candidate": 0,
+      "independent_roots": 0,
+      "independent_sources": 0,
+      "target_roots": 16
+    },
+    "test": {
+      "valid_candidate_records": 0,
+      "duplicate_valid_records": 0,
+      "independent_roots_with_any_valid_candidate": 0,
+      "independent_roots": 0,
+      "independent_sources": 0,
+      "target_roots": 64
+    }
+  },
+  "ended_at_utc": "2026-10-27T16:53:46.304929+00:00",
+  "ended_at_Asia_Shanghai": "2026-10-28T00:53:46.304929+08:00",
+  "test_complete": false,
+  "primary_comparison": null,
+  "evaluation_status": "NOT_RUN_OR_PARTIAL",
+  "scientific_claim_scope": "One frozen LeWM, one G training seed, short-horizon shared-pool choice only",
+  "next_action": "STOP_AND_AWAIT_RESEARCHER_REVIEW",
+  "unrun_metrics_policy": "null / NOT_RUN, never synthetic zeros"
+}

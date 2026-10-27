@@ -1,0 +1,1 @@
+{"event": "START", "at": "2026-10-27T14:14:53.878808+00:00", "argv": ["/usr/bin/python3", "-u", "-B", "u_consistency_pilot/scripts/download_ranges_v3.py", "--run-id", "20261027T115450Z", "--workers", "16"], "cwd_alias": "EAI", "pid": 1328502, "pgid": 1328502, "scope": "public pinned data transfer only"}

@@ -1,0 +1,36 @@
+{
+  "by_stage": {
+    "ENGINEERING_ONLY_PRIOR_SMOKE_RUNS": {
+      "control_steps": 1600,
+      "prefix_control_steps": 1440,
+      "engineering_smoke_candidate_control_steps": 160,
+      "physics_integration_steps": 16072,
+      "environment_resets": 36,
+      "reset_integration_steps": 72
+    },
+    "ENGINEERING_ONLY_SMOKE:pid_1239623": {
+      "physics_integration_steps": 4018,
+      "reset_integration_steps": 18,
+      "environment_resets": 9,
+      "control_steps": 400,
+      "prefix_control_steps": 360,
+      "prefix_integration_steps": 3600,
+      "engineering_smoke_candidate_control_steps": 40,
+      "engineering_smoke_candidate_integration_steps": 400
+    },
+    "assets:pid_1304799": {},
+    "decompress:pid_1548335": {}
+  },
+  "total": {
+    "engineering_smoke_candidate_control_steps": 200,
+    "prefix_control_steps": 1800,
+    "physics_integration_steps": 20090,
+    "engineering_smoke_candidate_integration_steps": 400,
+    "control_steps": 2000,
+    "prefix_integration_steps": 3600,
+    "environment_resets": 45,
+    "reset_integration_steps": 90
+  },
+  "legacy_note": "Four successful prior engineering-only smoke invocations before counter flush was added; reconstructed from observed successful commands. Each had9 resets and400 control steps. These are one repeated engineering source,32 related candidate branches, outside the formal6-root replay and research splits.",
+  "recorded_at_utc": "2026-10-27T13:12:06.932013+00:00"
+}

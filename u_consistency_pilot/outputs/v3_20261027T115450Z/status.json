@@ -1,0 +1,41 @@
+{
+  "run_id": "20261027T115450Z",
+  "supervisor_pid": 1304773,
+  "started_at_utc": "2026-10-27T11:54:50+00:00",
+  "hard_deadline_utc": "2026-10-27T23:54:50+00:00",
+  "report_cutoff_utc": "2026-10-27T23:09:50+00:00",
+  "status": "FINALIZED",
+  "stage": "decompress",
+  "completed_stages": [
+    "assets"
+  ],
+  "heartbeat_at_utc": "2026-10-27T16:53:45.234016+00:00",
+  "remaining_to_report_cutoff_seconds": 22564.765973567963,
+  "recent_progress": {
+    "at": "2026-10-27T16:53:44.329703+00:00",
+    "stage": "decompress",
+    "elapsed_seconds": 0.007649608422070742,
+    "process_exiting": true
+  },
+  "download_progress": {
+    "at": "2026-10-27T16:52:25.977015+00:00",
+    "bytes": 13136247974,
+    "expected_bytes": 13136247974,
+    "sha256": "7cfbd6d90fa2f27876379a5ff169715a36ed82edbda64f9e5b5bfa34d212f318",
+    "complete": true,
+    "elapsed_seconds": 9452.037012137938
+  },
+  "resources": {
+    "task_rss_sum_bytes": 467005440,
+    "task_vram_bytes": 0,
+    "foreign_vram_bytes": 310378496,
+    "disk_free_bytes": 243819847680,
+    "gpu_process_card_seconds_upper_bound": 141.816987790633
+  },
+  "code_hash": "8512575060b84fea6c10f05a9dd3d5067d0f0e5f05612749de3a1f52c2b80622",
+  "config_hash": "61dc08499b810935e6b28d29ea03d59494be60a00207e8eb4ae15b96c150c981",
+  "failure": "RuntimeError: STAGE_FAILED_decompress_EXIT_1 Traceback (most recent call last):\n  File \"$EAI/u_consistency_pilot/scripts/u_stage_v3.py\", line 575, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"$EAI/u_consistency_pilot/scripts/u_stage_v3.py\", line 572, in main\n    try:mapping[STAGE]()\n        ^^^^^^^^^^^^^^^^\n  File \"$EAI/u_consistency_pilot/scripts/u_stage_v3.py\", line 81, in decompress\n    b=reader.read(16*1024*1024)\n      ^^^^^^^^^^^^^^^^^^^^^^^^^\nzstd.ZstdError: zstd decompress error: Frame requires too much memory for decoding\n",
+  "final_status": "TECHNICAL-BLOCK-AFTER-REPAIR",
+  "ended_at_utc": "2026-10-27T16:53:46.304929+00:00",
+  "publication": "attempted by finalizer; see delivery receipt"
+}

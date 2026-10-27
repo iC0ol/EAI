@@ -1,0 +1,218 @@
+{
+  "started_at_utc": "2026-10-27T12:06:44.434815+00:00",
+  "gpu_process_card_seconds_upper_bound": 145.76314286189154,
+  "peak_task_process_rss_sum_bytes": 1625194496,
+  "peak_task_vram_bytes": 759169024,
+  "peak_foreign_vram_bytes": 742391808,
+  "minimum_host_mem_available_bytes": 24553209856,
+  "peak_task_disk_allocated_bytes": 28247547904,
+  "samples": 8490,
+  "gpu_intervals": [
+    {
+      "started_at_utc": "2026-10-27T12:20:07.537889+00:00",
+      "task_pids_first_seen": [
+        1128563
+      ],
+      "ended_at_utc": "2026-10-27T12:20:11.636942+00:00"
+    },
+    {
+      "started_at_utc": "2026-10-27T12:42:08.122549+00:00",
+      "task_pids_first_seen": [
+        1174111
+      ],
+      "ended_at_utc": "2026-10-27T12:42:10.146192+00:00"
+    },
+    {
+      "started_at_utc": "2026-10-27T12:45:29.014467+00:00",
+      "task_pids_first_seen": [
+        1179151
+      ],
+      "ended_at_utc": "2026-10-27T12:45:37.131879+00:00"
+    },
+    {
+      "started_at_utc": "2026-10-27T12:49:52.719526+00:00",
+      "task_pids_first_seen": [
+        1188135
+      ],
+      "ended_at_utc": "2026-10-27T12:49:58.806836+00:00"
+    },
+    {
+      "started_at_utc": "2026-10-27T12:56:16.218087+00:00",
+      "task_pids_first_seen": [
+        1200829
+      ],
+      "ended_at_utc": "2026-10-27T12:56:22.301641+00:00"
+    },
+    {
+      "started_at_utc": "2026-10-27T13:20:36.485485+00:00",
+      "task_pids_first_seen": [
+        1239496
+      ],
+      "ended_at_utc": "2026-10-27T13:20:44.591011+00:00"
+    },
+    {
+      "started_at_utc": "2026-10-27T13:35:59.348273+00:00",
+      "task_pids_first_seen": [
+        1266311
+      ],
+      "ended_at_utc": "2026-10-27T13:36:01.371773+00:00"
+    },
+    {
+      "started_at_utc": "2026-10-27T13:45:19.127448+00:00",
+      "task_pids_first_seen": [
+        1280754
+      ],
+      "ended_at_utc": "2026-10-27T13:45:55.698770+00:00"
+    },
+    {
+      "started_at_utc": "2026-10-27T13:51:08.060591+00:00",
+      "task_pids_first_seen": [
+        1291448
+      ],
+      "ended_at_utc": "2026-10-27T13:51:10.091580+00:00"
+    },
+    {
+      "started_at_utc": "2026-10-27T14:24:21.456232+00:00",
+      "task_pids_first_seen": [
+        1339901
+      ],
+      "ended_at_utc": "2026-10-27T14:24:23.480323+00:00"
+    }
+  ],
+  "last_at_utc": "2026-10-27T16:53:44.248269+00:00",
+  "task_pids": [
+    1304773,
+    1548335
+  ],
+  "task_rss_sum_bytes": 423878656,
+  "task_vram_bytes": 0,
+  "foreign_vram_bytes": 310378496,
+  "host_mem_available_bytes": 25877708800,
+  "disk_free_bytes": 243819765760,
+  "disk_allocated_bytes": 20265385984,
+  "gpu_query_error": null,
+  "open_gpu_interval": null,
+  "legacy_sampled_gpu_seconds": 28.50008324580267,
+  "legacy_brief_context_uncertainty_budget_seconds": 30,
+  "gpu_lifetime_markers": [
+    {
+      "pid": 1291448,
+      "start_epoch": 1793109066.12437,
+      "started_at_utc": "2026-10-27T13:51:06.124373+00:00",
+      "stage": "engineering",
+      "scope": "TEST_ONLY",
+      "card": 0,
+      "end_epoch": 1793109068.216823,
+      "ended_at_utc": "2026-10-27T13:51:08.216825+00:00",
+      "peak_process_rss_kib": 1259008,
+      "peak_torch_allocated_bytes": 84404736,
+      "peak_torch_reserved_bytes": 90177536
+    },
+    {
+      "pid": 1339901,
+      "start_epoch": 1793111060.487349,
+      "started_at_utc": "2026-10-27T14:24:20.487352+00:00",
+      "stage": "ENGINEERING_ENCODER_BENCHMARK",
+      "scope": "TEST_ONLY",
+      "card": 0,
+      "end_epoch": 1793111060.9432526,
+      "ended_at_utc": "2026-10-27T14:24:20.943253+00:00",
+      "peak_process_rss_kib": 1106012,
+      "peak_torch_allocated_bytes": 284008960,
+      "peak_torch_reserved_bytes": 436207616
+    },
+    {
+      "pid": 1239623,
+      "start_epoch": 1793107240.292577,
+      "started_at_utc": "2026-10-27T13:20:40.292579+00:00",
+      "stage": "engineering",
+      "scope": "task",
+      "card": 0,
+      "end_epoch": 1793107243.1079018,
+      "ended_at_utc": "2026-10-27T13:20:43.107903+00:00",
+      "peak_process_rss_kib": 1289492,
+      "peak_torch_allocated_bytes": 90762752,
+      "peak_torch_reserved_bytes": 106954752
+    },
+    {
+      "pid": 1239496,
+      "start_epoch": 1793107236.4044888,
+      "started_at_utc": "2026-10-27T13:20:36.404491+00:00",
+      "stage": "engineering",
+      "scope": "TEST_ONLY",
+      "card": 0,
+      "end_epoch": 1793107238.6084712,
+      "ended_at_utc": "2026-10-27T13:20:38.608473+00:00",
+      "peak_process_rss_kib": 1272848,
+      "peak_torch_allocated_bytes": 105427968,
+      "peak_torch_reserved_bytes": 109051904
+    },
+    {
+      "pid": 1200955,
+      "start_epoch": 1793105777.516911,
+      "started_at_utc": "2026-10-27T12:56:17.516914+00:00",
+      "stage": "engineering",
+      "scope": "task",
+      "card": 0,
+      "end_epoch": 1793105780.4075694,
+      "ended_at_utc": "2026-10-27T12:56:20.407571+00:00",
+      "peak_process_rss_kib": 1293008,
+      "peak_torch_allocated_bytes": 90762752,
+      "peak_torch_reserved_bytes": 106954752
+    },
+    {
+      "pid": 1280754,
+      "start_epoch": 1793108717.8638916,
+      "started_at_utc": "2026-10-27T13:45:17.863894+00:00",
+      "stage": "engineering",
+      "scope": "TEST_ONLY",
+      "card": 0,
+      "end_epoch": 1793108753.4502978,
+      "ended_at_utc": "2026-10-27T13:45:53.450299+00:00",
+      "peak_process_rss_kib": 1245332,
+      "peak_torch_allocated_bytes": 60577792,
+      "peak_torch_reserved_bytes": 65011712
+    },
+    {
+      "pid": 1266311,
+      "start_epoch": 1793108158.0506437,
+      "started_at_utc": "2026-10-27T13:35:58.050646+00:00",
+      "stage": "engineering",
+      "scope": "TEST_ONLY",
+      "card": 0,
+      "end_epoch": 1793108160.2699974,
+      "ended_at_utc": "2026-10-27T13:36:00.269999+00:00",
+      "peak_process_rss_kib": 1264840,
+      "peak_torch_allocated_bytes": 84404736,
+      "peak_torch_reserved_bytes": 90177536
+    },
+    {
+      "pid": 1304799,
+      "start_epoch": 1793119984.2316163,
+      "started_at_utc": "2026-10-27T16:53:04.231618+00:00",
+      "stage": "assets",
+      "scope": "task",
+      "card": 0,
+      "end_epoch": 1793120022.1224775,
+      "ended_at_utc": "2026-10-27T16:53:42.122478+00:00",
+      "peak_process_rss_kib": 435748,
+      "peak_torch_allocated_bytes": 0,
+      "peak_torch_reserved_bytes": 0
+    },
+    {
+      "pid": 1200829,
+      "start_epoch": 1793105774.8426473,
+      "started_at_utc": "2026-10-27T12:56:14.842649+00:00",
+      "stage": "engineering",
+      "scope": "TEST_ONLY",
+      "card": 0,
+      "end_epoch": 1793105775.9507637,
+      "ended_at_utc": "2026-10-27T12:56:15.950766+00:00",
+      "peak_process_rss_kib": 715136,
+      "peak_torch_allocated_bytes": 59896320,
+      "peak_torch_reserved_bytes": 60817408
+    }
+  ],
+  "gpu_accounting_method": "Explicit process context-init-to-exit lifetime union on one card; early engineering sampled windows plus 30-second conservative uncertainty allowance",
+  "ended_at_utc": "2026-10-27T16:53:46.250336+00:00"
+}

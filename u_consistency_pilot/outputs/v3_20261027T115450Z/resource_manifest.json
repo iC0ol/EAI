@@ -1,0 +1,36 @@
+{
+  "model": {
+    "bytes": 72290721,
+    "sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",
+    "revision": "22b330c28c27ead4bfd1888615af1340e3fe9052",
+    "verified": true
+  },
+  "data": {
+    "bytes": 13136247974,
+    "sha256": "7cfbd6d90fa2f27876379a5ff169715a36ed82edbda64f9e5b5bfa34d212f318",
+    "revision": "655cd446b9929369d7d406001da85c15d1457850",
+    "verified": true
+  },
+  "sources": {
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/spaces.py": "69e583dd06fa754e226f2430d4ff459e2dc8d7534fdb27cf7f9f5921bdec8018",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/utils.py": "f284af1448ae5dab67b6afb1da13c8a6897fe90d7f7e7a4a6f17d8dc7ad0c28d",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/planning/solver/cem.py": "c66625d42cf02f912fc4c99d5874c57aba686d899e510d91630df210ece2ee89",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/wm/lewm/lewm.py": "10ad1c2365b569ad3f9cbda17c8154d799c3b0c4fc5d707a44dca600b5ca8315",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/wm/lewm/module.py": "d276fb896712bed23f70f25ae9774e5ce7b3ab44fbb6bf4dea61065ba1388ef9",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/data/dataset.py": "1b91ed58dfad9729dd618b15573358794d698af7deca8f643f17a33326a80ff4",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/data/formats/lance.py": "9d947ab9de17c929898e03e5fb6e3ce553fe4dd782cc5f55301be230fd33495b",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/data/formats/hdf5.py": "0edde080986c6853a59c5c9ac85fbf055caa7672f2204002e7d7ea3b1a634294",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/envs/utils.py": "2e5d98a5c13227cba6f5574bf72b6eab149ee5b3783df0481b8d240f34047f56",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/envs/pusht/env.py": "6b71f441a72ae94e631fc80c756717e8c5b229b964a9b197e2962675fae6f864",
+    "external/stable-worldmodel-21446f1ede6d5284e981bd7b47f432b994e6d812/stable_worldmodel/envs/pusht/expert_policy.py": "c3e8e99dab72ee0cb981cddda66ff5434a51a7c146d586174fb2b4e9d2082729",
+    "external/le-wm-8edfeb336732b5f3ce7b8b210d0ba370a09e2cac/utils.py": "b3e5cfce6d0eecd9510f06a7adc178edde86074e1474b899ff739ed8a5355b08",
+    "external/le-wm-8edfeb336732b5f3ce7b8b210d0ba370a09e2cac/train.py": "5d5666a785148635f8bcb50b49f98dd4527c5aba8a02d90206eb5d46406079d2",
+    "external/le-wm-8edfeb336732b5f3ce7b8b210d0ba370a09e2cac/eval.py": "6584f009b40550fa0df2f8dee22b9329fbfacdfaf74464aa4fd105f464795245",
+    "external/le-wm-8edfeb336732b5f3ce7b8b210d0ba370a09e2cac/jepa.py": "41bad7fd21e0f14aea4c9c3d39a9c87037e787746d953ab62cdc0677e938ce96",
+    "external/le-wm-8edfeb336732b5f3ce7b8b210d0ba370a09e2cac/module.py": "0b258a9e8dc24c29fcb1e8c50a09ec78b8ea85aeb79e21dd8adf712396646620"
+  },
+  "namespace_adapter": "Only package __init__ optional imports are bypassed; pinned PushT, spaces, utils and LeWM modules executed unchanged",
+  "backbone_adapter": "Direct transformers ViTModel with exact tiny configuration of inspected vit_hf; pretrained=False; no extra visual weights",
+  "HDF5_adapter": "Read-only original per-column HDF5; no Lance conversion",
+  "existing_environments_modified": false
+}

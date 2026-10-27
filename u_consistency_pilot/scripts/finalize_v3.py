@@ -3,6 +3,7 @@
 import argparse,csv,hashlib,json,os,re,signal,subprocess,time
 from pathlib import Path
 from datetime import datetime,timezone
+from zoneinfo import ZoneInfo
 from download_v3 import BASE,atomic,sha,utc
 
 def main():
@@ -63,7 +64,7 @@ def main():
                 missing.append({'split':split,'root':root,'source':known.get(root,{}).get('source'),'seed':known.get(root,{}).get('seed'),'candidate':candidate,'action_block':actions,'status':'NOT_RUN','reason':reason,'J':None})
     write_missing(run/'missing_candidates.csv',missing)
     test_complete=(counts['test']['independent_roots']==64 and counts['test']['valid_candidate_records']==512 and counts['test']['duplicate_valid_records']==0 and 'analyze_test' in status.get('completed_stages',[]) and result.get('test_n_roots')==64)
-    summary={**result,'run_id':a.run_id,'final_status':disposition,'reason':reason,'completed_stages':status.get('completed_stages',[]),'counts':counts,'ended_at_utc':end.isoformat(),'test_complete':test_complete,'primary_comparison':result.get('primary_comparison'),'evaluation_status':'COMPLETE' if test_complete else 'NOT_RUN_OR_PARTIAL','scientific_claim_scope':'One frozen LeWM, one G training seed, short-horizon shared-pool choice only','next_action':'STOP_AND_AWAIT_RESEARCHER_REVIEW','unrun_metrics_policy':'null / NOT_RUN, never synthetic zeros'}
+    summary={**result,'run_id':a.run_id,'final_status':disposition,'reason':reason,'completed_stages':status.get('completed_stages',[]),'counts':counts,'ended_at_utc':end.isoformat(),'ended_at_Asia_Shanghai':end.astimezone(ZoneInfo('Asia/Shanghai')).isoformat(),'test_complete':test_complete,'primary_comparison':result.get('primary_comparison'),'evaluation_status':'COMPLETE' if test_complete else 'NOT_RUN_OR_PARTIAL','scientific_claim_scope':'One frozen LeWM, one G training seed, short-horizon shared-pool choice only','next_action':'STOP_AND_AWAIT_RESEARCHER_REVIEW','unrun_metrics_policy':'null / NOT_RUN, never synthetic zeros'}
     atomic(run/'summary.json',summary)
     stepcounts=load('step_counts.json',{})
     budget={'run_id':a.run_id,'started_at_utc':cfg['task_started_at_utc'],'ended_at_utc':end.isoformat(),'timezone_for_user':'Asia/Shanghai','wall_seconds_through_finalization':(end-start).total_seconds(),'wall_limit_seconds':43200,'report_reserve_seconds':2700,'gpu_process_seconds_upper_bound':resources.get('gpu_process_card_seconds_upper_bound'),'gpu_limit_seconds':36000,'gpu_accounting':'2-second samples; counts entire lifetime of this task CUDA processes, including idle context time; interval edges conservatively padded by a sample','resource_watch':resources,'download_payload_bytes_counted':download.get('payload_bytes_received'),'download_limit_bytes':35000000000,'download_accounting_limitations':load('preparation_accounting.json',{}),'step_counts':stepcounts,'scientific_stage_missing_counts':'NOT_RUN if absent; actual executed counters remain explicit','limits':cfg['boundaries']}
@@ -71,7 +72,7 @@ def main():
     comparisons=result.get('primary_comparison')
     if comparisons:
         d=comparisons['R_improvement'];j=comparisons['raw_J_improvement']
-        outcome=f"U*={comparisons['U_star']}，对照={comparisons['comparator']}；mean R={comparisons['U_mean_R']:.9g} / {comparisons['baseline_mean_R']:.9g}；mean J={comparisons['U_mean_J']:.9g} / {comparisons['baseline_mean_J']:.9g}。R 改善（对照−U）={d['point_baseline_minus_U']:.9g}，95% CI={d['CI95']}；原 J 同方向差={j['point_baseline_minus_U']:.9g}。完整精度及逐 root 差在 summary.json / CSV。"
+        outcome=f"U*={comparisons['U_star']}，对照={comparisons['comparator']}；mean R={comparisons['U_mean_R']:.9g} / {comparisons['baseline_mean_R']:.9g}；mean J={comparisons['U_mean_J']:.9g} / {comparisons['baseline_mean_J']:.9g}。R 改善（对照−U）={d['point_baseline_minus_U']:.9g}，95% CI={d['CI95']}；原 J 同方向差={j['point_baseline_minus_U']:.9g}，95% CI={j['CI95']}。完整精度及逐 root 差在 summary.json / CSV。"
     else:outcome='NOT_RUN：'+reason
     baseline=load('baseline_validity.json',{})
     prep=load('data_preparation.json',{});counts_text='；'.join(f"{s}: {c['independent_roots']} roots/{c['independent_sources']} sources" for s,c in counts.items())
@@ -80,9 +81,13 @@ def main():
     for split,c in counts.items():morning+=f"| {split} | {c['independent_roots']} | {c['independent_sources']} | {c['valid_candidate_records']} | {c['target_roots']} |\n"
     morning+='\n停止/完成原因：'+reason+'。缺失项不填 0；上表的 0 只表示实际不存在的已执行记录。研究数值见逐 root 表，候选评分与真实结果在不同文件。\n'
     (report/'morning_report.md').write_text(morning)
-    (report/'gate_decision.md').write_text('# U v3 决定\n\n**'+disposition+'**\n\n'+reason+'\n\n完整结果见 morning_report.md 与 summary.json；不自动继续 U1。\n')
+    (report/'gate_decision.md').write_text('# U v3 决定\n\n**'+disposition+'**\n\n执行收尾原因：'+reason+'。\n\n'+outcome+'\n\n'+clean(result.get('mechanism_interpretation','未完成有效比较；没有据此作算法负结论。'))+'\n\n结论仅限预登记的单模型、单训练 seed、短时共享候选池选择。完整结果见 morning_report.md 与 summary.json；停止等待研究者复审，不自动继续 U1。\n')
     for name in ['preflight.md','baseline_validity.md','limitations.md']:
         if not (report/name).exists():(report/name).write_text('# '+name[:-3]+'\n\nNOT_RUN / 阶段未完成：'+reason+'。没有据此作科学否定。\n')
+    strong=load('strengthened_G.json',{})
+    baseline_report=report/'baseline_validity.md'
+    if strong and 'V3_MATCHED_G_FINAL' not in baseline_report.read_text():
+        with baseline_report.open('a') as f:f.write('\n\n<!-- V3_MATCHED_G_FINAL -->\n匹配历史/额外标签加强 G 的实际结果（cal-val 只验证；192 个独特 cal-fit 标签的重复加权不计作新样本）：\n\n```json\n'+json.dumps(strong,ensure_ascii=False,indent=2)+'\n```\n')
     if not (run/'per_root_metrics.csv').exists():
         (run/'per_root_metrics.csv').write_text('split,root,source,method,selected_index,R,J,block_only,success,status,reason\n')
     atomic(run/'status.json',{**status,'status':'FINALIZED','final_status':disposition,'ended_at_utc':end.isoformat(),'failure':None if a.reason=='COMPLETE' else reason,'publication':'attempted by finalizer; see delivery receipt'})
