@@ -1,0 +1,143 @@
+{
+  "by_stage": {
+    "ENGINEERING_ONLY_PRIOR_SMOKE_RUNS": {
+      "control_steps": 1600,
+      "prefix_control_steps": 1440,
+      "engineering_smoke_candidate_control_steps": 160,
+      "physics_integration_steps": 16072,
+      "environment_resets": 36,
+      "reset_integration_steps": 72
+    },
+    "ENGINEERING_ONLY_SMOKE:pid_1239623": {
+      "physics_integration_steps": 4018,
+      "reset_integration_steps": 18,
+      "environment_resets": 9,
+      "control_steps": 400,
+      "prefix_control_steps": 360,
+      "prefix_integration_steps": 3600,
+      "engineering_smoke_candidate_control_steps": 40,
+      "engineering_smoke_candidate_integration_steps": 400
+    },
+    "assets:pid_1304799": {},
+    "decompress:pid_1548335": {},
+    "assets:pid_1549080": {},
+    "decompress:pid_1549590": {},
+    "semantics:pid_1552884": {},
+    "ENGINEERING_COLOR_0A:pid_1554414": {
+      "physics_integration_steps": 2,
+      "reset_integration_steps": 2,
+      "environment_resets": 1
+    },
+    "assets:pid_1554103": {},
+    "decompress:pid_1554729": {},
+    "semantics:pid_1555640": {
+      "physics_integration_steps": 57080,
+      "reset_integration_steps": 280,
+      "environment_resets": 140,
+      "control_steps": 5680,
+      "prefix_control_steps": 5560,
+      "prefix_integration_steps": 55600,
+      "engineering_candidate_control_steps": 60,
+      "engineering_candidate_integration_steps": 600,
+      "engineering_next_probe_control_steps": 60,
+      "engineering_next_probe_integration_steps": 600
+    },
+    "ENGINEERING_TRUSTED_FAILURE_RECONSTRUCTED_17h09": {
+      "control_steps": 85,
+      "prefix_control_steps": 80,
+      "candidate_engineering_trusted_control_steps": 5,
+      "physics_integration_steps": 854,
+      "environment_resets": 2,
+      "prefix_integration_steps": 800,
+      "candidate_engineering_trusted_integration_steps": 50,
+      "reset_integration_steps": 4
+    },
+    "ENGINEERING_TRUSTED_PIPELINE:pid_1557040": {
+      "physics_integration_steps": 4018,
+      "reset_integration_steps": 18,
+      "environment_resets": 9,
+      "control_steps": 400,
+      "prefix_control_steps": 360,
+      "prefix_integration_steps": 3600,
+      "candidate_engineering_trusted_control_steps": 40,
+      "candidate_engineering_trusted_integration_steps": 400
+    },
+    "prepare:pid_1556184": {},
+    "assets:pid_1562029": {},
+    "decompress:pid_1562839": {},
+    "semantics:pid_1564323": {
+      "physics_integration_steps": 57080,
+      "reset_integration_steps": 280,
+      "environment_resets": 140,
+      "control_steps": 5680,
+      "prefix_control_steps": 5560,
+      "prefix_integration_steps": 55600,
+      "engineering_candidate_control_steps": 60,
+      "engineering_candidate_integration_steps": 600,
+      "engineering_next_probe_control_steps": 60,
+      "engineering_next_probe_integration_steps": 600
+    },
+    "prepare:pid_1565654": {},
+    "train:pid_1587017": {},
+    "cal_collect:pid_1595565": {
+      "physics_integration_steps": 115712,
+      "reset_integration_steps": 512,
+      "environment_resets": 256,
+      "control_steps": 11520,
+      "prefix_control_steps": 10240,
+      "prefix_integration_steps": 102400,
+      "candidate_cal_control_steps": 1280,
+      "candidate_cal_integration_steps": 12800
+    },
+    "cal_fit:pid_1596718": {},
+    "score_dev:pid_1597981": {},
+    "execute_dev:pid_1598711": {
+      "physics_integration_steps": 57856,
+      "reset_integration_steps": 256,
+      "environment_resets": 128,
+      "control_steps": 5760,
+      "prefix_control_steps": 5120,
+      "prefix_integration_steps": 51200,
+      "candidate_dev_control_steps": 640,
+      "candidate_dev_integration_steps": 6400
+    },
+    "analyze_dev:pid_1599154": {},
+    "seal_test:pid_1599627": {},
+    "score_test:pid_1599741": {},
+    "execute_test:pid_1602080": {
+      "physics_integration_steps": 231424,
+      "reset_integration_steps": 1024,
+      "environment_resets": 512,
+      "control_steps": 23040,
+      "prefix_control_steps": 20480,
+      "prefix_integration_steps": 204800,
+      "candidate_test_control_steps": 2560,
+      "candidate_test_integration_steps": 25600
+    },
+    "analyze_test:pid_1603782": {}
+  },
+  "total": {
+    "candidate_engineering_trusted_integration_steps": 450,
+    "engineering_smoke_candidate_control_steps": 200,
+    "prefix_control_steps": 49200,
+    "candidate_cal_control_steps": 1280,
+    "candidate_dev_control_steps": 640,
+    "candidate_test_control_steps": 2560,
+    "candidate_test_integration_steps": 25600,
+    "engineering_smoke_candidate_integration_steps": 400,
+    "prefix_integration_steps": 477600,
+    "reset_integration_steps": 2466,
+    "engineering_next_probe_integration_steps": 1200,
+    "engineering_candidate_integration_steps": 1200,
+    "engineering_candidate_control_steps": 120,
+    "environment_resets": 1233,
+    "candidate_cal_integration_steps": 12800,
+    "candidate_dev_integration_steps": 6400,
+    "candidate_engineering_trusted_control_steps": 45,
+    "physics_integration_steps": 544116,
+    "engineering_next_probe_control_steps": 120,
+    "control_steps": 54165
+  },
+  "legacy_note": "Four successful prior engineering-only smoke invocations before counter flush was added; reconstructed from observed successful commands. Each had9 resets and400 control steps. These are one repeated engineering source,32 related candidate branches, outside the formal6-root replay and research splits.",
+  "recorded_at_utc": "2026-10-27T13:12:06.932013+00:00"
+}

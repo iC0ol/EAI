@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "contact_rule": "geometric gap <=2; approach until gap<=1 then hold",
+  "noncontact_rule": "approach fixed corner (60,450), accept gap>=35",
+  "prefix_steps": 40,
+  "prefix_cap": 100,
+  "prefix_component_clip": 0.35,
+  "search_limit_per_stratum": 512,
+  "history_control_indices": [
+    30,
+    35,
+    40
+  ],
+  "goal": "unaltered official reset goal; not selected using any candidate outcome",
+  "seeds": {
+    "engineering": 701100,
+    "cal": 702000,
+    "dev": 703000,
+    "test": 704000
+  },
+  "noncontact_seed_offset": 10000,
+  "candidate_seed_offset": 500000,
+  "candidate_distribution": "Official CEM initial N(0,I), var_scale=1; 4 samples, plus 4 fixed train-block draws; clip in raw physical units",
+  "selection_uses_no_F_G_J_or_scores": true
+}

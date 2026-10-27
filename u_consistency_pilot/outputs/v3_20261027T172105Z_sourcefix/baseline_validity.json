@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "check_scope": "finite optimization, held-out fitting relative to constant/history controls; thresholds catch grossly broken fitting, never require an almost unique inverse map",
+  "gross_failure_rule_frozen_before_training": "MLP val MSE >1.5*constant or flow K4-mean MSE >2*constant, or nonfinite; interpret flow stochastic K1 separately",
+  "models": [
+    {
+      "name": "flow",
+      "kind": "flow",
+      "phase": "idm",
+      "actual_updates": 6500,
+      "best_val_mse": 0.19693363800048827,
+      "elapsed_seconds": 224.1722682439722,
+      "seed": 270727,
+      "checkpoint": ".work/20261027T172105Z_sourcefix/flow_best.pt"
+    },
+    {
+      "name": "mlp",
+      "kind": "mlp",
+      "phase": "idm",
+      "actual_updates": 4750,
+      "best_val_mse": 0.24010867919921874,
+      "elapsed_seconds": 28.356181162409484,
+      "seed": 270727,
+      "checkpoint": ".work/20261027T172105Z_sourcefix/mlp_best.pt"
+    },
+    {
+      "name": "history",
+      "kind": "history",
+      "phase": "idm",
+      "actual_updates": 3500,
+      "best_val_mse": 0.487213037109375,
+      "elapsed_seconds": 20.23230362869799,
+      "seed": 270727,
+      "checkpoint": ".work/20261027T172105Z_sourcefix/history_best.pt"
+    },
+    {
+      "name": "strong_base",
+      "kind": "strong",
+      "phase": "idm",
+      "actual_updates": 4250,
+      "best_val_mse": 0.2397670623779297,
+      "elapsed_seconds": 24.512779276818037,
+      "seed": 270727,
+      "checkpoint": ".work/20261027T172105Z_sourcefix/strong_base_best.pt"
+    }
+  ],
+  "evaluations": {
+    "flow": {
+      "val": {
+        "mse": 0.19609585264700435,
+        "constant_mse": 0.9031224747155695,
+        "n_blocks": 2000,
+        "mse_K1": 0.20314633816385805,
+        "mean_sampling_variance_per_coordinate": 0.010123166255652905,
+        "K4_mean_sampling_variance_estimate": 0.002530791563913226
+      },
+      "audit": {
+        "mse": 0.21948984380674955,
+        "constant_mse": 0.9868372073915482,
+        "n_blocks": 6000,
+        "mse_K1": 0.228298411095747,
+        "mean_sampling_variance_per_coordinate": 0.011382203549146652,
+        "K4_mean_sampling_variance_estimate": 0.002845550887286663
+      }
+    },
+    "mlp": {
+      "val": {
+        "mse": 0.24010867516152512,
+        "constant_mse": 0.9031224747155695,
+        "n_blocks": 2000
+      },
+      "audit": {
+        "mse": 0.27196290451624655,
+        "constant_mse": 0.9868372073915482,
+        "n_blocks": 6000
+      }
+    },
+    "history": {
+      "val": {
+        "mse": 0.48721304031666024,
+        "constant_mse": 0.9031224747155695,
+        "n_blocks": 2000
+      },
+      "audit": {
+        "mse": 0.5671049946614203,
+        "constant_mse": 0.9868372073915482,
+        "n_blocks": 6000
+      }
+    },
+    "strong": {
+      "val": {
+        "mse": 0.23976706186882998,
+        "constant_mse": 0.9031224747155695,
+        "n_blocks": 2000
+      },
+      "audit": {
+        "mse": 0.2664881955162546,
+        "constant_mse": 0.9868372073915482,
+        "n_blocks": 6000
+      }
+    }
+  },
+  "successor_information_gain_matched_history": 0.24744597844783026,
+  "successor_information_gain_mlp_vs_history_unmatched_inputs": 0.24710436515513512,
+  "successor_information_gain_flow_vs_history_unmatched_inputs": 0.2911171876696559,
+  "initial_G_frozen": true,
+  "flow_reference": "4 TransformerEncoder layers, width192, 3 heads; two latent prefix tokens and one noisy-action suffix; prefix cannot attend suffix; beta(1.5,1), one Euler step",
+  "ACID_difference": "No official weights; trained <=20k versus paper 200k;10D five-control-step chunks; whole-source split; microbatch64 accumulated to256; single training seed; flow K4 mean added as diagnostic",
+  "checkpoints": {
+    "flow": "11642e9b49c8028c7d7cf569fe062ca6c8fb81975055fb2ac49159362b419315",
+    "mlp": "a887213502371b04a346952a404d253d5d9433ff76987c7f3430fd1e273bed82",
+    "history": "c8fd5bb36945d703949a918a3ccf0f80c9f20e00554fa0da737730aa10e757e6",
+    "strong_base": "944d624a6b957ade5e98971d270a2df97f4e3746bbd77bccd2c27d1adf788d76"
+  },
+  "constant_action": [
+    -0.01910930079182883,
+    -0.006902965418214389,
+    -0.02039921708073803,
+    -0.016840151599384505,
+    -0.017871160557204776,
+    -0.007219957119388238,
+    -0.02147975022783901,
+    -0.004674589450273946,
+    -0.023572713080427132,
+    -0.0044996290003873245
+  ],
+  "MSE_units": "standardized training actions; inference G is de-normalized and residual scores use original environment control units"
+}

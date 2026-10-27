@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "stage": "analyze_test",
+  "at": "2026-10-27T18:03:40.188796+00:00",
+  "code_hash": "8be017e86517a9da4e4a9a2d75548a8aec7ce4d8cedc26dfd1263fcb41745406",
+  "config_hash": "aa3f5f7e329aa762ddaacc5fe8753c3d44fbcb83c2a82c7472d0013ef19eb51f",
+  "outputs": {
+    "outputs/v3_20261027T172105Z_sourcefix/scientific_summary.json": "3eaf135600b479c432de0416892e21a10a3b013847950dab249d7c7ea55a6bc3",
+    "outputs/v3_20261027T172105Z_sourcefix/per_root_metrics_test.csv": "3387f715c92d97eca2c83fad5aebcf1507d27c55e4a9ea0b949e1346ec065518",
+    "outputs/v3_20261027T172105Z_sourcefix/per_root_metrics.csv": "e0bb29af2337258ab2d75beae1a53f124063e4b9873ec1ccdf3acd7cd9e5530a",
+    "outputs/v3_20261027T172105Z_sourcefix/per_candidate_diagnostics_test.jsonl": "101ccb42c6fff4a448fe37f8c8662a42643554fadbfeb01886b716556f5a1768",
+    "outputs/v3_20261027T172105Z_sourcefix/harmful_flips_test.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/v3_20261027T172105Z_sourcefix/descriptive_test.json": "1f15e433f0ec7dd24d01a41c3456bf560cad5d401ad890cb5239d796c023c0e0"
+  }
+}

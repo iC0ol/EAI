@@ -1,0 +1,9 @@
+{
+  "definition": "Euclidean nearest training-action-block distance in original F standardized 10-action coordinates; proxy only",
+  "fit_split": "IDM-train 10000",
+  "reference_split": "offline audit 6000, never used for b training",
+  "outside_support_threshold": 1.629108210666505,
+  "reference_q50": 0.5493034618822294,
+  "reference_q95": 1.629108210666505,
+  "n_reference_blocks": 6000
+}

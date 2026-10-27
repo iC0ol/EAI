@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "commit": "21446f1ede6d5284e981bd7b47f432b994e6d812",
+  "files": [
+    {
+      "path": "pyproject.toml",
+      "git_blob_sha1": "6dcc0c3d909d76776c6cd012bde0ded3fac6a831",
+      "sha256": "4d9e865a48d951cf389999881080d21b0c7ea5e5864a8e9385f3e0102af76611"
+    },
+    {
+      "path": "stable_worldmodel/spaces.py",
+      "git_blob_sha1": "350078db19291239e9f776e2c89c7b7d794708c8",
+      "sha256": "69e583dd06fa754e226f2430d4ff459e2dc8d7534fdb27cf7f9f5921bdec8018"
+    },
+    {
+      "path": "stable_worldmodel/utils.py",
+      "git_blob_sha1": "7dabccd690a0c69a9df7c63292fff81a63074c5e",
+      "sha256": "f284af1448ae5dab67b6afb1da13c8a6897fe90d7f7e7a4a6f17d8dc7ad0c28d"
+    },
+    {
+      "path": "stable_worldmodel/planning/solver/cem.py",
+      "git_blob_sha1": "e281a0477aece7e29ca343639f18c2c96a22871d",
+      "sha256": "c66625d42cf02f912fc4c99d5874c57aba686d899e510d91630df210ece2ee89"
+    },
+    {
+      "path": "stable_worldmodel/wm/lewm/lewm.py",
+      "git_blob_sha1": "781854514c1f54460bb4910163a8953026b84de7",
+      "sha256": "10ad1c2365b569ad3f9cbda17c8154d799c3b0c4fc5d707a44dca600b5ca8315"
+    },
+    {
+      "path": "stable_worldmodel/wm/lewm/module.py",
+      "git_blob_sha1": "4f74d3b0664bf2f15e3003a3c550d3f7d71c316b",
+      "sha256": "d276fb896712bed23f70f25ae9774e5ce7b3ab44fbb6bf4dea61065ba1388ef9"
+    },
+    {
+      "path": "stable_worldmodel/data/dataset.py",
+      "git_blob_sha1": "fe42a6d3e0bf8c3f3b1f3350b40406eedbc29d01",
+      "sha256": "1b91ed58dfad9729dd618b15573358794d698af7deca8f643f17a33326a80ff4"
+    },
+    {
+      "path": "stable_worldmodel/data/formats/lance.py",
+      "git_blob_sha1": "ff75918d83671458710bcdb60e7e581ad3109af4",
+      "sha256": "9d947ab9de17c929898e03e5fb6e3ce553fe4dd782cc5f55301be230fd33495b"
+    },
+    {
+      "path": "stable_worldmodel/data/formats/hdf5.py",
+      "git_blob_sha1": "f7f4cf7ef39abdff02347208e84811965c19fa32",
+      "sha256": "0edde080986c6853a59c5c9ac85fbf055caa7672f2204002e7d7ea3b1a634294"
+    },
+    {
+      "path": "stable_worldmodel/envs/utils.py",
+      "git_blob_sha1": "565b2abf16ed6c73a91c1a329d5007077afc8507",
+      "sha256": "2e5d98a5c13227cba6f5574bf72b6eab149ee5b3783df0481b8d240f34047f56"
+    },
+    {
+      "path": "stable_worldmodel/envs/pusht/env.py",
+      "git_blob_sha1": "38d8c7f2a11575954418df08e480fbe9d84277d5",
+      "sha256": "6b71f441a72ae94e631fc80c756717e8c5b229b964a9b197e2962675fae6f864"
+    },
+    {
+      "path": "stable_worldmodel/envs/pusht/expert_policy.py",
+      "git_blob_sha1": "9517673aaad42296d7ddd5914b135cb5498c6899",
+      "sha256": "c3e8e99dab72ee0cb981cddda66ff5434a51a7c146d586174fb2b4e9d2082729"
+    },
+    {
+      "path": "docs/envs/pusht.md",
+      "git_blob_sha1": "dfc8a8854db167125d0812d0ba10dfcf0f57b281",
+      "sha256": "08f304772a1488334632de5eb229ebd4373a34b4c1ef600741b9bb43ad9b1315"
+    }
+  ],
+  "physical_source_modified": false
+}

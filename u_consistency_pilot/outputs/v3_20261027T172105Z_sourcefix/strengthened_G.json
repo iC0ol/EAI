@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "model": {
+    "name": "strong",
+    "kind": "strong",
+    "phase": "matched_cal_fit",
+    "actual_updates": 3500,
+    "best_val_mse": 0.6874459266662598,
+    "elapsed_seconds": 20.266616156790406,
+    "seed": 270727,
+    "checkpoint": ".work/20261027T172105Z_sourcefix/strong_best.pt"
+  },
+  "pretrained_model": "strong_base_best.pt",
+  "original_unique_train_blocks": 10000,
+  "extra_unique_cal_fit_labels": 192,
+  "cal_val_labels_validation_only": 64,
+  "cal_fit_oversampling_copies": 52,
+  "approximate_fit_sampling_weights": [
+    0.5,
+    0.5
+  ],
+  "input": "same 3 historical latents and 2 previous action blocks as b; plus real/predicted successor latent, no candidate A",
+  "initial_pretrain_update_cap": 12000,
+  "additional_update_cap": 8000,
+  "combined_update_cap": 20000,
+  "checkpoint_sha256": "b50f81b426ce67e939f5b6b1940226ab574531f01317e8d6d18cb221736f0e68",
+  "cal_val_constant_MSE": 0.9657938349852498,
+  "gross_fitting_guard": "best cal-val MSE <=1.5*same-label constant prediction MSE; does not require a unique inverse map"
+}

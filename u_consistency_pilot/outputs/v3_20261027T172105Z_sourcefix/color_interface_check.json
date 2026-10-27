@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-27T17:08:22.083111+00:00",
+  "scope": "0A only; one original source frame and one fresh engineering render, private images not published",
+  "inspection": "PASS: both display blue agent, slate-gray T block, green overlay on white background; RGB channels preserved; original state agent coordinate scales to matching image location",
+  "source_frame_row": 0,
+  "source_frame_sha256": "3d1ac4f36790ba83cf94741820c5ce50e9ede36391ed4be1951eabba5b344cb5",
+  "fresh_engineering_seed": 799002,
+  "render_sha256": "75962c21f9e1332003d08da33079acc2b5912be15b04e686b22f60e369ee8029",
+  "F_nonconstant_response": "engineering_only_encoder_throughput.json; RGB primary-color latent pair distances >13",
+  "research_samples_added": false
+}

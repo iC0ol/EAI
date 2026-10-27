@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-27T16:55:11.268080+00:00",
+  "scope": "Engineering verified-byte header decoder check, no scientific samples",
+  "status": "PASS",
+  "python_zstandard": "0.23.0",
+  "frame_window_bytes": 8388608,
+  "frame_uncompressed_bytes": 46300921856,
+  "small_window2097152": "REPRODUCES_EXACT_ERROR",
+  "matched_window8388608_HDF5_magic": "894844460d0a1a0a",
+  "scientific_semantic_change": false
+}

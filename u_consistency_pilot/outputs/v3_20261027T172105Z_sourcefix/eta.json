@@ -1,0 +1,12 @@
+{
+  "train": 3600,
+  "cal_collect": 600,
+  "cal_fit": 1200,
+  "score_dev": 300,
+  "execute_dev": 300,
+  "analyze_dev": 300,
+  "seal_test": 30,
+  "score_test": 78.152724,
+  "execute_test": 62.155952,
+  "analyze_test": 108.18298
+}

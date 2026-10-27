@@ -91,7 +91,10 @@ def main():
     else:outcome='NOT_RUN：'+reason
     baseline=load('baseline_validity.json',{})
     prep=load('data_preparation.json',{});counts_text='；'.join(f"{s}: {c['independent_roots']} roots/{c['independent_sources']} sources" for s,c in counts.items())
-    retry_count=sum('ERROR' in line for line in (run/'download_events.jsonl').read_text().splitlines()) if (run/'download_events.jsonl').exists() else 0
+    variance=sum(prep.get('PCA_explained_variance_ratio',[])) if prep else None
+    summary['source_family_and_representation_limits']={'source_unit':prep.get('source_unit'),'source_counts':prep.get('source_counts'),'PCA16_retained_variance_fraction':variance,'interpretation':'Linear/constant calibration with a fixed low-dimensional history representation; failure does not exclude all conditional bias models. Initial-state families are conservative ancestry proxies.'}
+    atomic(run/'summary.json',summary)
+    retry_count=sum(bool(row.get('error')) or row.get('event')=='ERROR' for row in load_lines(run/'download_events.jsonl'))
     morning=f'''# U v3 夜间运行交付\n\n**{disposition}**。run_id `{a.run_id}`。\n\n1. 实际完成阶段：{', '.join(status.get('completed_stages',[])) or '准备/实现'}。{counts_text}。完整 test：{summary['test_complete']}；IDM 各 split 来源数：{prep.get('source_counts','NOT_RUN')}。\n2. {outcome}\n3. 候选误罚、强 G 和打乱标签证据：{clean(result.get('mechanism_interpretation','NOT_RUN；未完成有效比较，不能解释为算法负结果'))}。初始基线状态：{baseline.get('status','NOT_RUN')}。\n4. 墙钟 {budget['wall_seconds_through_finalization']/3600:.4f} h；GPU 进程占用上界 {str(budget['gpu_process_seconds_upper_bound'])} 秒；下载预算计数 {str(budget['download_payload_bytes_counted'])} B（包含早期 pip 不完整计量的保守预留）。实测 RSS 合计峰值 {resources.get('peak_task_process_rss_sum_bytes')} B，采样任务 VRAM 峰值 {resources.get('peak_task_vram_bytes')} B；磁盘分配峰值 {resources.get('peak_task_disk_allocated_bytes')} B；下载错误事件 {retry_count}。后台占用、Torch 内部显存 watermark、前缀/积分步和全部修复见 budget.json / repairs.jsonl。监护前 CPU 准备峰值未完整采样，不冒充全程精确峰值。\n5. 结论范围：单个冻结 LeWM、单一训练 seed、5 控制步共享候选选择。未做 U1、Cube、闭环、多任务或大模型训练；下一步仅为研究者复审当前证据。\n\n| split | 独立 roots | 独立 sources | 有效候选记录 | 目标 roots |\n|---|---:|---:|---:|---:|\n'''
     for split,c in counts.items():morning+=f"| {split} | {c['independent_roots']} | {c['independent_sources']} | {c['valid_candidate_records']} | {c['target_roots']} |\n"
     morning+='\n停止/完成原因：'+reason+'。缺失项不填 0；上表的 0 只表示实际不存在的已执行记录。研究数值见逐 root 表，候选评分与真实结果在不同文件。\n'
@@ -105,6 +108,9 @@ def main():
         with baseline_report.open('a') as f:f.write('\n\n<!-- V3_MATCHED_G_FINAL -->\n匹配历史/额外标签加强 G 的实际结果（cal-val 只验证；192 个独特 cal-fit 标签的重复加权不计作新样本）：\n\n```json\n'+json.dumps(strong,ensure_ascii=False,indent=2)+'\n```\n')
     if prep and 'V3_SOURCE_ANCESTRY_FINAL' not in baseline_report.read_text():
         with baseline_report.open('a') as f:f.write('\n\n<!-- V3_SOURCE_ANCESTRY_FINAL -->\n来源隔离使用保守的精确初始状态家族，各家族101条metadata轨迹整体随组；未宣称掌握原始采集者全部谱系。实际独立分组数：'+json.dumps(prep.get('source_counts'),ensure_ascii=False)+'；metadata episode数：'+json.dumps(prep.get('metadata_episode_counts'),ensure_ascii=False)+'。18000个逆转移按原始current/successor/action精确去重，源分组交集为空。详见source_isolation_validation.json；前序缓存在G训练前已作废，F预训练见过全部公开分布。\n')
+    limitation_report=report/'limitations.md'
+    if prep and 'V3_REPRESENTATION_FINAL' not in limitation_report.read_text():
+        with limitation_report.open('a') as f:f.write('\n\n<!-- V3_REPRESENTATION_FINAL -->\nPCA16保留训练latent方差比例为'+str(variance)+'，低维历史可能丢失校正信息；失败不能排除所有条件偏差模型。源隔离使用185种精确初始状态家族作为保守代理（148/18/19分组），未声称识别了全部原始采集谱系。前序cache在G训练前作废，所有预算自原T0累计。λ敏感性、图表/视频、额外容量、多训练seed、闭环、U1和Cube均NOT_RUN。\n')
     if not (run/'per_root_metrics.csv').exists():
         (run/'per_root_metrics.csv').write_text('split,root,source,method,selected_index,R,J,block_only,success,status,reason\n')
     atomic(run/'status.json',{**status,'status':'FINALIZED','final_status':disposition,'ended_at_utc':end.isoformat(),'failure':None if a.reason=='COMPLETE' else reason,'publication':'attempted by finalizer; see delivery receipt'})

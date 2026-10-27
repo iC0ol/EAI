@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-27T14:24:20.942761+00:00",
+  "scope": "ENGINEERING_ONLY TEST_ONLY synthetic RGB images; inference, no training or research outcomes",
+  "batch": 64,
+  "repeat_frames_per_second": [
+    1413.9975576257261,
+    1521.4692185580939,
+    1771.4594858562627
+  ],
+  "median_frames_per_second": 1521.4692185580939,
+  "RGB_primary_color_pair_latent_distances": [
+    15.497734069824219,
+    13.64873218536377,
+    13.851089477539062
+  ],
+  "nonconstant_color_response": true,
+  "latent_finite": true,
+  "source_IO_timing": "NOT_MEASURED before verified HDF5 arrives",
+  "worst72000_frame_pure_forward_ETA_seconds": 47.322679369244725
+}

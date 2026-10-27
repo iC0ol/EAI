@@ -1,0 +1,285 @@
+{
+  "at": "2026-10-27T17:04:18.993224+00:00",
+  "scope": "Original public-data control/time semantics only; no candidate outcomes",
+  "hypotheses": {
+    "True": {
+      "relative": true,
+      "status": "PASS",
+      "scope": "original public data temporal/control audit; not research performance",
+      "sample_count": 1015,
+      "expected_leaving_action_row_q95_max_coord_error_pixels": 2.090220091304218e-05,
+      "expected_leaving_action_row_max_error_pixels": 2.8077823401417845e-05,
+      "next_row_action_q95_error_pixels": 4.033949149515604,
+      "acceptance_q95_pixels": 0.001,
+      "examples": [
+        {
+          "source_episode": 0,
+          "local_t": 1,
+          "leaving_action_error_pixels": 6.392030201141097e-06,
+          "next_row_action_error_pixels": 3.650039660901882,
+          "raw_action": [
+            0.05860595777630806,
+            -0.08608200401067734
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 2,
+          "leaving_action_error_pixels": 1.2463668781492743e-06,
+          "next_row_action_error_pixels": 2.343076783743527,
+          "raw_action": [
+            -0.024400634691119194,
+            0.03736724704504013
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 3,
+          "leaving_action_error_pixels": 1.927727385009348e-05,
+          "next_row_action_error_pixels": 12.021430445545377,
+          "raw_action": [
+            -0.10364654660224915,
+            0.045775603502988815
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 4,
+          "leaving_action_error_pixels": 1.4908809703229053e-05,
+          "next_row_action_error_pixels": 1.6948287646458766,
+          "raw_action": [
+            -0.5102261304855347,
+            -0.04200561344623566
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 5,
+          "leaving_action_error_pixels": 8.530141428764182e-06,
+          "next_row_action_error_pixels": 3.0935285100312058,
+          "raw_action": [
+            -0.46777769923210144,
+            0.015315704047679901
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 6,
+          "leaving_action_error_pixels": 1.098797753229519e-05,
+          "next_row_action_error_pixels": 1.736898322716911,
+          "raw_action": [
+            -0.5724050998687744,
+            0.10552490502595901
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 7,
+          "leaving_action_error_pixels": 4.1583058987271215e-06,
+          "next_row_action_error_pixels": 3.5591649549868976,
+          "raw_action": [
+            -0.6311489939689636,
+            0.11257797479629517
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 8,
+          "leaving_action_error_pixels": 7.098848982423078e-06,
+          "next_row_action_error_pixels": 3.88173753430641,
+          "raw_action": [
+            -0.5107735991477966,
+            0.12748566269874573
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 9,
+          "leaving_action_error_pixels": 6.978864291795617e-06,
+          "next_row_action_error_pixels": 0.9182157297310027,
+          "raw_action": [
+            -0.3794882297515869,
+            0.14726150035858154
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 10,
+          "leaving_action_error_pixels": 5.0133189688494895e-06,
+          "next_row_action_error_pixels": 3.356251275466036,
+          "raw_action": [
+            -0.4105435311794281,
+            0.1395256072282791
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 11,
+          "leaving_action_error_pixels": 1.1427477318193269e-05,
+          "next_row_action_error_pixels": 0.12894586069336356,
+          "raw_action": [
+            -0.29703062772750854,
+            0.10187316685914993
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 12,
+          "leaving_action_error_pixels": 4.372426758436632e-06,
+          "next_row_action_error_pixels": 0.6716893815645335,
+          "raw_action": [
+            -0.29350677132606506,
+            0.10623413324356079
+          ]
+        }
+      ],
+      "formula": "same 10 source PD micro-integrations; p += v*.01 after v += (100*(target-p)-20*v)*.01; kinematic agent; reconstruct initial velocity from previous position and previous known action, supports both original 5D and extended 7D public state",
+      "PD_coefficients": {
+        "alpha": 0.29567178591344156,
+        "beta": 0.0299318124665663,
+        "gamma": 3.7414765583207874,
+        "eta": -0.00655233199439112
+      }
+    },
+    "False": {
+      "relative": false,
+      "status": "ACTION_TIME_OR_PHYSICS_SEMANTICS_MISMATCH_NEEDS_REPAIR",
+      "scope": "original public data temporal/control audit; not research performance",
+      "sample_count": 1015,
+      "expected_leaving_action_row_q95_max_coord_error_pixels": 175.8678216027349,
+      "expected_leaving_action_row_max_error_pixels": 178.1185306286194,
+      "next_row_action_q95_error_pixels": 175.89162063468885,
+      "acceptance_q95_pixels": 0.001,
+      "examples": [
+        {
+          "source_episode": 0,
+          "local_t": 1,
+          "leaving_action_error_pixels": 177.7784901819037,
+          "next_row_action_error_pixels": 177.803032889341,
+          "raw_action": [
+            0.05860595777630806,
+            -0.08608200401067734
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 2,
+          "leaving_action_error_pixels": 175.87824167479314,
+          "next_row_action_error_pixels": 175.90167245509423,
+          "raw_action": [
+            -0.024400634691119194,
+            0.03736724704504013
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 3,
+          "leaving_action_error_pixels": 172.9761427261177,
+          "next_row_action_error_pixels": 173.09635683780047,
+          "raw_action": [
+            -0.10364654660224915,
+            0.045775603502988815
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 4,
+          "leaving_action_error_pixels": 159.1843893518855,
+          "next_row_action_error_pixels": 159.17183854840758,
+          "raw_action": [
+            -0.5102261304855347,
+            -0.04200561344623566
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 5,
+          "leaving_action_error_pixels": 150.65733175529107,
+          "next_row_action_error_pixels": 150.6882671256928,
+          "raw_action": [
+            -0.46777769923210144,
+            0.015315704047679901
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 6,
+          "leaving_action_error_pixels": 140.44617101053782,
+          "next_row_action_error_pixels": 140.463539922618,
+          "raw_action": [
+            -0.5724050998687744,
+            0.10552490502595901
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 7,
+          "leaving_action_error_pixels": 128.778842886878,
+          "next_row_action_error_pixels": 128.74325127891117,
+          "raw_action": [
+            -0.6311489939689636,
+            0.11257797479629517
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 8,
+          "leaving_action_error_pixels": 121.71627360654409,
+          "next_row_action_error_pixels": 121.67745622691041,
+          "raw_action": [
+            -0.5107735991477966,
+            0.12748566269874573
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 9,
+          "leaving_action_error_pixels": 117.52164858408463,
+          "next_row_action_error_pixels": 117.53083076051982,
+          "raw_action": [
+            -0.3794882297515869,
+            0.14726150035858154
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 10,
+          "leaving_action_error_pixels": 110.57710599643906,
+          "next_row_action_error_pixels": 110.54354343355124,
+          "raw_action": [
+            -0.4105435311794281,
+            0.1395256072282791
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 11,
+          "leaving_action_error_pixels": 106.79019935193975,
+          "next_row_action_error_pixels": 106.78915744702417,
+          "raw_action": [
+            -0.29703062772750854,
+            0.10187316685914993
+          ]
+        },
+        {
+          "source_episode": 0,
+          "local_t": 12,
+          "leaving_action_error_pixels": 102.36285251217313,
+          "next_row_action_error_pixels": 102.36884092986895,
+          "raw_action": [
+            -0.29350677132606506,
+            0.10623413324356079
+          ]
+        }
+      ],
+      "formula": "same 10 source PD micro-integrations; p += v*.01 after v += (100*(target-p)-20*v)*.01; kinematic agent; reconstruct initial velocity from previous position and previous known action, supports both original 5D and extended 7D public state",
+      "PD_coefficients": {
+        "alpha": 0.29567178591344156,
+        "beta": 0.0299318124665663,
+        "gamma": 3.7414765583207874,
+        "eta": -0.00655233199439112
+      }
+    }
+  },
+  "selection_criterion": "Unique PD microstep model with prespecified q95<=.001pixel; original dataset action extrema are observations, not declared action-space bounds."
+}

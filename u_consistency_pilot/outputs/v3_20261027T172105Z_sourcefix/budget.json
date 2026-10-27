@@ -1,0 +1,927 @@
+{
+  "run_id": "20261027T172105Z_sourcefix",
+  "started_at_utc": "2026-10-27T11:54:50+00:00",
+  "ended_at_utc": "2026-10-27T18:03:42.632652+00:00",
+  "timezone_for_user": "Asia/Shanghai",
+  "wall_seconds_through_finalization": 22132.632652,
+  "wall_limit_seconds": 43200,
+  "report_reserve_seconds": 2700,
+  "gpu_process_seconds_upper_bound": 3024.6752324481495,
+  "gpu_limit_seconds": 36000,
+  "gpu_accounting": "2-second samples; counts entire lifetime of this task CUDA processes, including idle context time; interval edges conservatively padded by a sample",
+  "resource_watch": {
+    "started_at_utc": "2026-10-27T12:06:44.434815+00:00",
+    "gpu_process_card_seconds_upper_bound": 3024.6752324481495,
+    "peak_task_process_rss_sum_bytes": 1977999360,
+    "peak_task_vram_bytes": 759169024,
+    "peak_foreign_vram_bytes": 742391808,
+    "minimum_host_mem_available_bytes": 24553209856,
+    "peak_task_disk_allocated_bytes": 67090026496,
+    "samples": 10310,
+    "gpu_intervals": [
+      {
+        "started_at_utc": "2026-10-27T12:20:07.537889+00:00",
+        "task_pids_first_seen": [
+          1128563
+        ],
+        "ended_at_utc": "2026-10-27T12:20:11.636942+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T12:42:08.122549+00:00",
+        "task_pids_first_seen": [
+          1174111
+        ],
+        "ended_at_utc": "2026-10-27T12:42:10.146192+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T12:45:29.014467+00:00",
+        "task_pids_first_seen": [
+          1179151
+        ],
+        "ended_at_utc": "2026-10-27T12:45:37.131879+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T12:49:52.719526+00:00",
+        "task_pids_first_seen": [
+          1188135
+        ],
+        "ended_at_utc": "2026-10-27T12:49:58.806836+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T12:56:16.218087+00:00",
+        "task_pids_first_seen": [
+          1200829
+        ],
+        "ended_at_utc": "2026-10-27T12:56:22.301641+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T13:20:36.485485+00:00",
+        "task_pids_first_seen": [
+          1239496
+        ],
+        "ended_at_utc": "2026-10-27T13:20:44.591011+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T13:35:59.348273+00:00",
+        "task_pids_first_seen": [
+          1266311
+        ],
+        "ended_at_utc": "2026-10-27T13:36:01.371773+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T13:45:19.127448+00:00",
+        "task_pids_first_seen": [
+          1280754
+        ],
+        "ended_at_utc": "2026-10-27T13:45:55.698770+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T13:51:08.060591+00:00",
+        "task_pids_first_seen": [
+          1291448
+        ],
+        "ended_at_utc": "2026-10-27T13:51:10.091580+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T14:24:21.456232+00:00",
+        "task_pids_first_seen": [
+          1339901
+        ],
+        "ended_at_utc": "2026-10-27T14:24:23.480323+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T17:10:12.872871+00:00",
+        "task_pids_first_seen": [
+          1555640
+        ],
+        "ended_at_utc": "2026-10-27T17:10:33.127187+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T17:10:39.238987+00:00",
+        "task_pids_first_seen": [
+          1556184,
+          1556215
+        ],
+        "ended_at_utc": "2026-10-27T17:20:25.588354+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T17:26:22.965383+00:00",
+        "task_pids_first_seen": [
+          1564323
+        ],
+        "ended_at_utc": "2026-10-27T17:26:43.249003+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T17:26:49.498340+00:00",
+        "task_pids_first_seen": [
+          1565654
+        ],
+        "ended_at_utc": "2026-10-27T17:55:38.510666+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T17:55:40.536796+00:00",
+        "task_pids_first_seen": [
+          1587017
+        ],
+        "ended_at_utc": "2026-10-27T18:00:51.084517+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T18:00:55.133046+00:00",
+        "task_pids_first_seen": [
+          1595565
+        ],
+        "ended_at_utc": "2026-10-27T18:01:13.371476+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T18:01:15.396267+00:00",
+        "task_pids_first_seen": [
+          1596718
+        ],
+        "ended_at_utc": "2026-10-27T18:01:37.851880+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T18:01:41.909796+00:00",
+        "task_pids_first_seen": [
+          1597981
+        ],
+        "ended_at_utc": "2026-10-27T18:01:50.021508+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T18:02:02.184966+00:00",
+        "task_pids_first_seen": [
+          1599154
+        ],
+        "ended_at_utc": "2026-10-27T18:02:08.265560+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T18:02:16.401016+00:00",
+        "task_pids_first_seen": [
+          1599741
+        ],
+        "ended_at_utc": "2026-10-27T18:02:44.885333+00:00"
+      },
+      {
+        "started_at_utc": "2026-10-27T18:03:17.315842+00:00",
+        "task_pids_first_seen": [
+          1603782
+        ],
+        "ended_at_utc": "2026-10-27T18:03:41.739677+00:00"
+      }
+    ],
+    "last_at_utc": "2026-10-27T18:03:39.736084+00:00",
+    "task_pids": [
+      1562024,
+      1603782
+    ],
+    "task_rss_sum_bytes": 1308676096,
+    "task_vram_bytes": 450887680,
+    "foreign_vram_bytes": 310378496,
+    "host_mem_available_bytes": 25053294592,
+    "disk_free_bytes": 198627840000,
+    "disk_allocated_bytes": 67090026496,
+    "gpu_query_error": null,
+    "open_gpu_interval": null,
+    "legacy_sampled_gpu_seconds": 28.50008324580267,
+    "legacy_brief_context_uncertainty_budget_seconds": 30,
+    "gpu_lifetime_markers": [
+      {
+        "pid": 1596718,
+        "start_epoch": 1793124074.586634,
+        "started_at_utc": "2026-10-27T18:01:14.586636+00:00",
+        "stage": "cal_fit",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793124095.8322363,
+        "ended_at_utc": "2026-10-27T18:01:35.832245+00:00",
+        "peak_process_rss_kib": 1364504,
+        "peak_torch_allocated_bytes": 103273984,
+        "peak_torch_reserved_bytes": 109051904
+      },
+      {
+        "pid": 1291448,
+        "start_epoch": 1793109066.12437,
+        "started_at_utc": "2026-10-27T13:51:06.124373+00:00",
+        "stage": "engineering",
+        "scope": "TEST_ONLY",
+        "card": 0,
+        "end_epoch": 1793109068.216823,
+        "ended_at_utc": "2026-10-27T13:51:08.216825+00:00",
+        "peak_process_rss_kib": 1259008,
+        "peak_torch_allocated_bytes": 84404736,
+        "peak_torch_reserved_bytes": 90177536
+      },
+      {
+        "pid": 1556215,
+        "start_epoch": 1793121039.077082,
+        "started_at_utc": "2026-10-27T17:10:39.077084+00:00",
+        "stage": "ENGINEERING_TRUSTED_PIPELINE",
+        "scope": "TEST_ONLY",
+        "card": 0,
+        "end_epoch": 1793121039.8198867,
+        "ended_at_utc": "2026-10-27T17:10:39.819888+00:00",
+        "peak_process_rss_kib": 1301128,
+        "peak_torch_allocated_bytes": 90762240,
+        "peak_torch_reserved_bytes": 106954752
+      },
+      {
+        "pid": 1339901,
+        "start_epoch": 1793111060.487349,
+        "started_at_utc": "2026-10-27T14:24:20.487352+00:00",
+        "stage": "ENGINEERING_ENCODER_BENCHMARK",
+        "scope": "TEST_ONLY",
+        "card": 0,
+        "end_epoch": 1793111060.9432526,
+        "ended_at_utc": "2026-10-27T14:24:20.943253+00:00",
+        "peak_process_rss_kib": 1106012,
+        "peak_torch_allocated_bytes": 284008960,
+        "peak_torch_reserved_bytes": 436207616
+      },
+      {
+        "pid": 1555640,
+        "start_epoch": 1793121012.2479427,
+        "started_at_utc": "2026-10-27T17:10:12.247945+00:00",
+        "stage": "semantics",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793121031.4915035,
+        "ended_at_utc": "2026-10-27T17:10:31.491504+00:00",
+        "peak_process_rss_kib": 1019104,
+        "peak_torch_allocated_bytes": 72737280,
+        "peak_torch_reserved_bytes": 77594624
+      },
+      {
+        "pid": 1599741,
+        "start_epoch": 1793124134.5845256,
+        "started_at_utc": "2026-10-27T18:02:14.584528+00:00",
+        "stage": "score_test",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793124163.5887983,
+        "ended_at_utc": "2026-10-27T18:02:43.588798+00:00",
+        "peak_process_rss_kib": 1295420,
+        "peak_torch_allocated_bytes": 292810240,
+        "peak_torch_reserved_bytes": 429916160
+      },
+      {
+        "pid": 1239623,
+        "start_epoch": 1793107240.292577,
+        "started_at_utc": "2026-10-27T13:20:40.292579+00:00",
+        "stage": "engineering",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793107243.1079018,
+        "ended_at_utc": "2026-10-27T13:20:43.107903+00:00",
+        "peak_process_rss_kib": 1289492,
+        "peak_torch_allocated_bytes": 90762752,
+        "peak_torch_reserved_bytes": 106954752
+      },
+      {
+        "pid": 1239496,
+        "start_epoch": 1793107236.4044888,
+        "started_at_utc": "2026-10-27T13:20:36.404491+00:00",
+        "stage": "engineering",
+        "scope": "TEST_ONLY",
+        "card": 0,
+        "end_epoch": 1793107238.6084712,
+        "ended_at_utc": "2026-10-27T13:20:38.608473+00:00",
+        "peak_process_rss_kib": 1272848,
+        "peak_torch_allocated_bytes": 105427968,
+        "peak_torch_reserved_bytes": 109051904
+      },
+      {
+        "pid": 1549080,
+        "start_epoch": 1793120168.0839868,
+        "started_at_utc": "2026-10-27T16:56:08.083990+00:00",
+        "stage": "assets",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793120205.9164052,
+        "ended_at_utc": "2026-10-27T16:56:45.916406+00:00",
+        "peak_process_rss_kib": 436064,
+        "peak_torch_allocated_bytes": 0,
+        "peak_torch_reserved_bytes": 0
+      },
+      {
+        "pid": 1200955,
+        "start_epoch": 1793105777.516911,
+        "started_at_utc": "2026-10-27T12:56:17.516914+00:00",
+        "stage": "engineering",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793105780.4075694,
+        "ended_at_utc": "2026-10-27T12:56:20.407571+00:00",
+        "peak_process_rss_kib": 1293008,
+        "peak_torch_allocated_bytes": 90762752,
+        "peak_torch_reserved_bytes": 106954752
+      },
+      {
+        "pid": 1280754,
+        "start_epoch": 1793108717.8638916,
+        "started_at_utc": "2026-10-27T13:45:17.863894+00:00",
+        "stage": "engineering",
+        "scope": "TEST_ONLY",
+        "card": 0,
+        "end_epoch": 1793108753.4502978,
+        "ended_at_utc": "2026-10-27T13:45:53.450299+00:00",
+        "peak_process_rss_kib": 1245332,
+        "peak_torch_allocated_bytes": 60577792,
+        "peak_torch_reserved_bytes": 65011712
+      },
+      {
+        "pid": 1562029,
+        "start_epoch": 1793121803.044876,
+        "started_at_utc": "2026-10-27T17:23:23.044878+00:00",
+        "stage": "assets",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793121841.0021567,
+        "ended_at_utc": "2026-10-27T17:24:01.002157+00:00",
+        "peak_process_rss_kib": 435996,
+        "peak_torch_allocated_bytes": 0,
+        "peak_torch_reserved_bytes": 0
+      },
+      {
+        "pid": 1266311,
+        "start_epoch": 1793108158.0506437,
+        "started_at_utc": "2026-10-27T13:35:58.050646+00:00",
+        "stage": "engineering",
+        "scope": "TEST_ONLY",
+        "card": 0,
+        "end_epoch": 1793108160.2699974,
+        "ended_at_utc": "2026-10-27T13:36:00.269999+00:00",
+        "peak_process_rss_kib": 1264840,
+        "peak_torch_allocated_bytes": 84404736,
+        "peak_torch_reserved_bytes": 90177536
+      },
+      {
+        "pid": 1554103,
+        "start_epoch": 1793120834.80296,
+        "started_at_utc": "2026-10-27T17:07:14.802963+00:00",
+        "stage": "assets",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793120872.7639828,
+        "ended_at_utc": "2026-10-27T17:07:52.763983+00:00",
+        "peak_process_rss_kib": 436040,
+        "peak_torch_allocated_bytes": 0,
+        "peak_torch_reserved_bytes": 0
+      },
+      {
+        "pid": 1557040,
+        "start_epoch": 1793121133.1673112,
+        "started_at_utc": "2026-10-27T17:12:13.167313+00:00",
+        "stage": "ENGINEERING_TRUSTED_PIPELINE",
+        "scope": "TEST_ONLY",
+        "card": 0,
+        "end_epoch": 1793121134.0457687,
+        "ended_at_utc": "2026-10-27T17:12:14.045770+00:00",
+        "peak_process_rss_kib": 1303760,
+        "peak_torch_allocated_bytes": 115987968,
+        "peak_torch_reserved_bytes": 127926272
+      },
+      {
+        "pid": 1304799,
+        "start_epoch": 1793119984.2316163,
+        "started_at_utc": "2026-10-27T16:53:04.231618+00:00",
+        "stage": "assets",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793120022.1224775,
+        "ended_at_utc": "2026-10-27T16:53:42.122478+00:00",
+        "peak_process_rss_kib": 435748,
+        "peak_torch_allocated_bytes": 0,
+        "peak_torch_reserved_bytes": 0
+      },
+      {
+        "pid": 1587017,
+        "start_epoch": 1793123739.657061,
+        "started_at_utc": "2026-10-27T17:55:39.657064+00:00",
+        "stage": "train",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793124048.9786603,
+        "ended_at_utc": "2026-10-27T18:00:48.978661+00:00",
+        "peak_process_rss_kib": 1715124,
+        "peak_torch_allocated_bytes": 100043264,
+        "peak_torch_reserved_bytes": 115343360
+      },
+      {
+        "pid": 1200829,
+        "start_epoch": 1793105774.8426473,
+        "started_at_utc": "2026-10-27T12:56:14.842649+00:00",
+        "stage": "engineering",
+        "scope": "TEST_ONLY",
+        "card": 0,
+        "end_epoch": 1793105775.9507637,
+        "ended_at_utc": "2026-10-27T12:56:15.950766+00:00",
+        "peak_process_rss_kib": 715136,
+        "peak_torch_allocated_bytes": 59896320,
+        "peak_torch_reserved_bytes": 60817408
+      },
+      {
+        "pid": 1599154,
+        "start_epoch": 1793124121.5146391,
+        "started_at_utc": "2026-10-27T18:02:01.514641+00:00",
+        "stage": "analyze_dev",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793124127.5546246,
+        "ended_at_utc": "2026-10-27T18:02:07.554625+00:00",
+        "peak_process_rss_kib": 1246588,
+        "peak_torch_allocated_bytes": 114953216,
+        "peak_torch_reserved_bytes": 127926272
+      },
+      {
+        "pid": 1556184,
+        "start_epoch": 1793121038.9493456,
+        "started_at_utc": "2026-10-27T17:10:38.949348+00:00",
+        "stage": "prepare",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793121623.8135831,
+        "ended_at_utc": "2026-10-27T17:20:23.813584+00:00",
+        "peak_process_rss_kib": 1245236,
+        "peak_torch_allocated_bytes": 284008960,
+        "peak_torch_reserved_bytes": 421527552
+      },
+      {
+        "pid": 1603782,
+        "start_epoch": 1793124196.924882,
+        "started_at_utc": "2026-10-27T18:03:16.924884+00:00",
+        "stage": "analyze_test",
+        "scope": "task",
+        "card": 0
+      },
+      {
+        "pid": 1564323,
+        "start_epoch": 1793121982.3535373,
+        "started_at_utc": "2026-10-27T17:26:22.353540+00:00",
+        "stage": "semantics",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793122002.006032,
+        "ended_at_utc": "2026-10-27T17:26:42.006032+00:00",
+        "peak_process_rss_kib": 1019104,
+        "peak_torch_allocated_bytes": 72737280,
+        "peak_torch_reserved_bytes": 77594624
+      },
+      {
+        "pid": 1597981,
+        "start_epoch": 1793124100.2623603,
+        "started_at_utc": "2026-10-27T18:01:40.262363+00:00",
+        "stage": "score_dev",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793124107.6643145,
+        "ended_at_utc": "2026-10-27T18:01:47.664315+00:00",
+        "peak_process_rss_kib": 1256164,
+        "peak_torch_allocated_bytes": 243469824,
+        "peak_torch_reserved_bytes": 297795584
+      },
+      {
+        "pid": 1565654,
+        "start_epoch": 1793122008.6749604,
+        "started_at_utc": "2026-10-27T17:26:48.674963+00:00",
+        "stage": "prepare",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793123736.2316773,
+        "ended_at_utc": "2026-10-27T17:55:36.231677+00:00",
+        "peak_process_rss_kib": 1513688,
+        "peak_torch_allocated_bytes": 284008960,
+        "peak_torch_reserved_bytes": 421527552
+      },
+      {
+        "pid": 1595565,
+        "start_epoch": 1793124054.0634615,
+        "started_at_utc": "2026-10-27T18:00:54.063465+00:00",
+        "stage": "cal_collect",
+        "scope": "task",
+        "card": 0,
+        "end_epoch": 1793124072.0834258,
+        "ended_at_utc": "2026-10-27T18:01:12.083426+00:00",
+        "peak_process_rss_kib": 1328972,
+        "peak_torch_allocated_bytes": 291478528,
+        "peak_torch_reserved_bytes": 377487360
+      }
+    ],
+    "gpu_accounting_method": "Explicit process context-init-to-exit lifetime union on one card; early engineering sampled windows plus 30-second conservative uncertainty allowance",
+    "ended_at_utc": "2026-10-27T18:03:41.739690+00:00"
+  },
+  "download_payload_bytes_counted": 14089613322,
+  "download_limit_bytes": 35000000000,
+  "download_accounting_limitations": {
+    "at": "2026-10-27T12:25:39.363262+00:00",
+    "early_first_pip_download_interrupted_by_agent": true,
+    "first_pip_payload_exact": "NOT_MEASURED; budget charged conservative 500 MB; successful files shown in captured preparation output total less than this",
+    "pip_wheel_files": [
+      {
+        "filename": "jinja2-3.1.6-py3-none-any.whl",
+        "bytes": 134899,
+        "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67"
+      },
+      {
+        "filename": "gymnasium-1.0.0-py3-none-any.whl",
+        "bytes": 958120,
+        "sha256": "b6f40e1e24c5bd419361e1a5b86a9117d2499baecc3a660d44dfff4c465393ad"
+      },
+      {
+        "filename": "h5py-3.12.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "bytes": 5452688,
+        "sha256": "018a4597f35092ae3fb28ee851fdc756d2b88c96336b8480e124ce1ac6fb9166"
+      },
+      {
+        "filename": "mpmath-1.3.0-py3-none-any.whl",
+        "bytes": 536198,
+        "sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"
+      },
+      {
+        "filename": "pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+        "bytes": 806638,
+        "sha256": "b8bb0864c5a28024fac8a632c443c87c5aa6f215c0b126c449ae1a150412f31d"
+      },
+      {
+        "filename": "zstandard-0.23.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "bytes": 5442927,
+        "sha256": "fd30d9c67d13d891f2360b2a120186729c111238ac63b43dbd37a5a40670b8ca"
+      },
+      {
+        "filename": "regex-2026.9.29-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+        "bytes": 804978,
+        "sha256": "612b709381c0355b70d89cdb51b7f670591ed5cbbc0e3b5337488019dc667b65"
+      },
+      {
+        "filename": "idna-3.20-py3-none-any.whl",
+        "bytes": 69583,
+        "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c"
+      },
+      {
+        "filename": "farama_notifications-0.0.6-py3-none-any.whl",
+        "bytes": 2897,
+        "sha256": "f84839188efa1ce5bb361c2a84881b2dc2c0d0d7fb661ff00421820170930935"
+      },
+      {
+        "filename": "wheel-0.45.1-py3-none-any.whl",
+        "bytes": 72494,
+        "sha256": "708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248"
+      },
+      {
+        "filename": "hdf5plugin-5.1.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "bytes": 45876035,
+        "sha256": "6da81b0b168f271b0cf995a12c28cf01b381587fed21f25fd91b2c90d5108425"
+      },
+      {
+        "filename": "urllib3-2.8.0-py3-none-any.whl",
+        "bytes": 135717,
+        "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+      },
+      {
+        "filename": "requests-2.34.2-py3-none-any.whl",
+        "bytes": 73075,
+        "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"
+      },
+      {
+        "filename": "sympy-1.13.1-py3-none-any.whl",
+        "bytes": 6189177,
+        "sha256": "db36cdc64bf61b9b24578b6f7bab1ecdd2452cf008f34faa33776680c26d66f8"
+      },
+      {
+        "filename": "fsspec-2026.9.0-py3-none-any.whl",
+        "bytes": 221738,
+        "sha256": "8dd6e646e99ea382bd85f97a45e6b526a442d79423a7dc673f1e2756d05fcb5f"
+      },
+      {
+        "filename": "einops-0.8.0-py3-none-any.whl",
+        "bytes": 43223,
+        "sha256": "9572fb63046264a862693b0a87088af3bdc8c068fde03de63453cbbde245465f"
+      },
+      {
+        "filename": "pillow-13.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "bytes": 7140667,
+        "sha256": "a625df9a2a5597fa5e5266e01aefc82604bb85d291e3547981e863560d75da6c"
+      },
+      {
+        "filename": "numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "bytes": 18252005,
+        "sha256": "666dbfb6ec68962c033a450943ded891bed2d54e6755e35e5835d63f4f6931d5"
+      },
+      {
+        "filename": "opencv_python_headless-4.10.0.84-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "bytes": 49858781,
+        "sha256": "377d08a7e48a1405b5e84afcbe4798464ce7ee17081c1c23619c8b398ff18295"
+      },
+      {
+        "filename": "tokenizers-0.21.4-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "bytes": 3115426,
+        "sha256": "51b7eabb104f46c1c50b486520555715457ae833d5aee9ff6ae853d1130506ff"
+      },
+      {
+        "filename": "joblib-1.6.0-py3-none-any.whl",
+        "bytes": 306115,
+        "sha256": "3dbbf9f6e4b592a2357b854608e980fe6390d131d7a82f011a377ef2ebef7aba"
+      },
+      {
+        "filename": "pycparser-3.12-py3-none-any.whl",
+        "bytes": 62600,
+        "sha256": "a076f3f489b39b43ed13563a1dafe42447445bec2e294154ec5c57fcdda4c85e"
+      },
+      {
+        "filename": "h5py-3.16.0-cp311-cp311-manylinux_2_28_x86_64.whl",
+        "bytes": 5027150,
+        "sha256": "fb1720028d99040792bb2fb31facb8da44a6f29df7697e0b84f0d79aff2e9bd3"
+      },
+      {
+        "filename": "omegaconf-2.4.0-py3-none-any.whl",
+        "bytes": 254152,
+        "sha256": "f141a664c777582405e3cc6e0545ecc79429e79f844995b1a6e71c35946a025c"
+      },
+      {
+        "filename": "threadpoolctl-3.7.0-py3-none-any.whl",
+        "bytes": 26362,
+        "sha256": "cd8b60b5641b45c67bbf73c64c843235fc2d8a480c87389f52f5dbee893b86be"
+      },
+      {
+        "filename": "pygame-2.6.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "bytes": 13977107,
+        "sha256": "ce8cc108b92de9b149b344ad2e25eedbe773af0dc41dfb24d1f07f679b558c60"
+      },
+      {
+        "filename": "pymunk-7.2.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+        "bytes": 1011065,
+        "sha256": "51bd7fbd553473f7503d7a84bec58386c1e299ee25587c72f1dd2f945d7984c3"
+      },
+      {
+        "filename": "filelock-4.2.4-py3-none-any.whl",
+        "bytes": 162475,
+        "sha256": "301241438c57936ef93f4243a94f2559022268bfcf9b375a9a72eb0f8db8358e"
+      },
+      {
+        "filename": "numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+        "bytes": 16918164,
+        "sha256": "89cd468399cfd2504718f0ba50e410dca55a170b61a02ad92bb18c8a65186e93"
+      },
+      {
+        "filename": "networkx-3.6.1-py3-none-any.whl",
+        "bytes": 2068504,
+        "sha256": "d47fbf302e7d9cbbb9e2555a0d267983d2aa476bac30e90dfbe5669bd57f3762"
+      },
+      {
+        "filename": "hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "bytes": 4212180,
+        "sha256": "2814a6e999d13464c4d679b788cc5d784eb5a4edfc638a31f10e9a11ab531ef8"
+      },
+      {
+        "filename": "scipy-1.14.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "bytes": 41165244,
+        "sha256": "fef8c87f8abfb884dac04e97824b61299880c43f4ce675dd2cbeadd3c9b466d2"
+      },
+      {
+        "filename": "cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+        "bytes": 217807,
+        "sha256": "34e261f78cb6ceaaa36f42f2613f4380d94d9c759a9c73c769ee6e0247364632"
+      },
+      {
+        "filename": "psutil-6.1.1-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "bytes": 287477,
+        "sha256": "97f7cb9921fbec4904f522d972f0c0e1f4fabbdd4e0287813b21215074a0f160"
+      },
+      {
+        "filename": "scikit_learn-1.5.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "bytes": 13322034,
+        "sha256": "f8b0ccd4a902836493e026c03256e8b206656f91fbcc4fde28c57a5b752561f1"
+      },
+      {
+        "filename": "transformers-4.50.3-py3-none-any.whl",
+        "bytes": 10180411,
+        "sha256": "6111610a43dec24ef32c3df0632c6b25b07d9711c01d9e1077bdd2ff6b14a38c"
+      },
+      {
+        "filename": "typing_extensions-4.16.0-py3-none-any.whl",
+        "bytes": 45571,
+        "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+      },
+      {
+        "filename": "cloudpickle-3.1.2-py3-none-any.whl",
+        "bytes": 22228,
+        "sha256": "9acb47f6afd73f60dc1df93bb801b472f05ff42fa6c84167d25cb206be1fbf4a"
+      },
+      {
+        "filename": "huggingface_hub-0.36.2-py3-none-any.whl",
+        "bytes": 566395,
+        "sha256": "48f0c8eac16145dfce371e9d2d7772854a4f591bcb56c9cf548accf531d54270"
+      },
+      {
+        "filename": "shapely-2.0.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "bytes": 2528334,
+        "sha256": "b3dc9fb0eb56498912025f5eb352b5126f04801ed0e8bdbd867d21bdbfd7cbd0"
+      },
+      {
+        "filename": "charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+        "bytes": 269972,
+        "sha256": "211d5a3eb6af8f513b8d4ca19a8c1b7accab1b5f0d3175f9826b03c1a920dc1f"
+      },
+      {
+        "filename": "safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+        "bytes": 516040,
+        "sha256": "fd6f3f93c9a0a7cc2788ee63fb763353d4bd2e89b0751bc78fcf7dda00bea774"
+      },
+      {
+        "filename": "markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+        "bytes": 22961,
+        "sha256": "6da83a088f8ef93b2d483a8232a4dbf4d69d3d8496b568a03c56becac43e1808"
+      },
+      {
+        "filename": "certifi-2026.10.23-py3-none-any.whl",
+        "bytes": 135082,
+        "sha256": "e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1"
+      },
+      {
+        "filename": "tqdm-4.70.1-py3-none-any.whl",
+        "bytes": 80199,
+        "sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73"
+      },
+      {
+        "filename": "packaging-26.3-py3-none-any.whl",
+        "bytes": 129956,
+        "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+      }
+    ],
+    "metadata_overhead_budget_charge_bytes": 10000000,
+    "all_future_downloads_metered": true,
+    "initial_pip_temporary_and_http_cache_location": "First attempt inherited pip defaults outside EAI before correction; no experiment result was produced. Subsequent attempt/cache/tmp are inside U. Existing outside caches were not deleted or edited for cleanup.",
+    "inherited_PYTHONPATH": "Initial pip resolver saw external ROS metadata; cleared before all model/env tests and scientific execution. No ROS code or files modified.",
+    "source_archive_repair": "SWM archive capped at 50 MB; preserved partial, fetched selected files from pinned commit instead. Anonymous GitHub API 403 rate limit followed by permitted authenticated metadata request using existing account.",
+    "dependency_combinations": "Combination 1 download only (pymunk6.11/transformers4.48) abandoned before install on reading source. Combination 2 installed pymunk7.2/transformers4.50.3. Torch2.6/CUDA12.4 binary copies from existing VLM environment; missing cusparselt directory copied after real import caught it. No existing environment upgraded."
+  },
+  "step_counts": {
+    "by_stage": {
+      "ENGINEERING_ONLY_PRIOR_SMOKE_RUNS": {
+        "control_steps": 1600,
+        "prefix_control_steps": 1440,
+        "engineering_smoke_candidate_control_steps": 160,
+        "physics_integration_steps": 16072,
+        "environment_resets": 36,
+        "reset_integration_steps": 72
+      },
+      "ENGINEERING_ONLY_SMOKE:pid_1239623": {
+        "physics_integration_steps": 4018,
+        "reset_integration_steps": 18,
+        "environment_resets": 9,
+        "control_steps": 400,
+        "prefix_control_steps": 360,
+        "prefix_integration_steps": 3600,
+        "engineering_smoke_candidate_control_steps": 40,
+        "engineering_smoke_candidate_integration_steps": 400
+      },
+      "assets:pid_1304799": {},
+      "decompress:pid_1548335": {},
+      "assets:pid_1549080": {},
+      "decompress:pid_1549590": {},
+      "semantics:pid_1552884": {},
+      "ENGINEERING_COLOR_0A:pid_1554414": {
+        "physics_integration_steps": 2,
+        "reset_integration_steps": 2,
+        "environment_resets": 1
+      },
+      "assets:pid_1554103": {},
+      "decompress:pid_1554729": {},
+      "semantics:pid_1555640": {
+        "physics_integration_steps": 57080,
+        "reset_integration_steps": 280,
+        "environment_resets": 140,
+        "control_steps": 5680,
+        "prefix_control_steps": 5560,
+        "prefix_integration_steps": 55600,
+        "engineering_candidate_control_steps": 60,
+        "engineering_candidate_integration_steps": 600,
+        "engineering_next_probe_control_steps": 60,
+        "engineering_next_probe_integration_steps": 600
+      },
+      "ENGINEERING_TRUSTED_FAILURE_RECONSTRUCTED_17h09": {
+        "control_steps": 85,
+        "prefix_control_steps": 80,
+        "candidate_engineering_trusted_control_steps": 5,
+        "physics_integration_steps": 854,
+        "environment_resets": 2,
+        "prefix_integration_steps": 800,
+        "candidate_engineering_trusted_integration_steps": 50,
+        "reset_integration_steps": 4
+      },
+      "ENGINEERING_TRUSTED_PIPELINE:pid_1557040": {
+        "physics_integration_steps": 4018,
+        "reset_integration_steps": 18,
+        "environment_resets": 9,
+        "control_steps": 400,
+        "prefix_control_steps": 360,
+        "prefix_integration_steps": 3600,
+        "candidate_engineering_trusted_control_steps": 40,
+        "candidate_engineering_trusted_integration_steps": 400
+      },
+      "prepare:pid_1556184": {},
+      "assets:pid_1562029": {},
+      "decompress:pid_1562839": {},
+      "semantics:pid_1564323": {
+        "physics_integration_steps": 57080,
+        "reset_integration_steps": 280,
+        "environment_resets": 140,
+        "control_steps": 5680,
+        "prefix_control_steps": 5560,
+        "prefix_integration_steps": 55600,
+        "engineering_candidate_control_steps": 60,
+        "engineering_candidate_integration_steps": 600,
+        "engineering_next_probe_control_steps": 60,
+        "engineering_next_probe_integration_steps": 600
+      },
+      "prepare:pid_1565654": {},
+      "train:pid_1587017": {},
+      "cal_collect:pid_1595565": {
+        "physics_integration_steps": 115712,
+        "reset_integration_steps": 512,
+        "environment_resets": 256,
+        "control_steps": 11520,
+        "prefix_control_steps": 10240,
+        "prefix_integration_steps": 102400,
+        "candidate_cal_control_steps": 1280,
+        "candidate_cal_integration_steps": 12800
+      },
+      "cal_fit:pid_1596718": {},
+      "score_dev:pid_1597981": {},
+      "execute_dev:pid_1598711": {
+        "physics_integration_steps": 57856,
+        "reset_integration_steps": 256,
+        "environment_resets": 128,
+        "control_steps": 5760,
+        "prefix_control_steps": 5120,
+        "prefix_integration_steps": 51200,
+        "candidate_dev_control_steps": 640,
+        "candidate_dev_integration_steps": 6400
+      },
+      "analyze_dev:pid_1599154": {},
+      "seal_test:pid_1599627": {},
+      "score_test:pid_1599741": {},
+      "execute_test:pid_1602080": {
+        "physics_integration_steps": 231424,
+        "reset_integration_steps": 1024,
+        "environment_resets": 512,
+        "control_steps": 23040,
+        "prefix_control_steps": 20480,
+        "prefix_integration_steps": 204800,
+        "candidate_test_control_steps": 2560,
+        "candidate_test_integration_steps": 25600
+      },
+      "analyze_test:pid_1603782": {}
+    },
+    "total": {
+      "candidate_engineering_trusted_integration_steps": 450,
+      "engineering_smoke_candidate_control_steps": 200,
+      "prefix_control_steps": 49200,
+      "candidate_cal_control_steps": 1280,
+      "candidate_dev_control_steps": 640,
+      "candidate_test_control_steps": 2560,
+      "candidate_test_integration_steps": 25600,
+      "engineering_smoke_candidate_integration_steps": 400,
+      "prefix_integration_steps": 477600,
+      "reset_integration_steps": 2466,
+      "engineering_next_probe_integration_steps": 1200,
+      "engineering_candidate_integration_steps": 1200,
+      "engineering_candidate_control_steps": 120,
+      "environment_resets": 1233,
+      "candidate_cal_integration_steps": 12800,
+      "candidate_dev_integration_steps": 6400,
+      "candidate_engineering_trusted_control_steps": 45,
+      "physics_integration_steps": 544116,
+      "engineering_next_probe_control_steps": 120,
+      "control_steps": 54165
+    },
+    "legacy_note": "Four successful prior engineering-only smoke invocations before counter flush was added; reconstructed from observed successful commands. Each had9 resets and400 control steps. These are one repeated engineering source,32 related candidate branches, outside the formal6-root replay and research splits.",
+    "recorded_at_utc": "2026-10-27T13:12:06.932013+00:00"
+  },
+  "scientific_stage_missing_counts": "NOT_RUN if absent; actual executed counters remain explicit",
+  "limits": {
+    "D_M_terminated": true,
+    "workstation_only": true,
+    "same_EAI_workspace_required": true,
+    "new_workspace_or_worktree": false,
+    "new_isolated_environment_inside_EAI": true,
+    "download_public_matching_assets_and_minimal_dependencies": true,
+    "model_dataset_code_dependency_download_limit_bytes": 35000000000,
+    "new_disk_usage_limit_bytes": 160000000000,
+    "disk_free_floor_bytes": 40000000000,
+    "wall_limit_seconds": 43200,
+    "report_reserve_seconds": 2700,
+    "preparation_allocation_seconds": 14400,
+    "gpu_process_limit_seconds_per_card_sum": 36000,
+    "ram_target_bytes": 24000000000,
+    "ram_stop_bytes": 28000000000,
+    "vram_target_bytes": 20000000000,
+    "vram_stop_bytes": 22000000000,
+    "default_gpu_count": 1,
+    "missing_cache_response": "DOWNLOAD_PINNED_ASSET; not a stop condition",
+    "preserve_system_python_drivers_CUDA_and_old_environments": true,
+    "may_repair_semantics_preserving_interfaces": true,
+    "may_change_task_metrics_or_information_boundaries": false,
+    "U1_automatic": false,
+    "Cube_automatic": false,
+    "stop_after_final_result": true
+  }
+}

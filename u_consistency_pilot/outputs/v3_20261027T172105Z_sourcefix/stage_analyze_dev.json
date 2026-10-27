@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "stage": "analyze_dev",
+  "at": "2026-10-27T18:02:07.553712+00:00",
+  "code_hash": "8be017e86517a9da4e4a9a2d75548a8aec7ce4d8cedc26dfd1263fcb41745406",
+  "config_hash": "aa3f5f7e329aa762ddaacc5fe8753c3d44fbcb83c2a82c7472d0013ef19eb51f",
+  "outputs": {
+    "outputs/v3_20261027T172105Z_sourcefix/selection_dev.json": "8e58e2697e56230e2f39c13a5dc27636f6411b7caed31ac3c9f93cc43194868e",
+    "outputs/v3_20261027T172105Z_sourcefix/per_root_metrics_dev.csv": "50c3dc34ef718069b779f1e509107068ea5a6b8e39c9e48699bb4ce72f468452",
+    "outputs/v3_20261027T172105Z_sourcefix/per_candidate_diagnostics_dev.jsonl": "8e36e700a6c43f1fd0bf0553f153e2189bc2072f792c8bbe5eb935a0727583c1",
+    "outputs/v3_20261027T172105Z_sourcefix/harmful_flips_dev.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/v3_20261027T172105Z_sourcefix/descriptive_dev.json": "d52068cd09b4aa636bc3f44e9dda0f4512bfb2f0037121d8f9c09d6c949b3333",
+    "outputs/v3_20261027T172105Z_sourcefix/per_root_metrics_by_candidate_source_dev.csv": "fcb8febea5da6e35aaff007a57154b94c073c4ea1cd12f74b3f75f40de49854c",
+    "outputs/v3_20261027T172105Z_sourcefix/source_stratified_dev.json": "2195cda36628200a6f120a9aab4531e4169784475813167c7ef2a2e7d0adc746"
+  }
+}

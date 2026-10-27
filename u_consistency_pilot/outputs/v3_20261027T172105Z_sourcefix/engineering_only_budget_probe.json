@@ -1,0 +1,9 @@
+{
+  "scope": "TEST_ONLY; synthetic latents/actions and synthetic remaining-budget record, real GPU cost included in task monitor",
+  "status": "PASS",
+  "actual_updates": 1000,
+  "elapsed_seconds": 35.585820962209255,
+  "actual_updates_per_second": 28.101079529392038,
+  "scheduler_reduced1100_cap_to1000": true,
+  "scientific_data_used": false
+}

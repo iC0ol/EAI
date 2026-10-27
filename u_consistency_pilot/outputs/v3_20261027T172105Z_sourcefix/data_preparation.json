@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "counts": {
+    "train": 10000,
+    "val": 2000,
+    "audit": 6000
+  },
+  "source_counts": {
+    "train": 148,
+    "val": 18,
+    "audit": 19
+  },
+  "metadata_episode_counts": {
+    "train": 7123,
+    "val": 1212,
+    "audit": 1764
+  },
+  "total_initial_state_families": 185,
+  "source_unit": "Conservative exact initial-state family, all101 trajectories together; underlying collection IDs beyond metadata are unavailable",
+  "split_seed": 270700,
+  "source_episode_disjoint": true,
+  "source_family_disjoint": true,
+  "all_derived_windows_follow_source": true,
+  "exact_inverse_block_dedup": "SHA256(original current7Dstate +5-control-end7Dstate +raw5x2 action block), global across all three splits; conservative physical-transition identity, no study outcomes",
+  "duplicate_inverse_block_candidates_skipped": 0,
+  "nonfinite_window_candidates_skipped": 0,
+  "unique_frames_encoded": 70563,
+  "latent_cache_bytes": 54192512,
+  "PCA_fit": "IDM-train historical observations only",
+  "PCA_explained_variance_ratio": [
+    0.01988822966814041,
+    0.01793702505528927,
+    0.017113767564296722,
+    0.016780134290456772,
+    0.01645534113049507,
+    0.016079265624284744,
+    0.015602398663759232,
+    0.015184497460722923,
+    0.015007317066192627,
+    0.014875147491693497,
+    0.014713580720126629,
+    0.014466010965406895,
+    0.014337126165628433,
+    0.014141108840703964,
+    0.013964906334877014,
+    0.013855733908712864
+  ],
+  "PCA_sha256": "2f10f1ba5d9c890b74451b890717ea65ce05aff691933b6a3a1bc7fc67f5aabf",
+  "latent_scaler_sha256": "49c81861c7f3bab2aface1f3543dfc31e2d091ba7d23d30c1b35ebdc0bab8bbe",
+  "dataset_tensor_sha256": "5288824cca9ddddb0f303b7fac53e3335605fb3e8d26a69fef79e4d3570a4654",
+  "F_pretraining_disclosure": "F was pretrained on this public original distribution, including families held out from G. G train/val/audit remain family-disjoint; online roots use new independent seeds.",
+  "encode_elapsed_seconds": 1727.1215509711765
+}

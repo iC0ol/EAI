@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "stage": "train",
+  "at": "2026-10-27T18:00:48.973880+00:00",
+  "code_hash": "8be017e86517a9da4e4a9a2d75548a8aec7ce4d8cedc26dfd1263fcb41745406",
+  "config_hash": "aa3f5f7e329aa762ddaacc5fe8753c3d44fbcb83c2a82c7472d0013ef19eb51f",
+  "outputs": {
+    "outputs/v3_20261027T172105Z_sourcefix/baseline_validity.json": "2e06834779f501baf8fe0e8f602b25d805df1f46c7b778f590276cbad15e28dc",
+    "outputs/v3_20261027T172105Z_sourcefix/training_curves_initial.csv": "1795ea8eb8f8cd542c2bfc102ae2e36c85691ba415800baf26115ebc1da5f0e8",
+    ".work/20261027T172105Z_sourcefix/flow_best.pt": "11642e9b49c8028c7d7cf569fe062ca6c8fb81975055fb2ac49159362b419315",
+    ".work/20261027T172105Z_sourcefix/mlp_best.pt": "a887213502371b04a346952a404d253d5d9433ff76987c7f3430fd1e273bed82",
+    ".work/20261027T172105Z_sourcefix/history_best.pt": "c8fd5bb36945d703949a918a3ccf0f80c9f20e00554fa0da737730aa10e757e6",
+    ".work/20261027T172105Z_sourcefix/strong_base_best.pt": "944d624a6b957ade5e98971d270a2df97f4e3746bbd77bccd2c27d1adf788d76"
+  }
+}

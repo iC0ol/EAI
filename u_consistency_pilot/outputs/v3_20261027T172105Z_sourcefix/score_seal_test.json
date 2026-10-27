@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-27T18:02:43.578044+00:00",
+  "split": "test",
+  "roots": 64,
+  "candidate_records": 512,
+  "frozen_predictions_sha256": "dfd73f6a643c7fb4774f005816b9233bbb9597f01325c8f5097c3c64d1316595",
+  "private_prediction_cache_sha256": "68af2541ef292c8371ec654a984d7952e7f5d2687b15a88dce26a9d0796aa30e",
+  "true_transition_file_existed": false,
+  "allowed_inputs": [
+    "frozen F/G/b/scalers",
+    "legal H",
+    "past actions",
+    "candidate A",
+    "goal observation",
+    "fixed independent noise"
+  ],
+  "future_label_file_reads": [],
+  "all_methods_shared_pool": true
+}

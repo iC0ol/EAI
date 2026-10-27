@@ -1,0 +1,11 @@
+{
+  "complete": true,
+  "stage": "assets",
+  "at": "2026-10-27T17:24:01.001232+00:00",
+  "code_hash": "8be017e86517a9da4e4a9a2d75548a8aec7ce4d8cedc26dfd1263fcb41745406",
+  "config_hash": "aa3f5f7e329aa762ddaacc5fe8753c3d44fbcb83c2a82c7472d0013ef19eb51f",
+  "outputs": {
+    "outputs/v3_20261027T172105Z_sourcefix/versions.json": "f9fe7ad16dce0929ac143c2a9f4b3af98553b0014084475c4b76764525c664af",
+    "outputs/v3_20261027T172105Z_sourcefix/resource_manifest.json": "83e6e75e650149246d99e73581b301c4dacf94805c3225fce7c028097ede82d1"
+  }
+}

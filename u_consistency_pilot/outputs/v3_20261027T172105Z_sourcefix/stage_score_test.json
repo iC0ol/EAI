@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "stage": "score_test",
+  "at": "2026-10-27T18:02:43.586246+00:00",
+  "code_hash": "8be017e86517a9da4e4a9a2d75548a8aec7ce4d8cedc26dfd1263fcb41745406",
+  "config_hash": "aa3f5f7e329aa762ddaacc5fe8753c3d44fbcb83c2a82c7472d0013ef19eb51f",
+  "outputs": {
+    "outputs/v3_20261027T172105Z_sourcefix/frozen_predictions_test.jsonl": "dfd73f6a643c7fb4774f005816b9233bbb9597f01325c8f5097c3c64d1316595",
+    "outputs/v3_20261027T172105Z_sourcefix/score_seal_test.json": "256192da008d81550eb9a2fefc12048f7c21184a9a9f709365bc79a0a1ea6d68",
+    ".work/20261027T172105Z_sourcefix/predictions_test.npz": "68af2541ef292c8371ec654a984d7952e7f5d2687b15a88dce26a9d0796aa30e"
+  }
+}

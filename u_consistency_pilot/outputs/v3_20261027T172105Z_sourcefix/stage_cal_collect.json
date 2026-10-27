@@ -1,0 +1,11 @@
+{
+  "complete": true,
+  "stage": "cal_collect",
+  "at": "2026-10-27T18:01:12.079443+00:00",
+  "code_hash": "8be017e86517a9da4e4a9a2d75548a8aec7ce4d8cedc26dfd1263fcb41745406",
+  "config_hash": "aa3f5f7e329aa762ddaacc5fe8753c3d44fbcb83c2a82c7472d0013ef19eb51f",
+  "outputs": {
+    "outputs/v3_20261027T172105Z_sourcefix/calibration_pairs.jsonl": "e93a1a03442134c9a5b76dc341550767d349d80ae429bf0b8537dfd64b292905",
+    ".work/20261027T172105Z_sourcefix/cal_arrays.npz": "959d1e3223a5d8f36014aae0c755968116b7657535508cadd229bf3d49008c14"
+  }
+}

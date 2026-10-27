@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "stage": "prepare",
+  "at": "2026-10-27T17:55:36.208677+00:00",
+  "code_hash": "8be017e86517a9da4e4a9a2d75548a8aec7ce4d8cedc26dfd1263fcb41745406",
+  "config_hash": "aa3f5f7e329aa762ddaacc5fe8753c3d44fbcb83c2a82c7472d0013ef19eb51f",
+  "outputs": {
+    "outputs/v3_20261027T172105Z_sourcefix/source_group_manifest.csv": "69823b5286eacd581c371f29fb1c53e2eece6d429bda7a10feccff80d316b2a8",
+    "outputs/v3_20261027T172105Z_sourcefix/split_manifest.csv": "5b84c28b6bfe9dccb2208bdb4d5aa0f992636e8d4c9b75040890909e2e58fa7a",
+    "outputs/v3_20261027T172105Z_sourcefix/data_preparation.json": "d9a56d45935b8e59167a46ebc9d48a3144cd86bb30d66281061b2640ec4b4be7",
+    "outputs/v3_20261027T172105Z_sourcefix/support_reference.json": "c1addd903641671d39c99ea12c5fa010518f32f3831cb7a01cef970e7047ddb2",
+    ".work/20261027T172105Z_sourcefix/dataset.npz": "5288824cca9ddddb0f303b7fac53e3335605fb3e8d26a69fef79e4d3570a4654",
+    ".work/20261027T172105Z_sourcefix/pca.npz": "2f10f1ba5d9c890b74451b890717ea65ce05aff691933b6a3a1bc7fc67f5aabf",
+    ".work/20261027T172105Z_sourcefix/latent_scaler.npz": "49c81861c7f3bab2aface1f3543dfc31e2d091ba7d23d30c1b35ebdc0bab8bbe"
+  }
+}

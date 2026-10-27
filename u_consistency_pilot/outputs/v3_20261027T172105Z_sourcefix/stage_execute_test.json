@@ -1,0 +1,11 @@
+{
+  "complete": true,
+  "stage": "execute_test",
+  "at": "2026-10-27T18:03:12.560256+00:00",
+  "code_hash": "8be017e86517a9da4e4a9a2d75548a8aec7ce4d8cedc26dfd1263fcb41745406",
+  "config_hash": "aa3f5f7e329aa762ddaacc5fe8753c3d44fbcb83c2a82c7472d0013ef19eb51f",
+  "outputs": {
+    "outputs/v3_20261027T172105Z_sourcefix/real_transitions_test.jsonl": "f9560603ceb1a1bcc21c0d303d4c010169cb311f28b367da31bb75b826674c44",
+    "outputs/v3_20261027T172105Z_sourcefix/execution_timing_test.json": "627d090b529e79965a801fca4a2cb785877639f9b240af4e2483ddcecb855c8f"
+  }
+}

@@ -1,0 +1,472 @@
+{
+  "final_status": "NO-GO-CURRENT-SCOPE",
+  "U_star": "B2",
+  "dev_selected_comparator": "B0",
+  "test_n_roots": 64,
+  "test_n_sources": 64,
+  "methods": {
+    "B0": {
+      "R": 0.502194519585582,
+      "J": 15.307040435563753,
+      "block_only": 9.117110903341388,
+      "success": 0.0
+    },
+    "B1": {
+      "R": 0.49094249875264406,
+      "J": 15.261324056190427,
+      "block_only": 9.098920855610556,
+      "success": 0.0
+    },
+    "B2": {
+      "R": 0.49094249875264406,
+      "J": 15.261324056190427,
+      "block_only": 9.098920855610556,
+      "success": 0.0
+    },
+    "B3": {
+      "R": 0.4953237938144355,
+      "J": 15.283634146854714,
+      "block_only": 9.104275296713539,
+      "success": 0.0
+    },
+    "B4": {
+      "R": 0.4931032047971121,
+      "J": 15.26837864126032,
+      "block_only": 9.104496748071249,
+      "success": 0.0
+    },
+    "B5a": {
+      "R": 0.49094249875264406,
+      "J": 15.261324056190427,
+      "block_only": 9.098920855610556,
+      "success": 0.0
+    },
+    "B5b": {
+      "R": 0.49094249875264406,
+      "J": 15.261324056190427,
+      "block_only": 9.098920855610556,
+      "success": 0.0
+    },
+    "B6": {
+      "R": 0.48663245063541655,
+      "J": 15.252931614527618,
+      "block_only": 9.106842106233533,
+      "success": 0.0
+    },
+    "O": {
+      "R": 0.49221769108445845,
+      "J": 15.294218026378498,
+      "block_only": 9.109197451869498,
+      "success": 0.0
+    }
+  },
+  "primary_comparison": {
+    "U_star": "B2",
+    "comparator": "B0",
+    "U_mean_R": 0.49094249875264406,
+    "baseline_mean_R": 0.502194519585582,
+    "U_mean_J": 15.261324056190427,
+    "baseline_mean_J": 15.307040435563753,
+    "R_improvement": {
+      "point_baseline_minus_U": 0.011252020832937935,
+      "CI95": [
+        0.0,
+        0.027098187140289803
+      ],
+      "bootstrap_replicates": 5000,
+      "bootstrap_unit": "independent root",
+      "n_roots": 64,
+      "n_sources": 64,
+      "improved_roots": 3,
+      "worsened_roots": 0,
+      "paired_differences": {
+        "test_000": 0.0,
+        "test_001": 0.0,
+        "test_002": 0.0,
+        "test_003": 0.0,
+        "test_004": 0.0,
+        "test_005": 0.0,
+        "test_006": 0.0,
+        "test_007": 0.0,
+        "test_008": 0.0,
+        "test_009": 0.0,
+        "test_010": 0.10768514197567741,
+        "test_011": 0.0,
+        "test_012": 0.0,
+        "test_013": 0.0,
+        "test_014": 0.0,
+        "test_015": 0.0,
+        "test_016": 0.308686092697222,
+        "test_017": 0.0,
+        "test_018": 0.0,
+        "test_019": 0.0,
+        "test_020": 0.0,
+        "test_021": 0.0,
+        "test_022": 0.0,
+        "test_023": 0.0,
+        "test_024": 0.0,
+        "test_025": 0.0,
+        "test_026": 0.0,
+        "test_027": 0.0,
+        "test_028": 0.0,
+        "test_029": 0.0,
+        "test_030": 0.0,
+        "test_031": 0.0,
+        "test_032": 0.0,
+        "test_033": 0.0,
+        "test_034": 0.0,
+        "test_035": 0.0,
+        "test_036": 0.0,
+        "test_037": 0.0,
+        "test_038": 0.0,
+        "test_039": 0.0,
+        "test_040": 0.0,
+        "test_041": 0.0,
+        "test_042": 0.0,
+        "test_043": 0.0,
+        "test_044": 0.0,
+        "test_045": 0.0,
+        "test_046": 0.0,
+        "test_047": 0.0,
+        "test_048": 0.0,
+        "test_049": 0.0,
+        "test_050": 0.0,
+        "test_051": 0.30375809863512837,
+        "test_052": 0.0,
+        "test_053": 0.0,
+        "test_054": 0.0,
+        "test_055": 0.0,
+        "test_056": 0.0,
+        "test_057": 0.0,
+        "test_058": 0.0,
+        "test_059": 0.0,
+        "test_060": 0.0,
+        "test_061": 0.0,
+        "test_062": 0.0,
+        "test_063": 0.0
+      }
+    },
+    "raw_J_improvement": {
+      "point_baseline_minus_U": 0.045716379373326343,
+      "CI95": [
+        0.0,
+        0.12130536085772708
+      ],
+      "bootstrap_replicates": 5000,
+      "bootstrap_unit": "independent root",
+      "n_roots": 64,
+      "n_sources": 64,
+      "improved_roots": 3,
+      "worsened_roots": 0,
+      "paired_differences": {
+        "test_000": 0.0,
+        "test_001": 0.0,
+        "test_002": 0.0,
+        "test_003": 0.0,
+        "test_004": 0.0,
+        "test_005": 0.0,
+        "test_006": 0.0,
+        "test_007": 0.0,
+        "test_008": 0.0,
+        "test_009": 0.0,
+        "test_010": 0.09910006831608698,
+        "test_011": 0.0,
+        "test_012": 0.0,
+        "test_013": 0.0,
+        "test_014": 0.0,
+        "test_015": 0.0,
+        "test_016": 0.8158016081519506,
+        "test_017": 0.0,
+        "test_018": 0.0,
+        "test_019": 0.0,
+        "test_020": 0.0,
+        "test_021": 0.0,
+        "test_022": 0.0,
+        "test_023": 0.0,
+        "test_024": 0.0,
+        "test_025": 0.0,
+        "test_026": 0.0,
+        "test_027": 0.0,
+        "test_028": 0.0,
+        "test_029": 0.0,
+        "test_030": 0.0,
+        "test_031": 0.0,
+        "test_032": 0.0,
+        "test_033": 0.0,
+        "test_034": 0.0,
+        "test_035": 0.0,
+        "test_036": 0.0,
+        "test_037": 0.0,
+        "test_038": 0.0,
+        "test_039": 0.0,
+        "test_040": 0.0,
+        "test_041": 0.0,
+        "test_042": 0.0,
+        "test_043": 0.0,
+        "test_044": 0.0,
+        "test_045": 0.0,
+        "test_046": 0.0,
+        "test_047": 0.0,
+        "test_048": 0.0,
+        "test_049": 0.0,
+        "test_050": 0.0,
+        "test_051": 2.0109466034248484,
+        "test_052": 0.0,
+        "test_053": 0.0,
+        "test_054": 0.0,
+        "test_055": 0.0,
+        "test_056": 0.0,
+        "test_057": 0.0,
+        "test_058": 0.0,
+        "test_059": 0.0,
+        "test_060": 0.0,
+        "test_061": 0.0,
+        "test_062": 0.0,
+        "test_063": 0.0
+      }
+    },
+    "block_only_improvement": {
+      "point_baseline_minus_U": 0.018190047730830827,
+      "CI95": [
+        0.0,
+        0.0490096149389633
+      ],
+      "bootstrap_replicates": 5000,
+      "bootstrap_unit": "independent root",
+      "n_roots": 64,
+      "n_sources": 64,
+      "improved_roots": 2,
+      "worsened_roots": 0,
+      "paired_differences": {
+        "test_000": 0.0,
+        "test_001": 0.0,
+        "test_002": 0.0,
+        "test_003": 0.0,
+        "test_004": 0.0,
+        "test_005": 0.0,
+        "test_006": 0.0,
+        "test_007": 0.0,
+        "test_008": 0.0,
+        "test_009": 0.0,
+        "test_010": 0.35587380822586745,
+        "test_011": 0.0,
+        "test_012": 0.0,
+        "test_013": 0.0,
+        "test_014": 0.0,
+        "test_015": 0.0,
+        "test_016": 0.8082892465473055,
+        "test_017": 0.0,
+        "test_018": 0.0,
+        "test_019": 0.0,
+        "test_020": 0.0,
+        "test_021": 0.0,
+        "test_022": 0.0,
+        "test_023": 0.0,
+        "test_024": 0.0,
+        "test_025": 0.0,
+        "test_026": 0.0,
+        "test_027": 0.0,
+        "test_028": 0.0,
+        "test_029": 0.0,
+        "test_030": 0.0,
+        "test_031": 0.0,
+        "test_032": 0.0,
+        "test_033": 0.0,
+        "test_034": 0.0,
+        "test_035": 0.0,
+        "test_036": 0.0,
+        "test_037": 0.0,
+        "test_038": 0.0,
+        "test_039": 0.0,
+        "test_040": 0.0,
+        "test_041": 0.0,
+        "test_042": 0.0,
+        "test_043": 0.0,
+        "test_044": 0.0,
+        "test_045": 0.0,
+        "test_046": 0.0,
+        "test_047": 0.0,
+        "test_048": 0.0,
+        "test_049": 0.0,
+        "test_050": 0.0,
+        "test_051": 0.0,
+        "test_052": 0.0,
+        "test_053": 0.0,
+        "test_054": 0.0,
+        "test_055": 0.0,
+        "test_056": 0.0,
+        "test_057": 0.0,
+        "test_058": 0.0,
+        "test_059": 0.0,
+        "test_060": 0.0,
+        "test_061": 0.0,
+        "test_062": 0.0,
+        "test_063": 0.0
+      }
+    }
+  },
+  "ridge_vs_shuffle": null,
+  "statistical_primary_gate_pass": false,
+  "mechanism_interpretation": "0 independent test roots have auditable harmful B1 flips. Paired intervention on frozen shared candidate pools is compared to dev-selected B0, with history/extra-label matched B4 and B6 controls. Real-domain residuals, F error, and d_G are recorded per candidate; no causal/off-manifold decomposition is identified. Benefit supported/unclipped selection counts: {'improved_roots': 3, 'U_supported_and_unclipped_improved_roots': 3, 'both_selected_supported_unclipped_improved_roots': 1}. Block-only improvement point: 0.018190047730830827.",
+  "harmful_flip_roots": 0,
+  "informative_roots": 64,
+  "selected_support_diagnostic": {
+    "improved_roots": 3,
+    "U_supported_and_unclipped_improved_roots": 3,
+    "both_selected_supported_unclipped_improved_roots": 1
+  },
+  "cal_val_residual_diagnostic": {
+    "B2_cal_val_residual_MSE": 0.029601494775984977,
+    "uncalibrated_cal_val_residual_MSE": 0.029037237463455413,
+    "ridge_selection": {
+      "ridge": {
+        "alpha": 10.0,
+        "cal_val_residual_MSE": 2.967918815470923,
+        "grid": [
+          {
+            "alpha": 0.01,
+            "cal_val_residual_MSE": 9.060969489986958
+          },
+          {
+            "alpha": 0.1,
+            "cal_val_residual_MSE": 8.804739655370955
+          },
+          {
+            "alpha": 1.0,
+            "cal_val_residual_MSE": 6.7953739761501994
+          },
+          {
+            "alpha": 10.0,
+            "cal_val_residual_MSE": 2.967918815470923
+          },
+          {
+            "alpha": 100.0,
+            "cal_val_residual_MSE": 4.819782354889053
+          }
+        ]
+      },
+      "shuffle": {
+        "alpha": 100.0,
+        "cal_val_residual_MSE": 8.97384778552166,
+        "grid": [
+          {
+            "alpha": 0.01,
+            "cal_val_residual_MSE": 45.841613254173005
+          },
+          {
+            "alpha": 0.1,
+            "cal_val_residual_MSE": 46.9699379437535
+          },
+          {
+            "alpha": 1.0,
+            "cal_val_residual_MSE": 43.66906554046364
+          },
+          {
+            "alpha": 10.0,
+            "cal_val_residual_MSE": 27.393494837973765
+          },
+          {
+            "alpha": 100.0,
+            "cal_val_residual_MSE": 8.97384778552166
+          }
+        ]
+      }
+    },
+    "features": 78,
+    "PCA_sha256": "2f10f1ba5d9c890b74451b890717ea65ce05aff691933b6a3a1bc7fc67f5aabf",
+    "feature_scaler_fit_rows": 192,
+    "fit_roots": 24,
+    "val_roots": 8,
+    "feature_source_whitelist": [
+      "3 historical official latents PCA16 each",
+      "2 previous executed normalized blocks10 each",
+      "current candidate10"
+    ],
+    "no_actual_endpoint_F_error_J_O_inputs": true,
+    "checkpoint_sha256": "e3265e97d7a422a59be5abd15e66d605def36f1ab7ca1e8b4cbd8b91bd88ccbe"
+  },
+  "scientific_claim": "Current predefined short-horizon shared-pool diagnostic only; no novelty, closed-loop, or cross-task claim",
+  "single_training_seed": 270727,
+  "lambda": 0.07,
+  "test_effect_not_used_for_sampling_or_stopping": true,
+  "O": "Posthoc only, not deployable or strict upper bound",
+  "limitations": [
+    "One initial flow training seed",
+    "Endpoint inverse mapping can be nonunique",
+    "PCA16 may discard conditional bias information",
+    "F pretrained on original public distribution",
+    "Nearest-action support is a proxy",
+    "Official reset goals may be difficult in five control steps; uninformative pools retained"
+  ],
+  "no_additional_experiments_after_this": true,
+  "run_id": "20261027T172105Z_sourcefix",
+  "reason": "COMPLETE",
+  "completed_stages": [
+    "assets",
+    "decompress",
+    "semantics",
+    "prepare",
+    "train",
+    "cal_collect",
+    "cal_fit",
+    "score_dev",
+    "execute_dev",
+    "analyze_dev",
+    "seal_test",
+    "score_test",
+    "execute_test",
+    "analyze_test"
+  ],
+  "counts": {
+    "cal": {
+      "valid_candidate_records": 256,
+      "duplicate_valid_records": 0,
+      "independent_roots_with_any_valid_candidate": 32,
+      "independent_roots": 32,
+      "independent_sources": 32,
+      "target_roots": 32
+    },
+    "dev": {
+      "valid_candidate_records": 128,
+      "duplicate_valid_records": 0,
+      "independent_roots_with_any_valid_candidate": 16,
+      "independent_roots": 16,
+      "independent_sources": 16,
+      "target_roots": 16
+    },
+    "test": {
+      "valid_candidate_records": 512,
+      "duplicate_valid_records": 0,
+      "independent_roots_with_any_valid_candidate": 64,
+      "independent_roots": 64,
+      "independent_sources": 64,
+      "target_roots": 64
+    }
+  },
+  "ended_at_utc": "2026-10-27T18:03:42.632652+00:00",
+  "ended_at_Asia_Shanghai": "2026-10-28T02:03:42.632652+08:00",
+  "test_complete": true,
+  "evaluation_status": "COMPLETE",
+  "scientific_claim_scope": "One frozen LeWM, one G training seed, short-horizon shared-pool choice only",
+  "next_action": "STOP_AND_AWAIT_RESEARCHER_REVIEW",
+  "unrun_metrics_policy": "null / NOT_RUN, never synthetic zeros",
+  "optional_work_status": {
+    "dev_lambda_sensitivity": "NOT_RUN",
+    "plots_videos": "NOT_RUN",
+    "extra_capacity_sweeps": "NOT_RUN",
+    "multiple_G_training_seeds": "NOT_RUN",
+    "closed_loop": "NOT_RUN",
+    "U1": "NOT_RUN",
+    "Cube": "NOT_RUN"
+  },
+  "source_family_and_representation_limits": {
+    "source_unit": "Conservative exact initial-state family, all101 trajectories together; underlying collection IDs beyond metadata are unavailable",
+    "source_counts": {
+      "train": 148,
+      "val": 18,
+      "audit": 19
+    },
+    "PCA16_retained_variance_fraction": 0.25040159095078707,
+    "interpretation": "Linear/constant calibration with a fixed low-dimensional history representation; failure does not exclude all conditional bias models. Initial-state families are conservative ancestry proxies."
+  }
+}

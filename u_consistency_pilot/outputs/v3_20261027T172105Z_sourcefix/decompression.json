@@ -1,0 +1,8 @@
+{
+  "format": "single zstd frame -> HDF5, not tar",
+  "zstd_window_bytes": 8388608,
+  "frame_content_size": 46300921856,
+  "hdf5_bytes": 46300921856,
+  "hdf5_sha256": "b6ebd9ac94bbe9e383f6e7a9cd92d74e9aa665ea57b758ed3717b0ee7df8d4fb",
+  "elapsed_seconds": 319.9848222620785
+}

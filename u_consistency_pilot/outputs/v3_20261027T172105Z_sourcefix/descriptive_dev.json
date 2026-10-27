@@ -1,0 +1,85 @@
+{
+  "methods": {
+    "B0": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "B1": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "B2": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "B3": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "B4": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "B5a": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "B5b": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "B6": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "O": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    }
+  },
+  "independent_roots": 16,
+  "independent_sources": 16,
+  "candidate_branches": 128,
+  "informative_roots": 16,
+  "harmful_flip_roots": 0,
+  "low_variance_disable_counts": {
+    "B1": 0,
+    "B2": 0,
+    "B3": 0,
+    "B4": 0,
+    "B5a": 0,
+    "B5b": 0,
+    "B6": 0
+  },
+  "candidate_strata": {
+    "official_CEM_initial": {
+      "n": 64,
+      "mean_coordinate_clip_fraction": 0.0,
+      "outside_support_fraction": 0.625
+    },
+    "training_real_block": {
+      "n": 64,
+      "mean_coordinate_clip_fraction": 0.0,
+      "outside_support_fraction": 0.0
+    }
+  },
+  "O_role": "posthoc description only; not strict upper bound or deployable comparator"
+}

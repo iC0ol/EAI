@@ -1,0 +1,70 @@
+{
+  "B2_cal_val_residual_MSE": 0.029601494775984977,
+  "uncalibrated_cal_val_residual_MSE": 0.029037237463455413,
+  "ridge_selection": {
+    "ridge": {
+      "alpha": 10.0,
+      "cal_val_residual_MSE": 2.967918815470923,
+      "grid": [
+        {
+          "alpha": 0.01,
+          "cal_val_residual_MSE": 9.060969489986958
+        },
+        {
+          "alpha": 0.1,
+          "cal_val_residual_MSE": 8.804739655370955
+        },
+        {
+          "alpha": 1.0,
+          "cal_val_residual_MSE": 6.7953739761501994
+        },
+        {
+          "alpha": 10.0,
+          "cal_val_residual_MSE": 2.967918815470923
+        },
+        {
+          "alpha": 100.0,
+          "cal_val_residual_MSE": 4.819782354889053
+        }
+      ]
+    },
+    "shuffle": {
+      "alpha": 100.0,
+      "cal_val_residual_MSE": 8.97384778552166,
+      "grid": [
+        {
+          "alpha": 0.01,
+          "cal_val_residual_MSE": 45.841613254173005
+        },
+        {
+          "alpha": 0.1,
+          "cal_val_residual_MSE": 46.9699379437535
+        },
+        {
+          "alpha": 1.0,
+          "cal_val_residual_MSE": 43.66906554046364
+        },
+        {
+          "alpha": 10.0,
+          "cal_val_residual_MSE": 27.393494837973765
+        },
+        {
+          "alpha": 100.0,
+          "cal_val_residual_MSE": 8.97384778552166
+        }
+      ]
+    }
+  },
+  "features": 78,
+  "PCA_sha256": "2f10f1ba5d9c890b74451b890717ea65ce05aff691933b6a3a1bc7fc67f5aabf",
+  "feature_scaler_fit_rows": 192,
+  "fit_roots": 24,
+  "val_roots": 8,
+  "feature_source_whitelist": [
+    "3 historical official latents PCA16 each",
+    "2 previous executed normalized blocks10 each",
+    "current candidate10"
+  ],
+  "no_actual_endpoint_F_error_J_O_inputs": true,
+  "checkpoint_sha256": "e3265e97d7a422a59be5abd15e66d605def36f1ab7ca1e8b4cbd8b91bd88ccbe"
+}

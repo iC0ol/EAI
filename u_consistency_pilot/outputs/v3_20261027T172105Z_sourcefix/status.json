@@ -1,0 +1,46 @@
+{
+  "run_id": "20261027T172105Z_sourcefix",
+  "supervisor_pid": 1562024,
+  "started_at_utc": "2026-10-27T11:54:50+00:00",
+  "hard_deadline_utc": "2026-10-27T23:54:50+00:00",
+  "report_cutoff_utc": "2026-10-27T23:09:50+00:00",
+  "status": "FINALIZED",
+  "stage": "analyze_test",
+  "completed_stages": [
+    "assets",
+    "decompress",
+    "semantics",
+    "prepare",
+    "train",
+    "cal_collect",
+    "cal_fit",
+    "score_dev",
+    "execute_dev",
+    "analyze_dev",
+    "seal_test",
+    "score_test",
+    "execute_test",
+    "analyze_test"
+  ],
+  "heartbeat_at_utc": "2026-10-27T18:03:41.539037+00:00",
+  "remaining_to_report_cutoff_seconds": 18368.46095609665,
+  "resources": {
+    "task_rss_sum_bytes": 1308676096,
+    "task_vram_bytes": 450887680,
+    "foreign_vram_bytes": 310378496,
+    "disk_free_bytes": 198627840000,
+    "gpu_process_card_seconds_upper_bound": 3024.6752324481495
+  },
+  "code_hash": "8be017e86517a9da4e4a9a2d75548a8aec7ce4d8cedc26dfd1263fcb41745406",
+  "config_hash": "aa3f5f7e329aa762ddaacc5fe8753c3d44fbcb83c2a82c7472d0013ef19eb51f",
+  "recent_progress": {
+    "at": "2026-10-27T18:03:40.190368+00:00",
+    "stage": "analyze_test",
+    "elapsed_seconds": 25.586223691236228,
+    "process_exiting": true
+  },
+  "final_status": "NO-GO-CURRENT-SCOPE",
+  "ended_at_utc": "2026-10-27T18:03:42.632652+00:00",
+  "failure": null,
+  "publication": "attempted by finalizer; see delivery receipt"
+}

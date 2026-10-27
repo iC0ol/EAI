@@ -1,0 +1,42 @@
+{
+  "at": "2026-10-27T14:21:23.566613+00:00",
+  "scope": "Implementation/source audit; no claim of official numerical reproduction",
+  "immutable_protocol_note": "read_this_run=false fields in frozen protocol preserve design-time state; runtime reading evidence is here",
+  "papers": {
+    "ACID": {
+      "url": "https://arxiv.org/pdf/2607.02403",
+      "sha256": "4f9c681c6f2c842fef582cd0d6471714ec6e5ff933f4bec4c8fce4d9c79b5e25",
+      "read_sections": [
+        "3",
+        "4.6",
+        "A.5",
+        "B",
+        "J"
+      ],
+      "applied": "4-layer192-width3-head prefix/suffix flow, Beta(1.5,1), single Euler; de-normalize inverse predictions for action residuals; adaptive population-std weighting",
+      "limitations": "Original verifier200k updates versus this registered max20k; original training-split action standardization versus reuse of fixed original F scaler here; no verified official IDM checkpoint. Candidate-related learned-IDM floor assumptions are not guarantees. Gaussian-noise robustness is not itself a candidate-dependent-bias test."
+    },
+    "ATM": {
+      "url": "https://arxiv.org/pdf/2606.09028v2",
+      "sha256": "6f68deb9ac0920b0e143f44c3e820ba4feb6dca9267eabc13819bf835b63164b",
+      "read_sections": [
+        "abstract/introduction",
+        "2",
+        "3.1-3.3"
+      ],
+      "applied": "Endpoint action ambiguity can be irreducible; real/predicted transition inverse errors and successor-information controls are diagnostic",
+      "not_executed": "No full2x2 ATM or predicted-domain G training; this task has no such additional model."
+    },
+    "WAV": {
+      "url": "https://arxiv.org/pdf/2604.01985v2",
+      "sha256": "32c90fb254a0a6078305b9036966a78f2e0ba3cfea8ee57f736cea73214d49a7",
+      "read_pages": [
+        3,
+        4,
+        5
+      ],
+      "applied": "Action reachability and forward correctness differ; inverse verification alone does not identify forward-error causes. Off-manifold language is not a measured causal decomposition.",
+      "not_executed": "No sparse-mask WAV verifier, learned subgoal prior, exploration or F updates."
+    }
+  }
+}

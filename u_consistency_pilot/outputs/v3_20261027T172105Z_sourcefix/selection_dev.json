@@ -1,0 +1,85 @@
+{
+  "at": "2026-10-27T18:02:07.551974+00:00",
+  "U_star": "B2",
+  "noncalibrated_comparator": "B0",
+  "rule": "B2 if absolute dev mean R difference B2/B3<=0.01 else lower; lowest dev mean R among B0/B1/B4/B5a/B5b, stable listed tie order",
+  "lambda": 0.07,
+  "methods": {
+    "B0": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "B1": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "B2": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "B3": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "B4": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "B5a": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "B5b": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "B6": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    },
+    "O": {
+      "R": 0.41769151131374904,
+      "J": 17.207360294568744,
+      "block_only": 8.799249393163084,
+      "success": 0.0
+    }
+  },
+  "checkpoints_scalers_root_hashes": {
+    ".work/20261027T172105Z_sourcefix/flow_best.pt": "11642e9b49c8028c7d7cf569fe062ca6c8fb81975055fb2ac49159362b419315",
+    ".work/20261027T172105Z_sourcefix/strong_best.pt": "b50f81b426ce67e939f5b6b1940226ab574531f01317e8d6d18cb221736f0e68",
+    ".work/20261027T172105Z_sourcefix/calibrators.npz": "e3265e97d7a422a59be5abd15e66d605def36f1ab7ca1e8b4cbd8b91bd88ccbe",
+    ".work/20261027T172105Z_sourcefix/pca.npz": "2f10f1ba5d9c890b74451b890717ea65ce05aff691933b6a3a1bc7fc67f5aabf",
+    ".work/20261027T172105Z_sourcefix/latent_scaler.npz": "49c81861c7f3bab2aface1f3543dfc31e2d091ba7d23d30c1b35ebdc0bab8bbe",
+    "outputs/v3_20261027T172105Z_sourcefix/action_scaler.json": "d27ac19b4b1228bbeedfd2ef35ace035416dc4e6834792d305bc4af38388513a",
+    "outputs/v3_20261027T172105Z_sourcefix/semantics.json": "77a911800483c7c2d4f9aa0e4cd8376c51dee97afb1206ee9606fddfeecb89c0",
+    "outputs/v3_20261027T172105Z_sourcefix/roots_frozen.json": "e40e511e73a5c913490643430a3e343608b8ca6c0ccc88153a62708e9a0760bd"
+  },
+  "no_test_outcomes_read": true,
+  "dev_mean_R_improvement": 0.0,
+  "dev_improved_roots": 0,
+  "informative_dev_roots": 16,
+  "harmful_flip_roots": 0,
+  "v2_reference_only": {
+    "at_least_12_informative": true,
+    "at_least_4_flips": false,
+    "improvement_at_least_.05": false,
+    "at_least_4_improved": false
+  },
+  "test_gate_requires_positive_dev": false
+}

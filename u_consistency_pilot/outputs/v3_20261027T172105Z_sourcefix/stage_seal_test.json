@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "stage": "seal_test",
+  "at": "2026-10-27T18:02:10.437909+00:00",
+  "code_hash": "8be017e86517a9da4e4a9a2d75548a8aec7ce4d8cedc26dfd1263fcb41745406",
+  "config_hash": "aa3f5f7e329aa762ddaacc5fe8753c3d44fbcb83c2a82c7472d0013ef19eb51f",
+  "outputs": {
+    "outputs/v3_20261027T172105Z_sourcefix/test_seal.json": "f6596291ae6f62d889f4975497cf13e1520e457de2d0a206a485668ec508c132"
+  }
+}

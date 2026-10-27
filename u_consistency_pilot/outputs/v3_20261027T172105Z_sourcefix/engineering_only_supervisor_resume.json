@@ -1,0 +1,10 @@
+{
+  "scope": "TEST_ONLY",
+  "status": "PASS",
+  "first_worker_exit": -9,
+  "saved_progress_before_kill": 2,
+  "resume_exit": 0,
+  "reached_final_checkpoint": 6,
+  "tampered_output_rejected": true,
+  "worker_output_separate_from_science": true
+}

@@ -1,0 +1,85 @@
+{
+  "methods": {
+    "B0": {
+      "R": 0.502194519585582,
+      "J": 15.307040435563753,
+      "block_only": 9.117110903341388,
+      "success": 0.0
+    },
+    "B1": {
+      "R": 0.49094249875264406,
+      "J": 15.261324056190427,
+      "block_only": 9.098920855610556,
+      "success": 0.0
+    },
+    "B2": {
+      "R": 0.49094249875264406,
+      "J": 15.261324056190427,
+      "block_only": 9.098920855610556,
+      "success": 0.0
+    },
+    "B3": {
+      "R": 0.4953237938144355,
+      "J": 15.283634146854714,
+      "block_only": 9.104275296713539,
+      "success": 0.0
+    },
+    "B4": {
+      "R": 0.4931032047971121,
+      "J": 15.26837864126032,
+      "block_only": 9.104496748071249,
+      "success": 0.0
+    },
+    "B5a": {
+      "R": 0.49094249875264406,
+      "J": 15.261324056190427,
+      "block_only": 9.098920855610556,
+      "success": 0.0
+    },
+    "B5b": {
+      "R": 0.49094249875264406,
+      "J": 15.261324056190427,
+      "block_only": 9.098920855610556,
+      "success": 0.0
+    },
+    "B6": {
+      "R": 0.48663245063541655,
+      "J": 15.252931614527618,
+      "block_only": 9.106842106233533,
+      "success": 0.0
+    },
+    "O": {
+      "R": 0.49221769108445845,
+      "J": 15.294218026378498,
+      "block_only": 9.109197451869498,
+      "success": 0.0
+    }
+  },
+  "independent_roots": 64,
+  "independent_sources": 64,
+  "candidate_branches": 512,
+  "informative_roots": 64,
+  "harmful_flip_roots": 0,
+  "low_variance_disable_counts": {
+    "B1": 0,
+    "B2": 0,
+    "B3": 0,
+    "B4": 0,
+    "B5a": 0,
+    "B5b": 0,
+    "B6": 0
+  },
+  "candidate_strata": {
+    "official_CEM_initial": {
+      "n": 256,
+      "mean_coordinate_clip_fraction": 0.0,
+      "outside_support_fraction": 0.61328125
+    },
+    "training_real_block": {
+      "n": 256,
+      "mean_coordinate_clip_fraction": 0.0,
+      "outside_support_fraction": 0.0
+    }
+  },
+  "O_role": "posthoc description only; not strict upper bound or deployable comparator"
+}
