@@ -761,7 +761,9 @@
         "engineering_smoke_candidate_control_steps": 160,
         "physics_integration_steps": 16072,
         "environment_resets": 36,
-        "reset_integration_steps": 72
+        "reset_integration_steps": 72,
+        "prefix_integration_steps": 14400,
+        "engineering_smoke_candidate_integration_steps": 1600
       },
       "ENGINEERING_ONLY_SMOKE:pid_1239623": {
         "physics_integration_steps": 4018,
@@ -872,26 +874,26 @@
       "analyze_test:pid_1603782": {}
     },
     "total": {
-      "candidate_engineering_trusted_integration_steps": 450,
-      "engineering_smoke_candidate_control_steps": 200,
       "prefix_control_steps": 49200,
-      "candidate_cal_control_steps": 1280,
-      "candidate_dev_control_steps": 640,
-      "candidate_test_control_steps": 2560,
-      "candidate_test_integration_steps": 25600,
-      "engineering_smoke_candidate_integration_steps": 400,
-      "prefix_integration_steps": 477600,
-      "reset_integration_steps": 2466,
       "engineering_next_probe_integration_steps": 1200,
       "engineering_candidate_integration_steps": 1200,
-      "engineering_candidate_control_steps": 120,
       "environment_resets": 1233,
-      "candidate_cal_integration_steps": 12800,
-      "candidate_dev_integration_steps": 6400,
-      "candidate_engineering_trusted_control_steps": 45,
+      "control_steps": 54165,
+      "candidate_engineering_trusted_integration_steps": 450,
+      "candidate_test_control_steps": 2560,
+      "engineering_candidate_control_steps": 120,
+      "prefix_integration_steps": 492000,
       "physics_integration_steps": 544116,
+      "candidate_dev_control_steps": 640,
       "engineering_next_probe_control_steps": 120,
-      "control_steps": 54165
+      "candidate_engineering_trusted_control_steps": 45,
+      "candidate_cal_control_steps": 1280,
+      "candidate_dev_integration_steps": 6400,
+      "candidate_test_integration_steps": 25600,
+      "reset_integration_steps": 2466,
+      "engineering_smoke_candidate_integration_steps": 2000,
+      "candidate_cal_integration_steps": 12800,
+      "engineering_smoke_candidate_control_steps": 200
     },
     "legacy_note": "Four successful prior engineering-only smoke invocations before counter flush was added; reconstructed from observed successful commands. Each had9 resets and400 control steps. These are one repeated engineering source,32 related candidate branches, outside the formal6-root replay and research splits.",
     "recorded_at_utc": "2026-10-27T13:12:06.932013+00:00"
@@ -923,5 +925,27 @@
     "U1_automatic": false,
     "Cube_automatic": false,
     "stop_after_final_result": true
-  }
+  },
+  "counter_reconciliation": {
+    "at": "2026-10-27T18:10:14.964582+00:00",
+    "scientific_candidate_control_steps": {
+      "cal": 1280,
+      "dev": 640,
+      "test": 2560
+    },
+    "all_actual_control_steps_including_prefix_engineering_retries": 54165,
+    "all_physics_integration_steps": 544116,
+    "environment_resets": 1233,
+    "prefix_control_steps": 49200,
+    "exact_source_arithmetic": "10 physical integrations per control plus2 per fresh reset;544116=10*54165+2*1233",
+    "legacy_note": "Four pre-instrumentation engineering smoke runs were reconstructed from executed procedure and captured success logs. This review fills their missing role decomposition(14400 prefix+1600 candidate integrations); their previously recorded1600 total controls/16072 physics totals are unchanged. One failed engineering helper85controls/854integrations likewise explicitly reconstructed. Scientific cal/dev/test branches are directly instrumented."
+  },
+  "pipeline_completed_at_utc": "2026-10-27T18:03:42.632652+00:00",
+  "post_run_review_scope": "Read-only score/hash/metric/bootstrap/calibrator audit, no further rollouts or model fitting",
+  "review_completed_at_utc": "2026-10-27T18:11:46.381981+00:00",
+  "wall_seconds_including_post_run_review": 22616.381981,
+  "wall_accounting_end_event": "Final read-only review/report sealing; ordinary commit/push follows. GPU/rollout work stopped at pipeline completion.",
+  "post_run_audit_peak_RSS_kib": 524600,
+  "no_additional_GPU_or_physical_rollouts_during_review": true,
+  "automation_status": "u-v3-5 deleted after full pipeline and verified normal publication"
 }

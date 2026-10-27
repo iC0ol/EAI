@@ -1,0 +1,83 @@
+{
+  "at": "2026-10-27T18:07:39.402995+00:00",
+  "status": "PASS",
+  "scope": "Post-run read-only validation; no new physical rollout, model update, selection or test re-use",
+  "completed_stage_markers_and_hashes": 14,
+  "all_test_seal_inputs_verified": true,
+  "checks": {
+    "dev": {
+      "roots": 16,
+      "candidate_records": 128,
+      "frozen_before_all_execution": true,
+      "root_score_hashes_verified": 16,
+      "metric_and_selection_rows_verified": 128,
+      "images_verified": 128,
+      "harmful_B1_flip_roots": 0,
+      "B2_same_index_as_B1_roots": 16,
+      "nonzero_B2_vs_B0_regret_roots": 0
+    },
+    "test": {
+      "roots": 64,
+      "candidate_records": 512,
+      "frozen_before_all_execution": true,
+      "root_score_hashes_verified": 64,
+      "metric_and_selection_rows_verified": 512,
+      "images_verified": 512,
+      "harmful_B1_flip_roots": 0,
+      "B2_same_index_as_B1_roots": 64,
+      "nonzero_B2_vs_B0_regret_roots": 3
+    }
+  },
+  "bootstrap5000_recomputed_from_raw_root_results": true,
+  "test_effect_sign_or_size_used_to_change_any_setting": false,
+  "ridge_stored_prediction_MSE_recomputed": 2.967918815470923,
+  "ridge_feature_standardization_review": {
+    "max_abs_cal_val_standardized_feature": 439.25943899975175,
+    "largest_feature_columns": [
+      {
+        "index": 66,
+        "fit_scale": 2.3844140046424142e-08,
+        "max_abs_cal_val_standardized": 439.25943899975175
+      },
+      {
+        "index": 64,
+        "fit_scale": 5.087578522612021e-08,
+        "max_abs_cal_val_standardized": 439.2580219235649
+      },
+      {
+        "index": 62,
+        "fit_scale": 1.0855268564560742e-07,
+        "max_abs_cal_val_standardized": 439.2551229405937
+      },
+      {
+        "index": 60,
+        "fit_scale": 2.3161676459376355e-07,
+        "max_abs_cal_val_standardized": 439.2491929440643
+      },
+      {
+        "index": 58,
+        "fit_scale": 4.941961404654001e-07,
+        "max_abs_cal_val_standardized": 439.2370623623992
+      },
+      {
+        "index": 56,
+        "fit_scale": 1.054456302767851e-06,
+        "max_abs_cal_val_standardized": 439.21224630927367
+      },
+      {
+        "index": 54,
+        "fit_scale": 2.249870788473192e-06,
+        "max_abs_cal_val_standardized": 439.16147994577886
+      },
+      {
+        "index": 52,
+        "fit_scale": 4.800495423678071e-06,
+        "max_abs_cal_val_standardized": 439.05762704256546
+      }
+    ],
+    "note": "Historical latent PCA=columns0:48, past actions48:68, current candidate68:78. Analysis only; no feature scale floor or parameter modification after test."
+  },
+  "source_isolation_validation_sha256": "6865d632279ca18f21450438bc2787be66256a9baffc0a9d54caaa0c8b362309",
+  "postrun_process_peak_RSS_kib": 524600,
+  "no_algorithm_mechanism_gain_attributed_to_B2": "B2 and B1 choose identical indices for all16dev and64test roots; B2-vs-B0 gain is shared with the uncalibrated inverse term."
+}

@@ -34,3 +34,7 @@ python3 -u -B u_consistency_pilot/scripts/run_overnight_v3.py --run-id 20261027T
 评分阶段拒绝已有真实结果文件，G 的采样 API 无候选 A 参数，b 的 78 维接口只有合法历史/过去动作/当前候选。真实结果/O/d_F/d_G 只在物理执行后独立合并。所有缺失项用 NOT_RUN/null。原始 data/model/runtime/外部源码/checkpoint/大缓存不提交。
 
 最终停止等待研究者审查，不自动 U1、Cube、闭环或额外任务。
+
+最终状态：`NO-GO-CURRENT-SCOPE`。已完成32cal/16dev/64test；报告为 `reports/v3_20261027T172105Z_sourcefix/morning_report.md`。B2与B1在64test上选择完全相同。
+
+实际执行过的交付审查是 `.work/20261027T172105Z_sourcefix/delivery_audit.py`；同一只读代码现归档为 `scripts/audit_delivery_v3.py`，可用当前独立环境在EAI根目录运行（需要本机保留的private输出，不会训练或仿真）。它复核所有14阶段完成标记、test封存输入、80root评分哈希/时间、640图像哈希、真实J/选择、残差恒等式和5000次root bootstrap；见delivery_validation.json。

@@ -468,5 +468,21 @@
     },
     "PCA16_retained_variance_fraction": 0.25040159095078707,
     "interpretation": "Linear/constant calibration with a fixed low-dimensional history representation; failure does not exclude all conditional bias models. Initial-state families are conservative ancestry proxies."
+  },
+  "delivery_review": {
+    "at": "2026-10-27T18:10:14.966081+00:00",
+    "status": "PASS",
+    "validation_file": "delivery_validation.json",
+    "B2_same_choice_as_B1_all_dev_and_test": true,
+    "added_choice_value_of_constant_calibration_observed": false,
+    "harmful_B1_flips_dev": 0,
+    "harmful_B1_flips_test": 0,
+    "ridge_cal_val_MSE": 2.967918815470923,
+    "unmodified_residual_cal_val_MSE": 0.029037237463455413,
+    "ridge_extrapolation_max_standardized_cal_val_feature": 439.25943899975175,
+    "ridge_interpretation": "Stored sklearn ridge predictions verified. Tiny cal-fit past-action feature scales lead to large cal-val extrapolation; protocol applied as frozen, no scale floor or re-fit after test. This limits conclusions about general ridge/conditional bias.",
+    "primary_result_interpretation": "Mean R difference vs dev-selected goal-only B0 is small and shared exactly with uncalibrated B1; not a calibration mechanism gain. Upper95%CI<.05 excludes current prespecified practical improvement only.",
+    "all_selected_test_methods_success_count": 0,
+    "success_scope": "Five control steps from official reset-goal contexts; no closed-loop success improvement established."
   }
 }
