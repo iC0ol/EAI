@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "final_status": "TECHNICAL-BLOCK",
+  "stop_stage": "0A",
+  "resource_audit": "COMPLETED_WITH_EXPLICIT_COVERAGE_LIMITS",
+  "blockers": [
+    "Specified LeWM weights not located in completed searched scopes",
+    "Matching PushT training data/trusted scaler provenance not located",
+    "No compatible LeWM/PushT environment validated; no installation authorized when resources absent"
+  ],
+  "stages": {
+    "strict_checkpoint_load": "NOT_RUN",
+    "original_scaler_reconstruction": "NOT_RUN",
+    "runtime_action_semantics": "NOT_RUN",
+    "engineering_replay": "NOT_RUN",
+    "0B_splitting": "NOT_RUN",
+    "0B_flow_training": "NOT_RUN",
+    "0B_MLP_fitting_check": "NOT_RUN",
+    "0B_strengthened_G": "NOT_RUN",
+    "32_calibration": "NOT_RUN",
+    "16_dev": "NOT_RUN",
+    "64_test": "NOT_RUN",
+    "U1": "NOT_RUN"
+  },
+  "dev_to_test_triggers": {
+    "1": "NOT_EVALUATED_RESOURCE_BLOCK",
+    "2": "NOT_EVALUATED_RESOURCE_BLOCK",
+    "3": "NOT_EVALUATED_RESOURCE_BLOCK",
+    "4": "NOT_EVALUATED_RESOURCE_BLOCK",
+    "5": "NOT_EVALUATED_RESOURCE_BLOCK",
+    "6": "NOT_EVALUATED_RESOURCE_BLOCK"
+  },
+  "test_authorized_by_gate": false,
+  "U_selected": null,
+  "scientific_root_count": null,
+  "independent_source_count": null,
+  "scientific_root_count_status": "NOT_RUN_NO_ROOTS_CREATED",
+  "scientific_metrics": {
+    "mean_R": null,
+    "mean_J": null,
+    "block_only": null,
+    "success": null,
+    "harmful_flips": null,
+    "confidence_interval": null
+  },
+  "engineering_max_repeat_J_difference": null,
+  "delta_J": null,
+  "header_only_csv_data_rows": {
+    "replay_check.csv": 0,
+    "root_manifest.csv": 0,
+    "per_root_metrics.csv": 0
+  },
+  "protocol_sha256": "557b9b325255dbd14187695971d3fb14f9d6670bb9e447361785241e97b90693",
+  "scientific_interpretation": "No evidence for or against U; no inference or simulator execution",
+  "omitted_unexecuted_outputs": [
+    "split_manifest.csv",
+    "training_curves.csv",
+    "calibration_pairs.jsonl",
+    "calibration_shuffle.json",
+    "frozen_predictions_dev.jsonl",
+    "real_transitions_dev.jsonl",
+    "all test outputs"
+  ],
+  "next_action": "STOP_AND_AWAIT_RESEARCHER_REVIEW",
+  "delivery_state": "FINAL_ARTIFACTS; remote sync confirmation is checked after this immutable artifact commit",
+  "automatic_continuation": "CANCELLED_CONFIRMED_DELETED"
+}

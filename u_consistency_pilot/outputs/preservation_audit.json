@@ -1,0 +1,15 @@
+{
+  "initial_commit": "9ca5c2e8423d37ec05194c9df9330c0aade69fed",
+  "initial_branch": "research/m-gate0-live-screen",
+  "worktree_initially_clean": true,
+  "protected_index_sha256_before": "e538228da0823252de575f48e67f27bd833ebd7681e60b9c5b31509b4181db1c",
+  "protected_index_sha256_at_seal": "e538228da0823252de575f48e67f27bd833ebd7681e60b9c5b31509b4181db1c",
+  "protected_tracked_worktree_diff": [],
+  "main_ref_at_seal": "687d75d53c0f30ea630762312b65dd3d0ff06d8b",
+  "initial_branch_ref_at_seal": "9ca5c2e8423d37ec05194c9df9330c0aade69fed",
+  "new_branch": "research/u-gate0",
+  "new_worktrees_created": 0,
+  "new_python_environments_created": 0,
+  "public_repository_verified": true,
+  "git_operations": "normal new branch and task-only commits/push; no reset/clean/stash/history rewrite"
+}

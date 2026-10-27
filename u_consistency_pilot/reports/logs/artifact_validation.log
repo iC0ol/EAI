@@ -1,0 +1,4 @@
+Initial git diff --cached --check: exit 2.
+Reason: csv.writer default CRLF was flagged as trailing whitespace in the three header-only CSVs.
+Correction: normalize those headers to LF; set csv.writer lineterminator to LF.
+No records, measurements or experiment code paths changed; no resource scan rerun.

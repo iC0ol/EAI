@@ -1,0 +1,36 @@
+{
+  "python_ast_parse": "PASS",
+  "json_parse": "PASS",
+  "public_artifact_secret_path_scan": "PASS",
+  "artifact_size_and_symlink_scan": "PASS",
+  "overwrite_and_scope_guards": [
+    {
+      "case": "refusing to overwrite",
+      "exit_code": 2,
+      "passed": true
+    },
+    {
+      "case": "output must be inside",
+      "exit_code": 2,
+      "passed": true
+    },
+    {
+      "case": "refusing to overwrite",
+      "exit_code": 2,
+      "passed": true
+    }
+  ],
+  "evidence_unchanged_by_validation": true,
+  "protected_tracked_worktree_diff": [],
+  "summary_command_exit_code": 0,
+  "header_only_csv_data_rows": {
+    "replay_check.csv": 0,
+    "root_manifest.csv": 0,
+    "per_root_metrics.csv": 0
+  },
+  "validation_scope": "No simulator/training tests; only artifact integrity and no-overwrite guards.",
+  "final_artifact_pass": "PASS",
+  "public_repository_isPrivate": false,
+  "final_artifact_file_count_before_checksums": 24,
+  "csv_newline_normalization": "LF; git diff check initially rejected default CRLF"
+}

@@ -1,0 +1,11 @@
+{
+  "kind": "heartbeat",
+  "interval_hours": 5,
+  "created": true,
+  "cancelled": true,
+  "deletion_confirmed": true,
+  "confirmation": "automation_update returned deleteStatus=deleted",
+  "cancelled_at_utc": "2026-10-27T07:48:19+00:00",
+  "reason": "0A required stop reached; final artifact delivery; await researcher review",
+  "future_experiments_authorized": false
+}

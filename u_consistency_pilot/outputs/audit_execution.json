@@ -1,0 +1,19 @@
+{
+  "started_at_utc": "2026-10-27T07:42:09.079805+00:00",
+  "ended_at_utc": "2026-10-27T07:42:31.573481+00:00",
+  "elapsed_seconds": 22.493663371074945,
+  "peak_audit_process_rss_kib": 28404,
+  "status": "TECHNICAL-BLOCK",
+  "strict_load": "NOT_RUN",
+  "simulator_steps": "NOT_RUN",
+  "training": "NOT_RUN",
+  "calibration": "NOT_RUN",
+  "dev": "NOT_RUN",
+  "test": "NOT_RUN",
+  "gpu_process_seconds": 0,
+  "task_gpu_vram_bytes": 0,
+  "scope": "resource metadata audit only",
+  "executed_script_sha256": "ee3a76ee9d4403ef7dfbb90d674a7b2d1d211445fe59f320dc399e623d99ed43",
+  "distributed_script_sha256": "a12c81a9b22b9a80e146bbc0aca0c916f77d5a3b589ed07f6254010b78ba6db9",
+  "post_execution_source_change": "Public process-path redaction and LF CSV newline normalization only; no scan rerun or measurement change."
+}

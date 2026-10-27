@@ -1,0 +1,51 @@
+{
+  "audit_python": "3.10.12",
+  "audit_python_binary_sha256": "11dde438e1a636073e79c81d4c2543708cc0a2922e7c42c38b1b588e17545f96",
+  "platform": {
+    "system": "Linux",
+    "release": "6.8.0-60-generic",
+    "machine": "x86_64",
+    "libc": [
+      "glibc",
+      "2.35"
+    ]
+  },
+  "git": {
+    "branch": "research/u-gate0",
+    "head_at_audit": "9ca5c2e8423d37ec05194c9df9330c0aade69fed",
+    "initial_branch": "research/m-gate0-live-screen",
+    "initial_commit": "9ca5c2e8423d37ec05194c9df9330c0aade69fed",
+    "initial_worktree_clean": true,
+    "initial_protected_git_index_sha256": "e538228da0823252de575f48e67f27bd833ebd7681e60b9c5b31509b4181db1c"
+  },
+  "protocol_sha256": "557b9b325255dbd14187695971d3fb14f9d6670bb9e447361785241e97b90693",
+  "environment_inventory": "environment_packages.json",
+  "experiment_environment_lock": "NOT_RUN_NO_COMPATIBLE_ENV_VALIDATED",
+  "upstream_pins": {
+    "lewm": {
+      "url": "https://github.com/lucas-maes/le-wm",
+      "commit": "8edfeb336732b5f3ce7b8b210d0ba370a09e2cac",
+      "verification": "USER_SUPPLIED_NOT_LOCALLY_CHECKED_OUT"
+    },
+    "stable_worldmodel": {
+      "url": "https://github.com/galilai-group/stable-worldmodel",
+      "commit": "21446f1ede6d5284e981bd7b47f432b994e6d812",
+      "verification": "USER_SUPPLIED_COMPATIBILITY_NOT_VALIDATED"
+    },
+    "ACID": {
+      "url": "https://arxiv.org/pdf/2607.02403",
+      "sections": "3,4.6,A.5,B,J",
+      "read_this_run": false,
+      "scope": "ACID-style diagnostic; not official numerical reproduction"
+    },
+    "ATM": {
+      "url": "https://arxiv.org/pdf/2606.09028v2",
+      "read_this_run": false
+    },
+    "WAV": {
+      "url": "https://arxiv.org/pdf/2604.01985v2",
+      "pages": "3-5",
+      "read_this_run": false
+    }
+  }
+}
