@@ -1,0 +1,17 @@
+{
+  "path": "checkpoints/C_latest.pt",
+  "bytes": 845671886,
+  "sha256": "c904a97002571d96e3ee6b66057d09162cbdcb5e926cb6ea0b660ca1390bce13",
+  "utc": "2026-10-28T22:15:06.676837+00:00",
+  "updates": 60003,
+  "completed_epochs": 20001,
+  "includes": [
+    "model",
+    "optimizer",
+    "scheduler",
+    "python/numpy/CPU/CUDA RNG",
+    "sampler permutation/position/generator",
+    "stats",
+    "config"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-28T22:15:00.533971+00:00",
+  "state": "COMPLETE",
+  "updates": 60003,
+  "completed_epochs": 20001,
+  "epoch_offset": 0,
+  "target_updates": 60003,
+  "last_loss": 0.39281928539276123,
+  "train_elapsed_seconds": 16462.33046680037,
+  "vram_allocated_peak_bytes": 4862030848,
+  "vram_reserved_peak_bytes": 5425332224,
+  "checkpoint": {
+    "path": "checkpoints/C_latest.pt",
+    "bytes": 845671886,
+    "sha256": "c904a97002571d96e3ee6b66057d09162cbdcb5e926cb6ea0b660ca1390bce13",
+    "utc": "2026-10-28T22:15:06.676837+00:00",
+    "updates": 60003,
+    "completed_epochs": 20001,
+    "includes": [
+      "model",
+      "optimizer",
+      "scheduler",
+      "python/numpy/CPU/CUDA RNG",
+      "sampler permutation/position/generator",
+      "stats",
+      "config"
+    ]
+  }
+}

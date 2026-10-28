@@ -1,0 +1,17 @@
+{
+  "name": "03_semantics",
+  "state": "FAILED",
+  "exit_code": 1,
+  "completed_utc": "2026-10-28T17:33:15.726625+00:00",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/validate_semantics.py"
+  ],
+  "command_sha256": "3c11fc47bfb4618d76567746e9dbf536aeb5a541e9bac6cd56ba5de04c922fa5",
+  "outputs": {
+    "results/semantics/restore_check.json": {
+      "sha256": "91dbab1d3777561142d67b63a9fd561b6f2b8e9ee231fc24fcc2d3adedac7374",
+      "bytes": 197
+    }
+  }
+}

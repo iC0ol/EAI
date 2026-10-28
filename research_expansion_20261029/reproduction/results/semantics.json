@@ -1,0 +1,134 @@
+{
+  "utc": "2026-10-28T17:36:13.896854+00:00",
+  "state": "PASS",
+  "expert_successes": 10,
+  "expert_n": 10,
+  "replay_seconds_total": 11.296475740615278,
+  "semantic_gate": "success>=9/10, first target mismatch<1e-4, EEF trajectory max deviation<2cm",
+  "rows": [
+    {
+      "demo": 0,
+      "success": true,
+      "steps": 105,
+      "seconds": 3.9228334119543433,
+      "first_absolute_command_max_error": 0.0,
+      "eef_position_error_mean_m": 1.0553045905985154e-06,
+      "eef_position_error_max_m": 1.128122864832087e-05,
+      "max_object_height_m": 0.9440005990665696,
+      "source_default_seed": 42,
+      "geometry_limitation": "Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search."
+    },
+    {
+      "demo": 1,
+      "success": true,
+      "steps": 102,
+      "seconds": 0.8018536269664764,
+      "first_absolute_command_max_error": 2.384185791015625e-07,
+      "eef_position_error_mean_m": 1.7387098067670067e-07,
+      "eef_position_error_max_m": 1.9669941201259197e-06,
+      "max_object_height_m": 0.9451030342177027,
+      "source_default_seed": 43,
+      "geometry_limitation": "Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search."
+    },
+    {
+      "demo": 2,
+      "success": true,
+      "steps": 126,
+      "seconds": 0.9408285026438534,
+      "first_absolute_command_max_error": 0.0,
+      "eef_position_error_mean_m": 9.457010446874661e-09,
+      "eef_position_error_max_m": 1.3969932973996527e-07,
+      "max_object_height_m": 0.9476977883678043,
+      "source_default_seed": 44,
+      "geometry_limitation": "Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search."
+    },
+    {
+      "demo": 3,
+      "success": true,
+      "steps": 97,
+      "seconds": 0.7426128722727299,
+      "first_absolute_command_max_error": 0.0,
+      "eef_position_error_mean_m": 2.8286008192145704e-08,
+      "eef_position_error_max_m": 1.6965099340787634e-07,
+      "max_object_height_m": 0.9447652495641743,
+      "source_default_seed": 45,
+      "geometry_limitation": "Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search."
+    },
+    {
+      "demo": 4,
+      "success": true,
+      "steps": 122,
+      "seconds": 0.9352686880156398,
+      "first_absolute_command_max_error": 0.0,
+      "eef_position_error_mean_m": 8.920752717167229e-08,
+      "eef_position_error_max_m": 1.1129204509521974e-06,
+      "max_object_height_m": 0.9477543680669624,
+      "source_default_seed": 46,
+      "geometry_limitation": "Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search."
+    },
+    {
+      "demo": 5,
+      "success": true,
+      "steps": 97,
+      "seconds": 0.7481415411457419,
+      "first_absolute_command_max_error": 0.0,
+      "eef_position_error_mean_m": 8.908846347435456e-10,
+      "eef_position_error_max_m": 1.0558464803405986e-08,
+      "max_object_height_m": 0.9408255797771304,
+      "source_default_seed": 47,
+      "geometry_limitation": "Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search."
+    },
+    {
+      "demo": 6,
+      "success": true,
+      "steps": 110,
+      "seconds": 0.8377947569824755,
+      "first_absolute_command_max_error": 0.0,
+      "eef_position_error_mean_m": 7.616720850927851e-07,
+      "eef_position_error_max_m": 9.355892626051341e-06,
+      "max_object_height_m": 0.9462981088936441,
+      "source_default_seed": 48,
+      "geometry_limitation": "Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search."
+    },
+    {
+      "demo": 7,
+      "success": true,
+      "steps": 85,
+      "seconds": 0.6643569762818515,
+      "first_absolute_command_max_error": 0.0,
+      "eef_position_error_mean_m": 7.158994468903486e-08,
+      "eef_position_error_max_m": 5.592393320370316e-07,
+      "max_object_height_m": 0.9439041458309211,
+      "source_default_seed": 49,
+      "geometry_limitation": "Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search."
+    },
+    {
+      "demo": 8,
+      "success": true,
+      "steps": 96,
+      "seconds": 0.7468684026971459,
+      "first_absolute_command_max_error": 0.0,
+      "eef_position_error_mean_m": 4.8099223108058554e-06,
+      "eef_position_error_max_m": 4.3094211295193294e-05,
+      "max_object_height_m": 0.9445978048823439,
+      "source_default_seed": 50,
+      "geometry_limitation": "Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search."
+    },
+    {
+      "demo": 9,
+      "success": true,
+      "steps": 123,
+      "seconds": 0.9559169616550207,
+      "first_absolute_command_max_error": 7.450580596923828e-09,
+      "eef_position_error_mean_m": 1.8494180616468837e-06,
+      "eef_position_error_max_m": 1.9780228392528973e-05,
+      "max_object_height_m": 0.9468692184737302,
+      "source_default_seed": 51,
+      "geometry_limitation": "Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search."
+    }
+  ],
+  "limitations": [
+    "HDF5 env_version is 1.4.1; fixed official submodule declares 1.5.1.",
+    "No per-demo XML in public dataset; exact collection model cannot be proven. Evaluation roots will preserve their own full XML and state."
+  ]
+}

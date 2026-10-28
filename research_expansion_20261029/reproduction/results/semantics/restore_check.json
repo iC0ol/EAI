@@ -1,0 +1,8 @@
+{
+  "same_xml_state_render_identical": false,
+  "image_max_abs_difference": 255,
+  "xml_sha256": "fd6a98be70d089aac479f4228c1765a79d417e28c0604e2fefe9130176c51e64",
+  "state_shape": [
+    58
+  ]
+}

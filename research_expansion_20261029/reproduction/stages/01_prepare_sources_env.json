@@ -1,0 +1,21 @@
+{
+  "name": "01_prepare_sources_env",
+  "state": "COMPLETE",
+  "exit_code": 0,
+  "completed_utc": "2026-10-28T17:30:45.161829+00:00",
+  "command": [
+    "python3",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/prepare.py"
+  ],
+  "command_sha256": "0c584bcfa4313c53d82dc374a3202191329dcfa4449998e1fbc8790c0368be83",
+  "outputs": {
+    "source_manifest.json": {
+      "sha256": "987fbae3b3e5a29970b9c6117edceffaf9f298f23ecbdb9572f60bbffb349960",
+      "bytes": 553
+    },
+    "environment_origin.json": {
+      "sha256": "41778d2f226e14418dd8b84215acafb8a20a5692eb2411230389af3f3aec1444",
+      "bytes": 320
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "cam_transform": "camera-to-world; OpenGL +x right, +y up, forward -z; rendered RGB flipped vertically",
+  "ray_channel_order": "moment origin cross unit_direction, then unit_direction",
+  "source_pixel_offset": "source grid adds 0.5 twice; index+1.0; retained unchanged (0.5 pixel relative to usual center convention)",
+  "unit_norm_max_error": 1.7881393432617188e-07,
+  "moment_max_error": 6.043058853322236e-08,
+  "orthogonality_max_error": 5.21540641784668e-08,
+  "checks": [
+    {
+      "xy": [
+        0,
+        0
+      ],
+      "ray_direction_error": 3.189903863276555e-08,
+      "projection_error_pixels": 4.263256414560601e-14
+    },
+    {
+      "xy": [
+        127,
+        127
+      ],
+      "ray_direction_error": 6.836239752061601e-08,
+      "projection_error_pixels": 0.0
+    },
+    {
+      "xy": [
+        255,
+        255
+      ],
+      "ray_direction_error": 4.18583463168698e-08,
+      "projection_error_pixels": 5.684341886080802e-14
+    },
+    {
+      "xy": [
+        200,
+        100
+      ],
+      "ray_direction_error": 5.197571195658668e-08,
+      "projection_error_pixels": 2.842170943040401e-14
+    }
+  ],
+  "rotation_error": "world-frame left multiplication of R only; translation fixed",
+  "crop": "official RandomCrop crops/resizes stacked RGB+raymap together using the same crop indices",
+  "policy_truth_channels": "none; evaluator geometry used only for checks"
+}

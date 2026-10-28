@@ -1,0 +1,25 @@
+{
+  "name": "03b_semantics_canonical_reset",
+  "state": "COMPLETE",
+  "exit_code": 0,
+  "completed_utc": "2026-10-28T17:36:16.397672+00:00",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/validate_semantics.py"
+  ],
+  "command_sha256": "3c11fc47bfb4618d76567746e9dbf536aeb5a541e9bac6cd56ba5de04c922fa5",
+  "outputs": {
+    "results/semantics.json": {
+      "sha256": "9bbc360ca4c95810f40fb9c58e2ba3d4eed1236c0754064673150e4c84e5b1f2",
+      "bytes": 5477
+    },
+    "results/semantics/camera_raymap_checks.json": {
+      "sha256": "1f9f221c6d6dab6b197b498f369fbfc8978c6dfd0c23a14b7d610c1565d67cd9",
+      "bytes": 1401
+    },
+    "results/semantics/initial_restore_check.json": {
+      "sha256": "43abe3f0e59d5ccc524eb822ec0b777a2dd645b328d88a75d005056f9394d559",
+      "bytes": 317
+    }
+  }
+}

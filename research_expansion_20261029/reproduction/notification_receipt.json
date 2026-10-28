@@ -1,0 +1,12 @@
+{
+  "destination_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a18138-0f15-76b2-b5cf-20e1722782a9\"}"
+      }
+    ],
+    "isError": false
+  }
+}

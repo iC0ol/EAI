@@ -1,0 +1,9 @@
+{
+  "state": "SENT",
+  "destination_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "authorization_evidence": "authorization.json",
+  "send_only_once": true,
+  "message": "复现线程完成回传（已通过 read_thread 核验两条原始人类消息及完成后通知授权）。本轮已经按冻结的科学停止规则结束，完整度 PARTIAL，证据状态 IMPLEMENTATION-LIMITED，不能作为标定误差机制的科学阴性或论文成功率复现。\n\n实际执行：取得唯一官方 Lift HDF5（300 demos，训练0–199、验证200–209）、固定 KYC/RoboSuite 镜像，建立独立环境；10/10专家动作回放成功。C-only seed0按官方模型与训练数量完成20,001 epochs /60,003优化更新，最终checkpoint于06:15 +08保存，SHA256 c904a97002571d96e3ee6b66057d09162cbdcb5e926cb6ea0b660ca1390bce13。对话中断期间独立训练持续运行，五小时检查核验PID启动ticks、锁、日志及最终hash，没有重启。\n\n关键结果：准确外参dev为0/32成功，0接近、0夹持；另1次clean完整重放的所有动作及成功状态完全一致。32个固定观测的动作随5/10°与zero/shuffle raymap变化，RGB-only初始化接口阴性检查最大输出差0；这不能解释为任务成功变化。触发预登记0–3/32地板门槛后，350次正式持续/IID/真实相机移动rollout均NOT_RUN，所有配对统计均null；U没有训练，没有用短U作比较。没有追加模型/仿真实验。\n\n限制与偏差均已写清：公开数据无逐demo XML且env_version与固定子模块声明不同；初次轨迹末状态compiled XML重载差异原因未证明，实际初始root的源码XML+state重置验收通过；可恢复sampler的RNG流、val相机pool变更、U接口检查顺序、smoke滚动文件hash更新及评估入口在五小时续查时接续，均未隐瞒。不能归因于单一根因。\n\n资源：保守GPU分配4.642h，torch reserved峰值5.182GiB，采样RSS约2.375GiB，下载保守0.521GiB；所有预算内。监督进程已退出、锁已释放，本聊天6-1-sol-max检查已PAUSED。未操作Git index/分支/commit/push，全部产物在 /home/asus/EAI/research_expansion_20261029/reproduction/。\n\n主报告 FINAL_REPORT.md；机器终态 completion.json；逐root dev结果与原始动作在 results/；配对NOT_RUN表、资源/资产/依赖、修复差异、恢复命令、final_verification.json及delivery_integrity.json已齐备，已验证不可变阶段hash无不匹配。请主研究者先独立分析基线未学会的原因与官方一致性，再判断改进方向；本轮不支持推进新网络或宣称标定机制成立。完成回传回执会保存，避免重复通知。",
+  "sent_utc": "2026-10-28T22:39:55.670820+00:00",
+  "receipt_sha256": "8890c4322be5d2160efe79a494fe161b5f7b0b07b6bd1387889b147e6ab51d7b"
+}

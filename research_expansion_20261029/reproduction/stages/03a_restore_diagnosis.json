@@ -1,0 +1,17 @@
+{
+  "name": "03a_restore_diagnosis",
+  "state": "COMPLETE",
+  "exit_code": 0,
+  "completed_utc": "2026-10-28T17:34:25.961063+00:00",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/diagnose_restore.py"
+  ],
+  "command_sha256": "dac0b3adc5fe70faa36572cc039d10dc18890bccba3e46f351511f9fe058b781",
+  "outputs": {
+    "results/restore_diagnosis/diagnosis.json": {
+      "sha256": "c1a6a61f444eb5955420494b6c1d55d8babe6cfe4e6df693c770495633e7f905",
+      "bytes": 366
+    }
+  }
+}

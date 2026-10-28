@@ -1,0 +1,30 @@
+{
+  "due": "2026-10-29T01:34:01+08:00",
+  "checked_at": "2026-10-29T01:37:30+08:00",
+  "completion": "ONGOING",
+  "evidence": {
+    "executor_thread_id": "01a1838c-a3b2-7f71-a94d-5b900219f381",
+    "executor_thread_state": "active",
+    "supervisor_pid": 1944823,
+    "supervisor_start_ticks": 256253989,
+    "proc_identity_matched": true,
+    "expert_replay_successes": 10,
+    "expert_replay_n": 10,
+    "training": "NOT_RUN at check",
+    "test": "NOT_RUN at check",
+    "protocol_sha256": "f1f24733775a4de78cc07147b3497e047376e4a6440d45800a91d600d1126390",
+    "deepseek_turns": [
+      "04_expansion_independent",
+      "05_crosscheck",
+      "06_crosscheck"
+    ],
+    "deepseek_all_exit_zero": true,
+    "deepseek_actual_model": "deepseek-flash"
+  },
+  "action": "Do not restart active work; continue through executor, retain completion callback and schedule same parent heartbeat five hours after prior due.",
+  "next_parent_check": "2026-10-29T06:34:01+08:00",
+  "executor_own_first_check": "2026-10-29T06:26:35+08:00",
+  "automation_update_confirmed": true,
+  "automation_toml_readback_confirmed": true,
+  "budget_extended": false
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "state": "ACCEPTED_FOR_INITIAL_ROOT_RESTORE",
+    "problem": "Compiled MuJoCo XML serialization fails byte-identical rendered restore. One successful expert replay retained; no repeat of that rollout.",
+    "evidence": "results/semantics/restore_check.json",
+    "plan": "Compare compiled and original high precision XML without executing any actions. Preserve full original model XML for paired reset if confirmed.",
+    "diagnosis": "Both XML types reproduce the initial state exactly in zero-action diagnosis. Original failed check involved post-trajectory compiled model; its cause is not claimed resolved. Paired evaluation only restores canonical initial roots, so acceptance now directly exercises that operation twice.",
+    "change": "Use original high precision model XML for canonical evaluation root reconstruction; retain failed poststate check. Resume expert demos 1-9 without repeating successful demo0.",
+    "max_expert_replays": 10,
+    "acceptance": "results/semantics/initial_restore_check.json; exact zero pixel difference, 10/10 expert replays; poststate restore issue retained as a limitation"
+  }
+]

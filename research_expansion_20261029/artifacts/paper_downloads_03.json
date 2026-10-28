@@ -1,0 +1,20 @@
+[
+  {
+    "id": "kyc",
+    "url": "https://arxiv.org/pdf/2510.02268v1",
+    "bytes": 3892036,
+    "sha256": "08f4f7703256ce23a2b3c66eb60d7599095c5b0dce8421a09e0938c71eba5124"
+  },
+  {
+    "id": "camvla",
+    "url": "https://arxiv.org/pdf/2607.05396",
+    "bytes": 18211212,
+    "sha256": "6cf3111c2d1518b8f84dbebbddf3e197e0083759366537fff8a54a21361965a9"
+  },
+  {
+    "id": "maniguard",
+    "url": "https://arxiv.org/pdf/2608.17386v1",
+    "bytes": 7976165,
+    "sha256": "2d5e365d972f67032c8a1424bace9f23585a35c107bc529684761949778da8a1"
+  }
+]

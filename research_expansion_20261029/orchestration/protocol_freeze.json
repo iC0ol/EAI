@@ -1,0 +1,14 @@
+{
+  "path": "reproduction/PROTOCOL.md",
+  "sha256": "f1f24733775a4de78cc07147b3497e047376e4a6440d45800a91d600d1126390",
+  "frozen_utc": "2026-10-28T17:25:32.595553+00:00",
+  "cross_reviews": [
+    "05_crosscheck",
+    "06_crosscheck"
+  ],
+  "status": "FROZEN_FOR_EXECUTION",
+  "model": "gpt-6.1-sol",
+  "reasoning": "max",
+  "primary": "F camera conditioning persistent-vs-IID extrinsic error",
+  "priority": "C-first; U conditional on measured budget; no new method"
+}

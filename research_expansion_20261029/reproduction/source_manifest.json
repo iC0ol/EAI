@@ -1,0 +1,12 @@
+{
+  "kyc": {
+    "url": "https://codeload.github.com/ripl/CamPoseOpensource/tar.gz/e0647105a0f3946581d253c55dc9fd1218fa0974",
+    "commit": "e0647105a0f3946581d253c55dc9fd1218fa0974",
+    "archive_sha256": "9ef929367051fcba6f8a31a0dad01794561cf9c1ddba1ef6939e1d2a78c4407c"
+  },
+  "robosuite": {
+    "url": "https://codeload.github.com/ripl/robosuite/tar.gz/0df3a5f5782937fa2e8fa923910d616b73310b8d",
+    "commit": "0df3a5f5782937fa2e8fa923910d616b73310b8d",
+    "archive_sha256": "79294e2fd525c093c762a4588a2efe8c2836dc0a5edac12198defa95b615c4ed"
+  }
+}

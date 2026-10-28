@@ -1,0 +1,241 @@
+{
+  "utc": "2026-10-28T22:38:25.895287+00:00",
+  "fixed_inputs": {
+    "protocol_sha256": "f1f24733775a4de78cc07147b3497e047376e4a6440d45800a91d600d1126390",
+    "protocol_matches_frozen": true,
+    "checkpoint_sha256": "c904a97002571d96e3ee6b66057d09162cbdcb5e926cb6ea0b660ca1390bce13",
+    "checkpoint_matches_manifest": true,
+    "root_manifest_matches_training_plan": true
+  },
+  "stage_output_integrity": [
+    {
+      "stage": "01_prepare_sources_env",
+      "path": "source_manifest.json",
+      "state": "MATCH",
+      "expected_sha256": "987fbae3b3e5a29970b9c6117edceffaf9f298f23ecbdb9572f60bbffb349960",
+      "actual_sha256": "987fbae3b3e5a29970b9c6117edceffaf9f298f23ecbdb9572f60bbffb349960"
+    },
+    {
+      "stage": "01_prepare_sources_env",
+      "path": "environment_origin.json",
+      "state": "MATCH",
+      "expected_sha256": "41778d2f226e14418dd8b84215acafb8a20a5692eb2411230389af3f3aec1444",
+      "actual_sha256": "41778d2f226e14418dd8b84215acafb8a20a5692eb2411230389af3f3aec1444"
+    },
+    {
+      "stage": "02_dependencies",
+      "path": "requirements.freeze",
+      "state": "MATCH",
+      "expected_sha256": "45a8780e5995e34ed64812b79ee4ba3c18a83697ead29910f7944f0216fb5549",
+      "actual_sha256": "45a8780e5995e34ed64812b79ee4ba3c18a83697ead29910f7944f0216fb5549"
+    },
+    {
+      "stage": "02_dependencies",
+      "path": "dependency_install.json",
+      "state": "MATCH",
+      "expected_sha256": "99b49cf3962c43a8f3939c359446e2bc10c21d609db59a2b9a18efebe9b1f9c6",
+      "actual_sha256": "99b49cf3962c43a8f3939c359446e2bc10c21d609db59a2b9a18efebe9b1f9c6"
+    },
+    {
+      "stage": "03_semantics",
+      "path": "results/semantics/restore_check.json",
+      "state": "MATCH",
+      "expected_sha256": "91dbab1d3777561142d67b63a9fd561b6f2b8e9ee231fc24fcc2d3adedac7374",
+      "actual_sha256": "91dbab1d3777561142d67b63a9fd561b6f2b8e9ee231fc24fcc2d3adedac7374"
+    },
+    {
+      "stage": "03a_restore_diagnosis",
+      "path": "results/restore_diagnosis/diagnosis.json",
+      "state": "MATCH",
+      "expected_sha256": "c1a6a61f444eb5955420494b6c1d55d8babe6cfe4e6df693c770495633e7f905",
+      "actual_sha256": "c1a6a61f444eb5955420494b6c1d55d8babe6cfe4e6df693c770495633e7f905"
+    },
+    {
+      "stage": "03b_semantics_canonical_reset",
+      "path": "results/semantics.json",
+      "state": "MATCH",
+      "expected_sha256": "9bbc360ca4c95810f40fb9c58e2ba3d4eed1236c0754064673150e4c84e5b1f2",
+      "actual_sha256": "9bbc360ca4c95810f40fb9c58e2ba3d4eed1236c0754064673150e4c84e5b1f2"
+    },
+    {
+      "stage": "03b_semantics_canonical_reset",
+      "path": "results/semantics/camera_raymap_checks.json",
+      "state": "MATCH",
+      "expected_sha256": "1f9f221c6d6dab6b197b498f369fbfc8978c6dfd0c23a14b7d610c1565d67cd9",
+      "actual_sha256": "1f9f221c6d6dab6b197b498f369fbfc8978c6dfd0c23a14b7d610c1565d67cd9"
+    },
+    {
+      "stage": "03b_semantics_canonical_reset",
+      "path": "results/semantics/initial_restore_check.json",
+      "state": "MATCH",
+      "expected_sha256": "43abe3f0e59d5ccc524eb822ec0b777a2dd645b328d88a75d005056f9394d559",
+      "actual_sha256": "43abe3f0e59d5ccc524eb822ec0b777a2dd645b328d88a75d005056f9394d559"
+    },
+    {
+      "stage": "04_imagenet_weights",
+      "path": "manifests/imagenet_weights.json",
+      "state": "MATCH",
+      "expected_sha256": "a471e1c8b7e35956266aeb2f4ca9069b2e853b834201988b27ea11d171709b7f",
+      "actual_sha256": "a471e1c8b7e35956266aeb2f4ca9069b2e853b834201988b27ea11d171709b7f"
+    },
+    {
+      "stage": "05_C_smoke",
+      "path": "results/smoke_throughput.json",
+      "state": "MATCH",
+      "expected_sha256": "d881409251ec2e06f5ed57bf6f862df787067f50399607a32bcd159ecb6538b8",
+      "actual_sha256": "d881409251ec2e06f5ed57bf6f862df787067f50399607a32bcd159ecb6538b8"
+    },
+    {
+      "stage": "05_C_smoke",
+      "path": "checkpoint_manifest.json",
+      "state": "ROLLING_FILE_SUPERSEDED",
+      "note": "smoke throughput retained; these two files explicitly track latest training state"
+    },
+    {
+      "stage": "05_C_smoke",
+      "path": "training_progress.json",
+      "state": "ROLLING_FILE_SUPERSEDED",
+      "note": "smoke throughput retained; these two files explicitly track latest training state"
+    },
+    {
+      "stage": "06_freeze_plan",
+      "path": "frozen_training_plan.json",
+      "state": "MATCH",
+      "expected_sha256": "93da2af07e19ea39398826f2a397bbe688c00c544ba1b209bbcfadbb2efccee4",
+      "actual_sha256": "93da2af07e19ea39398826f2a397bbe688c00c544ba1b209bbcfadbb2efccee4"
+    },
+    {
+      "stage": "06_freeze_plan",
+      "path": "manifests/frozen_roots.json",
+      "state": "MATCH",
+      "expected_sha256": "6a8c441bd3dc6e78c5f3f99e3f606d9e70f961404ed0385955151bab36df8729",
+      "actual_sha256": "6a8c441bd3dc6e78c5f3f99e3f606d9e70f961404ed0385955151bab36df8729"
+    },
+    {
+      "stage": "07_C_training",
+      "path": "training_progress.json",
+      "state": "MATCH",
+      "expected_sha256": "635bc9d58420f96eb6821427489838c3997facc5a10fa8b3d2d7af87f556e97c",
+      "actual_sha256": "635bc9d58420f96eb6821427489838c3997facc5a10fa8b3d2d7af87f556e97c"
+    },
+    {
+      "stage": "07_C_training",
+      "path": "checkpoint_manifest.json",
+      "state": "MATCH",
+      "expected_sha256": "221c099f4c7a703c3bd304fa8f728ee9596aa655a37a89a1ae8969bc5b0f4f53",
+      "actual_sha256": "221c099f4c7a703c3bd304fa8f728ee9596aa655a37a89a1ae8969bc5b0f4f53"
+    },
+    {
+      "stage": "08_dev_gate",
+      "path": "results/dev_summary.json",
+      "state": "MATCH",
+      "expected_sha256": "9a420fa8347770c908aa400e74d9b0b51a4b0cf2c1a416c4ec5dcb3f880e8059",
+      "actual_sha256": "9a420fa8347770c908aa400e74d9b0b51a4b0cf2c1a416c4ec5dcb3f880e8059"
+    },
+    {
+      "stage": "08_dev_gate",
+      "path": "results/U_metadata_negative_control.json",
+      "state": "MATCH",
+      "expected_sha256": "c2e44ada4ab5204473f87cce3cffbc98d607a9cdfd9dfd756a2cbae0474fa5b1",
+      "actual_sha256": "c2e44ada4ab5204473f87cce3cffbc98d607a9cdfd9dfd756a2cbae0474fa5b1"
+    },
+    {
+      "stage": "08_dev_gate",
+      "path": "results/clean_rollout_reproducibility.json",
+      "state": "MATCH",
+      "expected_sha256": "06431179a617063c0167c1f43a99237a3f7227ea418b387e98cf891efbc4f41f",
+      "actual_sha256": "06431179a617063c0167c1f43a99237a3f7227ea418b387e98cf891efbc4f41f"
+    },
+    {
+      "stage": "08_dev_gate",
+      "path": "results/dev_fixed_observation.jsonl",
+      "state": "MATCH",
+      "expected_sha256": "d67647963576fb8ef35c5152ac6c486dc8273bf2b20a6adcc3300edbd0700c3a",
+      "actual_sha256": "d67647963576fb8ef35c5152ac6c486dc8273bf2b20a6adcc3300edbd0700c3a"
+    },
+    {
+      "stage": "08_dev_gate",
+      "path": "results/dev_rollouts.jsonl",
+      "state": "MATCH",
+      "expected_sha256": "76d0e58f2c17612ce2565234e9dcf0c2d580b6ec651a641b5d2d36d1d67ac693",
+      "actual_sha256": "76d0e58f2c17612ce2565234e9dcf0c2d580b6ec651a641b5d2d36d1d67ac693"
+    },
+    {
+      "stage": "10_statistics",
+      "path": "results/test_summary.json",
+      "state": "MATCH",
+      "expected_sha256": "aaf448126f0dd6d2a7e5900a4a18352a3fa3d0d46f34f462078022f6afdcecac",
+      "actual_sha256": "aaf448126f0dd6d2a7e5900a4a18352a3fa3d0d46f34f462078022f6afdcecac"
+    },
+    {
+      "stage": "10_statistics",
+      "path": "results/per_root_success.csv",
+      "state": "MATCH",
+      "expected_sha256": "f2785a714a5a8684a942078a33b9e2247e7fd549caa5caf3b98cd5d56b020937",
+      "actual_sha256": "f2785a714a5a8684a942078a33b9e2247e7fd549caa5caf3b98cd5d56b020937"
+    },
+    {
+      "stage": "10_statistics",
+      "path": "results/paired_statistics.csv",
+      "state": "MATCH",
+      "expected_sha256": "19a5fee104f6de6454a647e8c45e001be859ef03a2bde161ad78d3be84910434",
+      "actual_sha256": "19a5fee104f6de6454a647e8c45e001be859ef03a2bde161ad78d3be84910434"
+    },
+    {
+      "stage": "11_offline_audit",
+      "path": "asset_manifest.json",
+      "state": "MATCH",
+      "expected_sha256": "ad5b22b70dc3d9e424d0cd4abfdb636078c6538efbe406c409c5445726fa2ba1",
+      "actual_sha256": "ad5b22b70dc3d9e424d0cd4abfdb636078c6538efbe406c409c5445726fa2ba1"
+    },
+    {
+      "stage": "11_offline_audit",
+      "path": "results/offline_action_audit.json",
+      "state": "MATCH",
+      "expected_sha256": "7a561539c3f3bb7d6bc2e9e26ee733646d3058f9d708bad324ea91746441b78f",
+      "actual_sha256": "7a561539c3f3bb7d6bc2e9e26ee733646d3058f9d708bad324ea91746441b78f"
+    },
+    {
+      "stage": "11_offline_audit",
+      "path": "results/loss_summary.json",
+      "state": "MATCH",
+      "expected_sha256": "ecb96c3da1572b502eadbb5eeb24bf9204e9baee1369c17b7bb12adefa9e80a8",
+      "actual_sha256": "ecb96c3da1572b502eadbb5eeb24bf9204e9baee1369c17b7bb12adefa9e80a8"
+    },
+    {
+      "stage": "11_offline_audit",
+      "path": "results/dev_per_root.csv",
+      "state": "MATCH",
+      "expected_sha256": "38eabca069db7c3a48fe1637f573eab6a2959a80c279682ba479b5a8d35addda",
+      "actual_sha256": "38eabca069db7c3a48fe1637f573eab6a2959a80c279682ba479b5a8d35addda"
+    },
+    {
+      "stage": "11_offline_audit",
+      "path": "results/training_curve.csv",
+      "state": "MATCH",
+      "expected_sha256": "4df507b70d4f2e8b8f42c97021e5545e6d81f4745f3b8814f63363d5ba31685d",
+      "actual_sha256": "4df507b70d4f2e8b8f42c97021e5545e6d81f4745f3b8814f63363d5ba31685d"
+    },
+    {
+      "stage": "11_offline_audit",
+      "path": "manifests/hardware.json",
+      "state": "MATCH",
+      "expected_sha256": "94d0db771289c033ff9531dd373bda457be93d0f7b5ec1f5e6159607413b10eb",
+      "actual_sha256": "94d0db771289c033ff9531dd373bda457be93d0f7b5ec1f5e6159607413b10eb"
+    },
+    {
+      "stage": "11_offline_audit",
+      "path": "patches/repair01_initial_root_restore.diff",
+      "state": "MATCH",
+      "expected_sha256": "123a810470bcd2efeeb41fd66ef26a3d256e9e803146822273e5d634d276d791",
+      "actual_sha256": "123a810470bcd2efeeb41fd66ef26a3d256e9e803146822273e5d634d276d791"
+    }
+  ],
+  "stage_mismatches": [],
+  "counts_match_frozen_training": true,
+  "formal_test_not_run_because_dev_floor": true,
+  "dev_policy_rollouts_within64": true,
+  "expert_replays_within10": true,
+  "old_projects_modified_by_this_task": false,
+  "git_operations_by_this_task": "none"
+}

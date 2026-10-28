@@ -1,0 +1,14 @@
+env/
+runtime/
+assets/
+vendor/
+cache/
+tmp/
+logs/
+checkpoints/
+root_states/
+results/**/*.xml
+*.partial
+*.lock
+__pycache__/
+*.pyc

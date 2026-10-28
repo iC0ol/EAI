@@ -1,0 +1,41 @@
+{
+  "name": "11_offline_audit",
+  "state": "COMPLETE",
+  "exit_code": 0,
+  "completed_utc": "2026-10-28T22:35:06.527022+00:00",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/offline_audit.py"
+  ],
+  "command_sha256": "a398c581c8ca8bd752479aa0bebd75966f265eb6f1e79530bb39c627e1732c19",
+  "outputs": {
+    "asset_manifest.json": {
+      "sha256": "ad5b22b70dc3d9e424d0cd4abfdb636078c6538efbe406c409c5445726fa2ba1",
+      "bytes": 25409
+    },
+    "results/offline_action_audit.json": {
+      "sha256": "7a561539c3f3bb7d6bc2e9e26ee733646d3058f9d708bad324ea91746441b78f",
+      "bytes": 24378
+    },
+    "results/loss_summary.json": {
+      "sha256": "ecb96c3da1572b502eadbb5eeb24bf9204e9baee1369c17b7bb12adefa9e80a8",
+      "bytes": 559
+    },
+    "results/dev_per_root.csv": {
+      "sha256": "38eabca069db7c3a48fe1637f573eab6a2959a80c279682ba479b5a8d35addda",
+      "bytes": 2787
+    },
+    "results/training_curve.csv": {
+      "sha256": "4df507b70d4f2e8b8f42c97021e5545e6d81f4745f3b8814f63363d5ba31685d",
+      "bytes": 19267
+    },
+    "manifests/hardware.json": {
+      "sha256": "94d0db771289c033ff9531dd373bda457be93d0f7b5ec1f5e6159607413b10eb",
+      "bytes": 5202
+    },
+    "patches/repair01_initial_root_restore.diff": {
+      "sha256": "123a810470bcd2efeeb41fd66ef26a3d256e9e803146822273e5d634d276d791",
+      "bytes": 3643
+    }
+  }
+}

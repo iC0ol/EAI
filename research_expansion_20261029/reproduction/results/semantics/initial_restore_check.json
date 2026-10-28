@@ -1,0 +1,9 @@
+{
+  "same_xml_state_render_identical": true,
+  "image_max_abs_difference": 0,
+  "xml_sha256": "db77d4ea6ac3be9c20fc7f0414e725df57f1da18ad9f454e6351ae2134cb8bf8",
+  "state_shape": [
+    58
+  ],
+  "scope": "canonical XML plus initial state restored twice, exactly as paired evaluation roots; not mid-rollout restore"
+}

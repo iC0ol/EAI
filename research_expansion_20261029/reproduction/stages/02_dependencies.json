@@ -1,0 +1,21 @@
+{
+  "name": "02_dependencies",
+  "state": "COMPLETE",
+  "exit_code": 0,
+  "completed_utc": "2026-10-28T17:32:15.500613+00:00",
+  "command": [
+    "python3",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/install_dependencies.py"
+  ],
+  "command_sha256": "f4759ad991ae965a30b215ae854904b1d7306d467f632fddd0ca23fc224c9289",
+  "outputs": {
+    "requirements.freeze": {
+      "sha256": "45a8780e5995e34ed64812b79ee4ba3c18a83697ead29910f7944f0216fb5549",
+      "bytes": 5890
+    },
+    "dependency_install.json": {
+      "sha256": "99b49cf3962c43a8f3939c359446e2bc10c21d609db59a2b9a18efebe9b1f9c6",
+      "bytes": 845
+    }
+  }
+}

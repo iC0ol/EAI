@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-28T22:35:02.474174+00:00",
+  "updates": 60003,
+  "validation_passes": 2001,
+  "first_train_loss": 8.778958320617676,
+  "last_train_loss": 0.39281928539276123,
+  "last1000_mean_train_loss": 0.38026375955343245,
+  "last1000_mean_train_l1": 0.3673173515200615,
+  "last_validation": {
+    "utc": "2026-10-28T22:14:59.902587+00:00",
+    "epoch": 20000,
+    "updates": 60000,
+    "l1": 0.32163965702056885,
+    "kl": 0.009446990676224232,
+    "loss": 0.3310866355895996
+  },
+  "caution": "loss reduction alone did not establish task learning"
+}

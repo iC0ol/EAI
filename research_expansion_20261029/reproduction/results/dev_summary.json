@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-28T22:32:11.937237+00:00",
+  "state": "IMPLEMENTATION-LIMITED",
+  "n": 32,
+  "successes": 0,
+  "success_rate": 0.0,
+  "extra_reproducibility_rollouts": 1,
+  "total_policy_rollouts": 33,
+  "test_allowed": false,
+  "metadata_insensitive": false,
+  "checkpoint_sha256": "c904a97002571d96e3ee6b66057d09162cbdcb5e926cb6ea0b660ca1390bce13",
+  "checkpoint_updates": 60003,
+  "checkpoint_epochs": 20001,
+  "threshold": "0-3 of32 -> stop; >=4 not a paper reproduction pass",
+  "auxiliary": {
+    "any_reach": 0,
+    "any_grasp": 0,
+    "object_height_mean_max_m": 0.8207337435170559
+  },
+  "fixed_observation_n": 32,
+  "U": "NOT_RUN; initialized interface check only"
+}

@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-28T22:29:49.713160+00:00",
+  "allclose": true,
+  "max_abs_raw_action_difference": 0.0,
+  "initialization": "seed0 official U architecture, no optimizer updates and no U rollouts",
+  "scope": "interface invariance only, not a learned U baseline",
+  "same_RGB": true,
+  "metadata_perturbation": "same raymap interface; extrinsic tokens remain zero per use_cam_pose=False"
+}

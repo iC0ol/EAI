@@ -1,0 +1,693 @@
+{
+  "utc": "2026-10-28T22:35:02.474628+00:00",
+  "assets": [
+    {
+      "path": "PROTOCOL.md",
+      "bytes": 15407,
+      "sha256": "f1f24733775a4de78cc07147b3497e047376e4a6440d45800a91d600d1126390"
+    },
+    {
+      "path": "source_manifest.json",
+      "bytes": 553,
+      "sha256": "987fbae3b3e5a29970b9c6117edceffaf9f298f23ecbdb9572f60bbffb349960"
+    },
+    {
+      "path": "environment_origin.json",
+      "bytes": 320,
+      "sha256": "41778d2f226e14418dd8b84215acafb8a20a5692eb2411230389af3f3aec1444"
+    },
+    {
+      "path": "requirements.freeze",
+      "bytes": 5890,
+      "sha256": "45a8780e5995e34ed64812b79ee4ba3c18a83697ead29910f7944f0216fb5549"
+    },
+    {
+      "path": "dependency_install.json",
+      "bytes": 845,
+      "sha256": "99b49cf3962c43a8f3939c359446e2bc10c21d609db59a2b9a18efebe9b1f9c6"
+    },
+    {
+      "path": "manifests/dataset_asset.json",
+      "bytes": 445,
+      "sha256": "4bea42903c771eaf71b5e6f9be23f6c8dd4425534d275c725eab11b51ed974ac"
+    },
+    {
+      "path": "manifests/imagenet_weights.json",
+      "bytes": 347,
+      "sha256": "a471e1c8b7e35956266aeb2f4ca9069b2e853b834201988b27ea11d171709b7f"
+    },
+    {
+      "path": "frozen_training_plan.json",
+      "bytes": 1984,
+      "sha256": "93da2af07e19ea39398826f2a397bbe688c00c544ba1b209bbcfadbb2efccee4"
+    },
+    {
+      "path": "manifests/frozen_roots.json",
+      "bytes": 179536,
+      "sha256": "6a8c441bd3dc6e78c5f3f99e3f606d9e70f961404ed0385955151bab36df8729"
+    },
+    {
+      "path": "manifests/C_config.json",
+      "bytes": 1141,
+      "sha256": "f4909f0f8376f6e48d4c6bb870ac46173d66cd9c13002e6709331f0f1c30b49a"
+    },
+    {
+      "path": "checkpoint_manifest.json",
+      "bytes": 409,
+      "sha256": "221c099f4c7a703c3bd304fa8f728ee9596aa655a37a89a1ae8969bc5b0f4f53"
+    },
+    {
+      "path": "checkpoints/C_latest.pt",
+      "bytes": 845671886,
+      "sha256": "c904a97002571d96e3ee6b66057d09162cbdcb5e926cb6ea0b660ca1390bce13"
+    },
+    {
+      "path": "checkpoints/C_previous.pt",
+      "bytes": 845671822,
+      "sha256": "c8ff2481f8a8bed9952e0c1dfe2953c7fa1815bb295708c5f5b7d888e9ee6021"
+    }
+  ],
+  "third_party_sources": [
+    {
+      "path": "vendor/kyc/policy_robosuite/train.py",
+      "sha256": "ca901eca853681a82affd54cb2bb66731d35591c59603767992d02ceb045cacd"
+    },
+    {
+      "path": "vendor/kyc/policy_robosuite/utils.py",
+      "sha256": "fbe212146cd0f93e8aa04a98913c736aabf2e4f06ff40eb6544934d0acf9fa1a"
+    },
+    {
+      "path": "vendor/kyc/policy_robosuite/eval.py",
+      "sha256": "702c7daf81cc73326edd9a86b55173e5440e17ce1efa169ec7ff2a66ab043571"
+    },
+    {
+      "path": "vendor/kyc/policy_robosuite/cam_embedding.py",
+      "sha256": "7bb33a6d205948da9df912445a7020201cb9f6afafc1eb406fbae5e46d1585fa"
+    },
+    {
+      "path": "vendor/kyc/policy_robosuite/models/act.py",
+      "sha256": "f294859ec44faa1622e586faa627af4f6aa711c23e0804e62c62bbc4672de9db"
+    },
+    {
+      "path": "vendor/kyc/policy_robosuite/models/backbone.py",
+      "sha256": "9efa091f3944d333c4cf9dd034f9ac94296f69ea8f6d4969b63d1b676c7f4398"
+    },
+    {
+      "path": "vendor/kyc/policy_robosuite/models/detr_vae.py",
+      "sha256": "fda4173929fbbf447ebd7eeb67d4c91818e86d88d52ca27ba641054adf1cda0f"
+    },
+    {
+      "path": "vendor/kyc/reproduce/paper_runs.yaml",
+      "sha256": "2fdf49927a78307b97a204f50107a8f61aa3057960e2895527c59fe954fa032e"
+    },
+    {
+      "path": "vendor/robosuite/robosuite/wrappers/action_wrapper.py",
+      "sha256": "25549efccf50530875c3f31873063db84c2459124303219103583e597f0e1499"
+    },
+    {
+      "path": "vendor/robosuite/robosuite/environments/manipulation/lift_rand.py",
+      "sha256": "cb336421df69f9ca791db4e86b37c493bf68ac6c3cae9ee011baa1bf2c37d76e"
+    }
+  ],
+  "root_snapshots": [
+    {
+      "path": "root_states/dev/1000",
+      "utc": "2026-10-28T22:29:48.660986+00:00",
+      "root_id": 1000,
+      "env_seed": 1000,
+      "xml_sha256": "b36506775a91a2d5b3ab9cfc0ed1e190a2a4b1491931f52cdd18b790042a7830",
+      "state_sha256": "0f3d106f2acb1b5a1dc05e081172f1181fec5c7ac473e822e65268389f203b3c",
+      "rng_sha256": "9af11d5b53e56671c4eaada52879e9787e899d536ff783e06bde326cc54a8e35",
+      "cube_geom_size": [
+        0.021413374387777608,
+        0.020723754135215124,
+        0.020070211795902723
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "3a8fae2fa2819e604503124f0806079e713fbfc8de79fccd0399a966b7a423a5"
+    },
+    {
+      "path": "root_states/dev/1001",
+      "utc": "2026-10-28T22:29:55.818785+00:00",
+      "root_id": 1001,
+      "env_seed": 1001,
+      "xml_sha256": "405960b65fd0d4924c5337d582ee1aeb62bbd76fc048f878601c032498110c47",
+      "state_sha256": "e44bb52339f44062f0a7ecb053ee28a17c96e984dfbaa64f16b238eaabba6427",
+      "rng_sha256": "cad8bdb091d2660a845d905bdb909447f5b847b84011a8ccabb7771fc1a26744",
+      "cube_geom_size": [
+        0.02198393909257527,
+        0.021338359126877378,
+        0.021386079483703947
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "3b4a55e8e132ddab60f9c45baec9056af7dddbb201d6b6da9cdac07818302241"
+    },
+    {
+      "path": "root_states/dev/1002",
+      "utc": "2026-10-28T22:30:00.155530+00:00",
+      "root_id": 1002,
+      "env_seed": 1002,
+      "xml_sha256": "0e85bac0325a2f95b269957f60a258f0dc26da268f55421e28ea07e44df608f8",
+      "state_sha256": "bb66f6023d4ed7d906f2ade693bebe66994a1be4f5b7634427062227e5d5a4f8",
+      "rng_sha256": "279e29686aa65a586a057d1f2da057b9b075cefd42547a31abbde4cf7217f5df",
+      "cube_geom_size": [
+        0.020371376747094397,
+        0.021808028293444533,
+        0.02041495687304114
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "b18cab6aa4b44db305549f354a491959486a409156d8ccdd48946dfaf2a6a83a"
+    },
+    {
+      "path": "root_states/dev/1003",
+      "utc": "2026-10-28T22:30:04.471344+00:00",
+      "root_id": 1003,
+      "env_seed": 1003,
+      "xml_sha256": "a34e6e7c184d61e5c3826a324a0ef60bf3f9801d9e0bef70d87cb96f4f036ea8",
+      "state_sha256": "756e48bfe636d25c61a15086a3af81ed85753f40abde0291001b9293d0a0e363",
+      "rng_sha256": "54ec72aaa6b6694077de519fcd1f5c1673030d62e44d78c686dea63885e166a2",
+      "cube_geom_size": [
+        0.020867947408826273,
+        0.020471747094819363,
+        0.021274125139388263
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "a9b6a639b4afed39103601a391b11f8f1d9d41479de2d84f1f894a6372b34fc2"
+    },
+    {
+      "path": "root_states/dev/1004",
+      "utc": "2026-10-28T22:30:08.672452+00:00",
+      "root_id": 1004,
+      "env_seed": 1004,
+      "xml_sha256": "6588c5944df83401ee13cc16b4a75bb51eb252279f8dce7f1f73d4b9a5667626",
+      "state_sha256": "9e0ca1030f4ad844c272e1ece5b97d62342da9d1471fb743568a0c77af70afd5",
+      "rng_sha256": "cb0ea11fb6ae609e91ff0b91be8184d1c0625960402714b914bd1fc01620e9f4",
+      "cube_geom_size": [
+        0.02132480540062844,
+        0.020611241590558254,
+        0.02044378510931192
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "8e794e912775446fcfc423122189250bea5bfa6e40e5e3d2969a8d485e843481"
+    },
+    {
+      "path": "root_states/dev/1005",
+      "utc": "2026-10-28T22:30:12.916328+00:00",
+      "root_id": 1005,
+      "env_seed": 1005,
+      "xml_sha256": "13c3eaf99e135835fb08e750195aa37adf00d8ce2dd93a7a21d74190bb6a8652",
+      "state_sha256": "73ec30c5e66e3853b981e39a25f164dae4e2f598681ff6deb41de2d1b5af99b7",
+      "rng_sha256": "2d63068d6b0abf3d7c1baf11a1221ee0b1c555e8ea3577f3edf49bea498f070d",
+      "cube_geom_size": [
+        0.0216869426696085,
+        0.021186781595162015,
+        0.021274150791529348
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "c8f7cc2206e8c189ba65717346086046746fc4f2646eda3ba7bbfc37e860efe0"
+    },
+    {
+      "path": "root_states/dev/1006",
+      "utc": "2026-10-28T22:30:17.261340+00:00",
+      "root_id": 1006,
+      "env_seed": 1006,
+      "xml_sha256": "9e0787d61d07608c5c39d839c544f7ff19f6c14f76ae7e39f8bbe5caac27f31c",
+      "state_sha256": "e1c7090cf132eab5d0f0470b8e84a1d3bdf807023bf4927a537da348feee0941",
+      "rng_sha256": "b067242752ee97df1050f3eb589be89ee5c6246d1803ee192ee95ba3deefefd2",
+      "cube_geom_size": [
+        0.02121084202419099,
+        0.02090097405381701,
+        0.020982532280091643
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "01d2a985683bdaf9f182a24de493a00868def52143b348e92b4a2508b47dba9f"
+    },
+    {
+      "path": "root_states/dev/1007",
+      "utc": "2026-10-28T22:30:21.780441+00:00",
+      "root_id": 1007,
+      "env_seed": 1007,
+      "xml_sha256": "0229440472ff126c5ce70fe93afccd007bbbdfcfa31bfd6545eb905e813b94c6",
+      "state_sha256": "af89ddf8402ba24a4669812e6e60ed3e2172476128c27120b54d2e2dfbde28cf",
+      "rng_sha256": "324f65cdcb7f66f98e78eda31c336cdfe30b0659e15881aad045b20949b44c0f",
+      "cube_geom_size": [
+        0.02016692106378787,
+        0.021945585341681638,
+        0.021970604931619276
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "b5373756a683b5b16fe355cd1c349e579a10b43643f57d2cbebab030f1ac6c1a"
+    },
+    {
+      "path": "root_states/dev/1008",
+      "utc": "2026-10-28T22:30:26.235551+00:00",
+      "root_id": 1008,
+      "env_seed": 1008,
+      "xml_sha256": "146fcfbf1ad6ccc62dc6409eacc2c184fce518105e1008e636ec2dbc8a973636",
+      "state_sha256": "872453696797d320f6d2e05113bccc6f602d118a970a8d4d895b4f2ed367a9a1",
+      "rng_sha256": "7a80d797cddfca0a4ed27ab624b7db1ccf2ce241284e62f9806091da2f91bf79",
+      "cube_geom_size": [
+        0.0219044576716063,
+        0.021531651485382896,
+        0.02113905289979174
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "d62a8bf6147ce3e74c874d246e98ed667b56c1d51276ad75c686743dc03f8b3f"
+    },
+    {
+      "path": "root_states/dev/1009",
+      "utc": "2026-10-28T22:30:31.122614+00:00",
+      "root_id": 1009,
+      "env_seed": 1009,
+      "xml_sha256": "a3e37dd95a94d565708449c20c4a980e42666cb6d6be3cab8ac7078560a55d3b",
+      "state_sha256": "47a1135843980dd00f2b4d0ce43d0fdccefb6ef220f823efec3110d5909977bf",
+      "rng_sha256": "cbf7d7cdeb875324da96635ba757ab2c056f70ab94217a23c6710bbe6214a38c",
+      "cube_geom_size": [
+        0.020179975584467963,
+        0.021429664824171964,
+        0.02107010627986074
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "aac0d3725744b5abb2342c97b56d24df3a1b86a2fb8a7350745adcf70ebc3b16"
+    },
+    {
+      "path": "root_states/dev/1010",
+      "utc": "2026-10-28T22:30:35.502339+00:00",
+      "root_id": 1010,
+      "env_seed": 1010,
+      "xml_sha256": "c8aaa85f79e8e05abb8f44c738697161cc94031e1454bd1e5d40ab69e1106e63",
+      "state_sha256": "05044e315b46c40f6e72f8ca6540a6908b1d8e787865119d5986c73fa2221be9",
+      "rng_sha256": "a324469925a2b043353b0c712fcdaf65ca921001f3263dab6d42ca439117c118",
+      "cube_geom_size": [
+        0.021408942126557987,
+        0.020817987699596835,
+        0.02174136111911253
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "dcb5a56612a704f82e377cf4fad2b5ec90138b6e1ef8c50f1df755a286ab2146"
+    },
+    {
+      "path": "root_states/dev/1011",
+      "utc": "2026-10-28T22:30:39.940758+00:00",
+      "root_id": 1011,
+      "env_seed": 1011,
+      "xml_sha256": "386582d629ca35cdd3c56120af098774971d8d5b9caf961672ca98390d652683",
+      "state_sha256": "4d17325836df66edeedf79c04d28f2a2bd270e8abd5dae91225fd8ea6a2639d9",
+      "rng_sha256": "1c3d766fad992b7ddf6990383edbaa2d924b5b99fb02c1752d9a42276976d452",
+      "cube_geom_size": [
+        0.02055717970581042,
+        0.020167683250128184,
+        0.02012534450493993
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "d19bfe3870815fcf434050655fddc38b9ed373c646af5375061ed83ecc9e5ffa"
+    },
+    {
+      "path": "root_states/dev/1012",
+      "utc": "2026-10-28T22:30:44.325815+00:00",
+      "root_id": 1012,
+      "env_seed": 1012,
+      "xml_sha256": "f4ab482c1984ac82281168459157c36bca6ac7c2097ec3a575871d91c1f0b43d",
+      "state_sha256": "7ce662ff39733f60b50b6fa744feadbdd4155770763146acae419e21b267ee63",
+      "rng_sha256": "dc0fdb664231764592fadee3fceed0d642c76fd7e43266ee43490b2bfd93d09d",
+      "cube_geom_size": [
+        0.0201702710048869,
+        0.020298726426018543,
+        0.021002370018527578
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "8feb1fe57513993b3647fedff1a9ba018c82e9570bd4bc3e22bd43a80aea10e8"
+    },
+    {
+      "path": "root_states/dev/1013",
+      "utc": "2026-10-28T22:30:48.844820+00:00",
+      "root_id": 1013,
+      "env_seed": 1013,
+      "xml_sha256": "43947228b0ab568c5477f918cd04c97dacc76429f1236f96720238b034bf6af1",
+      "state_sha256": "d0425763ac9f904df5efb9d0ac14a4f65f1ca2cf5a84df01b1888bef34684570",
+      "rng_sha256": "e7edda8138548a7495255ef57ebf462c7caa50b7a525b2b82599a2412de0c6bb",
+      "cube_geom_size": [
+        0.02149185622425544,
+        0.020454336911850925,
+        0.021047048306002812
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "81849a43437d425c3c82f0d6f390758935fb1eb38e8871d275ff6bbde81e9541"
+    },
+    {
+      "path": "root_states/dev/1014",
+      "utc": "2026-10-28T22:30:53.347231+00:00",
+      "root_id": 1014,
+      "env_seed": 1014,
+      "xml_sha256": "edbbb77adb028ff678876f9dcf00cecc54f20a468a9461d15c7aff8c8422ff81",
+      "state_sha256": "e939b19a13eb4b3845dc46ceeff064dd0da83de03f98974f45fe3acd3ea9caec",
+      "rng_sha256": "328825783e687140e662a11d629fefcc89e1666bdc696de6f1ae195b1aa933d6",
+      "cube_geom_size": [
+        0.020582784702547156,
+        0.021246061179573908,
+        0.02081133237749043
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "2156791f998ceda32dc62d7f89d8c038927a104fee1b8de536907c9c67193ea7"
+    },
+    {
+      "path": "root_states/dev/1015",
+      "utc": "2026-10-28T22:30:57.799492+00:00",
+      "root_id": 1015,
+      "env_seed": 1015,
+      "xml_sha256": "e5c19d450a36bcc0abaf992d341bd94d5236bf066439e4e733d04a4ffc62713a",
+      "state_sha256": "40a692e35662722ee578cc7e61c20d7351507d2220323cf183916bee5aaedf16",
+      "rng_sha256": "e2a70bfe9b92bbb3c2034c1571027ab12ae4076ad3f6b7ef7fed92d19858b591",
+      "cube_geom_size": [
+        0.02094131671895218,
+        0.021911131863540198,
+        0.021667850390559792
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "3c901f8f9bf263cb6c13a7f5f79d405e4b5100e5b8a4a589ff90335ca2cac9f6"
+    },
+    {
+      "path": "root_states/dev/1016",
+      "utc": "2026-10-28T22:31:02.214423+00:00",
+      "root_id": 1016,
+      "env_seed": 1016,
+      "xml_sha256": "def0ab409a25797cbc37f77fd91ec753ced2c2e76d2a5936ce534fce2013a193",
+      "state_sha256": "6dfc0059dc3f434c6f1bd0e12bd27759203cbef0b4f8a8158fc84b9e90ceed8c",
+      "rng_sha256": "261d2c6a70bca6758474c25a4658b8d11aa22a8a33503ab07fef04e563cae782",
+      "cube_geom_size": [
+        0.020968246233817798,
+        0.02155619203718497,
+        0.021398047194890645
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "8bedfc0c70a11640f18a8d94ab2534105ff4bfe67cfc5908515f15edf2daba36"
+    },
+    {
+      "path": "root_states/dev/1017",
+      "utc": "2026-10-28T22:31:06.645860+00:00",
+      "root_id": 1017,
+      "env_seed": 1017,
+      "xml_sha256": "ef9e6baeafbb71ad5c36d3e6448f4c409a47efeb6ab3c0235f1c064ae0fba28b",
+      "state_sha256": "d538a584835478a2d0cf80797b24ed60cd06d1ebfbdfbd4710a111e287fbea7a",
+      "rng_sha256": "26992ac0ba7f9347208f6249c4956879f37d313a85d21d44d7779ffcded54a81",
+      "cube_geom_size": [
+        0.0207559425940771,
+        0.021404424890771098,
+        0.020121234151571056
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "11c34711de97580db2f4c81a319e18490b9cbe0b475fa7de6ef05ec21683f912"
+    },
+    {
+      "path": "root_states/dev/1018",
+      "utc": "2026-10-28T22:31:11.009196+00:00",
+      "root_id": 1018,
+      "env_seed": 1018,
+      "xml_sha256": "248cd367eaa78abf41175e6d95ec70c7db65c1d032dc11bedecb86a7450328fd",
+      "state_sha256": "b3ee69c505d47fe8e1134910b04bcaf1cc645d0e37cb42cfc11fff422d4d9d27",
+      "rng_sha256": "f8289efbddf04da5479cb7a398c5e6afbb3a9502c46d4be91b50a2f997e145e0",
+      "cube_geom_size": [
+        0.020977918681209524,
+        0.02160764357099939,
+        0.020501279007958593
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "cda750c1509f07e497917e7a2479dcaeddb6bbcdf9f0cba7ab4afc9eb2f7ad61"
+    },
+    {
+      "path": "root_states/dev/1019",
+      "utc": "2026-10-28T22:31:15.354344+00:00",
+      "root_id": 1019,
+      "env_seed": 1019,
+      "xml_sha256": "c8dc2dcb4428d2111e981774444d356d2017a8d58b8a7e8fe4631e6bf8490dad",
+      "state_sha256": "d20d6a76da90d9ec2b8aa96adc1032d7769186b03535649150ff200eedbd911a",
+      "rng_sha256": "7916ab2ab506ac6a23c04416fa6de4d090b01d65127db25924e87d93c9f1d94f",
+      "cube_geom_size": [
+        0.02044740195792913,
+        0.02181484625542735,
+        0.020298971994636737
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "18d67b736c9329cc1e856ae48f1c672c6481af5e7becc9e4b519291564671c3e"
+    },
+    {
+      "path": "root_states/dev/1020",
+      "utc": "2026-10-28T22:31:19.771450+00:00",
+      "root_id": 1020,
+      "env_seed": 1020,
+      "xml_sha256": "dfb44e70da504ea426bc01cd66b69d23ae23e7b4e9ca124a7a35b2302feeef4f",
+      "state_sha256": "26626cc0a20ea161e7fefa60401529004a348732674a239c962f0d7d16ef3130",
+      "rng_sha256": "1c284a087e424fe7c483ccf297891510302eafa66939a0c75f8616faed4585b9",
+      "cube_geom_size": [
+        0.02120878314432281,
+        0.021423460008352324,
+        0.020117277655887673
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "35cfbd2cf04d4383d996f47e2307251a8ce43c97770f916e311fdfec6e478244"
+    },
+    {
+      "path": "root_states/dev/1021",
+      "utc": "2026-10-28T22:31:24.292301+00:00",
+      "root_id": 1021,
+      "env_seed": 1021,
+      "xml_sha256": "222f3e920558258527d01a23ff6d3918693ab6063c3a4274caf70105d92eed88",
+      "state_sha256": "b651b0651d06d1818108c925d94c7fc8e11dabe6311e5f32544d2f87fe8cec21",
+      "rng_sha256": "38646ccd2d81fd2a03db5f81777cd1de6fd9cec75d4d5e7b9958919710260839",
+      "cube_geom_size": [
+        0.020690480608520485,
+        0.021655384806680285,
+        0.02033167526071146
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "f194c4f7ffeff1c91ce7964a63a5ec0c5c3c0879fba5e525b8cf0b10275d2247"
+    },
+    {
+      "path": "root_states/dev/1022",
+      "utc": "2026-10-28T22:31:28.745069+00:00",
+      "root_id": 1022,
+      "env_seed": 1022,
+      "xml_sha256": "c534d10f7ab3b8409989505971398eb920e14d7602e174269429c4182865394d",
+      "state_sha256": "363b65a7d9aa44ffc7c36df63b7792d624c88d16044e48825fb138b1d733bef5",
+      "rng_sha256": "94db35959ea3511c49f07678defe73d6379c91830b7ff5ed99fcb075d878377e",
+      "cube_geom_size": [
+        0.02172270386495809,
+        0.021059647704441496,
+        0.020177337472787778
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "0657cfdae8c4b71a71197515fc2bf920435b8564eec7e453c8cdde8aa1df24c5"
+    },
+    {
+      "path": "root_states/dev/1023",
+      "utc": "2026-10-28T22:31:33.295319+00:00",
+      "root_id": 1023,
+      "env_seed": 1023,
+      "xml_sha256": "807c52dae2d0ee6e444cb3003e01e1ab6c0c98c98ab1803c5a93dda72cf794fd",
+      "state_sha256": "329a9216b05ec872da258aa7a64702b7aa7c48fa75afd4be806e9168b95d5702",
+      "rng_sha256": "79886ee49bde79993a763b066a7ddc02c996bcbb0dd5acd185c83a473f99b98a",
+      "cube_geom_size": [
+        0.020439455612832804,
+        0.02198960233430685,
+        0.021265540539792623
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "2f98b28b3491516b5ed498d05048d769f4ee68d76fa746bc9e43ab87a5850309"
+    },
+    {
+      "path": "root_states/dev/1024",
+      "utc": "2026-10-28T22:31:37.784227+00:00",
+      "root_id": 1024,
+      "env_seed": 1024,
+      "xml_sha256": "17d50eee6c123bd229dc21f3244e361a8ed40b5e840910c6e7eb6bd8d5b7299c",
+      "state_sha256": "785a618125187d79110044bf0e0b6344628f11c86b8a46f7a31d157569ca828c",
+      "rng_sha256": "d7b42c9e48ad0868f7f2abed3f1588a6ebb2841fddb476e35dff049b322b0c6f",
+      "cube_geom_size": [
+        0.020373351417852476,
+        0.020099950741332084,
+        0.02177996227998526
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "efc369c288e9a577022f53b7597eedc136048e14a00aaac528cbba2fe348473f"
+    },
+    {
+      "path": "root_states/dev/1025",
+      "utc": "2026-10-28T22:31:42.177923+00:00",
+      "root_id": 1025,
+      "env_seed": 1025,
+      "xml_sha256": "4309d9695d68fb86dede7f2810421982321e29cc814ae634aa04d37a5ce81b94",
+      "state_sha256": "9a10c20ca8aa63e0eda85aab3c8be42ecd2f14d096147928d4d33519f78bcad1",
+      "rng_sha256": "2d19d5b21f7f8c88f362113b1f80f7e618cbc31b39b59432327b6b5b56beef89",
+      "cube_geom_size": [
+        0.02138228229994513,
+        0.021261324096863807,
+        0.020228734466954078
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "f45037e089b71550e2ce846796ff7e0a5eed5976bb424bb20288d8c9f06a8bb6"
+    },
+    {
+      "path": "root_states/dev/1026",
+      "utc": "2026-10-28T22:31:46.546541+00:00",
+      "root_id": 1026,
+      "env_seed": 1026,
+      "xml_sha256": "0c1d77d801603ed9b56ccea0a55351aed9621ce805c86e89c430f35dcb852ef7",
+      "state_sha256": "bebb5f46fe836dd544cc36b65d281b1c97088f34e0e5f0f61befe0cb295e6f65",
+      "rng_sha256": "4843046728e1833f29b90f6ace074b6fd80e534b389b97e57e56dd1212d5ecca",
+      "cube_geom_size": [
+        0.02142373007733667,
+        0.02189655665653689,
+        0.021153786216800665
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "6568f1170461f17b4b9e2acc92d1768b1d362209800f2112c781d57c77173c01"
+    },
+    {
+      "path": "root_states/dev/1027",
+      "utc": "2026-10-28T22:31:51.043627+00:00",
+      "root_id": 1027,
+      "env_seed": 1027,
+      "xml_sha256": "4f3f4c1526cbdf850ec9dfb193ab29b3951b32327ebbb008d4dd6da7cf681b09",
+      "state_sha256": "c74c6a5b7473e1327000c79af42fc1dd1f6fd9a916e51ca78a1c658d0b300a86",
+      "rng_sha256": "c1647a8b8b93277841b49e6dbe4efee0df76a58d87c6ce6e2608ff796ac00a89",
+      "cube_geom_size": [
+        0.02117507718825411,
+        0.020868388788010117,
+        0.02059409375387774
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "a98b9c91a67f8f10aad87138d627516fda3c2d984c27753bcfd5ccd700468116"
+    },
+    {
+      "path": "root_states/dev/1028",
+      "utc": "2026-10-28T22:31:55.578033+00:00",
+      "root_id": 1028,
+      "env_seed": 1028,
+      "xml_sha256": "7b7d58fba4e32573207b665764e2f72b0cd08505daf2a12b90dc680feb73cc1f",
+      "state_sha256": "39631a57f0fbca62f6c11fc11a62b8c771d2a6897ea65863aa6114f644552d8e",
+      "rng_sha256": "e14c75da13f524d5e722f6a7c1a8067ad2c48cfaa78f781975010737c4b03aae",
+      "cube_geom_size": [
+        0.02175978089185514,
+        0.02111988643062956,
+        0.021665839964942427
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "23e741c5c58fefcb3d18e4bb90c847a2c46c2928cb5a455a47733593f133d02a"
+    },
+    {
+      "path": "root_states/dev/1029",
+      "utc": "2026-10-28T22:32:00.063165+00:00",
+      "root_id": 1029,
+      "env_seed": 1029,
+      "xml_sha256": "962cde00f6915c87bb187bd21dec34327b9e633793dec9612e7292a0436ccc4c",
+      "state_sha256": "b3cfd0aff36b397fa0507aedafb967ba11f95535e42fff46e49b14b41f26fdc5",
+      "rng_sha256": "c761fc0a63692dfe510ac9ebc3193f9a09f8538a5de57fadbba651f6331a8cbb",
+      "cube_geom_size": [
+        0.02090494257706547,
+        0.021410128660771917,
+        0.02159235925148647
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "3d5ca2f65c1e8a9ffcdc623b520a9fd8af6f2bedabcc78cad28637be02c81786"
+    },
+    {
+      "path": "root_states/dev/1030",
+      "utc": "2026-10-28T22:32:04.688968+00:00",
+      "root_id": 1030,
+      "env_seed": 1030,
+      "xml_sha256": "a7985ddd879326ee919ff04e3c615e11eb24e1b97282ede2bf9b42d7977c4dc5",
+      "state_sha256": "8402cd23ff232f4ca6103c33dcd9fb0dc67e283abbd1ef14b0e371f2274e685f",
+      "rng_sha256": "401b271815329cf8764cf160b3cfc00d8763e330ceb12d2c9cefcee3d01f3a8c",
+      "cube_geom_size": [
+        0.02119250411632606,
+        0.02032676223263702,
+        0.02115653362528357
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "6c7d6ecc5ebac6fd9b3ff9d39a6778ae9bf59533cda03d0a634b25ceaf202726"
+    },
+    {
+      "path": "root_states/dev/1031",
+      "utc": "2026-10-28T22:32:09.214654+00:00",
+      "root_id": 1031,
+      "env_seed": 1031,
+      "xml_sha256": "8a6d7accfc6ef7449b3e3e22420c27c445d61e6c46a334a09e9ddbeb687d4e3b",
+      "state_sha256": "f69ac58b81c230d4cb840461838438dc330bea7c0e3bd760763f3894636df59f",
+      "rng_sha256": "b4721c0b3ab3ce0fffb7e6128eeee51c047fc6dadfb237090a6bbb518a76314f",
+      "cube_geom_size": [
+        0.021449703919769927,
+        0.02075538125910711,
+        0.02155711015643758
+      ],
+      "state_shape": [
+        58
+      ],
+      "clean_RGB": "4c596702f43d25ceadd93d4379feb9a19946fd400092a44bae91eca19078f222"
+    }
+  ],
+  "third_party_source_edits": "none; import official ACT and Dataset directly; custom runner/evaluator around them",
+  "transient_download_credentials": "not retained; public Drive canonical URL/ID and asset hash retained",
+  "runtime_dependency_policy": "copied existing local runtime/packages to a new directory; no source environment modified; pip changes confined to env/"
+}

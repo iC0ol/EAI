@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-28T22:39:09.794971+00:00",
+  "report_hash_verified": true,
+  "script_syntax_verified": true,
+  "report_links_verified": true,
+  "supervisor_exited_lock_released": true,
+  "no_formal_test_records_or_states": true,
+  "credential_pattern_hits": [],
+  "scope": "authored report/code/small results only; no git add/commit/push"
+}

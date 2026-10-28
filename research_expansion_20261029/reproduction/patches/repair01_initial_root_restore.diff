@@ -1,0 +1,35 @@
+--- harness_before_repair01.py
++++ scripts/validate_semantics.py
+@@ -9,8 +9,9 @@
+     with h5py.File(DATA) as f:
+         meta={'utc':utc(),'dataset_sha256':sha(DATA),'env_args':spec,'action_space':space,'demo_count':len(f['data']),'total_frames':int(f['data'].attrs['total']),'demo_0_keys':list(f['data/demo_0']),'per_demo_XML_present':False,'train_demos':list(range(200)),'validation_demos':list(range(200,210)),'test_demos_used_for_training':False}
+     atomic_json(ROOT/'manifests/data_split.json',meta)
+-    replay=[]
++    replay=[json.loads(x) for x in (out/'expert_replays.jsonl').read_text().splitlines()] if (out/'expert_replays.jsonl').exists() else []
+     for i in range(10):
++        if any(x['demo']==i for x in replay):continue
+         # Official generator's documented default seed=42, then seed+demo id; no search for a winning seed.
+         env=make_env(42+i)
+         with h5py.File(DATA) as f:
+@@ -24,13 +25,15 @@
+             maxh=max(maxh,float(env.sim.data.body_xpos[env.cube_body_id][2]))
+         row={'demo':i,'success':success,'steps':len(actions),'seconds':time.perf_counter()-t,'first_absolute_command_max_error':float(np.max(np.abs(first_reconstructed-first[:6]))),'eef_position_error_mean_m':float(np.mean(errors)),'eef_position_error_max_m':float(np.max(errors)),'max_object_height_m':maxh,'source_default_seed':42+i,'geometry_limitation':'Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search.'}
+         replay.append(row);append_json(out/'expert_replays.jsonl',row);print(row,flush=True)
+-        if i==0:
++        if i==1:
+             poses=json.loads((ROOT/'vendor/kyc/policy_robosuite/camera_poses/train_cameras.json').read_text())['poses'];T=np.array(poses[0]);K=intrinsics(env)
+-            rgb=render(env,T);Image.fromarray(rgb).save(out/'expert_demo0_final.png')
+-            rootxml=env.sim.model.get_xml();(out/'replay_model.xml').write_text(rootxml)
+-            state=env.sim.get_state().flatten().copy();env.reset_from_xml_string(rootxml);env.sim.set_state_from_flattened(state);env.sim.forward();rgb2=render(env,T)
+-            repeat={'same_xml_state_render_identical':bool(np.array_equal(rgb,rgb2)),'image_max_abs_difference':int(np.max(np.abs(rgb.astype(int)-rgb2.astype(int)))),'xml_sha256':sha(out/'replay_model.xml'),'state_shape':state.shape}
+-            atomic_json(out/'restore_check.json',repeat)
++            rootxml=env.model.get_xml();(out/'canonical_initial_model.xml').write_text(rootxml)
++            state=states[0].copy()
++            env.reset_from_xml_string(rootxml);env.sim.set_state_from_flattened(state);env.sim.forward();rgb=render(env,T)
++            Image.fromarray(rgb).save(out/'expert_demo1_initial.png')
++            env.reset_from_xml_string(rootxml);env.sim.set_state_from_flattened(state);env.sim.forward();rgb2=render(env,T)
++            repeat={'same_xml_state_render_identical':bool(np.array_equal(rgb,rgb2)),'image_max_abs_difference':int(np.max(np.abs(rgb.astype(int)-rgb2.astype(int)))),'xml_sha256':sha(out/'canonical_initial_model.xml'),'state_shape':state.shape,'scope':'canonical XML plus initial state restored twice, exactly as paired evaluation roots; not mid-rollout restore'}
++            atomic_json(out/'initial_restore_check.json',repeat)
+             assert repeat['same_xml_state_render_identical'],'XML+state restore must reproduce image'
+             emb=PluckerEmbedder(img_size=256,device='cuda');rays=emb(torch.tensor(K,device='cuda')[None],torch.tensor(T,dtype=torch.float32,device='cuda')[None])
+             P=rays['plucker'][0].cpu().numpy();D=P[:,:,3:];M=P[:,:,:3];O=T[:3,3]

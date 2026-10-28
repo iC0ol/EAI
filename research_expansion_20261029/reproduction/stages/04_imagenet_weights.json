@@ -1,0 +1,17 @@
+{
+  "name": "04_imagenet_weights",
+  "state": "COMPLETE",
+  "exit_code": 0,
+  "completed_utc": "2026-10-28T17:36:56.599608+00:00",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/prepare_weights.py"
+  ],
+  "command_sha256": "1022d45cad9972fc24061f84164af7f810143bc14aa0b4911903d0062236f810",
+  "outputs": {
+    "manifests/imagenet_weights.json": {
+      "sha256": "a471e1c8b7e35956266aeb2f4ca9069b2e853b834201988b27ea11d171709b7f",
+      "bytes": 347
+    }
+  }
+}

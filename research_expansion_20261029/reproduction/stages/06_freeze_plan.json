@@ -1,0 +1,21 @@
+{
+  "name": "06_freeze_plan",
+  "state": "COMPLETE",
+  "exit_code": 0,
+  "completed_utc": "2026-10-28T17:40:42.480632+00:00",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/freeze_plan.py"
+  ],
+  "command_sha256": "c6038833b106880ffafe3617493bb92da433ec16c4fb12fbff138221a1005ff8",
+  "outputs": {
+    "frozen_training_plan.json": {
+      "sha256": "93da2af07e19ea39398826f2a397bbe688c00c544ba1b209bbcfadbb2efccee4",
+      "bytes": 1984
+    },
+    "manifests/frozen_roots.json": {
+      "sha256": "6a8c441bd3dc6e78c5f3f99e3f606d9e70f961404ed0385955151bab36df8729",
+      "bytes": 179536
+    }
+  }
+}

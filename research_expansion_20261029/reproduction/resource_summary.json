@@ -1,0 +1,53 @@
+{
+  "utc": "2026-10-28T22:38:22.435077+00:00",
+  "supervisor_gpu_allocation_seconds": 16675.246750593185,
+  "gpu_allocation_upper_seconds_from_stage_intervals": 16710.438722,
+  "gpu_stage_intervals": [
+    {
+      "stage": "03_semantics",
+      "conservative_seconds_including_poll_tail": 15.014857
+    },
+    {
+      "stage": "03a_restore_diagnosis",
+      "conservative_seconds_including_poll_tail": 10.010694
+    },
+    {
+      "stage": "03b_semantics_canonical_reset",
+      "conservative_seconds_including_poll_tail": 30.031402
+    },
+    {
+      "stage": "05_C_smoke",
+      "conservative_seconds_including_poll_tail": 25.028541
+    },
+    {
+      "stage": "07_C_training",
+      "conservative_seconds_including_poll_tail": 16469.665511
+    },
+    {
+      "stage": "08_dev_gate",
+      "conservative_seconds_including_poll_tail": 155.682397
+    },
+    {
+      "stage": "09_test_if_dev_passes",
+      "conservative_seconds_including_poll_tail": 5.00532
+    }
+  ],
+  "sampled_process_tree_RSS_peak_bytes": 2550284288,
+  "sampled_device_memory_peak_bytes_including_display": 6392119296,
+  "torch_allocated_peak_bytes": 4862030848,
+  "torch_reserved_peak_bytes": 5563744256,
+  "sampled_min_mem_available_bytes": 23133913088,
+  "sampled_min_disk_free_bytes": 187462787072,
+  "sampled_max_new_disk_bytes": 10425468844,
+  "download_bytes_conservative": 558921476,
+  "cpu_affinity": {
+    "cpus": [
+      0,
+      1,
+      2
+    ],
+    "supervisor_pid": 1944823
+  },
+  "resource_sample_count": 308,
+  "sampling_limitation": "RSS/device memory/disk are minute samples; torch reports its own allocator peak; no continuous RSS high-water claim"
+}

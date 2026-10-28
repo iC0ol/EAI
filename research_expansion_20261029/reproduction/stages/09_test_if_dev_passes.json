@@ -1,0 +1,14 @@
+{
+  "name": "09_test_if_dev_passes",
+  "state": "COMPLETE",
+  "exit_code": 0,
+  "completed_utc": "2026-10-28T22:32:21.028054+00:00",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/evaluate.py",
+    "--split",
+    "test"
+  ],
+  "command_sha256": "824ef07de9098fd5f9ffd103ae2d68acdbca1eefa1bd49a388c367c05d158bbb",
+  "outputs": {}
+}

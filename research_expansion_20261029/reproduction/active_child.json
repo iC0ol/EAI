@@ -1,0 +1,15 @@
+{
+  "identity": {
+    "pid": 2805034,
+    "ppid": 1944823,
+    "start_ticks": 258086157,
+    "rss_bytes": 5505024
+  },
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/offline_audit.py"
+  ],
+  "stage": "11_offline_audit",
+  "utc": "2026-10-28T22:35:01.521581+00:00",
+  "sid": 2805034
+}

@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-28T17:30:02.994202+00:00",
+  "method": "independent copy (reflink when supported), no shared writable package files",
+  "source_read_only": "/home/asus/EAI/u_consistency_pilot/.venv-v3",
+  "runtime": "/home/asus/EAI/research_expansion_20261029/reproduction/runtime/python311",
+  "network_bytes": 0
+}

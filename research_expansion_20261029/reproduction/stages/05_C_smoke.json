@@ -1,0 +1,26 @@
+{
+  "name": "05_C_smoke",
+  "state": "COMPLETE",
+  "exit_code": 0,
+  "completed_utc": "2026-10-28T17:37:21.630179+00:00",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/run_experiment.py",
+    "--smoke"
+  ],
+  "command_sha256": "2df2870fb59ce35db316821035fe99bb2d7008fdad1733901719da26c9d63a7b",
+  "outputs": {
+    "results/smoke_throughput.json": {
+      "sha256": "d881409251ec2e06f5ed57bf6f862df787067f50399607a32bcd159ecb6538b8",
+      "bytes": 1082
+    },
+    "checkpoint_manifest.json": {
+      "sha256": "a2567f29cb8f6a7e5b1cf25e777f66d56cbbf9b92be99522e0d3028fd1d0161b",
+      "bytes": 403
+    },
+    "training_progress.json": {
+      "sha256": "9ea890e9cc764e376844051d0adb446d569b93ebd3e9cd1c1aa0041fb8ee51c9",
+      "bytes": 784
+    }
+  }
+}

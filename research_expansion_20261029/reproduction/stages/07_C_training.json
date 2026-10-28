@@ -1,0 +1,21 @@
+{
+  "name": "07_C_training",
+  "state": "COMPLETE",
+  "exit_code": 0,
+  "completed_utc": "2026-10-28T22:15:12.148165+00:00",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/run_experiment.py"
+  ],
+  "command_sha256": "d74356dbd664739797c70f14359b839ecac35eee043eac274a980e2424bb758b",
+  "outputs": {
+    "training_progress.json": {
+      "sha256": "635bc9d58420f96eb6821427489838c3997facc5a10fa8b3d2d7af87f556e97c",
+      "bytes": 793
+    },
+    "checkpoint_manifest.json": {
+      "sha256": "221c099f4c7a703c3bd304fa8f728ee9596aa655a37a89a1ae8969bc5b0f4f53",
+      "bytes": 409
+    }
+  }
+}

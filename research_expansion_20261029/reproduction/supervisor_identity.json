@@ -1,0 +1,12 @@
+{
+  "pid": 1944823,
+  "ppid": 2150,
+  "start_ticks": 256253989,
+  "rss_bytes": 14548992,
+  "utc": "2026-10-28T17:29:39.882299+00:00",
+  "pgid": 1944823,
+  "sid": 1944823,
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/supervisor.py"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-28T22:29:53.555965+00:00",
+  "same_actions_allclose": true,
+  "max_action_abs_difference": 0.0,
+  "same_success": true,
+  "note": "one additional dev rollout, not an independent root"
+}

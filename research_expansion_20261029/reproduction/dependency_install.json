@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-28T17:32:11.470140+00:00",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--retries",
+    "2",
+    "--timeout",
+    "60",
+    "-c",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/manifests/constraints.txt",
+    "mujoco==3.3.0",
+    "numba==0.61.2",
+    "opencv-python==4.11.0.86",
+    "mink",
+    "qpsolvers[quadprog]",
+    "pynput",
+    "termcolor",
+    "pytest",
+    "imageio",
+    "imageio-ffmpeg",
+    "PyOpenGL",
+    "glfw",
+    "pyyaml"
+  ],
+  "freeze_sha256": "45a8780e5995e34ed64812b79ee4ba3c18a83697ead29910f7944f0216fb5549",
+  "robosuite_import_source": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite",
+  "optional_DP_SmolVLA": "not imported; experiment imports official ACT directly"
+}

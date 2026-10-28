@@ -1,0 +1,35 @@
+{
+  "name": "08_dev_gate",
+  "state": "COMPLETE",
+  "exit_code": 0,
+  "completed_utc": "2026-10-28T22:32:16.020656+00:00",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/evaluate.py",
+    "--split",
+    "dev"
+  ],
+  "command_sha256": "4e36e47b85bb9bd7c6b7f630cbc19313ad3a083a3a491d889a20f3a011e1125d",
+  "outputs": {
+    "results/dev_summary.json": {
+      "sha256": "9a420fa8347770c908aa400e74d9b0b51a4b0cf2c1a416c4ec5dcb3f880e8059",
+      "bytes": 681
+    },
+    "results/U_metadata_negative_control.json": {
+      "sha256": "c2e44ada4ab5204473f87cce3cffbc98d607a9cdfd9dfd756a2cbae0474fa5b1",
+      "bytes": 392
+    },
+    "results/clean_rollout_reproducibility.json": {
+      "sha256": "06431179a617063c0167c1f43a99237a3f7227ea418b387e98cf891efbc4f41f",
+      "bytes": 206
+    },
+    "results/dev_fixed_observation.jsonl": {
+      "sha256": "d67647963576fb8ef35c5152ac6c486dc8273bf2b20a6adcc3300edbd0700c3a",
+      "bytes": 100905
+    },
+    "results/dev_rollouts.jsonl": {
+      "sha256": "76d0e58f2c17612ce2565234e9dcf0c2d580b6ec651a641b5d2d36d1d67ac693",
+      "bytes": 185825
+    }
+  }
+}

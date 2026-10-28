@@ -1,0 +1,23 @@
+[
+  {
+    "id": "immiscible",
+    "url": "https://arxiv.org/pdf/2610.09369v1",
+    "bytes": 3242338,
+    "sha256": "da45bdf5358c526be43773cf92afa27713e631c005303fd8d7504db240ef8290",
+    "utc": "2026-10-28T17:06:52.932641+00:00"
+  },
+  {
+    "id": "isr",
+    "url": "https://arxiv.org/pdf/2606.22907v1",
+    "bytes": 4841779,
+    "sha256": "9bce1c115e5694ad31098e90f03fe345ba03fe618411c5f5747a9b3b97674311",
+    "utc": "2026-10-28T17:06:54.337976+00:00"
+  },
+  {
+    "id": "aqc",
+    "url": "https://arxiv.org/pdf/2605.05544v1",
+    "bytes": 4898389,
+    "sha256": "9b336793585fe918ab6e3d28981ffcfdcd84d0167e3ae3293298db4ae32f4b76",
+    "utc": "2026-10-28T17:06:54.600990+00:00"
+  }
+]

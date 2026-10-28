@@ -1,0 +1,175 @@
+{
+  "stages": [
+    {
+      "name": "01_prepare_sources_env",
+      "command": [
+        "python3",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/prepare.py"
+      ],
+      "gpu": false,
+      "outputs": [
+        "source_manifest.json",
+        "environment_origin.json"
+      ]
+    },
+    {
+      "name": "02_dependencies",
+      "command": [
+        "python3",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/install_dependencies.py"
+      ],
+      "gpu": false,
+      "outputs": [
+        "requirements.freeze",
+        "dependency_install.json"
+      ]
+    },
+    {
+      "name": "03_semantics",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/validate_semantics.py"
+      ],
+      "gpu": true,
+      "outputs": [
+        "results/semantics.json",
+        "results/semantics/camera_raymap_checks.json",
+        "results/semantics/restore_check.json"
+      ]
+    },
+    {
+      "name": "03a_restore_diagnosis",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/diagnose_restore.py"
+      ],
+      "gpu": true,
+      "outputs": [
+        "results/restore_diagnosis/diagnosis.json"
+      ]
+    },
+    {
+      "name": "03b_semantics_canonical_reset",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/validate_semantics.py"
+      ],
+      "gpu": true,
+      "outputs": [
+        "results/semantics.json",
+        "results/semantics/camera_raymap_checks.json",
+        "results/semantics/initial_restore_check.json"
+      ]
+    },
+    {
+      "name": "04_imagenet_weights",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/prepare_weights.py"
+      ],
+      "gpu": false,
+      "outputs": [
+        "manifests/imagenet_weights.json"
+      ]
+    },
+    {
+      "name": "05_C_smoke",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/run_experiment.py",
+        "--smoke"
+      ],
+      "gpu": true,
+      "outputs": [
+        "results/smoke_throughput.json",
+        "checkpoint_manifest.json",
+        "training_progress.json"
+      ]
+    },
+    {
+      "name": "06_freeze_plan",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/freeze_plan.py"
+      ],
+      "gpu": false,
+      "outputs": [
+        "frozen_training_plan.json",
+        "manifests/frozen_roots.json"
+      ]
+    },
+    {
+      "name": "07_C_training",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/run_experiment.py"
+      ],
+      "gpu": true,
+      "outputs": [
+        "training_progress.json",
+        "checkpoint_manifest.json"
+      ]
+    },
+    {
+      "name": "08_dev_gate",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/evaluate.py",
+        "--split",
+        "dev"
+      ],
+      "gpu": true,
+      "outputs": [
+        "results/dev_summary.json",
+        "results/U_metadata_negative_control.json",
+        "results/clean_rollout_reproducibility.json",
+        "results/dev_fixed_observation.jsonl",
+        "results/dev_rollouts.jsonl"
+      ]
+    },
+    {
+      "name": "09_test_if_dev_passes",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/evaluate.py",
+        "--split",
+        "test"
+      ],
+      "gpu": true,
+      "outputs": [
+        "results/test_execution.json"
+      ]
+    },
+    {
+      "name": "10_statistics",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/statistics.py"
+      ],
+      "gpu": false,
+      "outputs": [
+        "results/test_summary.json",
+        "results/per_root_success.csv",
+        "results/paired_statistics.csv"
+      ]
+    },
+    {
+      "name": "11_offline_audit",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/offline_audit.py"
+      ],
+      "gpu": false,
+      "outputs": [
+        "asset_manifest.json",
+        "results/offline_action_audit.json",
+        "results/loss_summary.json",
+        "results/dev_per_root.csv",
+        "results/training_curve.csv",
+        "manifests/hardware.json",
+        "patches/repair01_initial_root_restore.diff"
+      ]
+    }
+  ],
+  "closed": true
+}

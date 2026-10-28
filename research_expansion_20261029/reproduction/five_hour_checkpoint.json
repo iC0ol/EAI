@@ -1,0 +1,66 @@
+{
+  "checked_local": "2026-10-29T06:28+08:00",
+  "supervisor_identity_verified": true,
+  "lock_held": true,
+  "checkpoint_sha256_verified": "c904a97002571d96e3ee6b66057d09162cbdcb5e926cb6ea0b660ca1390bce13",
+  "completed_epochs": 20001,
+  "optimizer_updates": 60003,
+  "gpu_allocated_seconds": 16524.735701084137,
+  "training_finished_utc": "2026-10-28T22:15:06.676837+00:00",
+  "training_finished_in_absence_of_dialogue": true,
+  "stages": [
+    {
+      "stage": "01_prepare_sources_env.json",
+      "state": "COMPLETE",
+      "exit_code": 0
+    },
+    {
+      "stage": "02_dependencies.json",
+      "state": "COMPLETE",
+      "exit_code": 0
+    },
+    {
+      "stage": "03_semantics.json",
+      "state": "FAILED",
+      "exit_code": 1
+    },
+    {
+      "stage": "03_semantics_attention.json",
+      "state": "FAILED",
+      "exit_code": 1
+    },
+    {
+      "stage": "03a_restore_diagnosis.json",
+      "state": "COMPLETE",
+      "exit_code": 0
+    },
+    {
+      "stage": "03b_semantics_canonical_reset.json",
+      "state": "COMPLETE",
+      "exit_code": 0
+    },
+    {
+      "stage": "04_imagenet_weights.json",
+      "state": "COMPLETE",
+      "exit_code": 0
+    },
+    {
+      "stage": "05_C_smoke.json",
+      "state": "COMPLETE",
+      "exit_code": 0
+    },
+    {
+      "stage": "06_freeze_plan.json",
+      "state": "COMPLETE",
+      "exit_code": 0
+    },
+    {
+      "stage": "07_C_training.json",
+      "state": "COMPLETE",
+      "exit_code": 0
+    }
+  ],
+  "remaining_work": "dev gate then fixed 350 paired test rollouts if gate passes; statistics and final report",
+  "no_restart": true,
+  "stage05_note": "smoke throughput output is immutable; checkpoint_manifest/training_progress were explicitly rolling files, now reflect final training, so old hashes for those two dynamic files cannot be revalidated."
+}

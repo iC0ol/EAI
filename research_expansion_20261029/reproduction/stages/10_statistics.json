@@ -1,0 +1,25 @@
+{
+  "name": "10_statistics",
+  "state": "COMPLETE",
+  "exit_code": 0,
+  "completed_utc": "2026-10-28T22:32:26.035709+00:00",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/statistics.py"
+  ],
+  "command_sha256": "fe327b1a9be1bbc5c36cb5d24927d5fee3cc393a36cd95c65eedf6d8b1943c84",
+  "outputs": {
+    "results/test_summary.json": {
+      "sha256": "aaf448126f0dd6d2a7e5900a4a18352a3fa3d0d46f34f462078022f6afdcecac",
+      "bytes": 5534
+    },
+    "results/per_root_success.csv": {
+      "sha256": "f2785a714a5a8684a942078a33b9e2247e7fd549caa5caf3b98cd5d56b020937",
+      "bytes": 3195
+    },
+    "results/paired_statistics.csv": {
+      "sha256": "19a5fee104f6de6454a647e8c45e001be859ef03a2bde161ad78d3be84910434",
+      "bytes": 580
+    }
+  }
+}
