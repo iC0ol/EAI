@@ -1,0 +1,33 @@
+{
+  "completed_at": "2026-10-29T06:50:56.699211+08:00",
+  "research_delivery": "COMPLETE",
+  "experiment_completeness": "PARTIAL",
+  "experiment_evidence_status": "IMPLEMENTATION-LIMITED",
+  "scientific_result": "Clean dev baseline failed 0/32; formal calibration contrasts NOT_RUN, no scientific negative claimed",
+  "deepseek_new_turns": [
+    "04_expansion_independent",
+    "05_crosscheck",
+    "06_crosscheck",
+    "07_result_audit",
+    "08_result_correction"
+  ],
+  "all_deepseek_exit_zero": true,
+  "actual_response_model": "deepseek-flash",
+  "reproduction_model": "gpt-6.1-sol",
+  "reproduction_reasoning": "max",
+  "supervisor_exited": true,
+  "executor_callback": "SENT_ONCE",
+  "automations_verified": {
+    "automation": "PAUSED",
+    "6-1-sol-max": "PAUSED"
+  },
+  "parent_five_hour_checks": [
+    "parent_check_01.json",
+    "parent_check_02.json"
+  ],
+  "public_results_commit": "c34a4eeaf49f609f2bf087d56d0f47fa65c464fe",
+  "public_results_url": "https://github.com/iC0ol/EAI/commit/c34a4eeaf49f609f2bf087d56d0f47fa65c464fe",
+  "report": "02_联合研究最终报告.md",
+  "report_sha256": "dd36192236d0205591338c0e7ae030025269b339c54fad78ad36ac7f9ab25854",
+  "further_experiments_started": false
+}

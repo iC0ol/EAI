@@ -8,7 +8,12 @@
   "reproduction_5h_due": "2026-10-29T06:26:35+08:00",
   "reproduction_thread_id": "01a1838c-a3b2-7f71-a94d-5b900219f381",
   "parent_first_check_completed": "2026-10-29T01:37:30+08:00",
-  "parent_next_check_due": "2026-10-29T11:34:01+08:00",
+  "parent_next_check_due": null,
   "last_parent_verified": "2026-10-29T06:40:42.043931+08:00",
-  "parent_second_check_completed": "2026-10-29T06:40:42.043931+08:00"
+  "parent_second_check_completed": "2026-10-29T06:40:42.043931+08:00",
+  "automations_final_state": {
+    "automation": "PAUSED",
+    "6-1-sol-max": "PAUSED"
+  },
+  "closed_at": "2026-10-29T06:50:56.699211+08:00"
 }

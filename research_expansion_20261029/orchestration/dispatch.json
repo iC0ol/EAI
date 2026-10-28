@@ -10,15 +10,20 @@
   "compute_stop_by": "2026-10-29T12:26:35+08:00",
   "final_deadline": "2026-10-29T13:26:35+08:00",
   "protocol_sha256": "f1f24733775a4de78cc07147b3497e047376e4a6440d45800a91d600d1126390",
-  "state": "DISPATCHED",
+  "state": "CLOSED_AFTER_RESEARCH_DELIVERY",
   "reproduction_automation_id": "6-1-sol-max",
   "completion_notification_authorization": "Human explicitly requested reproduction complete -> notify this main chat; executor must verify original human turn with read_thread",
   "parent_first_check_due": "2026-10-29T01:34:01+08:00",
   "parent_automation_id": "automation",
   "automation_confirmed": true,
-  "parent_next_check_due": "2026-10-29T11:34:01+08:00",
+  "parent_next_check_due": null,
   "last_parent_verified": "2026-10-29T06:40:42.043931+08:00",
   "observed_execution_state": "TERMINAL_DEV_BASELINE_FLOOR",
   "reproduction_completeness": "PARTIAL",
-  "reproduction_evidence_status": "IMPLEMENTATION-LIMITED"
+  "reproduction_evidence_status": "IMPLEMENTATION-LIMITED",
+  "automations_final_state": {
+    "automation": "PAUSED",
+    "6-1-sol-max": "PAUSED"
+  },
+  "closed_at": "2026-10-29T06:50:56.699211+08:00"
 }
