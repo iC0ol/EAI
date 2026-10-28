@@ -1,0 +1,7 @@
+{
+  "syntax": "INVALID",
+  "line": 85,
+  "reason": "invalid syntax",
+  "text": "lambda = self.cfg.lambda",
+  "scope": "stdlib AST parse only, no imports or code execution"
+}

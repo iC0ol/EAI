@@ -1,0 +1,34 @@
+[
+  {
+    "name": "state_free",
+    "url": "https://arxiv.org/pdf/2509.18644v2",
+    "retrieved_utc": "2026-10-28T07:00:39.758116+00:00",
+    "status": "FETCHED_TEXT_EXTRACTED",
+    "bytes": 2350227,
+    "sha256": "53074dbe652540e6eee19312dc1cf8b5e447f1de9b1bee0aef75acc04f49015e"
+  },
+  {
+    "name": "nostra",
+    "url": "https://vsaxena.com/nostra/assets/nostra.pdf",
+    "retrieved_utc": "2026-10-28T07:00:39.759060+00:00",
+    "status": "FETCHED_TEXT_EXTRACTED",
+    "bytes": 1317257,
+    "sha256": "9654961e5dee3eb2ef0e4a8ac057f9619bd3977af118ce7d33853ae6c1086087"
+  },
+  {
+    "name": "absolute_state",
+    "url": "https://arxiv.org/pdf/2605.13067v1",
+    "retrieved_utc": "2026-10-28T07:00:39.765816+00:00",
+    "status": "FETCHED_TEXT_EXTRACTED",
+    "bytes": 18760666,
+    "sha256": "9f83bacadcf18c01a251725c82e347d655340228e050a79df518c83ca9c14345"
+  },
+  {
+    "name": "tas",
+    "url": "https://arxiv.org/pdf/2511.04421",
+    "retrieved_utc": "2026-10-28T07:00:46.870303+00:00",
+    "status": "FETCHED_TEXT_EXTRACTED",
+    "bytes": 4132620,
+    "sha256": "ce87149fad8001b37de2440590d491b4989038a1754ae9183588ade4a0877f43"
+  }
+]

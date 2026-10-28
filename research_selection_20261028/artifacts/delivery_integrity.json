@@ -1,0 +1,28 @@
+{
+  "checked_utc": "2026-10-28T12:03:36.297377+00:00",
+  "frozen_codex_note_unchanged": true,
+  "historical_snapshots_match_fixed_git": true,
+  "broken_authored_local_links": [],
+  "historical_relative_links": "resolved in original report directories; snapshots byte-preserved; see history/README.md",
+  "deepseek_calls": [
+    {
+      "turn": "01_independent",
+      "started_utc": "2026-10-28T06:42:22.944856+00:00",
+      "ended_utc": "2026-10-28T06:47:34.877702+00:00",
+      "raw_sha256": "83cfb5e4fa5ceee7ff333dbaa10b7341295261da7323d7b09ff3bb6b9a82865a"
+    },
+    {
+      "turn": "02_crosscheck",
+      "started_utc": "2026-10-28T06:50:18.826715+00:00",
+      "ended_utc": "2026-10-28T06:52:58.361771+00:00",
+      "raw_sha256": "a09916a843bda70fef5a2790e79badcf72a623917bed2095181b71e6b311199a"
+    },
+    {
+      "turn": "03_crosscheck",
+      "started_utc": "2026-10-28T07:04:38.572877+00:00",
+      "ended_utc": "2026-10-28T07:06:20.617439+00:00",
+      "raw_sha256": "c13ec9f94645c363412bebdbc5509898bba6f432f30b960c39b1ca9945cde092"
+    }
+  ],
+  "scope": "document/source-integrity verification; no robot or model tests"
+}

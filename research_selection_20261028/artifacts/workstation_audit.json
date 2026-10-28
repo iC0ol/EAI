@@ -1,0 +1,24 @@
+{
+  "checked_utc": "2026-10-28T11:42:51.295423+00:00",
+  "workspace": "/home/asus/EAI",
+  "gpu": "NVIDIA GeForce RTX 3090, 24576 MiB, 580 MiB, 550.144.03",
+  "cpu": {
+    "model": "Intel Xeon E-2224",
+    "physical_cores": 4,
+    "threads": 4
+  },
+  "memory": "total        used        free      shared  buff/cache   available\n内存：33514676224  7128326144  1344036864   104886272 25042313216 25802227712\n交换： 2147479552  1305219072   842260480",
+  "disk": {
+    "total": 502392610816,
+    "used": 278614994944,
+    "free": 198182244352
+  },
+  "claude_version": "2.1.308 (Claude Code)",
+  "claude_executable": "/home/asus/.local/bin/claude",
+  "endpoint_verified": "https://api.deepseek.com/anthropic",
+  "configured_model": "deepseek-flash[1M]",
+  "response_model": "deepseek-flash",
+  "credentials": "not copied or displayed",
+  "remote_4x4090": "researcher supplied; access/schedule not checked",
+  "experiments": "NOT_RUN"
+}

@@ -1,0 +1,814 @@
+{
+  "scope": "existing JSON/CSV and hand-constructed arithmetic only; no inference, training, simulator, or new data",
+  "checked_utc": "2026-10-28T11:38:55.549669+00:00",
+  "inputs": {
+    "u_consistency_pilot/outputs/v3_20261027T172105Z_sourcefix/frozen_predictions_dev.jsonl": "2adc2e3259542628ffeb673bf3b0182488431e02718f018433d7545ae51d8243",
+    "u_consistency_pilot/outputs/v3_20261027T172105Z_sourcefix/real_transitions_dev.jsonl": "def8980e38babbd7bc05ba35c929c699620101fe3eafcb70cbe149857cba5eed",
+    "u_consistency_pilot/outputs/v3_20261027T172105Z_sourcefix/frozen_predictions_test.jsonl": "dfd73f6a643c7fb4774f005816b9233bbb9597f01325c8f5097c3c64d1316595",
+    "u_consistency_pilot/outputs/v3_20261027T172105Z_sourcefix/real_transitions_test.jsonl": "f9560603ceb1a1bcc21c0d303d4c010169cb311f28b367da31bb75b826674c44"
+  },
+  "u": {
+    "dev": {
+      "roots": 16,
+      "locked_roots": 13,
+      "contact_roots": 8,
+      "contact_locked": 8,
+      "B1_B2_same": 16,
+      "noncontact_equal_block_cost": 8,
+      "detail": [
+        {
+          "root": "dev_000",
+          "stratum": "contact",
+          "goal_gap": 8.85009765625,
+          "max_inverse_pair_effect": 6.763806849829493,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.5265242566138202
+        },
+        {
+          "root": "dev_001",
+          "stratum": "noncontact",
+          "goal_gap": 2.081512451171875,
+          "max_inverse_pair_effect": 0.7790473667776361,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "dev_002",
+          "stratum": "contact",
+          "goal_gap": 7.36572265625,
+          "max_inverse_pair_effect": 3.4926760884505894,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 1.0338807194174953
+        },
+        {
+          "root": "dev_003",
+          "stratum": "noncontact",
+          "goal_gap": 5.800994873046875,
+          "max_inverse_pair_effect": 1.5814784000117648,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "dev_004",
+          "stratum": "contact",
+          "goal_gap": 8.67791748046875,
+          "max_inverse_pair_effect": 6.068985877378976,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.7125527304732078
+        },
+        {
+          "root": "dev_005",
+          "stratum": "noncontact",
+          "goal_gap": 0.35748291015625,
+          "max_inverse_pair_effect": 0.5149809815901247,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "dev_006",
+          "stratum": "contact",
+          "goal_gap": 7.0504150390625,
+          "max_inverse_pair_effect": 1.902538299731082,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.6111607500611731
+        },
+        {
+          "root": "dev_007",
+          "stratum": "noncontact",
+          "goal_gap": 3.4752197265625,
+          "max_inverse_pair_effect": 0.6904625050951844,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "dev_008",
+          "stratum": "contact",
+          "goal_gap": 5.65350341796875,
+          "max_inverse_pair_effect": 1.8047989944501104,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 1.032595983896469
+        },
+        {
+          "root": "dev_009",
+          "stratum": "noncontact",
+          "goal_gap": 3.823455810546875,
+          "max_inverse_pair_effect": 0.9907669332780539,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "dev_010",
+          "stratum": "contact",
+          "goal_gap": 9.13702392578125,
+          "max_inverse_pair_effect": 2.07610988586054,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.593265541562868
+        },
+        {
+          "root": "dev_011",
+          "stratum": "noncontact",
+          "goal_gap": 0.398834228515625,
+          "max_inverse_pair_effect": 0.661880803608445,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "dev_012",
+          "stratum": "contact",
+          "goal_gap": 11.606231689453125,
+          "max_inverse_pair_effect": 2.1276236044223533,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 1.9574409871689893
+        },
+        {
+          "root": "dev_013",
+          "stratum": "noncontact",
+          "goal_gap": 0.50146484375,
+          "max_inverse_pair_effect": 0.93130765487202,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "dev_014",
+          "stratum": "contact",
+          "goal_gap": 6.679779052734375,
+          "max_inverse_pair_effect": 2.6890667469352114,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 2.9532253961598407
+        },
+        {
+          "root": "dev_015",
+          "stratum": "noncontact",
+          "goal_gap": 13.045989990234375,
+          "max_inverse_pair_effect": 2.4116005657012805,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        }
+      ]
+    },
+    "test": {
+      "roots": 64,
+      "locked_roots": 42,
+      "contact_roots": 32,
+      "contact_locked": 14,
+      "B1_B2_same": 64,
+      "noncontact_equal_block_cost": 32,
+      "detail": [
+        {
+          "root": "test_000",
+          "stratum": "contact",
+          "goal_gap": 1.85101318359375,
+          "max_inverse_pair_effect": 3.0320843509644613,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.7446162963164156
+        },
+        {
+          "root": "test_001",
+          "stratum": "noncontact",
+          "goal_gap": 2.80670166015625,
+          "max_inverse_pair_effect": 0.8621471190257234,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_002",
+          "stratum": "contact",
+          "goal_gap": 5.834075927734375,
+          "max_inverse_pair_effect": 2.8047545457133505,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 1.3082343148143813
+        },
+        {
+          "root": "test_003",
+          "stratum": "noncontact",
+          "goal_gap": 1.78021240234375,
+          "max_inverse_pair_effect": 0.8751656672409466,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_004",
+          "stratum": "contact",
+          "goal_gap": 8.983489990234375,
+          "max_inverse_pair_effect": 3.3672036335379913,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.8584794467605921
+        },
+        {
+          "root": "test_005",
+          "stratum": "noncontact",
+          "goal_gap": 1.51422119140625,
+          "max_inverse_pair_effect": 0.44463190878238257,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_006",
+          "stratum": "contact",
+          "goal_gap": 24.819091796875,
+          "max_inverse_pair_effect": 6.277792619284362,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 1.2715624192131036
+        },
+        {
+          "root": "test_007",
+          "stratum": "noncontact",
+          "goal_gap": 3.649169921875,
+          "max_inverse_pair_effect": 1.0070061737134854,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_008",
+          "stratum": "contact",
+          "goal_gap": 0.60430908203125,
+          "max_inverse_pair_effect": 3.065688286638201,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.7600966294230602
+        },
+        {
+          "root": "test_009",
+          "stratum": "noncontact",
+          "goal_gap": 4.958343505859375,
+          "max_inverse_pair_effect": 1.4760619315236334,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_010",
+          "stratum": "contact",
+          "goal_gap": 0.636474609375,
+          "max_inverse_pair_effect": 2.713853346372808,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.3587234797309353
+        },
+        {
+          "root": "test_011",
+          "stratum": "noncontact",
+          "goal_gap": 1.499267578125,
+          "max_inverse_pair_effect": 2.232900031592966,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_012",
+          "stratum": "contact",
+          "goal_gap": 1.237548828125,
+          "max_inverse_pair_effect": 1.860493758610184,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.7880697722558923
+        },
+        {
+          "root": "test_013",
+          "stratum": "noncontact",
+          "goal_gap": 4.7945556640625,
+          "max_inverse_pair_effect": 1.197873348719359,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_014",
+          "stratum": "contact",
+          "goal_gap": 1.644744873046875,
+          "max_inverse_pair_effect": 1.4495617559932663,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 1.241304372306102
+        },
+        {
+          "root": "test_015",
+          "stratum": "noncontact",
+          "goal_gap": 3.426666259765625,
+          "max_inverse_pair_effect": 1.3418297238434447,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_016",
+          "stratum": "contact",
+          "goal_gap": 0.264404296875,
+          "max_inverse_pair_effect": 2.7949767062086917,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 1.8686566918510579
+        },
+        {
+          "root": "test_017",
+          "stratum": "noncontact",
+          "goal_gap": 0.629852294921875,
+          "max_inverse_pair_effect": 0.430727722198217,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_018",
+          "stratum": "contact",
+          "goal_gap": 11.527313232421875,
+          "max_inverse_pair_effect": 2.806172983506281,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 1.3394803733471337
+        },
+        {
+          "root": "test_019",
+          "stratum": "noncontact",
+          "goal_gap": 4.978912353515625,
+          "max_inverse_pair_effect": 1.1893704450729086,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_020",
+          "stratum": "contact",
+          "goal_gap": 12.488525390625,
+          "max_inverse_pair_effect": 4.297228777749024,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 1.9119889438640438
+        },
+        {
+          "root": "test_021",
+          "stratum": "noncontact",
+          "goal_gap": 3.41961669921875,
+          "max_inverse_pair_effect": 0.9270653153049921,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_022",
+          "stratum": "contact",
+          "goal_gap": 2.047515869140625,
+          "max_inverse_pair_effect": 2.3451799557766018,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.14763006635860787
+        },
+        {
+          "root": "test_023",
+          "stratum": "noncontact",
+          "goal_gap": 0.653289794921875,
+          "max_inverse_pair_effect": 0.5490279791900732,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_024",
+          "stratum": "contact",
+          "goal_gap": 0.50311279296875,
+          "max_inverse_pair_effect": 2.066243210334063,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 1.1942606561988462
+        },
+        {
+          "root": "test_025",
+          "stratum": "noncontact",
+          "goal_gap": 4.683441162109375,
+          "max_inverse_pair_effect": 0.5426527629972631,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_026",
+          "stratum": "contact",
+          "goal_gap": 0.58953857421875,
+          "max_inverse_pair_effect": 0.9787570208660524,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.6637093851997449
+        },
+        {
+          "root": "test_027",
+          "stratum": "noncontact",
+          "goal_gap": 4.4432373046875,
+          "max_inverse_pair_effect": 1.5413760089884068,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_028",
+          "stratum": "contact",
+          "goal_gap": 1.71484375,
+          "max_inverse_pair_effect": 4.651078618749315,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.25871905237695003
+        },
+        {
+          "root": "test_029",
+          "stratum": "noncontact",
+          "goal_gap": 1.755126953125,
+          "max_inverse_pair_effect": 0.6822638469538639,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_030",
+          "stratum": "contact",
+          "goal_gap": 3.104034423828125,
+          "max_inverse_pair_effect": 2.9121846353011205,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 2.3225725874276737
+        },
+        {
+          "root": "test_031",
+          "stratum": "noncontact",
+          "goal_gap": 2.49755859375,
+          "max_inverse_pair_effect": 0.9114717615640532,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_032",
+          "stratum": "contact",
+          "goal_gap": 0.599212646484375,
+          "max_inverse_pair_effect": 4.599841155170612,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.7329223220798116
+        },
+        {
+          "root": "test_033",
+          "stratum": "noncontact",
+          "goal_gap": 4.76251220703125,
+          "max_inverse_pair_effect": 1.7413234976694387,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_034",
+          "stratum": "contact",
+          "goal_gap": 3.45391845703125,
+          "max_inverse_pair_effect": 5.3088614337972935,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.5982251423955507
+        },
+        {
+          "root": "test_035",
+          "stratum": "noncontact",
+          "goal_gap": 1.2652587890625,
+          "max_inverse_pair_effect": 0.36473072902941395,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_036",
+          "stratum": "contact",
+          "goal_gap": 35.91937255859375,
+          "max_inverse_pair_effect": 8.11084371192743,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 1.4035335071511552
+        },
+        {
+          "root": "test_037",
+          "stratum": "noncontact",
+          "goal_gap": 6.606964111328125,
+          "max_inverse_pair_effect": 1.7013099555384994,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_038",
+          "stratum": "contact",
+          "goal_gap": 1.841644287109375,
+          "max_inverse_pair_effect": 3.042559797841898,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.7056366798319793
+        },
+        {
+          "root": "test_039",
+          "stratum": "noncontact",
+          "goal_gap": 1.09991455078125,
+          "max_inverse_pair_effect": 0.39002256055704404,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_040",
+          "stratum": "contact",
+          "goal_gap": 3.636962890625,
+          "max_inverse_pair_effect": 3.307581761133847,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.5448278684500663
+        },
+        {
+          "root": "test_041",
+          "stratum": "noncontact",
+          "goal_gap": 6.696502685546875,
+          "max_inverse_pair_effect": 1.6929648980617051,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_042",
+          "stratum": "contact",
+          "goal_gap": 1.930572509765625,
+          "max_inverse_pair_effect": 3.1910655486448785,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.5594074313408015
+        },
+        {
+          "root": "test_043",
+          "stratum": "noncontact",
+          "goal_gap": 1.098785400390625,
+          "max_inverse_pair_effect": 0.5127493451830116,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_044",
+          "stratum": "contact",
+          "goal_gap": 7.08819580078125,
+          "max_inverse_pair_effect": 7.356204403825191,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.8436972608856923
+        },
+        {
+          "root": "test_045",
+          "stratum": "noncontact",
+          "goal_gap": 1.7921142578125,
+          "max_inverse_pair_effect": 0.9132425237157198,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_046",
+          "stratum": "contact",
+          "goal_gap": 0.859283447265625,
+          "max_inverse_pair_effect": 4.562543933351545,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 2.1862767407386787
+        },
+        {
+          "root": "test_047",
+          "stratum": "noncontact",
+          "goal_gap": 3.73773193359375,
+          "max_inverse_pair_effect": 2.3052875355112676,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_048",
+          "stratum": "contact",
+          "goal_gap": 1.0159912109375,
+          "max_inverse_pair_effect": 6.659979821660139,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.9403619704346422
+        },
+        {
+          "root": "test_049",
+          "stratum": "noncontact",
+          "goal_gap": 0.883148193359375,
+          "max_inverse_pair_effect": 0.47629376603692214,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_050",
+          "stratum": "contact",
+          "goal_gap": 53.847900390625,
+          "max_inverse_pair_effect": 7.022292325723622,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 2.2937714841646333
+        },
+        {
+          "root": "test_051",
+          "stratum": "noncontact",
+          "goal_gap": 0.0430908203125,
+          "max_inverse_pair_effect": 1.4548408753854833,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_052",
+          "stratum": "contact",
+          "goal_gap": 9.928070068359375,
+          "max_inverse_pair_effect": 12.36764594961404,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.9739650755558689
+        },
+        {
+          "root": "test_053",
+          "stratum": "noncontact",
+          "goal_gap": 0.286041259765625,
+          "max_inverse_pair_effect": 0.41144063220595717,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_054",
+          "stratum": "contact",
+          "goal_gap": 2.73028564453125,
+          "max_inverse_pair_effect": 1.1247397950371696,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 1.638549101697965
+        },
+        {
+          "root": "test_055",
+          "stratum": "noncontact",
+          "goal_gap": 2.6802978515625,
+          "max_inverse_pair_effect": 1.0582489746708623,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_056",
+          "stratum": "contact",
+          "goal_gap": 12.05157470703125,
+          "max_inverse_pair_effect": 4.9416240584413345,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 4.219680556035735
+        },
+        {
+          "root": "test_057",
+          "stratum": "noncontact",
+          "goal_gap": 4.751190185546875,
+          "max_inverse_pair_effect": 0.9950605243278069,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_058",
+          "stratum": "contact",
+          "goal_gap": 3.86590576171875,
+          "max_inverse_pair_effect": 1.9781900846785345,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 2.394235682875008
+        },
+        {
+          "root": "test_059",
+          "stratum": "noncontact",
+          "goal_gap": 3.7457275390625,
+          "max_inverse_pair_effect": 1.029586069271822,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_060",
+          "stratum": "contact",
+          "goal_gap": 8.8779296875,
+          "max_inverse_pair_effect": 2.2927740409171564,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.6159603057614547
+        },
+        {
+          "root": "test_061",
+          "stratum": "noncontact",
+          "goal_gap": 2.25396728515625,
+          "max_inverse_pair_effect": 0.7832844010708944,
+          "locked": true,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        },
+        {
+          "root": "test_062",
+          "stratum": "contact",
+          "goal_gap": 2.82080078125,
+          "max_inverse_pair_effect": 2.825115042232642,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.4984375824610918
+        },
+        {
+          "root": "test_063",
+          "stratum": "noncontact",
+          "goal_gap": 0.29583740234375,
+          "max_inverse_pair_effect": 2.1145238575811023,
+          "locked": false,
+          "B1_B2_same": true,
+          "block_only_range": 0.0
+        }
+      ]
+    },
+    "B3_MSE_ratio_from_saved_summary": 102.21078431466401
+  },
+  "normalization_bound": {
+    "n": 8,
+    "lambda": 0.07,
+    "coefficient": 0.28,
+    "tight_example": [
+      -2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "population_std": 1.0,
+    "range": 4,
+    "proof": "For centered x: |x_i-x_j| <= ||x||_2 ||e_i-e_j||_2 = sqrt(2n)*population_std. Multiply by lambda*sigma_goal/sigma_cost. If disabled the effect is zero. Strict gap greater than bound locks argmin; equal gap can tie."
+  },
+  "median_geometry": {
+    "candidates": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "coordinate_median": [
+      0,
+      0,
+      0
+    ],
+    "inside_coordinate_box": true,
+    "outside_convex_hull": true,
+    "reason": "All candidate convex combinations have coordinate sum one; median sum is zero.",
+    "scope": "Mathematical counterexample only. Does not establish robot failure frequency or medoid benefit."
+  },
+  "batch_max_illustration": {
+    "assumed_independent_binary_phase_probability": 0.1,
+    "batch_size": 128,
+    "probability_at_least_one_phase_positive": 0.9999986099154762,
+    "scope": "Hypothetical binary IID phases; GAP published network produces continuous correlated probabilities, so this is not a measurement of its gate."
+  },
+  "precision_planning": {
+    "formula": "Approximate paired binary difference SE=sqrt((q-delta^2)/n), q=P(discordant pair); ignores training uncertainty.",
+    "examples_for_95pct_halfwidth_0_10_at_delta0": {
+      "0.1": 39,
+      "0.2": 77,
+      "1": 385
+    },
+    "scope": "Planning illustration, not a frozen sample size or achieved confidence interval. Paired trajectories are one unit, not timesteps; multiple training seeds required for optimization variability."
+  }
+}

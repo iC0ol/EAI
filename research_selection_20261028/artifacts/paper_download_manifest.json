@@ -1,0 +1,74 @@
+[
+  {
+    "name": "bid",
+    "url": "https://arxiv.org/pdf/2408.17355",
+    "retrieved_utc": "2026-10-28T06:47:02.504347+00:00",
+    "status": "FETCHED_TEXT_EXTRACTED",
+    "bytes": 4295709,
+    "sha256": "9a7ee32458adca16b8f3877ca1a4302e39bdcc10793424a0ae7be4db94bd7f48"
+  },
+  {
+    "name": "median_te",
+    "url": "https://arxiv.org/pdf/2609.27167v1",
+    "retrieved_utc": "2026-10-28T06:47:02.505261+00:00",
+    "status": "FETCHED_TEXT_EXTRACTED",
+    "bytes": 1564692,
+    "sha256": "6293d25b2a544ab5bd90794a20f09c5ef558c3f7129c9b38099af8da303d9e05"
+  },
+  {
+    "name": "chunk_ensembles",
+    "url": "https://arxiv.org/pdf/2608.02547v1",
+    "retrieved_utc": "2026-10-28T06:47:02.516254+00:00",
+    "status": "FETCHED_TEXT_EXTRACTED",
+    "bytes": 4830009,
+    "sha256": "a7f0f6ea1b27785fc838ea6293ed762e0781c27330f8428b6b70383dbf5ba649"
+  },
+  {
+    "name": "multimodal_failure",
+    "url": "https://arxiv.org/pdf/2605.22493v1",
+    "retrieved_utc": "2026-10-28T06:47:13.664478+00:00",
+    "status": "FETCHED_TEXT_EXTRACTED",
+    "bytes": 3809135,
+    "sha256": "970aaf5eb094a3f6cb3565684ea9059155dbc27b4249fc475c07f8771ddfc8bc"
+  },
+  {
+    "name": "deminf",
+    "url": "https://arxiv.org/pdf/2502.08623",
+    "retrieved_utc": "2026-10-28T06:47:26.851233+00:00",
+    "status": "FETCHED_TEXT_EXTRACTED",
+    "bytes": 3904215,
+    "sha256": "d4c1a5fcf262c5ce35c3dee85d892f82ff0243bf70dac142e5267704e47f1bdd"
+  },
+  {
+    "name": "datamil",
+    "url": "https://arxiv.org/pdf/2505.09603",
+    "retrieved_utc": "2026-10-28T06:47:29.736882+00:00",
+    "status": "FETCHED_TEXT_EXTRACTED",
+    "bytes": 4355246,
+    "sha256": "fbe8697db6071d065661a1e5f90dd7f86a9257cad0f8daed6925a63b2075dc97"
+  },
+  {
+    "name": "cupid",
+    "url": "https://arxiv.org/pdf/2506.19121",
+    "retrieved_utc": "2026-10-28T06:47:34.214263+00:00",
+    "status": "FETCHED_TEXT_EXTRACTED",
+    "bytes": 12350326,
+    "sha256": "ecc67dcdf296c39f14162e30dc29e8d490df4319236dddb2a93c30dd28c86b3c"
+  },
+  {
+    "name": "state_interfaces",
+    "url": "https://arxiv.org/pdf/2608.03052v1",
+    "retrieved_utc": "2026-10-28T06:47:49.702974+00:00",
+    "status": "FETCHED_TEXT_EXTRACTED",
+    "bytes": 1087948,
+    "sha256": "f3c5dc6372feb878a86f4ca546520b31f763e9a56c5fb62bba3d9a4bd829c840"
+  },
+  {
+    "name": "adapt_body_WITHDRAWN",
+    "url": "https://arxiv.org/pdf/2506.23944v1",
+    "retrieved_utc": "2026-10-28T06:47:55.059563+00:00",
+    "status": "FETCHED_TEXT_EXTRACTED",
+    "bytes": 10269015,
+    "sha256": "528ac7da998e4981c7c0b6c7334f85588d635cff1276e949aa94db1428a996a6"
+  }
+]

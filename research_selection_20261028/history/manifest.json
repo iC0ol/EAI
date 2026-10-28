@@ -1,0 +1,20 @@
+[
+  {
+    "commit": "75c02714961460c9ec8ceb1aeb1c8c569869e798",
+    "path": "d_alignment_pilot/reports/q2_blind/q2_go_no_go.md",
+    "snapshot": "D_q2_go_no_go.md",
+    "sha256": "5d89ab294c76761037d9de348aa79d6f5135cbe313eb320dd783f70a4264407f"
+  },
+  {
+    "commit": "9ca5c2e8423d37ec05194c9df9330c0aade69fed",
+    "path": "m_direction_pilot/live_screen/reports/direction_outcome_gate.md",
+    "snapshot": "M_direction_outcome_gate.md",
+    "sha256": "1d76f510ac370a27d26c4f4e0ba4e372c981f37f2a43d93813443155fc218340"
+  },
+  {
+    "commit": "206a8ee7132d56e68a9504d383a48c4a64e96737",
+    "path": "u_consistency_pilot/reports/v3_20261027T172105Z_sourcefix/morning_report.md",
+    "snapshot": "U_v3_morning_report.md",
+    "sha256": "cae19454cad43eaed6f6a0582d67b9811d10651f3d7a3a3fd1bab33f308ddfd9"
+  }
+]

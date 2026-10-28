@@ -1,0 +1,7 @@
+sources/
+archive/*.tar.gz
+logs/*.stderr
+__pycache__/
+discussion/*_raw.jsonl
+discussion/00_resume_probe.jsonl
+logs/

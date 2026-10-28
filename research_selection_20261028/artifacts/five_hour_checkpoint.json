@@ -1,0 +1,10 @@
+{
+  "trigger_utc": "2026-10-28T11:36:09.014Z",
+  "checked_utc": "2026-10-28T11:42:51.333673+00:00",
+  "status_at_trigger": "RESEARCH_IN_PROGRESS",
+  "action": "continue authorized read-only research and finish reports",
+  "deepseek_03": "completed exit0 at07:06:20Z; no related running consultation process found at11:36Z",
+  "experiments": "NOT_RUN",
+  "final_status": "RESEARCH_COMPLETE_WITH_SOURCE_GAPS",
+  "completed_utc": "2026-10-28T12:05:14.643571+00:00"
+}

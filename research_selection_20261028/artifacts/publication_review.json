@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-10-28T12:06:07.099702+00:00",
+  "staged_files_checked": 44,
+  "staged_total_bytes": 262323,
+  "scope": "only research_selection_20261028",
+  "credential_pattern_hits": [],
+  "excluded": "third-party papers/code caches, full client JSONL, logs, archive binary, environments, model/data assets",
+  "whitespace_note": "DeepSeek original response retains four Markdown hard-break trailing spaces; not silently edited",
+  "push_target": "existing branch research/u-gate0-v3-overnight; no new branch; no force push"
+}
