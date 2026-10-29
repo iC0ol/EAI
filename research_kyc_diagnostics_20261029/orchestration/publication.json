@@ -17,6 +17,11 @@
     "orchestration/executor_git_status.json"
   ],
   "original_failure_records_preserved": true,
-  "parent_research_files": "not yet committed/published",
-  "new_user_scope": "render_repair pending joint approval"
+  "parent_research_files": "PUBLISHED",
+  "new_user_scope": "render_repair pending joint approval",
+  "parent_research_commit": "126e196edd5d82f809f5a90b4bb5a13b284ae31c",
+  "parent_remote_verified_head": "126e196edd5d82f809f5a90b4bb5a13b284ae31c",
+  "parent_remote_url": "https://github.com/iC0ol/EAI/commit/126e196edd5d82f809f5a90b4bb5a13b284ae31c",
+  "parent_verification_local": "2026-10-29T17:20:01.329842+08:00",
+  "whitespace_check": "PASS with cr-at-eol; original human attachment preserved byte-for-byte"
 }

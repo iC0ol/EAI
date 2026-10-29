@@ -1,0 +1,19 @@
+{
+  "checked_local": "2026-10-29T17:20:01.330637+08:00",
+  "automations": [
+    {
+      "id": "automation",
+      "status": "ACTIVE",
+      "rrule": "RRULE:FREQ=DAILY;BYHOUR=21;BYMINUTE=38;BYSECOND=53;COUNT=1",
+      "target_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9"
+    },
+    {
+      "id": "6-1-sol-max",
+      "status": "ACTIVE",
+      "rrule": "RRULE:FREQ=DAILY;BYHOUR=21;BYMINUTE=50;BYSECOND=33;COUNT=1",
+      "target_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042"
+    }
+  ],
+  "no_new_automation_created": true,
+  "reset_credit_redemption": false
+}

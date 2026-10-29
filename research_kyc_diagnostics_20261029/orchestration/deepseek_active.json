@@ -1,5 +1,7 @@
 {
-  "turn": "14_diag_acceptance_cross",
-  "pid": 2902536,
-  "started_local": "2026-10-29T12:38:21.220149+08:00"
+  "state": "IDLE",
+  "last_completed_turn": "17_render_repair_final_gate",
+  "ended_utc": "2026-10-29T09:15:23.901673+00:00",
+  "exit_code": 0,
+  "no_review_process_expected": true
 }
