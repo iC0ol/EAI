@@ -1,0 +1,19 @@
+{
+  "status": "APPROVED",
+  "protocol": "01_有限排障执行任务书.md",
+  "version": "v2",
+  "sha256": "ae04cd358b7e7faa24110dbb447973e518aa739830e541e6bb5dab5c0a7c97ea",
+  "codex_approval": "APPROVE",
+  "deepseek_approval": "APPROVE",
+  "deepseek_turn": "12_diag_final_gate",
+  "deepseek_response_sha256": "0dbd3962ff1f06ed325945c7c1e91f56d14d7e28523e7f630a85fae6edeae9e2",
+  "independent_review_turn": "09_diag_independent",
+  "substantive_cross_rounds": [
+    "10_diag_crosscheck",
+    "11_diag_protocol_review"
+  ],
+  "final_revision_confirmation": "12_diag_final_gate",
+  "approved_local": "2026-10-29T11:59:35.236839+08:00",
+  "scope": "Stage0 and conditional Stage1 only; fixed forwards<=32; rollout<=16x150; GPU<=3600 allocation seconds; optimizer updates=0",
+  "full_training_authorized": false
+}

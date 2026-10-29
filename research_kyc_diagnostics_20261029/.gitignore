@@ -1,0 +1,17 @@
+logs/
+sources/
+discussion/*_raw.jsonl
+execution/env/
+execution/cache/
+execution/tmp/
+execution/assets/
+execution/checkpoints/
+execution/root_states/
+__pycache__/
+*.pyc
+*.pt
+*.pth
+*.hdf5
+*.h5
+*.safetensors
+*.xml

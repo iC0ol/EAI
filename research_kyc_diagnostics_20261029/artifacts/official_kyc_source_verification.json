@@ -1,0 +1,214 @@
+{
+  "commit": "e0647105a0f3946581d253c55dc9fd1218fa0974",
+  "entries": [
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3a888476322668f78b1b537af6275b3cc4bba13",
+      "size": 4400,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/a3a888476322668f78b1b537af6275b3cc4bba13",
+      "local_git_blob_sha1": "a3a888476322668f78b1b537af6275b3cc4bba13",
+      "matches_remote": true,
+      "sha256": "31d4cb4f49233ac568c616b4d47ad96a6511f259f537308ed6b9bd9fc6464584"
+    },
+    {
+      "path": "policy_robosuite/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "size": 1,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "local_git_blob_sha1": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "matches_remote": true,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "policy_robosuite/cam_embedding.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d40e7e2fe5e4595069386f6ee2e756af334b30b6",
+      "size": 3706,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/d40e7e2fe5e4595069386f6ee2e756af334b30b6",
+      "local_git_blob_sha1": "d40e7e2fe5e4595069386f6ee2e756af334b30b6",
+      "matches_remote": true,
+      "sha256": "7bb33a6d205948da9df912445a7020201cb9f6afafc1eb406fbae5e46d1585fa"
+    },
+    {
+      "path": "policy_robosuite/cam_utils.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "afa1f0bc963e13fec5ea739047812d066db41846",
+      "size": 9205,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/afa1f0bc963e13fec5ea739047812d066db41846",
+      "local_git_blob_sha1": "afa1f0bc963e13fec5ea739047812d066db41846",
+      "matches_remote": true,
+      "sha256": "a381c99e9b968b96f46eb0fd0c11069fd328505ab46f3cab7c9a89b4c4d59125"
+    },
+    {
+      "path": "policy_robosuite/camera_poses/seperated_test_cameras.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "69a64962baf65fb63c77580e25a9480fbcfcd660",
+      "size": 227961,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/69a64962baf65fb63c77580e25a9480fbcfcd660",
+      "local_git_blob_sha1": "69a64962baf65fb63c77580e25a9480fbcfcd660",
+      "matches_remote": true,
+      "sha256": "0b1e33b33365b63530d66bcf2604740daeb79be1d3c625ea2f9e3ea3be723f8e"
+    },
+    {
+      "path": "policy_robosuite/camera_poses/seperated_train_cameras.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d7a3d82735ea117b7b91acf26cf5e6354cbe1221",
+      "size": 227877,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/d7a3d82735ea117b7b91acf26cf5e6354cbe1221",
+      "local_git_blob_sha1": "d7a3d82735ea117b7b91acf26cf5e6354cbe1221",
+      "matches_remote": true,
+      "sha256": "0af37a797030a38653b839bdf4bd299372be35568d94461cd0697205c3b9589a"
+    },
+    {
+      "path": "policy_robosuite/camera_poses/test_cameras.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ca09a50a5e190198780b797b7b9e1652b688cdf8",
+      "size": 45722,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/ca09a50a5e190198780b797b7b9e1652b688cdf8",
+      "local_git_blob_sha1": "ca09a50a5e190198780b797b7b9e1652b688cdf8",
+      "matches_remote": true,
+      "sha256": "13dd97b22349f6e52d6e9c45d58a9af8fe1bdfac11b5759b700014c0062923ec"
+    },
+    {
+      "path": "policy_robosuite/camera_poses/train_cameras.json",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f98658f70fc3e0079506dd2363ce8946da152239",
+      "size": 454487,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/f98658f70fc3e0079506dd2363ce8946da152239",
+      "local_git_blob_sha1": "f98658f70fc3e0079506dd2363ce8946da152239",
+      "matches_remote": true,
+      "sha256": "236d6721ac64cc298d64905b46be2b852084342edfe26d112d7f95996fc51e65"
+    },
+    {
+      "path": "policy_robosuite/eval.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "74a3b4c08d2e80a80520e248d25a8944196a258c",
+      "size": 11603,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/74a3b4c08d2e80a80520e248d25a8944196a258c",
+      "local_git_blob_sha1": "74a3b4c08d2e80a80520e248d25a8944196a258c",
+      "matches_remote": true,
+      "sha256": "702c7daf81cc73326edd9a86b55173e5440e17ce1efa169ec7ff2a66ab043571"
+    },
+    {
+      "path": "policy_robosuite/models/__init__.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0519ecba6ea913e21689ec692e81e9e4973fbf73",
+      "size": 1,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/0519ecba6ea913e21689ec692e81e9e4973fbf73",
+      "local_git_blob_sha1": "0519ecba6ea913e21689ec692e81e9e4973fbf73",
+      "matches_remote": true,
+      "sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068"
+    },
+    {
+      "path": "policy_robosuite/models/act.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "f0a900f1722b25766bb416e9543e20813287f5db",
+      "size": 2780,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/f0a900f1722b25766bb416e9543e20813287f5db",
+      "local_git_blob_sha1": "f0a900f1722b25766bb416e9543e20813287f5db",
+      "matches_remote": true,
+      "sha256": "f294859ec44faa1622e586faa627af4f6aa711c23e0804e62c62bbc4672de9db"
+    },
+    {
+      "path": "policy_robosuite/models/backbone.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "9d911236760e9a8dbc4e42421c260321c15c36d8",
+      "size": 11654,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/9d911236760e9a8dbc4e42421c260321c15c36d8",
+      "local_git_blob_sha1": "9d911236760e9a8dbc4e42421c260321c15c36d8",
+      "matches_remote": true,
+      "sha256": "9efa091f3944d333c4cf9dd034f9ac94296f69ea8f6d4969b63d1b676c7f4398"
+    },
+    {
+      "path": "policy_robosuite/models/detr_vae.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "c781b8b6bdc716421ed661fa63976b7b1d5a09db",
+      "size": 8016,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/c781b8b6bdc716421ed661fa63976b7b1d5a09db",
+      "local_git_blob_sha1": "c781b8b6bdc716421ed661fa63976b7b1d5a09db",
+      "matches_remote": true,
+      "sha256": "fda4173929fbbf447ebd7eeb67d4c91818e86d88d52ca27ba641054adf1cda0f"
+    },
+    {
+      "path": "policy_robosuite/models/dp.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0bf2254cf4334bd5d374a1aa843dcb6ba4b0dea9",
+      "size": 19452,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/0bf2254cf4334bd5d374a1aa843dcb6ba4b0dea9",
+      "local_git_blob_sha1": "0bf2254cf4334bd5d374a1aa843dcb6ba4b0dea9",
+      "matches_remote": true,
+      "sha256": "234f8ac5500a70ccb302d1a8531e42e45efcc05a13ebe6f3511cc07bb74625ee"
+    },
+    {
+      "path": "policy_robosuite/models/smolvla.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "fc06eb05e260efca04d644b79e9b1f972bc28d0b",
+      "size": 36021,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/fc06eb05e260efca04d644b79e9b1f972bc28d0b",
+      "local_git_blob_sha1": "fc06eb05e260efca04d644b79e9b1f972bc28d0b",
+      "matches_remote": true,
+      "sha256": "6c776b9c4ba3ff7d5b23e54ac2fab332028cc3fe14acc57878da0d524415b5de"
+    },
+    {
+      "path": "policy_robosuite/models/transformer.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3dd69f8c8cb92eedf2f523057e80cc7315942688",
+      "size": 12100,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/3dd69f8c8cb92eedf2f523057e80cc7315942688",
+      "local_git_blob_sha1": "3dd69f8c8cb92eedf2f523057e80cc7315942688",
+      "matches_remote": true,
+      "sha256": "4081aef86c55bbfc90fa6798c092dbe1060375a43c9127f44bf3be3bf5b8501f"
+    },
+    {
+      "path": "policy_robosuite/train.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ed388ab6588e039a67ddae9e2cc4230f65baae52",
+      "size": 14518,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/ed388ab6588e039a67ddae9e2cc4230f65baae52",
+      "local_git_blob_sha1": "ed388ab6588e039a67ddae9e2cc4230f65baae52",
+      "matches_remote": true,
+      "sha256": "ca901eca853681a82affd54cb2bb66731d35591c59603767992d02ceb045cacd"
+    },
+    {
+      "path": "policy_robosuite/utils.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "26eb10e41339f36f86e185db282c1b27850624c2",
+      "size": 19406,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/26eb10e41339f36f86e185db282c1b27850624c2",
+      "local_git_blob_sha1": "26eb10e41339f36f86e185db282c1b27850624c2",
+      "matches_remote": true,
+      "sha256": "fbe212146cd0f93e8aa04a98913c736aabf2e4f06ff40eb6544934d0acf9fa1a"
+    },
+    {
+      "path": "reproduce/paper_runs.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c9d6cf6bce0556dbd3d4869683f352822608ea2",
+      "size": 31558,
+      "url": "https://api.github.com/repos/ripl/CamPoseOpensource/git/blobs/9c9d6cf6bce0556dbd3d4869683f352822608ea2",
+      "local_git_blob_sha1": "9c9d6cf6bce0556dbd3d4869683f352822608ea2",
+      "matches_remote": true,
+      "sha256": "2fdf49927a78307b97a204f50107a8f61aa3057960e2895527c59fe954fa032e"
+    }
+  ]
+}

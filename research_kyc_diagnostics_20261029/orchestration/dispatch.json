@@ -1,0 +1,21 @@
+{
+  "status": "TERMINAL_ACCEPTED_PARTIAL",
+  "required_model": "gpt-6.1-sol",
+  "required_reasoning_effort": "max",
+  "new_executor_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+  "old_completed_thread_id": "01a1838c-a3b2-7f71-a94d-5b900219f381",
+  "gate": "Codex independent review + real DeepSeek independent review + at least two substantive cross discussions + DeepSeek scientific approval of the concrete execution task",
+  "host_id": "local",
+  "title": "KYC 冻结基线有限排障与验收回传",
+  "dispatched_local": "2026-10-29T11:59:36+08:00",
+  "deadline_local": "2026-10-29T19:59:36+08:00",
+  "protocol": "01_有限排障执行任务书.md",
+  "protocol_sha256": "ae04cd358b7e7faa24110dbb447973e518aa739830e541e6bb5dab5c0a7c97ea",
+  "model_requested": "gpt-6.1-sol",
+  "reasoning_requested": "max",
+  "git_index_owner": "main",
+  "executor_next_check_local": null,
+  "completion_callback_authorized_by": "Human attachment 00_原始任务书.md sections1,8,9 plus main human delegation messages",
+  "accepted_classification": "D/IMPLEMENTATION-LIMITED",
+  "new_user_authorized_followup": "render_repair; new protocol and run; do not restart old execution"
+}

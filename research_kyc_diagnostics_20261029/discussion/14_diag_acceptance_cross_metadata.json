@@ -1,0 +1,57 @@
+{
+  "turn": "14_diag_acceptance_cross",
+  "session_id": "736077c1-8d4e-4df7-979f-1fc15f980a2a",
+  "started_utc": "2026-10-29T04:38:21.263560+00:00",
+  "pid": 2902536,
+  "command": [
+    "claude",
+    "-p",
+    "--resume",
+    "736077c1-8d4e-4df7-979f-1fc15f980a2a",
+    "--tools",
+    "Read,Glob,Grep,WebSearch,WebFetch",
+    "--allowedTools",
+    "Read,Glob,Grep,WebSearch,WebFetch",
+    "--permission-mode",
+    "dontAsk",
+    "--strict-mcp-config",
+    "--output-format",
+    "stream-json",
+    "--verbose"
+  ],
+  "timeout_seconds": 1200,
+  "exit_code": 0,
+  "ended_utc": "2026-10-29T04:39:14.415729+00:00",
+  "result_status": "success",
+  "permission_denials": [],
+  "model_usage": {
+    "deepseek-flash[1m]": {
+      "inputTokens": 788203,
+      "outputTokens": 248919,
+      "thinkingTokens": 0,
+      "cacheReadInputTokens": 26486912,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 40,
+      "costUSD": 23.807446000000006,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000,
+      "canonicalModel": "deepseek-flash[1m]",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    },
+    "deepseek-flash[1M]": {
+      "inputTokens": 221864,
+      "outputTokens": 64286,
+      "thinkingTokens": 0,
+      "cacheReadInputTokens": 14336,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 2.723637999999999,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 32000
+    }
+  },
+  "response_model_fields": [
+    "deepseek-flash"
+  ]
+}

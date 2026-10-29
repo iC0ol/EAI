@@ -1,0 +1,50 @@
+{
+  "timezone": "Asia/Shanghai",
+  "main_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "main_automation_id": "automation",
+  "main_check_status": "ACTIVE",
+  "usage_checked_local": "2026-10-29T17:13:00+08:00",
+  "five_hour_used_percent": 57,
+  "weekly_used_percent": 88,
+  "account_shared_usage": true,
+  "five_hour_resets_at_unix": 1793281713,
+  "five_hour_resets_local": "2026-10-29T21:48:33+08:00",
+  "main_next_check_local": "2026-10-29T21:38:53+08:00",
+  "reset_buffer_seconds": 120,
+  "max_check_interval_seconds": 18000,
+  "scheduling_rule": "Refresh real account resetsAt on each wake. Choose a future useful reset+120s or last-check+5h, whichever is earlier; avoid scheduling a stale reset or a busy poll. If reset unavailable, use five hours. Completion callback can wake sooner.",
+  "event_trigger": "No direct rate-limit reset event subscription is exposed by the available automation tools; use timestamp scheduling.",
+  "reset_credit_redemption": "NOT_REQUESTED_NOT_USED",
+  "executor_automation_id": "6-1-sol-max",
+  "executor_check_status": "ACTIVE",
+  "last_main_check_local": "2026-10-29T16:38:53+08:00",
+  "checks": [
+    {
+      "local": "2026-10-29T11:38:38+08:00",
+      "event": "reset-followup fired; new quota confirmed; review continues; no executor yet",
+      "five_hour_used_percent": 1
+    },
+    {
+      "local": "2026-10-29T16:46:14.544129+08:00",
+      "event": "16:38 heartbeat resumed; executor terminal; both post-execution reviews complete; final report/publication remain",
+      "five_hour_used_percent": 13,
+      "weekly_used_percent": 81
+    },
+    {
+      "local": "2026-10-29T17:17:25+08:00",
+      "event": "new user-authorized render repair dispatched after DeepSeek17 APPROVE; both existing automations updated",
+      "five_hour_used_percent": 57,
+      "weekly_used_percent": 88
+    }
+  ],
+  "executor_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+  "executor_dispatch_local": "2026-10-29T17:17:25+08:00",
+  "executor_next_check_local": "2026-10-29T21:50:33+08:00",
+  "executor_next_check_reason": "real shared account reset21:48:33+120 seconds; earlier than dispatch+5h",
+  "executor_five_hour_latest_local": "2026-10-29T22:17:25+08:00",
+  "executor_total_deadline_local": "2026-10-30T01:17:25+08:00",
+  "active_scope": "render_repair: user explicitly requested cause investigation and repair",
+  "executor_scope": "render_repair",
+  "prior_execution_completed_local": "2026-10-29T12:24:39.460746+08:00",
+  "prior_execution_completion_reason": "STOP_INPUT_PREREQUISITE; PARTIAL; publication FAILED_NETWORK"
+}

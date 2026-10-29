@@ -1,0 +1,28 @@
+{
+  "state": "APPROVED",
+  "protocol": "01_渲染微诊断与最小修复任务书.md",
+  "version": "v3",
+  "protocol_sha256": "022ab690a7852290f41a62294d100c295ac9753c48f8929d852b01aef9ef09d8",
+  "approved_local": "2026-10-29T17:17:24.559509+08:00",
+  "codex_review": "APPROVE",
+  "deepseek_review": "APPROVE",
+  "deepseek_session": "736077c1-8d4e-4df7-979f-1fc15f980a2a",
+  "deepseek_response": "../discussion/17_render_repair_final_gate_response.md",
+  "response_model_fields": [
+    "deepseek-flash"
+  ],
+  "authorization": "00_授权与范围.md; latest explicit human request to investigate and fix current RGB",
+  "caps": {
+    "workers": 2,
+    "make_env": 2,
+    "renders": 12,
+    "readPixels": 24,
+    "gpu_allocation_seconds": 300,
+    "ACT_forwards": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "optimizer_updates": 0
+  },
+  "old_execution_restart": false,
+  "human_retraining_approval": false
+}

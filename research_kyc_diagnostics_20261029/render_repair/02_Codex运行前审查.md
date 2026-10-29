@@ -1,0 +1,13 @@
+# Codex：当前渲染故障的最小可辨识检查
+
+形成于读取DeepSeek15回复前，2026-10-29。仅阅读现有代码/数组，无新渲染或模型调用。
+
+原保存RGB已损坏，PNG反解相等，优先测底层返回值与上下文。原三个入口各自重新渲染，因而不能直接从三图不同判预处理不等价。新协议应同时保存raw→flip→float→保存各边界，并把共同raw纯预处理与重新渲染分开。
+
+源码明确：RoboSuite binding_utils.py构造器绑定context；MjSim.render的锁内未逐次make_current；read_pixels用np.empty后mjr_readPixels。egl_context.py的free在当前context匹配时unbind，但无论是否匹配都会eglReleaseThread；MjSim.free调用gc.collect。它们构成可检验的生命周期路径，但未证明任一事件导致原坏图。不得称已发现framebuffer leak、驱动错误或旧训练根因。
+
+先取得当前/目标context关系、渲染前后GL状态与readback写入证据。基线遥测不得先绑定context，避免观察工具自动修好问题。只有记录支持时才单因子修复。两个全新worker复验支持局部重复性；仍需说明插桩改变分配/GC时序的可能、无故障复现时无法验修复。
+
+sentinel只能辅助：真实像素可能恰好等于sentinel，单缓冲未改比例不能独立证明readPixels未写。结合健康对照、逐边界数组、状态与上下文证据解释。若没有ctx则不调用需要ctx的GL查询，不能把无ctx时glGetError的零当健康。
+
+修好当前输入可恢复后续诊断资格；不足以自动说明旧策略有能力或值得重训。用户要求继续解决，因此完成此次小而明确的因果检查后再判断投入，不能照搬先前暂停建议直接收尾。

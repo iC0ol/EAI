@@ -1,0 +1,138 @@
+{
+  "commit": "a03f16da9110f219be49a0994140c7617a6b45ff",
+  "entries": [
+    {
+      "path": "research_expansion_20261029/02_联合研究最终报告.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8aa17c82fbef837580c287f8a03dc48400473d66",
+      "size": 16120,
+      "url": "https://api.github.com/repos/iC0ol/EAI/git/blobs/8aa17c82fbef837580c287f8a03dc48400473d66",
+      "local_git_blob_sha1": "8aa17c82fbef837580c287f8a03dc48400473d66",
+      "sha256": "dd36192236d0205591338c0e7ae030025269b339c54fad78ad36ac7f9ab25854",
+      "matches_remote": true,
+      "remote_content_read_via": "GitHub connector contents endpoint, exact pinned ref"
+    },
+    {
+      "path": "research_expansion_20261029/notes/04_复现结果独立审查.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56ff105f7a83d3e42f31013213a72844802730fe",
+      "size": 5294,
+      "url": "https://api.github.com/repos/iC0ol/EAI/git/blobs/56ff105f7a83d3e42f31013213a72844802730fe",
+      "local_git_blob_sha1": "56ff105f7a83d3e42f31013213a72844802730fe",
+      "sha256": "30c19da947290f5a69b7e8c8c8dba9a926394288dd357cbab3dafc2a39844a61",
+      "matches_remote": true,
+      "remote_content_read_via": "GitHub connector contents endpoint, exact pinned ref"
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/FINAL_REPORT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7f86185e56b6cabb5ffd1c3b6b17a9718c9fa9f",
+      "size": 9066,
+      "url": "https://api.github.com/repos/iC0ol/EAI/git/blobs/c7f86185e56b6cabb5ffd1c3b6b17a9718c9fa9f",
+      "local_git_blob_sha1": "c7f86185e56b6cabb5ffd1c3b6b17a9718c9fa9f",
+      "sha256": "d89df6b456bb84b9acdafef98b8c77ef00e03bb2fe483f07ac385be30971781d",
+      "matches_remote": true,
+      "remote_content_read_via": "GitHub connector contents endpoint, exact pinned ref"
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/PROTOCOL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eebed773bd0db161a8ad1a5af5d514652475b658",
+      "size": 15407,
+      "url": "https://api.github.com/repos/iC0ol/EAI/git/blobs/eebed773bd0db161a8ad1a5af5d514652475b658",
+      "local_git_blob_sha1": "eebed773bd0db161a8ad1a5af5d514652475b658",
+      "sha256": "f1f24733775a4de78cc07147b3497e047376e4a6440d45800a91d600d1126390",
+      "matches_remote": true,
+      "remote_content_read_via": "GitHub connector contents endpoint, exact pinned ref"
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/RECOVERY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b27fc142c3bd15aa4705e7453cd3c7971045786e",
+      "size": 2960,
+      "url": "https://api.github.com/repos/iC0ol/EAI/git/blobs/b27fc142c3bd15aa4705e7453cd3c7971045786e",
+      "local_git_blob_sha1": "b27fc142c3bd15aa4705e7453cd3c7971045786e",
+      "sha256": "64728b6aca2c6809217c190d9f82f631f35f1d9eb2481bf2756cba71fdb45015",
+      "matches_remote": true,
+      "remote_content_read_via": "GitHub connector contents endpoint, exact pinned ref"
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/manifests/C_config.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3031747188d707eac77c87d913afb9a7f736336a",
+      "size": 1141,
+      "url": "https://api.github.com/repos/iC0ol/EAI/git/blobs/3031747188d707eac77c87d913afb9a7f736336a",
+      "local_git_blob_sha1": "3031747188d707eac77c87d913afb9a7f736336a",
+      "sha256": "f4909f0f8376f6e48d4c6bb870ac46173d66cd9c13002e6709331f0f1c30b49a",
+      "matches_remote": true,
+      "remote_content_read_via": "GitHub connector contents endpoint, exact pinned ref"
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/results/dev_summary.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9a3f4b613ad730d6ee28064f9a7b2ceebfff9eb",
+      "size": 681,
+      "url": "https://api.github.com/repos/iC0ol/EAI/git/blobs/e9a3f4b613ad730d6ee28064f9a7b2ceebfff9eb",
+      "local_git_blob_sha1": "e9a3f4b613ad730d6ee28064f9a7b2ceebfff9eb",
+      "sha256": "9a420fa8347770c908aa400e74d9b0b51a4b0cf2c1a416c4ec5dcb3f880e8059",
+      "matches_remote": true,
+      "remote_content_read_via": "GitHub connector contents endpoint, exact pinned ref"
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/results/offline_action_audit.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a2fc9e6697387927172ca634c798872a563abe3",
+      "size": 24378,
+      "url": "https://api.github.com/repos/iC0ol/EAI/git/blobs/2a2fc9e6697387927172ca634c798872a563abe3",
+      "local_git_blob_sha1": "2a2fc9e6697387927172ca634c798872a563abe3",
+      "sha256": "7a561539c3f3bb7d6bc2e9e26ee733646d3058f9d708bad324ea91746441b78f",
+      "matches_remote": true,
+      "remote_content_read_via": "GitHub connector contents endpoint, exact pinned ref"
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/scripts/evaluate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "414b273256d1c66d77b9504dc96fe1775f669b87",
+      "size": 13960,
+      "url": "https://api.github.com/repos/iC0ol/EAI/git/blobs/414b273256d1c66d77b9504dc96fe1775f669b87",
+      "local_git_blob_sha1": "414b273256d1c66d77b9504dc96fe1775f669b87",
+      "sha256": "46fba926311a4092c6c606499ae53cd36590694af1413e3e85d9440d8f69df13",
+      "matches_remote": true,
+      "remote_content_read_via": "GitHub connector contents endpoint, exact pinned ref"
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/scripts/experiment_lib.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b06a5ae9ceec41c43ac16ab87ab43a02c5e6bbcc",
+      "size": 3581,
+      "url": "https://api.github.com/repos/iC0ol/EAI/git/blobs/b06a5ae9ceec41c43ac16ab87ab43a02c5e6bbcc",
+      "local_git_blob_sha1": "b06a5ae9ceec41c43ac16ab87ab43a02c5e6bbcc",
+      "sha256": "c3aa5e196a9dfaaf9ce94fd307987c508570deb1d87f6f9f25686d6912b3073c",
+      "matches_remote": true,
+      "remote_content_read_via": "GitHub connector contents endpoint, exact pinned ref"
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/scripts/run_experiment.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e647ce8a9f1303a9b47a2fda81f6d12c55e3d3da",
+      "size": 8964,
+      "url": "https://api.github.com/repos/iC0ol/EAI/git/blobs/e647ce8a9f1303a9b47a2fda81f6d12c55e3d3da",
+      "local_git_blob_sha1": "e647ce8a9f1303a9b47a2fda81f6d12c55e3d3da",
+      "sha256": "85a8d72a932c870bcb18e22e792041d9c48da7a082324d7163c276494b6ac256",
+      "matches_remote": true,
+      "remote_content_read_via": "GitHub connector contents endpoint, exact pinned ref"
+    }
+  ],
+  "checked_local": "2026-10-29T10:37:00.653055+08:00"
+}

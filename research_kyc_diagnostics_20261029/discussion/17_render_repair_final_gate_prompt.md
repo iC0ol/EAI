@@ -1,0 +1,7 @@
+请审核完整render_repair/01_渲染微诊断与最小修复任务书.md当前v3，路径前缀 /home/asus/EAI/research_kyc_diagnostics_20261029/。
+
+回应16：明确在MjSim.render已持锁时包装未绑定MjRenderContext.render，wrapper自身不再加锁；同一锁内直到read_pixels完成，render后/read前检查。明确GL_ERROR_NOT_DRAINED及退出/新进程启动时间断言。
+
+对于你建议的sentinel实现，Codex不接受可能填写正常rgb而污染baseline的歧义。v3选择等价但更直接的方案：正常read_pixels和np.empty保持原样，正常mjr_readPixels结束并复制raw后，独立np.full(shape,165,uint8)缓冲以同viewport/con执行额外一次mjr_readPixels（depth=None），经同一计数hook，独立保存不进入正常pipeline/健康判定。每render仍最多2readPixels，总24，绝不patch全局np.empty或改正常rgb。它可以测同帧readback行为，同时保留正常np.empty返回原件；额外分配可能扰动GC已作为限制保留。
+
+v2已经具备独立OS进程/无fork/先退出再启动，v3进一步写死交接记录，范围未变。请判断是否仍有实质阻碍，给明确APPROVE或明确阻碍；不要为文字润色新增实验范围。只读，不运行。用户新授权已经明确且任务完整。通过后将冻结v3 SHA并派发给既有gpt-6.1-sol/max，完成后真实双重验收。

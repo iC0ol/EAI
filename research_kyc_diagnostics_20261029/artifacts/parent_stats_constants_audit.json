@@ -1,0 +1,194 @@
+{
+  "checked_local": "2026-10-29T12:40:43.274131+08:00",
+  "stats_json_bit_equal": {
+    "state_mean": true,
+    "state_std": true,
+    "action_mean": true,
+    "action_std": true
+  },
+  "training_frames": 20400,
+  "constants": [
+    {
+      "k": 0,
+      "valid_items": 20400,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 1,
+      "valid_items": 20200,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 2,
+      "valid_items": 20000,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 3,
+      "valid_items": 19800,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 4,
+      "valid_items": 19600,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 5,
+      "valid_items": 19400,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 6,
+      "valid_items": 19200,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 7,
+      "valid_items": 19000,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 8,
+      "valid_items": 18800,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 9,
+      "valid_items": 18600,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 10,
+      "valid_items": 18400,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 11,
+      "valid_items": 18200,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 12,
+      "valid_items": 18000,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 13,
+      "valid_items": 17800,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 14,
+      "valid_items": 17600,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 15,
+      "valid_items": 17400,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 16,
+      "valid_items": 17200,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 17,
+      "valid_items": 17000,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 18,
+      "valid_items": 16800,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 19,
+      "valid_items": 16600,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 20,
+      "valid_items": 16400,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 21,
+      "valid_items": 16200,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 22,
+      "valid_items": 16000,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 23,
+      "valid_items": 15800,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 24,
+      "valid_items": 15600,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 25,
+      "valid_items": 15400,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 26,
+      "valid_items": 15200,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 27,
+      "valid_items": 15000,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 28,
+      "valid_items": 14800,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    },
+    {
+      "k": 29,
+      "valid_items": 14600,
+      "median_exact_match": true,
+      "weighted_mean_max_abs": 0.0
+    }
+  ],
+  "no_torch_model_or_env_import": true,
+  "model_calls": 0
+}

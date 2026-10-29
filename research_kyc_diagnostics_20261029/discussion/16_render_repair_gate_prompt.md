@@ -1,0 +1,5 @@
+请继续审核完整修订后的 /home/asus/EAI/research_kyc_diagnostics_20261029/render_repair/01_渲染微诊断与最小修复任务书.md（v2）。真实15回复与原v1保留。
+
+已落实：日志不持有环境/context/buffer强引用，wrapper用未绑定原方法；两个独立OS/Python进程且前一退出后再建；sentinel单独输出不参与健康；make_current处于完整原render+read_pixels锁内，避免重复非重入锁死锁，并检查render后read前是否又丢context；固定GL查询顺序并标明查询可能造成/清除error，NO_ERROR不能追认调用前健康；预算hook安装于make_env前覆盖隐式调用。额外明确锁不能阻止同线程GC，仍需事件链。
+
+请读取完整v2，给出明确APPROVE或仍需具体修订，不增加范围。若通过，会让现有6.1-sol/max执行者在全新render_repair目录单独运行，原execution不会重启。用户已经明确新授权故障解决，无需再次要求人类确认该微诊断。所有完整训练、模型前向和rollout仍禁止。

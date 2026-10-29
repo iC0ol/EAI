@@ -1,0 +1,235 @@
+{
+  "checked_local": "2026-10-29T12:34:05.830297+08:00",
+  "reviewer": "Codex parent",
+  "scope": "CPU reanalysis of saved artifacts only; no new observations, model calls, environments or simulation",
+  "arrays_verified": 176,
+  "samples": [
+    {
+      "sample": 0,
+      "demo": 0,
+      "t": 0,
+      "comparisons": [
+        {
+          "other": "eval",
+          "different_pixels": 65532,
+          "mean_abs_uint8": 84.27658589680989,
+          "max_abs_uint8": 255.0,
+          "flipud_mean_abs_uint8": 86.22565205891927
+        },
+        {
+          "other": "custom",
+          "different_pixels": 65534,
+          "mean_abs_uint8": 84.27707926432292,
+          "max_abs_uint8": 255.0,
+          "flipud_mean_abs_uint8": 86.22536214192708
+        }
+      ],
+      "rays_states_qpos_tokens_bit_equal": true,
+      "png_matches_saved_tensor": true,
+      "dataset_unique_rgb_count": 35483
+    },
+    {
+      "sample": 1,
+      "demo": 50,
+      "t": 0,
+      "comparisons": [
+        {
+          "other": "eval",
+          "different_pixels": 65530,
+          "mean_abs_uint8": 81.74682108561198,
+          "max_abs_uint8": 254.0,
+          "flipud_mean_abs_uint8": 81.75061543782552
+        },
+        {
+          "other": "custom",
+          "different_pixels": 65517,
+          "mean_abs_uint8": 106.06175740559895,
+          "max_abs_uint8": 255.0,
+          "flipud_mean_abs_uint8": 106.0638936360677
+        }
+      ],
+      "rays_states_qpos_tokens_bit_equal": true,
+      "png_matches_saved_tensor": true,
+      "dataset_unique_rgb_count": 35479
+    },
+    {
+      "sample": 2,
+      "demo": 100,
+      "t": 0,
+      "comparisons": [
+        {
+          "other": "eval",
+          "different_pixels": 9,
+          "mean_abs_uint8": 0.01409912109375,
+          "max_abs_uint8": 240.0,
+          "flipud_mean_abs_uint8": 77.13589477539062
+        },
+        {
+          "other": "custom",
+          "different_pixels": 7,
+          "mean_abs_uint8": 0.0091552734375,
+          "max_abs_uint8": 215.0,
+          "flipud_mean_abs_uint8": 77.13462320963542
+        }
+      ],
+      "rays_states_qpos_tokens_bit_equal": true,
+      "png_matches_saved_tensor": true,
+      "dataset_unique_rgb_count": 35476
+    },
+    {
+      "sample": 3,
+      "demo": 150,
+      "t": 0,
+      "comparisons": [
+        {
+          "other": "eval",
+          "different_pixels": 65532,
+          "mean_abs_uint8": 77.13437398274739,
+          "max_abs_uint8": 252.0,
+          "flipud_mean_abs_uint8": 0.015019734700520834
+        },
+        {
+          "other": "custom",
+          "different_pixels": 9,
+          "mean_abs_uint8": 0.01409912109375,
+          "max_abs_uint8": 240.0,
+          "flipud_mean_abs_uint8": 77.13329060872395
+        }
+      ],
+      "rays_states_qpos_tokens_bit_equal": true,
+      "png_matches_saved_tensor": true,
+      "dataset_unique_rgb_count": 35475
+    },
+    {
+      "sample": 4,
+      "demo": 0,
+      "t": 52,
+      "comparisons": [
+        {
+          "other": "eval",
+          "different_pixels": 65531,
+          "mean_abs_uint8": 77.13187662760417,
+          "max_abs_uint8": 252.0,
+          "flipud_mean_abs_uint8": 0.008199055989583334
+        },
+        {
+          "other": "custom",
+          "different_pixels": 65525,
+          "mean_abs_uint8": 77.1251932779948,
+          "max_abs_uint8": 252.0,
+          "flipud_mean_abs_uint8": 0.014882405598958334
+        }
+      ],
+      "rays_states_qpos_tokens_bit_equal": true,
+      "png_matches_saved_tensor": true,
+      "dataset_unique_rgb_count": 35479
+    },
+    {
+      "sample": 5,
+      "demo": 50,
+      "t": 48,
+      "comparisons": [
+        {
+          "other": "eval",
+          "different_pixels": 7,
+          "mean_abs_uint8": 0.009938557942708334,
+          "max_abs_uint8": 219.0,
+          "flipud_mean_abs_uint8": 77.1388448079427
+        },
+        {
+          "other": "custom",
+          "different_pixels": 8,
+          "mean_abs_uint8": 0.0111236572265625,
+          "max_abs_uint8": 219.0,
+          "flipud_mean_abs_uint8": 77.14046732584636
+        }
+      ],
+      "rays_states_qpos_tokens_bit_equal": true,
+      "png_matches_saved_tensor": true,
+      "dataset_unique_rgb_count": 35477
+    },
+    {
+      "sample": 6,
+      "demo": 100,
+      "t": 58,
+      "comparisons": [
+        {
+          "other": "eval",
+          "different_pixels": 7,
+          "mean_abs_uint8": 0.010548909505208334,
+          "max_abs_uint8": 240.0,
+          "flipud_mean_abs_uint8": 77.12754313151042
+        },
+        {
+          "other": "custom",
+          "different_pixels": 9,
+          "mean_abs_uint8": 0.011439005533854166,
+          "max_abs_uint8": 219.0,
+          "flipud_mean_abs_uint8": 77.12858581542969
+        }
+      ],
+      "rays_states_qpos_tokens_bit_equal": true,
+      "png_matches_saved_tensor": true,
+      "dataset_unique_rgb_count": 35470
+    },
+    {
+      "sample": 7,
+      "demo": 150,
+      "t": 46,
+      "comparisons": [
+        {
+          "other": "eval",
+          "different_pixels": 65298,
+          "mean_abs_uint8": 52.30215962727865,
+          "max_abs_uint8": 255.0,
+          "flipud_mean_abs_uint8": 77.13942972819011
+        },
+        {
+          "other": "custom",
+          "different_pixels": 16,
+          "mean_abs_uint8": 0.020284016927083332,
+          "max_abs_uint8": 240.0,
+          "flipud_mean_abs_uint8": 77.13651529947917
+        }
+      ],
+      "rays_states_qpos_tokens_bit_equal": true,
+      "png_matches_saved_tensor": true,
+      "dataset_unique_rgb_count": 35473
+    }
+  ],
+  "old_file_count": 6615,
+  "old_file_changes": [],
+  "frozen_code_changes": {},
+  "original_processes": [
+    {
+      "pid": 2893804,
+      "same_process_alive": false
+    },
+    {
+      "pid": 2893805,
+      "same_process_alive": false
+    }
+  ],
+  "counts": {
+    "utc": "2026-10-29T04:04:02.281389+00:00",
+    "fixed_forward_attempts": 0,
+    "closed_query_attempts": 0,
+    "total_policy_attempts": 0,
+    "optimizer_updates": 0,
+    "rollout_attempts": 0,
+    "closed_steps_reserved": 0,
+    "rollouts": {}
+  },
+  "gpu_seconds_by_timestamps": 11.579582214355469,
+  "gpu_seconds_reported": 11.579576409887522,
+  "explicit_render_requests_from_code_and_8_rows": 24,
+  "new_model_calls": 0,
+  "new_env_or_renderer_calls": 0,
+  "protocol_sha256": "ae04cd358b7e7faa24110dbb447973e518aa739830e541e6bb5dab5c0a7c97ea",
+  "limitations": [
+    "rendering state/context telemetry missing",
+    "current RGB corruption does not prove historic training corruption",
+    "non-RGB numeric equality is not independent visible-pixel geometry validation",
+    "zero counters corroborated by stopped branch and missing predictions, not hardware instrumentation of Python calls"
+  ]
+}

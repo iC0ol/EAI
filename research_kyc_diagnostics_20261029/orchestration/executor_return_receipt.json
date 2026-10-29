@@ -1,0 +1,34 @@
+{
+  "sent_utc": "2026-10-29 04:26:42 UTC",
+  "destination_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "executor_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+  "delivery_tool_accepted": true,
+  "send_count": 1,
+  "human_authorization_record": "execution/authorization.json",
+  "tool_response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a18138-0f15-76b2-b5cf-20e1722782a9\"}"
+      }
+    ],
+    "isError": false
+  },
+  "original_message": "KYC 有限排障已受控提前停止，请进入独立验收。协议v2 SHA ae04cd358b7e7faa24110dbb447973e518aa739830e541e6bb5dab5c0a7c97ea一致，未改冻结任务。\n\nStage0 COMPLETE / NEEDS_BOUNDED_STAGE1：checkpoint SHA、375 entries有限、60003/20001、前200demo stats逐维bit equal、全部epoch覆盖、旧11文件及48官方blob核对通过。vendor是archive无.git，最初版本字段误读父仓库HEAD，补充blob纠正保留；HDF5 schema简写亦补充纠正。旧训练RGB/framebuffer历史UNKNOWN。\n\nStage1A采集8来源状态（4demo）与24显式RGB渲染、1次make_env。物理state、qpos、token、ray6、actions/mask、共同crop均bit equal，但RGB不一致；代表样本0/4保存图像明显彩色高频损坏。已在创建ACT之前按A门停止。同raw RGB比较前提没有成立，因此这些差异不能隔离预处理错误；更不能追认旧训练损坏。没有GL status/error/context遥测，不能声称已确认framebuffer leak或0/32根因。\n\n实际固定前向0/32，闭环query0/80，rollout尝试0/16，env.step0/2400，优化器更新0；GPU保守整个child 11.579576秒。prior/posterior误差、两入口重复噪声、open-loop地板、C和正式test全部NOT_RUN（率/分母null）。PARTIAL，建议验收边界D/IMPLEMENTATION-LIMITED，不是A因果结论或C任务阴性。没有修复/重试推理/安装/新模型数据下载，全部原始数组已保存。自己的进程已退出，6615旧文件size/mtime/SHA不变，176个数组hash复核通过。\n\n原始入口 /home/asus/EAI/research_kyc_diagnostics_20261029/execution/FINAL_REPORT.md；重点input_comparisons.json、render_audit.json、inputs/sample_00..07.npz及代表triptych、stage0_report/gate、code_manifest_stage1、stages/*.json、counts/completion、delivery_integrity.json。请分别读原件，真实DeepSeek反驳后再写人类最终报告。后续渲染/模型实验需重新审查，当前不支持完整重训。\n\nGit：仅逐路径提交执行者execution目录；结果本地commit 99a2147b098206533eb36987e861c8d626fc9e57，收尾最终本地HEAD 2d42000db84b59a82e18cb6b37940ca1131661d7。两次正常HTTPS/临时HTTP1.1+postBuffer推送均HTTP408，ls-remote仍a03f16da9110f219be49a0994140c7617a6b45ff。因此没有已发布结果URL；publication.json明确FAILED_NETWORK，原件/commit保留，请主线程处理网络同步。未reset/rebase/force，父研究文件未stage，index已空并交回，之后我不再操作Git。\n\n6-1-sol-max已PAUSED并读回核实，只停自己的检查。原始人类附件已通过read_thread定位并核验回传授权（authorization.json），此为唯一一次回传；回执即存orchestration/executor_return_receipt.json。",
+  "counts": {
+    "fixed_forward_attempts": 0,
+    "closed_query_attempts": 0,
+    "rollout_attempts": 0,
+    "env_steps": 0,
+    "optimizer_updates": 0,
+    "gpu_allocation_seconds": 11.579576409887522
+  },
+  "final_local_head": "2d42000db84b59a82e18cb6b37940ca1131661d7",
+  "publication": "FAILED_NETWORK_HTTP408",
+  "verified_remote_head": "a03f16da9110f219be49a0994140c7617a6b45ff",
+  "published_result_url": null,
+  "own_automation": "PAUSED_READBACK_VERIFIED",
+  "parent_review": "PENDING",
+  "git_index_released": true,
+  "no_further_executor_experiments": true
+}

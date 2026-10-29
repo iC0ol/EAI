@@ -1,0 +1,22 @@
+{
+  "checked_local": "2026-10-29T17:05:03.388014+08:00",
+  "state": "PUBLISHED_EXECUTOR_RESULTS",
+  "repository": "iC0ol/EAI",
+  "branch": "research/u-gate0-v3-overnight",
+  "previous_remote": "a03f16da9110f219be49a0994140c7617a6b45ff",
+  "verified_remote_head": "2d42000db84b59a82e18cb6b37940ca1131661d7",
+  "results_commit": "99a2147b098206533eb36987e861c8d626fc9e57",
+  "url": "https://github.com/iC0ol/EAI/commit/2d42000db84b59a82e18cb6b37940ca1131661d7",
+  "exact_objects_verified": 92,
+  "large_npz_objects_uploaded_via_GitHub_connector": 8,
+  "history_rewritten": false,
+  "ref_update_force": false,
+  "remote_check": "git ls-remote origin refs/heads/research/u-gate0-v3-overnight",
+  "supersedes_for_current_publication_only": [
+    "execution/publication.json",
+    "orchestration/executor_git_status.json"
+  ],
+  "original_failure_records_preserved": true,
+  "parent_research_files": "not yet committed/published",
+  "new_user_scope": "render_repair pending joint approval"
+}

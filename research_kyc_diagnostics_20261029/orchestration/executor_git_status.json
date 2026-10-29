@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-29T04:26:01.804732+00:00",
+  "state": "EXECUTOR_DONE; PUBLICATION_FAILED_NETWORK; INDEX_RELEASED",
+  "results_local_commit": "99a2147b098206533eb36987e861c8d626fc9e57",
+  "final_local_head": "2d42000db84b59a82e18cb6b37940ca1131661d7",
+  "remote_verified_head": "a03f16da9110f219be49a0994140c7617a6b45ff",
+  "result_commit_url": null,
+  "public_scope": "research_kyc_diagnostics_20261029/execution",
+  "staged_paths": [],
+  "parent_authored_files_staged": false,
+  "index_owner": "released to parent before callback",
+  "automatic_check_status": "PAUSED",
+  "remaining_work": "parent independent Codex/DeepSeek review and network synchronization; no executor experiment restart"
+}
