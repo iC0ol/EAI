@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-29T04:24:39.289210+00:00",
+  "automation_id": "6-1-sol-max",
+  "status": "PAUSED",
+  "target_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+  "read_back_verified": true,
+  "reason": "controlled diagnostic stop; experimental work complete; awaiting parent review",
+  "main_automation_modified": false
+}

@@ -84,3 +84,5 @@ Stage2只供研究者考虑：若继续，先另行审查一次更窄的渲染�
 完整运行命令已执行完毕。**不要重启supervisor或复用剩余预算。** 新诊断需Codex/DeepSeek验收后另立范围；完整训练还需人类明确批准。只读复核可运行 `scripts/analyze_render.py` 和 `scripts/verify_delivery.py`，它们不初始化环境/CUDA、不产生新观测。
 
 公开同步仅逐路径包含本次原创脚本、清单、报告及必要小型NPZ/PNG/JSON；不含runtime、第三方源码镜像、weights、HDF5全量数据、完整XML、缓存、凭据或raw CLI。真实提交与remote SHA见交付后的publication.json/回传回执。主研究者后续进行Codex独立核验、真实DeepSeek反驳及最终人类报告。
+
+公开同步实际结果：本地结果提交 `99a2147b098206533eb36987e861c8d626fc9e57` 已生成。普通HTTPS推送、临时HTTP/1.1与100MiB postBuffer重试均exit1 / HTTP408；两次之后独立ls-remote仍为 `a03f16da9110f219be49a0994140c7617a6b45ff`。**本轮结果尚未公开同步成功**，没有可用结果commit网页URL；原件和本地commit保留。详见 [publication.json](publication.json)。执行者不继续重试，交主研究者处理网络同步。自己的 `6-1-sol-max` 检查已暂停并读回核实；主线程检查未修改。

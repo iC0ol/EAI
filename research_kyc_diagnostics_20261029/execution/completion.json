@@ -40,7 +40,7 @@
   "formal_test": "NOT_RUN",
   "training": "NOT_RUN; optimizer updates=0",
   "requires_codex_and_deepseek_review": true,
-  "publication": "READY_FOR_SCOPED_PUBLICATION",
+  "publication": "FAILED_NETWORK",
   "evidence_status": "D/IMPLEMENTATION-LIMITED",
   "fixed_inference": "NOT_RUN",
   "posterior_prior_metrics": {
@@ -61,6 +61,18 @@
     "version_provenance_correction.json",
     "schema_clarification.json"
   ],
-  "final_report_sha256": "bd967f210357f40ecaf6f94ae7cdd786dc9d94c1c97ee42778a48695ad9d91d0",
-  "updated_utc": "2026-10-29T04:19:55.114750+00:00"
+  "final_report_sha256": "9a6c8fcd21509b2fe7501eb22e7b8f8b3ae24a269d29159698539658fec482b2",
+  "updated_utc": "2026-10-29T04:24:39.375914+00:00",
+  "results_local_commit": "99a2147b098206533eb36987e861c8d626fc9e57",
+  "verified_remote_head": "a03f16da9110f219be49a0994140c7617a6b45ff",
+  "published_result_commit_url": null,
+  "automation": {
+    "utc": "2026-10-29T04:24:39.289210+00:00",
+    "automation_id": "6-1-sol-max",
+    "status": "PAUSED",
+    "target_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+    "read_back_verified": true,
+    "reason": "controlled diagnostic stop; experimental work complete; awaiting parent review",
+    "main_automation_modified": false
+  }
 }

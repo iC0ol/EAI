@@ -1,0 +1,39 @@
+{
+  "utc": "2026-10-29T04:24:39.247665+00:00",
+  "state": "FAILED_NETWORK",
+  "results_local_commit": "99a2147b098206533eb36987e861c8d626fc9e57",
+  "remote_branch": "research/u-gate0-v3-overnight",
+  "repository": "https://github.com/iC0ol/EAI",
+  "verified_remote_head": "a03f16da9110f219be49a0994140c7617a6b45ff",
+  "published_result_commit_url": null,
+  "attempts": [
+    {
+      "command": [
+        "git",
+        "push",
+        "origin",
+        "HEAD:refs/heads/research/u-gate0-v3-overnight"
+      ],
+      "exit_code": 1,
+      "error": "HTTP408 RPC failure; remote unchanged"
+    },
+    {
+      "command": [
+        "git",
+        "-c",
+        "http.version=HTTP/1.1",
+        "-c",
+        "http.postBuffer=104857600",
+        "push",
+        "origin",
+        "HEAD:refs/heads/research/u-gate0-v3-overnight"
+      ],
+      "exit_code": 1,
+      "error": "HTTP408 RPC failure; remote unchanged"
+    }
+  ],
+  "files_preserved": true,
+  "no_force_push_reset_or_rebase": true,
+  "receipt_commit": "this metadata is committed in a later local receipt commit; final HEAD is reported in callback",
+  "requires_parent_followup": "review evidence and handle network synchronization; no automatic experiment restart"
+}

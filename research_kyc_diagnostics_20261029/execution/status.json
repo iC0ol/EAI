@@ -42,5 +42,7 @@
     "new_disk_bytes": 50390410,
     "own_gpu_bytes": 402653184
   },
-  "requires_review": true
+  "requires_review": true,
+  "publication": "FAILED_NETWORK",
+  "automation_status": "PAUSED"
 }
