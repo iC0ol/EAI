@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-29T04:05:15.468966+00:00",
+  "decision": "NEEDS_BOUNDED_STAGE1",
+  "concrete_issues": [],
+  "stage0_cuda_initialized": false,
+  "new_model_calls": 0,
+  "new_env_instances": 0,
+  "unresolved": [
+    "H1 same-state Dataset/Evaluator/custom tensors and prior outputs lack numerical comparison",
+    "H2 seen-source prior/posterior/position-weighted constant comparison absent",
+    "H3 training-pool and original dev-camera paired behavior absent",
+    "H4 historic framebuffer integrity and exact collection XML remain unknowable from saved assets"
+  ],
+  "why_readonly_insufficient": "saved checkpoint stats, sampler logs and dev traces do not contain fixed seen-source prior/posterior outputs or corresponding entry tensors",
+  "joint_protocol_sha256": "ae04cd358b7e7faa24110dbb447973e518aa739830e541e6bb5dab5c0a7c97ea",
+  "conditional_stage1_preapproved": true,
+  "cpu_audit_wall_seconds": 4.378707408905029
+}

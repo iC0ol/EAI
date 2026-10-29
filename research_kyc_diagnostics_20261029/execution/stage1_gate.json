@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-29T04:13:09.015822+00:00",
+  "decision": "STOP_INPUT_DISCREPANCY",
+  "C": "NOT_RUN",
+  "classification_boundary": "D; numerical discrepancy is not proof of H1 causal explanation"
+}

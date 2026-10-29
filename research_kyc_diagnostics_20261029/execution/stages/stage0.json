@@ -1,0 +1,45 @@
+{
+  "stage": "stage0",
+  "state": "COMPLETE",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "-B",
+    "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/scripts/stage0.py"
+  ],
+  "cwd": "/home/asus/EAI/research_kyc_diagnostics_20261029/execution",
+  "started_epoch": 1793246709.9589548,
+  "ended_epoch": 1793246716.1258717,
+  "utc": "2026-10-29T04:05:16.125874+00:00",
+  "exit_code": 0,
+  "reason": null,
+  "child_identity": {
+    "pid": 2891168,
+    "ppid": 2891167,
+    "start_ticks": 260067001,
+    "rss_bytes": 262144,
+    "state": "R"
+  },
+  "supervisor": {
+    "pid": 2891167,
+    "ppid": 2150,
+    "start_ticks": 260066994,
+    "rss_bytes": 20578304,
+    "state": "R",
+    "sid": 2891167,
+    "pgid": 2891167,
+    "command": [
+      "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/scripts/supervise.py",
+      "--stage",
+      "stage0"
+    ],
+    "utc": "2026-10-29T04:05:09.922888+00:00"
+  },
+  "wall_seconds": 6.166909723076969,
+  "gpu_allocation_seconds": 0,
+  "resource_samples": 1,
+  "peak_samples": {
+    "tree_rss_bytes": 59867136,
+    "new_disk_bytes": 1495667,
+    "own_gpu_bytes": 0
+  }
+}

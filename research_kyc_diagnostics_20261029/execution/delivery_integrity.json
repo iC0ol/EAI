@@ -1,0 +1,98 @@
+{
+  "utc": "2026-10-29T04:17:42.608125+00:00",
+  "old_files_checked": 6615,
+  "old_file_differences": [],
+  "stage1_frozen_code_changes": {},
+  "input_file_array_hashes": [
+    {
+      "sample": 0,
+      "arrays_verified": 22,
+      "file_sha256": "f43b1088b763bf2e6e503d36a85655846c63425230dce9fcbd35d6b0893fc1e3"
+    },
+    {
+      "sample": 1,
+      "arrays_verified": 22,
+      "file_sha256": "cd582e735b8471367f0171146f51403aa46cb3c3ba15c81c91f1b77400d9c141"
+    },
+    {
+      "sample": 2,
+      "arrays_verified": 22,
+      "file_sha256": "3e0cbe15d9239964d501ab2b35470cacd92a370333fcaff72c6a79acc933c30c"
+    },
+    {
+      "sample": 3,
+      "arrays_verified": 22,
+      "file_sha256": "b0612e2c490bdce74e5b21643e3cbcb88a8cd58beb7142b69aef339a3096d218"
+    },
+    {
+      "sample": 4,
+      "arrays_verified": 22,
+      "file_sha256": "15d1e1aa802d53b95a2c146128b2307c3938acc68b6370431d7703019c38bd40"
+    },
+    {
+      "sample": 5,
+      "arrays_verified": 22,
+      "file_sha256": "f76e50c9cfed6b566c456e7c9b71a97b6b9cf1f74cb2a4543854345852602adf"
+    },
+    {
+      "sample": 6,
+      "arrays_verified": 22,
+      "file_sha256": "c903c35d4326c40dd61952a4f7ebe1a63e494301c5e1facbac095b21d3cee6f5"
+    },
+    {
+      "sample": 7,
+      "arrays_verified": 22,
+      "file_sha256": "f2538c39ad01c6ae2f3e0fe187f39f45e276fa6284b125d0570516c42037885d"
+    }
+  ],
+  "gpu_allocation_seconds": 11.579576409887522,
+  "counts": {
+    "utc": "2026-10-29T04:04:02.281389+00:00",
+    "fixed_forward_attempts": 0,
+    "closed_query_attempts": 0,
+    "total_policy_attempts": 0,
+    "optimizer_updates": 0,
+    "rollout_attempts": 0,
+    "closed_steps_reserved": 0,
+    "rollouts": {}
+  },
+  "original_processes": [
+    {
+      "file": "supervisor_identity.json",
+      "recorded_identity": {
+        "pid": 2893804,
+        "ppid": 2893803,
+        "start_ticks": 260113858,
+        "rss_bytes": 20709376,
+        "state": "R",
+        "sid": 2893804,
+        "pgid": 2893804,
+        "command": [
+          "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/scripts/supervise.py",
+          "--stage",
+          "stage1"
+        ],
+        "utc": "2026-10-29T04:12:58.568118+00:00"
+      },
+      "current_identity": null,
+      "original_process_live": false
+    },
+    {
+      "file": "active_child.json",
+      "recorded_identity": {
+        "pid": 2893805,
+        "ppid": 2893804,
+        "start_ticks": 260113867,
+        "rss_bytes": 262144,
+        "state": "R"
+      },
+      "current_identity": null,
+      "original_process_live": false
+    }
+  ],
+  "gpu_processes_after": "pid, process_name, used_gpu_memory [MiB]\n543637, python, 296 MiB\n",
+  "new_disk_bytes": 50986690,
+  "disk_free_bytes": 188082708480,
+  "protocol_sha256": "ae04cd358b7e7faa24110dbb447973e518aa739830e541e6bb5dab5c0a7c97ea",
+  "classification_boundary": "D/IMPLEMENTATION-LIMITED; new rendering fault observed; historic checkpoint failure not causally located"
+}

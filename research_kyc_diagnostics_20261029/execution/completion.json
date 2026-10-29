@@ -1,0 +1,66 @@
+{
+  "utc": "2026-10-29T04:13:10.315680+00:00",
+  "state": "STOPPED_INPUT_PREREQUISITE / PARTIAL",
+  "reason": "CURRENT_RGB_RENDER_PREREQUISITE_FAILED",
+  "counts": {
+    "utc": "2026-10-29T04:04:02.281389+00:00",
+    "fixed_forward_attempts": 0,
+    "closed_query_attempts": 0,
+    "total_policy_attempts": 0,
+    "optimizer_updates": 0,
+    "rollout_attempts": 0,
+    "closed_steps_reserved": 0,
+    "rollouts": {}
+  },
+  "gpu_allocation_seconds": 11.579576409887522,
+  "stage0": {
+    "utc": "2026-10-29T04:05:15.468966+00:00",
+    "decision": "NEEDS_BOUNDED_STAGE1",
+    "concrete_issues": [],
+    "stage0_cuda_initialized": false,
+    "new_model_calls": 0,
+    "new_env_instances": 0,
+    "unresolved": [
+      "H1 same-state Dataset/Evaluator/custom tensors and prior outputs lack numerical comparison",
+      "H2 seen-source prior/posterior/position-weighted constant comparison absent",
+      "H3 training-pool and original dev-camera paired behavior absent",
+      "H4 historic framebuffer integrity and exact collection XML remain unknowable from saved assets"
+    ],
+    "why_readonly_insufficient": "saved checkpoint stats, sampler logs and dev traces do not contain fixed seen-source prior/posterior outputs or corresponding entry tensors",
+    "joint_protocol_sha256": "ae04cd358b7e7faa24110dbb447973e518aa739830e541e6bb5dab5c0a7c97ea",
+    "conditional_stage1_preapproved": true,
+    "cpu_audit_wall_seconds": 4.378707408905029
+  },
+  "stage1_gate": {
+    "utc": "2026-10-29T04:13:09.015822+00:00",
+    "decision": "STOP_INPUT_DISCREPANCY",
+    "C": "NOT_RUN",
+    "classification_boundary": "D; numerical discrepancy is not proof of H1 causal explanation"
+  },
+  "formal_test": "NOT_RUN",
+  "training": "NOT_RUN; optimizer updates=0",
+  "requires_codex_and_deepseek_review": true,
+  "publication": "READY_FOR_SCOPED_PUBLICATION",
+  "evidence_status": "D/IMPLEMENTATION-LIMITED",
+  "fixed_inference": "NOT_RUN",
+  "posterior_prior_metrics": {
+    "state": "NOT_RUN",
+    "P": null,
+    "M": null,
+    "Q": null
+  },
+  "closed_loop": {
+    "state": "NOT_RUN",
+    "successes": null,
+    "n": null
+  },
+  "explicit_rgb_render_requests": 24,
+  "new_environment_make_calls": 1,
+  "engineering_repairs_after_failed_job": 0,
+  "record_clarifications": [
+    "version_provenance_correction.json",
+    "schema_clarification.json"
+  ],
+  "final_report_sha256": "bd967f210357f40ecaf6f94ae7cdd786dc9d94c1c97ee42778a48695ad9d91d0",
+  "updated_utc": "2026-10-29T04:19:55.114750+00:00"
+}

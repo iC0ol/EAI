@@ -1,0 +1,26 @@
+{
+  "repo": "ripl/robosuite",
+  "commit": "0df3a5f5782937fa2e8fa923910d616b73310b8d",
+  "entries": [
+    {
+      "path": "robosuite/__init__.py",
+      "sha": "5b5bbfbd005e92fd62b3d8cb6b75c9db67d0b922",
+      "size": 2308
+    },
+    {
+      "path": "robosuite/environments/manipulation/lift_rand.py",
+      "sha": "c70aeb8dc9cd1e67762d889743460b81d7fcfad2",
+      "size": 24814
+    },
+    {
+      "path": "robosuite/models/arenas/table_arena.py",
+      "sha": "4a14c11c95d612ec6fd34eea62623d28a2460220",
+      "size": 4090
+    },
+    {
+      "path": "robosuite/wrappers/action_wrapper.py",
+      "sha": "d540e1fbde68b8142b37adffa244bd3facab330d",
+      "size": 2401
+    }
+  ]
+}

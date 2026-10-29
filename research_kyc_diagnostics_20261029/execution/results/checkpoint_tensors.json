@@ -1,0 +1,4667 @@
+[
+  {
+    "key": "model.pos_table",
+    "shape": [
+      1,
+      32,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 16384,
+    "finite": true,
+    "min": -1.0,
+    "max": 1.0,
+    "mean": 0.419236598399765
+  },
+  {
+    "key": "model.transformer.encoder.layers.0.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.076308973133564,
+    "max": 0.07419487088918686,
+    "mean": 5.1811131968966844e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.0.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": -0.020221317186951637,
+    "max": 0.018011579290032387,
+    "mean": -0.00019582801850711226
+  },
+  {
+    "key": "model.transformer.encoder.layers.0.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.09419800341129303,
+    "max": 0.09160352498292923,
+    "mean": -2.4442353954883043e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.0.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.006578169297426939,
+    "max": 0.006509184371680021,
+    "mean": -3.4735224792914465e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.0.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.07309188693761826,
+    "max": 0.0812046006321907,
+    "mean": 6.058937384953227e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.0.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.05225343257188797,
+    "max": 0.04685215279459953,
+    "mean": -0.0029915336325982977
+  },
+  {
+    "key": "model.transformer.encoder.layers.0.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.07240301370620728,
+    "max": 0.07546927779912949,
+    "mean": 2.8084888128393667e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.0.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.025917107239365578,
+    "max": 0.024116378277540207,
+    "mean": 5.130215627602297e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.0.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.9856310486793518,
+    "max": 1.0175554752349854,
+    "mean": 1.0016332991654053
+  },
+  {
+    "key": "model.transformer.encoder.layers.0.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.009969490580260754,
+    "max": 0.011178099550306797,
+    "mean": -1.1891950630449344e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.0.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.9854726195335388,
+    "max": 1.0206637382507324,
+    "mean": 1.0004501696676016
+  },
+  {
+    "key": "model.transformer.encoder.layers.0.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.007163961883634329,
+    "max": 0.006582598201930523,
+    "mean": -0.00017194360085870386
+  },
+  {
+    "key": "model.transformer.encoder.layers.1.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.07434850186109543,
+    "max": 0.0708514079451561,
+    "mean": 3.5006798395215395e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.1.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": -0.011345358565449715,
+    "max": 0.011586903594434261,
+    "mean": 0.00015020774418328386
+  },
+  {
+    "key": "model.transformer.encoder.layers.1.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.09263810515403748,
+    "max": 0.09264339506626129,
+    "mean": -4.061977599371632e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.1.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.008075270801782608,
+    "max": 0.00848217774182558,
+    "mean": -8.911674118650126e-07
+  },
+  {
+    "key": "model.transformer.encoder.layers.1.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.08245989680290222,
+    "max": 0.0945030078291893,
+    "mean": 1.2371853329081554e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.1.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.05214427784085274,
+    "max": 0.046578969806432724,
+    "mean": -0.002479902025354974
+  },
+  {
+    "key": "model.transformer.encoder.layers.1.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.07750341296195984,
+    "max": 0.0816534236073494,
+    "mean": 2.596295319914938e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.1.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.02932492271065712,
+    "max": 0.027725640684366226,
+    "mean": 0.00011261201940748755
+  },
+  {
+    "key": "model.transformer.encoder.layers.1.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.9857848286628723,
+    "max": 1.0107762813568115,
+    "mean": 0.9993228460662067
+  },
+  {
+    "key": "model.transformer.encoder.layers.1.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.012725722044706345,
+    "max": 0.010641787201166153,
+    "mean": -7.23341391168364e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.1.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.9823521971702576,
+    "max": 1.0156203508377075,
+    "mean": 0.9998413638677448
+  },
+  {
+    "key": "model.transformer.encoder.layers.1.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.012028714641928673,
+    "max": 0.010127547197043896,
+    "mean": -0.0001305524485148979
+  },
+  {
+    "key": "model.transformer.encoder.layers.2.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.0752188190817833,
+    "max": 0.07448337972164154,
+    "mean": 2.3171845452852556e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.2.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": -0.008899538777768612,
+    "max": 0.011474779807031155,
+    "mean": 3.539728302885218e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.2.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.0907197892665863,
+    "max": 0.09179733693599701,
+    "mean": -8.372705704028397e-06
+  },
+  {
+    "key": "model.transformer.encoder.layers.2.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.00940409954637289,
+    "max": 0.009586842730641365,
+    "mean": -4.1552215504392365e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.2.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.08735398203134537,
+    "max": 0.08275460451841354,
+    "mean": 3.259540662845922e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.2.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.054369859397411346,
+    "max": 0.049191977828741074,
+    "mean": -0.0019713016604345768
+  },
+  {
+    "key": "model.transformer.encoder.layers.2.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.07324282079935074,
+    "max": 0.07594665884971619,
+    "mean": 6.290673041696674e-06
+  },
+  {
+    "key": "model.transformer.encoder.layers.2.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.028046149760484695,
+    "max": 0.027226082980632782,
+    "mean": 5.142441288974453e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.2.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.9809226393699646,
+    "max": 1.0091110467910767,
+    "mean": 0.9978322047973052
+  },
+  {
+    "key": "model.transformer.encoder.layers.2.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.011208479292690754,
+    "max": 0.014829295687377453,
+    "mean": -0.0001964974519608198
+  },
+  {
+    "key": "model.transformer.encoder.layers.2.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.9860039949417114,
+    "max": 1.018929123878479,
+    "mean": 0.9992345944046974
+  },
+  {
+    "key": "model.transformer.encoder.layers.2.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.0106169069185853,
+    "max": 0.01231355033814907,
+    "mean": 0.00012266243116609843
+  },
+  {
+    "key": "model.transformer.encoder.layers.3.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.07301270216703415,
+    "max": 0.08120659738779068,
+    "mean": 5.679323857574373e-06
+  },
+  {
+    "key": "model.transformer.encoder.layers.3.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": -0.009701613336801529,
+    "max": 0.009302838705480099,
+    "mean": 8.510536475014874e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.3.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.09350451827049255,
+    "max": 0.09844449907541275,
+    "mean": -4.5039606945310065e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.3.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.011988784186542034,
+    "max": 0.009326618164777756,
+    "mean": -4.786107375487347e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.3.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.08485639840364456,
+    "max": 0.09077586233615875,
+    "mean": 7.905684609641079e-06
+  },
+  {
+    "key": "model.transformer.encoder.layers.3.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.04867163300514221,
+    "max": 0.04732409864664078,
+    "mean": -0.00163459436366864
+  },
+  {
+    "key": "model.transformer.encoder.layers.3.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.0754457414150238,
+    "max": 0.08019726723432541,
+    "mean": -1.8476224844337987e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.3.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.02845112234354019,
+    "max": 0.0286742951720953,
+    "mean": 2.8344993353357495e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.3.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.9859024882316589,
+    "max": 1.0143760442733765,
+    "mean": 0.9979548167902976
+  },
+  {
+    "key": "model.transformer.encoder.layers.3.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.013429956510663033,
+    "max": 0.012385150417685509,
+    "mean": -4.943714414373801e-05
+  },
+  {
+    "key": "model.transformer.encoder.layers.3.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.9801363945007324,
+    "max": 1.011225700378418,
+    "mean": 0.9983866133261472
+  },
+  {
+    "key": "model.transformer.encoder.layers.3.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.012094723992049694,
+    "max": 0.015199569053947926,
+    "mean": 9.701681347973334e-05
+  },
+  {
+    "key": "model.transformer.encoder.norm.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.984666645526886,
+    "max": 1.0138307809829712,
+    "mean": 1.0017168859485537
+  },
+  {
+    "key": "model.transformer.encoder.norm.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.017333827912807465,
+    "max": 0.014002491720020771,
+    "mean": 4.3563089064946325e-06
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.06915134936571121,
+    "max": 0.06929139792919159,
+    "mean": -2.175510613731404e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": -0.014720603823661804,
+    "max": 0.010290868580341339,
+    "mean": 5.770080736572369e-06
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.11973828822374344,
+    "max": 0.1206190213561058,
+    "mean": -0.00019178177894675413
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.04579423367977142,
+    "max": 0.0338345468044281,
+    "mean": 4.218793657706499e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.multihead_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.0853223204612732,
+    "max": 0.08064981549978256,
+    "mean": 5.789127620243656e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.multihead_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": -0.024075588211417198,
+    "max": 0.029154304414987564,
+    "mean": 6.95094937466223e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.multihead_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.1775502860546112,
+    "max": 0.17797107994556427,
+    "mean": 1.3940086963173579e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.multihead_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.09326920658349991,
+    "max": 0.05870600789785385,
+    "mean": -0.00047280153371287437
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.12814439833164215,
+    "max": 0.11165589839220047,
+    "mean": -0.0002471297277082368
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.0562150813639164,
+    "max": 0.05187775567173958,
+    "mean": -0.0012184906459427047
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.13625529408454895,
+    "max": 0.0893028974533081,
+    "mean": 5.3711197974294294e-06
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.023758050054311752,
+    "max": 0.024620449170470238,
+    "mean": -8.45407973457668e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.0040116640739142895,
+    "max": 0.004228068981319666,
+    "mean": -1.5976218765700878e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.9672201871871948,
+    "max": 0.9968048334121704,
+    "mean": 0.9845239471178502
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.012494812719523907,
+    "max": 0.013120317831635475,
+    "mean": -0.00013963271111183673
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.norm3.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.9375777840614319,
+    "max": 1.0669240951538086,
+    "mean": 1.031266103615053
+  },
+  {
+    "key": "model.transformer.decoder.layers.0.norm3.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.01601339690387249,
+    "max": 0.02553383819758892,
+    "mean": 0.0008616151535232319
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.054126471281051636,
+    "max": 0.05412635579705238,
+    "mean": 1.756156306278137e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.07654624432325363,
+    "max": 0.07654644548892975,
+    "mean": 8.377841503870746e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.multihead_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.0541265532374382,
+    "max": 0.054126400500535965,
+    "mean": -4.385378941162359e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.multihead_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.multihead_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.0765463262796402,
+    "max": 0.07654624432325363,
+    "mean": -0.00010883420950726726
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.multihead_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.04841228574514389,
+    "max": 0.04841218516230583,
+    "mean": -5.431119610701344e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.04409032315015793,
+    "max": 0.04410248622298241,
+    "mean": 0.0003731997168667789
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.04841221123933792,
+    "max": 0.048412222415208817,
+    "mean": 7.558914169045609e-07
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.021917888894677162,
+    "max": 0.02198455110192299,
+    "mean": -0.00010496510773094769
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.norm3.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.1.norm3.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.05412650108337402,
+    "max": 0.05412640795111656,
+    "mean": 1.594035946788268e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.07654449343681335,
+    "max": 0.07654652744531631,
+    "mean": -1.1268892984411935e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.multihead_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.05412658676505089,
+    "max": 0.054126523435115814,
+    "mean": 3.002285816458317e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.multihead_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.multihead_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.0765465497970581,
+    "max": 0.07654611766338348,
+    "mean": -8.577837107518202e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.multihead_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.0484122708439827,
+    "max": 0.04841216653585434,
+    "mean": 9.450847934872605e-06
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.04409032315015793,
+    "max": 0.04410248622298241,
+    "mean": 0.0003731997168667789
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.04841211438179016,
+    "max": 0.048412252217531204,
+    "mean": -2.4526382519783483e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.021917888894677162,
+    "max": 0.02198455110192299,
+    "mean": -0.00010496510773094769
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.norm3.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.2.norm3.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.054126471281051636,
+    "max": 0.05412657558917999,
+    "mean": -1.2043609445144117e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.07654564827680588,
+    "max": 0.07654532790184021,
+    "mean": 2.8410427075257192e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.multihead_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.05412658676505089,
+    "max": 0.05412633344531059,
+    "mean": 1.213847990544873e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.multihead_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.multihead_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.07654644548892975,
+    "max": 0.07654594630002975,
+    "mean": 0.0001180198739415344
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.multihead_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.04841221868991852,
+    "max": 0.04841214418411255,
+    "mean": 3.1972690110949206e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.04409032315015793,
+    "max": 0.04410248622298241,
+    "mean": 0.0003731997168667789
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.048412032425403595,
+    "max": 0.0484122596681118,
+    "mean": 6.08979109799774e-06
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.021917888894677162,
+    "max": 0.02198455110192299,
+    "mean": -0.00010496510773094769
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.norm3.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.3.norm3.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.05412625893950462,
+    "max": 0.054126568138599396,
+    "mean": -2.1470483858692804e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.07654620707035065,
+    "max": 0.07654564827680588,
+    "mean": 7.627085530132834e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.multihead_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.054126542061567307,
+    "max": 0.05412657558917999,
+    "mean": -5.72296059843775e-06
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.multihead_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.multihead_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.07654625922441483,
+    "max": 0.07654513418674469,
+    "mean": -0.00014295100557466865
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.multihead_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.04841216653585434,
+    "max": 0.0484122708439827,
+    "mean": 1.4739572558485594e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.04409032315015793,
+    "max": 0.04410248622298241,
+    "mean": 0.0003731997168667789
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.04841220751404762,
+    "max": 0.04841213300824165,
+    "mean": 4.930348765449197e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.021917888894677162,
+    "max": 0.02198455110192299,
+    "mean": -0.00010496510773094769
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.norm3.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.4.norm3.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.0541265606880188,
+    "max": 0.05412648245692253,
+    "mean": 4.619846659938054e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.07654646039009094,
+    "max": 0.07654492557048798,
+    "mean": -0.00010496996142788837
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.multihead_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.0541265532374382,
+    "max": 0.054126445204019547,
+    "mean": 1.654949294930534e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.multihead_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.multihead_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.07654498517513275,
+    "max": 0.07654615491628647,
+    "mean": 7.639938060740453e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.multihead_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.04841221868991852,
+    "max": 0.04841228574514389,
+    "mean": 2.9483425972072457e-06
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.04409032315015793,
+    "max": 0.04410248622298241,
+    "mean": 0.0003731997168667789
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.0484122633934021,
+    "max": 0.04841218516230583,
+    "mean": -2.169116313384406e-06
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.021917888894677162,
+    "max": 0.02198455110192299,
+    "mean": -0.00010496510773094769
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.norm3.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.5.norm3.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.05412648990750313,
+    "max": 0.054126568138599396,
+    "mean": 2.4723095841260533e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.0765465572476387,
+    "max": 0.07654623687267303,
+    "mean": -7.649140874561839e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.multihead_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.0541265606880188,
+    "max": 0.05412641167640686,
+    "mean": -6.495671579829396e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.multihead_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.multihead_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.07654619216918945,
+    "max": 0.07654562592506409,
+    "mean": 8.675469117708535e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.multihead_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.04841216653585434,
+    "max": 0.048412200063467026,
+    "mean": 2.9642183629731407e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.04409032315015793,
+    "max": 0.04410248622298241,
+    "mean": 0.0003731997168667789
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.048412248492240906,
+    "max": 0.04841199889779091,
+    "mean": 4.816584318844914e-05
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.021917888894677162,
+    "max": 0.02198455110192299,
+    "mean": -0.00010496510773094769
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.norm3.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.transformer.decoder.layers.6.norm3.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.transformer.decoder.norm.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.930855929851532,
+    "max": 0.9906452894210815,
+    "mean": 0.9662713104626164
+  },
+  {
+    "key": "model.transformer.decoder.norm.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.0066336216405034065,
+    "max": 0.007682282477617264,
+    "mean": -0.0004573005034895772
+  },
+  {
+    "key": "model.encoder.layers.0.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.07661222666501999,
+    "max": 0.07057801634073257,
+    "mean": -1.6958719055565774e-05
+  },
+  {
+    "key": "model.encoder.layers.0.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": -0.04114920273423195,
+    "max": 0.03384164720773697,
+    "mean": -0.00023482408658222673
+  },
+  {
+    "key": "model.encoder.layers.0.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.3911200165748596,
+    "max": 0.3919679522514343,
+    "mean": 4.693009777488987e-05
+  },
+  {
+    "key": "model.encoder.layers.0.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.061440180987119675,
+    "max": 0.3422769010066986,
+    "mean": 0.0012220235745064867
+  },
+  {
+    "key": "model.encoder.layers.0.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.07921098172664642,
+    "max": 0.06600053608417511,
+    "mean": 0.0006044453767082861
+  },
+  {
+    "key": "model.encoder.layers.0.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.056615784764289856,
+    "max": 0.05137686803936958,
+    "mean": -0.003256042740540366
+  },
+  {
+    "key": "model.encoder.layers.0.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.2903606593608856,
+    "max": 0.5658792853355408,
+    "mean": 0.00046307613895657783
+  },
+  {
+    "key": "model.encoder.layers.0.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.0544481985270977,
+    "max": 0.4811477065086365,
+    "mean": 0.0015860826171447684
+  },
+  {
+    "key": "model.encoder.layers.0.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.9748970866203308,
+    "max": 1.0140910148620605,
+    "mean": 0.995643476373516
+  },
+  {
+    "key": "model.encoder.layers.0.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.017814677208662033,
+    "max": 0.021087443456053734,
+    "mean": -3.384286499397149e-05
+  },
+  {
+    "key": "model.encoder.layers.0.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.7605869770050049,
+    "max": 1.0622426271438599,
+    "mean": 1.0094073227373883
+  },
+  {
+    "key": "model.encoder.layers.0.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.1438739150762558,
+    "max": 0.06630079448223114,
+    "mean": -0.007408307365594169
+  },
+  {
+    "key": "model.encoder.layers.1.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.15969400107860565,
+    "max": 0.15908822417259216,
+    "mean": -0.0001638683269540403
+  },
+  {
+    "key": "model.encoder.layers.1.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": -0.14517197012901306,
+    "max": 0.147504985332489,
+    "mean": -0.0009081457368004623
+  },
+  {
+    "key": "model.encoder.layers.1.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.49419212341308594,
+    "max": 0.5061797499656677,
+    "mean": 2.1687190569621225e-06
+  },
+  {
+    "key": "model.encoder.layers.1.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.012636390514671803,
+    "max": 0.44569170475006104,
+    "mean": 0.001112439386520947
+  },
+  {
+    "key": "model.encoder.layers.1.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.0778699517250061,
+    "max": 0.08075973391532898,
+    "mean": 0.0007539843113508419
+  },
+  {
+    "key": "model.encoder.layers.1.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.056901268661022186,
+    "max": 0.053242456167936325,
+    "mean": -0.0011292232725796936
+  },
+  {
+    "key": "model.encoder.layers.1.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.323833703994751,
+    "max": 0.578346848487854,
+    "mean": 0.0006752055127818626
+  },
+  {
+    "key": "model.encoder.layers.1.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.028050806373357773,
+    "max": 0.5602070689201355,
+    "mean": 0.001350269610181698
+  },
+  {
+    "key": "model.encoder.layers.1.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.81119704246521,
+    "max": 1.011528491973877,
+    "mean": 0.9921824297634885
+  },
+  {
+    "key": "model.encoder.layers.1.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.16138695180416107,
+    "max": 0.05198880657553673,
+    "mean": 0.0011380538480505464
+  },
+  {
+    "key": "model.encoder.layers.1.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.7200994491577148,
+    "max": 1.0981457233428955,
+    "mean": 1.0264341958099976
+  },
+  {
+    "key": "model.encoder.layers.1.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.2352379560470581,
+    "max": 0.027898510918021202,
+    "mean": -0.009196224579511636
+  },
+  {
+    "key": "model.encoder.layers.2.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.16660767793655396,
+    "max": 0.162860706448555,
+    "mean": -0.000407087113448161
+  },
+  {
+    "key": "model.encoder.layers.2.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": -0.12024684250354767,
+    "max": 0.1272665113210678,
+    "mean": -0.001473621368258608
+  },
+  {
+    "key": "model.encoder.layers.2.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.28355956077575684,
+    "max": 0.28727248311042786,
+    "mean": 2.2664931633585854e-05
+  },
+  {
+    "key": "model.encoder.layers.2.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.004155417438596487,
+    "max": 0.22283387184143066,
+    "mean": 0.0005214510506954539
+  },
+  {
+    "key": "model.encoder.layers.2.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.08919011056423187,
+    "max": 0.0968245342373848,
+    "mean": 0.000924187939212106
+  },
+  {
+    "key": "model.encoder.layers.2.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.05776630714535713,
+    "max": 0.05412672087550163,
+    "mean": -0.0011110040513226949
+  },
+  {
+    "key": "model.encoder.layers.2.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.17085500061511993,
+    "max": 0.34400105476379395,
+    "mean": 0.0003600059267073715
+  },
+  {
+    "key": "model.encoder.layers.2.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.030096059665083885,
+    "max": 0.3097132742404938,
+    "mean": 0.00021051285493456362
+  },
+  {
+    "key": "model.encoder.layers.2.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.772184431552887,
+    "max": 1.0202062129974365,
+    "mean": 0.9947798931971192
+  },
+  {
+    "key": "model.encoder.layers.2.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.20815551280975342,
+    "max": 0.03143082931637764,
+    "mean": 0.0006241088349199231
+  },
+  {
+    "key": "model.encoder.layers.2.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.8336608409881592,
+    "max": 1.1127147674560547,
+    "mean": 1.0362757608527318
+  },
+  {
+    "key": "model.encoder.layers.2.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.14572963118553162,
+    "max": 0.03226608410477638,
+    "mean": -0.008940757280139877
+  },
+  {
+    "key": "model.encoder.layers.3.self_attn.in_proj_weight",
+    "shape": [
+      1536,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 786432,
+    "finite": true,
+    "min": -0.12578453123569489,
+    "max": 0.12398981302976608,
+    "mean": -0.00021477024907350824
+  },
+  {
+    "key": "model.encoder.layers.3.self_attn.in_proj_bias",
+    "shape": [
+      1536
+    ],
+    "dtype": "torch.float32",
+    "numel": 1536,
+    "finite": true,
+    "min": -0.07112815231084824,
+    "max": 0.07056566327810287,
+    "mean": -0.0007013062104862892
+  },
+  {
+    "key": "model.encoder.layers.3.self_attn.out_proj.weight",
+    "shape": [
+      512,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 262144,
+    "finite": true,
+    "min": -0.16040386259555817,
+    "max": 0.15978966653347015,
+    "mean": 2.915131520331407e-05
+  },
+  {
+    "key": "model.encoder.layers.3.self_attn.out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.0047006080858409405,
+    "max": 0.08898717910051346,
+    "mean": 0.00015598210002831792
+  },
+  {
+    "key": "model.encoder.layers.3.linear1.weight",
+    "shape": [
+      2048,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.10419141501188278,
+    "max": 0.10872624814510345,
+    "mean": 0.0009934666377160652
+  },
+  {
+    "key": "model.encoder.layers.3.linear1.bias",
+    "shape": [
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -0.05882931873202324,
+    "max": 0.054413802921772,
+    "mean": -0.0015692899498516155
+  },
+  {
+    "key": "model.encoder.layers.3.linear2.weight",
+    "shape": [
+      512,
+      2048
+    ],
+    "dtype": "torch.float32",
+    "numel": 1048576,
+    "finite": true,
+    "min": -0.0683264434337616,
+    "max": 0.07007325440645218,
+    "mean": 2.0484035558781928e-06
+  },
+  {
+    "key": "model.encoder.layers.3.linear2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.02437816746532917,
+    "max": 0.029662402346730232,
+    "mean": -9.044665104340766e-05
+  },
+  {
+    "key": "model.encoder.layers.3.norm1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.7021813988685608,
+    "max": 1.0140467882156372,
+    "mean": 0.998248121002689
+  },
+  {
+    "key": "model.encoder.layers.3.norm1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.28846725821495056,
+    "max": 0.01371175330132246,
+    "mean": -0.0019815563571761174
+  },
+  {
+    "key": "model.encoder.layers.3.norm2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.975583016872406,
+    "max": 1.0890934467315674,
+    "mean": 1.0361940561560914
+  },
+  {
+    "key": "model.encoder.layers.3.norm2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.030663425102829933,
+    "max": 0.02910369262099266,
+    "mean": -0.004737114715609891
+  },
+  {
+    "key": "model.encoder.norm.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.8734485507011414,
+    "max": 0.9863470196723938,
+    "mean": 0.9629117886070162
+  },
+  {
+    "key": "model.encoder.norm.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.03296779468655586,
+    "max": 0.023061536252498627,
+    "mean": -0.001368226313588572
+  },
+  {
+    "key": "model.action_head.weight",
+    "shape": [
+      7,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 3584,
+    "finite": true,
+    "min": -0.0410090871155262,
+    "max": 0.04221431910991669,
+    "mean": -0.0007483775488555468
+  },
+  {
+    "key": "model.action_head.bias",
+    "shape": [
+      7
+    ],
+    "dtype": "torch.float32",
+    "numel": 7,
+    "finite": true,
+    "min": -0.030614500865340233,
+    "max": 0.01826516166329384,
+    "mean": -0.006572986952960491
+  },
+  {
+    "key": "model.is_pad_head.weight",
+    "shape": [
+      1,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.04416823014616966,
+    "max": 0.04398760199546814,
+    "mean": -0.001043154957002912
+  },
+  {
+    "key": "model.is_pad_head.bias",
+    "shape": [
+      1
+    ],
+    "dtype": "torch.float32",
+    "numel": 1,
+    "finite": true,
+    "min": 0.026917174458503723,
+    "max": 0.026917174458503723,
+    "mean": 0.026917174458503723
+  },
+  {
+    "key": "model.query_embed.weight",
+    "shape": [
+      30,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 15360,
+    "finite": true,
+    "min": -4.384650707244873,
+    "max": 3.662123918533325,
+    "mean": 0.008852697564580106
+  },
+  {
+    "key": "model.backbone.resnet.0.weight",
+    "shape": [
+      64,
+      3,
+      7,
+      7
+    ],
+    "dtype": "torch.float32",
+    "numel": 9408,
+    "finite": true,
+    "min": -0.846780002117157,
+    "max": 1.0164963006973267,
+    "mean": -0.0008231344465033575
+  },
+  {
+    "key": "model.backbone.resnet.1.weight",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": -5.1095959463509644e-08,
+    "max": 0.5258306860923767,
+    "mean": 0.25757725111289886
+  },
+  {
+    "key": "model.backbone.resnet.1.bias",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": -0.66438889503479,
+    "max": 0.6759758591651917,
+    "mean": 0.18112018742398203
+  },
+  {
+    "key": "model.backbone.resnet.1.running_mean",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": -0.12734659016132355,
+    "max": 0.12611272931098938,
+    "mean": 0.0008474347564932233
+  },
+  {
+    "key": "model.backbone.resnet.1.running_var",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": 1.0351983349308688e-13,
+    "max": 13.71790885925293,
+    "mean": 3.0204855493160547
+  },
+  {
+    "key": "model.backbone.resnet.4.0.conv1.weight",
+    "shape": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 36864,
+    "finite": true,
+    "min": -0.8036171197891235,
+    "max": 0.6193748116493225,
+    "mean": -0.00418662053228035
+  },
+  {
+    "key": "model.backbone.resnet.4.0.bn1.weight",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": 0.16826024651527405,
+    "max": 0.6440200805664062,
+    "mean": 0.33960056328214705
+  },
+  {
+    "key": "model.backbone.resnet.4.0.bn1.bias",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": -0.5315352082252502,
+    "max": 0.3294556438922882,
+    "mean": -0.034136569760448765
+  },
+  {
+    "key": "model.backbone.resnet.4.0.bn1.running_mean",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": -2.9167771339416504,
+    "max": 1.349204659461975,
+    "mean": -0.9048561680247076
+  },
+  {
+    "key": "model.backbone.resnet.4.0.bn1.running_var",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": 0.06710550934076309,
+    "max": 1.8279671669006348,
+    "mean": 0.5320990368491039
+  },
+  {
+    "key": "model.backbone.resnet.4.0.conv2.weight",
+    "shape": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 36864,
+    "finite": true,
+    "min": -0.48934173583984375,
+    "max": 0.2854013442993164,
+    "mean": -0.001233416709951321
+  },
+  {
+    "key": "model.backbone.resnet.4.0.bn2.weight",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": 0.11362951248884201,
+    "max": 0.6240866780281067,
+    "mean": 0.3330549654783681
+  },
+  {
+    "key": "model.backbone.resnet.4.0.bn2.bias",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": -0.4078902006149292,
+    "max": 0.49124661087989807,
+    "mean": 0.00346287432302006
+  },
+  {
+    "key": "model.backbone.resnet.4.0.bn2.running_mean",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": -0.6907578706741333,
+    "max": 0.7868131995201111,
+    "mean": -0.06463823603553465
+  },
+  {
+    "key": "model.backbone.resnet.4.0.bn2.running_var",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": 0.017730148509144783,
+    "max": 0.30541202425956726,
+    "mean": 0.09406351836514659
+  },
+  {
+    "key": "model.backbone.resnet.4.1.conv1.weight",
+    "shape": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 36864,
+    "finite": true,
+    "min": -0.5912654995918274,
+    "max": 0.6508557796478271,
+    "mean": -0.0030033830701512504
+  },
+  {
+    "key": "model.backbone.resnet.4.1.bn1.weight",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": 0.18309998512268066,
+    "max": 0.4626501202583313,
+    "mean": 0.3286921123508364
+  },
+  {
+    "key": "model.backbone.resnet.4.1.bn1.bias",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": -0.4755167067050934,
+    "max": 0.23164290189743042,
+    "mean": -0.08357393113692524
+  },
+  {
+    "key": "model.backbone.resnet.4.1.bn1.running_mean",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": -2.9065146446228027,
+    "max": 1.0262287855148315,
+    "mean": -0.6165496789326426
+  },
+  {
+    "key": "model.backbone.resnet.4.1.bn1.running_var",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": 0.1392538696527481,
+    "max": 1.062262773513794,
+    "mean": 0.43590731592848897
+  },
+  {
+    "key": "model.backbone.resnet.4.1.conv2.weight",
+    "shape": [
+      64,
+      64,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 36864,
+    "finite": true,
+    "min": -0.3837014138698578,
+    "max": 0.3001059591770172,
+    "mean": -0.0021124352928927922
+  },
+  {
+    "key": "model.backbone.resnet.4.1.bn2.weight",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": 0.07152548432350159,
+    "max": 0.7605354189872742,
+    "mean": 0.39242971083149314
+  },
+  {
+    "key": "model.backbone.resnet.4.1.bn2.bias",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": -0.42014753818511963,
+    "max": 0.30803409218788147,
+    "mean": -0.029983948003064143
+  },
+  {
+    "key": "model.backbone.resnet.4.1.bn2.running_mean",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": -0.5715596675872803,
+    "max": 0.7681739926338196,
+    "mean": -0.04923836776652024
+  },
+  {
+    "key": "model.backbone.resnet.4.1.bn2.running_var",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": 0.016958247870206833,
+    "max": 0.11468781530857086,
+    "mean": 0.05337624961975962
+  },
+  {
+    "key": "model.backbone.resnet.5.0.conv1.weight",
+    "shape": [
+      128,
+      64,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 73728,
+    "finite": true,
+    "min": -0.3276354670524597,
+    "max": 0.3403717577457428,
+    "mean": -0.0030955095217746953
+  },
+  {
+    "key": "model.backbone.resnet.5.0.bn1.weight",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": 0.16203097999095917,
+    "max": 0.408658504486084,
+    "mean": 0.3164194339187816
+  },
+  {
+    "key": "model.backbone.resnet.5.0.bn1.bias",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": -0.33756324648857117,
+    "max": 0.49787038564682007,
+    "mean": -0.06734631379868006
+  },
+  {
+    "key": "model.backbone.resnet.5.0.bn1.running_mean",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": -1.4822275638580322,
+    "max": 0.8596116304397583,
+    "mean": -0.2939528359347605
+  },
+  {
+    "key": "model.backbone.resnet.5.0.bn1.running_var",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": 0.14462274312973022,
+    "max": 1.2984410524368286,
+    "mean": 0.6451104059815407
+  },
+  {
+    "key": "model.backbone.resnet.5.0.conv2.weight",
+    "shape": [
+      128,
+      128,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 147456,
+    "finite": true,
+    "min": -0.33906328678131104,
+    "max": 0.4258137047290802,
+    "mean": -0.0014890540286565791
+  },
+  {
+    "key": "model.backbone.resnet.5.0.bn2.weight",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": 0.13580428063869476,
+    "max": 0.6172989010810852,
+    "mean": 0.32757257763296366
+  },
+  {
+    "key": "model.backbone.resnet.5.0.bn2.bias",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": -0.2786121070384979,
+    "max": 0.16124238073825836,
+    "mean": -0.0035552971071410866
+  },
+  {
+    "key": "model.backbone.resnet.5.0.bn2.running_mean",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": -1.0991615056991577,
+    "max": 0.4767320156097412,
+    "mean": -0.19921735320895095
+  },
+  {
+    "key": "model.backbone.resnet.5.0.bn2.running_var",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": 0.02253677137196064,
+    "max": 0.2439553141593933,
+    "mean": 0.07541705464245752
+  },
+  {
+    "key": "model.backbone.resnet.5.0.downsample.0.weight",
+    "shape": [
+      128,
+      64,
+      1,
+      1
+    ],
+    "dtype": "torch.float32",
+    "numel": 8192,
+    "finite": true,
+    "min": -0.7776145339012146,
+    "max": 0.7801463007926941,
+    "mean": -0.003518702642105895
+  },
+  {
+    "key": "model.backbone.resnet.5.0.downsample.1.weight",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": -0.0050756302662193775,
+    "max": 0.5870516300201416,
+    "mean": 0.19508539259186364
+  },
+  {
+    "key": "model.backbone.resnet.5.0.downsample.1.bias",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": -0.2786121070384979,
+    "max": 0.16124238073825836,
+    "mean": -0.0035552971071410866
+  },
+  {
+    "key": "model.backbone.resnet.5.0.downsample.1.running_mean",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": -0.9793920516967773,
+    "max": 1.3039840459823608,
+    "mean": -0.06607633413113945
+  },
+  {
+    "key": "model.backbone.resnet.5.0.downsample.1.running_var",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": 0.005704900249838829,
+    "max": 0.2644336521625519,
+    "mean": 0.07285969058284536
+  },
+  {
+    "key": "model.backbone.resnet.5.1.conv1.weight",
+    "shape": [
+      128,
+      128,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 147456,
+    "finite": true,
+    "min": -0.38868409395217896,
+    "max": 0.4337967336177826,
+    "mean": -0.00283917773344274
+  },
+  {
+    "key": "model.backbone.resnet.5.1.bn1.weight",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": 0.19878557324409485,
+    "max": 0.479531854391098,
+    "mean": 0.3212640978163108
+  },
+  {
+    "key": "model.backbone.resnet.5.1.bn1.bias",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": -0.6793883442878723,
+    "max": -0.039520904421806335,
+    "mean": -0.21025038554216735
+  },
+  {
+    "key": "model.backbone.resnet.5.1.bn1.running_mean",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": -1.1738568544387817,
+    "max": 1.1054054498672485,
+    "mean": -0.29529657840612344
+  },
+  {
+    "key": "model.backbone.resnet.5.1.bn1.running_var",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": 0.10083438456058502,
+    "max": 0.5101974606513977,
+    "mean": 0.22464340436272323
+  },
+  {
+    "key": "model.backbone.resnet.5.1.conv2.weight",
+    "shape": [
+      128,
+      128,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 147456,
+    "finite": true,
+    "min": -0.3239510953426361,
+    "max": 0.35751670598983765,
+    "mean": -0.0017223716405873394
+  },
+  {
+    "key": "model.backbone.resnet.5.1.bn2.weight",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": 0.061660800129175186,
+    "max": 0.6501014828681946,
+    "mean": 0.2829109498707112
+  },
+  {
+    "key": "model.backbone.resnet.5.1.bn2.bias",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": -0.5399538278579712,
+    "max": 0.2767658829689026,
+    "mean": -0.15128448339510214
+  },
+  {
+    "key": "model.backbone.resnet.5.1.bn2.running_mean",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": -0.5578783750534058,
+    "max": 0.5456438660621643,
+    "mean": -0.060125298501588986
+  },
+  {
+    "key": "model.backbone.resnet.5.1.bn2.running_var",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": 0.013440301641821861,
+    "max": 0.08436759561300278,
+    "mean": 0.032846397763933055
+  },
+  {
+    "key": "model.backbone.resnet.6.0.conv1.weight",
+    "shape": [
+      256,
+      128,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 294912,
+    "finite": true,
+    "min": -0.3843648135662079,
+    "max": 0.3548203706741333,
+    "mean": -0.0019456678896044573
+  },
+  {
+    "key": "model.backbone.resnet.6.0.bn1.weight",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": 0.21762387454509735,
+    "max": 0.5158682465553284,
+    "mean": 0.31227532803313807
+  },
+  {
+    "key": "model.backbone.resnet.6.0.bn1.bias",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": -0.44169560074806213,
+    "max": 0.20669899880886078,
+    "mean": -0.1147855478202473
+  },
+  {
+    "key": "model.backbone.resnet.6.0.bn1.running_mean",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": -1.4551979303359985,
+    "max": 0.6139400005340576,
+    "mean": -0.3249091617328759
+  },
+  {
+    "key": "model.backbone.resnet.6.0.bn1.running_var",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": 0.13804930448532104,
+    "max": 0.774624228477478,
+    "mean": 0.25258041196502745
+  },
+  {
+    "key": "model.backbone.resnet.6.0.conv2.weight",
+    "shape": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 589824,
+    "finite": true,
+    "min": -0.3381311893463135,
+    "max": 0.3211390972137451,
+    "mean": -0.0010147380338156962
+  },
+  {
+    "key": "model.backbone.resnet.6.0.bn2.weight",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": 0.18520747125148773,
+    "max": 0.7001487612724304,
+    "mean": 0.3202501381165348
+  },
+  {
+    "key": "model.backbone.resnet.6.0.bn2.bias",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": -0.37824347615242004,
+    "max": 0.14372490346431732,
+    "mean": -0.030766352741295577
+  },
+  {
+    "key": "model.backbone.resnet.6.0.bn2.running_mean",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": -0.6189577579498291,
+    "max": 0.2787052094936371,
+    "mean": -0.12485644137450436
+  },
+  {
+    "key": "model.backbone.resnet.6.0.bn2.running_var",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": 0.041490256786346436,
+    "max": 0.32787004113197327,
+    "mean": 0.10328031815879513
+  },
+  {
+    "key": "model.backbone.resnet.6.0.downsample.0.weight",
+    "shape": [
+      256,
+      128,
+      1,
+      1
+    ],
+    "dtype": "torch.float32",
+    "numel": 32768,
+    "finite": true,
+    "min": -0.2518973648548126,
+    "max": 0.2588939964771271,
+    "mean": -0.002498146465715577
+  },
+  {
+    "key": "model.backbone.resnet.6.0.downsample.1.weight",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": 0.02363274246454239,
+    "max": 0.28900155425071716,
+    "mean": 0.08210359943041112
+  },
+  {
+    "key": "model.backbone.resnet.6.0.downsample.1.bias",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": -0.37824347615242004,
+    "max": 0.14372490346431732,
+    "mean": -0.030766352741295577
+  },
+  {
+    "key": "model.backbone.resnet.6.0.downsample.1.running_mean",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": -0.28657516837120056,
+    "max": 0.1541091799736023,
+    "mean": -0.04699009733235471
+  },
+  {
+    "key": "model.backbone.resnet.6.0.downsample.1.running_var",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": 0.0032283300533890724,
+    "max": 0.04301586002111435,
+    "mean": 0.014185900197844603
+  },
+  {
+    "key": "model.backbone.resnet.6.1.conv1.weight",
+    "shape": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 589824,
+    "finite": true,
+    "min": -0.29556527733802795,
+    "max": 0.25478869676589966,
+    "mean": -0.0022530130863947337
+  },
+  {
+    "key": "model.backbone.resnet.6.1.bn1.weight",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": 0.13984395563602448,
+    "max": 0.4784514605998993,
+    "mean": 0.27821102214511484
+  },
+  {
+    "key": "model.backbone.resnet.6.1.bn1.bias",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": -0.6364061236381531,
+    "max": 0.13220734894275665,
+    "mean": -0.23746796309569618
+  },
+  {
+    "key": "model.backbone.resnet.6.1.bn1.running_mean",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": -1.1848740577697754,
+    "max": 1.5395548343658447,
+    "mean": -0.39026426415421156
+  },
+  {
+    "key": "model.backbone.resnet.6.1.bn1.running_var",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": 0.0674063116312027,
+    "max": 0.46286341547966003,
+    "mean": 0.14858609248767607
+  },
+  {
+    "key": "model.backbone.resnet.6.1.conv2.weight",
+    "shape": [
+      256,
+      256,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 589824,
+    "finite": true,
+    "min": -0.3122938573360443,
+    "max": 0.3232734799385071,
+    "mean": -0.0017384137050136057
+  },
+  {
+    "key": "model.backbone.resnet.6.1.bn2.weight",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": 0.04919833317399025,
+    "max": 0.6383439898490906,
+    "mean": 0.24584955369937234
+  },
+  {
+    "key": "model.backbone.resnet.6.1.bn2.bias",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": -0.7251790761947632,
+    "max": 0.20864589512348175,
+    "mean": -0.16372344736828381
+  },
+  {
+    "key": "model.backbone.resnet.6.1.bn2.running_mean",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": -0.5599368214607239,
+    "max": 0.4110835790634155,
+    "mean": -0.08337356041522526
+  },
+  {
+    "key": "model.backbone.resnet.6.1.bn2.running_var",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": 0.005015996750444174,
+    "max": 0.06914404034614563,
+    "mean": 0.019977393583758385
+  },
+  {
+    "key": "model.backbone.resnet.7.0.conv1.weight",
+    "shape": [
+      512,
+      256,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 1179648,
+    "finite": true,
+    "min": -0.2658288776874542,
+    "max": 0.3828691840171814,
+    "mean": -0.00183744606647495
+  },
+  {
+    "key": "model.backbone.resnet.7.0.bn1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.13707560300827026,
+    "max": 0.42930740118026733,
+    "mean": 0.26431758925900795
+  },
+  {
+    "key": "model.backbone.resnet.7.0.bn1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.4776686131954193,
+    "max": 0.14621305465698242,
+    "mean": -0.22572244418734044
+  },
+  {
+    "key": "model.backbone.resnet.7.0.bn1.running_mean",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -1.2176358699798584,
+    "max": 0.9778406620025635,
+    "mean": -0.40885634418827976
+  },
+  {
+    "key": "model.backbone.resnet.7.0.bn1.running_var",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.06239018216729164,
+    "max": 0.2961009442806244,
+    "mean": 0.12907550135423662
+  },
+  {
+    "key": "model.backbone.resnet.7.0.conv2.weight",
+    "shape": [
+      512,
+      512,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 2359296,
+    "finite": true,
+    "min": -0.2838238477706909,
+    "max": 0.34707584977149963,
+    "mean": -0.0013888676520635956
+  },
+  {
+    "key": "model.backbone.resnet.7.0.bn2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.1404217630624771,
+    "max": 0.7322355508804321,
+    "mean": 0.42431903738179244
+  },
+  {
+    "key": "model.backbone.resnet.7.0.bn2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.4010007977485657,
+    "max": 0.11652680486440659,
+    "mean": -0.19763391831838817
+  },
+  {
+    "key": "model.backbone.resnet.7.0.bn2.running_mean",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.32078415155410767,
+    "max": 0.4766775965690613,
+    "mean": -0.14308326117361503
+  },
+  {
+    "key": "model.backbone.resnet.7.0.bn2.running_var",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.012719981372356415,
+    "max": 0.09007451683282852,
+    "mean": 0.022369814318153658
+  },
+  {
+    "key": "model.backbone.resnet.7.0.downsample.0.weight",
+    "shape": [
+      512,
+      256,
+      1,
+      1
+    ],
+    "dtype": "torch.float32",
+    "numel": 131072,
+    "finite": true,
+    "min": -0.6272677183151245,
+    "max": 0.7487959861755371,
+    "mean": -0.0011462058345971023
+  },
+  {
+    "key": "model.backbone.resnet.7.0.downsample.1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.05273286625742912,
+    "max": 0.5102788805961609,
+    "mean": 0.2506417374679586
+  },
+  {
+    "key": "model.backbone.resnet.7.0.downsample.1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.4010007977485657,
+    "max": 0.11652680486440659,
+    "mean": -0.19763391831838817
+  },
+  {
+    "key": "model.backbone.resnet.7.0.downsample.1.running_mean",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.24718011915683746,
+    "max": 0.5186368823051453,
+    "mean": -0.04498213784614791
+  },
+  {
+    "key": "model.backbone.resnet.7.0.downsample.1.running_var",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0031961563508957624,
+    "max": 0.06768883764743805,
+    "mean": 0.020360700069431914
+  },
+  {
+    "key": "model.backbone.resnet.7.1.conv1.weight",
+    "shape": [
+      512,
+      512,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 2359296,
+    "finite": true,
+    "min": -0.19409018754959106,
+    "max": 0.26551133394241333,
+    "mean": -0.0024052481758985037
+  },
+  {
+    "key": "model.backbone.resnet.7.1.bn1.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.09699107706546783,
+    "max": 0.4684877395629883,
+    "mean": 0.2886000498547219
+  },
+  {
+    "key": "model.backbone.resnet.7.1.bn1.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.5874267816543579,
+    "max": 0.05667121335864067,
+    "mean": -0.24174047266524212
+  },
+  {
+    "key": "model.backbone.resnet.7.1.bn1.running_mean",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -1.0751391649246216,
+    "max": 1.0943045616149902,
+    "mean": -0.595021783359698
+  },
+  {
+    "key": "model.backbone.resnet.7.1.bn1.running_var",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.08479533344507217,
+    "max": 0.27249348163604736,
+    "mean": 0.13789209959213622
+  },
+  {
+    "key": "model.backbone.resnet.7.1.conv2.weight",
+    "shape": [
+      512,
+      512,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 2359296,
+    "finite": true,
+    "min": -0.17298364639282227,
+    "max": 0.2661382257938385,
+    "mean": -0.0001660205978404697
+  },
+  {
+    "key": "model.backbone.resnet.7.1.bn2.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.578803300857544,
+    "max": 2.407539129257202,
+    "mean": 1.8538099261932075
+  },
+  {
+    "key": "model.backbone.resnet.7.1.bn2.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0722171738743782,
+    "max": 0.6510923504829407,
+    "mean": 0.273822004251997
+  },
+  {
+    "key": "model.backbone.resnet.7.1.bn2.running_mean",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.0911831259727478,
+    "max": 0.05166486278176308,
+    "mean": -0.031392885534039294
+  },
+  {
+    "key": "model.backbone.resnet.7.1.bn2.running_var",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.009518644772469997,
+    "max": 0.03087458573281765,
+    "mean": 0.01269662361664814
+  },
+  {
+    "key": "model.backbone.plucker_encoder.0.weight",
+    "shape": [
+      64,
+      6,
+      7,
+      7
+    ],
+    "dtype": "torch.float32",
+    "numel": 18816,
+    "finite": true,
+    "min": -0.0843546912074089,
+    "max": 0.0737413614988327,
+    "mean": 0.0009738274073107909
+  },
+  {
+    "key": "model.backbone.plucker_encoder.1.weight",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.1.bias",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.1.running_mean",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.1.running_var",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.3.weight",
+    "shape": [
+      128,
+      64,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 73728,
+    "finite": true,
+    "min": -0.07943560183048248,
+    "max": 0.0706152394413948,
+    "mean": -0.001406292253866971
+  },
+  {
+    "key": "model.backbone.plucker_encoder.4.weight",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.4.bias",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.4.running_mean",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.4.running_var",
+    "shape": [
+      128
+    ],
+    "dtype": "torch.float32",
+    "numel": 128,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.6.weight",
+    "shape": [
+      256,
+      128,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 294912,
+    "finite": true,
+    "min": -0.06948493421077728,
+    "max": 0.061659686267375946,
+    "mean": -0.0012008989989443644
+  },
+  {
+    "key": "model.backbone.plucker_encoder.7.weight",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.7.bias",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.7.running_mean",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.7.running_var",
+    "shape": [
+      256
+    ],
+    "dtype": "torch.float32",
+    "numel": 256,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.9.weight",
+    "shape": [
+      512,
+      256,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 1179648,
+    "finite": true,
+    "min": -0.058772169053554535,
+    "max": 0.0594644621014595,
+    "mean": -0.0009294843605385115
+  },
+  {
+    "key": "model.backbone.plucker_encoder.10.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.10.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.10.running_mean",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.10.running_var",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.12.weight",
+    "shape": [
+      512,
+      512,
+      3,
+      3
+    ],
+    "dtype": "torch.float32",
+    "numel": 2359296,
+    "finite": true,
+    "min": -0.05181347578763962,
+    "max": 0.046312134712934494,
+    "mean": -0.0006274980278367532
+  },
+  {
+    "key": "model.backbone.plucker_encoder.13.weight",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.13.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.13.running_mean",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  {
+    "key": "model.backbone.plucker_encoder.13.running_var",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": 1.0,
+    "max": 1.0,
+    "mean": 1.0
+  },
+  {
+    "key": "model.backbone.pos_embed.weight",
+    "shape": [
+      128,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 65536,
+    "finite": true,
+    "min": -4.319514751434326,
+    "max": 4.16899299621582,
+    "mean": 0.0016641068697922784
+  },
+  {
+    "key": "model.backbone.input_proj.weight",
+    "shape": [
+      512,
+      1024,
+      1,
+      1
+    ],
+    "dtype": "torch.float32",
+    "numel": 524288,
+    "finite": true,
+    "min": -0.0586923211812973,
+    "max": 0.05827350541949272,
+    "mean": 4.54323860698569e-05
+  },
+  {
+    "key": "model.backbone.input_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.03687465190887451,
+    "max": 0.0357508547604084,
+    "mean": 0.00019842803425973443
+  },
+  {
+    "key": "model.input_proj_robot_state.weight",
+    "shape": [
+      512,
+      7
+    ],
+    "dtype": "torch.float32",
+    "numel": 3584,
+    "finite": true,
+    "min": -0.3837268650531769,
+    "max": 0.3950130343437195,
+    "mean": -0.003603656250191989
+  },
+  {
+    "key": "model.input_proj_robot_state.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.3785211443901062,
+    "max": 0.38512858748435974,
+    "mean": 0.0008639574947437723
+  },
+  {
+    "key": "model.input_proj_cam_extrinsics.weight",
+    "shape": [
+      512,
+      16
+    ],
+    "dtype": "torch.float32",
+    "numel": 8192,
+    "finite": true,
+    "min": -0.2499101758003235,
+    "max": 0.2499369978904724,
+    "mean": 0.0011323820872348733
+  },
+  {
+    "key": "model.input_proj_cam_extrinsics.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.25065848231315613,
+    "max": 0.2503565847873688,
+    "mean": -0.0015967405688606107
+  },
+  {
+    "key": "model.input_embed.weight",
+    "shape": [
+      4,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 2048,
+    "finite": true,
+    "min": -3.7815613746643066,
+    "max": 3.6532397270202637,
+    "mean": 0.06584246440598918
+  },
+  {
+    "key": "model.encoder_action_proj.weight",
+    "shape": [
+      512,
+      7
+    ],
+    "dtype": "torch.float32",
+    "numel": 3584,
+    "finite": true,
+    "min": -0.38001909852027893,
+    "max": 0.38130298256874084,
+    "mean": 0.00410410650396033
+  },
+  {
+    "key": "model.encoder_action_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.37930598855018616,
+    "max": 0.3843553364276886,
+    "mean": 0.009205419605962106
+  },
+  {
+    "key": "model.encoder_joint_proj.weight",
+    "shape": [
+      512,
+      7
+    ],
+    "dtype": "torch.float32",
+    "numel": 3584,
+    "finite": true,
+    "min": -0.3864987790584564,
+    "max": 0.38950926065444946,
+    "mean": -0.003952457590765996
+  },
+  {
+    "key": "model.encoder_joint_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.38346680998802185,
+    "max": 0.3777095675468445,
+    "mean": -0.018370766540520833
+  },
+  {
+    "key": "model.latent_proj.weight",
+    "shape": [
+      64,
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 32768,
+    "finite": true,
+    "min": -0.05946798250079155,
+    "max": 0.06507547944784164,
+    "mean": -0.000540883162272269
+  },
+  {
+    "key": "model.latent_proj.bias",
+    "shape": [
+      64
+    ],
+    "dtype": "torch.float32",
+    "numel": 64,
+    "finite": true,
+    "min": -0.04065192863345146,
+    "max": 0.04399885982275009,
+    "mean": 0.003609749479437596
+  },
+  {
+    "key": "model.latent_out_proj.weight",
+    "shape": [
+      512,
+      32
+    ],
+    "dtype": "torch.float32",
+    "numel": 16384,
+    "finite": true,
+    "min": -0.18818272650241852,
+    "max": 0.188399076461792,
+    "mean": 0.0012475344327899044
+  },
+  {
+    "key": "model.latent_out_proj.bias",
+    "shape": [
+      512
+    ],
+    "dtype": "torch.float32",
+    "numel": 512,
+    "finite": true,
+    "min": -0.1836465299129486,
+    "max": 0.17799563705921173,
+    "mean": 0.0007510491902138483
+  }
+]

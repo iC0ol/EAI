@@ -1,0 +1,17 @@
+{
+  "identity": {
+    "pid": 2893805,
+    "ppid": 2893804,
+    "start_ticks": 260113867,
+    "rss_bytes": 262144,
+    "state": "R"
+  },
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "-B",
+    "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/scripts/stage1.py"
+  ],
+  "utc": "2026-10-29T04:12:58.614891+00:00",
+  "sid": 2893805,
+  "stage": "stage1"
+}

@@ -1,0 +1,5 @@
+{
+  "utc": "2026-10-29T04:13:00.704352+00:00",
+  "before_first_possible_cuda_or_renderer": true,
+  "accounting": "supervisor already counts entire child lifetime"
+}

@@ -1,0 +1,3808 @@
+{
+  "state": "COMPLETE",
+  "all_inputs_pass": false,
+  "samples": [
+    {
+      "sample": {
+        "sample": 0,
+        "demo_id": 0,
+        "t": 0,
+        "demo_length": 105,
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -2.612173080444336,
+          "max": 2.921161651611328,
+          "sha256": "6b58c20f492c5c65d1e585f97dfa1206084d6187b1ab20894f041d8eb9e508c7"
+        },
+        "source_state_original_dtype": "float64",
+        "valid_chunk_steps": 30,
+        "camera_index": 1,
+        "T": [
+          [
+            0.8305230356726009,
+            -0.34794925432522517,
+            0.43492850404599553,
+            0.37806304720870987
+          ],
+          [
+            0.5569842791472376,
+            0.5188294926467981,
+            -0.6485248417313697,
+            -0.5706100505135695
+          ],
+          [
+            -0.0,
+            0.7808631595704755,
+            0.6247021098296485,
+            1.3818641093085926
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "raw_expert_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 0.10193061828613281,
+          "sha256": "a45c269b3ae641b9ed35ab94734ee75765450b3a2246e2f40fa41968f63da6b0"
+        },
+        "seed1": 20261029,
+        "seed2": 20262029
+      },
+      "all_inputs_pass": false,
+      "comparisons": {
+        "rgb_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 255.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "rgb_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 255.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "state_source_vs_dataset": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "normalized_actions": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "mask": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 1.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_official_eval_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 1.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_custom_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "joint_rgb_ray_frozen_crop": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "source_xml_unchanged": {
+          "pass": true
+        }
+      },
+      "tensor_metadata": {
+        "dataset_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.1541757583618164,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "3f4b1a130eb0a82b8173c31eb4201b0c9d730f5d2b6858b8fe4cc22a03eac184"
+        },
+        "dataset_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "dataset_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "eval_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.1541757583618164,
+          "max": 0.9960784316062927,
+          "finite": true,
+          "sha256": "34a702899218ab0f78aaf7fabed81243077a893e5f69dc08219adb5399f804b1"
+        },
+        "eval_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "eval_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "custom_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.1541757583618164,
+          "max": 0.9960784912109375,
+          "finite": true,
+          "sha256": "5cfdbd0734cea571f9df7de43d11c4df0db6fd9495b4f121e0ce98e26eaa38cd"
+        },
+        "custom_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "custom_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "normalized_actions_full": {
+          "shape": [
+            130,
+            7
+          ],
+          "dtype": "float32",
+          "min": -7.741933345794678,
+          "max": 4.235321521759033,
+          "finite": true,
+          "sha256": "4cc16e27e71577f3146a53c4aeb5289159c46c4aba94b75564c3c19c2341de38"
+        },
+        "mask_full": {
+          "shape": [
+            130
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "ccb2d04878fd9806e460b69ba0d96ee450b0e318e95e880dd92acd5db4a0707f"
+        },
+        "expert_raw_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 0.10193061828613281,
+          "finite": true,
+          "sha256": "a45c269b3ae641b9ed35ab94734ee75765450b3a2246e2f40fa41968f63da6b0"
+        },
+        "mask_chunk": {
+          "shape": [
+            30
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62"
+        },
+        "rgb_uint8": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 0.0,
+          "max": 255.0,
+          "finite": true,
+          "sha256": "7437ff82ec1f531a6d26b8a00f29b2ea1e3d3efdbf468b74fb99fd21473a279c"
+        },
+        "T_given": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float64",
+          "min": -0.6485248417313697,
+          "max": 1.3818641093085926,
+          "finite": true,
+          "sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2"
+        },
+        "intrinsics": {
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 309.01934814453125,
+          "finite": true,
+          "sha256": "752482b34b21d7be3a3ccae324448891d7d24c37affdd197cc8d71844e1776a9"
+        },
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -2.612173080444336,
+          "max": 2.921161651611328,
+          "finite": true,
+          "sha256": "6b58c20f492c5c65d1e585f97dfa1206084d6187b1ab20894f041d8eb9e508c7"
+        },
+        "state_before": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.612173080444336,
+          "max": 2.921161651611328,
+          "finite": true,
+          "sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7"
+        },
+        "state_dataset": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.612173080444336,
+          "max": 2.921161651611328,
+          "finite": true,
+          "sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7"
+        },
+        "state_evaluator": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.612173080444336,
+          "max": 2.921161651611328,
+          "finite": true,
+          "sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7"
+        },
+        "state_custom": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.612173080444336,
+          "max": 2.921161651611328,
+          "finite": true,
+          "sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7"
+        },
+        "joint_crop_9ch": {
+          "shape": [
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.1138675212860107,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "05453a8a2465f80790ac337be5095924ac606b8cd47bfa34c827aa21cc9f5e39"
+        }
+      },
+      "dataset_rng_control": {
+        "before_rng_sha256": "4264011f196d0de78355d416b57453288f5c03d23c146647b559103deadcf6cf",
+        "after_rng_sha256": "4264011f196d0de78355d416b57453288f5c03d23c146647b559103deadcf6cf",
+        "rng_restored": true,
+        "intercepted_draws": {
+          "time": 1,
+          "camera": 1
+        },
+        "original_numpy_functions_restored": true
+      },
+      "source_xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "geometry": {
+        "actual_cam2world": [
+          [
+            0.8305230356726008,
+            -0.3479492543252252,
+            0.4349285040459956,
+            0.37806304720870987
+          ],
+          [
+            0.5569842791472375,
+            0.5188294926467982,
+            -0.6485248417313698,
+            -0.5706100505135695
+          ],
+          [
+            2.7755575615628914e-17,
+            0.7808631595704754,
+            0.6247021098296486,
+            1.3818641093085926
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "cam_fovy_degrees": 45.0,
+        "actual_vs_given_maxabs": 1.1102230246251565e-16,
+        "independent_visible_point_projection": "NOT_COMPLETED: no reliable labeled visible surface/pixel correspondence established in this batch",
+        "half_pixel_convention": "upstream ray builder has two +0.5 offsets; preserved; actual camera equality is not full ray-to-RGB proof"
+      },
+      "rng_end_restored": "4264011f196d0de78355d416b57453288f5c03d23c146647b559103deadcf6cf",
+      "npz_sha256": "f43b1088b763bf2e6e503d36a85655846c63425230dce9fcbd35d6b0893fc1e3"
+    },
+    {
+      "sample": {
+        "sample": 1,
+        "demo_id": 50,
+        "t": 0,
+        "demo_length": 98,
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -2.611631155014038,
+          "max": 2.9748635292053223,
+          "sha256": "88219cef3c10e410c2927e0ea36c3ee9b96784acbbd5c5c8d7e3c9b0a40a241f"
+        },
+        "source_state_original_dtype": "float64",
+        "valid_chunk_steps": 30,
+        "camera_index": 51,
+        "T": [
+          [
+            0.5471063064869058,
+            -0.3860876746759683,
+            0.7427051883927832,
+            0.7056600994264759
+          ],
+          [
+            0.8370631334626175,
+            0.2523477539839837,
+            -0.4854337458984316,
+            -0.3731395823567784
+          ],
+          [
+            -0.0,
+            0.887274995997601,
+            0.4612408063880054,
+            1.3961011348329802
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "raw_expert_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 0.11040782928466797,
+          "sha256": "a5659c3db1655edfce6ee860089c70c3c2cd848a4811c29ec6a932f0b8632d7a"
+        },
+        "seed1": 20261030,
+        "seed2": 20262030
+      },
+      "all_inputs_pass": false,
+      "comparisons": {
+        "rgb_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 254.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "rgb_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 255.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "state_source_vs_dataset": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "normalized_actions": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "mask": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 0.9960784316062927,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_official_eval_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 1.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_custom_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "joint_rgb_ray_frozen_crop": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "source_xml_unchanged": {
+          "pass": true
+        }
+      },
+      "tensor_metadata": {
+        "dataset_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.3004674911499023,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "2f2a3a30d80ef80739ec0c57925520fda7efba179d119b39122f1075e205319b"
+        },
+        "dataset_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "dataset_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "eval_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.3004674911499023,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "0a8c1286ba9914ff6c3e844951a1d7a8671851c764fc15682748ddf5d0d4d961"
+        },
+        "eval_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "eval_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "custom_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.3004674911499023,
+          "max": 0.9411765336990356,
+          "finite": true,
+          "sha256": "7de597f45c95fbe84812897fa28953a05241bc9f2773896aa8fc546b9f030b2b"
+        },
+        "custom_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "custom_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "normalized_actions_full": {
+          "shape": [
+            130,
+            7
+          ],
+          "dtype": "float32",
+          "min": -3.4182188510894775,
+          "max": 6.03366231918335,
+          "finite": true,
+          "sha256": "f44b054db1cd741814ad4083f95c67e93c648c33c18359108ae47d9f50bdf835"
+        },
+        "mask_full": {
+          "shape": [
+            130
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "8814d2fcf06d856c12bea14f99497af53ccff667f63902070cf751fbae403a90"
+        },
+        "expert_raw_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 0.11040782928466797,
+          "finite": true,
+          "sha256": "a5659c3db1655edfce6ee860089c70c3c2cd848a4811c29ec6a932f0b8632d7a"
+        },
+        "mask_chunk": {
+          "shape": [
+            30
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62"
+        },
+        "rgb_uint8": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 0.0,
+          "max": 255.0,
+          "finite": true,
+          "sha256": "be3849d9afea460a637689dea26d6ec7530b8805d70205bbef8d57dc7abb6395"
+        },
+        "T_given": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float64",
+          "min": -0.4854337458984316,
+          "max": 1.3961011348329802,
+          "finite": true,
+          "sha256": "83950e99cb870f4de8cc4627b3f53c340b41ff95b4cd91bc42da11e2c1f0b310"
+        },
+        "intrinsics": {
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 309.01934814453125,
+          "finite": true,
+          "sha256": "752482b34b21d7be3a3ccae324448891d7d24c37affdd197cc8d71844e1776a9"
+        },
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -2.611631155014038,
+          "max": 2.9748635292053223,
+          "finite": true,
+          "sha256": "88219cef3c10e410c2927e0ea36c3ee9b96784acbbd5c5c8d7e3c9b0a40a241f"
+        },
+        "state_before": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.611631155014038,
+          "max": 2.9748635292053223,
+          "finite": true,
+          "sha256": "5f4de014c3c3d090937f16b5754bcbf20551dcdd6e085d5113e74ddeea43596e"
+        },
+        "state_dataset": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.611631155014038,
+          "max": 2.9748635292053223,
+          "finite": true,
+          "sha256": "5f4de014c3c3d090937f16b5754bcbf20551dcdd6e085d5113e74ddeea43596e"
+        },
+        "state_evaluator": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.611631155014038,
+          "max": 2.9748635292053223,
+          "finite": true,
+          "sha256": "5f4de014c3c3d090937f16b5754bcbf20551dcdd6e085d5113e74ddeea43596e"
+        },
+        "state_custom": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.611631155014038,
+          "max": 2.9748635292053223,
+          "finite": true,
+          "sha256": "5f4de014c3c3d090937f16b5754bcbf20551dcdd6e085d5113e74ddeea43596e"
+        },
+        "joint_crop_9ch": {
+          "shape": [
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.2618248462677002,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "0e6c88a99d9989c42065c2cb4d8a8e36c9a02efe7cf77cc2a972d2b4fdd16963"
+        }
+      },
+      "dataset_rng_control": {
+        "before_rng_sha256": "af00379ff912094747dc493b423ac1d6f3dfb52a4a3dab28e0a122ee59886e05",
+        "after_rng_sha256": "af00379ff912094747dc493b423ac1d6f3dfb52a4a3dab28e0a122ee59886e05",
+        "rng_restored": true,
+        "intercepted_draws": {
+          "time": 1,
+          "camera": 1
+        },
+        "original_numpy_functions_restored": true
+      },
+      "source_xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "geometry": {
+        "actual_cam2world": [
+          [
+            0.547106306486906,
+            -0.38608767467596833,
+            0.7427051883927833,
+            0.7056600994264759
+          ],
+          [
+            0.8370631334626177,
+            0.2523477539839837,
+            -0.4854337458984317,
+            -0.3731395823567784
+          ],
+          [
+            0.0,
+            0.887274995997601,
+            0.46124080638800546,
+            1.3961011348329802
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "cam_fovy_degrees": 45.0,
+        "actual_vs_given_maxabs": 2.220446049250313e-16,
+        "independent_visible_point_projection": "NOT_COMPLETED: no reliable labeled visible surface/pixel correspondence established in this batch",
+        "half_pixel_convention": "upstream ray builder has two +0.5 offsets; preserved; actual camera equality is not full ray-to-RGB proof"
+      },
+      "rng_end_restored": "af00379ff912094747dc493b423ac1d6f3dfb52a4a3dab28e0a122ee59886e05",
+      "npz_sha256": "cd582e735b8471367f0171146f51403aa46cb3c3ba15c81c91f1b77400d9c141"
+    },
+    {
+      "sample": {
+        "sample": 2,
+        "demo_id": 100,
+        "t": 0,
+        "demo_length": 117,
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -2.58492112159729,
+          "max": 2.9168295860290527,
+          "sha256": "ea4e285e0bacd594d403ad911c31c44069f39b13d87eb5e1bf3a600b5cf7394b"
+        },
+        "source_state_original_dtype": "float64",
+        "valid_chunk_steps": 30,
+        "camera_index": 101,
+        "T": [
+          [
+            -0.7254673662621369,
+            -0.47131628565114264,
+            0.5015556393548865,
+            0.46106931744243196
+          ],
+          [
+            0.6882565658885342,
+            -0.4967981438525985,
+            0.5286723974030936,
+            0.360701547442331
+          ],
+          [
+            0.0,
+            0.7287335337039346,
+            0.6847973691942578,
+            1.419398798006678
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "raw_expert_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 0.10213494300842285,
+          "sha256": "1aef4a14df92335f2f5c5d606a476248e354210eb5e6c69230998491c186a390"
+        },
+        "seed1": 20261031,
+        "seed2": 20262031
+      },
+      "all_inputs_pass": false,
+      "comparisons": {
+        "rgb_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 240.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "rgb_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 215.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "state_source_vs_dataset": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "normalized_actions": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "mask": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 0.9411764740943909,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_official_eval_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 0.8431373238563538,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_custom_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "joint_rgb_ray_frozen_crop": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "source_xml_unchanged": {
+          "pass": true
+        }
+      },
+      "tensor_metadata": {
+        "dataset_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.0673108100891113,
+          "max": 1.126291275024414,
+          "finite": true,
+          "sha256": "20f0fc18e7428a6095a13ab984edd5d4d121fa436d9213daa0a3641cde7a412e"
+        },
+        "dataset_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "dataset_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "eval_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.0673108100891113,
+          "max": 1.126291275024414,
+          "finite": true,
+          "sha256": "06895d67133730f6ff63df4452d8b74f54e768d616b9889aa703ba6fd4f6b3c0"
+        },
+        "eval_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "eval_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "custom_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.0673108100891113,
+          "max": 1.126291275024414,
+          "finite": true,
+          "sha256": "2f08b1c16354b13afa6066181847fdb98c23b16b5f375386f204d75a9865e804"
+        },
+        "custom_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "custom_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "normalized_actions_full": {
+          "shape": [
+            130,
+            7
+          ],
+          "dtype": "float32",
+          "min": -3.3728299140930176,
+          "max": 6.229704856872559,
+          "finite": true,
+          "sha256": "93e434933a52bb22db336d271d89b165e3283aec8f01b1417327a35267416cc5"
+        },
+        "mask_full": {
+          "shape": [
+            130
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "3b7b882a1758e16685011526a6f3aca5f1ad406a37c906e5cce4e922a5140c2b"
+        },
+        "expert_raw_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 0.10213494300842285,
+          "finite": true,
+          "sha256": "1aef4a14df92335f2f5c5d606a476248e354210eb5e6c69230998491c186a390"
+        },
+        "mask_chunk": {
+          "shape": [
+            30
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62"
+        },
+        "rgb_uint8": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 0.0,
+          "max": 255.0,
+          "finite": true,
+          "sha256": "cc4bcb943c8175b5f73f7aec99ab396c89fd2fc7092aed2520e504f6441a07d3"
+        },
+        "T_given": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float64",
+          "min": -0.7254673662621369,
+          "max": 1.419398798006678,
+          "finite": true,
+          "sha256": "1fb5022fa6268f261154f4427c608d6e265b170740beba35ca8ac4becc970d98"
+        },
+        "intrinsics": {
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 309.01934814453125,
+          "finite": true,
+          "sha256": "752482b34b21d7be3a3ccae324448891d7d24c37affdd197cc8d71844e1776a9"
+        },
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -2.58492112159729,
+          "max": 2.9168295860290527,
+          "finite": true,
+          "sha256": "ea4e285e0bacd594d403ad911c31c44069f39b13d87eb5e1bf3a600b5cf7394b"
+        },
+        "state_before": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.58492112159729,
+          "max": 2.9168295860290527,
+          "finite": true,
+          "sha256": "50c9d06cb6439a32f74b5a3850573fb93094dcc9c0c29435fc11bf085c7290b7"
+        },
+        "state_dataset": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.58492112159729,
+          "max": 2.9168295860290527,
+          "finite": true,
+          "sha256": "50c9d06cb6439a32f74b5a3850573fb93094dcc9c0c29435fc11bf085c7290b7"
+        },
+        "state_evaluator": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.58492112159729,
+          "max": 2.9168295860290527,
+          "finite": true,
+          "sha256": "50c9d06cb6439a32f74b5a3850573fb93094dcc9c0c29435fc11bf085c7290b7"
+        },
+        "state_custom": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.58492112159729,
+          "max": 2.9168295860290527,
+          "finite": true,
+          "sha256": "50c9d06cb6439a32f74b5a3850573fb93094dcc9c0c29435fc11bf085c7290b7"
+        },
+        "joint_crop_9ch": {
+          "shape": [
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.01857328414917,
+          "max": 1.0787118673324585,
+          "finite": true,
+          "sha256": "ac1582cc6d9f1503b543b64e1b6260fd25f99d46e101fce92f2a6e93fa0b2359"
+        }
+      },
+      "dataset_rng_control": {
+        "before_rng_sha256": "33c7ec33d5764b2d751a6a208e77b7f292cecbc9978c2cab19ffb44a26fb44b7",
+        "after_rng_sha256": "33c7ec33d5764b2d751a6a208e77b7f292cecbc9978c2cab19ffb44a26fb44b7",
+        "rng_restored": true,
+        "intercepted_draws": {
+          "time": 1,
+          "camera": 1
+        },
+        "original_numpy_functions_restored": true
+      },
+      "source_xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "geometry": {
+        "actual_cam2world": [
+          [
+            -0.725467366262137,
+            -0.4713162856511425,
+            0.5015556393548863,
+            0.46106931744243196
+          ],
+          [
+            0.6882565658885341,
+            -0.4967981438525984,
+            0.5286723974030937,
+            0.360701547442331
+          ],
+          [
+            0.0,
+            0.7287335337039346,
+            0.6847973691942576,
+            1.419398798006678
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "cam_fovy_degrees": 45.0,
+        "actual_vs_given_maxabs": 2.220446049250313e-16,
+        "independent_visible_point_projection": "NOT_COMPLETED: no reliable labeled visible surface/pixel correspondence established in this batch",
+        "half_pixel_convention": "upstream ray builder has two +0.5 offsets; preserved; actual camera equality is not full ray-to-RGB proof"
+      },
+      "rng_end_restored": "33c7ec33d5764b2d751a6a208e77b7f292cecbc9978c2cab19ffb44a26fb44b7",
+      "npz_sha256": "3e0cbe15d9239964d501ab2b35470cacd92a370333fcaff72c6a79acc933c30c"
+    },
+    {
+      "sample": {
+        "sample": 3,
+        "demo_id": 150,
+        "t": 0,
+        "demo_length": 93,
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -2.5897903442382812,
+          "max": 2.9638240337371826,
+          "sha256": "495bfa1c4503114bbd807aee560dc966ed134463c4e024e64cb0c2c88b63666b"
+        },
+        "source_state_original_dtype": "float64",
+        "valid_chunk_steps": 30,
+        "camera_index": 151,
+        "T": [
+          [
+            -0.9818350385746251,
+            -0.11312308257814278,
+            0.15232572079325046,
+            0.0126664262340045
+          ],
+          [
+            0.18973654636670448,
+            -0.5853811944701967,
+            0.788244188138093,
+            0.8148315758583958
+          ],
+          [
+            0.0,
+            0.8028275190529188,
+            0.5962113506562379,
+            1.3043112947614643
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "raw_expert_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 0.10786318778991699,
+          "sha256": "f3278121f70f366ea28bf30451f81aaa56fa62cd8b3daa9cd53d6712f0eb8eeb"
+        },
+        "seed1": 20261032,
+        "seed2": 20262032
+      },
+      "all_inputs_pass": false,
+      "comparisons": {
+        "rgb_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 252.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "rgb_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 240.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "state_source_vs_dataset": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "normalized_actions": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "mask": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 0.9882352948188782,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_official_eval_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 0.9411765336990356,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_custom_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "joint_rgb_ray_frozen_crop": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "source_xml_unchanged": {
+          "pass": true
+        }
+      },
+      "tensor_metadata": {
+        "dataset_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -0.970323920249939,
+          "max": 1.0695219039916992,
+          "finite": true,
+          "sha256": "e444e5a2822590b5fde43e71b338f6d743ae1a2d687292aa87ced0dddc59af37"
+        },
+        "dataset_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "dataset_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "eval_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -0.970323920249939,
+          "max": 1.0695219039916992,
+          "finite": true,
+          "sha256": "72a775bb392910999505834552952bc8906ad7dd299ae66826cb691344024605"
+        },
+        "eval_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "eval_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "custom_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -0.970323920249939,
+          "max": 1.0695219039916992,
+          "finite": true,
+          "sha256": "8067373fc470949426f145e0b86df13df3ff81902b83205d26f2529a5bcb68b8"
+        },
+        "custom_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "custom_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "normalized_actions_full": {
+          "shape": [
+            130,
+            7
+          ],
+          "dtype": "float32",
+          "min": -3.571563243865967,
+          "max": 6.761845588684082,
+          "finite": true,
+          "sha256": "1d8ceb2fead469c6ccb451f7c40e88592bab13dd6590e7f9647f53fe65d58f31"
+        },
+        "mask_full": {
+          "shape": [
+            130
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "141d5d386ac2f48217f92984651c93197c1180b17db231573842ce5a4c24b741"
+        },
+        "expert_raw_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 0.10786318778991699,
+          "finite": true,
+          "sha256": "f3278121f70f366ea28bf30451f81aaa56fa62cd8b3daa9cd53d6712f0eb8eeb"
+        },
+        "mask_chunk": {
+          "shape": [
+            30
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62"
+        },
+        "rgb_uint8": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 0.0,
+          "max": 255.0,
+          "finite": true,
+          "sha256": "57c1009c400d9bfed49f66b1496a72e5442baaf054ad0e566c5ad19fa97a07a1"
+        },
+        "T_given": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float64",
+          "min": -0.9818350385746251,
+          "max": 1.3043112947614643,
+          "finite": true,
+          "sha256": "424a2ede0dd1059c99c79827936129b29fda0a31a0f8e0514dcb6bcca804a86f"
+        },
+        "intrinsics": {
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 309.01934814453125,
+          "finite": true,
+          "sha256": "752482b34b21d7be3a3ccae324448891d7d24c37affdd197cc8d71844e1776a9"
+        },
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -2.5897903442382812,
+          "max": 2.9638240337371826,
+          "finite": true,
+          "sha256": "495bfa1c4503114bbd807aee560dc966ed134463c4e024e64cb0c2c88b63666b"
+        },
+        "state_before": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.5897903442382812,
+          "max": 2.9638240337371826,
+          "finite": true,
+          "sha256": "04d96ed8ca3e23af62ed9a76937c8476bf1a38d3d3cfbac6f59547f17946d5a0"
+        },
+        "state_dataset": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.5897903442382812,
+          "max": 2.9638240337371826,
+          "finite": true,
+          "sha256": "04d96ed8ca3e23af62ed9a76937c8476bf1a38d3d3cfbac6f59547f17946d5a0"
+        },
+        "state_evaluator": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.5897903442382812,
+          "max": 2.9638240337371826,
+          "finite": true,
+          "sha256": "04d96ed8ca3e23af62ed9a76937c8476bf1a38d3d3cfbac6f59547f17946d5a0"
+        },
+        "state_custom": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.5897903442382812,
+          "max": 2.9638240337371826,
+          "finite": true,
+          "sha256": "04d96ed8ca3e23af62ed9a76937c8476bf1a38d3d3cfbac6f59547f17946d5a0"
+        },
+        "joint_crop_9ch": {
+          "shape": [
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -0.9625722765922546,
+          "max": 1.0359323024749756,
+          "finite": true,
+          "sha256": "bf5f9571b31974b2a746ed171ed557619c46d2b7fbdb0d2a9f1b563c869b2423"
+        }
+      },
+      "dataset_rng_control": {
+        "before_rng_sha256": "548393eb42b07257166161f8480126e3d816483bdac5fa9db71712dcfd626fdd",
+        "after_rng_sha256": "548393eb42b07257166161f8480126e3d816483bdac5fa9db71712dcfd626fdd",
+        "rng_restored": true,
+        "intercepted_draws": {
+          "time": 1,
+          "camera": 1
+        },
+        "original_numpy_functions_restored": true
+      },
+      "source_xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "geometry": {
+        "actual_cam2world": [
+          [
+            -0.9818350385746252,
+            -0.11312308257814278,
+            0.15232572079325046,
+            0.0126664262340045
+          ],
+          [
+            0.1897365463667045,
+            -0.5853811944701967,
+            0.7882441881380932,
+            0.8148315758583958
+          ],
+          [
+            1.3877787807814457e-17,
+            0.8028275190529189,
+            0.5962113506562379,
+            1.3043112947614643
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "cam_fovy_degrees": 45.0,
+        "actual_vs_given_maxabs": 1.1102230246251565e-16,
+        "independent_visible_point_projection": "NOT_COMPLETED: no reliable labeled visible surface/pixel correspondence established in this batch",
+        "half_pixel_convention": "upstream ray builder has two +0.5 offsets; preserved; actual camera equality is not full ray-to-RGB proof"
+      },
+      "rng_end_restored": "548393eb42b07257166161f8480126e3d816483bdac5fa9db71712dcfd626fdd",
+      "npz_sha256": "b0612e2c490bdce74e5b21643e3cbcb88a8cd58beb7142b69aef339a3096d218"
+    },
+    {
+      "sample": {
+        "sample": 4,
+        "demo_id": 0,
+        "t": 52,
+        "demo_length": 105,
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -2.055513858795166,
+          "max": 3.0015170574188232,
+          "sha256": "bb5f281339a709dbc1009a67fc6305accc3a2a7262e50ac7e6beb2206d7827e8"
+        },
+        "source_state_original_dtype": "float64",
+        "valid_chunk_steps": 30,
+        "camera_index": 1,
+        "T": [
+          [
+            0.8305230356726009,
+            -0.34794925432522517,
+            0.43492850404599553,
+            0.37806304720870987
+          ],
+          [
+            0.5569842791472376,
+            0.5188294926467981,
+            -0.6485248417313697,
+            -0.5706100505135695
+          ],
+          [
+            -0.0,
+            0.7808631595704755,
+            0.6247021098296485,
+            1.3818641093085926
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "raw_expert_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 1.0,
+          "sha256": "0dddc8f39daf708e67c5e50de6225517a64eae6bef579d9ef2ffb55af9082008"
+        },
+        "seed1": 20261033,
+        "seed2": null
+      },
+      "all_inputs_pass": false,
+      "comparisons": {
+        "rgb_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 252.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "rgb_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 252.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "state_source_vs_dataset": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "normalized_actions": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "mask": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 0.9882352948188782,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_official_eval_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 0.988235354423523,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_custom_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "joint_rgb_ray_frozen_crop": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "source_xml_unchanged": {
+          "pass": true
+        }
+      },
+      "tensor_metadata": {
+        "dataset_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.1541757583618164,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "32ced48c165a81ce77aa0cdbd35519dbb686a4cb6eaa704f5bcac2d994ef4490"
+        },
+        "dataset_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "dataset_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "eval_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.1541757583618164,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "3ed05e6470a3284394ff72375a26850accbea2811eeb33d3574b95f07156349b"
+        },
+        "eval_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "eval_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "custom_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.1541757583618164,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "f639171857f0d73be026dffb53e3485ed9bca4393c0cc41cedb602e1389d6bfb"
+        },
+        "custom_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "custom_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "normalized_actions_full": {
+          "shape": [
+            130,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.5487852096557617,
+          "max": 4.235321521759033,
+          "finite": true,
+          "sha256": "ccc0d86d59e751316f6021507cf20206c2648126f26f1e9657b9e922877f6568"
+        },
+        "mask_full": {
+          "shape": [
+            130
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "7968975186e50b241418a0bbd6501a65297db46311f690ee705176a008fdba60"
+        },
+        "expert_raw_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "0dddc8f39daf708e67c5e50de6225517a64eae6bef579d9ef2ffb55af9082008"
+        },
+        "mask_chunk": {
+          "shape": [
+            30
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62"
+        },
+        "rgb_uint8": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 0.0,
+          "max": 255.0,
+          "finite": true,
+          "sha256": "878c69b0128085822a23c10600af9a9be630982a6feb000c6164778f874d4d29"
+        },
+        "T_given": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float64",
+          "min": -0.6485248417313697,
+          "max": 1.3818641093085926,
+          "finite": true,
+          "sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2"
+        },
+        "intrinsics": {
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 309.01934814453125,
+          "finite": true,
+          "sha256": "752482b34b21d7be3a3ccae324448891d7d24c37affdd197cc8d71844e1776a9"
+        },
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -2.055513858795166,
+          "max": 3.0015170574188232,
+          "finite": true,
+          "sha256": "bb5f281339a709dbc1009a67fc6305accc3a2a7262e50ac7e6beb2206d7827e8"
+        },
+        "state_before": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.055513858795166,
+          "max": 3.0015170574188232,
+          "finite": true,
+          "sha256": "5e4e3b93d7e43ba900a0cb7d902d826f3cbc5b010e88f26778db3778e25b0f9b"
+        },
+        "state_dataset": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.055513858795166,
+          "max": 3.0015170574188232,
+          "finite": true,
+          "sha256": "5e4e3b93d7e43ba900a0cb7d902d826f3cbc5b010e88f26778db3778e25b0f9b"
+        },
+        "state_evaluator": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.055513858795166,
+          "max": 3.0015170574188232,
+          "finite": true,
+          "sha256": "5e4e3b93d7e43ba900a0cb7d902d826f3cbc5b010e88f26778db3778e25b0f9b"
+        },
+        "state_custom": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.055513858795166,
+          "max": 3.0015170574188232,
+          "finite": true,
+          "sha256": "5e4e3b93d7e43ba900a0cb7d902d826f3cbc5b010e88f26778db3778e25b0f9b"
+        },
+        "joint_crop_9ch": {
+          "shape": [
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.1138675212860107,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "05453a8a2465f80790ac337be5095924ac606b8cd47bfa34c827aa21cc9f5e39"
+        }
+      },
+      "dataset_rng_control": {
+        "before_rng_sha256": "ca3117406e053ce6607333019e508d8afc95c79fd55f0bd9ce2187ccb55020d2",
+        "after_rng_sha256": "ca3117406e053ce6607333019e508d8afc95c79fd55f0bd9ce2187ccb55020d2",
+        "rng_restored": true,
+        "intercepted_draws": {
+          "time": 1,
+          "camera": 1
+        },
+        "original_numpy_functions_restored": true
+      },
+      "source_xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "geometry": {
+        "actual_cam2world": [
+          [
+            0.8305230356726008,
+            -0.3479492543252252,
+            0.4349285040459956,
+            0.37806304720870987
+          ],
+          [
+            0.5569842791472375,
+            0.5188294926467982,
+            -0.6485248417313698,
+            -0.5706100505135695
+          ],
+          [
+            2.7755575615628914e-17,
+            0.7808631595704754,
+            0.6247021098296486,
+            1.3818641093085926
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "cam_fovy_degrees": 45.0,
+        "actual_vs_given_maxabs": 1.1102230246251565e-16,
+        "independent_visible_point_projection": "NOT_COMPLETED: no reliable labeled visible surface/pixel correspondence established in this batch",
+        "half_pixel_convention": "upstream ray builder has two +0.5 offsets; preserved; actual camera equality is not full ray-to-RGB proof"
+      },
+      "rng_end_restored": "ca3117406e053ce6607333019e508d8afc95c79fd55f0bd9ce2187ccb55020d2",
+      "npz_sha256": "15d1e1aa802d53b95a2c146128b2307c3938acc68b6370431d7703019c38bd40"
+    },
+    {
+      "sample": {
+        "sample": 5,
+        "demo_id": 50,
+        "t": 48,
+        "demo_length": 98,
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -1.9681249856948853,
+          "max": 3.0220048427581787,
+          "sha256": "5adbd4777b1d8d4133d64cd3b47ded572a6bdde2bfcf78ce3a87c67de4e5f8ea"
+        },
+        "source_state_original_dtype": "float64",
+        "valid_chunk_steps": 30,
+        "camera_index": 51,
+        "T": [
+          [
+            0.5471063064869058,
+            -0.3860876746759683,
+            0.7427051883927832,
+            0.7056600994264759
+          ],
+          [
+            0.8370631334626175,
+            0.2523477539839837,
+            -0.4854337458984316,
+            -0.3731395823567784
+          ],
+          [
+            -0.0,
+            0.887274995997601,
+            0.4612408063880054,
+            1.3961011348329802
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "raw_expert_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 1.0,
+          "sha256": "bac4977b04899f5a6dc82cf8b1025a51e331e23966b077ec5ece89084f138fb0"
+        },
+        "seed1": 20261034,
+        "seed2": null
+      },
+      "all_inputs_pass": false,
+      "comparisons": {
+        "rgb_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 219.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "rgb_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 219.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "state_source_vs_dataset": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "normalized_actions": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "mask": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 0.8588235378265381,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_official_eval_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 0.8588235974311829,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_custom_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "joint_rgb_ray_frozen_crop": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "source_xml_unchanged": {
+          "pass": true
+        }
+      },
+      "tensor_metadata": {
+        "dataset_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.3004674911499023,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "c9ba13f7b60b5c1c65fdb9d53e673e7b3e26518b5989bb0661076de916819b6f"
+        },
+        "dataset_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "dataset_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "eval_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.3004674911499023,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "e8ba85413dd26c6d5a332ce50ada03a37f7bd2d5acea2e9f8a43144232ac6a63"
+        },
+        "eval_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "eval_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "custom_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.3004674911499023,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "93556551d82eb8554db737521e51c8b2e19b9dcfbab4a36710bf33b27d5428af"
+        },
+        "custom_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "custom_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "normalized_actions_full": {
+          "shape": [
+            130,
+            7
+          ],
+          "dtype": "float32",
+          "min": -2.2225513458251953,
+          "max": 4.259219646453857,
+          "finite": true,
+          "sha256": "2940c208d691c6613e531689fe0898704e3da173753b53fdbc5149bd2b455229"
+        },
+        "mask_full": {
+          "shape": [
+            130
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "d0b0377e07afa96aa9a84aa7dc723b10938f7fe854b5834edf37e3c485cc0d1d"
+        },
+        "expert_raw_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "bac4977b04899f5a6dc82cf8b1025a51e331e23966b077ec5ece89084f138fb0"
+        },
+        "mask_chunk": {
+          "shape": [
+            30
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62"
+        },
+        "rgb_uint8": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 0.0,
+          "max": 255.0,
+          "finite": true,
+          "sha256": "b61438be80e2ced239aee3c18dd0c49daf70be1972da737f748735fd43cc393f"
+        },
+        "T_given": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float64",
+          "min": -0.4854337458984316,
+          "max": 1.3961011348329802,
+          "finite": true,
+          "sha256": "83950e99cb870f4de8cc4627b3f53c340b41ff95b4cd91bc42da11e2c1f0b310"
+        },
+        "intrinsics": {
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 309.01934814453125,
+          "finite": true,
+          "sha256": "752482b34b21d7be3a3ccae324448891d7d24c37affdd197cc8d71844e1776a9"
+        },
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -1.9681249856948853,
+          "max": 3.0220048427581787,
+          "finite": true,
+          "sha256": "5adbd4777b1d8d4133d64cd3b47ded572a6bdde2bfcf78ce3a87c67de4e5f8ea"
+        },
+        "state_before": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -1.9681249856948853,
+          "max": 3.0220048427581787,
+          "finite": true,
+          "sha256": "0732772afa0966e98d3c4ef9ad51ec5bdf1748a170cfa1a25e12f225a444dc71"
+        },
+        "state_dataset": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -1.9681249856948853,
+          "max": 3.0220048427581787,
+          "finite": true,
+          "sha256": "0732772afa0966e98d3c4ef9ad51ec5bdf1748a170cfa1a25e12f225a444dc71"
+        },
+        "state_evaluator": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -1.9681249856948853,
+          "max": 3.0220048427581787,
+          "finite": true,
+          "sha256": "0732772afa0966e98d3c4ef9ad51ec5bdf1748a170cfa1a25e12f225a444dc71"
+        },
+        "state_custom": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -1.9681249856948853,
+          "max": 3.0220048427581787,
+          "finite": true,
+          "sha256": "0732772afa0966e98d3c4ef9ad51ec5bdf1748a170cfa1a25e12f225a444dc71"
+        },
+        "joint_crop_9ch": {
+          "shape": [
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.2618248462677002,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "0e6c88a99d9989c42065c2cb4d8a8e36c9a02efe7cf77cc2a972d2b4fdd16963"
+        }
+      },
+      "dataset_rng_control": {
+        "before_rng_sha256": "5e8f61e2755d27211180bbd82d38d51343e9a5d802770f4e89da8761b993fca7",
+        "after_rng_sha256": "5e8f61e2755d27211180bbd82d38d51343e9a5d802770f4e89da8761b993fca7",
+        "rng_restored": true,
+        "intercepted_draws": {
+          "time": 1,
+          "camera": 1
+        },
+        "original_numpy_functions_restored": true
+      },
+      "source_xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "geometry": {
+        "actual_cam2world": [
+          [
+            0.547106306486906,
+            -0.38608767467596833,
+            0.7427051883927833,
+            0.7056600994264759
+          ],
+          [
+            0.8370631334626177,
+            0.2523477539839837,
+            -0.4854337458984317,
+            -0.3731395823567784
+          ],
+          [
+            0.0,
+            0.887274995997601,
+            0.46124080638800546,
+            1.3961011348329802
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "cam_fovy_degrees": 45.0,
+        "actual_vs_given_maxabs": 2.220446049250313e-16,
+        "independent_visible_point_projection": "NOT_COMPLETED: no reliable labeled visible surface/pixel correspondence established in this batch",
+        "half_pixel_convention": "upstream ray builder has two +0.5 offsets; preserved; actual camera equality is not full ray-to-RGB proof"
+      },
+      "rng_end_restored": "5e8f61e2755d27211180bbd82d38d51343e9a5d802770f4e89da8761b993fca7",
+      "npz_sha256": "f76e50c9cfed6b566c456e7c9b71a97b6b9cf1f74cb2a4543854345852602adf"
+    },
+    {
+      "sample": {
+        "sample": 6,
+        "demo_id": 100,
+        "t": 58,
+        "demo_length": 117,
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -1.7011878490447998,
+          "max": 2.9000000953674316,
+          "sha256": "8bb19a767c2a7e796da030bcdc297d624c11cf8e47305e539d49eed28b4783e2"
+        },
+        "source_state_original_dtype": "float64",
+        "valid_chunk_steps": 30,
+        "camera_index": 101,
+        "T": [
+          [
+            -0.7254673662621369,
+            -0.47131628565114264,
+            0.5015556393548865,
+            0.46106931744243196
+          ],
+          [
+            0.6882565658885342,
+            -0.4967981438525985,
+            0.5286723974030936,
+            0.360701547442331
+          ],
+          [
+            0.0,
+            0.7287335337039346,
+            0.6847973691942578,
+            1.419398798006678
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "raw_expert_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 1.0,
+          "sha256": "0d17795f81619bb6d6290a45ec99ba2fdede3ceda4ec7d06fe3bc756cff5145b"
+        },
+        "seed1": 20261035,
+        "seed2": null
+      },
+      "all_inputs_pass": false,
+      "comparisons": {
+        "rgb_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 240.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "rgb_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 219.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "state_source_vs_dataset": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "normalized_actions": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "mask": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 0.9411764740943909,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_official_eval_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 0.8588235974311829,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_custom_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "joint_rgb_ray_frozen_crop": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "source_xml_unchanged": {
+          "pass": true
+        }
+      },
+      "tensor_metadata": {
+        "dataset_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.0673108100891113,
+          "max": 1.126291275024414,
+          "finite": true,
+          "sha256": "d52313f498f50d77e5457daee08abbe699be2db6b64a4d1ab4c74ab7b667e9bf"
+        },
+        "dataset_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "dataset_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "eval_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.0673108100891113,
+          "max": 1.126291275024414,
+          "finite": true,
+          "sha256": "16a3be913e67175f6de9e4fbd8b3d285e58555b0467c4496760b36cd63b15834"
+        },
+        "eval_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "eval_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "custom_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.0673108100891113,
+          "max": 1.126291275024414,
+          "finite": true,
+          "sha256": "756314ce587833ac7e2cce644f5c24d5aee4f806a815d01c32d5873b56d486c1"
+        },
+        "custom_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "custom_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "normalized_actions_full": {
+          "shape": [
+            130,
+            7
+          ],
+          "dtype": "float32",
+          "min": -2.383699417114258,
+          "max": 4.368624687194824,
+          "finite": true,
+          "sha256": "34cb50b010e1db2ca5b03c48f5ca6e46275e8e85482acef9d0236ed92cded64d"
+        },
+        "mask_full": {
+          "shape": [
+            130
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "487eec7abd7fb6279e16bdf63da5655fa30f53786a689af661cc2f743698ea3d"
+        },
+        "expert_raw_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "0d17795f81619bb6d6290a45ec99ba2fdede3ceda4ec7d06fe3bc756cff5145b"
+        },
+        "mask_chunk": {
+          "shape": [
+            30
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62"
+        },
+        "rgb_uint8": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 0.0,
+          "max": 255.0,
+          "finite": true,
+          "sha256": "426358a0822e6cbc2fc10f06a3395174974de0c0acfa89b52a495747e589094a"
+        },
+        "T_given": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float64",
+          "min": -0.7254673662621369,
+          "max": 1.419398798006678,
+          "finite": true,
+          "sha256": "1fb5022fa6268f261154f4427c608d6e265b170740beba35ca8ac4becc970d98"
+        },
+        "intrinsics": {
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 309.01934814453125,
+          "finite": true,
+          "sha256": "752482b34b21d7be3a3ccae324448891d7d24c37affdd197cc8d71844e1776a9"
+        },
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -1.7011878490447998,
+          "max": 2.9000000953674316,
+          "finite": true,
+          "sha256": "8bb19a767c2a7e796da030bcdc297d624c11cf8e47305e539d49eed28b4783e2"
+        },
+        "state_before": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -1.7011878490447998,
+          "max": 2.9000000953674316,
+          "finite": true,
+          "sha256": "8c3fe7d967249f4fd408dae22de5cf707e57d7990b792f8e2a4297620d28bc00"
+        },
+        "state_dataset": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -1.7011878490447998,
+          "max": 2.9000000953674316,
+          "finite": true,
+          "sha256": "8c3fe7d967249f4fd408dae22de5cf707e57d7990b792f8e2a4297620d28bc00"
+        },
+        "state_evaluator": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -1.7011878490447998,
+          "max": 2.9000000953674316,
+          "finite": true,
+          "sha256": "8c3fe7d967249f4fd408dae22de5cf707e57d7990b792f8e2a4297620d28bc00"
+        },
+        "state_custom": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -1.7011878490447998,
+          "max": 2.9000000953674316,
+          "finite": true,
+          "sha256": "8c3fe7d967249f4fd408dae22de5cf707e57d7990b792f8e2a4297620d28bc00"
+        },
+        "joint_crop_9ch": {
+          "shape": [
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -1.01857328414917,
+          "max": 1.0787118673324585,
+          "finite": true,
+          "sha256": "ac1582cc6d9f1503b543b64e1b6260fd25f99d46e101fce92f2a6e93fa0b2359"
+        }
+      },
+      "dataset_rng_control": {
+        "before_rng_sha256": "58ab411eb7da7ef4d9b5d4ada94c74116f717d526ec45ece1a88a9b511649c8e",
+        "after_rng_sha256": "58ab411eb7da7ef4d9b5d4ada94c74116f717d526ec45ece1a88a9b511649c8e",
+        "rng_restored": true,
+        "intercepted_draws": {
+          "time": 1,
+          "camera": 1
+        },
+        "original_numpy_functions_restored": true
+      },
+      "source_xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "geometry": {
+        "actual_cam2world": [
+          [
+            -0.725467366262137,
+            -0.4713162856511425,
+            0.5015556393548863,
+            0.46106931744243196
+          ],
+          [
+            0.6882565658885341,
+            -0.4967981438525984,
+            0.5286723974030937,
+            0.360701547442331
+          ],
+          [
+            0.0,
+            0.7287335337039346,
+            0.6847973691942576,
+            1.419398798006678
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "cam_fovy_degrees": 45.0,
+        "actual_vs_given_maxabs": 2.220446049250313e-16,
+        "independent_visible_point_projection": "NOT_COMPLETED: no reliable labeled visible surface/pixel correspondence established in this batch",
+        "half_pixel_convention": "upstream ray builder has two +0.5 offsets; preserved; actual camera equality is not full ray-to-RGB proof"
+      },
+      "rng_end_restored": "58ab411eb7da7ef4d9b5d4ada94c74116f717d526ec45ece1a88a9b511649c8e",
+      "npz_sha256": "c903c35d4326c40dd61952a4f7ebe1a63e494301c5e1facbac095b21d3cee6f5"
+    },
+    {
+      "sample": {
+        "sample": 7,
+        "demo_id": 150,
+        "t": 46,
+        "demo_length": 93,
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -2.1677985191345215,
+          "max": 3.2001235485076904,
+          "sha256": "7e7b6f48be2bfac796236bbc5203967da0a206cf28e5110b5d75a43d09be4399"
+        },
+        "source_state_original_dtype": "float64",
+        "valid_chunk_steps": 30,
+        "camera_index": 151,
+        "T": [
+          [
+            -0.9818350385746251,
+            -0.11312308257814278,
+            0.15232572079325046,
+            0.0126664262340045
+          ],
+          [
+            0.18973654636670448,
+            -0.5853811944701967,
+            0.788244188138093,
+            0.8148315758583958
+          ],
+          [
+            0.0,
+            0.8028275190529188,
+            0.5962113506562379,
+            1.3043112947614643
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "raw_expert_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 1.0,
+          "sha256": "e0bb963ae6631fbbbf9b74efdcebdcad32e2362d630594860dea42e685b7306c"
+        },
+        "seed1": 20261036,
+        "seed2": null
+      },
+      "all_inputs_pass": false,
+      "comparisons": {
+        "rgb_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 255.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "rgb_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 240.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "state_source_vs_dataset": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_evaluator": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "state_dataset_vs_custom": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "normalized_actions": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "mask": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 1.0,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_official_eval_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_official_eval_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_image": {
+          "shape_equal": true,
+          "bit_equal": false,
+          "max_abs": 0.9411765336990356,
+          "allclose_atol_1e_7_rtol_1e_6": false,
+          "pass": false
+        },
+        "dataset_vs_custom_qpos": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_cam_extrinsics": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "dataset_vs_custom_plucker6": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "joint_rgb_ray_frozen_crop": {
+          "shape_equal": true,
+          "bit_equal": true,
+          "max_abs": 0.0,
+          "allclose_atol_1e_7_rtol_1e_6": true,
+          "pass": true
+        },
+        "source_xml_unchanged": {
+          "pass": true
+        }
+      },
+      "tensor_metadata": {
+        "dataset_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -0.970323920249939,
+          "max": 1.0695219039916992,
+          "finite": true,
+          "sha256": "92ba727f29fa36f270d93b3490061243e633d6adb25690e83a565a9e27880393"
+        },
+        "dataset_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "dataset_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "eval_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -0.970323920249939,
+          "max": 1.0695219039916992,
+          "finite": true,
+          "sha256": "e39d96333099457323d7fa949f1cf0f78da750c9f7b065d186d9b43259eba592"
+        },
+        "eval_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "eval_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "custom_image": {
+          "shape": [
+            1,
+            1,
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -0.970323920249939,
+          "max": 1.0695219039916992,
+          "finite": true,
+          "sha256": "d2f54e09f7bb75cca057323b3769b06fcda49d6dee447c20a612be35d320af66"
+        },
+        "custom_qpos": {
+          "shape": [
+            1,
+            7
+          ],
+          "dtype": "float32",
+          "min": -13.893803596496582,
+          "max": 5.347047805786133,
+          "finite": true,
+          "sha256": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5"
+        },
+        "custom_cam_extrinsics": {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+        },
+        "normalized_actions_full": {
+          "shape": [
+            130,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.9916270971298218,
+          "max": 4.192550182342529,
+          "finite": true,
+          "sha256": "990840f8e18be4892d311191063c3755b9e3fc395947ccfea251e860e49d44fb"
+        },
+        "mask_full": {
+          "shape": [
+            130
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "43a7eff22caf4b80b1ffc291f20c9eba3471fb5530739b16a9f3d210a3ccdfa7"
+        },
+        "expert_raw_chunk": {
+          "shape": [
+            30,
+            7
+          ],
+          "dtype": "float32",
+          "min": -1.0,
+          "max": 1.0,
+          "finite": true,
+          "sha256": "e0bb963ae6631fbbbf9b74efdcebdcad32e2362d630594860dea42e685b7306c"
+        },
+        "mask_chunk": {
+          "shape": [
+            30
+          ],
+          "dtype": "bool",
+          "min": 0.0,
+          "max": 0.0,
+          "finite": true,
+          "sha256": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62"
+        },
+        "rgb_uint8": {
+          "shape": [
+            256,
+            256,
+            3
+          ],
+          "dtype": "uint8",
+          "min": 0.0,
+          "max": 255.0,
+          "finite": true,
+          "sha256": "8b6891f375c18e51b031041c427752c2ff02e8834335248549d7d6fece64e5a0"
+        },
+        "T_given": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float64",
+          "min": -0.9818350385746251,
+          "max": 1.3043112947614643,
+          "finite": true,
+          "sha256": "424a2ede0dd1059c99c79827936129b29fda0a31a0f8e0514dcb6bcca804a86f"
+        },
+        "intrinsics": {
+          "shape": [
+            3,
+            3
+          ],
+          "dtype": "float32",
+          "min": 0.0,
+          "max": 309.01934814453125,
+          "finite": true,
+          "sha256": "752482b34b21d7be3a3ccae324448891d7d24c37affdd197cc8d71844e1776a9"
+        },
+        "source_state_f32": {
+          "shape": [
+            58
+          ],
+          "dtype": "float32",
+          "min": -2.1677985191345215,
+          "max": 3.2001235485076904,
+          "finite": true,
+          "sha256": "7e7b6f48be2bfac796236bbc5203967da0a206cf28e5110b5d75a43d09be4399"
+        },
+        "state_before": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.1677985191345215,
+          "max": 3.2001235485076904,
+          "finite": true,
+          "sha256": "0e6e3a371874c2e4d4dc3a210ec9a622d1bcfa5aa0f710e144b3b79f9f5e6b52"
+        },
+        "state_dataset": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.1677985191345215,
+          "max": 3.2001235485076904,
+          "finite": true,
+          "sha256": "0e6e3a371874c2e4d4dc3a210ec9a622d1bcfa5aa0f710e144b3b79f9f5e6b52"
+        },
+        "state_evaluator": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.1677985191345215,
+          "max": 3.2001235485076904,
+          "finite": true,
+          "sha256": "0e6e3a371874c2e4d4dc3a210ec9a622d1bcfa5aa0f710e144b3b79f9f5e6b52"
+        },
+        "state_custom": {
+          "shape": [
+            58
+          ],
+          "dtype": "float64",
+          "min": -2.1677985191345215,
+          "max": 3.2001235485076904,
+          "finite": true,
+          "sha256": "0e6e3a371874c2e4d4dc3a210ec9a622d1bcfa5aa0f710e144b3b79f9f5e6b52"
+        },
+        "joint_crop_9ch": {
+          "shape": [
+            9,
+            256,
+            256
+          ],
+          "dtype": "float32",
+          "min": -0.9625722765922546,
+          "max": 1.0359323024749756,
+          "finite": true,
+          "sha256": "bf5f9571b31974b2a746ed171ed557619c46d2b7fbdb0d2a9f1b563c869b2423"
+        }
+      },
+      "dataset_rng_control": {
+        "before_rng_sha256": "60e41f8d7e81c19c308f3a11fdaf142c403903a1e1e2704fa19098c2e03aabaa",
+        "after_rng_sha256": "60e41f8d7e81c19c308f3a11fdaf142c403903a1e1e2704fa19098c2e03aabaa",
+        "rng_restored": true,
+        "intercepted_draws": {
+          "time": 1,
+          "camera": 1
+        },
+        "original_numpy_functions_restored": true
+      },
+      "source_xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "geometry": {
+        "actual_cam2world": [
+          [
+            -0.9818350385746252,
+            -0.11312308257814278,
+            0.15232572079325046,
+            0.0126664262340045
+          ],
+          [
+            0.1897365463667045,
+            -0.5853811944701967,
+            0.7882441881380932,
+            0.8148315758583958
+          ],
+          [
+            1.3877787807814457e-17,
+            0.8028275190529189,
+            0.5962113506562379,
+            1.3043112947614643
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "cam_fovy_degrees": 45.0,
+        "actual_vs_given_maxabs": 1.1102230246251565e-16,
+        "independent_visible_point_projection": "NOT_COMPLETED: no reliable labeled visible surface/pixel correspondence established in this batch",
+        "half_pixel_convention": "upstream ray builder has two +0.5 offsets; preserved; actual camera equality is not full ray-to-RGB proof"
+      },
+      "rng_end_restored": "60e41f8d7e81c19c308f3a11fdaf142c403903a1e1e2704fa19098c2e03aabaa",
+      "npz_sha256": "f2538c39ad01c6ae2f3e0fe187f39f45e276fa6284b125d0570516c42037885d"
+    }
+  ],
+  "independent_geometry_correspondence": "NOT_COMPLETED",
+  "geometry_boundary": "same-state camera matrices compared; no claim of independent visible-pixel ray validation"
+}

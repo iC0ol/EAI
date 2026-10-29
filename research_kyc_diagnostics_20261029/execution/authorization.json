@@ -1,0 +1,13 @@
+{
+  "verified_utc": "2026-10-29T04:13:24.016560+00:00",
+  "source_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "human_message_id": "01a18579-d2bb-7bd3-b0ae-9e849560007c",
+  "read_thread_verified_attachment_path": "/home/asus/.codex/attachments/8e5cb5ee-21aa-47d7-af22-929dd9197745/已粘贴的文本.txt",
+  "human_attachment_sha256": "783b28793c2efcc72bc6b5bbfaf813e5e3968eaca0da99779392b09fed5a994f",
+  "local_task_copy_sha256": "783b28793c2efcc72bc6b5bbfaf813e5e3968eaca0da99779392b09fed5a994f",
+  "original_text_return_authorization": "GPT-6.1-sol / max完成任务后，必须将实验结果返回给Codex和DeepSeek。",
+  "original_text_publication_authorization": "最终将原创代码、必要的小型结果、审查报告和执行记录同步到GitHub。",
+  "destination_thread": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "once_only_receipt": "orchestration/executor_return_receipt.json",
+  "dispatch_sha256": "b07d9ae54dfa6fa2dd9cb366edec49d13cf01ae6e2e1adb5b6f4e3079a1df852"
+}

@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-29T04:07:41.876420+00:00",
+  "supersedes_fields_in": "results/versions.json",
+  "kyc_commit": "e0647105a0f3946581d253c55dc9fd1218fa0974",
+  "robosuite_commit": "0df3a5f5782937fa2e8fa923910d616b73310b8d",
+  "wrong_values_preserved": {
+    "kyc_commit": "a03f16da9110f219be49a0994140c7617a6b45ff",
+    "robosuite_commit": "a03f16da9110f219be49a0994140c7617a6b45ff"
+  },
+  "reason": "vendor trees were extracted from fixed codeload archives and have no .git; git rev-parse traversed to EAI parent. Independent remote Git blob checks above establish relevant source identity.",
+  "observations_or_forward_calls_added": 0,
+  "scientific_gate_affected": false
+}

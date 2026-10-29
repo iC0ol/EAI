@@ -1,0 +1,71 @@
+{
+  "commit": "a03f16da9110f219be49a0994140c7617a6b45ff",
+  "rows": [
+    {
+      "path": "research_expansion_20261029/02_联合研究最终报告.md",
+      "git_commit_sha256": "dd36192236d0205591338c0e7ae030025269b339c54fad78ad36ac7f9ab25854",
+      "local_sha256": "dd36192236d0205591338c0e7ae030025269b339c54fad78ad36ac7f9ab25854",
+      "matches": true
+    },
+    {
+      "path": "research_expansion_20261029/notes/04_复现结果独立审查.md",
+      "git_commit_sha256": "30c19da947290f5a69b7e8c8c8dba9a926394288dd357cbab3dafc2a39844a61",
+      "local_sha256": "30c19da947290f5a69b7e8c8c8dba9a926394288dd357cbab3dafc2a39844a61",
+      "matches": true
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/FINAL_REPORT.md",
+      "git_commit_sha256": "d89df6b456bb84b9acdafef98b8c77ef00e03bb2fe483f07ac385be30971781d",
+      "local_sha256": "d89df6b456bb84b9acdafef98b8c77ef00e03bb2fe483f07ac385be30971781d",
+      "matches": true
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/PROTOCOL.md",
+      "git_commit_sha256": "f1f24733775a4de78cc07147b3497e047376e4a6440d45800a91d600d1126390",
+      "local_sha256": "f1f24733775a4de78cc07147b3497e047376e4a6440d45800a91d600d1126390",
+      "matches": true
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/RECOVERY.md",
+      "git_commit_sha256": "64728b6aca2c6809217c190d9f82f631f35f1d9eb2481bf2756cba71fdb45015",
+      "local_sha256": "64728b6aca2c6809217c190d9f82f631f35f1d9eb2481bf2756cba71fdb45015",
+      "matches": true
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/results/dev_summary.json",
+      "git_commit_sha256": "9a420fa8347770c908aa400e74d9b0b51a4b0cf2c1a416c4ec5dcb3f880e8059",
+      "local_sha256": "9a420fa8347770c908aa400e74d9b0b51a4b0cf2c1a416c4ec5dcb3f880e8059",
+      "matches": true
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/results/offline_action_audit.json",
+      "git_commit_sha256": "7a561539c3f3bb7d6bc2e9e26ee733646d3058f9d708bad324ea91746441b78f",
+      "local_sha256": "7a561539c3f3bb7d6bc2e9e26ee733646d3058f9d708bad324ea91746441b78f",
+      "matches": true
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/manifests/C_config.json",
+      "git_commit_sha256": "f4909f0f8376f6e48d4c6bb870ac46173d66cd9c13002e6709331f0f1c30b49a",
+      "local_sha256": "f4909f0f8376f6e48d4c6bb870ac46173d66cd9c13002e6709331f0f1c30b49a",
+      "matches": true
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/scripts/run_experiment.py",
+      "git_commit_sha256": "85a8d72a932c870bcb18e22e792041d9c48da7a082324d7163c276494b6ac256",
+      "local_sha256": "85a8d72a932c870bcb18e22e792041d9c48da7a082324d7163c276494b6ac256",
+      "matches": true
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/scripts/evaluate.py",
+      "git_commit_sha256": "46fba926311a4092c6c606499ae53cd36590694af1413e3e85d9440d8f69df13",
+      "local_sha256": "46fba926311a4092c6c606499ae53cd36590694af1413e3e85d9440d8f69df13",
+      "matches": true
+    },
+    {
+      "path": "research_expansion_20261029/reproduction/scripts/experiment_lib.py",
+      "git_commit_sha256": "c3aa5e196a9dfaaf9ce94fd307987c508570deb1d87f6f9f25686d6912b3073c",
+      "local_sha256": "c3aa5e196a9dfaaf9ce94fd307987c508570deb1d87f6f9f25686d6912b3073c",
+      "matches": true
+    }
+  ]
+}

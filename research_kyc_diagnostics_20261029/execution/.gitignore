@@ -1,0 +1,9 @@
+cache/
+tmp/
+logs/
+local_only/
+__pycache__/
+*.pyc
+run.lock
+counter.lock
+*.tmp

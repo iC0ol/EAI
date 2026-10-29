@@ -1,0 +1,34 @@
+{
+  "utc": "2026-10-29T04:07:41.915043+00:00",
+  "demo0_obs_fields": {
+    "obs": [
+      "object",
+      "robot0_eef_pos",
+      "robot0_eef_quat",
+      "robot0_eef_vel_ang",
+      "robot0_eef_vel_lin",
+      "robot0_gripper_qpos",
+      "robot0_gripper_qvel",
+      "robot0_joint_pos",
+      "robot0_joint_pos_cos",
+      "robot0_joint_pos_sin",
+      "robot0_joint_vel"
+    ],
+    "next_obs": [
+      "object",
+      "robot0_eef_pos",
+      "robot0_eef_quat",
+      "robot0_eef_vel_ang",
+      "robot0_eef_vel_lin",
+      "robot0_gripper_qpos",
+      "robot0_gripper_qvel",
+      "robot0_joint_pos",
+      "robot0_joint_pos_cos",
+      "robot0_joint_pos_sin",
+      "robot0_joint_vel"
+    ]
+  },
+  "supersedes_shorthand": "none in inspected demo/data attributes; states/actions only",
+  "correct_description": "demo includes states/actions plus obs/next_obs/rewards/dones/starting_abs_action; obs contains no stored RGB. No demo XML attribute. Dataset reconstruction reads states/actions.",
+  "observations_or_forward_calls_added": 0
+}

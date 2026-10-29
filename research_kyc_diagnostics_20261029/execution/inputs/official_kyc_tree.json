@@ -1,0 +1,228 @@
+{
+  "queried_utc": "2026-10-29 04:06:47 UTC",
+  "repo": "ripl/CamPoseOpensource",
+  "fixed_commit": "e0647105a0f3946581d253c55dc9fd1218fa0974",
+  "truncated": false,
+  "entries": [
+    {
+      "path": ".gitignore",
+      "sha": "d248d1b3a30d62bbea0ed64ed8f5650cc3d783d5",
+      "size": 61
+    },
+    {
+      "path": ".gitmodules",
+      "sha": "dfc44cb621c762307aaf0716d0148b3c4b25707d",
+      "size": 194
+    },
+    {
+      "path": "LICENSE",
+      "sha": "d42b00494be1270df7dfde736b6d8211990b61e0",
+      "size": 1061
+    },
+    {
+      "path": "README.md",
+      "sha": "a3a888476322668f78b1b537af6275b3cc4bba13",
+      "size": 4400
+    },
+    {
+      "path": "policy_maniskill/__init__.py",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "size": 1
+    },
+    {
+      "path": "policy_maniskill/cam_embedding.py",
+      "sha": "2b35d03f92708ee7cdf3ca7e9ed6134e6001d04c",
+      "size": 3647
+    },
+    {
+      "path": "policy_maniskill/eval.py",
+      "sha": "f3200da254d5642f3dad2a15d439b45c7b00d7be",
+      "size": 9152
+    },
+    {
+      "path": "policy_maniskill/models/__init__.py",
+      "sha": "0519ecba6ea913e21689ec692e81e9e4973fbf73",
+      "size": 1
+    },
+    {
+      "path": "policy_maniskill/models/act.py",
+      "sha": "a443b1c5a4fc4838de1a10cc05ecc999260af347",
+      "size": 3164
+    },
+    {
+      "path": "policy_maniskill/models/backbone.py",
+      "sha": "7579aa86c8d5bd2be31d8ce70ec7bf56e74d3d33",
+      "size": 10434
+    },
+    {
+      "path": "policy_maniskill/models/detr_vae.py",
+      "sha": "015d4b5c52e339a88cf4509a9b5284c48ff8c348",
+      "size": 7747
+    },
+    {
+      "path": "policy_maniskill/models/dp.py",
+      "sha": "0bf2254cf4334bd5d374a1aa843dcb6ba4b0dea9",
+      "size": 19452
+    },
+    {
+      "path": "policy_maniskill/models/smolvla.py",
+      "sha": "97f85df6ccc9720d98b6d71eeb9eb0b936388e5e",
+      "size": 36006
+    },
+    {
+      "path": "policy_maniskill/models/transformer.py",
+      "sha": "3dd69f8c8cb92eedf2f523057e80cc7315942688",
+      "size": 12100
+    },
+    {
+      "path": "policy_maniskill/train.py",
+      "sha": "b2681aba29cadad4ff3c54e9991bea1f7380b25b",
+      "size": 13469
+    },
+    {
+      "path": "policy_maniskill/utils.py",
+      "sha": "71d366df377169e4ab24645d241915188c81c8d2",
+      "size": 15412
+    },
+    {
+      "path": "policy_robosuite/__init__.py",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "size": 1
+    },
+    {
+      "path": "policy_robosuite/cam_embedding.py",
+      "sha": "d40e7e2fe5e4595069386f6ee2e756af334b30b6",
+      "size": 3706
+    },
+    {
+      "path": "policy_robosuite/cam_utils.py",
+      "sha": "afa1f0bc963e13fec5ea739047812d066db41846",
+      "size": 9205
+    },
+    {
+      "path": "policy_robosuite/camera_poses/seperated_test_cameras.json",
+      "sha": "69a64962baf65fb63c77580e25a9480fbcfcd660",
+      "size": 227961
+    },
+    {
+      "path": "policy_robosuite/camera_poses/seperated_train_cameras.json",
+      "sha": "d7a3d82735ea117b7b91acf26cf5e6354cbe1221",
+      "size": 227877
+    },
+    {
+      "path": "policy_robosuite/camera_poses/test_cameras.json",
+      "sha": "ca09a50a5e190198780b797b7b9e1652b688cdf8",
+      "size": 45722
+    },
+    {
+      "path": "policy_robosuite/camera_poses/train_cameras.json",
+      "sha": "f98658f70fc3e0079506dd2363ce8946da152239",
+      "size": 454487
+    },
+    {
+      "path": "policy_robosuite/eval.py",
+      "sha": "74a3b4c08d2e80a80520e248d25a8944196a258c",
+      "size": 11603
+    },
+    {
+      "path": "policy_robosuite/models/__init__.py",
+      "sha": "0519ecba6ea913e21689ec692e81e9e4973fbf73",
+      "size": 1
+    },
+    {
+      "path": "policy_robosuite/models/act.py",
+      "sha": "f0a900f1722b25766bb416e9543e20813287f5db",
+      "size": 2780
+    },
+    {
+      "path": "policy_robosuite/models/backbone.py",
+      "sha": "9d911236760e9a8dbc4e42421c260321c15c36d8",
+      "size": 11654
+    },
+    {
+      "path": "policy_robosuite/models/detr_vae.py",
+      "sha": "c781b8b6bdc716421ed661fa63976b7b1d5a09db",
+      "size": 8016
+    },
+    {
+      "path": "policy_robosuite/models/dp.py",
+      "sha": "0bf2254cf4334bd5d374a1aa843dcb6ba4b0dea9",
+      "size": 19452
+    },
+    {
+      "path": "policy_robosuite/models/smolvla.py",
+      "sha": "fc06eb05e260efca04d644b79e9b1f972bc28d0b",
+      "size": 36021
+    },
+    {
+      "path": "policy_robosuite/models/transformer.py",
+      "sha": "3dd69f8c8cb92eedf2f523057e80cc7315942688",
+      "size": 12100
+    },
+    {
+      "path": "policy_robosuite/train.py",
+      "sha": "ed388ab6588e039a67ddae9e2cc4230f65baae52",
+      "size": 14518
+    },
+    {
+      "path": "policy_robosuite/utils.py",
+      "sha": "26eb10e41339f36f86e185db282c1b27850624c2",
+      "size": 19406
+    },
+    {
+      "path": "reproduce/SKILL.md",
+      "sha": "fa7b75eb59a7e78116f8a955c09ca743143385f7",
+      "size": 7432
+    },
+    {
+      "path": "reproduce/paper_runs.yaml",
+      "sha": "9c9d6cf6bce0556dbd3d4869683f352822608ea2",
+      "size": 31558
+    },
+    {
+      "path": "reproduce/reproduce.py",
+      "sha": "b6ca806501b5d56f81a804070ead4d72ea26b2d1",
+      "size": 1344
+    },
+    {
+      "path": "script_robosuite_demos/README.md",
+      "sha": "b8a30880aeb20637880acbd0f6ab539b14200835",
+      "size": 24
+    },
+    {
+      "path": "script_robosuite_demos/gen_robosuite_format_demo.py",
+      "sha": "cdb433fed670b6293d59543ceb08cb5058b002c7",
+      "size": 16137
+    },
+    {
+      "path": "script_robosuite_demos/interactive_replay.py",
+      "sha": "0a63da19a476817caeb7119c9929b9927504e0ad",
+      "size": 4465
+    },
+    {
+      "path": "script_robosuite_demos/mp_can_abs.py",
+      "sha": "61d6b57830bfd72e1c5ac47c8e8c199600fe1b54",
+      "size": 11026
+    },
+    {
+      "path": "script_robosuite_demos/mp_lift_abs.py",
+      "sha": "92e26d58999d9b399176abd54e35567ca7a085b5",
+      "size": 10184
+    },
+    {
+      "path": "script_robosuite_demos/mp_square_abs.py",
+      "sha": "2951eeba33afcfd23142c2a8942a8f303a25c2b8",
+      "size": 16774
+    },
+    {
+      "path": "script_robosuite_demos/play_dataset.py",
+      "sha": "37c20b37287754496a4340ab4e3212b6f76da5c0",
+      "size": 5743
+    },
+    {
+      "path": "setup.sh",
+      "sha": "c2f88c4ce7fe0b6d47f8a289df66500f667e98de",
+      "size": 1221
+    }
+  ]
+}

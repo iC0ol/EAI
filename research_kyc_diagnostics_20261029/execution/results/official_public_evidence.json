@@ -1,0 +1,46 @@
+{
+  "queried_utc": "2026-10-29 04:06:47 UTC",
+  "releases_count": 0,
+  "issue_list": [
+    {
+      "number": 5,
+      "title": "Integrate pixi",
+      "url": "https://github.com/ripl/CamPoseOpensource/pull/5"
+    },
+    {
+      "number": 4,
+      "title": "Question about excluding the wrist camera",
+      "url": "https://github.com/ripl/CamPoseOpensource/issues/4"
+    },
+    {
+      "number": 3,
+      "title": "How many RGB viewpoints do you use in a sample for training?",
+      "url": "https://github.com/ripl/CamPoseOpensource/issues/3"
+    },
+    {
+      "number": 2,
+      "title": "Some problems with reproducing Table I / your results",
+      "url": "https://github.com/ripl/CamPoseOpensource/issues/2"
+    },
+    {
+      "number": 1,
+      "title": "Problem reproducing the paper: Gets stuck in a loop Render of \"fault detected; rebuilding context\"",
+      "url": "https://github.com/ripl/CamPoseOpensource/issues/1"
+    }
+  ],
+  "framebuffer": {
+    "source": "https://github.com/ripl/CamPoseOpensource/issues/1#issuecomment-3533166490",
+    "interpretation": "Author states incomplete framebuffers can corrupt images and the training check resets the environment; local historic corruption UNKNOWN."
+  },
+  "test_cameras": {
+    "source": "https://github.com/ripl/CamPoseOpensource/issues/2#issuecomment-3598554639",
+    "interpretation": "Author identifies test_cameras as reported paper results."
+  },
+  "pr5": {
+    "source": "https://github.com/ripl/CamPoseOpensource/pull/5",
+    "state": "open",
+    "merged": false,
+    "compatibility": "MuJoCo >=3.3.0,<3.4; local3.3.0 satisfies it"
+  },
+  "checkpoint_search": "No matching trained LiftRand/eef_delta/ACT checkpoint link found in inspected official README, release list, issue list/comments. Not a universal absence claim."
+}

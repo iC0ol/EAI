@@ -1,0 +1,15 @@
+{
+  "pid": 2893804,
+  "ppid": 2893803,
+  "start_ticks": 260113858,
+  "rss_bytes": 20709376,
+  "state": "R",
+  "sid": 2893804,
+  "pgid": 2893804,
+  "command": [
+    "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/scripts/supervise.py",
+    "--stage",
+    "stage1"
+  ],
+  "utc": "2026-10-29T04:12:58.568118+00:00"
+}

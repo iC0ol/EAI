@@ -1,0 +1,348 @@
+{
+  "utc": "2026-10-29T04:19:55.020283+00:00",
+  "analysis_scope": "saved arrays only; no new render/model/simulation",
+  "state": "CURRENT_RENDER_PREREQUISITE_FAILED",
+  "rows": [
+    {
+      "sample": 0,
+      "order": [
+        "Dataset/id",
+        "official Evaluator helper",
+        "custom helper"
+      ],
+      "pairs": {
+        "0_vs_1": {
+          "different_pixels": 65532,
+          "pixel_count": 65536,
+          "meanabs_uint8": 84.27658589680989,
+          "maxabs_uint8": 255.0,
+          "medianabs_uint8": 71.0,
+          "flipud_meanabs_uint8": 86.22565205891927,
+          "a_rgb_sha256": "7437ff82ec1f531a6d26b8a00f29b2ea1e3d3efdbf468b74fb99fd21473a279c",
+          "b_rgb_sha256": "e2737ed193b37721c6a6fc842b5aeb3d290ec1b8c2666f39cbd6eb19148c65d9"
+        },
+        "0_vs_2": {
+          "different_pixels": 65534,
+          "pixel_count": 65536,
+          "meanabs_uint8": 84.27707926432292,
+          "maxabs_uint8": 255.0,
+          "medianabs_uint8": 71.0,
+          "flipud_meanabs_uint8": 86.22536214192708,
+          "a_rgb_sha256": "7437ff82ec1f531a6d26b8a00f29b2ea1e3d3efdbf468b74fb99fd21473a279c",
+          "b_rgb_sha256": "48da75bb842ea4786fc80505004660706365b7f662e96a3275b4232bd8ab74db"
+        },
+        "1_vs_2": {
+          "different_pixels": 8,
+          "pixel_count": 65536,
+          "meanabs_uint8": 0.007105509440104167,
+          "maxabs_uint8": 184.0,
+          "medianabs_uint8": 0.0,
+          "flipud_meanabs_uint8": 22.177393595377605,
+          "a_rgb_sha256": "e2737ed193b37721c6a6fc842b5aeb3d290ec1b8c2666f39cbd6eb19148c65d9",
+          "b_rgb_sha256": "48da75bb842ea4786fc80505004660706365b7f662e96a3275b4232bd8ab74db"
+        }
+      },
+      "visible_scene_integrity": "FAILED_ON_VISUAL_INSPECTION",
+      "source_npz_sha256": "f43b1088b763bf2e6e503d36a85655846c63425230dce9fcbd35d6b0893fc1e3"
+    },
+    {
+      "sample": 1,
+      "order": [
+        "Dataset/id",
+        "official Evaluator helper",
+        "custom helper"
+      ],
+      "pairs": {
+        "0_vs_1": {
+          "different_pixels": 65530,
+          "pixel_count": 65536,
+          "meanabs_uint8": 81.74682108561198,
+          "maxabs_uint8": 254.0,
+          "medianabs_uint8": 73.0,
+          "flipud_meanabs_uint8": 81.75061543782552,
+          "a_rgb_sha256": "be3849d9afea460a637689dea26d6ec7530b8805d70205bbef8d57dc7abb6395",
+          "b_rgb_sha256": "4e18f41ba41a048b3e606b3b4894e810656c7eabe53deef2a6444f45134d3433"
+        },
+        "0_vs_2": {
+          "different_pixels": 65517,
+          "pixel_count": 65536,
+          "meanabs_uint8": 106.06175740559895,
+          "maxabs_uint8": 255.0,
+          "medianabs_uint8": 104.0,
+          "flipud_meanabs_uint8": 106.0638936360677,
+          "a_rgb_sha256": "be3849d9afea460a637689dea26d6ec7530b8805d70205bbef8d57dc7abb6395",
+          "b_rgb_sha256": "652a2634fe79a2a508972e82a8909260fd4050f7535ab3dd021ebadf7dba8dd7"
+        },
+        "1_vs_2": {
+          "different_pixels": 65532,
+          "pixel_count": 65536,
+          "meanabs_uint8": 133.71289571126303,
+          "maxabs_uint8": 255.0,
+          "medianabs_uint8": 135.0,
+          "flipud_meanabs_uint8": 133.71448262532553,
+          "a_rgb_sha256": "4e18f41ba41a048b3e606b3b4894e810656c7eabe53deef2a6444f45134d3433",
+          "b_rgb_sha256": "652a2634fe79a2a508972e82a8909260fd4050f7535ab3dd021ebadf7dba8dd7"
+        }
+      },
+      "visible_scene_integrity": "NOT_VISUALLY_INSPECTED; RGB_DISAGREEMENT_RECORDED",
+      "source_npz_sha256": "cd582e735b8471367f0171146f51403aa46cb3c3ba15c81c91f1b77400d9c141"
+    },
+    {
+      "sample": 2,
+      "order": [
+        "Dataset/id",
+        "official Evaluator helper",
+        "custom helper"
+      ],
+      "pairs": {
+        "0_vs_1": {
+          "different_pixels": 9,
+          "pixel_count": 65536,
+          "meanabs_uint8": 0.01409912109375,
+          "maxabs_uint8": 240.0,
+          "medianabs_uint8": 0.0,
+          "flipud_meanabs_uint8": 77.13589477539062,
+          "a_rgb_sha256": "cc4bcb943c8175b5f73f7aec99ab396c89fd2fc7092aed2520e504f6441a07d3",
+          "b_rgb_sha256": "07162adb1d3c275305c89fa8795467d0be8c73a1e6236f6636376ff133cec08b"
+        },
+        "0_vs_2": {
+          "different_pixels": 7,
+          "pixel_count": 65536,
+          "meanabs_uint8": 0.0091552734375,
+          "maxabs_uint8": 215.0,
+          "medianabs_uint8": 0.0,
+          "flipud_meanabs_uint8": 77.13462320963542,
+          "a_rgb_sha256": "cc4bcb943c8175b5f73f7aec99ab396c89fd2fc7092aed2520e504f6441a07d3",
+          "b_rgb_sha256": "0db0cbb8d801e953927cc2a8dbaf52787a47a92561c4cc9a6577353a51641a7e"
+        },
+        "1_vs_2": {
+          "different_pixels": 8,
+          "pixel_count": 65536,
+          "meanabs_uint8": 0.009206136067708334,
+          "maxabs_uint8": 240.0,
+          "medianabs_uint8": 0.0,
+          "flipud_meanabs_uint8": 77.13260904947917,
+          "a_rgb_sha256": "07162adb1d3c275305c89fa8795467d0be8c73a1e6236f6636376ff133cec08b",
+          "b_rgb_sha256": "0db0cbb8d801e953927cc2a8dbaf52787a47a92561c4cc9a6577353a51641a7e"
+        }
+      },
+      "visible_scene_integrity": "NOT_VISUALLY_INSPECTED; RGB_DISAGREEMENT_RECORDED",
+      "source_npz_sha256": "3e0cbe15d9239964d501ab2b35470cacd92a370333fcaff72c6a79acc933c30c"
+    },
+    {
+      "sample": 3,
+      "order": [
+        "Dataset/id",
+        "official Evaluator helper",
+        "custom helper"
+      ],
+      "pairs": {
+        "0_vs_1": {
+          "different_pixels": 65532,
+          "pixel_count": 65536,
+          "meanabs_uint8": 77.13437398274739,
+          "maxabs_uint8": 252.0,
+          "medianabs_uint8": 69.0,
+          "flipud_meanabs_uint8": 0.015019734700520834,
+          "a_rgb_sha256": "57c1009c400d9bfed49f66b1496a72e5442baaf054ad0e566c5ad19fa97a07a1",
+          "b_rgb_sha256": "ac6954b1da8f3f287e26f72527c0c2524e26a2db5ab709fa1f60eb5602c0aeab"
+        },
+        "0_vs_2": {
+          "different_pixels": 9,
+          "pixel_count": 65536,
+          "meanabs_uint8": 0.01409912109375,
+          "maxabs_uint8": 240.0,
+          "medianabs_uint8": 0.0,
+          "flipud_meanabs_uint8": 77.13329060872395,
+          "a_rgb_sha256": "57c1009c400d9bfed49f66b1496a72e5442baaf054ad0e566c5ad19fa97a07a1",
+          "b_rgb_sha256": "9385dd55072283b3791b9a70856c03c717b2ce27ba7b799a3727200936ad9937"
+        },
+        "1_vs_2": {
+          "different_pixels": 65533,
+          "pixel_count": 65536,
+          "meanabs_uint8": 77.13230895996094,
+          "maxabs_uint8": 252.0,
+          "medianabs_uint8": 69.0,
+          "flipud_meanabs_uint8": 0.005366007486979167,
+          "a_rgb_sha256": "ac6954b1da8f3f287e26f72527c0c2524e26a2db5ab709fa1f60eb5602c0aeab",
+          "b_rgb_sha256": "9385dd55072283b3791b9a70856c03c717b2ce27ba7b799a3727200936ad9937"
+        }
+      },
+      "visible_scene_integrity": "NOT_VISUALLY_INSPECTED; RGB_DISAGREEMENT_RECORDED",
+      "source_npz_sha256": "b0612e2c490bdce74e5b21643e3cbcb88a8cd58beb7142b69aef339a3096d218"
+    },
+    {
+      "sample": 4,
+      "order": [
+        "Dataset/id",
+        "official Evaluator helper",
+        "custom helper"
+      ],
+      "pairs": {
+        "0_vs_1": {
+          "different_pixels": 65531,
+          "pixel_count": 65536,
+          "meanabs_uint8": 77.13187662760417,
+          "maxabs_uint8": 252.0,
+          "medianabs_uint8": 69.0,
+          "flipud_meanabs_uint8": 0.008199055989583334,
+          "a_rgb_sha256": "878c69b0128085822a23c10600af9a9be630982a6feb000c6164778f874d4d29",
+          "b_rgb_sha256": "ce2fc40f3d02b036ae38837b85b720f8e5eda0d92d4b3f0566dda0c4206e56ad"
+        },
+        "0_vs_2": {
+          "different_pixels": 65525,
+          "pixel_count": 65536,
+          "meanabs_uint8": 77.1251932779948,
+          "maxabs_uint8": 252.0,
+          "medianabs_uint8": 69.0,
+          "flipud_meanabs_uint8": 0.014882405598958334,
+          "a_rgb_sha256": "878c69b0128085822a23c10600af9a9be630982a6feb000c6164778f874d4d29",
+          "b_rgb_sha256": "b2202c68870f484214e75c760a56839b311a823134292df09abbb335db765458"
+        },
+        "1_vs_2": {
+          "different_pixels": 18,
+          "pixel_count": 65536,
+          "meanabs_uint8": 0.022562662760416668,
+          "maxabs_uint8": 204.0,
+          "medianabs_uint8": 0.0,
+          "flipud_meanabs_uint8": 77.1169942220052,
+          "a_rgb_sha256": "ce2fc40f3d02b036ae38837b85b720f8e5eda0d92d4b3f0566dda0c4206e56ad",
+          "b_rgb_sha256": "b2202c68870f484214e75c760a56839b311a823134292df09abbb335db765458"
+        }
+      },
+      "visible_scene_integrity": "FAILED_ON_VISUAL_INSPECTION",
+      "source_npz_sha256": "15d1e1aa802d53b95a2c146128b2307c3938acc68b6370431d7703019c38bd40"
+    },
+    {
+      "sample": 5,
+      "order": [
+        "Dataset/id",
+        "official Evaluator helper",
+        "custom helper"
+      ],
+      "pairs": {
+        "0_vs_1": {
+          "different_pixels": 7,
+          "pixel_count": 65536,
+          "meanabs_uint8": 0.009938557942708334,
+          "maxabs_uint8": 219.0,
+          "medianabs_uint8": 0.0,
+          "flipud_meanabs_uint8": 77.1388448079427,
+          "a_rgb_sha256": "b61438be80e2ced239aee3c18dd0c49daf70be1972da737f748735fd43cc393f",
+          "b_rgb_sha256": "08365124f1abf1b5118b0a84686d3f8c198ae396e3b15f1da1f3c7bbec20d156"
+        },
+        "0_vs_2": {
+          "different_pixels": 8,
+          "pixel_count": 65536,
+          "meanabs_uint8": 0.0111236572265625,
+          "maxabs_uint8": 219.0,
+          "medianabs_uint8": 0.0,
+          "flipud_meanabs_uint8": 77.14046732584636,
+          "a_rgb_sha256": "b61438be80e2ced239aee3c18dd0c49daf70be1972da737f748735fd43cc393f",
+          "b_rgb_sha256": "ce2fc40f3d02b036ae38837b85b720f8e5eda0d92d4b3f0566dda0c4206e56ad"
+        },
+        "1_vs_2": {
+          "different_pixels": 5,
+          "pixel_count": 65536,
+          "meanabs_uint8": 0.004552205403645833,
+          "maxabs_uint8": 166.0,
+          "medianabs_uint8": 0.0,
+          "flipud_meanabs_uint8": 77.13793436686198,
+          "a_rgb_sha256": "08365124f1abf1b5118b0a84686d3f8c198ae396e3b15f1da1f3c7bbec20d156",
+          "b_rgb_sha256": "ce2fc40f3d02b036ae38837b85b720f8e5eda0d92d4b3f0566dda0c4206e56ad"
+        }
+      },
+      "visible_scene_integrity": "NOT_VISUALLY_INSPECTED; RGB_DISAGREEMENT_RECORDED",
+      "source_npz_sha256": "f76e50c9cfed6b566c456e7c9b71a97b6b9cf1f74cb2a4543854345852602adf"
+    },
+    {
+      "sample": 6,
+      "order": [
+        "Dataset/id",
+        "official Evaluator helper",
+        "custom helper"
+      ],
+      "pairs": {
+        "0_vs_1": {
+          "different_pixels": 7,
+          "pixel_count": 65536,
+          "meanabs_uint8": 0.010548909505208334,
+          "maxabs_uint8": 240.0,
+          "medianabs_uint8": 0.0,
+          "flipud_meanabs_uint8": 77.12754313151042,
+          "a_rgb_sha256": "426358a0822e6cbc2fc10f06a3395174974de0c0acfa89b52a495747e589094a",
+          "b_rgb_sha256": "ac3fb32da5bc65410d1e9d0ceff3e38b9dd896a8bb576ed1f7b4430120ca10e0"
+        },
+        "0_vs_2": {
+          "different_pixels": 9,
+          "pixel_count": 65536,
+          "meanabs_uint8": 0.011439005533854166,
+          "maxabs_uint8": 219.0,
+          "medianabs_uint8": 0.0,
+          "flipud_meanabs_uint8": 77.12858581542969,
+          "a_rgb_sha256": "426358a0822e6cbc2fc10f06a3395174974de0c0acfa89b52a495747e589094a",
+          "b_rgb_sha256": "eb4dda9fffbd9981e59b3c805568cc5dd1d0b77d2e4f383b1277ba746ed15199"
+        },
+        "1_vs_2": {
+          "different_pixels": 14,
+          "pixel_count": 65536,
+          "meanabs_uint8": 0.020960489908854168,
+          "maxabs_uint8": 240.0,
+          "medianabs_uint8": 0.0,
+          "flipud_meanabs_uint8": 77.12228902180989,
+          "a_rgb_sha256": "ac3fb32da5bc65410d1e9d0ceff3e38b9dd896a8bb576ed1f7b4430120ca10e0",
+          "b_rgb_sha256": "eb4dda9fffbd9981e59b3c805568cc5dd1d0b77d2e4f383b1277ba746ed15199"
+        }
+      },
+      "visible_scene_integrity": "NOT_VISUALLY_INSPECTED; RGB_DISAGREEMENT_RECORDED",
+      "source_npz_sha256": "c903c35d4326c40dd61952a4f7ebe1a63e494301c5e1facbac095b21d3cee6f5"
+    },
+    {
+      "sample": 7,
+      "order": [
+        "Dataset/id",
+        "official Evaluator helper",
+        "custom helper"
+      ],
+      "pairs": {
+        "0_vs_1": {
+          "different_pixels": 65298,
+          "pixel_count": 65536,
+          "meanabs_uint8": 52.30215962727865,
+          "maxabs_uint8": 255.0,
+          "medianabs_uint8": 42.0,
+          "flipud_meanabs_uint8": 77.13942972819011,
+          "a_rgb_sha256": "8b6891f375c18e51b031041c427752c2ff02e8834335248549d7d6fece64e5a0",
+          "b_rgb_sha256": "3fcd367d12d78899e7aebabfb4e2a073261146fc0ab6b1636954e2b83d42ffe6"
+        },
+        "0_vs_2": {
+          "different_pixels": 16,
+          "pixel_count": 65536,
+          "meanabs_uint8": 0.020284016927083332,
+          "maxabs_uint8": 240.0,
+          "medianabs_uint8": 0.0,
+          "flipud_meanabs_uint8": 77.13651529947917,
+          "a_rgb_sha256": "8b6891f375c18e51b031041c427752c2ff02e8834335248549d7d6fece64e5a0",
+          "b_rgb_sha256": "a552459d473e1bb82ce8c2e0718da6d4c2b0df11a8b0d9cc974260a384e68d00"
+        },
+        "1_vs_2": {
+          "different_pixels": 65307,
+          "pixel_count": 65536,
+          "meanabs_uint8": 52.31132507324219,
+          "maxabs_uint8": 255.0,
+          "medianabs_uint8": 42.0,
+          "flipud_meanabs_uint8": 77.13241068522136,
+          "a_rgb_sha256": "3fcd367d12d78899e7aebabfb4e2a073261146fc0ab6b1636954e2b83d42ffe6",
+          "b_rgb_sha256": "a552459d473e1bb82ce8c2e0718da6d4c2b0df11a8b0d9cc974260a384e68d00"
+        }
+      },
+      "visible_scene_integrity": "NOT_VISUALLY_INSPECTED; RGB_DISAGREEMENT_RECORDED",
+      "source_npz_sha256": "f2538c39ad01c6ae2f3e0fe187f39f45e276fa6284b125d0570516c42037885d"
+    }
+  ],
+  "visual_observation": "severe high-frequency colored pixel patterns instead of a recognizable Lift scene in inspected triptychs; raw arrays preserved",
+  "entry_numerical_test_limitation": "fresh renders did not satisfy common-raw-image prerequisite; these differences do not isolate preprocessing. No matched-common-RGB policy comparison was run.",
+  "historical_boundary": "old saved expert/dev PNGs visually recognizable; no historic training batch RGB/framebuffer logs. Present corruption does not establish historic training corruption.",
+  "root_cause_boundary": "No GL framebuffer status, GL errors or context lifecycle telemetry captured during this short attempt. Do not identify a framebuffer leak, driver issue, historical cause, or specific repair as proven.",
+  "all_next_running_work": "STOPPED; no rerender, inference, rollout, installation or fix attempted"
+}

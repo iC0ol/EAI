@@ -1,0 +1,91 @@
+{
+  "created_utc": "2026-10-29T04:04:02.240268+00:00",
+  "protocol_sha256": "ae04cd358b7e7faa24110dbb447973e518aa739830e541e6bb5dab5c0a7c97ea",
+  "dispatch": {
+    "status": "DISPATCHED",
+    "required_model": "gpt-6.1-sol",
+    "required_reasoning_effort": "max",
+    "new_executor_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+    "old_completed_thread_id": "01a1838c-a3b2-7f71-a94d-5b900219f381",
+    "gate": "Codex independent review + real DeepSeek independent review + at least two substantive cross discussions + DeepSeek scientific approval of the concrete execution task",
+    "host_id": "local",
+    "title": "KYC 冻结基线有限排障与验收回传",
+    "dispatched_local": "2026-10-29T11:59:36+08:00",
+    "deadline_local": "2026-10-29T19:59:36+08:00",
+    "protocol": "01_有限排障执行任务书.md",
+    "protocol_sha256": "ae04cd358b7e7faa24110dbb447973e518aa739830e541e6bb5dab5c0a7c97ea",
+    "model_requested": "gpt-6.1-sol",
+    "reasoning_requested": "max",
+    "git_index_owner": "executor until completion; parent no commits while executor active",
+    "executor_next_check_local": "2026-10-29T16:49:57+08:00",
+    "completion_callback_authorized_by": "Human attachment 00_原始任务书.md sections1,8,9 plus main human delegation messages"
+  },
+  "runtime": "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+  "sources": {
+    "checkpoints/C_latest.pt": {
+      "bytes": 845671886,
+      "sha256": "c904a97002571d96e3ee6b66057d09162cbdcb5e926cb6ea0b660ca1390bce13"
+    },
+    "assets/liftrand_eef_delta.hdf5": {
+      "bytes": 46832160,
+      "sha256": "fc89e2a46624b877cd35ae383df9ad09a84b7881c655bc114812164d6ff45377"
+    },
+    "manifests/C_config.json": {
+      "bytes": 1141,
+      "sha256": "f4909f0f8376f6e48d4c6bb870ac46173d66cd9c13002e6709331f0f1c30b49a"
+    },
+    "manifests/dataset_stats.json": {
+      "bytes": 814,
+      "sha256": "5e15bb9977efe453fd33617b377d452284b9b2f4d2659ca58bd97073819f601f"
+    },
+    "manifests/frozen_roots.json": {
+      "bytes": 179536,
+      "sha256": "6a8c441bd3dc6e78c5f3f99e3f606d9e70f961404ed0385955151bab36df8729"
+    },
+    "cache/torch/hub/checkpoints/resnet18-f37072fd.pth": {
+      "bytes": 46830571,
+      "sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec"
+    }
+  },
+  "old_file_baseline_sha256": "e48b4196cd019bf073ff092a14f248ef326535ada835ef98f6ca31d56ce63b60",
+  "sample_definition": {
+    "demos": [
+      0,
+      50,
+      100,
+      150
+    ],
+    "time_order": [
+      "t=0 for four demos",
+      "floor((L-1)/2) for four demos"
+    ],
+    "camera_index": "demo_id+1",
+    "seed1": "20261029+j",
+    "seed2": "20262029+j for j<4"
+  },
+  "fixed_calls": {
+    "official_prior": 8,
+    "custom_prior": 8,
+    "official_repeats_samples": [
+      0,
+      1
+    ],
+    "custom_repeats_samples": [
+      2,
+      3
+    ],
+    "posterior_first_seed": 8,
+    "posterior_second_seed": 4
+  },
+  "crop_check": {
+    "top": 11,
+    "left": 17,
+    "size": 224,
+    "output": 256,
+    "interpolation": "nearest; joint 9 channels; tensor-only"
+  },
+  "budget_sha256": "77039fe82cd789f31df49d627361aba96bef0663839062cff5f41a6dc759e13d",
+  "root_plan_sha256": "431b852e4aed785f72cbdc3fd8b59aefd981328c37f2098af5e8cea341a35416",
+  "no_training": true,
+  "source_baseline_file_count": 6615
+}
