@@ -1,0 +1,8 @@
+{
+  "state": "DISPATCH_ACCEPTED",
+  "intent_id": "25f5b849-7aea-4142-8623-2c6ca0fc4ed1",
+  "started_local": "2026-11-02T14:25:10.149690+08:00",
+  "protocol_sha256": "0b39318295a299d9fc55327af7b24925b58036563819368154e39911f235fd8e",
+  "thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+  "accepted_local": "2026-11-02T14:25:11.315665+08:00"
+}

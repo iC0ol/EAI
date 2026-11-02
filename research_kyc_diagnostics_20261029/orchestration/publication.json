@@ -56,5 +56,11 @@
     "manifest_vs_commit_sha_mismatches": [],
     "scope": "completed lifecycle results, independent parent review, DeepSeek21/22, approved controlled protocol and unsent dispatch_ready",
     "controlled_execution": "NOT_DISPATCHED_WAITING_RESET"
+  },
+  "pre_dispatch_remote_recheck": {
+    "checked_local": "2026-11-02T14:26:54.547734+08:00",
+    "head": "a723525bf4e774b001c04bcc5d1d8050386b8672",
+    "method": "git ls-remote",
+    "prior_transient_TLS_failure": "resolved by fresh successful read; no history rewrite"
   }
 }

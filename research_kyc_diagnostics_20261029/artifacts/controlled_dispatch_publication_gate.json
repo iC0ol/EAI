@@ -1,0 +1,53 @@
+{
+  "checked_utc": "2026-11-02T06:27:28.001092+00:00",
+  "files": [
+    {
+      "path": "research_kyc_diagnostics_20261029/AGENTS.md",
+      "bytes": 1850,
+      "sha256": "ca2af8f000b4df315a5edcabd36cafb1828cb9d3214e67bfb3cc818d1c6f4c3b"
+    },
+    {
+      "path": "research_kyc_diagnostics_20261029/STATUS.md",
+      "bytes": 1911,
+      "sha256": "217759d88b19291939eca52fe2db184b1eeeb5b72abf9d951590478a4920f762"
+    },
+    {
+      "path": "research_kyc_diagnostics_20261029/02_联合排障报告.md",
+      "bytes": 19621,
+      "sha256": "155b7e111bbb65611cd0126ce06093e20ba446d8099010bfef66c1ed805d605a"
+    },
+    {
+      "path": "research_kyc_diagnostics_20261029/orchestration/clocks.json",
+      "bytes": 4315,
+      "sha256": "3c58afc8afee0426562927ceca47892d015df074b271bef13d9405bbcf50d0f6"
+    },
+    {
+      "path": "research_kyc_diagnostics_20261029/orchestration/publication.json",
+      "bytes": 3323,
+      "sha256": "8168345e5deb9c01b252cf43475f0ac4187d165cb98145f6d5591a57efad6b22"
+    },
+    {
+      "path": "research_kyc_diagnostics_20261029/render_controlled/README.md",
+      "bytes": 625,
+      "sha256": "d7cdae95df50213760c9cd6a471e6839a5cc0f88a0deda68cfca32a9466dcfc4"
+    },
+    {
+      "path": "research_kyc_diagnostics_20261029/render_controlled/dispatch.json",
+      "bytes": 879,
+      "sha256": "fc1a5acd0c1c4792d4fd15be65376edf6b21574e2aa964d7832d7d403fdba59c"
+    },
+    {
+      "path": "research_kyc_diagnostics_20261029/render_controlled/dispatch_intent.json",
+      "bytes": 345,
+      "sha256": "a1a04ab4e60bf8430b3aede5b63c26e94f65d644d24f84b072e90c32de5db1ab"
+    },
+    {
+      "path": "research_kyc_diagnostics_20261029/render_controlled/dispatch_receipt.json",
+      "bytes": 149,
+      "sha256": "5cfecf752da1e81c221007f5c7cd97768004bca817d78d992df9c89a0987efb9"
+    }
+  ],
+  "credential_pattern_hits": [],
+  "active_worker_files_excluded": true,
+  "controlled_result": "NOT_AVAILABLE"
+}
