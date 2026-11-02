@@ -1,0 +1,698 @@
+{
+  "utc": "2026-11-02T06:54:00.356093+00:00",
+  "verdict": "LOCAL_CONTROLLED_PASS_PENDING_REVIEW",
+  "passed": true,
+  "check_count": 85,
+  "failed_checks": [],
+  "boundary_comparisons": 20,
+  "frames": [
+    {
+      "mode": "baseline",
+      "entry": "before",
+      "boundaries": {
+        "raw_to_flip_input": true,
+        "flip_input_to_output": true,
+        "flip_output_to_tensor": true,
+        "tensor_to_npz": true,
+        "npz_to_png": true
+      },
+      "pixel_sha256": "688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37",
+      "raw_sha256": "823f7b1764e5bb38ac7d4c8775f8076ebffb894b337e63a2a23f89bf4653ef86",
+      "normal_sentinel_equal": true,
+      "GL_read_errors_clear": true,
+      "read_current_contexts": [
+        "w1_ctx2",
+        "w1_ctx2",
+        "w1_ctx2",
+        "w1_ctx2"
+      ],
+      "sentinel_165_fraction": 0.0012969970703125,
+      "raw_165_fraction": 0.0012969970703125
+    },
+    {
+      "mode": "baseline",
+      "entry": "after",
+      "boundaries": {
+        "raw_to_flip_input": true,
+        "flip_input_to_output": true,
+        "flip_output_to_tensor": true,
+        "tensor_to_npz": true,
+        "npz_to_png": true
+      },
+      "pixel_sha256": "b28bedaf38058a748bdb0246287a5304151de9af56b50ecf4775639bbe61cb4d",
+      "raw_sha256": "89acfd6f04f4a5e71f4a60c9a5a555789dd93c06bad8672775524aeba121e7d1",
+      "normal_sentinel_equal": false,
+      "GL_read_errors_clear": false,
+      "read_current_contexts": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "sentinel_165_fraction": 1.0,
+      "raw_165_fraction": 0.0012969970703125
+    },
+    {
+      "mode": "fix",
+      "entry": "before",
+      "boundaries": {
+        "raw_to_flip_input": true,
+        "flip_input_to_output": true,
+        "flip_output_to_tensor": true,
+        "tensor_to_npz": true,
+        "npz_to_png": true
+      },
+      "pixel_sha256": "688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37",
+      "raw_sha256": "823f7b1764e5bb38ac7d4c8775f8076ebffb894b337e63a2a23f89bf4653ef86",
+      "normal_sentinel_equal": true,
+      "GL_read_errors_clear": true,
+      "read_current_contexts": [
+        "w2_ctx2",
+        "w2_ctx2",
+        "w2_ctx2",
+        "w2_ctx2"
+      ],
+      "sentinel_165_fraction": 0.0012969970703125,
+      "raw_165_fraction": 0.0012969970703125
+    },
+    {
+      "mode": "fix",
+      "entry": "after",
+      "boundaries": {
+        "raw_to_flip_input": true,
+        "flip_input_to_output": true,
+        "flip_output_to_tensor": true,
+        "tensor_to_npz": true,
+        "npz_to_png": true
+      },
+      "pixel_sha256": "688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37",
+      "raw_sha256": "823f7b1764e5bb38ac7d4c8775f8076ebffb894b337e63a2a23f89bf4653ef86",
+      "normal_sentinel_equal": true,
+      "GL_read_errors_clear": true,
+      "read_current_contexts": [
+        "w2_ctx2",
+        "w2_ctx2",
+        "w2_ctx2",
+        "w2_ctx2"
+      ],
+      "sentinel_165_fraction": 0.0012969970703125,
+      "raw_165_fraction": 0.0012969970703125
+    }
+  ],
+  "controlled_release": {
+    "baseline": {
+      "con_before_event": 31,
+      "con_after_event": 32,
+      "damaged_namespace": "w1_ctx2",
+      "FBOs": 3,
+      "RBOs": 4,
+      "current_after": null
+    },
+    "fix": {
+      "con_before_event": 33,
+      "con_after_event": 34,
+      "released_namespace": "w2_ctx1",
+      "previous_restored_event": 47,
+      "native_restore_event": 46,
+      "original_B_valid": true
+    }
+  },
+  "checks": [
+    {
+      "name": "terminal_two_conditions",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "exact_native_counts",
+      "passed": true,
+      "evidence": {
+        "workers": 2,
+        "make_env": 2,
+        "renders": 4,
+        "readPixels": 8,
+        "ACT": 0,
+        "env_steps": 0,
+        "rollouts": 0,
+        "optimizer_updates": 0
+      }
+    },
+    {
+      "name": "GPU_time_cap",
+      "passed": true,
+      "evidence": 19.285658723209053
+    },
+    {
+      "name": "sequential_fresh_exec",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "frozen_runtime_scripts_unchanged",
+      "passed": true,
+      "evidence": {
+        "lc_common.py": true,
+        "owned_release.py": true,
+        "telemetry.py": true,
+        "supervisor.py": true,
+        "freeze.py": true,
+        "test_owned_release.py": true,
+        "worker.py": true
+      }
+    },
+    {
+      "name": "frozen_source_files_unchanged",
+      "passed": true,
+      "evidence": {
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py": true,
+        "/home/asus/EAI/research_expansion_20261029/reproduction/manifests/C_config.json": true,
+        "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/inputs/sample_00.npz": true,
+        "/home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/results/worker_1_baseline/early.png": true,
+        "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/utils/binding_utils.py": true,
+        "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/renderers/context/egl_context.py": true,
+        "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/environments/base.py": true
+      }
+    },
+    {
+      "name": "protocol_unchanged",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "CPU_mock_frozen_and_passed",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "reference_pixels",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:fixture",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:exactly_two_original_contexts",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:same_thread",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:no_fatal",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:completed_cleanup",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:exactly_once:r1",
+      "passed": true,
+      "evidence": {
+        "invocations": 2,
+        "first_entries": 1,
+        "first_completed": 1,
+        "con_free_attempts": 1,
+        "con_free_returns": 1,
+        "context_destroy_successes": 1,
+        "skipped_DONE": 1,
+        "skipped_RUNNING": 0
+      }
+    },
+    {
+      "name": "baseline:exactly_once:r2",
+      "passed": true,
+      "evidence": {
+        "invocations": 2,
+        "first_entries": 1,
+        "first_completed": 1,
+        "con_free_attempts": 1,
+        "con_free_returns": 1,
+        "context_destroy_successes": 1,
+        "skipped_DONE": 1,
+        "skipped_RUNNING": 0
+      }
+    },
+    {
+      "name": "baseline:only_DONE_duplicates",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:native_destroy_once_each",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "unique:1:CONTROLLED_RELEASE_A:controlled_A_release_enter",
+      "passed": true,
+      "evidence": [
+        29
+      ]
+    },
+    {
+      "name": "unique:1:CONTROLLED_RELEASE_A:controlled_A_release_exit",
+      "passed": true,
+      "evidence": [
+        42
+      ]
+    },
+    {
+      "name": "baseline:same_controlled_trigger",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:A_destroy_in_controlled_window",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "unique:1:CONTROLLED_RELEASE_A:baseline_before_con_free",
+      "passed": true,
+      "evidence": [
+        31
+      ]
+    },
+    {
+      "name": "unique:1:CONTROLLED_RELEASE_A:baseline_after_con_free",
+      "passed": true,
+      "evidence": [
+        32
+      ]
+    },
+    {
+      "name": "baseline:con_free_order",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:wrong_owner_not_measured",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:original_B_3FBO_4RBO_true_to_false",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:no_restore_and_B_unbound",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "unique:1:after:frame_after",
+      "passed": true,
+      "evidence": [
+        50
+      ]
+    },
+    {
+      "name": "baseline:no_after_repair_or_rebuild",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:two_normal_four_native_reads",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:before:five_boundaries",
+      "passed": true,
+      "evidence": {
+        "raw_to_flip_input": true,
+        "flip_input_to_output": true,
+        "flip_output_to_tensor": true,
+        "tensor_to_npz": true,
+        "npz_to_png": true
+      }
+    },
+    {
+      "name": "baseline:before:array_hashes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:before:state_T_preserved",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:before:health_metadata_agrees",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:before:expected_health",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:before:expected_reference",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:after:five_boundaries",
+      "passed": true,
+      "evidence": {
+        "raw_to_flip_input": true,
+        "flip_input_to_output": true,
+        "flip_output_to_tensor": true,
+        "tensor_to_npz": true,
+        "npz_to_png": true
+      }
+    },
+    {
+      "name": "baseline:after:array_hashes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:after:state_T_preserved",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:after:health_metadata_agrees",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:after:expected_health",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline:after:expected_reference",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:fixture",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:exactly_two_original_contexts",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:same_thread",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:no_fatal",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:completed_cleanup",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:exactly_once:r1",
+      "passed": true,
+      "evidence": {
+        "invocations": 2,
+        "first_entries": 1,
+        "first_completed": 1,
+        "con_free_attempts": 1,
+        "con_free_returns": 1,
+        "context_destroy_successes": 1,
+        "skipped_DONE": 1,
+        "skipped_RUNNING": 0
+      }
+    },
+    {
+      "name": "fix:exactly_once:r2",
+      "passed": true,
+      "evidence": {
+        "invocations": 2,
+        "first_entries": 1,
+        "first_completed": 1,
+        "con_free_attempts": 1,
+        "con_free_returns": 1,
+        "context_destroy_successes": 1,
+        "skipped_DONE": 1,
+        "skipped_RUNNING": 0
+      }
+    },
+    {
+      "name": "fix:only_DONE_duplicates",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:native_destroy_once_each",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "unique:2:CONTROLLED_RELEASE_A:controlled_A_release_enter",
+      "passed": true,
+      "evidence": [
+        29
+      ]
+    },
+    {
+      "name": "unique:2:CONTROLLED_RELEASE_A:controlled_A_release_exit",
+      "passed": true,
+      "evidence": [
+        52
+      ]
+    },
+    {
+      "name": "fix:same_controlled_trigger",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:A_destroy_in_controlled_window",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "unique:2:CONTROLLED_RELEASE_A:owner_bound_before_con_free",
+      "passed": true,
+      "evidence": [
+        33
+      ]
+    },
+    {
+      "name": "unique:2:CONTROLLED_RELEASE_A:owner_bound_after_con_free",
+      "passed": true,
+      "evidence": [
+        34
+      ]
+    },
+    {
+      "name": "fix:con_free_order",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "unique:2:CONTROLLED_RELEASE_A:previous_restored",
+      "passed": true,
+      "evidence": [
+        47
+      ]
+    },
+    {
+      "name": "unique:2:CONTROLLED_RELEASE_A:restore_native_return",
+      "passed": true,
+      "evidence": [
+        46
+      ]
+    },
+    {
+      "name": "fix:owner_A_objects_really_freed",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:real_live_previous_restored",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:only_owner_unbind_previous_switches",
+      "passed": true,
+      "evidence": [
+        "w2_ctx1",
+        null,
+        "w2_ctx2"
+      ]
+    },
+    {
+      "name": "unique:2:after:frame_after",
+      "passed": true,
+      "evidence": [
+        60
+      ]
+    },
+    {
+      "name": "fix:no_after_repair_or_rebuild",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:two_normal_four_native_reads",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:before:five_boundaries",
+      "passed": true,
+      "evidence": {
+        "raw_to_flip_input": true,
+        "flip_input_to_output": true,
+        "flip_output_to_tensor": true,
+        "tensor_to_npz": true,
+        "npz_to_png": true
+      }
+    },
+    {
+      "name": "fix:before:array_hashes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:before:state_T_preserved",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:before:health_metadata_agrees",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:before:expected_health",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:before:expected_reference",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:before:B_original_objects_at_readback",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:after:five_boundaries",
+      "passed": true,
+      "evidence": {
+        "raw_to_flip_input": true,
+        "flip_input_to_output": true,
+        "flip_output_to_tensor": true,
+        "tensor_to_npz": true,
+        "npz_to_png": true
+      }
+    },
+    {
+      "name": "fix:after:array_hashes",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:after:state_T_preserved",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:after:health_metadata_agrees",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:after:expected_health",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:after:expected_reference",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "fix:after:B_original_objects_at_readback",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "same_state_T_XML_all_frames",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "identical_upstream_destructor",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "baseline_gate_recorded_before_fix",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "name": "sampled_resource_limits",
+      "passed": true,
+      "evidence": {
+        "rss": 1346560000,
+        "vram": 0,
+        "device_vram_bytes": 991952896,
+        "new_disk_bytes": 7284206
+      }
+    }
+  ],
+  "counts": {
+    "workers": 2,
+    "make_env": 2,
+    "renders": 4,
+    "readPixels": 8,
+    "ACT": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "optimizer_updates": 0
+  },
+  "GPU_allocation_seconds": 19.285658723209053,
+  "sampled_resource_peaks": {
+    "rss": 1346560000,
+    "vram": 0,
+    "device_vram_bytes": 991952896,
+    "new_disk_bytes": 7284206
+  },
+  "sampled_resources_are_not_continuous_peaks": true,
+  "postprocess_source_sha256": "300b72eb18501b53d2a41f3187c91798b7dbc463c6b972524dc914433370ddc0",
+  "protocol_sha256": "0b39318295a299d9fc55327af7b24925b58036563819368154e39911f235fd8e",
+  "scope": "one fixed sample0, identical strong A/B fixture, one controlled release per condition",
+  "not_established": [
+    "natural GC occurrence/frequency",
+    "multi-view stability",
+    "long-term stability",
+    "thread safety",
+    "old checkpoint 0/32 cause"
+  ],
+  "old_0_of_32_cause": "UNKNOWN",
+  "ACT": "NOT_RUN",
+  "rollouts": "NOT_RUN",
+  "optimizer_updates": 0,
+  "parent_review_required": true
+}

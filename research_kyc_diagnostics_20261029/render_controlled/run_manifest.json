@@ -1,0 +1,103 @@
+{
+  "utc": "2026-11-02T06:46:47.204941+00:00",
+  "protocol_sha256": "0b39318295a299d9fc55327af7b24925b58036563819368154e39911f235fd8e",
+  "scripts": {
+    "lc_common.py": "8e207193d72b8ab046da02a4a7ef9c1a9a70f9eb2234ab24e18e3319de2422c8",
+    "owned_release.py": "9bf522cc295656997ffa7f9c72de02095ac799507833ca89176764f61c539cd0",
+    "telemetry.py": "563eb9352257e1c3d1d013c4bcf3e9203bb3cab8df2971cfabef138931c16931",
+    "supervisor.py": "4f83466ec962f3dd5135b042c9fe67b36190b65e4ed0a6ba90af01dad6f2a730",
+    "freeze.py": "5bb200a42b93fdb48a7f0deb7cc8e461b1341530d92e32c20c205a12f34e7943",
+    "test_owned_release.py": "fabf72730e6f7857423d1b1f992cf0bce700c089542d6e330c8b1268775b250b",
+    "worker.py": "facfb97601b1a5a8779b55c1df47b70d6e6482555f49b933fb7d843efae405bb"
+  },
+  "cpu_mock_sha256": "b31f6013e5fdfb55e6349d3ca72ccfd949ed5446cd5b0e41261eb1af65774b38",
+  "reference": {
+    "reference_path": "/home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/results/worker_1_baseline/early.png",
+    "reference_file_sha256": "47e62d09bf76073b8c4af4d0c5a37cdbb85d2d4efa46b504927b7ec8641fcab3",
+    "pixel_sha256": "688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37",
+    "shape": [
+      256,
+      256,
+      3
+    ],
+    "source": "protocol fixed reference; no new render"
+  },
+  "sources": {
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py": "c3aa5e196a9dfaaf9ce94fd307987c508570deb1d87f6f9f25686d6912b3073c",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/manifests/C_config.json": "f4909f0f8376f6e48d4c6bb870ac46173d66cd9c13002e6709331f0f1c30b49a",
+    "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/inputs/sample_00.npz": "f43b1088b763bf2e6e503d36a85655846c63425230dce9fcbd35d6b0893fc1e3",
+    "/home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/results/worker_1_baseline/early.png": "47e62d09bf76073b8c4af4d0c5a37cdbb85d2d4efa46b504927b7ec8641fcab3",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/utils/binding_utils.py": "418a67d8cb4af0ffe612a10511f6c15fe8c1f781d29941092bf964c81177e5de",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/renderers/context/egl_context.py": "72ff1e153da85b85a35ebd0350c4693d3b89ffd5e1f13ff49813b7a3ad4c51c6",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/environments/base.py": "ba6e6bc0252be8ae17972df48b26f8425a12af55339979a1ea1757b1f54c3345"
+  },
+  "sample": {
+    "sample": 0,
+    "demo_id": 0,
+    "t": 0,
+    "demo_length": 105,
+    "source_state_f32": {
+      "shape": [
+        58
+      ],
+      "dtype": "float32",
+      "min": -2.612173080444336,
+      "max": 2.921161651611328,
+      "sha256": "6b58c20f492c5c65d1e585f97dfa1206084d6187b1ab20894f041d8eb9e508c7"
+    },
+    "source_state_original_dtype": "float64",
+    "valid_chunk_steps": 30,
+    "camera_index": 1,
+    "T": [
+      [
+        0.8305230356726009,
+        -0.34794925432522517,
+        0.43492850404599553,
+        0.37806304720870987
+      ],
+      [
+        0.5569842791472376,
+        0.5188294926467981,
+        -0.6485248417313697,
+        -0.5706100505135695
+      ],
+      [
+        -0.0,
+        0.7808631595704755,
+        0.6247021098296485,
+        1.3818641093085926
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "raw_expert_chunk": {
+      "shape": [
+        30,
+        7
+      ],
+      "dtype": "float32",
+      "min": -1.0,
+      "max": 0.10193061828613281,
+      "sha256": "a45c269b3ae641b9ed35ab94734ee75765450b3a2246e2f40fa41968f63da6b0"
+    },
+    "seed1": 20261029,
+    "seed2": 20262029
+  },
+  "budget_sha256": "ac1c74bcaac96433eba76cc9f00fc25485dd513093c977c017ccc8ee5afffdd4",
+  "pre_run_sha256": "96ec20c1807442ff3fea30b58433c89e57b840f7ae227e57a3f6fa035eb016b2",
+  "fixture": "both modes strongly hold exactly retired A and active B, before reference then one explicit guarded A release under original lock, after frame",
+  "counter_scope": "all native renders/readback including implicit and failed; sentinel separately counted",
+  "commands": [
+    [
+      "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+      "-B",
+      "/home/asus/EAI/research_kyc_diagnostics_20261029/render_controlled/scripts/supervisor.py"
+    ]
+  ],
+  "git_index_owner": "main throughout",
+  "prelaunch_revision_sha256": "7a613561a658dea3ae39843655674a3c2d64f2e7c93aac2fadded9f7e8a4fda6"
+}

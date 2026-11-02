@@ -1,9 +1,10 @@
 {
   "state": "IDLE",
-  "last_completed": "20_lifecycle_final_gate",
+  "last_completed": "25_draft_resolution",
   "response_model_fields": [
     "deepseek-flash"
   ],
-  "protocol_state": "APPROVED_DISPATCHED",
-  "updated_local": "2026-11-02T09:29:10.253372+08:00"
+  "updated_local": "2026-11-02T15:18:58.185335+08:00",
+  "current_repair_verdict": "LOCAL_CONTROLLED_PASS",
+  "next_prompt_gate": "APPROVE_AS_REVIEW_DRAFT_NOT_EXECUTION"
 }

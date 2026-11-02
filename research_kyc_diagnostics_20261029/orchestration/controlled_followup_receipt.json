@@ -1,0 +1,28 @@
+{
+  "executor_snapshot": {
+    "title": "KYC 冻结基线有限排障与验收回传",
+    "status": {
+      "type": "active",
+      "activeFlags": []
+    },
+    "turns": [
+      {
+        "status": "inProgress",
+        "messages": [
+          {
+            "phase": "commentary",
+            "text": "我会先完整核对新协议、审查意见和 CPU 预检要求，再冻结代码与预算。此次只验证受控释放旧 renderer 后，活跃 B 的原有资源及像素能否保留；旧作业不重启。"
+          }
+        ]
+      }
+    ]
+  },
+  "dispatch_publication_commit": "1a5d261e523952a2fad78c3aa230745bad599e4d",
+  "remote_readback": "git ls-remote verified exact commit",
+  "main_next_check_local": "2026-11-02T19:24:36+08:00",
+  "executor_next_check_local": "2026-11-02T19:24:36+08:00",
+  "completion_callback_enabled": true,
+  "main_waiting_mode": "async; no polling or GPU waiting",
+  "controlled_results": "PENDING",
+  "recorded_local": "2026-11-02T14:28:27.085303+08:00"
+}

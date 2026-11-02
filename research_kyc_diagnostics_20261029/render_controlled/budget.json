@@ -1,0 +1,20 @@
+{
+  "utc": "2026-11-02T06:43:49.557958+00:00",
+  "workers": 2,
+  "make_env": 2,
+  "renders": 4,
+  "readPixels": 8,
+  "gpu_seconds": 180,
+  "terminate_at_gpu_seconds": 170,
+  "cpu_threads": 3,
+  "rss_bytes": 17179869184,
+  "vram_bytes": 12884901888,
+  "new_disk_bytes": 157286400,
+  "ACT": 0,
+  "env_steps": 0,
+  "rollouts": 0,
+  "optimizer_updates": 0,
+  "dispatch_epoch": 1793600710.14969,
+  "deadline_epoch": 1793629510.14969,
+  "release_margin_seconds": 10
+}

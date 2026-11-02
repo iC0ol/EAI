@@ -1,0 +1,15 @@
+# 执行前审计
+
+协议v1准确SHA及双方APPROVE保持不变。新增实现复用上一轮owned_release/telemetry/common/mock/supervisor，自有源码hash与最小diff在copied_sources.json和patches/；旧目录只读。
+
+候选纠错：raw current非零而key=None是UNKNOWN，raw=null而key非空是矛盾，两者在bind/free之前拒绝；previous必须存活且display/surface字段可恢复。capture/owner/ids前置工作移入可见错误事务，失败不尝试绑定/恢复猜测。共同one-shot guard包住首次日志及动作异常，NEW/RUNNING/DONE/ERROR不重做实质释放；第一次必须进入释放体。CPU mock覆盖实际Telemetry.capture无映射形式及前置异常，结果在cpu_mock.json，不初始化GL/CUDA/env。
+
+两worker使用同一constructor wrapper，在原renderer构造完成立即将A/B存入明确fixture强引用列表。遥测仍仅weakref；这不是自然GC复现，也不是修复特有的持有。make_env返回后验证恰好两个已登记live context、A.sim不是env.sim、B.sim是env.sim、current=B；不匹配就停，不切换来凑fixture。
+
+before同state/T/seed/lib.render+RGB转换，必须健康readback且像素SHA等于协议688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37，参考PNG文件hash单独冻结。随后两条件同一原render锁内显式A.__del__，共同guard只内部原释放/owner安全事务不同；不调用gc.collect。只允许修复事务切context，不做after前补绑定/重建。记录owner,current、A原IDs、B原IDs及存活，after恢复同state/T但不恢复context。
+
+baseline仅在B current中查B资源，A对象NOT_MEASURED_WRONG_CONTEXT；fix在A current中测A的con.free前后，在A EGL销毁后不再测A；恢复B后测B原对象。telemetry不绑定FBO/context，默认FBO0不冒充offFBO。正常readback不改np.empty，sentinel独立165原锁内另读且单计。
+
+A首个真实con.free完成、ctx A被destroy一次后移除fixture的A引用；cleanup B并释放其余fixture引用。common DONE guard保留至专用进程退出，确保晚到自然析构不回落至旧实质释放。逐renderer first/con-return/context-destroy必须各1；RUNNING重入/未预期NEW自然析构或错误即停。停在before不匹配时只做明确cleanup，不把cleanup释放当受控有效实验。
+
+supervisor独立SID/flock及terminal防重启，原始计数持久写前，worker1退出后仅在before健康、指定A释放损坏B且after像素和readback异常时启动worker2。对基线设更保守门：若after像素偶然仍等于before，即使readback异常，也不称完整受控失败，不启动fix。每worker2render/4read，总4/8；170秒终止留10秒释放，总180GPU秒含cleanup。0ACT/step/rollout/更新，3CPU/RSS16GiB/VRAM12GiB/150MiB，派发+8h不延长，Git主审独占。

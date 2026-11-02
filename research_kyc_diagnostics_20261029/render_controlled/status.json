@@ -1,0 +1,94 @@
+{
+  "utc": "2026-11-02T06:47:06.855592+00:00",
+  "state": "TERMINAL",
+  "reason": "BOTH_CONDITIONS_FINISHED",
+  "counts": {
+    "workers": 2,
+    "make_env": 2,
+    "renders": 4,
+    "readPixels": 8,
+    "ACT": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "optimizer_updates": 0
+  },
+  "gpu_allocation_seconds": 19.285658723209053,
+  "worker_processes": [
+    {
+      "worker": 1,
+      "mode": "baseline",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "-B",
+        "/home/asus/EAI/research_kyc_diagnostics_20261029/render_controlled/scripts/worker.py",
+        "--worker",
+        "1",
+        "--mode",
+        "baseline"
+      ],
+      "identity": {
+        "pid": 4178355,
+        "ppid": 4178352,
+        "start_ticks": 295596741,
+        "rss": 262144,
+        "state": "R"
+      },
+      "started_epoch": 1793602007.3526144,
+      "ended_epoch": 1793602017.3630571,
+      "exit_code": 0,
+      "gpu_allocation_seconds_cumulative": 10.010440417099744,
+      "utc": "2026-11-02T06:46:57.363061+00:00"
+    },
+    {
+      "worker": 2,
+      "mode": "fix",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "-B",
+        "/home/asus/EAI/research_kyc_diagnostics_20261029/render_controlled/scripts/worker.py",
+        "--worker",
+        "2",
+        "--mode",
+        "fix"
+      ],
+      "identity": {
+        "pid": 4178871,
+        "ppid": 4178352,
+        "start_ticks": 295597757,
+        "rss": 131072,
+        "state": "R"
+      },
+      "started_epoch": 1793602017.5176313,
+      "ended_epoch": 1793602026.7928517,
+      "exit_code": 0,
+      "gpu_allocation_seconds_cumulative": 19.285658723209053,
+      "utc": "2026-11-02T06:47:06.792855+00:00"
+    }
+  ],
+  "old_0_of_32_cause": "UNKNOWN",
+  "model_inference": "NOT_RUN",
+  "rollout": "NOT_RUN",
+  "optimizer_updates": 0,
+  "parent_review_required": true,
+  "git_index_owner": "main",
+  "execution_verdict": "LOCAL_CONTROLLED_PASS_PENDING_REVIEW",
+  "postprocess_utc": "2026-11-02T06:59:12.047916+00:00",
+  "analysis_passed": true,
+  "analysis_check_count": 85,
+  "boundary_comparisons": 20,
+  "old_evidence_checked": 295,
+  "old_evidence_unchanged": true,
+  "owned_processes_all_inactive": true,
+  "automation_id": "6-1-sol-max",
+  "automation_status": "PAUSED",
+  "callback_count": 1,
+  "callback_state": "TOOL_ACCEPTED",
+  "Git_writes_by_executor": 0,
+  "callback_receipt": "return_receipt.json",
+  "delivery_utc": "2026-11-02T07:03:32.508339+00:00",
+  "public_allowlist": "public_allowlist.txt",
+  "public_secret_scan": "public_secret_scan.json",
+  "publication_manifest": "publication_manifest.json",
+  "further_experiments_authorized": false,
+  "parent_review_state": "PENDING"
+}

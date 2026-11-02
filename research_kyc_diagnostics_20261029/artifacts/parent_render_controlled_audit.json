@@ -1,0 +1,76 @@
+{
+  "checked_utc": "2026-11-02T07:05:32.106964+00:00",
+  "new_GL_sim_model_calls": 0,
+  "verdict": "LOCAL_CONTROLLED_PASS",
+  "frames": [
+    {
+      "mode": "baseline",
+      "entry": "before",
+      "five_boundaries_exact": true,
+      "reference_equal": true,
+      "sentinel_equal_raw": true,
+      "sentinel_165_fraction": 0.0012969970703125
+    },
+    {
+      "mode": "baseline",
+      "entry": "after",
+      "five_boundaries_exact": true,
+      "reference_equal": false,
+      "sentinel_equal_raw": false,
+      "sentinel_165_fraction": 1.0
+    },
+    {
+      "mode": "fix",
+      "entry": "before",
+      "five_boundaries_exact": true,
+      "reference_equal": true,
+      "sentinel_equal_raw": true,
+      "sentinel_165_fraction": 0.0012969970703125
+    },
+    {
+      "mode": "fix",
+      "entry": "after",
+      "five_boundaries_exact": true,
+      "reference_equal": true,
+      "sentinel_equal_raw": true,
+      "sentinel_165_fraction": 0.0012969970703125
+    }
+  ],
+  "raw_array_hashes_verified": 8,
+  "boundary_comparisons": 20,
+  "state_T_XML_equal": true,
+  "baseline_loss_window": [
+    31,
+    32
+  ],
+  "baseline_B_resources_lost": [
+    "offFBO",
+    "offFBO_r",
+    "shadowFBO",
+    "offColor",
+    "offColor_r",
+    "offDepthStencil",
+    "offDepthStencil_r"
+  ],
+  "fix_owner_free_window": [
+    33,
+    34
+  ],
+  "fix_native_restore_event": 46,
+  "fix_previous_restored_event": 47,
+  "fix_B_original_objects_preserved_event": 52,
+  "fix_after_equals_before": true,
+  "same_fixture_exactly_once_cleanup_verified": true,
+  "baseline_after_diff_fraction": 0.5422159830729166,
+  "baseline_after_exact_vertical_flip": false,
+  "baseline_after_memory_origin": "UNKNOWN; no valid new GL readback",
+  "old_files_checked": 295,
+  "old_changes": [],
+  "source_frozen_code_sha_match": true,
+  "gpu_seconds_from_timestamps": 19.28566312789917,
+  "reported_gpu_seconds": 19.285658723209053,
+  "processes_exited": true,
+  "unknown_nonnull_CPU_regression": "PASS: visible rejection before bind/free",
+  "scope": "fixed sample0 and controlled release fixture only",
+  "historic_0_of_32_cause": "UNKNOWN"
+}

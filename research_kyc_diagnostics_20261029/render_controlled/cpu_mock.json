@@ -1,0 +1,10 @@
+{
+  "tests": 30,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "GL_contexts_created": 0,
+  "envs_created": 0,
+  "CUDA_initialized": false,
+  "scope": "pure CPU lifecycle/error semantics; not evidence of actual GL repair"
+}

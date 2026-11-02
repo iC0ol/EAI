@@ -3,9 +3,9 @@
   "main_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
   "main_automation_id": "automation",
   "main_check_status": "ACTIVE",
-  "usage_checked_local": "2026-11-02T14:24:15+08:00",
-  "five_hour_used_percent": 2,
-  "weekly_used_percent": 16,
+  "usage_checked_local": "2026-11-02T15:17:59+08:00",
+  "five_hour_used_percent": 84,
+  "weekly_used_percent": 29,
   "account_shared_usage": true,
   "five_hour_resets_at_unix": 1793619211,
   "five_hour_resets_local": "2026-11-02T19:33:31+08:00",
@@ -16,8 +16,8 @@
   "event_trigger": "No direct rate-limit reset event subscription is exposed by the available automation tools; use timestamp scheduling.",
   "reset_credit_redemption": "NOT_REQUESTED_NOT_USED",
   "executor_automation_id": "6-1-sol-max",
-  "executor_check_status": "ACTIVE",
-  "last_main_check_local": "2026-11-02T14:26:54.547734+08:00",
+  "executor_check_status": "PAUSED",
+  "last_main_check_local": "2026-11-02T15:18:58.185335+08:00",
   "checks": [
     {
       "local": "2026-10-29T11:38:38+08:00",
@@ -63,11 +63,17 @@
       "event": "Automatic heartbeat confirmed quota reset, controlled protocol actually dispatched once; main/child existing checks ACTIVE",
       "five_hour_used_percent": 2,
       "weekly_used_percent": 16
+    },
+    {
+      "local": "2026-11-02T15:18:58.185335+08:00",
+      "event": "controlled callback independently accepted; real DeepSeek23-25 complete; next draft not dispatched; publication remains",
+      "five_hour_used_percent": 84,
+      "weekly_used_percent": 29
     }
   ],
   "executor_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
   "executor_dispatch_local": "2026-11-02T14:25:10.149690+08:00",
-  "executor_next_check_local": "2026-11-02T19:24:36+08:00",
+  "executor_next_check_local": null,
   "executor_next_check_reason": "19:24:36 maximum-gap fallback is earlier than reset19:33:31+120s",
   "executor_five_hour_latest_local": "2026-11-02T19:25:10.149690+08:00",
   "executor_total_deadline_local": "2026-11-02T22:25:10.149690+08:00",
@@ -75,7 +81,7 @@
   "executor_scope": "render_controlled",
   "prior_execution_completed_local": "2026-10-29T12:24:39.460746+08:00",
   "prior_execution_completion_reason": "STOP_INPUT_PREREQUISITE; PARTIAL; publication FAILED_NETWORK",
-  "main_state": "CONTROLLED_DISPATCHED",
+  "main_state": "ACCEPTED_PUBLICATION_PENDING",
   "scheduling_correction": "Previous DAILY + COUNT=1 repeatedly fired daily. Existing heartbeat corrected to hourly interval 5 with minute24/second36, next intended check 14:24:36 reset+120s; then <=5h fallback, refreshed on every wake.",
   "main_schedule_implementation": "Daily fixed local times 00:24:36,04:24:36,09:24:36,14:24:36,19:24:36; max gap5h. This avoids unknown hourly DTSTART/update anchor; first planned 2026-11-02 14:24:36.",
   "main_schedule_readback_verified": true

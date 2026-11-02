@@ -1,0 +1,22 @@
+{
+  "r1": {
+    "invocations": 2,
+    "first_entries": 1,
+    "first_completed": 1,
+    "con_free_attempts": 1,
+    "con_free_returns": 1,
+    "context_destroy_successes": 1,
+    "skipped_DONE": 1,
+    "skipped_RUNNING": 0
+  },
+  "r2": {
+    "invocations": 2,
+    "first_entries": 1,
+    "first_completed": 1,
+    "con_free_attempts": 1,
+    "con_free_returns": 1,
+    "context_destroy_successes": 1,
+    "skipped_DONE": 1,
+    "skipped_RUNNING": 0
+  }
+}

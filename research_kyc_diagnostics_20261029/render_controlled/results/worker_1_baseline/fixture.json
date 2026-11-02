@@ -1,0 +1,29 @@
+{
+  "controlled_trigger_not_natural_GC": true,
+  "retired_tag": "r1",
+  "active_tag": "r2",
+  "A_context": "w1_ctx1",
+  "B_context": "w1_ctx2",
+  "A_sim_is_env_sim": false,
+  "B_sim_is_env_sim": true,
+  "B_original_ids": {
+    "offFBO": 1,
+    "offFBO_r": 2,
+    "shadowFBO": 3,
+    "offColor": 1,
+    "offColor_r": 3,
+    "offDepthStencil": 2,
+    "offDepthStencil_r": 4
+  },
+  "A_initial_ids": {
+    "offFBO": 1,
+    "offFBO_r": 2,
+    "shadowFBO": 3,
+    "offColor": 1,
+    "offColor_r": 3,
+    "offDepthStencil": 2,
+    "offDepthStencil_r": 4
+  },
+  "renderer_count": 2,
+  "context_count": 2
+}

@@ -1,0 +1,10 @@
+{
+  "workers": 2,
+  "make_env": 2,
+  "renders": 4,
+  "readPixels": 8,
+  "ACT": 0,
+  "env_steps": 0,
+  "rollouts": 0,
+  "optimizer_updates": 0
+}

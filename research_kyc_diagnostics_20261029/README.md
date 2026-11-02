@@ -1,15 +1,11 @@
-# KYC 基线失败：联合审查与有限排障
+# KYC 基线失败联合审查与当前RGB修复
 
-本轮解释冻结 KYC ACT 在准确外参开发条件下 0/32 的原因，并决定是否值得再投入。原始授权见 [任务书](00_原始任务书.md)。2026-10-29用户进一步要求定位并尝试解决新发现的RGB损坏，新增范围见 [渲染修复](render_repair/00_授权与范围.md)。不自动重训。
+2026-11-02：当前RGB局部机制已定位，受控修复通过，父审与真实DeepSeek交叉验收完成。旧准确外参0/32仍UNKNOWN，整体D / IMPLEMENTATION-LIMITED。未重训、未恢复ACT/rollout、未改旧源码。
 
-旧证据：`../research_expansion_20261029/`，GitHub 分支 `research/u-gate0-v3-overnight`，起点提交 `a03f16da9110f219be49a0994140c7617a6b45ff`。旧目录保持只读。
+- [八部分中文报告](02_联合排障报告.md)：原因、修复证据、预算、限制和投入决策。
+- [主审原件核验](artifacts/parent_render_controlled_audit.json)及[真实最终反驳](discussion/25_draft_resolution_response.md)。
+- [受控执行报告](render_controlled/FINAL_REPORT.md)及[四帧对照](render_controlled/montage.png)。执行端PENDING_REVIEW是当时回传状态，当前以[主审验收](orchestration/controlled_acceptance.json)为准。
+- [下一阶段完整提示词](03_下一阶段提示词_冻结模型诊断待批准.md)：双审通过的研究负责人审阅稿，未派发；生成任务书不等于执行授权。
+- [当前状态](STATUS.md)、[检查与额度](orchestration/clocks.json)、[公开同步](orchestration/publication.json)。
 
-分工：Codex 与真实 DeepSeek 独立审查、交叉讨论和验收；GPT-6.1-sol / max 执行双方审定的有限诊断。任务发布前先形成完整任务文本和 DeepSeek 审核记录。
-
-进度入口：[STATUS.md](STATUS.md)。额度与自动检查：[orchestration/clocks.json](orchestration/clocks.json)；派发记录：[orchestration/dispatch.json](orchestration/dispatch.json)。
-
-原有限诊断已受控结束，见 [执行报告](execution/FINAL_REPORT.md)、[Codex独立验收](notes/03_Codex执行结果独立验收.md)、[真实DeepSeek交叉验收](discussion/14_diag_acceptance_cross_response.md)。当前远端结果提交为2d42000；旧执行报告中的同步失败为当时记录，后续成功见 [发布回执](orchestration/publication.json)。原结果不覆盖，新微诊断另立协议和运行记录。
-
-所有时间以 Asia/Shanghai 明示。通过账户实时 resetsAt 安排重置后两分钟续办，最长五小时核查作为兜底；完成回传可提前唤醒主任务。主研究与执行任务使用共享账户额度。没有调用额度兑换工具。
-
-2026-11-02更新：首次绑定修复经联合验收失败，完整原件保留；[新生命周期协议v2](render_lifecycle/PROTOCOL.md)经真实DeepSeek20最终通过，已派发gpt-6.1-sol/max。主审统一发布，经修复条件得到健康图像前不恢复ACT或闭环。
+Codex负责独立研究/验收与Git，真实DeepSeek经终端Claude客户端接续会话（响应字段deepseek-flash），GPT-6.1-sol/max执行双方审定范围。09–25共17轮真实讨论。所有时间明确Asia/Shanghai；主/子检查复用原ID，未兑换重置券，公开交付后停止无任务唤醒。旧项目只读，公开限原创代码和小结果，不含凭据、完整XML、地址、raw CLI、环境或权重。

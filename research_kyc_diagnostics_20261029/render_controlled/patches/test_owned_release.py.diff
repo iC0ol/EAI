@@ -1,0 +1,91 @@
+--- /home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/scripts/test_owned_release.py
++++ scripts/test_owned_release.py
+@@ -2,7 +2,7 @@
+ from pathlib import Path
+ from types import SimpleNamespace
+ import json,ctypes,unittest
+-from owned_release import release_owned,pointer_value,FIELDS
++from owned_release import release_owned,pointer_value,FIELDS,one_shot_release
+ 
+ class NullOpaque:
+     def __bool__(self):return False
+@@ -14,7 +14,7 @@
+         self.current=current;self.alive={'owner':True,'other':True};self.resources={'owner':{1,2},'other':{1,2}}
+         self.bind_fail=bind_fail;self.restore_fail=restore_fail;self.con_fail=con_fail;self.egl_fail=egl_fail;self.kill_previous=kill_previous
+         self.log=[];self.failures=[];self.con_calls=0;self.gl_calls=0
+-    def capture(self):return {'key':self.current,'display':11,'draw':12,'read':13}
++    def capture(self):return {'key':self.current,'context':{'owner':101,'other':102,None:0}.get(self.current,103),'display':11,'draw':12,'read':13}
+     def owner(self,gl):return gl.key if gl is not None else None
+     def live(self,key):return self.alive.get(key,False)
+     def ids(self,con):return {'offFBO':1,'offFBO_r':2} if con is not None else {}
+@@ -27,7 +27,7 @@
+         if self.restore_fail:raise RuntimeError('restore failure')
+         assert s['display']==11 and s['draw']==12 and s['read']==13
+         self.current=s['key']
+-    def note(self,label):self.log.append(label)
++    def note(self,label,**kw):self.log.append(label)
+     def failure(self,*value):self.failures.append(value)
+     def con_free(self):
+         self.con_calls+=1
+@@ -126,6 +126,61 @@
+         t.ec=SimpleNamespace(EGL=SimpleNamespace(EGLDisplay=handle,EGLSurface=handle,EGLContext=handle,eglMakeCurrent=lambda *a:False))
+         t.note=lambda *a,**k:None;t.capture=lambda:{'key':None}
+         with self.assertRaises(RuntimeError):t.restore({'key':'other','display':11,'draw':0,'read':0,'context':14})
++    def test_nonzero_context_key_none_rejected_before_actions(self):
++        a=API();a.capture=lambda:{'context':999,'key':None,'display':11,'draw':0,'read':0};r=renderer(a)
++        with self.assertRaises(RuntimeError):release_owned(r,a)
++        self.assertEqual((a.con_calls,a.gl_calls),(0,0));self.assertNotIn('bind_owner',a.log);self.assertNotIn('restore',a.log);self.assertTrue(a.failures)
++    def test_actual_telemetry_capture_unregistered_context(self):
++        from telemetry import Telemetry
++        t=Telemetry.__new__(Telemetry);t.address_to_key={}
++        t.raw_capture=lambda:{'context':999,'display':11,'draw':0,'read':0}
++        a=API();a.capture=t.capture
++        self.assertEqual(a.capture()['context'],999);self.assertIsNone(a.capture()['key'])
++        with self.assertRaises(RuntimeError):release_owned(renderer(a),a)
++        self.assertEqual((a.con_calls,a.gl_calls),(0,0));self.assertNotIn('bind_owner',a.log);self.assertNotIn('restore',a.log);self.assertTrue(a.failures)
++    def test_null_context_with_nonnull_key_rejected(self):
++        a=API();a.capture=lambda:{'context':0,'key':'other'}
++        with self.assertRaises(RuntimeError):release_owned(renderer(a),a)
++        self.assertEqual((a.con_calls,a.gl_calls),(0,0));self.assertNotIn('bind_owner',a.log)
++    def test_capture_preparation_exception_visible(self):
++        a=API()
++        def bad():raise ValueError('capture failure')
++        a.capture=bad;r=renderer(a)
++        with self.assertRaises(ValueError):release_owned(r,a)
++        self.assertEqual(r._owned_release_state,'ERROR');self.assertTrue(a.failures);self.assertEqual((a.con_calls,a.gl_calls),(0,0));self.assertNotIn('bind_owner',a.log)
++    def test_owner_preparation_exception_visible(self):
++        a=API()
++        def bad(gl):raise ValueError('owner failure')
++        a.owner=bad
++        with self.assertRaises(ValueError):release_owned(renderer(a),a)
++        self.assertTrue(a.failures);self.assertNotIn('bind_owner',a.log);self.assertNotIn('restore',a.log)
++    def test_ids_preparation_exception_visible(self):
++        a=API()
++        def bad(con):raise ValueError('ids failure')
++        a.ids=bad
++        with self.assertRaises(ValueError):release_owned(renderer(a),a)
++        self.assertTrue(a.failures);self.assertEqual((a.con_calls,a.gl_calls),(0,0));self.assertNotIn('bind_owner',a.log)
++    def test_common_one_shot_first_and_duplicate(self):
++        a=API();r=renderer(a);calls=[]
++        self.assertTrue(one_shot_release(r,lambda obj:calls.append('first'),a))
++        self.assertFalse(one_shot_release(r,lambda obj:calls.append('duplicate'),a));self.assertEqual(calls,['first'])
++    def test_common_one_shot_reentrant(self):
++        a=API();r=renderer(a);calls=[]
++        def action(obj):
++            calls.append('first');self.assertFalse(one_shot_release(obj,lambda o:calls.append('wrong'),a))
++        self.assertTrue(one_shot_release(r,action,a));self.assertEqual(calls,['first'])
++    def test_common_one_shot_failure_cannot_be_retried(self):
++        a=API();r=renderer(a);calls=[]
++        def bad(obj):calls.append('first');raise RuntimeError('fail')
++        with self.assertRaises(RuntimeError):one_shot_release(r,bad,a)
++        with self.assertRaises(RuntimeError):one_shot_release(r,lambda obj:calls.append('retry'),a)
++        self.assertEqual(calls,['first']);self.assertTrue(a.failures)
++    def test_common_one_shot_front_logging_exception_visible(self):
++        a=API();r=renderer(a);calls=[]
++        def bad(*args,**kw):raise ValueError('front capture/log failure')
++        a.note=bad
++        with self.assertRaises(ValueError):one_shot_release(r,lambda obj:calls.append('must not execute'),a)
++        self.assertEqual(calls,[]);self.assertTrue(a.failures);self.assertEqual(r._controlled_release_state,'ERROR')
+ 
+ if __name__=='__main__':
+     suite=unittest.defaultTestLoader.loadTestsFromTestCase(Tests);result=unittest.TextTestRunner(verbosity=1).run(suite)

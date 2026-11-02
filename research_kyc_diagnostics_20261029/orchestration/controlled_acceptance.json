@@ -1,0 +1,21 @@
+{
+  "accepted_local": "2026-11-02T15:18:58.185335+08:00",
+  "scope": "render_controlled",
+  "verdict": "LOCAL_CONTROLLED_PASS",
+  "parent_audit": "../artifacts/parent_render_controlled_audit.json",
+  "independent_parent_note": "../notes/06_Codex受控修复独立验收.md",
+  "deepseek_rounds": [
+    23,
+    24,
+    25
+  ],
+  "protocol_sha256": "0b39318295a299d9fc55327af7b24925b58036563819368154e39911f235fd8e",
+  "limits": "fixed sample0, one process per condition, common held fixture, deterministic release; no natural-GC/multiview/long-term/thread generalization",
+  "historic_0_of_32_cause": "UNKNOWN",
+  "overall_research_decision": "D_IMPLEMENTATION_LIMITED",
+  "new_ACT_or_rollout_calls": 0,
+  "next_prompt": "03_下一阶段提示词_冻结模型诊断待批准.md",
+  "next_prompt_sha256": "595fc0a72392b97180c8afc24e0ba381a95cb26a92781a03d68a32fb566871ff",
+  "next_prompt_status": "APPROVE_AS_REVIEW_DRAFT_NOT_DISPATCHED",
+  "publication": "PENDING"
+}

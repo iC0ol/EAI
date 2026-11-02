@@ -1,0 +1,11 @@
+{
+  "reference_path": "/home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/results/worker_1_baseline/early.png",
+  "reference_file_sha256": "47e62d09bf76073b8c4af4d0c5a37cdbb85d2d4efa46b504927b7ec8641fcab3",
+  "pixel_sha256": "688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37",
+  "shape": [
+    256,
+    256,
+    3
+  ],
+  "source": "protocol fixed reference; no new render"
+}

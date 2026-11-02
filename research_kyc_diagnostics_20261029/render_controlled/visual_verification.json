@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-02T07:02:37.792313+00:00",
+  "viewer": "view_image",
+  "file": "montage.png",
+  "file_sha256": "071460c6e9e3bf6bd8740af42697f5af67961fd245e851b7fa30c3256a4c6613",
+  "actually_viewed": true,
+  "observations": [
+    "both before images and fix after show the same scene",
+    "baseline after remains scene-like with approximately reversed vertical placement",
+    "validity is decided by context/object/readback evidence; visual plausibility is insufficient"
+  ],
+  "pixels_transformed_for_montage": "none; four original PNGs pasted at native resolution with labels outside"
+}

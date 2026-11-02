@@ -1,0 +1,7 @@
+{
+  "utc": "2026-11-02T06:46:47.079056+00:00",
+  "all_worker_counts_zero": true,
+  "GPU_workers_started": false,
+  "reason": "include conservative total-device VRAM monitor for OpenGL graphics contexts; final manifest refreshed before first worker",
+  "initial_manifest_preserved": "local_only/initial_prelaunch_manifest.json"
+}

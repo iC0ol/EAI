@@ -1,0 +1,20 @@
+--- /home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/scripts/lc_common.py
++++ scripts/lc_common.py
+@@ -2,7 +2,7 @@
+ import datetime,hashlib,json,os,time,fcntl
+ P=Path(__file__).resolve().parents[1];D=P.parent;W=D.parent
+ R=W/'research_expansion_20261029/reproduction';K=R/'vendor/kyc/policy_robosuite'
+-SHA='53b7058bd290886d5787cd73ed9cb926a38ec49792a99305a84db11a1c3d8d0f'
++SHA='0b39318295a299d9fc55327af7b24925b58036563819368154e39911f235fd8e'
+ def utc():return datetime.datetime.now(datetime.timezone.utc).isoformat()
+ def read(p,default=None):
+     try:return json.loads(Path(p).read_text())
+@@ -34,7 +34,7 @@
+     assert d['protocol_sha256']==SHA
+     return d
+ def reserve(kind,worker,label):
+-    caps={'workers':2,'make_env':2,'renders':8,'readPixels':16,'ACT':0,'env_steps':0,'rollouts':0,'optimizer_updates':0}
++    caps={'workers':2,'make_env':2,'renders':4,'readPixels':8,'ACT':0,'env_steps':0,'rollouts':0,'optimizer_updates':0}
+     with (P/'counter.lock').open('a+') as f:
+         fcntl.flock(f,fcntl.LOCK_EX);c=read(P/'counts.json')
+         assert not (P/'stop_request.json').exists() and time.time()<read(P/'budget.json')['deadline_epoch']

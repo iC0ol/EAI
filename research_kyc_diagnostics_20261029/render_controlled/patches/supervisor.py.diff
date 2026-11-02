@@ -1,0 +1,57 @@
+--- /home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/scripts/supervisor.py
++++ scripts/supervisor.py
+@@ -13,7 +13,10 @@
+     for line in q.stdout.splitlines():
+         v=line.split(',')
+         if len(v)==2 and all(x.strip().isdigit() for x in v) and int(v[0]) in ids:vram+=int(v[1])*2**20
++    total_query=subprocess.run(['nvidia-smi','--query-gpu=memory.used','--format=csv,noheader,nounits'],capture_output=True,text=True,timeout=3)
++    total_values=[int(v.strip())*2**20 for v in total_query.stdout.splitlines() if v.strip().isdigit()]
+     return {'utc':utc(),'rss':sum(v['rss'] for p,v in ps.items() if v and p in ids),'vram':vram,
++       'device_vram_bytes':max(total_values) if total_values else None,
+        'new_disk_bytes':sum(p.stat().st_size for p in P.rglob('*') if p.is_file()),'free_bytes':shutil.disk_usage(P).free}
+ 
+ def stop(child,reason):
+@@ -27,7 +30,7 @@
+     file=P/'results/worker_1_baseline/events.jsonl'
+     events=[json.loads(v) for v in file.read_text().splitlines()];pairs=[]
+     for i,b in enumerate(events):
+-        if b['event']!='baseline_before_con_free' or not b['owner_context'] or not b['current_context'] or b['owner_context']==b['current_context']:continue
++        if b['event']!='baseline_before_con_free' or b['entry']!='CONTROLLED_RELEASE_A' or not b['owner_context'] or not b['current_context'] or b['owner_context']==b['current_context']:continue
+         after=next(((j,a) for j,a in enumerate(events[i+1:],i+1) if a['event']=='baseline_after_con_free' and a['owner_context']==b['owner_context']),None)
+         if after is None:continue
+         j,a=after;changes=[]
+@@ -40,12 +43,22 @@
+         pairs.append({'before_index':i,'after_index':j,'owner_context':b['owner_context'],'current_context':b['current_context'],
+              'owner_before_measurement':b['owner_objects']['state'],'owner_after_measurement':a['owner_objects']['state'],
+              'current_active_object_true_to_false':changes})
+-    result={'utc':utc(),'supported':bool(pairs),'evidence_pairs':pairs,'events_sha256':sha(file),
++    before=read(P/'results/worker_1_baseline/before_metrics.json');after=read(P/'results/worker_1_baseline/after_metrics.json')
++    fixture=read(P/'results/worker_1_baseline/fixture.json')
++    released=next((e for e in events if e['event']=='controlled_A_release_exit' and e['entry']=='CONTROLLED_RELEASE_A'),None)
++    unbound=released is not None and released['current_context']!=fixture['B_context']
++    loss=any(p['current_active_object_true_to_false'] for p in pairs)
++    supported=bool(before['readback_healthy'] and before['matches_reference_pixels'] and not after['readback_healthy']
++       and not after['matches_before_pixels'] and pairs and (loss or unbound))
++    result={'utc':utc(),'supported':supported,'evidence_pairs':pairs,'events_sha256':sha(file),
++       'before_healthy_reference':before['readback_healthy'] and before['matches_reference_pixels'],
++       'after_readback_unhealthy':not after['readback_healthy'],'after_pixels_differ_from_before':not after['matches_before_pixels'],
++       'B_objects_lost':loss,'B_context_unbound':unbound,
+        'choice':'owner-context resource release plus restoration of live previous, installed before initialization',
+-       'scope':'one atomic lifecycle repair; no FBO rebuild, render-time rebinding, GC disable or extra worker',
++       'scope':'same strong A/B fixture and controlled one-shot release in each condition; not natural GC; no extra candidate',
+        'object_identity_rule':'baseline old owner NOT_MEASURED_WRONG_CONTEXT; changes belong to actual current active renderer'}
+     write(P/'repair_choice.json',result,True)
+-    return result['supported']
++    return supported
+ 
+ def main():
+     gate();lock=(P/'run.lock').open('a+');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+@@ -79,7 +92,7 @@
+                 if time.time()>=budget['deadline_epoch']-1800:reason='COMPUTE_DEADLINE'
+                 if elapsed-last>=2 and not reason:
+                     res=resources();last=elapsed;append(P/'resources.jsonl',dict(res,worker=wid,gpu_allocation_seconds=gpu+time.monotonic()-mono))
+-                    if res['rss']>16*2**30 or res['vram']>12*2**30 or res['new_disk_bytes']>200*2**20:reason='RESOURCE_CAP'
++                    if res['rss']>16*2**30 or res['vram']>12*2**30 or (res['device_vram_bytes'] is not None and res['device_vram_bytes']>12*2**30) or res['new_disk_bytes']>150*2**20:reason='RESOURCE_CAP'
+                 write(P/'status.json',{'state':'RUNNING','utc':utc(),'worker':wid,'mode':mode,'gpu_allocation_seconds':gpu+time.monotonic()-mono,'counts':read(P/'counts.json')})
+                 if reason:stop(child,reason);break
+                 time.sleep(.2)

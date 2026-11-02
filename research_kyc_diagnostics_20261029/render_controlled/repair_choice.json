@@ -1,0 +1,60 @@
+{
+  "utc": "2026-11-02T06:46:57.423487+00:00",
+  "supported": true,
+  "evidence_pairs": [
+    {
+      "before_index": 31,
+      "after_index": 32,
+      "owner_context": "w1_ctx1",
+      "current_context": "w1_ctx2",
+      "owner_before_measurement": "NOT_MEASURED_WRONG_CONTEXT",
+      "owner_after_measurement": "NOT_MEASURED_WRONG_CONTEXT",
+      "current_active_object_true_to_false": [
+        {
+          "category": "framebuffers",
+          "name": "offFBO",
+          "id": 1
+        },
+        {
+          "category": "framebuffers",
+          "name": "offFBO_r",
+          "id": 2
+        },
+        {
+          "category": "framebuffers",
+          "name": "shadowFBO",
+          "id": 3
+        },
+        {
+          "category": "renderbuffers",
+          "name": "offColor",
+          "id": 1
+        },
+        {
+          "category": "renderbuffers",
+          "name": "offColor_r",
+          "id": 3
+        },
+        {
+          "category": "renderbuffers",
+          "name": "offDepthStencil",
+          "id": 2
+        },
+        {
+          "category": "renderbuffers",
+          "name": "offDepthStencil_r",
+          "id": 4
+        }
+      ]
+    }
+  ],
+  "events_sha256": "63113a41eed0c2f6ade443925c2dea6244f034af9832bf4183ffeba99efbc2ae",
+  "before_healthy_reference": true,
+  "after_readback_unhealthy": true,
+  "after_pixels_differ_from_before": true,
+  "B_objects_lost": true,
+  "B_context_unbound": true,
+  "choice": "owner-context resource release plus restoration of live previous, installed before initialization",
+  "scope": "same strong A/B fixture and controlled one-shot release in each condition; not natural GC; no extra candidate",
+  "object_identity_rule": "baseline old owner NOT_MEASURED_WRONG_CONTEXT; changes belong to actual current active renderer"
+}

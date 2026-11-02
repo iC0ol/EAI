@@ -1,0 +1,25 @@
+{
+  "worker": 1,
+  "mode": "baseline",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "-B",
+    "/home/asus/EAI/research_kyc_diagnostics_20261029/render_controlled/scripts/worker.py",
+    "--worker",
+    "1",
+    "--mode",
+    "baseline"
+  ],
+  "identity": {
+    "pid": 4178355,
+    "ppid": 4178352,
+    "start_ticks": 295596741,
+    "rss": 262144,
+    "state": "R"
+  },
+  "started_epoch": 1793602007.3526144,
+  "ended_epoch": 1793602017.3630571,
+  "exit_code": 0,
+  "gpu_allocation_seconds_cumulative": 10.010440417099744,
+  "utc": "2026-11-02T06:46:57.363061+00:00"
+}

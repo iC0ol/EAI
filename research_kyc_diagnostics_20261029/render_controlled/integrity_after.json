@@ -1,0 +1,33 @@
+{
+  "utc": "2026-11-02T06:54:30.547589+00:00",
+  "old_evidence_checked": 295,
+  "old_evidence_unchanged": true,
+  "differences": [],
+  "owned_processes": [
+    {
+      "pid": 4178352,
+      "start_ticks": 295596728,
+      "same_process_active": false,
+      "current_state": "ABSENT"
+    },
+    {
+      "pid": 4178355,
+      "start_ticks": 295596741,
+      "same_process_active": false,
+      "current_state": "ABSENT"
+    },
+    {
+      "pid": 4178871,
+      "start_ticks": 295597757,
+      "same_process_active": false,
+      "current_state": "ABSENT"
+    }
+  ],
+  "owned_processes_all_inactive": true,
+  "gpu_query_exit": 0,
+  "compute_processes": "543637, python, 296",
+  "total_device_memory_used_MiB": "580",
+  "final_disk_bytes": 7439310,
+  "source_baseline": "local_only/old_directory_baseline.json",
+  "git_index_mutations_by_executor": 0
+}

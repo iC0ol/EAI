@@ -1,5 +1,5 @@
 {
-  "verified_local": "2026-11-02T10:38:16.142259+08:00",
+  "verified_local": "2026-11-02T15:18:58.185335+08:00",
   "rounds": [
     {
       "turn": "09_diag_independent",
@@ -154,7 +154,40 @@
       "response_model_fields": [
         "deepseek-flash"
       ]
+    },
+    {
+      "turn": "23_controlled_independent",
+      "session_id": "736077c1-8d4e-4df7-979f-1fc15f980a2a",
+      "started_utc": "2026-11-02T07:07:45.404396+00:00",
+      "ended_utc": "2026-11-02T07:08:46.331006+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "response_model_fields": [
+        "deepseek-flash"
+      ]
+    },
+    {
+      "turn": "24_controlled_final_cross",
+      "session_id": "736077c1-8d4e-4df7-979f-1fc15f980a2a",
+      "started_utc": "2026-11-02T07:13:28.256803+00:00",
+      "ended_utc": "2026-11-02T07:14:23.467522+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "response_model_fields": [
+        "deepseek-flash"
+      ]
+    },
+    {
+      "turn": "25_draft_resolution",
+      "session_id": "736077c1-8d4e-4df7-979f-1fc15f980a2a",
+      "started_utc": "2026-11-02T07:16:08.714896+00:00",
+      "ended_utc": "2026-11-02T07:16:39.261940+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "response_model_fields": [
+        "deepseek-flash"
+      ]
     }
   ],
-  "note": "CLI model_usage fields may be cumulative and costBasis unknown; not interpreted as billed costs."
+  "note": "CLI model_usage may be cumulative, costBasis unknown; not actual billed costs. Original errors preserved; corrections in subsequent rounds."
 }

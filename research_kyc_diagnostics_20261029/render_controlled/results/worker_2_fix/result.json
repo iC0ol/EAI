@@ -1,0 +1,107 @@
+{
+  "utc": "2026-11-02T06:47:06.029246+00:00",
+  "state": "COMPLETE",
+  "mode": "fix",
+  "before": {
+    "entry": "before",
+    "tensor": {
+      "file": "results/worker_2_fix/before_tensor_rgb.npy",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "sha256": "87002e389e80edafefc25786291e44c75e49c26cd360def8accbcdbd55b60389",
+      "file_sha256": "bd8c3637d67869a836b588065bf2ca878487319dc99b1888a8051f11c2afb040",
+      "independent_copy": true
+    },
+    "pixel_sha256": "688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37",
+    "normal_read_ordinal": 5,
+    "state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+    "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+    "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "raw_to_png_exact_flip": true,
+    "readback_healthy": true,
+    "matches_reference_pixels": true
+  },
+  "after": {
+    "entry": "after",
+    "tensor": {
+      "file": "results/worker_2_fix/after_tensor_rgb.npy",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "sha256": "87002e389e80edafefc25786291e44c75e49c26cd360def8accbcdbd55b60389",
+      "file_sha256": "bd8c3637d67869a836b588065bf2ca878487319dc99b1888a8051f11c2afb040",
+      "independent_copy": true
+    },
+    "pixel_sha256": "688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37",
+    "normal_read_ordinal": 7,
+    "state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+    "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+    "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "raw_to_png_exact_flip": true,
+    "readback_healthy": true,
+    "matches_reference_pixels": true,
+    "matches_before_pixels": true
+  },
+  "fixture": {
+    "controlled_trigger_not_natural_GC": true,
+    "retired_tag": "r1",
+    "active_tag": "r2",
+    "A_context": "w2_ctx1",
+    "B_context": "w2_ctx2",
+    "A_sim_is_env_sim": false,
+    "B_sim_is_env_sim": true,
+    "B_original_ids": {
+      "offFBO": 1,
+      "offFBO_r": 2,
+      "shadowFBO": 3,
+      "offColor": 1,
+      "offColor_r": 3,
+      "offDepthStencil": 2,
+      "offDepthStencil_r": 4
+    },
+    "A_initial_ids": {
+      "offFBO": 1,
+      "offFBO_r": 2,
+      "shadowFBO": 3,
+      "offColor": 1,
+      "offColor_r": 3,
+      "offDepthStencil": 2,
+      "offDepthStencil_r": 4
+    },
+    "renderer_count": 2,
+    "context_count": 2
+  },
+  "guard_counts": {
+    "r1": {
+      "invocations": 2,
+      "first_entries": 1,
+      "first_completed": 1,
+      "con_free_attempts": 1,
+      "con_free_returns": 1,
+      "context_destroy_successes": 1,
+      "skipped_DONE": 1,
+      "skipped_RUNNING": 0
+    },
+    "r2": {
+      "invocations": 2,
+      "first_entries": 1,
+      "first_completed": 1,
+      "con_free_attempts": 1,
+      "con_free_returns": 1,
+      "context_destroy_successes": 1,
+      "skipped_DONE": 1,
+      "skipped_RUNNING": 0
+    }
+  },
+  "all_contexts_destroyed": true,
+  "fatal": [],
+  "fixture_strong_refs_remaining": 0,
+  "old_0_of_32_cause": "UNKNOWN"
+}

@@ -15,3 +15,7 @@ __pycache__/
 *.h5
 *.safetensors
 *.xml
+
+# Runtime snapshots retained locally, excluded from public delivery
+render_controlled/active_child.json
+render_controlled/machine_before.json

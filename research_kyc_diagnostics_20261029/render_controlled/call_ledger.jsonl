@@ -1,0 +1,16 @@
+{"utc": "2026-11-02T06:46:47.323999+00:00", "monotonic": 2955967.381775039, "worker": 1, "kind": "workers", "ordinal": 1, "label": "baseline", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:46:49.107436+00:00", "monotonic": 2955969.165216504, "worker": 1, "kind": "make_env", "ordinal": 1, "label": "make_env0", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:46:53.784990+00:00", "monotonic": 2955973.842769688, "worker": 1, "kind": "renders", "ordinal": 1, "label": "before_normal", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:46:53.926408+00:00", "monotonic": 2955973.984186654, "worker": 1, "kind": "readPixels", "ordinal": 1, "label": "before_normal", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:46:54.222975+00:00", "monotonic": 2955974.28075483, "worker": 1, "kind": "readPixels", "ordinal": 2, "label": "before_sentinel", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:46:55.194312+00:00", "monotonic": 2955975.252091437, "worker": 1, "kind": "renders", "ordinal": 2, "label": "after_normal", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:46:55.420602+00:00", "monotonic": 2955975.478381827, "worker": 1, "kind": "readPixels", "ordinal": 3, "label": "after_normal", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:46:55.555267+00:00", "monotonic": 2955975.613041016, "worker": 1, "kind": "readPixels", "ordinal": 4, "label": "after_sentinel", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:46:57.485849+00:00", "monotonic": 2955977.543625453, "worker": 2, "kind": "workers", "ordinal": 2, "label": "fix", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:46:59.284001+00:00", "monotonic": 2955979.341780383, "worker": 2, "kind": "make_env", "ordinal": 2, "label": "make_env0", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:47:02.853642+00:00", "monotonic": 2955982.911419579, "worker": 2, "kind": "renders", "ordinal": 3, "label": "before_normal", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:47:03.032794+00:00", "monotonic": 2955983.090571516, "worker": 2, "kind": "readPixels", "ordinal": 5, "label": "before_normal", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:47:03.193749+00:00", "monotonic": 2955983.251526173, "worker": 2, "kind": "readPixels", "ordinal": 6, "label": "before_sentinel", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:47:04.552284+00:00", "monotonic": 2955984.610062981, "worker": 2, "kind": "renders", "ordinal": 4, "label": "after_normal", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:47:04.677453+00:00", "monotonic": 2955984.735231786, "worker": 2, "kind": "readPixels", "ordinal": 7, "label": "after_normal", "event": "RESERVED_BEFORE_CALL"}
+{"utc": "2026-11-02T06:47:04.842625+00:00", "monotonic": 2955984.900402591, "worker": 2, "kind": "readPixels", "ordinal": 8, "label": "after_sentinel", "event": "RESERVED_BEFORE_CALL"}

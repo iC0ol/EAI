@@ -1,0 +1,354 @@
+[
+  {
+    "entry": "before",
+    "ordinal": 1,
+    "raw": {
+      "file": "results/worker_1_baseline/read_01_raw.npy",
+      "shape": [
+        256,
+        256,
+        3
+      ],
+      "dtype": "uint8",
+      "sha256": "823f7b1764e5bb38ac7d4c8775f8076ebffb894b337e63a2a23f89bf4653ef86",
+      "file_sha256": "fca4660048e1bf6ba246ad4c738d06445bf73de1327eeb1633fca34b30024a1b",
+      "independent_copy": true
+    },
+    "before": {
+      "utc": "2026-11-02T06:46:54.061148+00:00",
+      "monotonic": 2955974.118926662,
+      "thread_id": 134009975715648,
+      "event": "mjr_readPixels_before",
+      "entry": "before",
+      "worker": 1,
+      "current_context": "w1_ctx2",
+      "current_present": true,
+      "owner_context": null,
+      "ordinal": 1,
+      "sentinel": false,
+      "gl": {
+        "bindings": {
+          "draw": 1,
+          "read": 1,
+          "renderbuffer": 4
+        },
+        "draw_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "read_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "errors": {
+          "codes": [
+            0
+          ],
+          "drained": true
+        }
+      },
+      "owner_objects": {
+        "owner_context": null,
+        "state": "NOT_MEASURED_WRONG_CONTEXT",
+        "ids": {}
+      },
+      "active_objects": {
+        "owner_context": "w1_ctx2",
+        "state": "MEASURED_IN_OWNER_CONTEXT",
+        "framebuffers": {
+          "offFBO": {
+            "id": 1,
+            "is_framebuffer": true
+          },
+          "offFBO_r": {
+            "id": 2,
+            "is_framebuffer": true
+          },
+          "shadowFBO": {
+            "id": 3,
+            "is_framebuffer": true
+          }
+        },
+        "renderbuffers": {
+          "offColor": {
+            "id": 1,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offColor_r": {
+            "id": 3,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil": {
+            "id": 2,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil_r": {
+            "id": 4,
+            "is_renderbuffer": true,
+            "bound_dimensions": {
+              "width": 640,
+              "height": 480,
+              "samples": 0
+            }
+          }
+        },
+        "ids": {
+          "offFBO": 1,
+          "offFBO_r": 2,
+          "shadowFBO": 3,
+          "offColor": 1,
+          "offColor_r": 3,
+          "offDepthStencil": 2,
+          "offDepthStencil_r": 4
+        }
+      }
+    },
+    "after": {
+      "utc": "2026-11-02T06:46:54.130048+00:00",
+      "monotonic": 2955974.187821715,
+      "thread_id": 134009975715648,
+      "event": "mjr_readPixels_after",
+      "entry": "before",
+      "worker": 1,
+      "current_context": "w1_ctx2",
+      "current_present": true,
+      "owner_context": null,
+      "ordinal": 1,
+      "sentinel": false,
+      "array": {
+        "file": "results/worker_1_baseline/read_01_raw.npy",
+        "shape": [
+          256,
+          256,
+          3
+        ],
+        "dtype": "uint8",
+        "sha256": "823f7b1764e5bb38ac7d4c8775f8076ebffb894b337e63a2a23f89bf4653ef86",
+        "file_sha256": "fca4660048e1bf6ba246ad4c738d06445bf73de1327eeb1633fca34b30024a1b",
+        "independent_copy": true
+      },
+      "gl": {
+        "bindings": {
+          "draw": 1,
+          "read": 1,
+          "renderbuffer": 4
+        },
+        "draw_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "read_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "errors": {
+          "codes": [
+            0
+          ],
+          "drained": true
+        }
+      },
+      "owner_objects": {
+        "owner_context": null,
+        "state": "NOT_MEASURED_WRONG_CONTEXT",
+        "ids": {}
+      },
+      "active_objects": {
+        "owner_context": "w1_ctx2",
+        "state": "MEASURED_IN_OWNER_CONTEXT",
+        "framebuffers": {
+          "offFBO": {
+            "id": 1,
+            "is_framebuffer": true
+          },
+          "offFBO_r": {
+            "id": 2,
+            "is_framebuffer": true
+          },
+          "shadowFBO": {
+            "id": 3,
+            "is_framebuffer": true
+          }
+        },
+        "renderbuffers": {
+          "offColor": {
+            "id": 1,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offColor_r": {
+            "id": 3,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil": {
+            "id": 2,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil_r": {
+            "id": 4,
+            "is_renderbuffer": true,
+            "bound_dimensions": {
+              "width": 640,
+              "height": 480,
+              "samples": 0
+            }
+          }
+        },
+        "ids": {
+          "offFBO": 1,
+          "offFBO_r": 2,
+          "shadowFBO": 3,
+          "offColor": 1,
+          "offColor_r": 3,
+          "offDepthStencil": 2,
+          "offDepthStencil_r": 4
+        }
+      }
+    },
+    "sentinel": {
+      "retained_165_fraction": 0.0012969970703125,
+      "normal_165_fraction": 0.0012969970703125,
+      "equal_preflip_raw": true,
+      "max_abs_preflip_difference": 0,
+      "separate_buffer": true,
+      "inside_original_lock": true
+    }
+  },
+  {
+    "entry": "after",
+    "ordinal": 3,
+    "raw": {
+      "file": "results/worker_1_baseline/read_03_raw.npy",
+      "shape": [
+        256,
+        256,
+        3
+      ],
+      "dtype": "uint8",
+      "sha256": "89acfd6f04f4a5e71f4a60c9a5a555789dd93c06bad8672775524aeba121e7d1",
+      "file_sha256": "e391751910908933d0ce7be2947d1b5f11e8f07a3c0ad976889b18531009f5cf",
+      "independent_copy": true
+    },
+    "before": {
+      "utc": "2026-11-02T06:46:55.454687+00:00",
+      "monotonic": 2955975.5124647,
+      "thread_id": 134009975715648,
+      "event": "mjr_readPixels_before",
+      "entry": "after",
+      "worker": 1,
+      "current_context": null,
+      "current_present": false,
+      "owner_context": null,
+      "ordinal": 3,
+      "sentinel": false,
+      "gl": null,
+      "owner_objects": {
+        "state": "NOT_MEASURED_WRONG_CONTEXT",
+        "owner_context": null,
+        "ids": {}
+      },
+      "active_objects": null
+    },
+    "after": {
+      "utc": "2026-11-02T06:46:55.490455+00:00",
+      "monotonic": 2955975.548227971,
+      "thread_id": 134009975715648,
+      "event": "mjr_readPixels_after",
+      "entry": "after",
+      "worker": 1,
+      "current_context": null,
+      "current_present": false,
+      "owner_context": null,
+      "ordinal": 3,
+      "sentinel": false,
+      "array": {
+        "file": "results/worker_1_baseline/read_03_raw.npy",
+        "shape": [
+          256,
+          256,
+          3
+        ],
+        "dtype": "uint8",
+        "sha256": "89acfd6f04f4a5e71f4a60c9a5a555789dd93c06bad8672775524aeba121e7d1",
+        "file_sha256": "e391751910908933d0ce7be2947d1b5f11e8f07a3c0ad976889b18531009f5cf",
+        "independent_copy": true
+      },
+      "gl": null,
+      "owner_objects": {
+        "state": "NOT_MEASURED_WRONG_CONTEXT",
+        "owner_context": null,
+        "ids": {}
+      },
+      "active_objects": null
+    },
+    "sentinel": {
+      "retained_165_fraction": 1.0,
+      "normal_165_fraction": 0.0012969970703125,
+      "equal_preflip_raw": false,
+      "max_abs_preflip_difference": 165,
+      "separate_buffer": true,
+      "inside_original_lock": true
+    }
+  }
+]

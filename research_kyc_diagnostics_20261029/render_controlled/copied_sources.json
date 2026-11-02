@@ -1,0 +1,30 @@
+{
+  "utc": "2026-11-02T06:30:21.996978+00:00",
+  "files": [
+    {
+      "source": "/home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/scripts/owned_release.py",
+      "new": "scripts/owned_release.py",
+      "source_sha256": "b688e0c3b7f213bda4e6383a116656177afe3b5bf9468c3962a255a86994fbcd"
+    },
+    {
+      "source": "/home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/scripts/telemetry.py",
+      "new": "scripts/telemetry.py",
+      "source_sha256": "563eb9352257e1c3d1d013c4bcf3e9203bb3cab8df2971cfabef138931c16931"
+    },
+    {
+      "source": "/home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/scripts/lc_common.py",
+      "new": "scripts/lc_common.py",
+      "source_sha256": "3bed449fd1915392293f87f652ffed3d1ba0b5fb944b643b7106c64d28078276"
+    },
+    {
+      "source": "/home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/scripts/test_owned_release.py",
+      "new": "scripts/test_owned_release.py",
+      "source_sha256": "21771f8cd2c6bc2478828cb4ca3eaa8362ed759fd4b10441c26c567aab9c4c77"
+    },
+    {
+      "source": "/home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/scripts/supervisor.py",
+      "new": "scripts/supervisor.py",
+      "source_sha256": "bad49968828d57e6ffce994904a17d516a2a7109e7385bc1c4ce3d19a2262b2d"
+    }
+  ]
+}

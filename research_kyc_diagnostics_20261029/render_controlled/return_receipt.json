@@ -1,0 +1,20 @@
+{
+  "utc": "2026-11-02T07:02:59.611Z",
+  "scope": "render_controlled",
+  "callback_count": 1,
+  "target_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "authorization": "original human task sections 8/9 explicitly requested executor completion return; previously verified against human attachment; current dispatch records continuation",
+  "body": "render_controlled 本次限定执行已结束，执行端结论 LOCAL_CONTROLLED_PASS_PENDING_REVIEW，请独立验收后统一公开同步。协议准确SHA：0b39318295a299d9fc55327af7b24925b58036563819368154e39911f235fd8e。\n\n真实计数：2个新exec worker/2次make_env/4次mjr_render/8次mjr_readPixels（4 normal+4 sentinel），19.285659 GPU分配秒，含初始化与cleanup；0 ACT/env.step/rollout/optimizer。两worker退出码0，监督器和worker PID/start_ticks均已核对退出。CPU mock 30/30，CPU保存结果核对85/85，4帧×5边界=20个精确比较；295个旧证据的size/mtime_ns/SHA全部未变，冻结源及GPU脚本未变。没有stage/commit/push，Git index仍归主审。\n\n局部机制证据：两组同样强持有退休A与活动B，健康before均精确匹配固定参考688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37，再同一原锁内显式调用A one-shot入口。baseline controlled事件31→32（0起算）owner=A/current=B，A明确NOT_MEASURED_WRONG_CONTEXT，B原3FBO/4RBO同ID true→false，随后releaseThread解绑，after无current且sentinel100%保留165。fix事件33→34在A context正确释放A资源，A native destroy成功一次，事件46真实restore_native_return=true，47 previous_restored到活B，52确认B原对象有效；after与本组before逐像素一致、sentinel=raw、读回观测GL codes=[0]。after前无额外bind/rebuild/new context。每renderer首次con.free/成功context destroy恰一次，后续只有DONE guard跳过；cleanup全context销毁、fixture引用0。蒙太奇已实际看：baseline after仍似场景图，近似翻转，但不能视为有效新读回。\n\n原件目录：/home/asus/EAI/research_kyc_diagnostics_20261029/render_controlled/ 。请从FINAL_REPORT.md、analysis.json、montage.png、repair_choice.json、两组events/readback/原数组/guard_counts和integrity_after.json复核。公开允许清单public_allowlist.txt，秘密扫描public_secret_scan.json，文件指纹publication_manifest.json；local_only地址/XML/原始析构文本与logs/raw CLI排除。专属6-1-sol-max已PAUSED并读回确认保留其他字段，automation_closure.json；本消息回执将保存return_receipt.json并更新清单（仅本次一次回传）。\n\n边界：受控fixture、固定sample0、每条件一个进程；不是自然GC复现，未测多视角/长期/线程稳定性，没有复验旧三入口。旧checkpoint0/32根因仍UNKNOWN；不恢复模型/闭环/训练，不把工程修复当论文创新。请主审独立看图和数组/代码，取得真实DeepSeek质疑后再宣布验收。本scope已停止，等待研究负责人复核。",
+  "body_sha256": "b9ed126529e79f48c2d074b325af94f0409ffa24a21ea6a09de259d4e219627f",
+  "tool_accepted": true,
+  "tool_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a18138-0f15-76b2-b5cf-20e1722782a9\"}"
+      }
+    ],
+    "isError": false
+  },
+  "delivery_semantics": "Tool accepted for target chat; independent review has not been claimed."
+}

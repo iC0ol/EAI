@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-02T06:59:12.047916+00:00",
+  "automation_id": "6-1-sol-max",
+  "status": "PAUSED",
+  "confirmed_by": "automation.toml reread after automation_update accepted",
+  "target_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+  "preserved_fields": [
+    "id",
+    "kind",
+    "name",
+    "prompt",
+    "rrule",
+    "target_thread_id",
+    "created_at"
+  ],
+  "all_preserved_fields_equal": true,
+  "only_status_and_updated_at_changed": true,
+  "main_automation_modified_by_executor": false,
+  "closure_reason": "render_controlled GPU scope terminal, delivery completed awaiting independent review",
+  "tool_accepted": true
+}
