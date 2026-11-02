@@ -72,5 +72,7 @@
   "main_state": "CONTROLLED_APPROVED_WAITING_RESET_DISPATCH",
   "scheduling_correction": "Previous DAILY + COUNT=1 repeatedly fired daily. Existing heartbeat corrected to hourly interval 5 with minute24/second36, next intended check 14:24:36 reset+120s; then <=5h fallback, refreshed on every wake.",
   "executor_completed_local": "2026-11-02T10:01:43.633300+08:00",
-  "executor_completion_reason": "EXECUTION_COMPLETE / CAUSAL_VALIDATION_PARTIAL"
+  "executor_completion_reason": "EXECUTION_COMPLETE / CAUSAL_VALIDATION_PARTIAL",
+  "main_schedule_implementation": "Daily fixed local times 00:24:36,04:24:36,09:24:36,14:24:36,19:24:36; max gap5h. This avoids unknown hourly DTSTART/update anchor; first planned 2026-11-02 14:24:36.",
+  "main_schedule_readback_verified": true
 }

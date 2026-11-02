@@ -1,6 +1,6 @@
 {
   "checked_local": "2026-11-02T09:32:10.486365+08:00",
-  "state": "PUBLISHED_REPAIR_RESULTS_AND_LIFECYCLE_DISPATCH",
+  "state": "PUBLISHED_LIFECYCLE_ACCEPTANCE_CONTROLLED_PROTOCOL_READY",
   "repository": "iC0ol/EAI",
   "branch": "research/u-gate0-v3-overnight",
   "previous_remote": "c7b1ce23f5b22739f0706ad1e2bf8beee125834e",
@@ -43,5 +43,18 @@
     "parent_remote_url": "https://github.com/iC0ol/EAI/commit/126e196edd5d82f809f5a90b4bb5a13b284ae31c",
     "parent_verification_local": "2026-10-29T17:20:01.329842+08:00",
     "whitespace_check": "PASS with cr-at-eol; original human attachment preserved byte-for-byte"
+  },
+  "lifecycle_publication": {
+    "verified_local": "2026-11-02T10:39:31.458189+08:00",
+    "verified_remote_head": "6c689f658419ce9908a3979eda124810d99039db",
+    "url": "https://github.com/iC0ol/EAI/commit/6c689f658419ce9908a3979eda124810d99039db",
+    "scan_gate": "../artifacts/lifecycle_publication_gate.json",
+    "files": 133,
+    "bytes": 14665029,
+    "decoded_arrays_or_images": 81,
+    "secret_pattern_hits": 0,
+    "manifest_vs_commit_sha_mismatches": [],
+    "scope": "completed lifecycle results, independent parent review, DeepSeek21/22, approved controlled protocol and unsent dispatch_ready",
+    "controlled_execution": "NOT_DISPATCHED_WAITING_RESET"
   }
 }
