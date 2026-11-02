@@ -17,5 +17,6 @@
   "next_prompt": "03_下一阶段提示词_冻结模型诊断待批准.md",
   "next_prompt_sha256": "595fc0a72392b97180c8afc24e0ba381a95cb26a92781a03d68a32fb566871ff",
   "next_prompt_status": "APPROVE_AS_REVIEW_DRAFT_NOT_DISPATCHED",
-  "publication": "PENDING"
+  "publication": "PUBLISHED",
+  "results_commit": "ba874c157cb61be02bb7c8a1e74348ef4cb51cba"
 }

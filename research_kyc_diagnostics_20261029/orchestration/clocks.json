@@ -2,14 +2,14 @@
   "timezone": "Asia/Shanghai",
   "main_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
   "main_automation_id": "automation",
-  "main_check_status": "ACTIVE",
+  "main_check_status": "PAUSED",
   "usage_checked_local": "2026-11-02T15:17:59+08:00",
   "five_hour_used_percent": 84,
   "weekly_used_percent": 29,
   "account_shared_usage": true,
   "five_hour_resets_at_unix": 1793619211,
   "five_hour_resets_local": "2026-11-02T19:33:31+08:00",
-  "main_next_check_local": "2026-11-02T19:24:36+08:00",
+  "main_next_check_local": null,
   "reset_buffer_seconds": 120,
   "max_check_interval_seconds": 18000,
   "scheduling_rule": "Refresh real account resetsAt on each wake. Choose a future useful reset+120s or last-check+5h, whichever is earlier; avoid scheduling a stale reset or a busy poll. If reset unavailable, use five hours. Completion callback can wake sooner.",
@@ -69,6 +69,10 @@
       "event": "controlled callback independently accepted; real DeepSeek23-25 complete; next draft not dispatched; publication remains",
       "five_hour_used_percent": 84,
       "weekly_used_percent": 29
+    },
+    {
+      "local": "2026-11-02T15:21:11.308139+08:00",
+      "event": "Core deliverables published and remote SHA verified; both existing automations PAUSED and read back; next prompt is unexecuted review draft"
     }
   ],
   "executor_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
@@ -77,12 +81,13 @@
   "executor_next_check_reason": "19:24:36 maximum-gap fallback is earlier than reset19:33:31+120s",
   "executor_five_hour_latest_local": "2026-11-02T19:25:10.149690+08:00",
   "executor_total_deadline_local": "2026-11-02T22:25:10.149690+08:00",
-  "active_scope": "render_controlled",
-  "executor_scope": "render_controlled",
+  "active_scope": null,
+  "executor_scope": null,
   "prior_execution_completed_local": "2026-10-29T12:24:39.460746+08:00",
   "prior_execution_completion_reason": "STOP_INPUT_PREREQUISITE; PARTIAL; publication FAILED_NETWORK",
-  "main_state": "ACCEPTED_PUBLICATION_PENDING",
+  "main_state": "COMPLETE_AUTHORIZED_SCOPE",
   "scheduling_correction": "Previous DAILY + COUNT=1 repeatedly fired daily. Existing heartbeat corrected to hourly interval 5 with minute24/second36, next intended check 14:24:36 reset+120s; then <=5h fallback, refreshed on every wake.",
   "main_schedule_implementation": "Daily fixed local times 00:24:36,04:24:36,09:24:36,14:24:36,19:24:36; max gap5h. This avoids unknown hourly DTSTART/update anchor; first planned 2026-11-02 14:24:36.",
-  "main_schedule_readback_verified": true
+  "main_schedule_readback_verified": true,
+  "completed_local": "2026-11-02T15:21:11.308139+08:00"
 }

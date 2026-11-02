@@ -1,0 +1,16 @@
+{
+  "checked_utc": "2026-11-02T07:20:43.755Z",
+  "main_automation": "automation",
+  "executor_automation": "6-1-sol-max",
+  "main_status": "PAUSED",
+  "executor_status": "PAUSED",
+  "main_fields_changed": [
+    "status",
+    "updated_at"
+  ],
+  "other_fields_preserved": true,
+  "confirmed_by": "automation.toml reread after tool accepted",
+  "reason": "Authorized controlled repair, parent/DeepSeek acceptance, report and core public delivery completed; next draft not dispatched",
+  "public_result_commit": "ba874c157cb61be02bb7c8a1e74348ef4cb51cba",
+  "reset_credit_redemption": "NOT_USED"
+}
