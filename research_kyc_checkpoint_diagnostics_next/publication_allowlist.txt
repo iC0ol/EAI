@@ -52,6 +52,7 @@ orchestration/clocks.json
 orchestration/deepseek_active.json
 orchestration/dispatch_intent.json
 orchestration/dispatch_receipt.json
+orchestration/final_automation_closure.json
 orchestration/preparation_dispatch.json
 orchestration/preparation_followup.json
 orchestration/result_review_freeze.json
@@ -65,6 +66,7 @@ patches/test_owned_release.py.diff
 preparation_return_receipt.json
 publication_allowlist.txt
 publication_manifest.json
+publication_receipt.json
 publication_secret_scan.json
 resources.jsonl
 review_gate.json

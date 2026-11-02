@@ -19,5 +19,10 @@
   "future_training_rollout_authorized": false,
   "checkpoint_preserved": true,
   "recommended_project_priority": "pause automatic F engineering; prioritize confirming reliable task-positive baseline; optional non-default bounded rescue only by new review/authorization",
-  "publication_state": "PENDING"
+  "publication_state": "CORE_PUBLIC_SYNC_VERIFIED_CLOSURE_RECORD_FOLLOWS",
+  "core_public_commit": "0aec035303ae302717b0c9bf95b599b6d6d642a5",
+  "main_automation_status": "PAUSED",
+  "child_automation_status": "PAUSED",
+  "delivery_complete": true,
+  "scientific_goal_achieved": false
 }

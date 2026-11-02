@@ -1,6 +1,6 @@
 {
-  "checked_utc": "2026-11-02T20:47:53.221769+00:00",
-  "allowed_files": 101,
+  "checked_utc": "2026-11-02T20:50:52.943709+00:00",
+  "allowed_files": 103,
   "files": [
     {
       "path": ".gitignore",
@@ -59,8 +59,8 @@
     },
     {
       "path": "STATUS.md",
-      "bytes": 1686,
-      "sha256": "737e63d3fc171df8e38fbdeb5464d83ebfb1d4209e69389edefd5fdf8bc1f014"
+      "bytes": 2023,
+      "sha256": "0f0afb9059b7d1aae0eea0911b2925e893efba40979c72e18701731cf751cbcc"
     },
     {
       "path": "artifacts/parent_candidate_v1_verification.json",
@@ -254,8 +254,8 @@
     },
     {
       "path": "orchestration/clocks.json",
-      "bytes": 1369,
-      "sha256": "274c485aee29cc03a691ab425beab73f0ce4ba404d5517477535248f40d04b62"
+      "bytes": 1327,
+      "sha256": "fcb5326915d488ce75ba062eec7167099ccc9882748b64a62d3a89b9e1ed51be"
     },
     {
       "path": "orchestration/deepseek_active.json",
@@ -271,6 +271,11 @@
       "path": "orchestration/dispatch_receipt.json",
       "bytes": 1274,
       "sha256": "c1dc11dd0ffc4fc785969be5aaaa1ad280b9c29f323bd5215a9456f3059a6985"
+    },
+    {
+      "path": "orchestration/final_automation_closure.json",
+      "bytes": 925,
+      "sha256": "3ad37ddcd15fd3305771c0ebcf6732e55b06a3f884860fd2afbbef0ea21ec61d"
     },
     {
       "path": "orchestration/preparation_dispatch.json",
@@ -289,8 +294,8 @@
     },
     {
       "path": "parent_acceptance.json",
-      "bytes": 1324,
-      "sha256": "e3087a4f548bb077779751f8ec337881cf7bbf0cbac71a12a420b66e48ef259b"
+      "bytes": 1576,
+      "sha256": "62a24672e5530bf932b4f25f896bf7050fe1ed8d6951cb6079ab71721becb1be"
     },
     {
       "path": "patches/input_worker_from_stage1.diff",
@@ -329,13 +334,18 @@
     },
     {
       "path": "publication_allowlist.txt",
-      "bytes": 2913,
-      "sha256": "c098808aebb089fc994977a591ed410899cd8accd4218bf33add174b0f1aafbd"
+      "bytes": 2982,
+      "sha256": "10ddf2f95eb5e0cafda35cf3788ea7c5ef5bc2a3dc938821d4ada58b8dffbc14"
+    },
+    {
+      "path": "publication_receipt.json",
+      "bytes": 1106,
+      "sha256": "54463466aaccc3412f79c24bb22b6334320802e311b885861085ab2bb0125774"
     },
     {
       "path": "publication_secret_scan.json",
-      "bytes": 783,
-      "sha256": "3b9d30c9dbdf93c41b23ed7f50b52a10002c06af3d733b82cee91f470c9a68f7"
+      "bytes": 784,
+      "sha256": "4aed9f8bbf98b399d220238c62957c00d4182a31a8dd1c8be7797ae40f2fd629"
     },
     {
       "path": "resources.jsonl",

@@ -1,0 +1,28 @@
+{
+  "checked_utc": "2026-11-02T20:50:22.319Z",
+  "core_commit": "0aec035303ae302717b0c9bf95b599b6d6d642a5",
+  "remote_branch": "research/u-gate0-v3-overnight",
+  "repository": "iC0ol/EAI",
+  "repository_visibility": "public",
+  "core_push_exit_code": 0,
+  "local_and_remote_ref_equal": true,
+  "github_report_read_confirmed": true,
+  "github_report_blob_sha": "be299de09a7d0a18c04f9c8d19b3b7e1131018c8",
+  "report_url": "https://github.com/iC0ol/EAI/blob/0aec035303ae302717b0c9bf95b599b6d6d642a5/research_kyc_checkpoint_diagnostics_next/02_%E8%81%94%E5%90%88%E9%AA%8C%E6%94%B6%E4%B8%8E%E7%A0%94%E7%A9%B6%E5%86%B3%E7%AD%96%E6%8A%A5%E5%91%8A.md",
+  "main_automation_pause_tool": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Updated automation in the app."
+      },
+      {
+        "type": "text",
+        "text": "{\"automationId\":\"automation\",\"mode\":\"update\",\"status\":\"PAUSED\"}"
+      }
+    ],
+    "isError": false
+  },
+  "scientific_outcome": "NOT_EVALUATED",
+  "experimental_run_state": "TERMINAL_STOP_INPUT_IMPORT_COLLISION",
+  "no_new_experiment_authorization": true
+}
