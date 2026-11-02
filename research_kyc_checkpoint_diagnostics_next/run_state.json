@@ -1,0 +1,48 @@
+{
+  "run_id": "kyc-frozen-84a848fd-a62d-4f61-8164-97044f315ae6",
+  "deadline_epoch": 1793680177.138746,
+  "counts": {
+    "workers": 1,
+    "make_env": 0,
+    "renders": 0,
+    "readPixels": 0,
+    "ACT": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "GPU_seconds": 3.9268841021694243,
+  "active_lease": null,
+  "stages": {
+    "input": {
+      "utc": "2026-11-02T20:31:11.344317+00:00",
+      "state": "EXITED",
+      "identity": {
+        "pid": 174562,
+        "ppid": 174477,
+        "start_ticks": 300542757,
+        "state": "R",
+        "rss": 524288
+      },
+      "exit_code": 1,
+      "reason": "WORKER_FAILED",
+      "GPU_seconds": 3.9268841021694243,
+      "cumulative_GPU_seconds": 3.9268841021694243,
+      "phase_allocation": 210.0,
+      "epoch": 1793651467.4172828,
+      "ended_epoch": 1793651471.3443274,
+      "counts_after_exit": {
+        "workers": 1,
+        "make_env": 0,
+        "renders": 0,
+        "readPixels": 0,
+        "ACT": 0,
+        "env_steps": 0,
+        "rollouts": 0,
+        "backward": 0,
+        "optimizer": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "state": "PREPARATION_SENT_NOT_EXPERIMENT_DISPATCH",
+  "sent_utc": "2026-11-02T15:02:45.417Z",
+  "prompt": "用户已在主聊天正式批准健康RGB下冻结checkpoint诊断。新目录 /home/asus/EAI/research_kyc_checkpoint_diagnostics_next 已建立；先读其AGENTS.md、00_本轮授权.md、00_任务基础_原文.md与orchestration/basis.json。旧research_kyc_diagnostics_20261029等全部只读。你仍是gpt-6.1-sol / max。\n\n这是审核材料准备委派（PREPARATION_ONLY），不是正式实验派发：仅源码编写、只读检查、纯CPU mocks/AST/小数组计算；不要import会初始化GL的模块、make_env、实例化ACT、CUDA推理、启动supervisor或任何实验worker。0新GL/模型观察。正式实验必须等待Codex与真实DeepSeek对最终协议、可运行代码及准确SHA均通过后主线程新的RUN派发。子6-1-sol-max暂保持PAUSED，主检查负责准备阶段续办；不要改主automation或Git index。\n\n请在新目录准备尽量复用已审代码的可运行两阶段实现和PROTOCOL.md候选：\n1) input worker按旧execution/scripts/stage1.py的真实make_env→Dataset/Evaluator/embedding建立与3入口采图调用顺序，只选旧sample_plan的0/1/4/5。复制owned_release.py/telemetry等到本目录，来源SHA+diff，安装owner释放/previous恢复与unknown非空拒绝，无共同HELD fixture/强制析构/新旁路。保留真实自然释放日志，目标窗口未出现NOT_REPRODUCED，不因此强制GC。每状态至多3render，正常+独立sentinel共≤12/24；保存健康raw和全部转换边界。官方/custom纯预处理必须使用相同已保存raw，不能把独立render差异当模型入口差异。实际Dataset预处理也应核对，但不注入真动作到prior。\n2) worker1全部退出后主审实际看图+原件输入门；worker2只读已冻结健康输入，strict-load现有checkpoint后eval/no_grad，batch1最多16次：4样本official prior/custom prior/official posterior各一次=12，sample0/1各official/custom repeat=4。sample4/5无重复不能外推噪声。固定具体seed/调用序/precision在协议中写死。prior键集不含labels，posterior显式诊断。计数需拦ACTPolicy及内部真正forward，防隐式/重试越限，不能重复计同一逻辑调用为两次。backward/optimizer/env.step/rollout禁止。\n3) 两新worker总600GPU分配秒含imports/init/load/cleanup，独立CPU supervisor限额；为输入worker设合理子上限以保留模型时间，总预算不扩大；waiting主审时无GPU进程，第二次监督器是显式model阶段新启动，不重启已终止旧作业。总2make_env、RSS16GiB/VRAM12GiB/CPU3线程/新输出150MiB，正式RUN派发+8hdeadline。失败/隐式render/read/model也占额度，不开第三worker/修复循环。冻结前可修CPU错误，冻结后出现具体问题就停回报；不消耗剩额找阳性。\n4) 读取旧CPU核验的checkpoint/stats/30x7训练采样加权mean/median，不拟合新常数。保存完整动作块、valid mask、规范单位和raw物理单位；按sample/demo、chunk位置和7维MAE/RMSE，以及xyz方向/夹爪/多样性，比较两个强常数。不要仅总loss或同样本常数，不用posterior好作为必过门；4状态2demo是训练内诊断不能证明泛化/闭环。主审会审定投入判据。\n5) 所有framework/源码路径只读，无下载/安装/预训练联网，现有已缓存资源亦须来源SHA；全checkpoint strict load前不吞missing/unexpected；旧env/数据/weights不写。新cache/temp在本目录。无Git add/commit/push。全局唯一RUN门绑定协议/code manifest hashes、执行者/model身份、累计预算；输入门绑定npz及源头哈希，父审未批准时model阶段拒绝启动。\n\n交付具体代码、冻结候选manifest（主审可能改故此时仅candidate）、CPU tests结果、源代码映射/差异、样本/调用清单、详细停止条件、STATUS/README。若600秒/两worker内无法实现，先报告具体矛盾，不尝试新观察。只做与这一次诊断直接相关的实现，不重新调研或上一轮论证。准备就绪后按既有用户委派回传授权一次通知主线程01a18138-0f15-76b2-b5cf-20e1722782a9，注明PREPARATION_READY_NO_GPU，随后等双审与正式RUN命令；不要自行激活子检查或实验。",
+  "receipt": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a185d0-2da8-70a2-b997-d273c7285042\"}"
+      }
+    ],
+    "isError": false
+  }
+}

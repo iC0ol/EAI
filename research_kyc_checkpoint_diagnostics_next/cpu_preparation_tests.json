@@ -1,0 +1,11 @@
+{
+  "utc": "2026-11-02T16:02:11.511053+00:00",
+  "tests": 32,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "GL_contexts": 0,
+  "models_constructed": 0,
+  "forwards": 0,
+  "experimental_workers": 0
+}

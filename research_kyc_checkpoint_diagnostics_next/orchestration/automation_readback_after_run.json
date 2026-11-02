@@ -1,0 +1,22 @@
+{
+  "checked_local": "2026-11-03T04:30:39.925501+08:00",
+  "verified": true,
+  "automations": {
+    "automation": {
+      "id": "automation",
+      "name": "KYC 冻结权重诊断与研究决策检查",
+      "status": "ACTIVE",
+      "rrule": "RRULE:FREQ=DAILY;BYHOUR=0,4,9,14,19;BYMINUTE=24;BYSECOND=36",
+      "target_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+      "updated_at": 1793651407741
+    },
+    "6-1-sol-max": {
+      "id": "6-1-sol-max",
+      "name": "6.1-sol max 冻结 checkpoint 诊断检查",
+      "status": "ACTIVE",
+      "rrule": "RRULE:FREQ=DAILY;BYHOUR=0,4,9,14,19;BYMINUTE=24;BYSECOND=36",
+      "target_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+      "updated_at": 1793651407801
+    }
+  }
+}

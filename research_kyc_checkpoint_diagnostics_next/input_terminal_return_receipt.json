@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-02T20:37:19.967Z",
+  "scope": "frozen_checkpoint_v2_input_terminal",
+  "input_terminal_callback_count": 1,
+  "target_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "authorization": "human-approved staged return in current AGENTS and formal RUN delegation: input failure terminal stop and report to parent",
+  "body": "本次正式RUN已 TERMINAL_STOP_INPUT_IMPORT_COLLISION，模型 NOT_RUN。RUN id kyc-frozen-84a848fd-a62d-4f61-8164-97044f315ae6。按冻结规则停止，无代码修改/修复/重试/第二worker；本消息是本RUN input失败后的唯一终止回传，请按失败原件验收，不能继续批准模型输入门。\n\n启动前完整核对了v2 protocol SHA 6ae547f65fc0b94a6954ae98d75fcf472a354b81d6e66f27abbd71b4b9ad883c、manifest SHA 9d2171f112023395171a259423be4d3a3ec40a7d3a4442de0561108a28729aa1、40本地/39来源及两审证据；实际只启动一次supervisor --stage input。supervisor PID174477；worker PID174562/start_ticks300542757，exit1。整个worker分配时间 3.926884102秒，失败名额已计入 workers=1；make_env/render/readPixels/ACT/env.step/rollout/backward/optimizer全0。GPU租约null，两原PID/start_ticks均不存在，GPU仅剩启动前已有543637/python296MiB。input210/累计600及截止均未扩大，余量未用于补救。\n\n真实traceback：input_worker.py:39 import experiment_lib → reproduction/scripts/experiment_lib.py:2 from common import ROOT,atomic_json,utc → ImportError: cannot import name ROOT from common（实际路径为新目录scripts/common.py）。诊断common已由顶层import缓存，后续sys.path.insert reproduction/scripts没有替换sys.modules的同名缓存。这是本轮整合入口错误；尚未make_env，更未评价健康RGB、checkpoint或F能力。没有尝试别名/重命名/sys.modules修补。原始CLI logs/input.log；公开结构化错误见 input_stop_delivery.json。\n\n没有生成input_result.json、NPZ或12帧；它在worker结果try/finally区之前失败。stages/input.json、run_state.json、stop_request.json、status.json是真实自动终止记录；完整执行报告FINAL_REPORT.md，CPU完整性原件input_stop_integrity.json。执行后40冻结本地/39来源SHA以及521旧证据size/mtime/SHA全部未变，prepare没有重建。strict load、16次模型清单、模型输出分析全部NOT_RUN，旧0/32仍UNKNOWN。不能据此判断checkpoint不优于常数或F科学No-Go。\n\n专属6-1-sol-max已PAUSED并读回保留prompt/name/rrule/target字段，automation_closure.json；主automation未改。Git index仍归主审，执行端无add/commit/push。当前v2公开候选为runtime_allowlist.txt + runtime_secret_scan.json（0模式命中）+ runtime_publication_manifest.json，原始CLI/cache/tmp/local_only和完整机器查询原件排除；旧preparation清单只是历史。input_terminal_return_receipt.json会保存本次回执并刷新交付指纹，不触碰冻结代码。\n\n本RUN已终止，模型不启动；等待研究负责人/双审对失败和下一决定的复核，不自行使用剩余worker或GPU预算。",
+  "body_sha256": "f23382a7946b4f77cb11e11b1a320b2f1d3b02798887ca193d2809da1d3cc663",
+  "tool_accepted": true,
+  "tool_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a18138-0f15-76b2-b5cf-20e1722782a9\"}"
+      }
+    ],
+    "isError": false
+  },
+  "model_stage": "NOT_RUN",
+  "next_experiment_not_authorized": true
+}

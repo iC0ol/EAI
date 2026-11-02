@@ -1,0 +1,44 @@
+{
+  "utc": "2026-11-02T20:30:07.719Z",
+  "dispatch": {
+    "run_id": "kyc-frozen-84a848fd-a62d-4f61-8164-97044f315ae6",
+    "mode": "RUN",
+    "executor": {
+      "thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "max"
+    },
+    "caps": {
+      "workers": 2,
+      "make_env": 2,
+      "renders": 12,
+      "readPixels": 24,
+      "ACT": 16,
+      "env_steps": 0,
+      "rollouts": 0,
+      "backward": 0,
+      "optimizer": 0
+    },
+    "GPU_seconds": 600,
+    "input_stage_authorized": true,
+    "dispatch_epoch": 1793651377.138746,
+    "deadline_epoch": 1793680177.138746,
+    "protocol_sha256": "6ae547f65fc0b94a6954ae98d75fcf472a354b81d6e66f27abbd71b4b9ad883c",
+    "code_manifest_sha256": "9d2171f112023395171a259423be4d3a3ec40a7d3a4442de0561108a28729aa1",
+    "dispatch_local": "2026-11-03T04:29:37.138746+08:00",
+    "deadline_local": "2026-11-03T12:29:37.138746+08:00",
+    "scope": "frozen_checkpoint_diagnostics",
+    "dispatch_receipt_state": "PREPARED_FOR_IMMEDIATE_SEND"
+  },
+  "tool_accepted": true,
+  "receipt": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a185d0-2da8-70a2-b997-d273c7285042\"}"
+      }
+    ],
+    "isError": false
+  },
+  "send_count": 1
+}

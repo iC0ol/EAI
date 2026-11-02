@@ -1,0 +1,8 @@
+{
+  "copied_local": "2026-11-02T23:01:13.561852+08:00",
+  "source": "research_kyc_diagnostics_20261029/03_下一阶段提示词_冻结模型诊断待批准.md",
+  "github_commit": "bbd1c2ce24bf547f67ce5696dfe94c46716bb21b",
+  "sha256": "595fc0a72392b97180c8afc24e0ba381a95cb26a92781a03d68a32fb566871ff",
+  "exact_git_blob_match": true,
+  "new_user_authorization": "2026-11-02 explicit approval in main chat supersedes draft pending-authorization status only within frozen checkpoint diagnostic scope"
+}

@@ -1,0 +1,23 @@
+{
+  "state": "APPROVED",
+  "checked_utc": "2026-11-02T16:05:50.668942+00:00",
+  "scope": "frozen_checkpoint_diagnostic_only",
+  "code_files": 40,
+  "source_files": 39,
+  "actual_hashes_verified_by": "Codex parent; DeepSeek explicitly reviewed provided exact hashes but did not execute hashing",
+  "no_RUN_yet": true,
+  "codex": {
+    "decision": "APPROVE",
+    "protocol_sha256": "6ae547f65fc0b94a6954ae98d75fcf472a354b81d6e66f27abbd71b4b9ad883c",
+    "code_manifest_sha256": "9d2171f112023395171a259423be4d3a3ec40a7d3a4442de0561108a28729aa1",
+    "evidence_file": "notes/04_Codex最终代码审查_v2.md",
+    "evidence_sha256": "b8d011f7d63fd5ac32efc701bb3f40d241465596242344cee6a919e0f05a0deb"
+  },
+  "deepseek": {
+    "decision": "APPROVE",
+    "protocol_sha256": "6ae547f65fc0b94a6954ae98d75fcf472a354b81d6e66f27abbd71b4b9ad883c",
+    "code_manifest_sha256": "9d2171f112023395171a259423be4d3a3ec40a7d3a4442de0561108a28729aa1",
+    "evidence_file": "discussion/28_final_code_cross_v2_response.md",
+    "evidence_sha256": "4dd163cabfb9fdec82c240386d864d37c457fbb35b5502871dcba4e593852c88"
+  }
+}

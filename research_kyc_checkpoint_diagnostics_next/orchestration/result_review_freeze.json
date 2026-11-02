@@ -1,0 +1,9 @@
+{
+  "parent_note": "notes/05_Codex终止原件独立验收.md",
+  "parent_note_sha256": "2086f50c4ba10ee576b843118426da2215d32769edd49ae42d38f0313ad1acff",
+  "parent_note_mtime_ns": 1793652009920054018,
+  "deepseek_round": "29_result_independent",
+  "deepseek_started_utc": "2026-11-02T20:40:09.982126+00:00",
+  "independent_views_before_cross_discussion": true,
+  "no_experiment_restart": true
+}

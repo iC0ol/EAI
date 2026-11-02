@@ -1,0 +1,20 @@
+[
+  {
+    "source": "/home/asus/EAI/research_kyc_diagnostics_20261029/render_controlled/scripts/owned_release.py",
+    "destination": "scripts/owned_release.py",
+    "source_sha256": "9bf522cc295656997ffa7f9c72de02095ac799507833ca89176764f61c539cd0",
+    "initial_copy_exact": true
+  },
+  {
+    "source": "/home/asus/EAI/research_kyc_diagnostics_20261029/render_controlled/scripts/telemetry.py",
+    "destination": "scripts/telemetry.py",
+    "source_sha256": "563eb9352257e1c3d1d013c4bcf3e9203bb3cab8df2971cfabef138931c16931",
+    "initial_copy_exact": true
+  },
+  {
+    "source": "/home/asus/EAI/research_kyc_diagnostics_20261029/render_controlled/scripts/test_owned_release.py",
+    "destination": "scripts/test_owned_release.py",
+    "source_sha256": "fabf72730e6f7857423d1b1f992cf0bce700c089542d6e330c8b1268775b250b",
+    "initial_copy_exact": true
+  }
+]

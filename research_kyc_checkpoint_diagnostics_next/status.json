@@ -1,0 +1,27 @@
+{
+  "utc": "2026-11-02T20:31:11.431324+00:00",
+  "state": "TERMINAL_STOP",
+  "stage": "input",
+  "counts": {
+    "workers": 1,
+    "make_env": 0,
+    "renders": 0,
+    "readPixels": 0,
+    "ACT": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "GPU_seconds": 3.9268841021694243,
+  "worker_alive": false,
+  "no_automatic_next_stage": true,
+  "no_new_training_rollout_authorization": true,
+  "execution_verdict": "TERMINAL_STOP_INPUT_IMPORT_COLLISION",
+  "model_stage": "NOT_RUN",
+  "automation_status": "PAUSED",
+  "delivery": "FINAL_REPORT.md",
+  "input_terminal_callback_count": 1,
+  "input_terminal_callback_state": "TOOL_ACCEPTED",
+  "input_terminal_callback_receipt": "input_terminal_return_receipt.json"
+}

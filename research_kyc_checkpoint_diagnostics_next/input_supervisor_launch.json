@@ -1,0 +1,26 @@
+{
+  "utc": "2026-11-02T20:31:05.334071+00:00",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "-B",
+    "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/supervisor.py",
+    "--stage",
+    "input"
+  ],
+  "identity": {
+    "pid": 174477,
+    "ppid": 174476,
+    "start_ticks": 300542539,
+    "state": "R",
+    "rss": 262144
+  },
+  "pid": 174477,
+  "sid": 174477,
+  "launcher_sid": 174475,
+  "protocol_sha256": "6ae547f65fc0b94a6954ae98d75fcf472a354b81d6e66f27abbd71b4b9ad883c",
+  "manifest_sha256": "9d2171f112023395171a259423be4d3a3ec40a7d3a4442de0561108a28729aa1",
+  "stage": "input",
+  "launch_count": 1,
+  "fresh_independent_CPU_supervisor": true,
+  "CUDA_VISIBLE_DEVICES": "0"
+}

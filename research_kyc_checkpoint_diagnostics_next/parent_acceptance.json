@@ -1,0 +1,23 @@
+{
+  "checked_utc": "2026-11-02T20:47:53.146777+00:00",
+  "scope": "current RUN terminal failure acceptance and research decision",
+  "execution_outcome": "TERMINAL_STOP_INPUT_IMPORT_COLLISION",
+  "scientific_outcome": "NOT_EVALUATED",
+  "current_checkpoint_ability": "UNKNOWN",
+  "historical_0_of_32_cause": "UNKNOWN",
+  "codex_independent": "notes/05_Codex终止原件独立验收.md",
+  "codex_evidence": "artifacts/parent_failure_acceptance.json",
+  "deepseek_independent": "discussion/29_result_independent_response.md",
+  "deepseek_cross": "discussion/30_result_cross_response.md",
+  "deepseek_cross_decision": "ACCEPT_WITH_REQUIRED_CORRECTIONS",
+  "corrections_applied_by_parent": "notes/06_结果交叉讨论与决定.md",
+  "deepseek_final_document_exact_SHA_resign": false,
+  "parent_final_report": "02_联合验收与研究决策报告.md",
+  "parent_final_report_sha256": "23ce56ebba9bfc9b981a1e4216a99097de02f8d946f594f6a98e8c8223791607",
+  "stop_and_budget_accepted": true,
+  "resumed_experiment": false,
+  "future_training_rollout_authorized": false,
+  "checkpoint_preserved": true,
+  "recommended_project_priority": "pause automatic F engineering; prioritize confirming reliable task-positive baseline; optional non-default bounded rescue only by new review/authorization",
+  "publication_state": "PENDING"
+}

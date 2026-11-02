@@ -1,0 +1,78 @@
+{
+  "utc": "2026-11-02T20:35:18.672720+00:00",
+  "run_id": "kyc-frozen-84a848fd-a62d-4f61-8164-97044f315ae6",
+  "verdict": "TERMINAL_STOP_INPUT_IMPORT_COLLISION",
+  "counts": {
+    "workers": 1,
+    "make_env": 0,
+    "renders": 0,
+    "readPixels": 0,
+    "ACT": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "GPU_allocation_seconds": 3.9268841021694243,
+  "input_phase_allocation_seconds": 210,
+  "worker_exit_code": 1,
+  "worker_identity": {
+    "pid": 174562,
+    "ppid": 174477,
+    "start_ticks": 300542757,
+    "state": "R",
+    "rss": 524288
+  },
+  "supervisor_pid": 174477,
+  "owned_processes_inactive": true,
+  "active_GPU_lease": null,
+  "error": {
+    "type": "ImportError",
+    "message": "cannot import name 'ROOT' from 'common'",
+    "resolved_common_path": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/common.py",
+    "importing_source": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py:2",
+    "worker_call_site": "scripts/input_worker.py:39",
+    "raw_traceback_file": "logs/input.log",
+    "interpretation": "diagnostic common module was already cached under common; inserting reproduction/scripts into sys.path did not replace the cached module",
+    "fix_attempted": false,
+    "retry_attempted": false
+  },
+  "inputs_generated": 0,
+  "PNG_frames_generated": 0,
+  "worker_input_result": "NOT_CREATED_BEFORE_FAILURE",
+  "make_env": "NOT_RUN",
+  "render": "NOT_RUN",
+  "readPixels": "NOT_RUN",
+  "strict_load": "NOT_RUN",
+  "model_forward": "NOT_RUN",
+  "model_worker": "NOT_STARTED",
+  "model_stage_authorization": "ABSENT_AND_CURRENT_RUN_TERMINAL",
+  "training": "NOT_RUN",
+  "rollout": "NOT_RUN",
+  "local_frozen_files_checked": 40,
+  "source_files_checked": 39,
+  "old_evidence_files_checked": 521,
+  "all_integrity_checks_unchanged": true,
+  "sampled_resource_peaks": {
+    "rss": 58990592,
+    "total_device_vram": 609222656,
+    "disk_bytes": 17074574
+  },
+  "resource_samples": 2,
+  "resource_peaks_are_sampled": true,
+  "remaining_GPU_processes": [
+    {
+      "pid": 543637,
+      "name": "python",
+      "used_memory_MiB": 296,
+      "existed_before_RUN": true
+    }
+  ],
+  "automation_status": "PAUSED",
+  "Git_index_mutations_by_executor": 0,
+  "research_conclusion": "checkpoint capability not evaluated; old 0/32 remains UNKNOWN",
+  "parent_review_required": true,
+  "input_terminal_callback_count": 1,
+  "input_terminal_callback_state": "TOOL_ACCEPTED",
+  "input_terminal_callback_receipt": "input_terminal_return_receipt.json"
+}

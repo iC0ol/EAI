@@ -1,0 +1,46 @@
+{
+  "state": "NOT_APPROVED_TEMPLATE",
+  "review_gate": {
+    "state": "APPROVED_ONLY_AFTER_BOTH_REVIEWS",
+    "codex": {
+      "decision": "PENDING",
+      "protocol_sha256": "FINAL_SHA",
+      "code_manifest_sha256": "FINAL_SHA",
+      "evidence_file": "discussion/PENDING.md",
+      "evidence_sha256": "FINAL_SHA"
+    },
+    "deepseek": {
+      "decision": "PENDING",
+      "protocol_sha256": "FINAL_SHA",
+      "code_manifest_sha256": "FINAL_SHA",
+      "evidence_file": "discussion/PENDING.md",
+      "evidence_sha256": "FINAL_SHA"
+    }
+  },
+  "dispatch": {
+    "mode": "NOT_RUN",
+    "executor": {
+      "thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "max"
+    },
+    "run_id": null,
+    "input_stage_authorized": false,
+    "protocol_sha256": "FINAL_SHA",
+    "code_manifest_sha256": "FINAL_SHA",
+    "caps": {
+      "workers": 2,
+      "make_env": 2,
+      "renders": 12,
+      "readPixels": 24,
+      "ACT": 16,
+      "env_steps": 0,
+      "rollouts": 0,
+      "backward": 0,
+      "optimizer": 0
+    },
+    "GPU_seconds": 600,
+    "dispatch_epoch": null,
+    "deadline_epoch": null
+  }
+}

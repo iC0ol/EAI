@@ -1,0 +1,16 @@
+{
+  "run_id": "kyc-frozen-84a848fd-a62d-4f61-8164-97044f315ae6",
+  "prepared_epoch": 1793651377.138746,
+  "target": {
+    "thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "max"
+  },
+  "prompt_sha256": "7b2f59586b3a2fddc09f5d2446abb14cb61363034d67adf27f0574cdbeeea1e4",
+  "state": "PREPARED_ONCE",
+  "prior_rehash": {
+    "local_files": 40,
+    "read_only_sources": 39,
+    "passed": true
+  }
+}

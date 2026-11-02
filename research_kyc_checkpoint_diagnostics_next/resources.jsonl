@@ -1,0 +1,2 @@
+{"utc": "2026-11-02T20:31:07.622258+00:00", "rss": 48234496, "total_device_vram": 609222656, "disk_bytes": 17074402, "stage": "input", "worker_elapsed": 0.169080660212785}
+{"utc": "2026-11-02T20:31:09.706459+00:00", "rss": 58990592, "total_device_vram": 608174080, "disk_bytes": 17074574, "stage": "input", "worker_elapsed": 2.245962306857109}

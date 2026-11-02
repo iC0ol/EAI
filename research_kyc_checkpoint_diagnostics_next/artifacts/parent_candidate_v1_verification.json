@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-11-02T15:56:58.699068+00:00",
+  "protocol_sha256": "ddbfbc0b4ad45fd3d380a2984c9ef0591d461429817af8c6b9cd9dc2da428381",
+  "code_manifest_sha256": "dcf61668dc0d5789c313d9afd759b99a8c610a43b8a9fbd16f2405470c670ee7",
+  "local_files": 38,
+  "source_files": 39,
+  "mismatches": [],
+  "new_GL_model_observations": 0,
+  "parent_code_verdict": "REVISE_render_error_gate"
+}

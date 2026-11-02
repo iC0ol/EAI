@@ -1,0 +1,20 @@
+{
+  "utc": "2026-11-02T15:50:07.770Z",
+  "scope": "checkpoint_diagnostics_PREPARATION_ONLY",
+  "preparation_callback_count": 1,
+  "target_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "authorization": "new scope AGENTS explicitly authorizes staged preparation/progress/completion return to parent, consistent with original human delegation",
+  "body_sha256": "081e14ba83721557b54f991df092710c0c76fe9429e84e31cbf6d8da2b42fdbc",
+  "body": "PREPARATION_READY_NO_GPU。新目录 /home/asus/EAI/research_kyc_checkpoint_diagnostics_next/ 的两阶段实现和协议候选已备齐；没有正式RUN、没有启动supervisor/实验worker、0新GL/ACT构造/forward，strict load仍NOT_RUN。子6-1-sol-max只读确认保持PAUSED；未改任何automation或Git index，未add/commit/push。\n\n本次待双审准确SHA：PROTOCOL.md=ddbfbc0b4ad45fd3d380a2984c9ef0591d461429817af8c6b9cd9dc2da428381；candidate_manifest.json=dcf61668dc0d5789c313d9afd759b99a8c610a43b8a9fbd16f2405470c670ee7。该manifest绑定38个本地文件及39个只读来源，已经全部再次核验一致。CPU 30项复用生命周期mock+32项新增门控/计数/统计检查=62通过；16脚本AST编译。四状态两个冻结常数的MAE/RMSE与父审参考对齐到13位，未拟合新常数。\n\n请从PREPARATION_REPORT.md、PROTOCOL.md、candidate_manifest.json、source_map.json/patches、sample_plan.json/call_plan.json、cpu_mock.json/cpu_preparation_tests.json审查。input_worker按真实旧stage1顺序make_env→Dataset→Evaluator→embedder、各样本Dataset/Evaluator/custom三入口，无HELD/强制析构/额外GC；目标自然窗口未出现独立记NOT_REPRODUCED。raw/sentinel与五边界留证；official/custom复用同一已保存canonical raw，实际Dataset也对照。输入全退出后，父审实际看图和CPU原件证据、所有输入/源头SHA、stage进程及累计计数记录绑定RUN_MODEL门；晚发fatal或文件集变化也拒绝。两个显式CPU supervisor stage共享不可重置计数/600秒，input子上限210、model至少390，距各配额15秒终止，另有PDEATHSIG和默认alarm备份；不驻GPU等审。\n\n需要最终代码审查的新窄适配已公开：只读固定ResNet缓存URL/SHA映射；models.detr_vae模块内torch proxy只把AdamW factory改为inert NoOptimizer，其余torch属性委托原件。官方架构、args、完整strict load及BF16 autocast保持；这两个真实运行路径尚未执行，CPU检查不能替代它们。ACTPolicy及内部forward由同一ticket匹配计一次逻辑调用，隐式/额外调用记额外尝试并停止；prior外键无actions/is_pad，内部原API只允许None，posterior显式动作条件。16次顺序、旧seed、BF16/TF32 off都已预登记。\n\n已把notes/02候选规则落实到metrics/analyze和协议：两个完整常数分别比较，首次官方prior四状态等权，RMSE分pooled与mean-state，方向/夹爪退化否决，0/1本状态重复tol公式+1e-3硬限，4/5不借噪声，20%与3/4覆盖两demo仅作为闭环计划信号；“无明确可修原因”保留父审判断条件，posterior/repeat不重复计能力。预算/数学未发现具体矛盾，真实耗时/GL/strict-load/BF16结果均未测，超限或具体错误即停，不修复循环/扩容。\n\n公开候选清单preparation_allowlist.txt、扫描preparation_secret_scan.json（0模式命中）、指纹preparation_publication_manifest.json；local_only/cache/tmp、原始CLI与主审run_deepseek/讨论不在执行者允许清单。回执会保存preparation_return_receipt.json并更新交付指纹，不改变上述候选代码manifest。这里只是准备就绪，最终Codex与真实DeepSeek必须批准准确协议/代码SHA，之后主审另发正式RUN。请勿把真实DeepSeek26事前指标意见当作本代码最终APPROVE。我随后等待双审与RUN。",
+  "tool_accepted": true,
+  "tool_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a18138-0f15-76b2-b5cf-20e1722782a9\"}"
+      }
+    ],
+    "isError": false
+  },
+  "not_an_experiment_dispatch": true
+}

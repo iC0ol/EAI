@@ -1,0 +1,152 @@
+{
+  "checked_utc": "2026-11-02T20:47:53.146405+00:00",
+  "rounds": [
+    {
+      "turn": "26_protocol_criteria",
+      "transport": "existing terminal Claude CLI connection, resumed session",
+      "started_utc": "2026-11-02T15:06:02.487381+00:00",
+      "ended_utc": "2026-11-02T15:07:13.839982+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "actual_response_model_fields": [
+        "deepseek-flash"
+      ],
+      "prompt_file": "discussion/26_protocol_criteria_prompt.md",
+      "response_file": "discussion/26_protocol_criteria_response.md",
+      "prompt_sha256": "916e05c8224d467037f8ff14e8c57bddf9fc6982b27a3d6325f6eecdcfb8e9e2",
+      "response_sha256": "ab6902c71c0ee77e95ed63b1ec75fe3f0100eb5843c82877f2b30876e9df73b4",
+      "private_raw_stream_sha256": "226c99f2bd3cc3e59a79ef3580fca2fe2f794b83471557741f0fc6765dd8c4eb",
+      "actual_Read_paths": [
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/00_本轮授权.md",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/00_任务基础_原文.md",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/notes/01_Codex事前判据.md",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/orchestration/preparation_dispatch.json"
+      ],
+      "raw_stream_and_full_metadata_published": false
+    },
+    {
+      "turn": "27_final_code_independent",
+      "transport": "existing terminal Claude CLI connection, resumed session",
+      "started_utc": "2026-11-02T15:51:12.209677+00:00",
+      "ended_utc": "2026-11-02T15:57:32.607969+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "actual_response_model_fields": [
+        "deepseek-flash"
+      ],
+      "prompt_file": "discussion/27_final_code_independent_prompt.md",
+      "response_file": "discussion/27_final_code_independent_response.md",
+      "prompt_sha256": "9297c8167fa57c0be0cbac5b91743399cb7f6c5caf6cd3b927668f14a61d5308",
+      "response_sha256": "d7919e592e9f814b744acca6501482a5751e5a32f698f3138bc8becc03c1d5dd",
+      "private_raw_stream_sha256": "7ee10ca3e9de08ea676283449c03429eb21275eff99ac910a77040293e7a690d",
+      "actual_Read_paths": [
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/PROTOCOL.md",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/candidate_manifest.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/notes/02_判据交叉处理.md",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/PREPARATION_REPORT.md",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/sample_plan.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/call_plan.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/source_map.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/notes/02_判据交叉处理_供最终协议.md",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/common.py",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/gates.py",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/runtime_safety.py",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/input_runtime.py",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/input_worker.py",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/model_worker.py",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/call_guard.py",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/metrics.py",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/analyze.py",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/supervisor.py",
+        "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/constants.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/lc_common.py"
+      ],
+      "raw_stream_and_full_metadata_published": false
+    },
+    {
+      "turn": "28_final_code_cross_v2",
+      "transport": "existing terminal Claude CLI connection, resumed session",
+      "started_utc": "2026-11-02T16:03:25.182773+00:00",
+      "ended_utc": "2026-11-02T16:04:04.648910+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "actual_response_model_fields": [
+        "deepseek-flash"
+      ],
+      "prompt_file": "discussion/28_final_code_cross_v2_prompt.md",
+      "response_file": "discussion/28_final_code_cross_v2_response.md",
+      "prompt_sha256": "9e6ad04cb7a3c634f3a982d9104b3306ff3ceb560a1abdc414edf7224b28cd5d",
+      "response_sha256": "4dd163cabfb9fdec82c240386d864d37c457fbb35b5502871dcba4e593852c88",
+      "private_raw_stream_sha256": "68d25be68dea1fd96953266d07dcc3b3792dbe36f6eb67fa500848a2644a1015",
+      "actual_Read_paths": [
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/input_runtime.py",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/test_render_health.py",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/artifacts/parent_render_gate_regression_v2.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/notes/04_Codex最终代码审查_v2.md",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/PROTOCOL.md",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/candidate_manifest.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/artifacts/parent_code_probe_v1.json"
+      ],
+      "raw_stream_and_full_metadata_published": false
+    },
+    {
+      "turn": "29_result_independent",
+      "transport": "existing terminal Claude CLI connection, resumed session",
+      "started_utc": "2026-11-02T20:40:09.982126+00:00",
+      "ended_utc": "2026-11-02T20:41:56.642153+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "actual_response_model_fields": [
+        "deepseek-flash"
+      ],
+      "prompt_file": "discussion/29_result_independent_prompt.md",
+      "response_file": "discussion/29_result_independent_response.md",
+      "prompt_sha256": "0bfe7166a4db31692c0f0246e052fe354b673538ce6c58107ea6c826ab43c5f1",
+      "response_sha256": "dcdb1dcef037276a9e71bbbbdd167bcf005f982c0ea2ff9c0705fbc8193c9a74",
+      "private_raw_stream_sha256": "0ab49caa2b8458f81fae764ea3664b888e5fbbcb2231d80b6848a2d88a0b73a5",
+      "actual_Read_paths": [
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/00_本轮授权.md",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/dispatch.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/review_gate.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/run_state.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/logs/input.log",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/stages/input.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/stop_request.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/input_supervisor_launch.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/commands.jsonl",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/call_ledger.jsonl",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/resources.jsonl",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/input_stop_integrity.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/input_worker.py",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py",
+        "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/common.py",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/test_preparation.py"
+      ],
+      "raw_stream_and_full_metadata_published": false
+    },
+    {
+      "turn": "30_result_cross",
+      "transport": "existing terminal Claude CLI connection, resumed session",
+      "started_utc": "2026-11-02T20:43:58.456452+00:00",
+      "ended_utc": "2026-11-02T20:44:25.952200+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "actual_response_model_fields": [
+        "deepseek-flash"
+      ],
+      "prompt_file": "discussion/30_result_cross_prompt.md",
+      "response_file": "discussion/30_result_cross_response.md",
+      "prompt_sha256": "a343f69dc04fbb83311fd5f67b77ed4d38b990127da47cef2c8d8292d7df8379",
+      "response_sha256": "069c20b88179d0b8679b5d814e7b3861553b7f7b0dbf2fbb7dfd23f4f39acb69",
+      "private_raw_stream_sha256": "6fc18db1ed4e66ac8dc764a9b3b63f1e4be2595b82c3d7865b7eadf8ac10d4ea",
+      "actual_Read_paths": [
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/notes/05_Codex终止原件独立验收.md",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/artifacts/parent_failure_acceptance.json",
+        "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/02_联合验收与研究决策报告.md"
+      ],
+      "raw_stream_and_full_metadata_published": false
+    }
+  ],
+  "round29_parent_note_read": false,
+  "billing_claim": "no cost/usage interpretation from cumulative provider metadata"
+}

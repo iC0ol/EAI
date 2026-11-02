@@ -1,0 +1,7 @@
+{
+  "checked_utc": "2026-11-02T16:00:39.544330+00:00",
+  "tests": 5,
+  "passed": true,
+  "new_GL_model_observations": 0,
+  "scope": "CPU fake native functions and telemetry only; no real context/model"
+}

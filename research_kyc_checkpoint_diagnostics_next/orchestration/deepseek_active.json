@@ -1,0 +1,9 @@
+{
+  "state": "COMPLETED",
+  "latest_round": "30_result_cross",
+  "actual_response_model_fields": [
+    "deepseek-flash"
+  ],
+  "result": "conditional acceptance; parent recorded and applied corrections",
+  "new_experiment_started": false
+}

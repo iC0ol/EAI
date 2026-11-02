@@ -1,0 +1,9 @@
+# 最终v2代码交叉审核：仅本轮，不重复旧报告
+
+新目录 /home/asus/EAI/research_kyc_checkpoint_diagnostics_next 。你27已静态APPROVE v1，但Codex在读27前独立找到真实缺口：mjr_render的after遥测会排空GL错误，却不检查；后续read成功可能误放行旧缓冲。纯CPU反例见artifacts/parent_code_probe_v1.json及notes/03，v1原协议/manifest备份review_snapshots/v1。请明确检验并回应此遗漏，不以你先前APPROVE替代反驳。
+
+主审已修改v2：协议SHA 6ae547f65fc0b94a6954ae98d75fcf472a354b81d6e66f27abbd71b4b9ad883c；candidate_manifest SHA 9d2171f112023395171a259423be4d3a3ec40a7d3a4442de0561108a28729aa1。请完整读PROTOCOL.md、scripts/input_runtime.py、scripts/test_render_health.py、artifacts/parent_render_gate_regression_v2.json、notes/04_Codex最终代码审查_v2.md与新manifest。其他运行模块未改；prepare.py仅新增回归脚本/证据绑定，cpu_preparation_tests.json重跑更新。5项新CPUmock与32项准备检查通过；首轮主线程跑CPU fixture时其执行者ID检查拒绝，随后仅mock作用域声明fixture预期ID通过，真实worker gate未改变、未启动。
+
+v2的render/read前后健康门是否真的消除了排空错误被后续成功read掩盖；是否改变原锁/次数/实际功能或引入静态必败路径？若有具体阻塞指出最小代码位置，否则明确APPROVE上述准确两个SHA作为最终有限实验代码/协议审核。主审已重算SHA，仍将在RUN前复核。静态审查不是运行结果，真正RUN由主线程在共享额度足够后单独派发。
+
+请控制在600–1000中文字符，只回答本次漏洞、修正、准确SHA审批和剩余运行时边界。不要复述旧renderer事件编号、F旧文献或下一稿待批准；本轮有限诊断的人类授权已存在，后续训练/闭环仍未批准。只读，禁止执行代码/GL/模型。

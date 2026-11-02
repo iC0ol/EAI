@@ -1,0 +1,127 @@
+{
+  "functions": [
+    {
+      "file": "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/scripts/stage1.py",
+      "function": "prepare_inputs",
+      "line": 114,
+      "end_line": 199,
+      "source_sha256": "aa1ba80afdb93eaef6d8ab876482fbb4b6ce49946edc62949c412576005972a8",
+      "segment_sha256": "8e381f68f320ebe9dc8dd305b82fe9e8cf1928dddfe3b84417a099a43f41705c"
+    },
+    {
+      "file": "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/scripts/stage1.py",
+      "function": "official_eval_data",
+      "line": 92,
+      "end_line": 102,
+      "source_sha256": "aa1ba80afdb93eaef6d8ab876482fbb4b6ce49946edc62949c412576005972a8",
+      "segment_sha256": "d0101ee23f9215a749514ee5095c51d35ee0a1b35e9eb61988eab6ad0a4c77d2"
+    },
+    {
+      "file": "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/scripts/stage1.py",
+      "function": "frozen_dataset_choices",
+      "line": 62,
+      "end_line": 86,
+      "source_sha256": "aa1ba80afdb93eaef6d8ab876482fbb4b6ce49946edc62949c412576005972a8",
+      "segment_sha256": "b2dc503188dab00e8cc11fbc5a9e1d545679dd430d06875b213e184816d879d6"
+    },
+    {
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py",
+      "function": "make_env",
+      "line": 17,
+      "end_line": 22,
+      "source_sha256": "c3aa5e196a9dfaaf9ce94fd307987c508570deb1d87f6f9f25686d6912b3073c",
+      "segment_sha256": "5efea8c4ad8b4266bf95693e781ce63713ac22fc8db15bcffe84d4e0ea319f88"
+    },
+    {
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py",
+      "function": "render",
+      "line": 25,
+      "end_line": 26,
+      "source_sha256": "c3aa5e196a9dfaaf9ce94fd307987c508570deb1d87f6f9f25686d6912b3073c",
+      "segment_sha256": "094fe3d13fc6ff13e1a03f4eeaa79053b2f15c24e9cc66411cdf0adbd14e53c7"
+    },
+    {
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py",
+      "function": "policy_input",
+      "line": 34,
+      "end_line": 40,
+      "source_sha256": "c3aa5e196a9dfaaf9ce94fd307987c508570deb1d87f6f9f25686d6912b3073c",
+      "segment_sha256": "8c52e7108b3861f8ad4738bc644d4ca851a8a6c477969f75b85dc66a79336f4c"
+    },
+    {
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/utils.py",
+      "function": "EpisodicDataset.__init__",
+      "line": 248,
+      "end_line": 322,
+      "source_sha256": "fbe212146cd0f93e8aa04a98913c736aabf2e4f06ff40eb6544934d0acf9fa1a",
+      "segment_sha256": "bcc6dcd1048b1edd1394f704ddb70ee87f5bbbdf92b9ed2965da94da800fb5ac"
+    },
+    {
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/utils.py",
+      "function": "EpisodicDataset.__getitem__",
+      "line": 354,
+      "end_line": 432,
+      "source_sha256": "fbe212146cd0f93e8aa04a98913c736aabf2e4f06ff40eb6544934d0acf9fa1a",
+      "segment_sha256": "96fa075b8993bb9f1ad7e4f802c7ebb626bbbcc78484144764fed29cc149556a"
+    },
+    {
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/eval.py",
+      "function": "Evaluator.__init__",
+      "line": 79,
+      "end_line": 114,
+      "source_sha256": "702c7daf81cc73326edd9a86b55173e5440e17ce1efa169ec7ff2a66ab043571",
+      "segment_sha256": "4e4df67f5011ab1eb8f0a5adde66f076bbb760c2f40a8fd391d34ad4f9526f7e"
+    },
+    {
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/eval.py",
+      "function": "Evaluator._render_cam_image",
+      "line": 152,
+      "end_line": 158,
+      "source_sha256": "702c7daf81cc73326edd9a86b55173e5440e17ce1efa169ec7ff2a66ab043571",
+      "segment_sha256": "a25a2d21a331d1f9726a223aec157c755f54017568f34ba30ae64c70ecc94e2d"
+    },
+    {
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/eval.py",
+      "function": "Evaluator._image_to_tensor",
+      "line": 160,
+      "end_line": 171,
+      "source_sha256": "702c7daf81cc73326edd9a86b55173e5440e17ce1efa169ec7ff2a66ab043571",
+      "segment_sha256": "0317fd69f63b63366a0cb902f832cd2714acd10679854d09bab2da3647aa7470"
+    },
+    {
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/act.py",
+      "function": "ACTPolicy.__call__",
+      "line": 18,
+      "end_line": 58,
+      "source_sha256": "f294859ec44faa1622e586faa627af4f6aa711c23e0804e62c62bbc4672de9db",
+      "segment_sha256": "4b8fa5e5c08fc4826ce8563c97dc81d55ca78ffca71fee322fc071989a6ef22a"
+    },
+    {
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/detr_vae.py",
+      "function": "DETRVAE.forward",
+      "line": 61,
+      "end_line": 119,
+      "source_sha256": "fda4173929fbbf447ebd7eeb67d4c91818e86d88d52ca27ba641054adf1cda0f",
+      "segment_sha256": "8ec890e53e1b94fed214e1457c7b123adb030e69b96e33d5e04593cdd5a82ec7"
+    },
+    {
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/detr_vae.py",
+      "function": "build",
+      "line": 121,
+      "end_line": 193,
+      "source_sha256": "fda4173929fbbf447ebd7eeb67d4c91818e86d88d52ca27ba641054adf1cda0f",
+      "segment_sha256": "88890a701174a60ba34f46cd0a61bdc25157f2b3aae2b7d60f5715770e867793"
+    }
+  ],
+  "criteria_source": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/notes/02_判据交叉处理_供最终协议.md",
+  "criteria_source_sha256": "1059d13632c23f6546810bed5bda4fa9641191a6ba98f6eced137bca76fb2648",
+  "copied_modules": "copied_sources.json",
+  "adaptations": [
+    "natural release wrapper has no held/forced fixture",
+    "same-raw official preprocessing compiles exact pinned function AST",
+    "only dataset random time/camera draws fixed, RNG restored",
+    "narrow builder torch proxy suppresses real optimizer only",
+    "cached ResNet URL resolves read-only approved local file",
+    "policy/internal ticket counts and two explicit supervised stages"
+  ]
+}

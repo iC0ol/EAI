@@ -1,0 +1,13 @@
+# Codex最终协议/代码独立审查v1
+
+先于读取真实DeepSeek27回复。对象：协议ddbfbc0b4ad45fd3d380a2984c9ef0591d461429817af8c6b9cd9dc2da428381；manifest dcf61668dc0d5789c313d9afd759b99a8c610a43b8a9fbd16f2405470c670ee7。**REVISE，尚不可RUN。**
+
+主审已读两worker、input_runtime、model call_guard、gates/common/runtime_safety、supervisor、metrics/analyze/prepare、复制的owner事务与telemetry及实际官方ACT/build/backbone、Dataset构造。按当前manifest核查来源，不以准备报告替代代码。架构build内部已有model.cuda()，model_worker无需再调用.cuda；torch proxy只更换builder的AdamW工厂，其余操作委托原torch，strict load保留。官方checkpoint audit args与实际C_config经CPU JSON比较完全一致。
+
+阻塞1：input_runtime.install内mjr_render wrapper调用api.note(before/after)但不检验返回值。Telemetry.observe会通过glGetError排空错误；后续readPixels的健康门只检查其自己事件。因此如果render报错而读回仍成功，可能读到旧缓冲并错误通过（sample0参考只能覆盖一个状态，另外三个不应据场景可辨认断定已渲染成功）。主审纯CPU mock令mjr_render_after返回[1286,0]，wrapper仍正常返回；见artifacts/parent_code_probe_v1.json。要求在render前/后和read前/后都检查current/对象/观测错误，并在首次异常立即可见失败。不要增加render/read次数或资源重建；补该分支mock，再更新协议/准确manifest提交双审。
+
+非阻塞但需留边界：runtime自然析构没有额外强引用或强制GC，代码依靠当前单GL执行线程。旧release事务本身不提供跨线程锁所有权机制，本轮不外推并发/长时部署；不要为假设性并发另加工程扩容。输入cleanup置空引用并校验全context已销毁，后续晚发fatal/文件变化会阻断模型，不掩盖异常。
+
+其余已核点：同raw路径与真实Dataset分别比对；label只进posterior；ACT逻辑和内部forward票据不双计正常调用，非法额外尝试有ledger；父审输入证据哈希、原件文件集、退出计数及独立RUN_MODEL都绑定；监督总600秒跨两stage、input210秒、15秒收尾与worker死亡保护不返还失败名额。主/副指标和双常数、4/5无重复、方向夹爪否决为事前投资筛选，非任务阳性。真实GL/严格加载/BF16耗时仍待有限实验，不由CPU测试保证。
+
+看到输出后不可扩大容差或更改投资门；当前结果尚不存在。修正本静态问题属于正式RUN前代码审核，不是新实验或失败后修复循环。

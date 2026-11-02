@@ -1,0 +1,23 @@
+{
+  "utc": "2026-11-02T20:35:18.672720+00:00",
+  "automation_id": "6-1-sol-max",
+  "status": "PAUSED",
+  "confirmed_by": "automation_update accepted then actual automation.toml reread",
+  "preserved_fields": [
+    "id",
+    "kind",
+    "name",
+    "prompt",
+    "rrule",
+    "target_thread_id",
+    "created_at"
+  ],
+  "preserved_fields_equal": true,
+  "changed_fields": [
+    "status",
+    "updated_at"
+  ],
+  "target_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+  "main_automation_modified": false,
+  "reason": "input worker failed; current RUN terminal; model NOT_RUN"
+}

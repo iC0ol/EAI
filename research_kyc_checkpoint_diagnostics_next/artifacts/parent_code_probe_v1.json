@@ -1,0 +1,8 @@
+{
+  "checked_utc": "2026-11-02T15:55:45.383255+00:00",
+  "probe": "v1 render wrapper receives nonzero GL error in after telemetry",
+  "mock_returned_without_rejection": true,
+  "new_GL_model_observations": 0,
+  "protocol_sha": "ddbfbc0b4ad45fd3d380a2984c9ef0591d461429817af8c6b9cd9dc2da428381",
+  "finding": "mjr_render_after error event is logged/drained but not checked; later successful readPixels alone can mark a stale frame healthy"
+}

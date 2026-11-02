@@ -1,0 +1,17 @@
+{
+  "decision": "PENDING",
+  "mode": "NOT_RUN",
+  "run_id": null,
+  "actual_images_viewed": false,
+  "CPU_originals_checked": false,
+  "model_stage_authorized": false,
+  "reviewer_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "code_manifest_sha256": "FINAL_SHA",
+  "input_result_sha256": "FINAL_SHA",
+  "input_stage_record_sha256": "FINAL_SHA",
+  "counts_after_input": {},
+  "input_files": {},
+  "source_hashes": {},
+  "review_evidence_file": null,
+  "review_evidence_sha256": null
+}

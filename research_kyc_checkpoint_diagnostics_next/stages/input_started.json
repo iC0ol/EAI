@@ -1,0 +1,12 @@
+{
+  "utc": "2026-11-02T20:31:07.351324+00:00",
+  "run_id": "kyc-frozen-84a848fd-a62d-4f61-8164-97044f315ae6",
+  "identity": {
+    "pid": 174477,
+    "ppid": 2150,
+    "start_ticks": 300542539,
+    "state": "R",
+    "rss": 21364736
+  },
+  "stage": "input"
+}

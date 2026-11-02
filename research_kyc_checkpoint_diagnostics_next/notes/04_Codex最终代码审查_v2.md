@@ -1,0 +1,12 @@
+# Codex最终代码审查v2
+
+结论：APPROVE 本轮有限诊断的协议与代码，仍须真实DeepSeek对同一SHA通过且正式RUN派发。
+
+PROTOCOL.md SHA256：6ae547f65fc0b94a6954ae98d75fcf472a354b81d6e66f27abbd71b4b9ad883c
+candidate_manifest.json SHA256：9d2171f112023395171a259423be4d3a3ec40a7d3a4442de0561108a28729aa1
+
+v1的渲染错误排空但未检查缺口已修复。现在mjr_render/readPixels前后都必须通过current/原对象/错误状态门，before不合格不触发native，after不合格立即停止；render还检查原锁。5项纯CPU回归涵盖健康render、render前/后错误、read前/后错误，全部通过。32项原准备测试复验通过；首次在主线程原身份运行时2个伪造合法门fixture因执行者ID不符而拒绝，记录在review_snapshots/v1/parent_cpu_test_attempt.json，随后仅在纯CPU fixture作用域模拟其声明执行者ID后全部通过。没有实际RUN、worker、GL或模型，也未改变真实运行身份检查。
+
+其余模块沿notes/03独立审查；source SHA重新绑定，原v1协议/manifest准确备份。prepare只重建候选清单，未授权或启动worker。修正不增加原预算、不加GC/资源重建，不是失败后实验修复循环。只读缓存/NoOptimizer窄适配尚未真实执行，strict-load仍NOT_RUN；这些由已冻结失败即停门约束。本批准只限16/12/24/600、2worker、0训练/闭环的固定诊断。
+
+当前不是任务结果。父审必须在输入worker退出后实看图像/原件，再单独RUN_MODEL；以后任何代码变化须重新双审。
