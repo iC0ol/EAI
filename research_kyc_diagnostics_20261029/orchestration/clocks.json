@@ -3,13 +3,13 @@
   "main_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
   "main_automation_id": "automation",
   "main_check_status": "ACTIVE",
-  "usage_checked_local": "2026-10-29T17:13:00+08:00",
-  "five_hour_used_percent": 57,
-  "weekly_used_percent": 88,
+  "usage_checked_local": "2026-11-02T09:26:09.475960+08:00",
+  "five_hour_used_percent": 4,
+  "weekly_used_percent": 1,
   "account_shared_usage": true,
-  "five_hour_resets_at_unix": 1793281713,
-  "five_hour_resets_local": "2026-10-29T21:48:33+08:00",
-  "main_next_check_local": "2026-10-29T21:38:53+08:00",
+  "five_hour_resets_at_unix": 1793600556,
+  "five_hour_resets_local": "2026-11-02T14:22:36+08:00",
+  "main_next_check_local": "2026-11-02T14:24:36+08:00",
   "reset_buffer_seconds": 120,
   "max_check_interval_seconds": 18000,
   "scheduling_rule": "Refresh real account resetsAt on each wake. Choose a future useful reset+120s or last-check+5h, whichever is earlier; avoid scheduling a stale reset or a busy poll. If reset unavailable, use five hours. Completion callback can wake sooner.",
@@ -17,7 +17,7 @@
   "reset_credit_redemption": "NOT_REQUESTED_NOT_USED",
   "executor_automation_id": "6-1-sol-max",
   "executor_check_status": "ACTIVE",
-  "last_main_check_local": "2026-10-29T16:38:53+08:00",
+  "last_main_check_local": "2026-11-02T09:26:09.475960+08:00",
   "checks": [
     {
       "local": "2026-10-29T11:38:38+08:00",
@@ -35,16 +35,34 @@
       "event": "new user-authorized render repair dispatched after DeepSeek17 APPROVE; both existing automations updated",
       "five_hour_used_percent": 57,
       "weekly_used_percent": 88
+    },
+    {
+      "local": "2026-10-29T17:40:04.520247+08:00",
+      "event": "received repair failure; checked worker exits; primary99%; resumed check moved to real reset+120s",
+      "five_hour_used_percent": 99,
+      "weekly_used_percent": 95
+    },
+    {
+      "local": "2026-11-02T09:26:09.475960+08:00",
+      "event": "Human resumed after quota refreshed; DeepSeek19 exists; v2 sent to real DeepSeek20; no lifecycle dispatch yet",
+      "five_hour_used_percent": 4,
+      "weekly_used_percent": 1
+    },
+    {
+      "local": "2026-11-02T09:27:56.482676+08:00",
+      "event": "Joint-approved v2 lifecycle repair actually dispatched; existing executor check ACTIVE"
     }
   ],
   "executor_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
-  "executor_dispatch_local": "2026-10-29T17:17:25+08:00",
-  "executor_next_check_local": "2026-10-29T21:50:33+08:00",
-  "executor_next_check_reason": "real shared account reset21:48:33+120 seconds; earlier than dispatch+5h",
-  "executor_five_hour_latest_local": "2026-10-29T22:17:25+08:00",
-  "executor_total_deadline_local": "2026-10-30T01:17:25+08:00",
-  "active_scope": "render_repair: user explicitly requested cause investigation and repair",
-  "executor_scope": "render_repair",
+  "executor_dispatch_local": "2026-11-02T09:27:56.482676+08:00",
+  "executor_next_check_local": "2026-11-02T14:24:36+08:00",
+  "executor_next_check_reason": "real shared reset14:22:36+120s; hourly interval5 fallback, no daily COUNT rule",
+  "executor_five_hour_latest_local": "2026-11-02T14:27:56.482676+08:00",
+  "executor_total_deadline_local": "2026-11-02T17:27:56.482676+08:00",
+  "active_scope": "render_lifecycle",
+  "executor_scope": "render_lifecycle",
   "prior_execution_completed_local": "2026-10-29T12:24:39.460746+08:00",
-  "prior_execution_completion_reason": "STOP_INPUT_PREREQUISITE; PARTIAL; publication FAILED_NETWORK"
+  "prior_execution_completion_reason": "STOP_INPUT_PREREQUISITE; PARTIAL; publication FAILED_NETWORK",
+  "main_state": "LIFECYCLE_DISPATCHED",
+  "scheduling_correction": "Previous DAILY + COUNT=1 repeatedly fired daily. Existing heartbeat corrected to hourly interval 5 with minute24/second36, next intended check 14:24:36 reset+120s; then <=5h fallback, refreshed on every wake."
 }

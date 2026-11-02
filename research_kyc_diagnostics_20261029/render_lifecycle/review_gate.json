@@ -1,0 +1,29 @@
+{
+  "state": "APPROVED",
+  "protocol": "PROTOCOL.md",
+  "version": "v2",
+  "protocol_sha256": "53b7058bd290886d5787cd73ed9cb926a38ec49792a99305a84db11a1c3d8d0f",
+  "approved_local": "2026-11-02T09:27:08.264350+08:00",
+  "codex_review": "APPROVE",
+  "deepseek_review": "APPROVE",
+  "deepseek_session": "736077c1-8d4e-4df7-979f-1fc15f980a2a",
+  "deepseek_response": "../discussion/20_lifecycle_final_gate_response.md",
+  "response_model_fields": [
+    "deepseek-flash"
+  ],
+  "authorization": "../render_repair/00_授权与范围.md; original human delegation and latest continue work instruction",
+  "caps": {
+    "workers": 2,
+    "make_env": 2,
+    "renders": 8,
+    "readPixels": 16,
+    "gpu_allocation_seconds": 300,
+    "ACT_forwards": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "optimizer_updates": 0
+  },
+  "old_terminal_restart": false,
+  "human_retraining_approval": false,
+  "git_index_owner": "main throughout"
+}

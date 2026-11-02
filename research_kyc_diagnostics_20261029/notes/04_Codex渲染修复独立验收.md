@@ -1,0 +1,15 @@
+# Codex独立验收：绑定修复失败，资源生命周期仍待验证
+
+2026-10-29 21:50后形成，在读取真实DeepSeek18意见之前。已独立读worker、修复模块、工程恢复supervisor与原始events23–36，并实际查看六图拼图：修复前三入口及修复后三入口均仍为条纹/噪点，无法辨认正常Lift。未运行新渲染、模型或仿真。
+
+接受PARTIAL / REPAIR_FAILED；不接受完整复验PASS。worker1因NULL地址错误在实际make_env前失败，工程修复只改变NULL处理，剩余worker2沿累计预算运行；2进程名额未回收，0ACT/step/更新，符合允许新诊断工程错误有限修复的资源范围，但偏离原计划两有效进程复验。原terminal记录保留，不能把恢复安排视为已经完成两份独立机制重复。下次须在纯CPU mock中先覆盖NULL context取址，避免GPU名额浪费。
+
+事件28/29是同一次eglReleaseThread原函数前后包装：current由ctx2变null，支持在这一个插桩进程中，旧ctx1释放路径解除新ctx2绑定。单次make_current随后恢复ctx2却仍坏，说明只绑定不足。日志只存primitive/代号，类wrapper保留未绑定函数；未见把旧对象强引用存进日志的明显错误，但日志分配会改变GC时序，仍需限定外推。
+
+**新增审查限制：不能仅由0x8219证明offFBO对象已被删除。** 当前snap只调用glCheckFramebufferStatus(GL_FRAMEBUFFER)，未记录GL_DRAW_FRAMEBUFFER_BINDING/READ绑定，也未查询offFBO/offFBO_r的glIsFramebuffer或附着状态。surfaceless EGL的默认FBO0本就可能undefined。index24→25的状态变化可能含绑定变化；不等于已定位GPU对象损坏。MuJoCo字段offFBO=1/2也只给整数句柄。报告保留“con.free同名资源误删”为假说是必要的，后续应实测其边界。
+
+底层render/readback错误与sentinel全保留结合坏图支持读取前提异常；单凭sentinel不能证明正常np.empty未写，更不能解释旧训练0/32。所读代码正常与sentinel分离、转换链路无再次渲染；独立CPU核验结果另存artifacts/parent_render_repair_audit.json。
+
+值得做下一项有因果辨识力的最小验证：在独立新进程中记录MjRenderContext析构/con.free前后对应context及活动renderer的真实FBO身份；让每个renderer在其拥有的context下释放GPU资源，释放后恢复先前仍存活的context。这属于一项“按所属context安全释放”的生命周期修复，不应堆叠buffer重建/驱动修改或更换模型。先明确所有权、空指针、重复析构保护和上下文恢复；取得修复前失败与修复后健康正对照。是否采用、预算和对照设计需与DeepSeek共同审查后另立协议，不在旧terminal作业续跑。
+
+直接失效机制、GC触发时序、旧训练历史三层仍分开：即使当前资源释放修好，也不能自动判定旧checkpoint训练时一直坏，或自动恢复模型/闭环预算。

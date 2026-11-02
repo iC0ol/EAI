@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-29T09:26:48.789528+00:00",
+  "protocol_sha256": "022ab690a7852290f41a62294d100c295ac9753c48f8929d852b01aef9ef09d8",
+  "gate_sha256": "8c5ba491dff140f5b094dbc09583cc55c5c8b38179f85b938561fb5383921fe6",
+  "sample_sha256": "6391bd3fed15170fb5379d17d1affd70da33ec53202577c38d3b1f2d3a49b78e",
+  "budget_sha256": "1d54395a10f4e1804e7c3a8ab63d6610015ffcac13befd480f30090a03e7b66f",
+  "sources": {
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py": "c3aa5e196a9dfaaf9ce94fd307987c508570deb1d87f6f9f25686d6912b3073c",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/utils.py": "fbe212146cd0f93e8aa04a98913c736aabf2e4f06ff40eb6544934d0acf9fa1a",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/eval.py": "702c7daf81cc73326edd9a86b55173e5440e17ce1efa169ec7ff2a66ab043571",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/utils/binding_utils.py": "418a67d8cb4af0ffe612a10511f6c15fe8c1f781d29941092bf964c81177e5de",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/renderers/context/egl_context.py": "72ff1e153da85b85a35ebd0350c4693d3b89ffd5e1f13ff49813b7a3ad4c51c6",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/environments/base.py": "ba6e6bc0252be8ae17972df48b26f8425a12af55339979a1ea1757b1f54c3345",
+    "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/inputs/sample_00.npz": "f43b1088b763bf2e6e503d36a85655846c63425230dce9fcbd35d6b0893fc1e3"
+  },
+  "scripts": {
+    "context_binding.py": "c542b6547c166f8e84bb8eebf6905993a1a9864604b62a0153394deb34dc5940",
+    "supervisor.py": "402954b1ddcee9cd3e04a4cf114aec06f0492fc352ea32afc369ae6dc8b13835",
+    "repair_common.py": "0b4385d7d393326359ea15165c320cfd799f49e846987619f8f46137a795b555",
+    "freeze.py": "31617dbca2d03c70bf49ad652f2dae8622010da4b5356e7bedd3e9aba47e647f",
+    "worker.py": "3b2f8d7eb83ec66b6ff22a52dcb33feaf39332743f753d476592fe5f01a3e5ac"
+  },
+  "commands": [
+    [
+      "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+      "-B",
+      "/home/asus/EAI/research_kyc_diagnostics_20261029/render_repair/scripts/supervisor.py"
+    ]
+  ],
+  "git_index_owner": "parent; executor no Git mutations",
+  "old_execution_baseline_sha256": "58cf76cccabbd1d57548423c716a028674f4fc8725d7df932a8ced188167f177"
+}

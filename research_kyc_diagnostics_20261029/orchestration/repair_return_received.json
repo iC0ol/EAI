@@ -1,0 +1,48 @@
+{
+  "received_local": "2026-10-29T17:40:04.520247+08:00",
+  "source_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+  "executor_reported_state": "PARTIAL / REPAIR_FAILED",
+  "independent_parent_acceptance": "PENDING",
+  "next_actions": [
+    "independent code/raw array/image/event/budget and engineering-recovery audit",
+    "freeze Codex opinion before reading new DeepSeek review",
+    "real DeepSeek independent review and cross challenge",
+    "review next narrowly scoped lifecycle repair if evidence warrants; no implicit restart",
+    "publish reviewed small outputs and update eight-part report"
+  ],
+  "reported_counts": {
+    "workers": 2,
+    "make_env": 2,
+    "renders": 6,
+    "readPixels": 12,
+    "ACT": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "optimizer_updates": 0
+  },
+  "reported_gpu_seconds": 23.132780727930367,
+  "process_readback": [
+    {
+      "file": "worker_1_process.json",
+      "pid": 2977687,
+      "same_process_alive": false
+    },
+    {
+      "file": "worker_2_process.json",
+      "pid": 2978449,
+      "same_process_alive": false
+    }
+  ],
+  "child_automation_readback": {
+    "id": "6-1-sol-max",
+    "status": "PAUSED",
+    "target_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042"
+  },
+  "primary_used_percent": 99,
+  "weekly_used_percent": 95,
+  "reset_unix": 1793281713,
+  "reset_local": "2026-10-29T21:48:33+08:00",
+  "resume_local": "2026-10-29T21:50:33+08:00",
+  "reset_credit_redemption": false,
+  "new_render_repair_results_published": false
+}

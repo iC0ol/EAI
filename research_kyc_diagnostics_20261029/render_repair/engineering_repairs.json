@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-29T09:29:39.518453+00:00",
+  "repairs": [
+    {
+      "id": 1,
+      "error": "PyOpenGL opaque NULL context .address raises ValueError before make_env invocation",
+      "failed_worker": 1,
+      "worker_exit_code": 1,
+      "renders_before_failure": 0,
+      "readPixels_before_failure": 0,
+      "actual_env_created_before_failure": 0,
+      "counts_are_conservative_reservations": true,
+      "fix": "treat false opaque pointers as zero before .address; retain exception handling",
+      "before_sha256": "3b2f8d7eb83ec66b6ff22a52dcb33feaf39332743f753d476592fe5f01a3e5ac",
+      "remaining_worker_slots": 1,
+      "independent_second_valid_worker_repetition": "NOT_RUN due to exhausted OS worker slots after engineering recovery",
+      "terminal_initial_run_preserved": "initial_attempt_completion.json; original supervisor not restarted",
+      "continuation_scope": "one distinct engineering-recovery supervisor execs only worker2; cumulative time and original counters unchanged"
+    }
+  ]
+}

@@ -1,13 +1,15 @@
 # 当前状态
 
-- 2026-10-29 Asia/Shanghai：IN_PROGRESS / RENDER_REPAIR_DISPATCHED。
-- 用户新增明确要求：查明当前 RGB 损坏并尝试解决。已建立 [render_repair](render_repair/00_授权与范围.md)，v3经DeepSeek15/16修订、17最终APPROVE，17:17:25已真实派发既有GPT-6.1-sol/max执行线程，准确SHA见render_repair/review_gate.json。
-- 原 execution/ 已于12:13按门槛停止，Codex独立CPU/图像验收与真实DeepSeek13独立、14交叉均完成。分类 D / IMPLEMENTATION-LIMITED，执行合规 PASS、原诊断完整度 PARTIAL；旧0/32根因仍未知。
-- 原实际用量：8来源状态/4demo、24显式渲染、11.579576 GPU秒、0模型前向、0rollout、0env.step、0优化器更新。原worker/supervisor退出，不重启。
-- 主审复核176数组、8NPZ及PNG反解、6615旧文件、训练20400帧stats与30×7加权常数；见 artifacts/parent_*_audit.json。已核实不是仅PNG保存导致坏图；未有GL/context因果遥测。
-- 原执行结果公开同步已修复：远端为2d42000db84b59a82e18cb6b37940ca1131661d7，92 Git对象保持原SHA；旧HTTP408记录保留，当前以 orchestration/publication.json 为准。父审报告与协议已公开至126e196；新执行者输出待完成后另次验收同步。
-- 新微诊断冻结上限：2worker/环境、12renders、24readPixels、300GPU秒、0ACT/0env.step/0更新；在新目录插桩与证据支持的单一局部修复，不改旧源码/系统、不重训。
-- 真实DeepSeek已完成09–17九轮；新微诊断双方审核通过。客户端claude，响应模型字段deepseek-flash，会话736077c1-8d4e-4df7-979f-1fc15f980a2a。
-- 主聊天记录模型gpt-6-astra/max；执行角色仍gpt-6.1-sol/max。Git index 当前由主线程持有。
-- 主检查已复用 automation，下一检查21:38:53；最近17:13查询5h已用57%、周已用88%，下次reset21:48:33。执行检查6-1-sol-max已复用ACTIVE，下一检查21:50:33；不兑换重置券。
-- 后续：独立新微诊断→原始结果双重验收→必要下一步判断→中文八部分报告与公开同步。任务未完成，不提前关闭主检查。阶段一旧STATUS存 artifacts/pre_render_repair_status.md。
+2026-11-02 Asia/Shanghai：**IN_PROGRESS / LIFECYCLE_DISPATCHED**。用户明确授权继续查因并尝试解决当前RGB损坏，工作尚未全部结束。
+
+- 已完成：原execution有限诊断、render_repair失败尝试、Codex原数组/图像/代码/预算验收与真实DeepSeek18独立、19交叉审查。原件和失败记录均保留。
+- 当前事实：render_repair仅1个有效渲染worker，6renders、12readPixels、23.1327807279 GPU秒，0ACT/step/训练；PARTIAL / REPAIR_FAILED。旧context释放路径直接解除新current，但仅重绑不能恢复正常RGB；FBO误删除仍未证明。旧训练0/32历史因果UNKNOWN。
+- 新任务：[render_lifecycle/PROTOCOL.md](render_lifecycle/PROTOCOL.md) v2，在CPU mock后验证按资源所属context释放并恢复previous的一种局部修复。DeepSeek19提出per-context测量修订，20完整APPROVE，Codex通过，准确SHA见[review_gate](render_lifecycle/review_gate.json)。
+- 2026-11-02 09:27已真实派发原线程“KYC 冻结基线有限排障与验收回传”，模型gpt-6.1-sol/max；[dispatch](render_lifecycle/dispatch.json)。仅新目录，旧terminal任务不重启。
+- 新上限：2worker、2make_env、8render、16readPixels、300GPU分配秒，0ACT/step/rollout/训练。基线与修复各1进程，不是同条件独立复验；没有系统更改、下载或完整训练授权。
+- 主Git index独占；render_repair结果与父审待本轮秘密扫描、允许清单筛选后统一公开，执行者不stage/commit/push。已验证远端起点c7b1ce2；最新发布结果以orchestration/publication.json为准。
+- 真实DeepSeek09–20共12轮已核验；claude终端接续会话736077c1-8d4e-4df7-979f-1fc15f980a2a，响应字段deepseek-flash。20是协议审核，不是执行成功声明。
+- 09:24实时额度：五小时已用4%，周已用1%；未兑换额度券。真实reset14:22:36；主automation和执行6-1-sol-max均复用ACTIVE，安排14:24:36续办、随后每五小时兜底。已纠正原DAILY+COUNT=1实际每日重复的问题，后续按最新reset调整。完成回传可提前唤醒。
+- 后续：执行者返回→主审独立原数组/对象事件与实际看图→真实DeepSeek反驳→更新中文八部分报告和下一阶段判断→统一发布。不能把当前工程修复当论文创新或旧0/32因果。
+
+历史检查点见[旧状态](artifacts/status_before_lifecycle_dispatch.md)及[clocks](orchestration/clocks.json)。

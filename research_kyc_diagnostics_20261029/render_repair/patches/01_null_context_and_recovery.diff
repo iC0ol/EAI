@@ -1,0 +1,27 @@
+--- worker_before.py
++++ worker_after.py
+@@ -21,10 +21,11 @@
+ native.glCheckFramebufferStatus.argtypes=[ctypes.c_uint];native.glCheckFramebufferStatus.restype=ctypes.c_uint
+ native.glGetError.argtypes=[];native.glGetError.restype=ctypes.c_uint
+ def pointer(obj):
+-    if obj is None:return 0
+-    address=getattr(obj,'address',None)
+-    if address is not None:return int(address or 0)
+-    try:return int(ctypes.cast(obj,ctypes.c_void_p).value or 0)
++    if obj is None or not bool(obj):return 0
++    try:
++        address=getattr(obj,'address',None)
++        if address is not None:return int(address or 0)
++        return int(ctypes.cast(obj,ctypes.c_void_p).value or 0)
+     except (TypeError,ValueError):return 0
+ def target(obj):return pointer(getattr(obj,'_context',None)) if obj is not None else TARGET
+ def alias(value):
+@@ -186,7 +187,7 @@
+                    'single_change':'bind target gl_ctx once inside original lock before original MjRenderContext.render; check after render/read entry; no rebind',
+                    'against_and_limits':'sentinel alone insufficient; baseline context mismatch and no-write must align; lifecycle trigger and old training require independent evidence',
+                    'module_sha256':sha(P/'scripts/context_binding.py')}
+-                if worker==1:write(P/'repair_choice.json',choice,True)
++                if not (P/'repair_choice.json').exists():write(P/'repair_choice.json',choice,True)
+                 else:assert read(P/'repair_choice.json')['chosen']==choice['chosen']
+                 write(OUT/'repair_choice.json',choice)
+                 FIX=True

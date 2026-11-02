@@ -1,0 +1,12 @@
+{"utc": "2026-10-29T09:27:00.956854+00:00", "rss": 54255616, "vram": 0, "disk_bytes": 69141, "free_bytes": 187823865856, "worker": 1, "gpu_allocation_seconds": 0.09667574288323522}
+{"utc": "2026-10-29T09:27:02.977497+00:00", "rss": 592773120, "vram": 0, "disk_bytes": 72110, "free_bytes": 187823845376, "worker": 1, "gpu_allocation_seconds": 2.1262050811201334}
+{"utc": "2026-10-29T09:29:40.150958+00:00", "rss": 142282752, "vram": 0, "disk_bytes": 102864, "free_bytes": 187823624192, "worker": 2, "gpu_allocation_seconds": 3.6017389418557286}
+{"utc": "2026-10-29T09:29:42.294199+00:00", "rss": 640385024, "vram": 0, "disk_bytes": 104737, "free_bytes": 187823640576, "worker": 2, "gpu_allocation_seconds": 5.743193393573165}
+{"utc": "2026-10-29T09:29:44.305333+00:00", "rss": 1134919680, "vram": 0, "disk_bytes": 107164, "free_bytes": 187823620096, "worker": 2, "gpu_allocation_seconds": 7.754635276738554}
+{"utc": "2026-10-29T09:29:46.474723+00:00", "rss": 1341333504, "vram": 0, "disk_bytes": 237995, "free_bytes": 187823464448, "worker": 2, "gpu_allocation_seconds": 9.86873253295198}
+{"utc": "2026-10-29T09:29:48.616248+00:00", "rss": 1399365632, "vram": 0, "disk_bytes": 290890, "free_bytes": 187823390720, "worker": 2, "gpu_allocation_seconds": 12.060915033798665}
+{"utc": "2026-10-29T09:29:50.751758+00:00", "rss": 1530830848, "vram": 339738624, "disk_bytes": 2804706, "free_bytes": 187820822528, "worker": 2, "gpu_allocation_seconds": 14.201426041778177}
+{"utc": "2026-10-29T09:29:52.853124+00:00", "rss": 1530961920, "vram": 339738624, "disk_bytes": 7055786, "free_bytes": 187816448000, "worker": 2, "gpu_allocation_seconds": 16.29876454360783}
+{"utc": "2026-10-29T09:29:55.141779+00:00", "rss": 1535549440, "vram": 343932928, "disk_bytes": 9547490, "free_bytes": 187813961728, "worker": 2, "gpu_allocation_seconds": 18.592388995923102}
+{"utc": "2026-10-29T09:29:57.238812+00:00", "rss": 1535549440, "vram": 343932928, "disk_bytes": 11902997, "free_bytes": 187811549184, "worker": 2, "gpu_allocation_seconds": 20.68778368877247}
+{"utc": "2026-10-29T09:29:59.367024+00:00", "rss": 1405571072, "vram": 339738624, "disk_bytes": 13859119, "free_bytes": 187809562624, "worker": 2, "gpu_allocation_seconds": 22.814997325651348}

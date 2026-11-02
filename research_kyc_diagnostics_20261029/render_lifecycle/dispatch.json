@@ -1,0 +1,20 @@
+{
+  "status": "DISPATCHED",
+  "dispatch_local": "2026-11-02T09:27:56.482676+08:00",
+  "deadline_local": "2026-11-02T17:27:56.482676+08:00",
+  "thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+  "title": "KYC 冻结基线有限排障与验收回传",
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "max",
+  "protocol": "PROTOCOL.md",
+  "protocol_sha256": "53b7058bd290886d5787cd73ed9cb926a38ec49792a99305a84db11a1c3d8d0f",
+  "scope": "render_lifecycle",
+  "old_terminal_restart": false,
+  "git_index_owner": "main throughout",
+  "automation_id": "6-1-sol-max",
+  "next_check_local": "2026-11-02T14:24:36+08:00",
+  "callback_to": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "callback_human_authorization": "Original human delegation and explicit wait for executor completion then notify main request; latest instruction continue solving RGB",
+  "send_tool_accepted": true,
+  "receipt": "dispatch_message.json"
+}

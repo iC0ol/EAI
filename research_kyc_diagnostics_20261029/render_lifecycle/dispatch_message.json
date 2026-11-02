@@ -1,0 +1,12 @@
+{
+  "prompt": "继续用户授权解决KYC当前RGB故障，执行一项新的、已联合审核的隔离生命周期修复；不要重启任何旧terminal supervisor。你仍为人类指定gpt-6.1-sol/max。原render_repair已由父审CPU/图像核验并经真实DeepSeek18/19接受PARTIAL / REPAIR_FAILED，首worker NULL工程错误、第二唯一有效，现不重复旧任务。\n\n新目录 /home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/。先完整读其PROTOCOL.md、review_gate.json、README.md与父notes/04、discussion/18/19/20 response。协议v2 SHA256=53b7058bd290886d5787cd73ed9cb926a38ec49792a99305a84db11a1c3d8d0f，Codex与真实DeepSeek20已完整APPROVE，不得擅改。任务目标只有renderer GPU资源在其所属context下释放、再恢复之前仍活context，必须初始化前安装；原条件/修复条件各一个新worker。先CPU mock覆盖NULL、部分/重复析构、缺owner、previous=owner/其他live/null、restore失败。CPU通过后按协议冻结完整代码/来源/计数/进程锁与硬限，才开始GL。\n\n硬上限2worker、2make_env、8底层mjr_render、16readPixels、300GPU分配秒（含初始化/失败/cleanup）、0ACT/0env.step/0rollout/0optimizer，3CPU/RSS16GiB/VRAM12GiB/磁盘200MiB，最迟本次派发后8h结束。工程失败名额不退回，无第三worker，不恢复旧32前向/16闭环。主审dispatch.json稍后落盘，以其实际派发时间核对截止。\n\n最重要的19→v2修订：owner=current才可测owner GL对象，否则NOT_MEASURED_WRONG_CONTEXT；baseline只测真实current所属活动renderer，不能把跨context同名FBO当同对象；fix在owner当前、con.free前后但gl_ctx.free之前测owner，恢复previous后才能测previous。只读遥测不临时绑定FBO或context；仅修复本身切换context。仅0x8219不能判资源删失。先1早期控制再Dataset/Evaluator/custom三入口，共每worker4render。worker2须先有支持生命周期异常的baseline证据。保存正常raw/sentinel分别计数和原数组、匿名事件、来源hash。失败按门停止，不加候选；旧0/32仍UNKNOWN，当前修复不算研究创新。\n\n所有新文件/缓存只在render_lifecycle；旧源码/旧目录/系统不可改，不下载/安装/重训。Git index由主线程独占，你不得stage/commit/push，仅交付允许清单与秘密扫描。输出STATUS/status/completion/FINAL_REPORT及原图/事件/计数/完整性/实际进程。沿用原用户明确的异步分工：用户说“待复现任务完成后再通知你”，已授权完成后回传本主聊天01a18138-0f15-76b2-b5cf-20e1722782a9；完成/停止只回传一次并保存回执，主线程随后验收，不空等。\n\n仅复用现有6-1-sol-max检查，主线程马上更新为本scope ACTIVE。实时共享额度已恢复，09:24查询五小时4%、周1%，reset14:22:36+120秒=14:24:36首次检查，此后最长5h；不要兑换重置券。若你完成快于检查，暂停自己的检查即可；不用建新automation。主automation不改。请现在推进CPU实现和冻结内执行。",
+  "send_tool_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a185d0-2da8-70a2-b997-d273c7285042\"}"
+      }
+    ],
+    "isError": false
+  }
+}

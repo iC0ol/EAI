@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-29T09:32:30.447316+00:00",
+  "old_execution_files_checked": 76,
+  "old_execution_differences": [],
+  "source_hashes_unchanged": {
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py": true,
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/utils.py": true,
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/eval.py": true,
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/utils/binding_utils.py": true,
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/renderers/context/egl_context.py": true,
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/environments/base.py": true,
+    "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/inputs/sample_00.npz": true
+  },
+  "executed_recovery_code_unchanged": {
+    "context_binding.py": true,
+    "engineering_recovery_supervisor.py": true,
+    "supervisor.py": true,
+    "repair_common.py": true,
+    "freeze.py": true,
+    "worker.py": true
+  },
+  "original_worker_alive": [
+    false,
+    false
+  ],
+  "protocol_sha256": "022ab690a7852290f41a62294d100c295ac9753c48f8929d852b01aef9ef09d8",
+  "new_disk_bytes": 14247818
+}

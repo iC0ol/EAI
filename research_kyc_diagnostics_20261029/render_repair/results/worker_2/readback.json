@@ -1,0 +1,257 @@
+[
+  {
+    "entry": "baseline_dataset",
+    "ordinal": 1,
+    "before": {
+      "current": null,
+      "target": "w2_ctx2",
+      "match": false,
+      "framebuffer_status": null,
+      "gl_errors": null,
+      "gl_state": "NO_CURRENT_CONTEXT"
+    },
+    "after": {
+      "current": null,
+      "target": "w2_ctx2",
+      "match": false,
+      "framebuffer_status": null,
+      "gl_errors": null,
+      "gl_state": "NO_CURRENT_CONTEXT"
+    },
+    "raw": {
+      "file": "results/worker_2/read_01_normal_raw.npy",
+      "shape": [
+        256,
+        256,
+        3
+      ],
+      "dtype": "uint8",
+      "sha256": "ab3e8b194e76f1934442e40dfd9883af7fe4a618676fa63454f667500d2dd283",
+      "file_sha256": "e154b5dab9bfd3cb2dc020dd310e03c4012744603b3e738b4afd33ce124da1e2",
+      "independent_copy": true
+    },
+    "sentinel": {
+      "retained_165_fraction": 1.0,
+      "raw_165_fraction": 0.0011749267578125,
+      "equal_raw": false,
+      "maxabs_to_raw": 165,
+      "separate_buffer": true,
+      "value": 165
+    }
+  },
+  {
+    "entry": "baseline_evaluator",
+    "ordinal": 3,
+    "before": {
+      "current": null,
+      "target": "w2_ctx2",
+      "match": false,
+      "framebuffer_status": null,
+      "gl_errors": null,
+      "gl_state": "NO_CURRENT_CONTEXT"
+    },
+    "after": {
+      "current": null,
+      "target": "w2_ctx2",
+      "match": false,
+      "framebuffer_status": null,
+      "gl_errors": null,
+      "gl_state": "NO_CURRENT_CONTEXT"
+    },
+    "raw": {
+      "file": "results/worker_2/read_03_normal_raw.npy",
+      "shape": [
+        256,
+        256,
+        3
+      ],
+      "dtype": "uint8",
+      "sha256": "3978f49b93d41d1d6687400b20904c42c900dac6b6f3e8e0942ffd190bba70d0",
+      "file_sha256": "17b4d165954874ef62c5cc2ed6c5d5cd18dc46447f37d36e0bd09299c45c2fe2",
+      "independent_copy": true
+    },
+    "sentinel": {
+      "retained_165_fraction": 1.0,
+      "raw_165_fraction": 0.0003763834635416667,
+      "equal_raw": false,
+      "maxabs_to_raw": 165,
+      "separate_buffer": true,
+      "value": 165
+    }
+  },
+  {
+    "entry": "baseline_custom",
+    "ordinal": 5,
+    "before": {
+      "current": null,
+      "target": "w2_ctx2",
+      "match": false,
+      "framebuffer_status": null,
+      "gl_errors": null,
+      "gl_state": "NO_CURRENT_CONTEXT"
+    },
+    "after": {
+      "current": null,
+      "target": "w2_ctx2",
+      "match": false,
+      "framebuffer_status": null,
+      "gl_errors": null,
+      "gl_state": "NO_CURRENT_CONTEXT"
+    },
+    "raw": {
+      "file": "results/worker_2/read_05_normal_raw.npy",
+      "shape": [
+        256,
+        256,
+        3
+      ],
+      "dtype": "uint8",
+      "sha256": "3702d3b8d61b57e4013353d70b268c5ced667fe9449056bef4900e1692593bb6",
+      "file_sha256": "c28dab6b1205517f63b4a6a0e22e23649df36da3cc2fb35abc955cc0b8f5f235",
+      "independent_copy": true
+    },
+    "sentinel": {
+      "retained_165_fraction": 1.0,
+      "raw_165_fraction": 0.0001068115234375,
+      "equal_raw": false,
+      "maxabs_to_raw": 165,
+      "separate_buffer": true,
+      "value": 165
+    }
+  },
+  {
+    "entry": "repair_dataset",
+    "ordinal": 7,
+    "before": {
+      "current": "w2_ctx2",
+      "target": "w2_ctx2",
+      "match": true,
+      "framebuffer_status": 33305,
+      "gl_errors": [
+        0
+      ],
+      "gl_state": "ERRORS_DRAINED"
+    },
+    "after": {
+      "current": "w2_ctx2",
+      "target": "w2_ctx2",
+      "match": true,
+      "framebuffer_status": 33305,
+      "gl_errors": [
+        1282,
+        0
+      ],
+      "gl_state": "ERRORS_DRAINED"
+    },
+    "raw": {
+      "file": "results/worker_2/read_07_normal_raw.npy",
+      "shape": [
+        256,
+        256,
+        3
+      ],
+      "dtype": "uint8",
+      "sha256": "83308791f8a10cbe7bb0b2b153f96080a6cd0d09c189f489e31ff2ca56870b5a",
+      "file_sha256": "7306243bf6731f063cb928fd7615b4500c14e8652580fe247e4ea43cf8b81eb0",
+      "independent_copy": true
+    },
+    "sentinel": {
+      "retained_165_fraction": 1.0,
+      "raw_165_fraction": 6.103515625e-05,
+      "equal_raw": false,
+      "maxabs_to_raw": 165,
+      "separate_buffer": true,
+      "value": 165
+    }
+  },
+  {
+    "entry": "repair_evaluator",
+    "ordinal": 9,
+    "before": {
+      "current": "w2_ctx2",
+      "target": "w2_ctx2",
+      "match": true,
+      "framebuffer_status": 33305,
+      "gl_errors": [
+        0
+      ],
+      "gl_state": "ERRORS_DRAINED"
+    },
+    "after": {
+      "current": "w2_ctx2",
+      "target": "w2_ctx2",
+      "match": true,
+      "framebuffer_status": 33305,
+      "gl_errors": [
+        1282,
+        0
+      ],
+      "gl_state": "ERRORS_DRAINED"
+    },
+    "raw": {
+      "file": "results/worker_2/read_09_normal_raw.npy",
+      "shape": [
+        256,
+        256,
+        3
+      ],
+      "dtype": "uint8",
+      "sha256": "e5a1c3062297493ac6443d1d71591c2d9b76b2aace4c5ec79739a62b20be27ed",
+      "file_sha256": "0ff5f65578bddcd46651920b35a288950e6468bdec0bda128ecfb88e5c3964d7",
+      "independent_copy": true
+    },
+    "sentinel": {
+      "retained_165_fraction": 1.0,
+      "raw_165_fraction": 6.103515625e-05,
+      "equal_raw": false,
+      "maxabs_to_raw": 165,
+      "separate_buffer": true,
+      "value": 165
+    }
+  },
+  {
+    "entry": "repair_custom",
+    "ordinal": 11,
+    "before": {
+      "current": "w2_ctx2",
+      "target": "w2_ctx2",
+      "match": true,
+      "framebuffer_status": 33305,
+      "gl_errors": [
+        0
+      ],
+      "gl_state": "ERRORS_DRAINED"
+    },
+    "after": {
+      "current": "w2_ctx2",
+      "target": "w2_ctx2",
+      "match": true,
+      "framebuffer_status": 33305,
+      "gl_errors": [
+        1282,
+        0
+      ],
+      "gl_state": "ERRORS_DRAINED"
+    },
+    "raw": {
+      "file": "results/worker_2/read_11_normal_raw.npy",
+      "shape": [
+        256,
+        256,
+        3
+      ],
+      "dtype": "uint8",
+      "sha256": "e5a1c3062297493ac6443d1d71591c2d9b76b2aace4c5ec79739a62b20be27ed",
+      "file_sha256": "0ff5f65578bddcd46651920b35a288950e6468bdec0bda128ecfb88e5c3964d7",
+      "independent_copy": true
+    },
+    "sentinel": {
+      "retained_165_fraction": 1.0,
+      "raw_165_fraction": 6.103515625e-05,
+      "equal_raw": false,
+      "maxabs_to_raw": 165,
+      "separate_buffer": true,
+      "value": 165
+    }
+  }
+]

@@ -1,7 +1,9 @@
 {
   "state": "IDLE",
-  "last_completed_turn": "17_render_repair_final_gate",
-  "ended_utc": "2026-10-29T09:15:23.901673+00:00",
-  "exit_code": 0,
-  "no_review_process_expected": true
+  "last_completed": "20_lifecycle_final_gate",
+  "response_model_fields": [
+    "deepseek-flash"
+  ],
+  "protocol_state": "APPROVED_DISPATCHED",
+  "updated_local": "2026-11-02T09:29:10.253372+08:00"
 }

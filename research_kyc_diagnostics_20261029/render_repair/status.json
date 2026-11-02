@@ -1,0 +1,85 @@
+{
+  "utc": "2026-10-29T09:29:59.746394+00:00",
+  "state": "PARTIAL / REPAIR_FAILED",
+  "reason": "RECOVERY_WORKER_FAILED",
+  "counts": {
+    "workers": 2,
+    "make_env": 2,
+    "renders": 6,
+    "readPixels": 12,
+    "ACT": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "optimizer_updates": 0
+  },
+  "gpu_allocation_seconds": 23.132780727930367,
+  "worker_processes": [
+    {
+      "worker": 1,
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "-B",
+        "/home/asus/EAI/research_kyc_diagnostics_20261029/render_repair/scripts/worker.py",
+        "--worker",
+        "1"
+      ],
+      "child_identity": {
+        "pid": 2977687,
+        "ppid": 2977666,
+        "start_ticks": 261998088,
+        "rss": 262144,
+        "state": "R"
+      },
+      "started_epoch": 1793266020.823382,
+      "ended_epoch": 1793266024.258807,
+      "exit_code": 1,
+      "gpu_allocation_seconds_cumulative": 3.4354224978014827,
+      "utc": "2026-10-29T09:27:04.258810+00:00"
+    },
+    {
+      "worker": 2,
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "-B",
+        "/home/asus/EAI/research_kyc_diagnostics_20261029/render_repair/scripts/worker.py",
+        "--worker",
+        "2"
+      ],
+      "child_identity": {
+        "pid": 2978449,
+        "ppid": 2978447,
+        "start_ticks": 262014001,
+        "rss": 262144,
+        "state": "R"
+      },
+      "started_epoch": 1793266179.9579399,
+      "ended_epoch": 1793266199.6553009,
+      "exit_code": 1,
+      "gpu_allocation_seconds_cumulative": 23.132780727930367
+    }
+  ],
+  "first_terminal_preserved": "initial_attempt_completion.json",
+  "independent_valid_worker_repetition": null,
+  "historic_0_of_32_cause": "UNKNOWN",
+  "ACT": "NOT_RUN",
+  "env_steps": 0,
+  "rollouts": "NOT_RUN",
+  "optimizer_updates": 0,
+  "requires_parent_review": true,
+  "raw_fault_reproduced": true,
+  "repair_context_binding_effective": true,
+  "repair_healthy_rgb": false,
+  "independent_repetition_state": "NOT_RUN",
+  "report_sha256": "bcf5e40c600ea08a3299a1a689a43616dc875a7f33e704a3d6a372a2ff5c4328",
+  "analysis_sha256": "41a0d2a593310be7b336dba1097f962bf573157634235f59905ce1ef5ff609da",
+  "engineering_repairs": 1,
+  "actual_make_env_calls": 1,
+  "reserved_make_env_calls": 2,
+  "git_mutations": 0,
+  "automation_status": "PAUSED_READBACK_VERIFIED",
+  "publication": "PARENT_OWNS_GIT; EXECUTOR_NO_STAGE_COMMIT_PUSH",
+  "callbacks_this_scope": 1,
+  "callback_tool_accepted": true,
+  "callback_receipt": "return_receipt.json",
+  "final_delivery_utc": "2026-10-29T09:37:36.642069+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "identity": {
+    "pid": 2978449,
+    "ppid": 2978447,
+    "start_ticks": 262014001,
+    "rss": 262144,
+    "state": "R"
+  },
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "-B",
+    "/home/asus/EAI/research_kyc_diagnostics_20261029/render_repair/scripts/worker.py",
+    "--worker",
+    "2"
+  ],
+  "created_epoch": 1793266179.9579399,
+  "previous_worker_ended_epoch": 1793266024.258807
+}

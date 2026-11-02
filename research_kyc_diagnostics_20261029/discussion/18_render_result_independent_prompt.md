@@ -1,0 +1,5 @@
+请对刚结束的render_repair做真实独立验收，先不要读主审尚未交换的新意见。用户已明确要求检查原因并尝试解决，不默认停止于D；但所有新运行仍必须另写小协议共同审查，不重训、不改系统。
+
+根目录 /home/asus/EAI/research_kyc_diagnostics_20261029/ 。请读render_repair的完整协议v3/review_gate/FINAL_REPORT/completion/engineering_repairs/initial_attempt_completion、scripts/worker.py/context_binding.py/engineering_recovery_supervisor.py、results/worker_2/events.jsonl/entries.json/readback.json及必要原始记录。检查原始事件而非只抄报告；你只读，不能运行仿真/模型/新实验或修改文件。
+
+独立回答：工程失败后的剩余worker恢复是否合规，哪些证据可信、哪些不完整；current解除是否有实际触发链；FBO的glCheckFramebufferStatus值究竟能证明什么，是否缺少绑定对象/附着/资源身份数据；单次绑定失败如何解释；最小下一修复是什么、什么结果会反驳它、怎样获得健康对照。不要因两个模型同意或函数名就当根因，区分当前故障机制与历史0/32。给出是否值得另一次小范围修复与具体可辨识设计，不自动扩大任务或提出训练。

@@ -11,3 +11,5 @@
 原有限诊断已受控结束，见 [执行报告](execution/FINAL_REPORT.md)、[Codex独立验收](notes/03_Codex执行结果独立验收.md)、[真实DeepSeek交叉验收](discussion/14_diag_acceptance_cross_response.md)。当前远端结果提交为2d42000；旧执行报告中的同步失败为当时记录，后续成功见 [发布回执](orchestration/publication.json)。原结果不覆盖，新微诊断另立协议和运行记录。
 
 所有时间以 Asia/Shanghai 明示。通过账户实时 resetsAt 安排重置后两分钟续办，最长五小时核查作为兜底；完成回传可提前唤醒主任务。主研究与执行任务使用共享账户额度。没有调用额度兑换工具。
+
+2026-11-02更新：首次绑定修复经联合验收失败，完整原件保留；[新生命周期协议v2](render_lifecycle/PROTOCOL.md)经真实DeepSeek20最终通过，已派发gpt-6.1-sol/max。主审统一发布，经修复条件得到健康图像前不恢复ACT或闭环。

@@ -1,0 +1,170 @@
+[
+  {
+    "entry": "baseline_dataset",
+    "tensor": {
+      "file": "results/worker_2/baseline_dataset_float_tensor_rgb.npy",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "sha256": "922d3c8a39689ddb0be0e2c1f1d5fda43e2479a6913aa74747476eaabd2906f2",
+      "file_sha256": "d1475b4c8cb821f85f47d6dbe1de2d30b0e8b90b42ded4ab61e55a6d2e587e68",
+      "independent_copy": true
+    },
+    "saved_npz_sha256": "4e4cbf9f5eb8c545d58a0764f16576a55c9efb7893a089212aca38f42dd6a33f",
+    "raw_to_saved_flip_exact": true,
+    "source_state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+    "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+    "pixel_sha256": "a72435649fbde744379add7405cc2b36d9e8c9015789be026e729e3d5c80e683",
+    "read_ordinal": 1,
+    "provisional_readback_healthy": false,
+    "common_raw_rgb_preprocessing": {
+      "dataset_eval_equal": true,
+      "dataset_custom_equal": true,
+      "scope": "RGB numeric formulas only; Dataset Resize256 no-op; no ray geometry or model claim"
+    }
+  },
+  {
+    "entry": "baseline_evaluator",
+    "tensor": {
+      "file": "results/worker_2/baseline_evaluator_float_tensor_rgb.npy",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "sha256": "471089db72eb1d540aa2594454111523f5fb8cad1d83cdfc727ad18391e0f6b3",
+      "file_sha256": "54830435a197443d63c7334aae42b0d23c6a02304bf2ef496fe49b4358c034fa",
+      "independent_copy": true
+    },
+    "saved_npz_sha256": "979741da18d6dffce8de8040a04add29303d8b289b1920eae96288d35e406de1",
+    "raw_to_saved_flip_exact": true,
+    "source_state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+    "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+    "pixel_sha256": "7159570a0c14d1d7ab69e3996a14f36084427934c80ce5fa7b598eb2c381349d",
+    "read_ordinal": 3,
+    "provisional_readback_healthy": false,
+    "common_raw_rgb_preprocessing": {
+      "dataset_eval_equal": true,
+      "dataset_custom_equal": true,
+      "scope": "RGB numeric formulas only; Dataset Resize256 no-op; no ray geometry or model claim"
+    }
+  },
+  {
+    "entry": "baseline_custom",
+    "tensor": {
+      "file": "results/worker_2/baseline_custom_float_tensor_rgb.npy",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "sha256": "1aac03f31f9ee0a8c296a366c80567106142a2a184eb5dc51cb31151365e91b2",
+      "file_sha256": "01faeebcc82fc8c30c8a16d1786b01230147455b957d268e4bfef7b0e40c8f08",
+      "independent_copy": true
+    },
+    "saved_npz_sha256": "04cc5852bfec6dbb33149c998d8b7dc632b4a34e851faacbfcf77db1ef3eb204",
+    "raw_to_saved_flip_exact": true,
+    "source_state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+    "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+    "pixel_sha256": "bbac435eabf3564e05a70b88327c12b2c5ca152c6615f8ebc0d1e6c2cf0a6932",
+    "read_ordinal": 5,
+    "provisional_readback_healthy": false,
+    "common_raw_rgb_preprocessing": {
+      "dataset_eval_equal": true,
+      "dataset_custom_equal": true,
+      "scope": "RGB numeric formulas only; Dataset Resize256 no-op; no ray geometry or model claim"
+    }
+  },
+  {
+    "entry": "repair_dataset",
+    "tensor": {
+      "file": "results/worker_2/repair_dataset_float_tensor_rgb.npy",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "sha256": "e475801ab22de39f7ca9d4d21fd468ee89e2be7d2e0dc0ffd197ed68f986e0ab",
+      "file_sha256": "12601fcbb6cc80ce0e4f714622b25069789bd178841d7b014f3253e544fa4482",
+      "independent_copy": true
+    },
+    "saved_npz_sha256": "e956c5bd74ed6ed82e78922045f4c4d7101154845ea78706a27a1ee0d406a6c0",
+    "raw_to_saved_flip_exact": true,
+    "source_state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+    "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+    "pixel_sha256": "c3d306d208d9e823e53ff245b784214a80a9c21263a7f4ef78274152ee4474ea",
+    "read_ordinal": 7,
+    "provisional_readback_healthy": false,
+    "common_raw_rgb_preprocessing": {
+      "dataset_eval_equal": true,
+      "dataset_custom_equal": true,
+      "scope": "RGB numeric formulas only; Dataset Resize256 no-op; no ray geometry or model claim"
+    }
+  },
+  {
+    "entry": "repair_evaluator",
+    "tensor": {
+      "file": "results/worker_2/repair_evaluator_float_tensor_rgb.npy",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "sha256": "6884183cbdb9733b27f32abc1a7e0630c39a310e21b3be2a8c44b2d60e6b5ff7",
+      "file_sha256": "250fbc64e770df882f80a4d9abd2698df5773acc6d91d52a0b3da5bc23521301",
+      "independent_copy": true
+    },
+    "saved_npz_sha256": "520d0ade109a3943d638bb4934321eebc2f5f9f0fab62b79d0880fd42878cde2",
+    "raw_to_saved_flip_exact": true,
+    "source_state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+    "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+    "pixel_sha256": "5a8e3ff2868e71106e636a89038ae3ac717b095ccfde55e46a232586ee67d1a8",
+    "read_ordinal": 9,
+    "provisional_readback_healthy": false,
+    "common_raw_rgb_preprocessing": {
+      "dataset_eval_equal": true,
+      "dataset_custom_equal": true,
+      "scope": "RGB numeric formulas only; Dataset Resize256 no-op; no ray geometry or model claim"
+    }
+  },
+  {
+    "entry": "repair_custom",
+    "tensor": {
+      "file": "results/worker_2/repair_custom_float_tensor_rgb.npy",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "sha256": "70ab444c48cacd3429323b192271a287fdf3f208218eba1d3dbc34a014ff08f6",
+      "file_sha256": "17c56ad64fb3b0efae4fe8b8fd389c83f09907f840d00115d01957bbdaa1f1a1",
+      "independent_copy": true
+    },
+    "saved_npz_sha256": "e0e516201e274e44ad46c55de9ee656cdc1d0897c5c8b2f6c0766b04f8a99e49",
+    "raw_to_saved_flip_exact": true,
+    "source_state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+    "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+    "pixel_sha256": "5a8e3ff2868e71106e636a89038ae3ac717b095ccfde55e46a232586ee67d1a8",
+    "read_ordinal": 11,
+    "provisional_readback_healthy": false,
+    "common_raw_rgb_preprocessing": {
+      "dataset_eval_equal": true,
+      "dataset_custom_equal": true,
+      "scope": "RGB numeric formulas only; Dataset Resize256 no-op; no ray geometry or model claim"
+    }
+  }
+]

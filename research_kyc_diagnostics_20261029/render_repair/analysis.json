@@ -1,0 +1,536 @@
+{
+  "utc": "2026-10-29T09:32:30.237381+00:00",
+  "state": "PARTIAL_REPAIR_FAILED",
+  "entries": [
+    {
+      "entry": "baseline_dataset",
+      "checks": {
+        "raw_equals_flip_input": true,
+        "flip_output_exact": true,
+        "tensor_to_flip_exact": true,
+        "saved_tensor_exact": true,
+        "png_exact": true
+      },
+      "context_before": {
+        "current": null,
+        "target": "w2_ctx2",
+        "match": false,
+        "framebuffer_status": null,
+        "gl_errors": null,
+        "gl_state": "NO_CURRENT_CONTEXT"
+      },
+      "context_after": {
+        "current": null,
+        "target": "w2_ctx2",
+        "match": false,
+        "framebuffer_status": null,
+        "gl_errors": null,
+        "gl_state": "NO_CURRENT_CONTEXT"
+      },
+      "sentinel": {
+        "retained_165_fraction": 1.0,
+        "raw_165_fraction": 0.0011749267578125,
+        "equal_raw": false,
+        "maxabs_to_raw": 165,
+        "separate_buffer": true,
+        "value": 165
+      },
+      "common_raw_rgb_preprocessing": {
+        "dataset_eval_equal": true,
+        "dataset_custom_equal": true,
+        "scope": "RGB numeric formulas only; Dataset Resize256 no-op; no ray geometry or model claim"
+      }
+    },
+    {
+      "entry": "baseline_evaluator",
+      "checks": {
+        "raw_equals_flip_input": true,
+        "flip_output_exact": true,
+        "tensor_to_flip_exact": true,
+        "saved_tensor_exact": true,
+        "png_exact": true
+      },
+      "context_before": {
+        "current": null,
+        "target": "w2_ctx2",
+        "match": false,
+        "framebuffer_status": null,
+        "gl_errors": null,
+        "gl_state": "NO_CURRENT_CONTEXT"
+      },
+      "context_after": {
+        "current": null,
+        "target": "w2_ctx2",
+        "match": false,
+        "framebuffer_status": null,
+        "gl_errors": null,
+        "gl_state": "NO_CURRENT_CONTEXT"
+      },
+      "sentinel": {
+        "retained_165_fraction": 1.0,
+        "raw_165_fraction": 0.0003763834635416667,
+        "equal_raw": false,
+        "maxabs_to_raw": 165,
+        "separate_buffer": true,
+        "value": 165
+      },
+      "common_raw_rgb_preprocessing": {
+        "dataset_eval_equal": true,
+        "dataset_custom_equal": true,
+        "scope": "RGB numeric formulas only; Dataset Resize256 no-op; no ray geometry or model claim"
+      }
+    },
+    {
+      "entry": "baseline_custom",
+      "checks": {
+        "raw_equals_flip_input": true,
+        "flip_output_exact": true,
+        "tensor_to_flip_exact": true,
+        "saved_tensor_exact": true,
+        "png_exact": true
+      },
+      "context_before": {
+        "current": null,
+        "target": "w2_ctx2",
+        "match": false,
+        "framebuffer_status": null,
+        "gl_errors": null,
+        "gl_state": "NO_CURRENT_CONTEXT"
+      },
+      "context_after": {
+        "current": null,
+        "target": "w2_ctx2",
+        "match": false,
+        "framebuffer_status": null,
+        "gl_errors": null,
+        "gl_state": "NO_CURRENT_CONTEXT"
+      },
+      "sentinel": {
+        "retained_165_fraction": 1.0,
+        "raw_165_fraction": 0.0001068115234375,
+        "equal_raw": false,
+        "maxabs_to_raw": 165,
+        "separate_buffer": true,
+        "value": 165
+      },
+      "common_raw_rgb_preprocessing": {
+        "dataset_eval_equal": true,
+        "dataset_custom_equal": true,
+        "scope": "RGB numeric formulas only; Dataset Resize256 no-op; no ray geometry or model claim"
+      }
+    },
+    {
+      "entry": "repair_dataset",
+      "checks": {
+        "raw_equals_flip_input": true,
+        "flip_output_exact": true,
+        "tensor_to_flip_exact": true,
+        "saved_tensor_exact": true,
+        "png_exact": true
+      },
+      "context_before": {
+        "current": "w2_ctx2",
+        "target": "w2_ctx2",
+        "match": true,
+        "framebuffer_status": 33305,
+        "gl_errors": [
+          0
+        ],
+        "gl_state": "ERRORS_DRAINED"
+      },
+      "context_after": {
+        "current": "w2_ctx2",
+        "target": "w2_ctx2",
+        "match": true,
+        "framebuffer_status": 33305,
+        "gl_errors": [
+          1282,
+          0
+        ],
+        "gl_state": "ERRORS_DRAINED"
+      },
+      "sentinel": {
+        "retained_165_fraction": 1.0,
+        "raw_165_fraction": 6.103515625e-05,
+        "equal_raw": false,
+        "maxabs_to_raw": 165,
+        "separate_buffer": true,
+        "value": 165
+      },
+      "common_raw_rgb_preprocessing": {
+        "dataset_eval_equal": true,
+        "dataset_custom_equal": true,
+        "scope": "RGB numeric formulas only; Dataset Resize256 no-op; no ray geometry or model claim"
+      }
+    },
+    {
+      "entry": "repair_evaluator",
+      "checks": {
+        "raw_equals_flip_input": true,
+        "flip_output_exact": true,
+        "tensor_to_flip_exact": true,
+        "saved_tensor_exact": true,
+        "png_exact": true
+      },
+      "context_before": {
+        "current": "w2_ctx2",
+        "target": "w2_ctx2",
+        "match": true,
+        "framebuffer_status": 33305,
+        "gl_errors": [
+          0
+        ],
+        "gl_state": "ERRORS_DRAINED"
+      },
+      "context_after": {
+        "current": "w2_ctx2",
+        "target": "w2_ctx2",
+        "match": true,
+        "framebuffer_status": 33305,
+        "gl_errors": [
+          1282,
+          0
+        ],
+        "gl_state": "ERRORS_DRAINED"
+      },
+      "sentinel": {
+        "retained_165_fraction": 1.0,
+        "raw_165_fraction": 6.103515625e-05,
+        "equal_raw": false,
+        "maxabs_to_raw": 165,
+        "separate_buffer": true,
+        "value": 165
+      },
+      "common_raw_rgb_preprocessing": {
+        "dataset_eval_equal": true,
+        "dataset_custom_equal": true,
+        "scope": "RGB numeric formulas only; Dataset Resize256 no-op; no ray geometry or model claim"
+      }
+    },
+    {
+      "entry": "repair_custom",
+      "checks": {
+        "raw_equals_flip_input": true,
+        "flip_output_exact": true,
+        "tensor_to_flip_exact": true,
+        "saved_tensor_exact": true,
+        "png_exact": true
+      },
+      "context_before": {
+        "current": "w2_ctx2",
+        "target": "w2_ctx2",
+        "match": true,
+        "framebuffer_status": 33305,
+        "gl_errors": [
+          0
+        ],
+        "gl_state": "ERRORS_DRAINED"
+      },
+      "context_after": {
+        "current": "w2_ctx2",
+        "target": "w2_ctx2",
+        "match": true,
+        "framebuffer_status": 33305,
+        "gl_errors": [
+          1282,
+          0
+        ],
+        "gl_state": "ERRORS_DRAINED"
+      },
+      "sentinel": {
+        "retained_165_fraction": 1.0,
+        "raw_165_fraction": 6.103515625e-05,
+        "equal_raw": false,
+        "maxabs_to_raw": 165,
+        "separate_buffer": true,
+        "value": 165
+      },
+      "common_raw_rgb_preprocessing": {
+        "dataset_eval_equal": true,
+        "dataset_custom_equal": true,
+        "scope": "RGB numeric formulas only; Dataset Resize256 no-op; no ray geometry or model claim"
+      }
+    }
+  ],
+  "initial_lifecycle_chain": [
+    {
+      "index_zero_based": 3,
+      "utc": "2026-10-29T09:29:44.191502+00:00",
+      "monotonic": 2620144.249281517,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "eglReleaseThread_enter",
+      "telemetry": {
+        "current": null,
+        "target": null,
+        "match": false,
+        "framebuffer_status": null,
+        "gl_errors": null,
+        "gl_state": "NO_CURRENT_CONTEXT"
+      }
+    },
+    {
+      "index_zero_based": 4,
+      "utc": "2026-10-29T09:29:44.239755+00:00",
+      "monotonic": 2620144.297528594,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "eglReleaseThread_exit",
+      "telemetry": {
+        "current": null,
+        "target": null,
+        "match": false,
+        "framebuffer_status": null,
+        "gl_errors": null,
+        "gl_state": "NO_CURRENT_CONTEXT"
+      }
+    },
+    {
+      "index_zero_based": 14,
+      "utc": "2026-10-29T09:29:47.177834+00:00",
+      "monotonic": 2620147.235612991,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "eglReleaseThread_enter",
+      "telemetry": {
+        "current": "w2_ctx1",
+        "target": null,
+        "match": false,
+        "framebuffer_status": 36053,
+        "gl_errors": [
+          0
+        ],
+        "gl_state": "ERRORS_DRAINED"
+      }
+    },
+    {
+      "index_zero_based": 15,
+      "utc": "2026-10-29T09:29:47.234140+00:00",
+      "monotonic": 2620147.291921937,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "eglReleaseThread_exit",
+      "telemetry": {
+        "current": null,
+        "target": null,
+        "match": false,
+        "framebuffer_status": null,
+        "gl_errors": null,
+        "gl_state": "NO_CURRENT_CONTEXT"
+      }
+    },
+    {
+      "index_zero_based": 23,
+      "utc": "2026-10-29T09:29:47.939365+00:00",
+      "monotonic": 2620147.997142719,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "after_make_env",
+      "telemetry": {
+        "current": "w2_ctx2",
+        "target": null,
+        "match": false,
+        "framebuffer_status": 36053,
+        "gl_errors": [
+          0
+        ],
+        "gl_state": "ERRORS_DRAINED"
+      }
+    },
+    {
+      "index_zero_based": 24,
+      "utc": "2026-10-29T09:29:47.991531+00:00",
+      "monotonic": 2620148.04930568,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "before_Dataset",
+      "telemetry": {
+        "current": "w2_ctx2",
+        "target": null,
+        "match": false,
+        "framebuffer_status": 36053,
+        "gl_errors": [
+          0
+        ],
+        "gl_state": "ERRORS_DRAINED"
+      }
+    },
+    {
+      "index_zero_based": 25,
+      "utc": "2026-10-29T09:29:48.136141+00:00",
+      "monotonic": 2620148.193923668,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "free_enter",
+      "telemetry": {
+        "current": "w2_ctx2",
+        "target": "w2_ctx1",
+        "match": false,
+        "framebuffer_status": 33305,
+        "gl_errors": [
+          0
+        ],
+        "gl_state": "ERRORS_DRAINED"
+      }
+    },
+    {
+      "index_zero_based": 26,
+      "utc": "2026-10-29T09:29:48.173896+00:00",
+      "monotonic": 2620148.231673275,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "eglDestroyContext_enter",
+      "telemetry": {
+        "current": "w2_ctx2",
+        "target": null,
+        "match": false,
+        "framebuffer_status": 33305,
+        "gl_errors": [
+          0
+        ],
+        "gl_state": "ERRORS_DRAINED"
+      }
+    },
+    {
+      "index_zero_based": 27,
+      "utc": "2026-10-29T09:29:48.223555+00:00",
+      "monotonic": 2620148.281329146,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "eglDestroyContext_exit",
+      "telemetry": {
+        "current": "w2_ctx2",
+        "target": null,
+        "match": false,
+        "framebuffer_status": 33305,
+        "gl_errors": [
+          0
+        ],
+        "gl_state": "ERRORS_DRAINED"
+      }
+    },
+    {
+      "index_zero_based": 28,
+      "utc": "2026-10-29T09:29:48.272651+00:00",
+      "monotonic": 2620148.330429095,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "eglReleaseThread_enter",
+      "telemetry": {
+        "current": "w2_ctx2",
+        "target": null,
+        "match": false,
+        "framebuffer_status": 33305,
+        "gl_errors": [
+          0
+        ],
+        "gl_state": "ERRORS_DRAINED"
+      }
+    },
+    {
+      "index_zero_based": 29,
+      "utc": "2026-10-29T09:29:48.334421+00:00",
+      "monotonic": 2620148.392200338,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "eglReleaseThread_exit",
+      "telemetry": {
+        "current": null,
+        "target": null,
+        "match": false,
+        "framebuffer_status": null,
+        "gl_errors": null,
+        "gl_state": "NO_CURRENT_CONTEXT"
+      }
+    },
+    {
+      "index_zero_based": 30,
+      "utc": "2026-10-29T09:29:48.422081+00:00",
+      "monotonic": 2620148.479859204,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "free_exit",
+      "telemetry": {
+        "current": null,
+        "target": null,
+        "match": false,
+        "framebuffer_status": null,
+        "gl_errors": null,
+        "gl_state": "NO_CURRENT_CONTEXT"
+      }
+    },
+    {
+      "index_zero_based": 31,
+      "utc": "2026-10-29T09:29:48.471997+00:00",
+      "monotonic": 2620148.529776213,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "free_enter",
+      "telemetry": {
+        "current": null,
+        "target": null,
+        "match": false,
+        "framebuffer_status": null,
+        "gl_errors": null,
+        "gl_state": "NO_CURRENT_CONTEXT"
+      }
+    },
+    {
+      "index_zero_based": 32,
+      "utc": "2026-10-29T09:29:48.521676+00:00",
+      "monotonic": 2620148.579455183,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "free_exit",
+      "telemetry": {
+        "current": null,
+        "target": null,
+        "match": false,
+        "framebuffer_status": null,
+        "gl_errors": null,
+        "gl_state": "NO_CURRENT_CONTEXT"
+      }
+    },
+    {
+      "index_zero_based": 33,
+      "utc": "2026-10-29T09:29:48.699592+00:00",
+      "monotonic": 2620148.75736889,
+      "thread_id": 136643623311168,
+      "worker": 2,
+      "entry": "INIT",
+      "event": "after_Dataset",
+      "telemetry": {
+        "current": null,
+        "target": null,
+        "match": false,
+        "framebuffer_status": null,
+        "gl_errors": null,
+        "gl_state": "NO_CURRENT_CONTEXT"
+      }
+    }
+  ],
+  "initial_normal_control": "NOT_RUN; no healthy readback obtained",
+  "raw_fault_reproduced": true,
+  "repair_context_binding_effective": true,
+  "repair_image_restoration": false,
+  "independent_valid_worker_repetition": "NOT_RUN; worker1 failed before env/render; worker2 only valid rendering process",
+  "observed_trigger": "old ctx1 free interval occurred while ctx2 current; eglReleaseThread enter ctx2 and exit no current during Dataset construction",
+  "buffer_trigger_boundary": "FBO was complete after make_env/before Dataset but undefined on old EGL free entry. The preceding MjrContext.con.free call was not individually traced; cross-context FBO deletion is a hypothesis, not proven.",
+  "no_normal_control_boundary": "sentinel remains165 on both baseline/repair; combine no-current/FBO errors with raw corruption; do not infer normal-buffer write history from sentinel alone",
+  "GL_error_query_boundary": "queries consume error flags and may generate errors; codes describe monitored query+call intervals, not exclusive attribution",
+  "historic_0_of_32_cause": "UNKNOWN"
+}

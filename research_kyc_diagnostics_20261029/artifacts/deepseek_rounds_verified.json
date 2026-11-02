@@ -1,5 +1,5 @@
 {
-  "verified_local": "2026-10-29T17:17:24.559509+08:00",
+  "verified_local": "2026-11-02T09:27:08.264350+08:00",
   "rounds": [
     {
       "turn": "09_diag_independent",
@@ -94,6 +94,39 @@
       "session_id": "736077c1-8d4e-4df7-979f-1fc15f980a2a",
       "started_utc": "2026-10-29T09:14:55.816645+00:00",
       "ended_utc": "2026-10-29T09:15:23.901673+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "response_model_fields": [
+        "deepseek-flash"
+      ]
+    },
+    {
+      "turn": "18_render_result_independent",
+      "session_id": "736077c1-8d4e-4df7-979f-1fc15f980a2a",
+      "started_utc": "2026-10-29T13:53:15.343427+00:00",
+      "ended_utc": "2026-10-29T13:54:57.627981+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "response_model_fields": [
+        "deepseek-flash"
+      ]
+    },
+    {
+      "turn": "19_lifecycle_cross_protocol",
+      "session_id": "736077c1-8d4e-4df7-979f-1fc15f980a2a",
+      "started_utc": "2026-10-29T13:59:05.715699+00:00",
+      "ended_utc": "2026-10-29T14:00:36.470640+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "response_model_fields": [
+        "deepseek-flash"
+      ]
+    },
+    {
+      "turn": "20_lifecycle_final_gate",
+      "session_id": "736077c1-8d4e-4df7-979f-1fc15f980a2a",
+      "started_utc": "2026-11-02T01:25:50.240496+00:00",
+      "ended_utc": "2026-11-02T01:26:17.274098+00:00",
       "exit_code": 0,
       "result_status": "success",
       "response_model_fields": [
