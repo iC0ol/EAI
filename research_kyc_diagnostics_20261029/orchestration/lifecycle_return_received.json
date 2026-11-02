@@ -1,0 +1,13 @@
+{
+  "received_local": "2026-11-02T10:36:38.691716+08:00",
+  "executor_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+  "scope": "render_lifecycle",
+  "execution_complete": true,
+  "causal_acceptance": "PARTIAL",
+  "parent_audit": "../artifacts/parent_render_lifecycle_audit.json",
+  "primary_limitation": "No fixed destructor before images and no real live previous restore",
+  "new_cpu_edge_case": "nonnull raw context + unknown registry key incorrectly treated as NULL",
+  "old_0_of_32_cause": "UNKNOWN",
+  "main_check": "ACTIVE",
+  "executor_check": "PAUSED"
+}

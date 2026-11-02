@@ -1,0 +1,29 @@
+{
+  "state": "APPROVED",
+  "protocol": "PROTOCOL.md",
+  "version": "v1",
+  "protocol_sha256": "0b39318295a299d9fc55327af7b24925b58036563819368154e39911f235fd8e",
+  "approved_local": "2026-11-02T10:38:16.142259+08:00",
+  "codex_review": "APPROVE",
+  "deepseek_review": "APPROVE",
+  "deepseek_response": "../discussion/22_controlled_cross_protocol_response.md",
+  "deepseek_session": "736077c1-8d4e-4df7-979f-1fc15f980a2a",
+  "response_model_fields": [
+    "deepseek-flash"
+  ],
+  "caps": {
+    "workers": 2,
+    "make_env": 2,
+    "renders": 4,
+    "readPixels": 8,
+    "gpu_allocation_seconds": 180,
+    "ACT": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "optimizer_updates": 0
+  },
+  "authorization": "original human delegation and explicit investigate/solve current RGB, continue work",
+  "old_terminal_restart": false,
+  "full_training_authorized": false,
+  "git_index_owner": "main throughout"
+}

@@ -1,0 +1,150 @@
+{
+  "checked_utc": "2026-11-02T02:03:56.683037+00:00",
+  "model_sim_GL_calls": 0,
+  "frames": [
+    {
+      "mode": "baseline",
+      "entry": "early",
+      "five_boundaries_and_common_rgb": true,
+      "sentinel_equals_raw": true,
+      "sentinel_165_fraction": 0.0012969970703125,
+      "current_before": "w1_ctx2"
+    },
+    {
+      "mode": "baseline",
+      "entry": "dataset",
+      "five_boundaries_and_common_rgb": true,
+      "sentinel_equals_raw": false,
+      "sentinel_165_fraction": 1.0,
+      "current_before": null
+    },
+    {
+      "mode": "baseline",
+      "entry": "evaluator",
+      "five_boundaries_and_common_rgb": true,
+      "sentinel_equals_raw": false,
+      "sentinel_165_fraction": 1.0,
+      "current_before": null
+    },
+    {
+      "mode": "baseline",
+      "entry": "custom",
+      "five_boundaries_and_common_rgb": true,
+      "sentinel_equals_raw": false,
+      "sentinel_165_fraction": 1.0,
+      "current_before": null
+    },
+    {
+      "mode": "fix",
+      "entry": "early",
+      "five_boundaries_and_common_rgb": true,
+      "sentinel_equals_raw": true,
+      "sentinel_165_fraction": 0.0012969970703125,
+      "current_before": "w2_ctx2"
+    },
+    {
+      "mode": "fix",
+      "entry": "dataset",
+      "five_boundaries_and_common_rgb": true,
+      "sentinel_equals_raw": true,
+      "sentinel_165_fraction": 0.0012969970703125,
+      "current_before": "w2_ctx2"
+    },
+    {
+      "mode": "fix",
+      "entry": "evaluator",
+      "five_boundaries_and_common_rgb": true,
+      "sentinel_equals_raw": true,
+      "sentinel_165_fraction": 0.0012969970703125,
+      "current_before": "w2_ctx2"
+    },
+    {
+      "mode": "fix",
+      "entry": "custom",
+      "five_boundaries_and_common_rgb": true,
+      "sentinel_equals_raw": true,
+      "sentinel_165_fraction": 0.0012969970703125,
+      "current_before": "w2_ctx2"
+    }
+  ],
+  "raw_metadata_hashes": 16,
+  "same_state_T_XML": true,
+  "baseline_resource_loss_window": [
+    29,
+    30
+  ],
+  "current_resource_losses": [
+    {
+      "category": "framebuffers",
+      "name": "offFBO",
+      "id": 1
+    },
+    {
+      "category": "framebuffers",
+      "name": "offFBO_r",
+      "id": 2
+    },
+    {
+      "category": "framebuffers",
+      "name": "shadowFBO",
+      "id": 3
+    },
+    {
+      "category": "renderbuffers",
+      "name": "offColor",
+      "id": 1
+    },
+    {
+      "category": "renderbuffers",
+      "name": "offColor_r",
+      "id": 3
+    },
+    {
+      "category": "renderbuffers",
+      "name": "offDepthStencil",
+      "id": 2
+    },
+    {
+      "category": "renderbuffers",
+      "name": "offDepthStencil_r",
+      "id": 4
+    }
+  ],
+  "baseline_release_current_window": [
+    34,
+    35
+  ],
+  "fix_last_image_event": 56,
+  "fix_owner_release_events": [
+    59,
+    75
+  ],
+  "real_live_previous_restores": 0,
+  "healthy_frames_caused_by_repair": "NOT_ESTABLISHED",
+  "fixed_images_and_baseline_early_bit_equal": true,
+  "old_files_checked": 180,
+  "old_changes": [],
+  "frozen_source_and_code_sha_match": true,
+  "gpu_seconds_from_timestamps": 24.411258220672607,
+  "reported_gpu_seconds": 24.411253882106394,
+  "counts": {
+    "workers": 2,
+    "make_env": 2,
+    "renders": 8,
+    "readPixels": 16,
+    "ACT": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "optimizer_updates": 0
+  },
+  "processes_exited": true,
+  "unregistered_previous_cpu_regression": {
+    "initial_nonnull_context_with_unknown_key": true,
+    "final_current": null,
+    "release_state": "DONE",
+    "failure_count": 0,
+    "con_free_calls": 1,
+    "actual_GL_calls": 0
+  },
+  "decision": "PARTIAL; baseline mechanism directly supported, equivalent repair intervention missing"
+}

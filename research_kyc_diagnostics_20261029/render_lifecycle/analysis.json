@@ -1,0 +1,1269 @@
+{
+  "utc": "2026-11-02T01:55:51.379830+00:00",
+  "state": "BOTH_CONDITIONS_COMPLETE_PENDING_PARENT_VISUAL_ACCEPTANCE",
+  "summary": [
+    {
+      "condition": "baseline",
+      "entry": "early",
+      "boundary_checks": {
+        "raw_flip_input": true,
+        "flip_exact": true,
+        "tensor_roundtrip": true,
+        "saved_exact": true,
+        "png_exact": true
+      },
+      "common_raw_rgb_equal": true,
+      "before_context": "w1_ctx2",
+      "after_context": "w1_ctx2",
+      "before_gl": {
+        "bindings": {
+          "draw": 1,
+          "read": 1,
+          "renderbuffer": 4
+        },
+        "draw_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "read_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "errors": {
+          "codes": [
+            0
+          ],
+          "drained": true
+        }
+      },
+      "after_gl": {
+        "bindings": {
+          "draw": 1,
+          "read": 1,
+          "renderbuffer": 4
+        },
+        "draw_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "read_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "errors": {
+          "codes": [
+            0
+          ],
+          "drained": true
+        }
+      },
+      "sentinel": {
+        "value": 165,
+        "retained_fraction": 0.0012969970703125,
+        "normal_165_fraction": 0.0012969970703125,
+        "equal_preflip_raw": true,
+        "max_abs_preflip_difference": 0,
+        "separate_buffer": true,
+        "executed_inside_original_lock": true
+      },
+      "state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+      "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+      "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "pixel_sha256": "688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37"
+    },
+    {
+      "condition": "baseline",
+      "entry": "dataset",
+      "boundary_checks": {
+        "raw_flip_input": true,
+        "flip_exact": true,
+        "tensor_roundtrip": true,
+        "saved_exact": true,
+        "png_exact": true
+      },
+      "common_raw_rgb_equal": true,
+      "before_context": null,
+      "after_context": null,
+      "before_gl": null,
+      "after_gl": null,
+      "sentinel": {
+        "value": 165,
+        "retained_fraction": 1.0,
+        "normal_165_fraction": 0.0,
+        "equal_preflip_raw": false,
+        "max_abs_preflip_difference": 165,
+        "separate_buffer": true,
+        "executed_inside_original_lock": true
+      },
+      "state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+      "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+      "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "pixel_sha256": "4abbc7be7c78230ec773e1fe3241004e9bae6c78e88bbb552f08fdfa5655ea2c"
+    },
+    {
+      "condition": "baseline",
+      "entry": "evaluator",
+      "boundary_checks": {
+        "raw_flip_input": true,
+        "flip_exact": true,
+        "tensor_roundtrip": true,
+        "saved_exact": true,
+        "png_exact": true
+      },
+      "common_raw_rgb_equal": true,
+      "before_context": null,
+      "after_context": null,
+      "before_gl": null,
+      "after_gl": null,
+      "sentinel": {
+        "value": 165,
+        "retained_fraction": 1.0,
+        "normal_165_fraction": 0.0,
+        "equal_preflip_raw": false,
+        "max_abs_preflip_difference": 165,
+        "separate_buffer": true,
+        "executed_inside_original_lock": true
+      },
+      "state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+      "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+      "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "pixel_sha256": "6431c2ea6487427490575feae23a9fd04219912a69cb28d3c11bc17dd5b27dd3"
+    },
+    {
+      "condition": "baseline",
+      "entry": "custom",
+      "boundary_checks": {
+        "raw_flip_input": true,
+        "flip_exact": true,
+        "tensor_roundtrip": true,
+        "saved_exact": true,
+        "png_exact": true
+      },
+      "common_raw_rgb_equal": true,
+      "before_context": null,
+      "after_context": null,
+      "before_gl": null,
+      "after_gl": null,
+      "sentinel": {
+        "value": 165,
+        "retained_fraction": 1.0,
+        "normal_165_fraction": 0.0,
+        "equal_preflip_raw": false,
+        "max_abs_preflip_difference": 165,
+        "separate_buffer": true,
+        "executed_inside_original_lock": true
+      },
+      "state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+      "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+      "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "pixel_sha256": "71dd09eb3b91a4a8c53beddc7fb2b972496f10a0ddb49f3d0c02d41bb53854a3"
+    },
+    {
+      "condition": "fix",
+      "entry": "early",
+      "boundary_checks": {
+        "raw_flip_input": true,
+        "flip_exact": true,
+        "tensor_roundtrip": true,
+        "saved_exact": true,
+        "png_exact": true
+      },
+      "common_raw_rgb_equal": true,
+      "before_context": "w2_ctx2",
+      "after_context": "w2_ctx2",
+      "before_gl": {
+        "bindings": {
+          "draw": 1,
+          "read": 1,
+          "renderbuffer": 4
+        },
+        "draw_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "read_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "errors": {
+          "codes": [
+            0
+          ],
+          "drained": true
+        }
+      },
+      "after_gl": {
+        "bindings": {
+          "draw": 1,
+          "read": 1,
+          "renderbuffer": 4
+        },
+        "draw_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "read_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "errors": {
+          "codes": [
+            0
+          ],
+          "drained": true
+        }
+      },
+      "sentinel": {
+        "value": 165,
+        "retained_fraction": 0.0012969970703125,
+        "normal_165_fraction": 0.0012969970703125,
+        "equal_preflip_raw": true,
+        "max_abs_preflip_difference": 0,
+        "separate_buffer": true,
+        "executed_inside_original_lock": true
+      },
+      "state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+      "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+      "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "pixel_sha256": "688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37"
+    },
+    {
+      "condition": "fix",
+      "entry": "dataset",
+      "boundary_checks": {
+        "raw_flip_input": true,
+        "flip_exact": true,
+        "tensor_roundtrip": true,
+        "saved_exact": true,
+        "png_exact": true
+      },
+      "common_raw_rgb_equal": true,
+      "before_context": "w2_ctx2",
+      "after_context": "w2_ctx2",
+      "before_gl": {
+        "bindings": {
+          "draw": 1,
+          "read": 1,
+          "renderbuffer": 4
+        },
+        "draw_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "read_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "errors": {
+          "codes": [
+            0
+          ],
+          "drained": true
+        }
+      },
+      "after_gl": {
+        "bindings": {
+          "draw": 1,
+          "read": 1,
+          "renderbuffer": 4
+        },
+        "draw_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "read_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "errors": {
+          "codes": [
+            0
+          ],
+          "drained": true
+        }
+      },
+      "sentinel": {
+        "value": 165,
+        "retained_fraction": 0.0012969970703125,
+        "normal_165_fraction": 0.0012969970703125,
+        "equal_preflip_raw": true,
+        "max_abs_preflip_difference": 0,
+        "separate_buffer": true,
+        "executed_inside_original_lock": true
+      },
+      "state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+      "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+      "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "pixel_sha256": "688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37"
+    },
+    {
+      "condition": "fix",
+      "entry": "evaluator",
+      "boundary_checks": {
+        "raw_flip_input": true,
+        "flip_exact": true,
+        "tensor_roundtrip": true,
+        "saved_exact": true,
+        "png_exact": true
+      },
+      "common_raw_rgb_equal": true,
+      "before_context": "w2_ctx2",
+      "after_context": "w2_ctx2",
+      "before_gl": {
+        "bindings": {
+          "draw": 1,
+          "read": 1,
+          "renderbuffer": 4
+        },
+        "draw_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "read_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "errors": {
+          "codes": [
+            0
+          ],
+          "drained": true
+        }
+      },
+      "after_gl": {
+        "bindings": {
+          "draw": 1,
+          "read": 1,
+          "renderbuffer": 4
+        },
+        "draw_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "read_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "errors": {
+          "codes": [
+            0
+          ],
+          "drained": true
+        }
+      },
+      "sentinel": {
+        "value": 165,
+        "retained_fraction": 0.0012969970703125,
+        "normal_165_fraction": 0.0012969970703125,
+        "equal_preflip_raw": true,
+        "max_abs_preflip_difference": 0,
+        "separate_buffer": true,
+        "executed_inside_original_lock": true
+      },
+      "state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+      "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+      "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "pixel_sha256": "688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37"
+    },
+    {
+      "condition": "fix",
+      "entry": "custom",
+      "boundary_checks": {
+        "raw_flip_input": true,
+        "flip_exact": true,
+        "tensor_roundtrip": true,
+        "saved_exact": true,
+        "png_exact": true
+      },
+      "common_raw_rgb_equal": true,
+      "before_context": "w2_ctx2",
+      "after_context": "w2_ctx2",
+      "before_gl": {
+        "bindings": {
+          "draw": 1,
+          "read": 1,
+          "renderbuffer": 4
+        },
+        "draw_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "read_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "errors": {
+          "codes": [
+            0
+          ],
+          "drained": true
+        }
+      },
+      "after_gl": {
+        "bindings": {
+          "draw": 1,
+          "read": 1,
+          "renderbuffer": 4
+        },
+        "draw_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "read_bound_object": {
+          "object_id": 1,
+          "status": 36053,
+          "attachments": {
+            "color0": {
+              "type": 36161,
+              "object_id": 1
+            },
+            "depth": {
+              "type": 36161,
+              "object_id": 2
+            },
+            "stencil": {
+              "type": 36161,
+              "object_id": 2
+            }
+          }
+        },
+        "errors": {
+          "codes": [
+            0
+          ],
+          "drained": true
+        }
+      },
+      "sentinel": {
+        "value": 165,
+        "retained_fraction": 0.0012969970703125,
+        "normal_165_fraction": 0.0012969970703125,
+        "equal_preflip_raw": true,
+        "max_abs_preflip_difference": 0,
+        "separate_buffer": true,
+        "executed_inside_original_lock": true
+      },
+      "state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+      "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+      "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+      "pixel_sha256": "688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37"
+    }
+  ],
+  "object_pairs": [
+    {
+      "condition": "baseline",
+      "before_index": 29,
+      "after_index": 30,
+      "entry": "CONSTRUCT_DATASET",
+      "owner_context": "w1_ctx1",
+      "current_before": "w1_ctx2",
+      "current_after": "w1_ctx2",
+      "measured_namespace": "active_objects",
+      "owner_measurement_before": "NOT_MEASURED_WRONG_CONTEXT",
+      "before_objects": {
+        "owner_context": "w1_ctx2",
+        "state": "MEASURED_IN_OWNER_CONTEXT",
+        "framebuffers": {
+          "offFBO": {
+            "id": 1,
+            "is_framebuffer": true
+          },
+          "offFBO_r": {
+            "id": 2,
+            "is_framebuffer": true
+          },
+          "shadowFBO": {
+            "id": 3,
+            "is_framebuffer": true
+          }
+        },
+        "renderbuffers": {
+          "offColor": {
+            "id": 1,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offColor_r": {
+            "id": 3,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil": {
+            "id": 2,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil_r": {
+            "id": 4,
+            "is_renderbuffer": true,
+            "bound_dimensions": {
+              "width": 640,
+              "height": 480,
+              "samples": 0
+            }
+          }
+        },
+        "ids": {
+          "offFBO": 1,
+          "offFBO_r": 2,
+          "shadowFBO": 3,
+          "offColor": 1,
+          "offColor_r": 3,
+          "offDepthStencil": 2,
+          "offDepthStencil_r": 4
+        }
+      },
+      "after_objects": {
+        "owner_context": "w1_ctx2",
+        "state": "MEASURED_IN_OWNER_CONTEXT",
+        "framebuffers": {
+          "offFBO": {
+            "id": 1,
+            "is_framebuffer": false
+          },
+          "offFBO_r": {
+            "id": 2,
+            "is_framebuffer": false
+          },
+          "shadowFBO": {
+            "id": 3,
+            "is_framebuffer": false
+          }
+        },
+        "renderbuffers": {
+          "offColor": {
+            "id": 1,
+            "is_renderbuffer": false,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offColor_r": {
+            "id": 3,
+            "is_renderbuffer": false,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil": {
+            "id": 2,
+            "is_renderbuffer": false,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil_r": {
+            "id": 4,
+            "is_renderbuffer": false,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          }
+        },
+        "ids": {
+          "offFBO": 1,
+          "offFBO_r": 2,
+          "shadowFBO": 3,
+          "offColor": 1,
+          "offColor_r": 3,
+          "offDepthStencil": 2,
+          "offDepthStencil_r": 4
+        }
+      },
+      "valid_to_invalid": [
+        {
+          "kind": "framebuffers",
+          "name": "offFBO",
+          "id": 1,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "framebuffers",
+          "name": "offFBO_r",
+          "id": 2,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "framebuffers",
+          "name": "shadowFBO",
+          "id": 3,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "renderbuffers",
+          "name": "offColor",
+          "id": 1,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "renderbuffers",
+          "name": "offColor_r",
+          "id": 3,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "renderbuffers",
+          "name": "offDepthStencil",
+          "id": 2,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "renderbuffers",
+          "name": "offDepthStencil_r",
+          "id": 4,
+          "before": true,
+          "after": false
+        }
+      ]
+    },
+    {
+      "condition": "baseline",
+      "before_index": 67,
+      "after_index": 68,
+      "entry": "CLEANUP",
+      "owner_context": "w1_ctx2",
+      "current_before": null,
+      "current_after": null,
+      "measured_namespace": "active_objects",
+      "owner_measurement_before": "NOT_MEASURED_WRONG_CONTEXT",
+      "before_objects": null,
+      "after_objects": null,
+      "valid_to_invalid": []
+    },
+    {
+      "condition": "fix",
+      "before_index": 59,
+      "after_index": 60,
+      "entry": "CLEANUP",
+      "owner_context": "w2_ctx2",
+      "current_before": "w2_ctx2",
+      "current_after": "w2_ctx2",
+      "measured_namespace": "owner_objects",
+      "owner_measurement_before": "MEASURED_IN_OWNER_CONTEXT",
+      "before_objects": {
+        "owner_context": "w2_ctx2",
+        "state": "MEASURED_IN_OWNER_CONTEXT",
+        "framebuffers": {
+          "offFBO": {
+            "id": 1,
+            "is_framebuffer": true
+          },
+          "offFBO_r": {
+            "id": 2,
+            "is_framebuffer": true
+          },
+          "shadowFBO": {
+            "id": 3,
+            "is_framebuffer": true
+          }
+        },
+        "renderbuffers": {
+          "offColor": {
+            "id": 1,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offColor_r": {
+            "id": 3,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil": {
+            "id": 2,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil_r": {
+            "id": 4,
+            "is_renderbuffer": true,
+            "bound_dimensions": {
+              "width": 640,
+              "height": 480,
+              "samples": 0
+            }
+          }
+        },
+        "ids": {
+          "offFBO": 1,
+          "offFBO_r": 2,
+          "shadowFBO": 3,
+          "offColor": 1,
+          "offColor_r": 3,
+          "offDepthStencil": 2,
+          "offDepthStencil_r": 4
+        }
+      },
+      "after_objects": {
+        "owner_context": "w2_ctx2",
+        "state": "MEASURED_IN_OWNER_CONTEXT",
+        "framebuffers": {
+          "offFBO": {
+            "id": 1,
+            "is_framebuffer": false
+          },
+          "offFBO_r": {
+            "id": 2,
+            "is_framebuffer": false
+          },
+          "shadowFBO": {
+            "id": 3,
+            "is_framebuffer": false
+          }
+        },
+        "renderbuffers": {
+          "offColor": {
+            "id": 1,
+            "is_renderbuffer": false,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offColor_r": {
+            "id": 3,
+            "is_renderbuffer": false,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil": {
+            "id": 2,
+            "is_renderbuffer": false,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil_r": {
+            "id": 4,
+            "is_renderbuffer": false,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          }
+        },
+        "ids": {
+          "offFBO": 1,
+          "offFBO_r": 2,
+          "shadowFBO": 3,
+          "offColor": 1,
+          "offColor_r": 3,
+          "offDepthStencil": 2,
+          "offDepthStencil_r": 4
+        }
+      },
+      "valid_to_invalid": [
+        {
+          "kind": "framebuffers",
+          "name": "offFBO",
+          "id": 1,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "framebuffers",
+          "name": "offFBO_r",
+          "id": 2,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "framebuffers",
+          "name": "shadowFBO",
+          "id": 3,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "renderbuffers",
+          "name": "offColor",
+          "id": 1,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "renderbuffers",
+          "name": "offColor_r",
+          "id": 3,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "renderbuffers",
+          "name": "offDepthStencil",
+          "id": 2,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "renderbuffers",
+          "name": "offDepthStencil_r",
+          "id": 4,
+          "before": true,
+          "after": false
+        }
+      ]
+    },
+    {
+      "condition": "fix",
+      "before_index": 75,
+      "after_index": 76,
+      "entry": "CLEANUP",
+      "owner_context": "w2_ctx1",
+      "current_before": "w2_ctx1",
+      "current_after": "w2_ctx1",
+      "measured_namespace": "owner_objects",
+      "owner_measurement_before": "MEASURED_IN_OWNER_CONTEXT",
+      "before_objects": {
+        "owner_context": "w2_ctx1",
+        "state": "MEASURED_IN_OWNER_CONTEXT",
+        "framebuffers": {
+          "offFBO": {
+            "id": 1,
+            "is_framebuffer": true
+          },
+          "offFBO_r": {
+            "id": 2,
+            "is_framebuffer": true
+          },
+          "shadowFBO": {
+            "id": 3,
+            "is_framebuffer": true
+          }
+        },
+        "renderbuffers": {
+          "offColor": {
+            "id": 1,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offColor_r": {
+            "id": 3,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil": {
+            "id": 2,
+            "is_renderbuffer": true,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil_r": {
+            "id": 4,
+            "is_renderbuffer": true,
+            "bound_dimensions": {
+              "width": 640,
+              "height": 480,
+              "samples": 0
+            }
+          }
+        },
+        "ids": {
+          "offFBO": 1,
+          "offFBO_r": 2,
+          "shadowFBO": 3,
+          "offColor": 1,
+          "offColor_r": 3,
+          "offDepthStencil": 2,
+          "offDepthStencil_r": 4
+        }
+      },
+      "after_objects": {
+        "owner_context": "w2_ctx1",
+        "state": "MEASURED_IN_OWNER_CONTEXT",
+        "framebuffers": {
+          "offFBO": {
+            "id": 1,
+            "is_framebuffer": false
+          },
+          "offFBO_r": {
+            "id": 2,
+            "is_framebuffer": false
+          },
+          "shadowFBO": {
+            "id": 3,
+            "is_framebuffer": false
+          }
+        },
+        "renderbuffers": {
+          "offColor": {
+            "id": 1,
+            "is_renderbuffer": false,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offColor_r": {
+            "id": 3,
+            "is_renderbuffer": false,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil": {
+            "id": 2,
+            "is_renderbuffer": false,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          },
+          "offDepthStencil_r": {
+            "id": 4,
+            "is_renderbuffer": false,
+            "dimensions": "NOT_MEASURED_NOT_BOUND"
+          }
+        },
+        "ids": {
+          "offFBO": 1,
+          "offFBO_r": 2,
+          "shadowFBO": 3,
+          "offColor": 1,
+          "offColor_r": 3,
+          "offDepthStencil": 2,
+          "offDepthStencil_r": 4
+        }
+      },
+      "valid_to_invalid": [
+        {
+          "kind": "framebuffers",
+          "name": "offFBO",
+          "id": 1,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "framebuffers",
+          "name": "offFBO_r",
+          "id": 2,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "framebuffers",
+          "name": "shadowFBO",
+          "id": 3,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "renderbuffers",
+          "name": "offColor",
+          "id": 1,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "renderbuffers",
+          "name": "offColor_r",
+          "id": 3,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "renderbuffers",
+          "name": "offDepthStencil",
+          "id": 2,
+          "before": true,
+          "after": false
+        },
+        {
+          "kind": "renderbuffers",
+          "name": "offDepthStencil_r",
+          "id": 4,
+          "before": true,
+          "after": false
+        }
+      ]
+    }
+  ],
+  "previous_restorations": [],
+  "five_boundaries_per_frame_verified": 40,
+  "fixed_all_four_normal_images_bit_equal": true,
+  "baseline_early_matches_fixed_early_bit_equal": true,
+  "all_states_equal": true,
+  "all_T_equal": true,
+  "all_xml_equal": true,
+  "condition_replication": "one process baseline, one process fix; not statistical repeat",
+  "historic_checkpoint_failure_cause": "UNKNOWN",
+  "model_or_rollout_added": false,
+  "GL_query_caveat": "queries may introduce/clear errors; non-current owner is not measured; FBO0 status is not assigned to offFBO",
+  "causal_validation": "PARTIAL: fixed old renderer was released only during final cleanup, not during image acquisition",
+  "fixed_owner_release_during_image_acquisition_indices": [],
+  "fixed_image_acquisition_last_event_index": 56,
+  "real_GL_live_other_previous_restore_count": 0,
+  "live_other_previous_restore_validation": "CPU_MOCK_ONLY; NOT_EXERCISED_IN_REAL_GL",
+  "healthy_images_caused_by_fix": "NOT_ESTABLISHED: no fixed destructor executed before healthy frames completed",
+  "failure_trigger_phase_by_condition": {
+    "baseline": [
+      {
+        "before_event_index": 29,
+        "entry": "CONSTRUCT_DATASET",
+        "owner": "w1_ctx1"
+      },
+      {
+        "before_event_index": 67,
+        "entry": "CLEANUP",
+        "owner": "w1_ctx2"
+      }
+    ],
+    "fix": [
+      {
+        "before_event_index": 59,
+        "entry": "CLEANUP",
+        "owner": "w2_ctx2"
+      },
+      {
+        "before_event_index": 75,
+        "entry": "CLEANUP",
+        "owner": "w2_ctx1"
+      }
+    ]
+  }
+}

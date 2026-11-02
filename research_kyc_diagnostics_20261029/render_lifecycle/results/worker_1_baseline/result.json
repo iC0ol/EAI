@@ -1,0 +1,18 @@
+{
+  "utc": "2026-11-02T01:41:32.135700+00:00",
+  "condition": "baseline",
+  "state": "COMPLETE",
+  "entries": 4,
+  "fatal_lifecycle_errors": [],
+  "counts_at_end": {
+    "workers": 1,
+    "make_env": 1,
+    "renders": 4,
+    "readPixels": 8,
+    "ACT": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "optimizer_updates": 0
+  },
+  "old_0_of_32_cause": "UNKNOWN"
+}

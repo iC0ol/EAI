@@ -1,0 +1,90 @@
+[
+  {
+    "entry": "early",
+    "tensor": {
+      "file": "results/worker_1_baseline/early_tensor_rgb.npy",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "sha256": "87002e389e80edafefc25786291e44c75e49c26cd360def8accbcdbd55b60389",
+      "file_sha256": "bd8c3637d67869a836b588065bf2ca878487319dc99b1888a8051f11c2afb040",
+      "independent_copy": true
+    },
+    "raw_to_png_exact_flip": true,
+    "common_rgb_equal": true,
+    "pixel_sha256": "688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37",
+    "state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+    "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+    "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "normal_read_ordinal": 1
+  },
+  {
+    "entry": "dataset",
+    "tensor": {
+      "file": "results/worker_1_baseline/dataset_tensor_rgb.npy",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "sha256": "b8c3ac2b9ad45271086027affc01f0364e32a80beab11df1c534305d95c77414",
+      "file_sha256": "80ebc0041ccbae985d57047a9e877d11a069ff03f84ae044287334f0ca54b1b7",
+      "independent_copy": true
+    },
+    "raw_to_png_exact_flip": true,
+    "common_rgb_equal": true,
+    "pixel_sha256": "4abbc7be7c78230ec773e1fe3241004e9bae6c78e88bbb552f08fdfa5655ea2c",
+    "state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+    "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+    "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "normal_read_ordinal": 3
+  },
+  {
+    "entry": "evaluator",
+    "tensor": {
+      "file": "results/worker_1_baseline/evaluator_tensor_rgb.npy",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "sha256": "79127a73b21010e191c1e7e083767cd3a7af9b1544e6ae42ea6b0912db394355",
+      "file_sha256": "51d4beab62c163aeef4bb790262d0733b1d5173a2785767115f9e3a87893e339",
+      "independent_copy": true
+    },
+    "raw_to_png_exact_flip": true,
+    "common_rgb_equal": true,
+    "pixel_sha256": "6431c2ea6487427490575feae23a9fd04219912a69cb28d3c11bc17dd5b27dd3",
+    "state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+    "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+    "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "normal_read_ordinal": 5
+  },
+  {
+    "entry": "custom",
+    "tensor": {
+      "file": "results/worker_1_baseline/custom_tensor_rgb.npy",
+      "shape": [
+        3,
+        256,
+        256
+      ],
+      "dtype": "float32",
+      "sha256": "754f392f6700adaf35b47ef34be38a5a5788ea33bc2b2f463b78b47d798d3e07",
+      "file_sha256": "76334e53fd44e6f0361405ed6f61243509d1faefb8982e66b94e167bb0d32f0b",
+      "independent_copy": true
+    },
+    "raw_to_png_exact_flip": true,
+    "common_rgb_equal": true,
+    "pixel_sha256": "71dd09eb3b91a4a8c53beddc7fb2b972496f10a0ddb49f3d0c02d41bb53854a3",
+    "state_sha256": "b7bb9c2a72b9857005bbaf95d536d829fb95171ffb65a85fbe468b270c6033a7",
+    "T_sha256": "ec09b1bce590c8c97e9af96a05d095217cb6d57604fcd3a89c4cbebc2c05c9d2",
+    "xml_sha256": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "normal_read_ordinal": 7
+  }
+]

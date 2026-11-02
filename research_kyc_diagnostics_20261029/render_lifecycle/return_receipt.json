@@ -1,0 +1,34 @@
+{
+  "sent_utc": "2026-11-02 02:01:43 UTC",
+  "scope": "render_lifecycle",
+  "destination_thread": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "send_count": 1,
+  "delivery_tool_accepted": true,
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a18138-0f15-76b2-b5cf-20e1722782a9\"}"
+      }
+    ],
+    "isError": false
+  },
+  "original_message": "render_lifecycle 本scope已结束：执行流程COMPLETE、修复因果验收PARTIAL。协议v2 SHA53b7058bd290886d5787cd73ed9cb926a38ec49792a99305a84db11a1c3d8d0f未改。入口 /home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/FINAL_REPORT.md。\n\n正面原件：worker1原析构early健康，Dataset/Evaluator/custom后三帧坏；worker2 fix条件四帧健康，全部逐像素相同，且与baseline early也bit equal。8帧state/T/XML相同，40个raw→flip/tensor/NPZ/PNG边界全部exact，共同raw RGB预处理8组exact。已实际查看results/condition_comparison.png（上baseline下fix，四列early/Dataset/Evaluator/custom）。健康5帧sentinel与同帧preflip raw完全相同/maxabs0，自然165像素比例0.001296997；baseline后三帧sentinel全保留165、无current。\n\n基线对象证据（worker_1_baseline/events.jsonl零基29→30，CONSTRUCT_DATASET）：owner=w1_ctx1、current前后=w1_ctx2；旧owner对象均NOT_MEASURED_WRONG_CONTEXT。测量真实current所属活动renderer，offFBO1/offFBO_r2/shadowFBO3及4个RBO的glIs从true→false，同namespace/ID，窗口为同一次原con.free前后。这比旧0x8219推断更强，未跨context把同名整数当同对象。\n\n必须保留的反证：fix进程的旧ctx1直到CLEANUP才析构，四张健康图像采集期间没有fixed destructor调用！fix清理ctx2后，再在previous=null时绑定ctx1释放。owner-bound before/after窗口59→60（ctx2）、75→76（ctx1）都正确测得自身资源释放，但没有活previous恢复。real GL previous_restored事件数0，live-other恢复仅CPU mock。因此不能宣称本次健康图像由该修复造成、不能称完整原子修复PASS或previous保护实GL已验证。自然GC/日志分配时序差异未单独辨识；没有主动GC/关闭GC/故意长期保留旧renderer，最终都释放。§6所需相同跨context故障窗口/恢复previous对照缺项，分析已明确PARTIAL。\n\nCPU mock20/20通过（NULL/部分/重复/重入/owner缺失死亡/previous owner-other-null-unknown/异常恢复/真实适配器handle恢复fake/wrong-owner禁止查询），无GL/CUDA/env。实际新worker2/make_env2、mjr_render8、readPixels16（8正常8sentinel）、GPU累计24.4112538821秒，0ACT/0env.step/0rollout/0optimizer，0工程修正；两worker均exit0，先1退出再exec2，没有重启terminal。GPU整个worker生命周期含cleanup计时，硬限300秒未触发；自己的worker/supervisor均退出，只余原有GPU进程。\n\n请独立核对analysis.json、repair_choice.json、results/worker_{1_baseline,2_fix}/events/readback/entries及全部.npy/NPZ、cpu_mock.json、owned_release.py/telemetry.py、PRE_RUN、run_manifest/worker_*_process/counts/completion/integrity。180个原execution/render_repair文件size/mtime/SHA及9复用来源、冻结GPU代码hash均未变。原始context地址/XML/CLI仅local_only/logs；公开候选113文件与72个解码数组秘密模式扫描0命中在public_delivery_allowlist.json。\n\n本scope无任何Git stage/commit/push，index始终归你；请主线程统一发布。6-1-sol-max已PAUSED并读回核实，主automation未改。旧0/32历史因果UNKNOWN，模型与闭环预算不恢复，候选模块不能作为完整实GL验收修复部署；没有训练、安装、下载、旧源码或系统变更。等待Codex独立验收与真实DeepSeek反驳后决定下一步。按原人类回传授权，这是本scope唯一回传；回执即写render_lifecycle/return_receipt.json。",
+  "state": "EXECUTION_COMPLETE / CAUSAL_VALIDATION_PARTIAL",
+  "counts": {
+    "workers": 2,
+    "make_env": 2,
+    "renders": 8,
+    "readPixels": 16,
+    "ACT": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "optimizer_updates": 0
+  },
+  "gpu_seconds": 24.411253882106394,
+  "real_GL_live_previous_restore": "NOT_EXERCISED",
+  "old_0_of_32_cause": "UNKNOWN",
+  "automation": "PAUSED_READBACK_VERIFIED",
+  "git_writes": 0,
+  "authorization": "Previously verified original human task sections8/9 and ongoing delegated KYC reporting authorization; this scope dispatch.json confirms callback"
+}

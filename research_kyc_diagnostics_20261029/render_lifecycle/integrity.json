@@ -1,0 +1,38 @@
+{
+  "utc": "2026-11-02T01:55:51.557214+00:00",
+  "old_files_checked": 180,
+  "old_changes": [],
+  "source_hashes_unchanged": {
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py": true,
+    "/home/asus/EAI/research_expansion_20261029/reproduction/manifests/dataset_stats.json": true,
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/utils.py": true,
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/eval.py": true,
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/cam_embedding.py": true,
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/utils/binding_utils.py": true,
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/renderers/context/egl_context.py": true,
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/environments/base.py": true,
+    "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/inputs/sample_00.npz": true
+  },
+  "frozen_executed_code_unchanged": {
+    "lc_common.py": true,
+    "owned_release.py": true,
+    "telemetry.py": true,
+    "supervisor.py": true,
+    "freeze.py": true,
+    "test_owned_release.py": true,
+    "worker.py": true
+  },
+  "workers": [
+    {
+      "pid": 4107533,
+      "original_process_alive": false
+    },
+    {
+      "pid": 4108077,
+      "original_process_alive": false
+    }
+  ],
+  "protocol_sha256": "53b7058bd290886d5787cd73ed9cb926a38ec49792a99305a84db11a1c3d8d0f",
+  "new_disk_bytes": 14832705,
+  "postprocess_script_sha256": "7221eec0f7b1390f29ef498b8f50529f987fac100298c8e78a1819d3d4cb0c47"
+}

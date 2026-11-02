@@ -1,0 +1,13 @@
+# 生命周期结果独立验收与尚缺的同窗修复验证
+
+2026-11-02 10:01后，先于读取DeepSeek21意见冻结。已阅读候选释放事务、worker、遥测与supervisor源码，实际查看8帧拼图，并独立运行只处理已保存数组的CPU核验。未产生新GL/模型/仿真观察。
+
+接受执行完成、因果验收PARTIAL。基线early为正常Lift，后3帧条纹；fix4帧清晰、逐像素相同，且与基线early一致。独立核验40边界+8共同预处理、16raw metadata哈希、state/T/XML一致、180旧文件size/mtime/SHA、冻结代码和9来源SHA。2新worker依次退出，8render/16readPixels/24.4112538821GPU秒，0ACT/step/更新。未见预算扩大或旧目录写入。
+
+基线零基29→30是同一次原con.free前后：owner=ctx1，current=ctx2，ctx1对象正确NOT_MEASURED_WRONG_CONTEXT；查询ctx2活动renderer的3个FBO和4个RBO，所属context与ID前后相同，glIs由true变false。34→35 eglReleaseThread再解除ctx2。这比旧0x8219更直接，支持当前插桩基线的错误context资源释放及解绑机制。只是当前机制，不是旧训练0/32历史因果。
+
+fix最后采图事件56，owner释放事件59、75全部在cleanup；真实previous_restored=0。故健康图没有经历被测试的故障窗口，不能归因于修复事务。日志/分配/GC自然时序可解释条件间释放时点不同；没有证据证明故意泄漏。不能将两个不同条件称同条件复验，也不能把cleanup中的owner释放当活previous恢复保护对照。
+
+另发现一项可由纯CPU明确复现的适配边界：Telemetry.capture在当前原始context非零、registry无映射时返回key=None。release_owned只按key判断previous=null，不区分未知非空；原20个mock中unknown是字符串key而非真实适配器的None+非零形式。父审用实际事务及CPU fake复现：原始previous非空但未登记，事务返回DONE，无failure，之前context被丢失。该分支未在本轮实GL记录中触发，不是本次坏图的已证原因；但必须在后续候选中在任何绑定/释放前拒绝此状态并可见报错，不能部署时当安全行为。证据见artifacts/parent_render_lifecycle_audit.json与scripts/verify_render_lifecycle_cpu.py。
+
+值得下一次更小、具体的验证：双方条件都显式持有旧renderer直到同一预定点，在新renderer当前、健康before帧之后，对旧renderer调用同样一次受控析构；baseline原释放，fix按owner释放并恢复previous，再验证原current对象与after帧。显式持有/受控释放必须在新协议公开声明，与旧“自然GC不干预”实验区分；它只验证故障机制及修复在这个受控触发下有效，不证明自然GC频率或历史训练原因。不靠反复自然运行等待碰巧触发，不改旧源码，不加模型/训练。先与真实DeepSeek讨论是否采用，再冻结完整新协议，不能用旧剩余预算或重启终止作业。

@@ -1,0 +1,55 @@
+{
+  "utc": "2026-11-02T01:41:33.027597+00:00",
+  "supported": true,
+  "evidence_pairs": [
+    {
+      "before_index": 29,
+      "after_index": 30,
+      "owner_context": "w1_ctx1",
+      "current_context": "w1_ctx2",
+      "owner_before_measurement": "NOT_MEASURED_WRONG_CONTEXT",
+      "owner_after_measurement": "NOT_MEASURED_WRONG_CONTEXT",
+      "current_active_object_true_to_false": [
+        {
+          "category": "framebuffers",
+          "name": "offFBO",
+          "id": 1
+        },
+        {
+          "category": "framebuffers",
+          "name": "offFBO_r",
+          "id": 2
+        },
+        {
+          "category": "framebuffers",
+          "name": "shadowFBO",
+          "id": 3
+        },
+        {
+          "category": "renderbuffers",
+          "name": "offColor",
+          "id": 1
+        },
+        {
+          "category": "renderbuffers",
+          "name": "offColor_r",
+          "id": 3
+        },
+        {
+          "category": "renderbuffers",
+          "name": "offDepthStencil",
+          "id": 2
+        },
+        {
+          "category": "renderbuffers",
+          "name": "offDepthStencil_r",
+          "id": 4
+        }
+      ]
+    }
+  ],
+  "events_sha256": "a44698a29ca00a789ef441fec78e9a652336a3e4488c172fa1ff8cf89bb2d93c",
+  "choice": "owner-context resource release plus restoration of live previous, installed before initialization",
+  "scope": "one atomic lifecycle repair; no FBO rebuild, render-time rebinding, GC disable or extra worker",
+  "object_identity_rule": "baseline old owner NOT_MEASURED_WRONG_CONTEXT; changes belong to actual current active renderer"
+}

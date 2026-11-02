@@ -1,5 +1,5 @@
 {
-  "verified_local": "2026-11-02T09:27:08.264350+08:00",
+  "verified_local": "2026-11-02T10:38:16.142259+08:00",
   "rounds": [
     {
       "turn": "09_diag_independent",
@@ -127,6 +127,28 @@
       "session_id": "736077c1-8d4e-4df7-979f-1fc15f980a2a",
       "started_utc": "2026-11-02T01:25:50.240496+00:00",
       "ended_utc": "2026-11-02T01:26:17.274098+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "response_model_fields": [
+        "deepseek-flash"
+      ]
+    },
+    {
+      "turn": "21_lifecycle_result_independent",
+      "session_id": "736077c1-8d4e-4df7-979f-1fc15f980a2a",
+      "started_utc": "2026-11-02T02:04:57.292574+00:00",
+      "ended_utc": "2026-11-02T02:05:48.343219+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "response_model_fields": [
+        "deepseek-flash"
+      ]
+    },
+    {
+      "turn": "22_controlled_cross_protocol",
+      "session_id": "736077c1-8d4e-4df7-979f-1fc15f980a2a",
+      "started_utc": "2026-11-02T02:27:05.485968+00:00",
+      "ended_utc": "2026-11-02T02:27:57.238875+00:00",
       "exit_code": 0,
       "result_status": "success",
       "response_model_fields": [

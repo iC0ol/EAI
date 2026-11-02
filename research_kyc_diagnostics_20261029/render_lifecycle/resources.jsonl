@@ -1,0 +1,12 @@
+{"utc": "2026-11-02T01:41:20.823422+00:00", "rss": 57438208, "vram": 0, "new_disk_bytes": 107539, "free_bytes": 187240255488, "worker": 1, "gpu_allocation_seconds": 0.12371708499267697}
+{"utc": "2026-11-02T01:41:23.016646+00:00", "rss": 612102144, "vram": 0, "new_disk_bytes": 110717, "free_bytes": 187239923712, "worker": 1, "gpu_allocation_seconds": 2.316880906932056}
+{"utc": "2026-11-02T01:41:25.162552+00:00", "rss": 1139023872, "vram": 0, "new_disk_bytes": 115176, "free_bytes": 187239890944, "worker": 1, "gpu_allocation_seconds": 4.462981848977506}
+{"utc": "2026-11-02T01:41:27.373556+00:00", "rss": 1509191680, "vram": 0, "new_disk_bytes": 248910, "free_bytes": 187239731200, "worker": 1, "gpu_allocation_seconds": 6.674041163176298}
+{"utc": "2026-11-02T01:41:29.426727+00:00", "rss": 1539080192, "vram": 312475648, "new_disk_bytes": 2224872, "free_bytes": 187237720064, "worker": 1, "gpu_allocation_seconds": 8.727308911271393}
+{"utc": "2026-11-02T01:41:31.596568+00:00", "rss": 1563721728, "vram": 339738624, "new_disk_bytes": 7009238, "free_bytes": 187232854016, "worker": 1, "gpu_allocation_seconds": 10.897378535941243}
+{"utc": "2026-11-02T01:41:33.238506+00:00", "rss": 55205888, "vram": 0, "new_disk_bytes": 7014042, "free_bytes": 187232731136, "worker": 2, "gpu_allocation_seconds": 12.317545210942626}
+{"utc": "2026-11-02T01:41:35.394296+00:00", "rss": 612208640, "vram": 0, "new_disk_bytes": 7016886, "free_bytes": 187232690176, "worker": 2, "gpu_allocation_seconds": 14.472293542232364}
+{"utc": "2026-11-02T01:41:37.589791+00:00", "rss": 1138147328, "vram": 0, "new_disk_bytes": 7020945, "free_bytes": 187232628736, "worker": 2, "gpu_allocation_seconds": 16.66830904223025}
+{"utc": "2026-11-02T01:41:39.686656+00:00", "rss": 1456648192, "vram": 0, "new_disk_bytes": 7085759, "free_bytes": 187232514048, "worker": 2, "gpu_allocation_seconds": 18.76459799800068}
+{"utc": "2026-11-02T01:41:41.775265+00:00", "rss": 1696772096, "vram": 719323136, "new_disk_bytes": 11293956, "free_bytes": 187228225536, "worker": 2, "gpu_allocation_seconds": 20.853559446055442}
+{"utc": "2026-11-02T01:41:43.849919+00:00", "rss": 1558654976, "vram": 339738624, "new_disk_bytes": 14705845, "free_bytes": 187224625152, "worker": 2, "gpu_allocation_seconds": 22.930068926885724}

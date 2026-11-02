@@ -1,0 +1,12 @@
+{
+  "state": "APPROVED_NOT_DISPATCHED_WAITING_RESET",
+  "prepared_local": "2026-11-02T10:38:16.142259+08:00",
+  "not_before_local": "2026-11-02T14:24:36+08:00",
+  "reason": "Shared primary used90%; no GPU worker started",
+  "thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+  "model": "gpt-6.1-sol",
+  "thinking": "max",
+  "protocol_sha256": "0b39318295a299d9fc55327af7b24925b58036563819368154e39911f235fd8e",
+  "prompt": "按人类授权继续解决KYC当前RGB故障，执行新的render_controlled范围。你仍为gpt-6.1-sol/max。旧execution、render_repair、render_lifecycle均已terminal，不重启。先完整读 /home/asus/EAI/research_kyc_diagnostics_20261029/render_controlled/PROTOCOL.md、review_gate.json，以及父notes/05、parent_render_lifecycle_audit.json、discussion/21与22。协议v1 SHA=0b39318295a299d9fc55327af7b24925b58036563819368154e39911f235fd8e已由Codex和真实DeepSeek22完整APPROVE。\n\n新目录render_controlled内完成CPU预检、实现、冻结与实际运行；旧目录/源码只读。重点：两条件同样持有retired A与active B，健康before后在同一锁内显式一次释放A；baseline原释放、fix按owner释放并真实恢复活B。common one-shot guard防实质double-free，必须执行首次释放；明确这是受控触发不是自然GC。未知非空raw context/key=None在任何绑定/释放前拒绝，前置capture等异常可见。按协议参考像素验证before，after修复须保持B原对象有效且逐像素匹配；不能靠重建资源或没有发生释放就宣称PASS。\n\n新总硬限2worker/2make_env/4mjr_render/8readPixels/180GPU分配秒（初始化失败cleanup均计；170秒发终止留10秒释放）、0ACT/step/rollout/更新、3CPU/RSS16GiB/VRAM12GiB/150MiB，派发+8h。失败名额不退，不新增第三worker/候选，不安装/下载/改系统/重训。实现复用上一轮冻结代码到新目录并留最小diff，先CPU mock再冻结准确代码，只有基线受控失败满足门才运行fix。旧0/32仍UNKNOWN，局部PASS不意味着训练部署或论文创新。\n\nGit index由主审独占，你不stage/commit/push。输出原数组/匿名事件、进程/计数/资源/旧文件完整性、FINAL_REPORT/STATUS/status/completion和公开允许清单。仅复用6-1-sol-max，按实时未来reset+120秒、最长5h，不兑换券。完成或停止后按人类既有明确回传授权一次通知主聊天01a18138-0f15-76b2-b5cf-20e1722782a9，保存回执并暂停自己的检查。主automation不改。\n",
+  "instructions_for_main": "At wake query quota and actual process/thread status; if no real dispatch, send once using prompt, save tool receipt and dispatch time/deadline+8h. Only then reactivate existing child6-1-sol-max target render_controlled. Do not treat this preparation as actual dispatch."
+}

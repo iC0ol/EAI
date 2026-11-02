@@ -1,15 +1,11 @@
 # 当前状态
 
-2026-11-02 Asia/Shanghai：**IN_PROGRESS / LIFECYCLE_DISPATCHED**。用户明确授权继续查因并尝试解决当前RGB损坏，工作尚未全部结束。
+2026-11-02：IN_PROGRESS / CONTROLLED_APPROVED_WAITING_RESET_DISPATCH。
 
-- 已完成：原execution有限诊断、render_repair失败尝试、Codex原数组/图像/代码/预算验收与真实DeepSeek18独立、19交叉审查。原件和失败记录均保留。
-- 当前事实：render_repair仅1个有效渲染worker，6renders、12readPixels、23.1327807279 GPU秒，0ACT/step/训练；PARTIAL / REPAIR_FAILED。旧context释放路径直接解除新current，但仅重绑不能恢复正常RGB；FBO误删除仍未证明。旧训练0/32历史因果UNKNOWN。
-- 新任务：[render_lifecycle/PROTOCOL.md](render_lifecycle/PROTOCOL.md) v2，在CPU mock后验证按资源所属context释放并恢复previous的一种局部修复。DeepSeek19提出per-context测量修订，20完整APPROVE，Codex通过，准确SHA见[review_gate](render_lifecycle/review_gate.json)。
-- 2026-11-02 09:27已真实派发原线程“KYC 冻结基线有限排障与验收回传”，模型gpt-6.1-sol/max；[dispatch](render_lifecycle/dispatch.json)。仅新目录，旧terminal任务不重启。
-- 新上限：2worker、2make_env、8render、16readPixels、300GPU分配秒，0ACT/step/rollout/训练。基线与修复各1进程，不是同条件独立复验；没有系统更改、下载或完整训练授权。
-- 主Git index独占；render_repair结果、父审及生命周期协议/派发已经秘密扫描和允许清单筛选，公开至62661d0；独立ls-remote与130文件提交内SHA核实。执行者不stage/commit/push，新执行结果待验收。最新回执见orchestration/publication.json。
-- 真实DeepSeek09–20共12轮已核验；claude终端接续会话736077c1-8d4e-4df7-979f-1fc15f980a2a，响应字段deepseek-flash。20是协议审核，不是执行成功声明。
-- 09:24实时额度：五小时已用4%，周已用1%；未兑换额度券。真实reset14:22:36；主automation和执行6-1-sol-max均复用ACTIVE，安排14:24:36续办、随后每五小时兜底。已纠正原DAILY+COUNT=1实际每日重复的问题，后续按最新reset调整。完成回传可提前唤醒。
-- 后续：执行者返回→主审独立原数组/对象事件与实际看图→真实DeepSeek反驳→更新中文八部分报告和下一阶段判断→统一发布。不能把当前工程修复当论文创新或旧0/32因果。
-
-历史检查点见[旧状态](artifacts/status_before_lifecycle_dispatch.md)及[clocks](orchestration/clocks.json)。
+- render_lifecycle已完成独立代码/原数组/图像/预算验收及真实DeepSeek21/22交叉。执行COMPLETE，修复因果PARTIAL。基线旧owner con.free使当前另一个context的3FBO+4RBO失效，随后解绑；当前机制有直接证据。旧0/32历史因果仍UNKNOWN。
+- fix拍图前没有目标释放，活previous恢复实GL未覆盖，不能将健康图归因于修复。父审另以纯CPU复现未知非空context误当NULL的漏洞，后续必须拒绝该状态。见notes/05与artifacts/parent_render_lifecycle_audit.json。
+- 实际2worker、8renders、16readPixels、24.4112538821GPU秒、0ACT/step/训练；180旧文件及源码/冻结代码未变。全部作业退出，子6-1-sol-max已PAUSED。
+- 新render_controlled/PROTOCOL.md v1已获Codex及真实DeepSeek22 APPROVE（准确SHA见review_gate）。两条件同一确定性释放点，2worker/4render/8readPixels/180GPU秒。完整执行文本在dispatch_ready.json，**尚未真实派发**，不能当已运行。
+- 当前共享5h已用90%、周14%。主automation ACTIVE，下一次2026-11-02 14:24:36 Asia/Shanghai（真实reset14:22:36+120秒），随后每5h兜底；醒来核实额度与未派发状态，再一次派发既有gpt-6.1-sol/max线程并复用子检查ACTIVE。没有兑换额度券。
+- Git index主审独占。此前62661d0/200d2db公开首项修复与生命周期协议；本次新结果发布以orchestration/publication.json为准。地址/XML/rawCLI/运行环境/凭据不公开。
+- 后续：受控验证→父审原件+真实DeepSeek反驳→八部分报告与下一阶段判断→公开交付。不得因图像健康直接训练/部署，不自动恢复原32前向/16闭环，不重启任何terminal任务。

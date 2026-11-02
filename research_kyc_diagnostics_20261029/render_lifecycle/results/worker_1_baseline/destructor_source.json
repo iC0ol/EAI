@@ -1,0 +1,7 @@
+{
+  "original_source_sha256": "85479129c3d8c6693de6b63189496fc91438d7d0c1abfd441cb9ec25aca21c62",
+  "original_file_sha256": "418a67d8cb4af0ffe612a10511f6c15fe8c1f781d29941092bf964c81177e5de",
+  "condition": "baseline",
+  "baseline_semantics": "con.free; try gl_ctx.free except Exception pass; delete con/gl_ctx/scn/cam/vopt/pert",
+  "fixed_change": "owner binding for resource release and restoration of still-live previous; partial/duplicate guards"
+}

@@ -1,0 +1,48 @@
+{
+  "utc": "2026-11-02T01:40:20.830560+00:00",
+  "protocol_sha256": "53b7058bd290886d5787cd73ed9cb926a38ec49792a99305a84db11a1c3d8d0f",
+  "scripts": {
+    "lc_common.py": "3bed449fd1915392293f87f652ffed3d1ba0b5fb944b643b7106c64d28078276",
+    "owned_release.py": "b688e0c3b7f213bda4e6383a116656177afe3b5bf9468c3962a255a86994fbcd",
+    "telemetry.py": "563eb9352257e1c3d1d013c4bcf3e9203bb3cab8df2971cfabef138931c16931",
+    "supervisor.py": "bad49968828d57e6ffce994904a17d516a2a7109e7385bc1c4ce3d19a2262b2d",
+    "freeze.py": "c46855141541bc8c397315804c8c3a77c42c0aac88ebb26ef819d3620d34073f",
+    "test_owned_release.py": "21771f8cd2c6bc2478828cb4ca3eaa8362ed759fd4b10441c26c567aab9c4c77",
+    "worker.py": "50deb150362d0fd6628e930477580cb644abe391e099183428b365d6b0cde417"
+  },
+  "cpu_mock_sha256": "8292a5a97183a63a8967dd3bd2cef68b86f890a11fe88ded65314c61cdc3c26e",
+  "sample_sha256": "6391bd3fed15170fb5379d17d1affd70da33ec53202577c38d3b1f2d3a49b78e",
+  "budget_sha256": "1e7668da068a99370e59a9e36344a260a4d0c00ff2973405e1bcc39918868cba",
+  "sources": {
+    "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py": "c3aa5e196a9dfaaf9ce94fd307987c508570deb1d87f6f9f25686d6912b3073c",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/manifests/dataset_stats.json": "5e15bb9977efe453fd33617b377d452284b9b2f4d2659ca58bd97073819f601f",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/utils.py": "fbe212146cd0f93e8aa04a98913c736aabf2e4f06ff40eb6544934d0acf9fa1a",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/eval.py": "702c7daf81cc73326edd9a86b55173e5440e17ce1efa169ec7ff2a66ab043571",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/cam_embedding.py": "7bb33a6d205948da9df912445a7020201cb9f6afafc1eb406fbae5e46d1585fa",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/utils/binding_utils.py": "418a67d8cb4af0ffe612a10511f6c15fe8c1f781d29941092bf964c81177e5de",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/renderers/context/egl_context.py": "72ff1e153da85b85a35ebd0350c4693d3b89ffd5e1f13ff49813b7a3ad4c51c6",
+    "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/robosuite/robosuite/environments/base.py": "ba6e6bc0252be8ae17972df48b26f8425a12af55339979a1ea1757b1f54c3345",
+    "/home/asus/EAI/research_kyc_diagnostics_20261029/execution/inputs/sample_00.npz": "f43b1088b763bf2e6e503d36a85655846c63425230dce9fcbd35d6b0893fc1e3"
+  },
+  "old_directory_baseline_sha256": "546ee4136f64cff115d3f665bf4fa25c228b7a675920b045e9f05877bf683ada",
+  "worker_plan": [
+    [
+      "1",
+      "baseline",
+      "early,dataset,evaluator,custom"
+    ],
+    [
+      "2",
+      "fix",
+      "early,dataset,evaluator,custom"
+    ]
+  ],
+  "commands": [
+    [
+      "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+      "-B",
+      "/home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/scripts/supervisor.py"
+    ]
+  ],
+  "git_index_owner": "main; executor read-only Git"
+}

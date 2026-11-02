@@ -1,0 +1,22 @@
+{
+  "identity": {
+    "pid": 4108077,
+    "ppid": 4107528,
+    "start_ticks": 293765318,
+    "rss": 262144,
+    "state": "R"
+  },
+  "worker": 2,
+  "mode": "fix",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "-B",
+    "/home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/scripts/worker.py",
+    "--worker",
+    "2",
+    "--mode",
+    "fix"
+  ],
+  "created_epoch": 1793583693.1219456,
+  "prior_worker_ended_epoch": 1793583692.8989239
+}

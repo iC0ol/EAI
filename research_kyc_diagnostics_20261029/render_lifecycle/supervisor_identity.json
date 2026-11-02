@@ -1,0 +1,12 @@
+{
+  "pid": 4107528,
+  "ppid": 2150,
+  "start_ticks": 293764062,
+  "rss": 20316160,
+  "state": "R",
+  "utc": "2026-11-02T01:41:20.601572+00:00",
+  "sid": 4107528,
+  "command": [
+    "/home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/scripts/supervisor.py"
+  ]
+}

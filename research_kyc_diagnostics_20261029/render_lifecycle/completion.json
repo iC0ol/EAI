@@ -1,0 +1,89 @@
+{
+  "utc": "2026-11-02T01:41:45.396844+00:00",
+  "state": "EXECUTION_COMPLETE / CAUSAL_VALIDATION_PARTIAL",
+  "reason": "BOTH_CONDITIONS_FINISHED",
+  "counts": {
+    "workers": 2,
+    "make_env": 2,
+    "renders": 8,
+    "readPixels": 16,
+    "ACT": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "optimizer_updates": 0
+  },
+  "gpu_allocation_seconds": 24.411253882106394,
+  "worker_processes": [
+    {
+      "worker": 1,
+      "mode": "baseline",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "-B",
+        "/home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/scripts/worker.py",
+        "--worker",
+        "1",
+        "--mode",
+        "baseline"
+      ],
+      "identity": {
+        "pid": 4107533,
+        "ppid": 4107528,
+        "start_ticks": 293764075,
+        "rss": 262144,
+        "state": "R"
+      },
+      "started_epoch": 1793583680.7004309,
+      "ended_epoch": 1793583692.8989239,
+      "exit_code": 0,
+      "gpu_allocation_seconds_cumulative": 12.198490655981004,
+      "utc": "2026-11-02T01:41:32.898927+00:00"
+    },
+    {
+      "worker": 2,
+      "mode": "fix",
+      "command": [
+        "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+        "-B",
+        "/home/asus/EAI/research_kyc_diagnostics_20261029/render_lifecycle/scripts/worker.py",
+        "--worker",
+        "2",
+        "--mode",
+        "fix"
+      ],
+      "identity": {
+        "pid": 4108077,
+        "ppid": 4107528,
+        "start_ticks": 293765318,
+        "rss": 262144,
+        "state": "R"
+      },
+      "started_epoch": 1793583693.1219456,
+      "ended_epoch": 1793583705.3347108,
+      "exit_code": 0,
+      "gpu_allocation_seconds_cumulative": 24.411253882106394,
+      "utc": "2026-11-02T01:41:45.334714+00:00"
+    }
+  ],
+  "old_0_of_32_cause": "UNKNOWN",
+  "model_inference": "NOT_RUN",
+  "rollout": "NOT_RUN",
+  "optimizer_updates": 0,
+  "parent_review_required": true,
+  "git_index_owner": "main",
+  "fixed_condition_images": "HEALTHY_AND_BIT_EQUAL; investigator inspected 8-frame montage",
+  "baseline_wrong_context_active_resource_loss": true,
+  "real_GL_live_other_restore": "NOT_EXERCISED",
+  "fixed_destructor_during_image_acquisition": false,
+  "healthy_images_causally_due_to_fix": "NOT_ESTABLISHED",
+  "engineering_corrections": 0,
+  "analysis_sha256": "af78b22e7f4a990aadbe46cb5ec9e1483d1ee1b7ad5e80b1c35b414747aca464",
+  "final_report_sha256": "c2604f7b2848ed163a996891618c356c7a91531c790890cc9fcc22dbcdd59695",
+  "updated_utc": "2026-11-02T01:58:50.456073+00:00",
+  "automation_status": "PAUSED_READBACK_VERIFIED",
+  "publication": "PARENT_GIT_ONLY; NO_EXECUTOR_STAGE_COMMIT_PUSH",
+  "callback_this_scope_count": 1,
+  "callback_tool_accepted": true,
+  "callback_receipt": "return_receipt.json",
+  "delivered_utc": "2026-11-02T02:01:43.633300+00:00"
+}
