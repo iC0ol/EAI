@@ -1,0 +1,28 @@
+{
+  "utc": "2026-11-03T07:08:30.963826+00:00",
+  "epoch": 1793689710.9638402,
+  "monotonic": 3043671.021603724,
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "-B",
+    "/home/asus/EAI/research_kyc_final_recovery_20261103/run.py",
+    "supervise",
+    "--stage",
+    "gpu-preflight"
+  ],
+  "cwd": "/home/asus/EAI/research_kyc_final_recovery_20261103",
+  "supervisor_identity": {
+    "pid": 329066,
+    "ppid": 2974399,
+    "start_ticks": 304367097
+  },
+  "one_attempt_only": true,
+  "observed_prelaunch_whole_GPU_MiB": 581,
+  "observed_external_GPU_process": {
+    "pid": 543637,
+    "memory_MiB": 296
+  },
+  "external_process_action": "NONE",
+  "phase_GPU_seconds_cap": 180,
+  "science_phase_authorized": false
+}

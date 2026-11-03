@@ -1,0 +1,19 @@
+{
+  "recovery_id": "kyc-last-recovery-441e91b0-ee5f-4294-9501-070606a5f695",
+  "mode": "CPU_PRE_FLIGHT_AND_REPAIR_ONLY",
+  "scope_gate_sha256": "a36e63d09feae208f5b6fd6d4ed2bc2b956213d555a36ab40ed1bd463a830b6f",
+  "dispatch_epoch": 1793671105.4067094,
+  "dispatch_local": "2026-11-03T09:58:25.406709+08:00",
+  "preparation_deadline_epoch": 1793689105.4067094,
+  "preparation_deadline_local": "2026-11-03T14:58:25.406709+08:00",
+  "max_engineering_repair_rounds": 2,
+  "known_common_collision_counts_as_round": 1,
+  "total_GPU_allocation_cap_seconds": 1800,
+  "GPU_authorized_now": false,
+  "science_RUN_started": false,
+  "executor": {
+    "thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "max"
+  }
+}

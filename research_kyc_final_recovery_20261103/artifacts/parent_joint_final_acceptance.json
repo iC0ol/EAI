@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-03T12:23:07.611745+00:00",
+  "state": "DUAL_REVIEW_COMPLETE",
+  "scientific_state": "SCIENTIFIC_MEASURED",
+  "classification": "INCONCLUSIVE_MIXED_OR_WEAK_SIGNAL",
+  "stage2": "NOT_RUN",
+  "task_success_reach_grasp": "NOT_MEASURED",
+  "historic_0_of_32_cause": "UNKNOWN",
+  "joint_decision": "PAUSE_CURRENT_CHECKPOINT_PRIORITY_F_ROUTE",
+  "sources": {
+    "artifacts/parent_model_recomputation.json": "618d5ccd22816ab5dfe26fcc96e11bb33c7fea82805bd2ee4e40ea7a0a9b33e6",
+    "artifacts/parent_paired_state_description.json": "456bc910da7352f069d71f55dfa68e03e41a764f5c6df9edafbf60aab5ab6280",
+    "notes/08_Codex模型结果独立验收.md": "ac2477b4d239ad24f69ebd494fb719f32f9019bbd791ba1f186d100cbb7e252b",
+    "notes/09_模型验收交叉质疑.md": "5ca43fd1d4b845fb34480f63965bcca92756dc45fa81e621190ae6b799839d70",
+    "discussion/36_model_independent_response.md": "9d027f886a4c4148715518bc7fe9d75261ece10d5829c68fdf06c25d577b126f",
+    "discussion/37_model_cross_response.md": "3feb387ea0517da5ea9a365a7187464a7a516b24ddaaa749f70c921cb72bb263",
+    "stage2_decision.json": "c52ffa74eaa2ec28f283af32810f50e4990c2025a48d9611eb4f4468f8c5ca9d"
+  },
+  "DeepSeek_independence": "raw JSON array reading/checking before Codex notes08; not a separately executed numeric script",
+  "Codex_independence": "actual float64 recomputation from original NPZ before comparison with executor analysis",
+  "training_rollout_or_repair_followup": "NOT_AUTHORIZED_BY_THIS_DELIVERY"
+}

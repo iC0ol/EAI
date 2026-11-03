@@ -1,0 +1,67 @@
+[
+  {
+    "source": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/common.py",
+    "destination": "kyc_recovery/common.py",
+    "source_sha256": "0bddca532d3c018598378917acb90c7d1795f1bbf8ea1fff0648f5c45f5a09dd"
+  },
+  {
+    "source": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/lc_common.py",
+    "destination": "kyc_recovery/lc_common.py",
+    "source_sha256": "d033341ea5004baaa941c9b10d6b743ab8d426f6271fbab204e459e6f1fcb21e"
+  },
+  {
+    "source": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/gates.py",
+    "destination": "kyc_recovery/gates.py",
+    "source_sha256": "a10d08526c540eaaccefbc6a6aeee1661826b562c4101ccfe0e8fb8b1eed7623"
+  },
+  {
+    "source": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/owned_release.py",
+    "destination": "kyc_recovery/owned_release.py",
+    "source_sha256": "9bf522cc295656997ffa7f9c72de02095ac799507833ca89176764f61c539cd0"
+  },
+  {
+    "source": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/telemetry.py",
+    "destination": "kyc_recovery/telemetry.py",
+    "source_sha256": "563eb9352257e1c3d1d013c4bcf3e9203bb3cab8df2971cfabef138931c16931"
+  },
+  {
+    "source": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/runtime_safety.py",
+    "destination": "kyc_recovery/runtime_safety.py",
+    "source_sha256": "6e33015a9cf33127ce5b605fb444dc2380abb72b4425ed4fcb0240cad6df00f6"
+  },
+  {
+    "source": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/input_runtime.py",
+    "destination": "kyc_recovery/input_runtime.py",
+    "source_sha256": "cb5ce132346870b8766cdd6bd397016f7360acf7577408f2d3790065176c6536"
+  },
+  {
+    "source": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/input_worker.py",
+    "destination": "kyc_recovery/input_worker.py",
+    "source_sha256": "78f7961bdb588d7d3acdb184c22a2ba7e3d3b161079cc723439e946c863b1b48"
+  },
+  {
+    "source": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/call_guard.py",
+    "destination": "kyc_recovery/call_guard.py",
+    "source_sha256": "e440e75d27266c349eab26da877207f1e547b6768ccaf7c55579f3473da1b528"
+  },
+  {
+    "source": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/model_worker.py",
+    "destination": "kyc_recovery/model_worker.py",
+    "source_sha256": "4f9312f6bf8ee10ec09a5aa112ee7a4c50d746af062e087f98070b1b9cd34a95"
+  },
+  {
+    "source": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/metrics.py",
+    "destination": "kyc_recovery/metrics.py",
+    "source_sha256": "994f463caa3ddb58313c7d130ce2176a0013988cd7258da8bb2e4a11cdff94ee"
+  },
+  {
+    "source": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/analyze.py",
+    "destination": "kyc_recovery/analyze.py",
+    "source_sha256": "47be02bd342b688440726d16155010a2a7ba36d1c3599711c44ae733361d3675"
+  },
+  {
+    "source": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/supervisor.py",
+    "destination": "kyc_recovery/supervisor.py",
+    "source_sha256": "2715263fd5b18aebc90553813c16b46204717813950774c730e5ac32a5efa317"
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "manifest_sha256": "bd4233fbeca8898d0145c3411ae98901897fd24b974984c3b83195cea75843ed",
+  "protocol_sha256": "3fd12394fd845a4c2df528119655af65ab1a830b55833f5aa278c0c8c004c460",
+  "manifest_protocol_equal": true,
+  "local_count": 55,
+  "source_count": 113,
+  "bad_local": [],
+  "bad_source": [],
+  "bad_final_cpu": [],
+  "cpu_status": "CPU_IMPORT_READY",
+  "final_entry_modules_verified": [
+    {
+      "mode": "cpu-preflight",
+      "name": "kyc_recovery.cpu_preflight",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/cpu_preflight.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/cpu_preflight.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "aac8cf6b64fd66c2dc832abae5d2dc843c402099a10e514a0fbdc05f9b93ef1a",
+      "native_entry_execution": "CPU_ONLY"
+    },
+    {
+      "mode": "gpu-preflight",
+      "name": "kyc_recovery.gpu_preflight",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/gpu_preflight.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/gpu_preflight.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "b72fe9345e7538f8a8fdc32e29c0b00e9d8055008af6771bb528f7b5f3019aa6",
+      "native_entry_execution": "DEFERRED"
+    },
+    {
+      "mode": "s1-input",
+      "name": "kyc_recovery.input_worker",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/input_worker.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/input_worker.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "727234f59ff7612444cbe5098b18c69831880113e06b1b3cd020c464240ac556",
+      "native_entry_execution": "DEFERRED"
+    },
+    {
+      "mode": "s1-model",
+      "name": "kyc_recovery.model_worker",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/model_worker.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/model_worker.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "25ece8659cc63ca2b3cf10578e52a3d90c367cec0deb25e52ef839c09b59dc3f",
+      "native_entry_execution": "DEFERRED"
+    },
+    {
+      "mode": "s2-closed",
+      "name": "kyc_recovery.closed_worker",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/closed_worker.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/closed_worker.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "3b87463928beaa25220fca5f4d461944b99f7de635f93ca9af4a52ae4a0da2b8",
+      "native_entry_execution": "DEFERRED"
+    },
+    {
+      "mode": "supervise",
+      "name": "kyc_recovery.supervisor",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/supervisor.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/supervisor.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "8b3ff85a6b7c578a2c83e7fd19a9d7089be5ba4f1c28f3b03a716c2b7c742d55",
+      "native_entry_execution": "DEFERRED"
+    },
+    {
+      "mode": "cpu-analyze",
+      "name": "kyc_recovery.analyze",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/analyze.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/analyze.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "11880cc90c0dc16def85ca1cee32508e008b2b84e5a73f8e8e4dc0bda5683d2d",
+      "native_entry_execution": "DEFERRED"
+    },
+    {
+      "name": "kyc_recovery.builders",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/builders.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/builders.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "1d9ca7d1a175a6ca53a1b46be379256a5efb57c2bbe7a0eaf29cd2aeec81bc1f",
+      "constructor_execution": "DEFERRED"
+    },
+    {
+      "name": "kyc_recovery.model_runtime",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/model_runtime.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/model_runtime.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "d123a43109454b9dac295e148394288b1a565866fef4c421e2bf6e7fac5b1480",
+      "constructor_execution": "DEFERRED"
+    }
+  ]
+}

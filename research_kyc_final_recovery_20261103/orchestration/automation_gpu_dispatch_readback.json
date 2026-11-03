@@ -1,0 +1,17 @@
+{
+  "utc": "2026-11-03T07:08:14.677686+00:00",
+  "items": [
+    {
+      "id": "automation",
+      "status": "ACTIVE",
+      "rrule": "RRULE:FREQ=DAILY;BYHOUR=0,4,9,14,19;BYMINUTE=59;BYSECOND=55",
+      "target_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9"
+    },
+    {
+      "id": "6-1-sol-max",
+      "status": "ACTIVE",
+      "rrule": "RRULE:FREQ=DAILY;BYHOUR=0,4,9,14,19;BYMINUTE=59;BYSECOND=55",
+      "target_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042"
+    }
+  ]
+}

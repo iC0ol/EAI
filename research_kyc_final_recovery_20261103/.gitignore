@@ -1,0 +1,26 @@
+logs/
+local_only/
+cache/
+tmp/
+__pycache__/
+*.pyc
+*.lock
+*.tmp
+discussion/*_raw.jsonl
+discussion/*_metadata.json
+discussion/session.json
+discussion/session_recovery.json
+*.pt
+*.pth
+*.h5
+*.hdf5
+*.xml
+
+# Address-bearing originals; public redacted copies are in publication/.
+cpu_preflight/R2/result.json
+cpu_preflight/final/result.json
+cpu_preflight/result.json
+gpu_preflight_result.json
+results/input_module_provenance.json
+results/model_module_provenance.json
+results/preflight_input_provenance.json

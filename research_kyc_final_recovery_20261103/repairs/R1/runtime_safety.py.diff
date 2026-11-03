@@ -1,0 +1,19 @@
+--- R1/before
++++ R1/after
+@@ -1,5 +1,5 @@
+ """Installed only inside an authorized worker; no framework imports here."""
+-from common import *
++from .common import *
+ import socket
+ import sys
+ 
+@@ -34,8 +34,7 @@
+ 
+ 
+ def torch_guards(torch):
+-    torch.set_num_threads(3)
+-    torch.set_num_interop_threads(1)
++    # The shared actual loader imports experiment_lib, which owns thread setup.
+     torch.set_grad_enabled(False)
+     torch.Tensor.backward = forbidden
+     torch.autograd.backward = forbidden

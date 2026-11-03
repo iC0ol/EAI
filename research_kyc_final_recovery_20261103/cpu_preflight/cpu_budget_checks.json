@@ -1,0 +1,48 @@
+{
+  "utc": "2026-11-03T02:34:05.154710+00:00",
+  "state": "CPU_BUDGET_AND_OS_TERMINATION_PASSED",
+  "separate_test_ledger": true,
+  "not_ACT_observations": true,
+  "logical_tickets": 16,
+  "matching_internal_entries": 16,
+  "denied_operations": [
+    "ACT17",
+    "preflight_render",
+    "preflight_ACT",
+    "S1_step",
+    "optimizer",
+    "rollout_step151"
+  ],
+  "test_counts": {
+    "gpu_workers": 0,
+    "make_env": 0,
+    "s1_ACT": 16,
+    "s1_renders": 0,
+    "s1_readPixels": 0,
+    "s2_queries": 0,
+    "s2_renders": 0,
+    "s2_readPixels": 0,
+    "s2_steps": 150,
+    "s2_rollouts": 0,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "CPU_process_command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "-B",
+    "-c",
+    "import time; time.sleep(60)"
+  ],
+  "CPU_process_identity": {
+    "pid": 263533,
+    "ppid": 263233,
+    "start_ticks": 302720505,
+    "state": "R",
+    "rss": 393216
+  },
+  "terminated_exit_code": -15,
+  "CPU_test_elapsed": 0.15349269611760974,
+  "actual_ACT_forwards": 0,
+  "actual_env_steps": 0,
+  "actual_GPU_seconds": 0
+}

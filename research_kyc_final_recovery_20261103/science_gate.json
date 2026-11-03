@@ -1,0 +1,32 @@
+{
+  "state": "APPROVED",
+  "scope": "STAGE1_WITH_PARENT_INPUT_GATE",
+  "recovery_id": "kyc-last-recovery-441e91b0-ee5f-4294-9501-070606a5f695",
+  "utc": "2026-11-03T07:15:36.691308+00:00",
+  "codex": {
+    "decision": "APPROVE",
+    "scope": "STAGE1_WITH_PARENT_INPUT_GATE",
+    "code_manifest_sha256": "bd4233fbeca8898d0145c3411ae98901897fd24b974984c3b83195cea75843ed",
+    "protocol_sha256": "3fd12394fd845a4c2df528119655af65ab1a830b55833f5aa278c0c8c004c460",
+    "evidence_file": "notes/06_Stage1放行交叉记录.md",
+    "evidence_sha256": "7d243367b1abea7f04bf9df858de98d106818180114c5acafe1dfd5e42e09255"
+  },
+  "deepseek": {
+    "decision": "APPROVE",
+    "scope": "STAGE1_WITH_PARENT_INPUT_GATE",
+    "code_manifest_sha256": "bd4233fbeca8898d0145c3411ae98901897fd24b974984c3b83195cea75843ed",
+    "protocol_sha256": "3fd12394fd845a4c2df528119655af65ab1a830b55833f5aa278c0c8c004c460",
+    "evidence_file": "discussion/35_stage1_cross_response.md",
+    "evidence_sha256": "9b2eb24d512cd9139980724f5224a82dd6707c4c65200e256e79377c46cc14c7"
+  },
+  "independent_codex": "notes/05_Codex预检验收及Stage1冻结.md",
+  "independent_deepseek": "discussion/34_preflight_acceptance_independent_response.md",
+  "preflight_evidence_sha256": {
+    "stages/gpu-preflight.json": "0d602f0b64d1dc7bfbe47d6f9721959d55f0ba994cb4b8f53af5a80933369691",
+    "gpu_preflight_result.json": "7ba09eb9ffd705fe4ad827e4dadbf9accc6bcde51c1ebc95f00280c019a99262",
+    "results/preflight_strict_load.json": "631a01d0ea3f4d0a0fe184d74e500e8d0f049fe92a23b7d755939125253e478e",
+    "artifacts/parent_gpu_preflight_acceptance.json": "e581fe7dd8b9907891b518ddaed5959a65477de09ef74d9f713d46221403622c"
+  },
+  "Stage2_approved": false,
+  "repair_rounds_remaining": 0
+}

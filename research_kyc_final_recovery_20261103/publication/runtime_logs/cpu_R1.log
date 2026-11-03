@@ -1,0 +1,68 @@
+Traceback (most recent call last):
+  File "/home/asus/EAI/research_kyc_final_recovery_20261103/run.py", line 5, in <module>
+    main()
+  File "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/cli.py", line 12, in main
+    worker()
+  File "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/cpu_preflight.py", line 24, in main
+    modules, provenance = load_actual()
+                          ^^^^^^^^^^^^^
+  File "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/loader.py", line 36, in load_actual
+    module = importlib.import_module(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/asus/EAI/research_expansion_20261029/reproduction/runtime/python311/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py", line 5, in <module>
+    import torch,h5py
+  File "/home/asus/EAI/research_expansion_20261029/reproduction/env/lib/python3.11/site-packages/h5py/__init__.py", line 45, in <module>
+    from ._conv import register_converters as _register_converters, \
+  File "h5py/_conv.pyx", line 1, in init h5py._conv
+  File "h5py/h5r.pyx", line 1, in init h5py.h5r
+  File "h5py/h5p.pyx", line 1, in init h5py.h5p
+  File "h5py/h5t.pyx", line 41, in init h5py.h5t
+  File "/home/asus/EAI/research_expansion_20261029/reproduction/runtime/python311/lib/python3.11/platform.py", line 813, in __getitem__
+    return tuple(self)[key]
+           ^^^^^^^^^^^
+  File "/home/asus/EAI/research_expansion_20261029/reproduction/runtime/python311/lib/python3.11/platform.py", line 799, in __iter__
+    (self.processor,)
+     ^^^^^^^^^^^^^^
+  File "/home/asus/EAI/research_expansion_20261029/reproduction/runtime/python311/lib/python3.11/functools.py", line 1001, in __get__
+    val = self.func(instance)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/asus/EAI/research_expansion_20261029/reproduction/runtime/python311/lib/python3.11/platform.py", line 794, in processor
+    return _unknown_as_blank(_Processor.get())
+                             ^^^^^^^^^^^^^^^^
+  File "/home/asus/EAI/research_expansion_20261029/reproduction/runtime/python311/lib/python3.11/platform.py", line 739, in get
+    return func() or ''
+           ^^^^^^
+  File "/home/asus/EAI/research_expansion_20261029/reproduction/runtime/python311/lib/python3.11/platform.py", line 762, in from_subprocess
+    return subprocess.check_output(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/asus/EAI/research_expansion_20261029/reproduction/runtime/python311/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/asus/EAI/research_expansion_20261029/reproduction/runtime/python311/lib/python3.11/subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/asus/EAI/research_expansion_20261029/reproduction/runtime/python311/lib/python3.11/subprocess.py", line 992, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/asus/EAI/research_expansion_20261029/reproduction/runtime/python311/lib/python3.11/subprocess.py", line 1740, in _get_handles
+    errwrite = self._get_devnull()
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/asus/EAI/research_expansion_20261029/reproduction/runtime/python311/lib/python3.11/subprocess.py", line 1137, in _get_devnull
+    self._devnull = os.open(os.devnull, os.O_RDWR)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/runtime_safety.py", line 28, in audit
+    write_path(path)
+  File "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/runtime_safety.py", line 22, in write_path
+    require(Path(os.fsdecode(path)).resolve().is_relative_to(P),
+  File "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/common.py", line 79, in require
+    raise RuntimeError(reason)
+RuntimeError: write outside new diagnostic scope

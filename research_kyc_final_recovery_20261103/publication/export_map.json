@@ -1,0 +1,181 @@
+{
+  "utc": "2026-11-03T12:27:53.231169+00:00",
+  "originals_unchanged": true,
+  "exports": [
+    {
+      "source": "logs/cpu_R1.log",
+      "source_sha256": "8550d3955c83c9ba098578d1ba558c5adcf696707c47b1fe4ba83a6bf3228b90",
+      "public_copy": "publication/runtime_logs/cpu_R1.log",
+      "public_sha256": "8550d3955c83c9ba098578d1ba558c5adcf696707c47b1fe4ba83a6bf3228b90",
+      "native_pointer_strings_redacted": 0
+    },
+    {
+      "source": "logs/cpu_R2.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_copy": "publication/runtime_logs/cpu_R2.log",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "native_pointer_strings_redacted": 0
+    },
+    {
+      "source": "logs/cpu_final.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_copy": "publication/runtime_logs/cpu_final.log",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "native_pointer_strings_redacted": 0
+    },
+    {
+      "source": "logs/cpu_preflight_traceback.log",
+      "source_sha256": "22e0a1b2de010d15c1dce60291d105d6c02b70234b33ff17cbe4ba3c818fd4b2",
+      "public_copy": "publication/runtime_logs/cpu_preflight_traceback.log",
+      "public_sha256": "22e0a1b2de010d15c1dce60291d105d6c02b70234b33ff17cbe4ba3c818fd4b2",
+      "native_pointer_strings_redacted": 0
+    },
+    {
+      "source": "logs/cpu_termination_test.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_copy": "publication/runtime_logs/cpu_termination_test.log",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "native_pointer_strings_redacted": 0
+    },
+    {
+      "source": "logs/gpu-preflight.log",
+      "source_sha256": "28faa8188b37a6b7bcf132297d52d2f79f822e5cd4a9ff02be5a001d07a5ef60",
+      "public_copy": "publication/runtime_logs/gpu-preflight.log",
+      "public_sha256": "28faa8188b37a6b7bcf132297d52d2f79f822e5cd4a9ff02be5a001d07a5ef60",
+      "native_pointer_strings_redacted": 0
+    },
+    {
+      "source": "logs/s1-input.log",
+      "source_sha256": "7af6366805a19844a4008b1264678b13fa28c0a4e8c2d1fa6cb7d0e4d9b53662",
+      "public_copy": "publication/runtime_logs/s1-input.log",
+      "public_sha256": "7af6366805a19844a4008b1264678b13fa28c0a4e8c2d1fa6cb7d0e4d9b53662",
+      "native_pointer_strings_redacted": 0
+    },
+    {
+      "source": "logs/s1-model.log",
+      "source_sha256": "059317aa8058e5fa4fe0b782f582a61c45865b0f70e2cf4b59a1dbaa31fba492",
+      "public_copy": "publication/runtime_logs/s1-model.log",
+      "public_sha256": "059317aa8058e5fa4fe0b782f582a61c45865b0f70e2cf4b59a1dbaa31fba492",
+      "native_pointer_strings_redacted": 0
+    },
+    {
+      "source": "cpu_preflight/R2/result.json",
+      "source_sha256": "179938cc53f8d0f15f05f2cca72abd97ca48fbdaa7fd41c1254b59e92e9104e1",
+      "public_copy": "publication/redacted/cpu_preflight/R2/result.json",
+      "public_sha256": "b93d6a5127447878a40d444e274355d168d65b57e5d9c183e4a4eef0a9c6b45f",
+      "redacted_json_paths": [
+        "/provenance/modules/0/module_id",
+        "/provenance/modules/1/module_id",
+        "/provenance/modules/2/module_id",
+        "/provenance/modules/3/module_id",
+        "/provenance/modules/4/module_id",
+        "/provenance/modules/5/module_id",
+        "/provenance/modules/6/module_id",
+        "/provenance/modules/7/module_id",
+        "/provenance/harness_common/module_id"
+      ]
+    },
+    {
+      "source": "cpu_preflight/final/result.json",
+      "source_sha256": "8ddd6c273557253649a0c8e855482b9936ffa84e14abdd7b06455390c4698ca5",
+      "public_copy": "publication/redacted/cpu_preflight/final/result.json",
+      "public_sha256": "ec8981560d213ae0614394ed014d6d422f91dc8dc24f6268063ca71e1d5ef14d",
+      "redacted_json_paths": [
+        "/provenance/modules/0/module_id",
+        "/provenance/modules/1/module_id",
+        "/provenance/modules/2/module_id",
+        "/provenance/modules/3/module_id",
+        "/provenance/modules/4/module_id",
+        "/provenance/modules/5/module_id",
+        "/provenance/modules/6/module_id",
+        "/provenance/modules/7/module_id",
+        "/provenance/harness_common/module_id"
+      ]
+    },
+    {
+      "source": "cpu_preflight/result.json",
+      "source_sha256": "8ddd6c273557253649a0c8e855482b9936ffa84e14abdd7b06455390c4698ca5",
+      "public_copy": "publication/redacted/cpu_preflight/result.json",
+      "public_sha256": "ec8981560d213ae0614394ed014d6d422f91dc8dc24f6268063ca71e1d5ef14d",
+      "redacted_json_paths": [
+        "/provenance/modules/0/module_id",
+        "/provenance/modules/1/module_id",
+        "/provenance/modules/2/module_id",
+        "/provenance/modules/3/module_id",
+        "/provenance/modules/4/module_id",
+        "/provenance/modules/5/module_id",
+        "/provenance/modules/6/module_id",
+        "/provenance/modules/7/module_id",
+        "/provenance/harness_common/module_id"
+      ]
+    },
+    {
+      "source": "gpu_preflight_result.json",
+      "source_sha256": "7ba09eb9ffd705fe4ad827e4dadbf9accc6bcde51c1ebc95f00280c019a99262",
+      "public_copy": "publication/redacted/gpu_preflight_result.json",
+      "public_sha256": "f215e08966959784b69a882e574cea4e99ee8c38cb158e5e08d8b8ce8da07d59",
+      "redacted_json_paths": [
+        "/provenance/modules/0/module_id",
+        "/provenance/modules/1/module_id",
+        "/provenance/modules/2/module_id",
+        "/provenance/modules/3/module_id",
+        "/provenance/modules/4/module_id",
+        "/provenance/modules/5/module_id",
+        "/provenance/modules/6/module_id",
+        "/provenance/modules/7/module_id",
+        "/provenance/harness_common/module_id"
+      ]
+    },
+    {
+      "source": "results/input_module_provenance.json",
+      "source_sha256": "772fd704c2462d078f52ecc196570b6793a1247221d65b2291f8d6f63aa8f41d",
+      "public_copy": "publication/redacted/results/input_module_provenance.json",
+      "public_sha256": "eda6e86a2e1299cf8ed0cf3e33f11001cc76e7503312c877b734af0aa690461c",
+      "redacted_json_paths": [
+        "/modules/0/module_id",
+        "/modules/1/module_id",
+        "/modules/2/module_id",
+        "/modules/3/module_id",
+        "/modules/4/module_id",
+        "/modules/5/module_id",
+        "/modules/6/module_id",
+        "/modules/7/module_id",
+        "/harness_common/module_id"
+      ]
+    },
+    {
+      "source": "results/model_module_provenance.json",
+      "source_sha256": "235854442f5822107712e52ea587b27d296e389c009ba8fafb16e2da5d9d4a29",
+      "public_copy": "publication/redacted/results/model_module_provenance.json",
+      "public_sha256": "eda6e86a2e1299cf8ed0cf3e33f11001cc76e7503312c877b734af0aa690461c",
+      "redacted_json_paths": [
+        "/modules/0/module_id",
+        "/modules/1/module_id",
+        "/modules/2/module_id",
+        "/modules/3/module_id",
+        "/modules/4/module_id",
+        "/modules/5/module_id",
+        "/modules/6/module_id",
+        "/modules/7/module_id",
+        "/harness_common/module_id"
+      ]
+    },
+    {
+      "source": "results/preflight_input_provenance.json",
+      "source_sha256": "e50dbdccf7f200c3a0c4d30df5afdaabc74d5d412f5e2a7b2ddcfb333b869a34",
+      "public_copy": "publication/redacted/results/preflight_input_provenance.json",
+      "public_sha256": "eda6e86a2e1299cf8ed0cf3e33f11001cc76e7503312c877b734af0aa690461c",
+      "redacted_json_paths": [
+        "/modules/0/module_id",
+        "/modules/1/module_id",
+        "/modules/2/module_id",
+        "/modules/3/module_id",
+        "/modules/4/module_id",
+        "/modules/5/module_id",
+        "/modules/6/module_id",
+        "/modules/7/module_id",
+        "/harness_common/module_id"
+      ]
+    }
+  ]
+}

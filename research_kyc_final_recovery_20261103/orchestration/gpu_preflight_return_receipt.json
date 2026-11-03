@@ -1,0 +1,16 @@
+{
+  "utc": "2026-11-03T07:10:00.015Z",
+  "parent_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "phase": "gpu-preflight",
+  "result": "ENGINEERING_READY_INPUT_AND_STRICT_LOAD_ONLY",
+  "callback_tool_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a18138-0f15-76b2-b5cf-20e1722782a9\"}"
+      }
+    ],
+    "isError": false
+  },
+  "prompt": "GPU_PREFLIGHT_ONLY 唯一一次运行完成：ENGINEERING_READY_INPUT_AND_STRICT_LOAD，仍无科学观测。目录 /home/asus/EAI/research_kyc_final_recovery_20261103，recovery_id=kyc-last-recovery-441e91b0-ee5f-4294-9501-070606a5f695。\n\n真实冻结命令：reproduction/env/bin/python -B run.py supervise --stage gpu-preflight（cwd 新目录；实际 cli 需要 --stage）。2026-11-03 15:08:33.059419 至15:08:49.944628（北京时间），全 worker 分配16.88504482805729秒，累计同值，低于180秒；剩余总账1783.1149551719427秒。独立 supervisor PID329066/start_ticks304367097，worker PID329107/start_ticks304367320，均已核对原进程不再存活；worker exit0/EXITED，supervisor unified-exec exit0，active_lease=null，无 terminal_stop、无 science_clock，无重复尝试或修复。\n\n实际到达：同一共享 loader 和 builders.input_setup 已创建 make_env(0)、Dataset200/id/max_seq130、Evaluator、独立 CUDA PluckerEmbedder；close_input 成功并通过无活 GL context 检查。然后 model_setup 构造原 ACT，实际加载冻结 checkpoint 375 项有限 state tensor，strict=True/missing=[]/unexpected=[]；checkpoint SHA c904a97002571d96e3ee6b66057d09162cbdcb5e926cb6ea0b660ca1390bce13，缓存 ResNet SHA f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec；optimizer_created=false，optimizer_state_loaded=false。close_model 同步/释放通过，最终结果 actual_GPU_path=true。没有 __getitem__、健康采图或 BF16 forward，不能据此称 SCIENTIFIC_MEASURED。\n\n准确计数：GPU worker1、make_env1；S1 ACT/render/readPixels=0/0/0；S2 query/render/readPixels/step/rollout=0；backward/optimizer=0。call_ledger 仅 worker 与 make_env 尝试。采样峰值 RSS2202853376 bytes（约2.05GiB），整设备 VRAM1248854016 bytes（1191MiB），目录23074640 bytes（约22.0MiB），9次采样；只是采样峰值，不称连续峰值。三核/数值线程3由未变更 supervisor/envvars 设置，无单独的进程退出后现场测量。外部GPU进程PID543637/296MiB未触碰，结束后仅其仍列于compute-apps。\n\n原始证据：\n- stages/gpu-preflight.json、recovery_state.json、status.json\n- gpu_preflight_result.json\n- results/preflight_input_provenance.json、results/preflight_strict_load.json\n- results/gpu-preflight_readbacks/events.jsonl（48条，最后CLEANUP释放退出）\n- commands.jsonl、call_ledger.jsonl、resources.jsonl、logs/gpu-preflight.log\n- orchestration/gpu_preflight_executor_launch.json（独立 supervisor 身份/实际命令）\n- orchestration/gpu_preflight_supervisor_stdout.log（为空，supervisor无异常）\n- artifacts/gpu_preflight_executor_verification.json（独立退出/账本核实、全部证据SHA、资源峰值）\n\n运行后已复算55候选、113只读来源、26真实CPU快照代码，全一致。manifest SHA仍bd4233fbeca8898d0145c3411ae98901897fd24b974984c3b83195cea75843ed，protocol仍3fd12394fd845a4c2df528119655af65ab1a830b55833f5aa278c0c8c004c460。两修复已耗尽，未改任何候选源码、未操作Git/automation。Stage1/2未派发未运行，等待你和真实DeepSeek验收；不自动下一阶段，不持GPU。当前共享额度最后真实查询5h18%已用/weekly78%已用，未兑换券。"
+}

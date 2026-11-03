@@ -1,0 +1,16 @@
+{
+  "utc": "2026-11-03T07:18:15.136Z",
+  "parent_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "phase": "s1-input",
+  "state": "COMPLETE_HEALTHY_PENDING_PARENT",
+  "callback_tool_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a18138-0f15-76b2-b5cf-20e1722782a9\"}"
+      }
+    ],
+    "isError": false
+  },
+  "prompt": "s1-input 唯一一次运行完成，状态 COMPLETE_HEALTHY_PENDING_PARENT，等待你实际看图/原数组和签 input_gate；未运行模型。目录 /home/asus/EAI/research_kyc_final_recovery_20261103，recovery_id=kyc-last-recovery-441e91b0-ee5f-4294-9501-070606a5f695。\n\n实际冻结命令 reproduction/env/bin/python -B run.py supervise --stage s1-input（cwd新目录）。2026-11-03北京时间15:16:34.659178至15:16:54.513922，stage worker exit0/EXITED，独立supervisor unified-exec exit0，分配19.8545615891926秒；累计36.73960641724989秒，总1800剩1763.26039358275，S1累计19.8545615891926/600、模型可用580.1454384108074秒（不需用满）。科学8h从正式dispatch15:15:36.691306起，science_clock截止2026-11-03 23:15:36.691306+08:00，未延长。\n\n真实计数：本阶段worker1/make_env1/render12/readPixels24，ACT0、step0、rollout0、backward0、optimizer0；scope累计worker2/make_env2，其余按原账本。GL事件也独立出现render before/after各12、read before/after各24。样本精确0/1/4/5，每样本Dataset/Evaluator/custom三入口。input_result.failure=null、all_health_pass=true、all_contexts_destroyed=true；natural_target_window=NOT_REPRODUCED，不能称自然目标窗口已复现。无HELD、强制析构、额外GC或候选修改。\n\n12张PNG在results/input/s00_dataset.png、s00_evaluator.png、s00_custom.png，以及s01/s04/s05对应三入口。inputs/sample_00/01/04/05.npz保留official/custom/dataset张量、canonical_raw、T/K/qpos、动作条件/掩码。results/input/另有24个normal/sentinel原始.npy、每帧flip输入/输出、tensor、npz边界；readback.json和events.jsonl记录原GL门及独立sentinel。此次独立CPU读回核实12对原始uint8数组完全一致、全部输入/入口比较通过、12帧×5=60保存边界通过；sample0三入口均命中健康参考SHA688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37。父审实际视觉审核尚未由执行者代办。\n\n完整锁定输入文件集90项，逐一核对SHA与input_result一致，实际集合无额外/缺失。运行后55候选/113只读来源/26真实CPU快照代码SHA全匹配；manifest仍bd4233fbeca8898d0145c3411ae98901897fd24b974984c3b83195cea75843ed，protocol仍3fd12394fd845a4c2df528119655af65ab1a830b55833f5aa278c0c8c004c460。\n\n原始进程worker334233/start_ticks304415481；supervisor334180（完整start_ticks见orchestration/s1_input_executor_launch.json），两原进程均已核对失活、active_lease=null。无terminal_stop/fatal/model_result。外部GPU PID543637/296MiB未触碰，结束后只有其列于compute-apps。采样峰值RSS1723416576 bytes、整设备VRAM1336934400 bytes（1275MiB）、目录63463269 bytes，非连续峰值保证。\n\n立即验收路径：\n- input_result.json（四状态/全部checks/frames/90文件SHA/source集合）\n- stages/s1-input.json、recovery_state.json、status.json、science_clock.json\n- results/input/readback.json、events.jsonl、12PNG和原始数组；inputs/四NPZ\n- logs/s1-input.log、commands.jsonl、call_ledger.jsonl、resources.jsonl\n- orchestration/s1_input_executor_launch.json、s1_input_supervisor_stdout.log\n- artifacts/s1_input_executor_verification.json（上述独立核实、原PID身份、文件/证据SHA及预算）\n\n没有修改候选、重试、Git或automation。未启动s1-model或Stage2；等待你的实际视觉/raw审核、绑定input_gate和独立s1-model新派发，不持GPU。"
+}

@@ -1,0 +1,6859 @@
+{
+  "utc": "2026-11-03T07:24:03.903910+00:00",
+  "state": "COMPLETE_CPU_STATISTICS",
+  "investment_screen": "INCONCLUSIVE_MIXED_OR_WEAK_SIGNAL",
+  "per_state": [
+    {
+      "sample": 0,
+      "demo": 0,
+      "t": 0,
+      "scores": {
+        "official_prior": {
+          "xyz_normalized_MAE": 1.145472333830242,
+          "all7_normalized_MAE": 0.7644835784597864,
+          "all7_normalized_RMSE": 1.1376957107417103,
+          "normalized_MAE_by_dim": [
+            0.9985650769365789,
+            2.1035878612186543,
+            0.33426406333549347,
+            0.5494842049973854,
+            0.40686006249472584,
+            0.7716202518300246,
+            0.18700352840564355
+          ],
+          "normalized_RMSE_by_dim": [
+            1.122914443514833,
+            2.357924479209472,
+            0.4016578146163014,
+            0.8079421608580759,
+            0.541805500467155,
+            0.9187891185087954,
+            0.5365536642406971
+          ],
+          "raw_MAE_by_dim": [
+            0.0023290781273999526,
+            0.004387199844353517,
+            0.0016110727506656985,
+            0.01647543408347095,
+            0.023500816289462514,
+            0.002049489657410201,
+            0.18337793368846178
+          ],
+          "raw_RMSE_by_dim": [
+            0.002619113695979971,
+            0.004917639095992996,
+            0.001935894495397125,
+            0.02422489617247078,
+            0.03129545685321219,
+            0.0024403828065150592,
+            0.5261510469898834
+          ],
+          "raw_MAE": 0.033390146348746375,
+          "valid_steps": 30
+        },
+        "custom_prior": {
+          "xyz_normalized_MAE": 1.145472333830242,
+          "all7_normalized_MAE": 0.7644835784597864,
+          "all7_normalized_RMSE": 1.1376957107417103,
+          "normalized_MAE_by_dim": [
+            0.9985650769365789,
+            2.1035878612186543,
+            0.33426406333549347,
+            0.5494842049973854,
+            0.40686006249472584,
+            0.7716202518300246,
+            0.18700352840564355
+          ],
+          "normalized_RMSE_by_dim": [
+            1.122914443514833,
+            2.357924479209472,
+            0.4016578146163014,
+            0.8079421608580759,
+            0.541805500467155,
+            0.9187891185087954,
+            0.5365536642406971
+          ],
+          "raw_MAE_by_dim": [
+            0.0023290781273999526,
+            0.004387199844353517,
+            0.0016110727506656985,
+            0.01647543408347095,
+            0.023500816289462514,
+            0.002049489657410201,
+            0.18337793368846178
+          ],
+          "raw_RMSE_by_dim": [
+            0.002619113695979971,
+            0.004917639095992996,
+            0.001935894495397125,
+            0.02422489617247078,
+            0.03129545685321219,
+            0.0024403828065150592,
+            0.5261510469898834
+          ],
+          "raw_MAE": 0.033390146348746375,
+          "valid_steps": 30
+        },
+        "official_posterior": {
+          "xyz_normalized_MAE": 1.1467744171635752,
+          "all7_normalized_MAE": 0.7656307487536853,
+          "all7_normalized_RMSE": 1.1382579657734446,
+          "normalized_MAE_by_dim": [
+            1.0003879936032456,
+            2.102987682182196,
+            0.33694757570528516,
+            0.549463859945302,
+            0.4068620969999342,
+            0.7712052127675246,
+            0.1915608200723102
+          ],
+          "normalized_RMSE_by_dim": [
+            1.1244454541300226,
+            2.3572251004276454,
+            0.40368819137213235,
+            0.8079043905528969,
+            0.5418208419356284,
+            0.9184443325611058,
+            0.5438263934655079
+          ],
+          "raw_MAE_by_dim": [
+            0.0023333299437657234,
+            0.004385948123223215,
+            0.0016240066377605443,
+            0.01647482406854882,
+            0.02350093380537904,
+            0.002048387278015677,
+            0.1878468693078806
+          ],
+          "raw_RMSE_by_dim": [
+            0.002622684663380108,
+            0.004916180485901478,
+            0.0019456804252163927,
+            0.024223763688283547,
+            0.031296342998266564,
+            0.002439467025426973,
+            0.5332827736952135
+          ],
+          "raw_MAE": 0.034030614166367656,
+          "valid_steps": 30
+        },
+        "mean": {
+          "xyz_normalized_MAE": 1.1430309504763385,
+          "all7_normalized_MAE": 0.8894233148415865,
+          "all7_normalized_RMSE": 1.1772730070881523,
+          "normalized_MAE_by_dim": [
+            0.8028167875242382,
+            2.108869851897527,
+            0.5174062120072501,
+            0.5646765639225914,
+            0.4026117713451434,
+            0.8474306044151022,
+            0.9821514127792524
+          ],
+          "normalized_RMSE_by_dim": [
+            0.9545746392769452,
+            2.362473442904058,
+            0.5525707458407738,
+            0.8247931798329238,
+            0.5381444389792645,
+            0.9795201887468824,
+            0.9872340989481839
+          ],
+          "raw_MAE_by_dim": [
+            0.0018725099278141038,
+            0.004398215856145298,
+            0.0024937740565709435,
+            0.016930953470139856,
+            0.023255428946113273,
+            0.0022508484646463333,
+            0.9631096171297026
+          ],
+          "raw_RMSE_by_dim": [
+            0.002226473731818521,
+            0.00492712632169,
+            0.0026632586900183345,
+            0.02473014791553179,
+            0.03108398873092024,
+            0.0026016897447935917,
+            0.9680937609861959
+          ],
+          "raw_MAE": 0.14490162112159036,
+          "valid_steps": 30
+        },
+        "median": {
+          "xyz_normalized_MAE": 1.1934902851379894,
+          "all7_normalized_MAE": 0.8663915094238965,
+          "all7_normalized_RMSE": 1.2234237841918854,
+          "normalized_MAE_by_dim": [
+            1.0509833089581173,
+            2.100141010389511,
+            0.4293465360663405,
+            0.5491388712254095,
+            0.40704738418960235,
+            0.7802512701395063,
+            0.7478321849987882
+          ],
+          "normalized_RMSE_by_dim": [
+            1.1757895032648156,
+            2.354428153129384,
+            0.4748153814040461,
+            0.8073185488162705,
+            0.5419722042015536,
+            0.9248595885002492,
+            1.2350042071184084
+          ],
+          "raw_MAE_by_dim": [
+            0.002451339721058806,
+            0.0043800111627206205,
+            0.0020693475031293928,
+            0.01646507978439331,
+            0.02351163625717163,
+            0.002072414383292198,
+            0.7333333333333333
+          ],
+          "raw_RMSE_by_dim": [
+            0.0027424408060431962,
+            0.0049103472297880426,
+            0.002288496450811177,
+            0.02420619812984284,
+            0.031305085898178764,
+            0.002456506496158503,
+            1.2110601416389966
+          ],
+          "raw_MAE": 0.11204045173501419,
+          "valid_steps": 30
+        }
+      },
+      "direction_gripper": {
+        "official_prior": {
+          "cosine_mean": 0.5057839142075552,
+          "expert_direction_valid_count": 30,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            1.0,
+            0.16666666666666666,
+            0.9666666666666667
+          ],
+          "gripper_sign_accuracy": 0.9,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "custom_prior": {
+          "cosine_mean": 0.5057839142075552,
+          "expert_direction_valid_count": 30,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            1.0,
+            0.16666666666666666,
+            0.9666666666666667
+          ],
+          "gripper_sign_accuracy": 0.9,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "official_posterior": {
+          "cosine_mean": 0.4934807448474963,
+          "expert_direction_valid_count": 30,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            1.0,
+            0.2,
+            0.9333333333333333
+          ],
+          "gripper_sign_accuracy": 0.9,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "mean": {
+          "cosine_mean": 0.3100381183455429,
+          "expert_direction_valid_count": 30,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            1.0,
+            0.0,
+            0.5
+          ],
+          "gripper_sign_accuracy": 0.6333333333333333,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "median": {
+          "cosine_mean": 0.12902449924187376,
+          "expert_direction_valid_count": 30,
+          "small_prediction_count": 21,
+          "xyz_axis_sign_accuracy": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "gripper_sign_accuracy": 0.6333333333333333,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        }
+      },
+      "dual_constant_ratios": {
+        "official_prior": {
+          "mean": {
+            "xyz_normalized_MAE": 1.0021358856056226,
+            "all7_normalized_MAE": 0.8595272528873915,
+            "all7_normalized_RMSE": 0.9663822273099323
+          },
+          "median": {
+            "xyz_normalized_MAE": 0.9597667849452199,
+            "all7_normalized_MAE": 0.8823765816543223,
+            "all7_normalized_RMSE": 0.9299277367680068
+          }
+        },
+        "custom_prior": {
+          "mean": {
+            "xyz_normalized_MAE": 1.0021358856056226,
+            "all7_normalized_MAE": 0.8595272528873915,
+            "all7_normalized_RMSE": 0.9663822273099323
+          },
+          "median": {
+            "xyz_normalized_MAE": 0.9597667849452199,
+            "all7_normalized_MAE": 0.8823765816543223,
+            "all7_normalized_RMSE": 0.9299277367680068
+          }
+        },
+        "official_posterior": {
+          "mean": {
+            "xyz_normalized_MAE": 1.003275035278508,
+            "all7_normalized_MAE": 0.8608170440079483,
+            "all7_normalized_RMSE": 0.9668598183430649
+          },
+          "median": {
+            "xyz_normalized_MAE": 0.9608577727392117,
+            "all7_normalized_MAE": 0.8837006600662423,
+            "all7_normalized_RMSE": 0.9303873118056997
+          }
+        }
+      }
+    },
+    {
+      "sample": 1,
+      "demo": 50,
+      "t": 0,
+      "scores": {
+        "official_prior": {
+          "xyz_normalized_MAE": 1.187711431832773,
+          "all7_normalized_MAE": 0.8463486548375674,
+          "all7_normalized_RMSE": 1.1811480941061976,
+          "normalized_MAE_by_dim": [
+            1.7807733150699518,
+            1.2434686626687632,
+            0.5388923177596042,
+            0.5916124782460579,
+            0.27277497698006486,
+            0.9018423880662202,
+            0.5950764450723102
+          ],
+          "normalized_RMSE_by_dim": [
+            1.9974830045890624,
+            1.44362527517985,
+            0.7184616267912135,
+            0.8909352026273792,
+            0.4452236514347348,
+            1.0213091323254286,
+            1.067958035081111
+          ],
+          "raw_MAE_by_dim": [
+            0.004153520159858696,
+            0.0025933528253763902,
+            0.002597331941765428,
+            0.01773858520346039,
+            0.015755870908204392,
+            0.0023953708350347826,
+            0.583539197438707
+          ],
+          "raw_RMSE_by_dim": [
+            0.004658979252623116,
+            0.003010795365069622,
+            0.0034628130160690397,
+            0.026713314177249307,
+            0.02571675178914133,
+            0.0027126847678703003,
+            1.0472526342623478
+          ],
+          "raw_MAE": 0.08982474704462957,
+          "valid_steps": 30
+        },
+        "custom_prior": {
+          "xyz_normalized_MAE": 1.187711431832773,
+          "all7_normalized_MAE": 0.8463486548375674,
+          "all7_normalized_RMSE": 1.1811480941061976,
+          "normalized_MAE_by_dim": [
+            1.7807733150699518,
+            1.2434686626687632,
+            0.5388923177596042,
+            0.5916124782460579,
+            0.27277497698006486,
+            0.9018423880662202,
+            0.5950764450723102
+          ],
+          "normalized_RMSE_by_dim": [
+            1.9974830045890624,
+            1.44362527517985,
+            0.7184616267912135,
+            0.8909352026273792,
+            0.4452236514347348,
+            1.0213091323254286,
+            1.067958035081111
+          ],
+          "raw_MAE_by_dim": [
+            0.004153520159858696,
+            0.0025933528253763902,
+            0.002597331941765428,
+            0.01773858520346039,
+            0.015755870908204392,
+            0.0023953708350347826,
+            0.583539197438707
+          ],
+          "raw_RMSE_by_dim": [
+            0.004658979252623116,
+            0.003010795365069622,
+            0.0034628130160690397,
+            0.026713314177249307,
+            0.02571675178914133,
+            0.0027126847678703003,
+            1.0472526342623478
+          ],
+          "raw_MAE": 0.08982474704462957,
+          "valid_steps": 30
+        },
+        "official_posterior": {
+          "xyz_normalized_MAE": 1.1876536179764363,
+          "all7_normalized_MAE": 0.8463485821766671,
+          "all7_normalized_RMSE": 1.1811124733810534,
+          "normalized_MAE_by_dim": [
+            1.7807733150699518,
+            1.2431675558979298,
+            0.5390199829614272,
+            0.5915921331939746,
+            0.2727892185165232,
+            0.9016307995245536,
+            0.5954670700723101
+          ],
+          "normalized_RMSE_by_dim": [
+            1.9974830045890624,
+            1.4433583195016084,
+            0.7185266250914935,
+            0.8909242597216223,
+            0.4452395093934847,
+            1.0211337901951139,
+            1.068169530368858
+          ],
+          "raw_MAE_by_dim": [
+            0.004153520159858696,
+            0.0025927248432500013,
+            0.00259794725747066,
+            0.017737975188538257,
+            0.015756693519620057,
+            0.0023948088376963975,
+            0.5839222490632285
+          ],
+          "raw_RMSE_by_dim": [
+            0.004658979252623116,
+            0.003010238607763867,
+            0.0034631262923135032,
+            0.026712986071143908,
+            0.0257176677674092,
+            0.002712219044113392,
+            1.047460029113036
+          ],
+          "raw_MAE": 0.08987941698138038,
+          "valid_steps": 30
+        },
+        "mean": {
+          "xyz_normalized_MAE": 1.1632629771614473,
+          "all7_normalized_MAE": 0.8813312704153895,
+          "all7_normalized_RMSE": 1.130627068842531,
+          "normalized_MAE_by_dim": [
+            1.5462601802087643,
+            1.277069846367655,
+            0.6664589049079235,
+            0.5802477314998573,
+            0.27624282463188193,
+            0.8408879925123921,
+            0.9821514127792524
+          ],
+          "normalized_RMSE_by_dim": [
+            1.793933484061137,
+            1.4750567448703296,
+            0.8161536833043909,
+            0.8753227331365967,
+            0.4486391390307428,
+            0.9726398463252821,
+            0.9872340989481839
+          ],
+          "raw_MAE_by_dim": [
+            0.0036065358664876196,
+            0.0026634307672639564,
+            0.0032121723478781335,
+            0.017397830848395253,
+            0.01595617872432545,
+            0.002233470725537942,
+            0.9631096171297026
+          ],
+          "raw_RMSE_by_dim": [
+            0.004184215266725729,
+            0.003076348195771919,
+            0.003933665337537129,
+            0.026245198424992497,
+            0.02591403521391534,
+            0.002583414964421943,
+            0.9680937609861959
+          ],
+          "raw_MAE": 0.14402560520137012,
+          "valid_steps": 30
+        },
+        "median": {
+          "xyz_normalized_MAE": 1.2159209014268093,
+          "all7_normalized_MAE": 0.8813154807043415,
+          "all7_normalized_RMSE": 1.214691686233746,
+          "normalized_MAE_by_dim": [
+            1.7841284219011655,
+            1.2852350534122479,
+            0.5783992289670136,
+            0.5926755992102332,
+            0.2728705496529535,
+            0.9080673267879882,
+            0.7478321849987882
+          ],
+          "normalized_RMSE_by_dim": [
+            2.0005220770247543,
+            1.4819231320572062,
+            0.7421340263639636,
+            0.8929098425355162,
+            0.44538298372775476,
+            1.0288314752521894,
+            1.2350042071184084
+          ],
+          "raw_MAE_by_dim": [
+            0.004161345694834988,
+            0.0026804599561728536,
+            0.002787745794436584,
+            0.017770461241404214,
+            0.015761391321818034,
+            0.0024119048068920773,
+            0.7333333333333333
+          ],
+          "raw_RMSE_by_dim": [
+            0.004666067661081448,
+            0.003090668592534469,
+            0.0035769083140019487,
+            0.026772520701020548,
+            0.025725955049162186,
+            0.0027326647567201584,
+            1.2110601416389966
+          ],
+          "raw_MAE": 0.11127237744984173,
+          "valid_steps": 30
+        }
+      },
+      "direction_gripper": {
+        "official_prior": {
+          "cosine_mean": 0.5275878790670893,
+          "expert_direction_valid_count": 30,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            0.9666666666666667,
+            0.9666666666666667,
+            0.8
+          ],
+          "gripper_sign_accuracy": 0.7,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "custom_prior": {
+          "cosine_mean": 0.5275878790670893,
+          "expert_direction_valid_count": 30,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            0.9666666666666667,
+            0.9666666666666667,
+            0.8
+          ],
+          "gripper_sign_accuracy": 0.7,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "official_posterior": {
+          "cosine_mean": 0.5315913722823388,
+          "expert_direction_valid_count": 30,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            0.9666666666666667,
+            0.9666666666666667,
+            0.8333333333333334
+          ],
+          "gripper_sign_accuracy": 0.7,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "mean": {
+          "cosine_mean": 0.5666365869534199,
+          "expert_direction_valid_count": 30,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            0.9666666666666667,
+            0.9666666666666667,
+            0.5
+          ],
+          "gripper_sign_accuracy": 0.6333333333333333,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "median": {
+          "cosine_mean": 0.1508528570867493,
+          "expert_direction_valid_count": 30,
+          "small_prediction_count": 21,
+          "xyz_axis_sign_accuracy": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "gripper_sign_accuracy": 0.6333333333333333,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        }
+      },
+      "dual_constant_ratios": {
+        "official_prior": {
+          "mean": {
+            "xyz_normalized_MAE": 1.0210171346903725,
+            "all7_normalized_MAE": 0.9603070754980314,
+            "all7_normalized_RMSE": 1.0446840754621123
+          },
+          "median": {
+            "xyz_normalized_MAE": 0.9767999139081053,
+            "all7_normalized_MAE": 0.960324280428129,
+            "all7_normalized_RMSE": 0.9723850977925492
+          }
+        },
+        "custom_prior": {
+          "mean": {
+            "xyz_normalized_MAE": 1.0210171346903725,
+            "all7_normalized_MAE": 0.9603070754980314,
+            "all7_normalized_RMSE": 1.0446840754621123
+          },
+          "median": {
+            "xyz_normalized_MAE": 0.9767999139081053,
+            "all7_normalized_MAE": 0.960324280428129,
+            "all7_normalized_RMSE": 0.9723850977925492
+          }
+        },
+        "official_posterior": {
+          "mean": {
+            "xyz_normalized_MAE": 1.020967434959983,
+            "all7_normalized_MAE": 0.9603069930535492,
+            "all7_normalized_RMSE": 1.044652570179667
+          },
+          "median": {
+            "xyz_normalized_MAE": 0.9767523665254845,
+            "all7_normalized_MAE": 0.9603241979821696,
+            "all7_normalized_RMSE": 0.9723557728819172
+          }
+        }
+      }
+    },
+    {
+      "sample": 4,
+      "demo": 0,
+      "t": 52,
+      "scores": {
+        "official_prior": {
+          "xyz_normalized_MAE": 0.29453452333010455,
+          "all7_normalized_MAE": 0.28900701353414077,
+          "all7_normalized_RMSE": 0.7303275440444749,
+          "normalized_MAE_by_dim": [
+            0.09143496537074514,
+            0.23396625028989926,
+            0.5582023543296688,
+            0.007028132178708465,
+            0.004626915188022976,
+            0.08183037276202182,
+            1.0459601046199185
+          ],
+          "normalized_RMSE_by_dim": [
+            0.23839143787084977,
+            0.5182827178155246,
+            1.1619160236018997,
+            0.010098634614167726,
+            0.008500791004101813,
+            0.1341134560286108,
+            1.4282826355572307
+          ],
+          "raw_MAE_by_dim": [
+            0.00021326519707448217,
+            0.00048795522914891386,
+            0.002690401694529025,
+            0.00021072767403893523,
+            0.00026725720670128794,
+            0.00021734849783949055,
+            1.025681196184208
+          ],
+          "raw_RMSE_by_dim": [
+            0.0005560301441822654,
+            0.0010809198421662884,
+            0.005600157030066517,
+            0.0003027919408885832,
+            0.0004910177874858435,
+            0.00035621685718886987,
+            1.4005913185950938
+          ],
+          "raw_MAE": 0.14710973595479146,
+          "valid_steps": 30
+        },
+        "custom_prior": {
+          "xyz_normalized_MAE": 0.29453452333010455,
+          "all7_normalized_MAE": 0.28900701353414077,
+          "all7_normalized_RMSE": 0.7303275440444749,
+          "normalized_MAE_by_dim": [
+            0.09143496537074514,
+            0.23396625028989926,
+            0.5582023543296688,
+            0.007028132178708465,
+            0.004626915188022976,
+            0.08183037276202182,
+            1.0459601046199185
+          ],
+          "normalized_RMSE_by_dim": [
+            0.23839143787084977,
+            0.5182827178155246,
+            1.1619160236018997,
+            0.010098634614167726,
+            0.008500791004101813,
+            0.1341134560286108,
+            1.4282826355572307
+          ],
+          "raw_MAE_by_dim": [
+            0.00021326519707448217,
+            0.00048795522914891386,
+            0.002690401694529025,
+            0.00021072767403893523,
+            0.00026725720670128794,
+            0.00021734849783949055,
+            1.025681196184208
+          ],
+          "raw_RMSE_by_dim": [
+            0.0005560301441822654,
+            0.0010809198421662884,
+            0.005600157030066517,
+            0.0003027919408885832,
+            0.0004910177874858435,
+            0.00035621685718886987,
+            1.4005913185950938
+          ],
+          "raw_MAE": 0.14710973595479146,
+          "valid_steps": 30
+        },
+        "official_posterior": {
+          "xyz_normalized_MAE": 0.29440012409148236,
+          "all7_normalized_MAE": 0.28869019023459813,
+          "all7_normalized_RMSE": 0.7298810838364442,
+          "normalized_MAE_by_dim": [
+            0.0913047570374118,
+            0.23370953694903276,
+            0.5581860782880022,
+            0.007028132178708465,
+            0.004635266473757793,
+            0.08163506026202182,
+            1.0443325004532518
+          ],
+          "normalized_RMSE_by_dim": [
+            0.2381373542899869,
+            0.5179503622867964,
+            1.1619979781980974,
+            0.01005908962860064,
+            0.008522107370858267,
+            0.13423363759697282,
+            1.4267694334045011
+          ],
+          "raw_MAE_by_dim": [
+            0.00021296149590549856,
+            0.00048741983305262694,
+            0.0026903232479052503,
+            0.00021072767403893523,
+            0.0002677395888516306,
+            0.00021682973106559682,
+            1.0240851477487012
+          ],
+          "raw_RMSE_by_dim": [
+            0.0005554375132918132,
+            0.0010802266882691833,
+            0.005600552031597366,
+            0.00030160624565454927,
+            0.0004922490511690632,
+            0.00035653606975591314,
+            1.3991074541654418
+          ],
+          "raw_MAE": 0.14688159275993154,
+          "valid_steps": 30
+        },
+        "mean": {
+          "xyz_normalized_MAE": 0.33762594216469133,
+          "all7_normalized_MAE": 0.30489810542568757,
+          "all7_normalized_RMSE": 0.6130531528535234,
+          "normalized_MAE_by_dim": [
+            0.23100371551293947,
+            0.2389227306034202,
+            0.5429513803777145,
+            0.0225312368419902,
+            0.007352569821219723,
+            0.14498189665646466,
+            0.9465432081660647
+          ],
+          "normalized_RMSE_by_dim": [
+            0.33344984094931784,
+            0.5191781574760496,
+            1.1497248198450158,
+            0.025192042908829582,
+            0.009107863173277468,
+            0.15972771390646992,
+            0.9497403465059393
+          ],
+          "raw_MAE_by_dim": [
+            0.0005387988360256661,
+            0.0004982923631764046,
+            0.0026168956517019027,
+            0.0006755642910810291,
+            0.00042469489771110395,
+            0.0003850843689035184,
+            0.928191778733851
+          ],
+          "raw_RMSE_by_dim": [
+            0.0007777467378717222,
+            0.0010827873528187826,
+            0.005541398346962687,
+            0.0007553444459324695,
+            0.0005260831400170409,
+            0.0004242505259247626,
+            0.9313269314632185
+          ],
+          "raw_MAE": 0.13333301559177865,
+          "valid_steps": 30
+        },
+        "median": {
+          "xyz_normalized_MAE": 0.2740601080897923,
+          "all7_normalized_MAE": 0.1996760957232733,
+          "all7_normalized_RMSE": 0.6141814263820017,
+          "normalized_MAE_by_dim": [
+            0.1034221513481469,
+            0.23080133803460068,
+            0.48795683488662916,
+            0.00640758960560785,
+            0.004475672935998604,
+            0.08877587461633714,
+            0.4758932086355925
+          ],
+          "normalized_RMSE_by_dim": [
+            0.24640223197473385,
+            0.5174734919858579,
+            1.1502660140557965,
+            0.010105006023466163,
+            0.00851820133616488,
+            0.13471444858105014,
+            0.9851925396130436
+          ],
+          "raw_MAE_by_dim": [
+            0.00024122440906163925,
+            0.00048135455284257963,
+            0.002351835110069563,
+            0.0001921216646830241,
+            0.00025852123896280923,
+            0.00023579634726047515,
+            0.4666666666666667
+          ],
+          "raw_RMSE_by_dim": [
+            0.000574714720442132,
+            0.0010792321373171532,
+            0.005544006773477658,
+            0.00030298297774271023,
+            0.0004920234330457538,
+            0.00035781314502279294,
+            0.9660917830792959
+          ],
+          "raw_MAE": 0.0672039314270781,
+          "valid_steps": 30
+        }
+      },
+      "direction_gripper": {
+        "official_prior": {
+          "cosine_mean": 0.5696618127525943,
+          "expert_direction_valid_count": 10,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            0.23333333333333334,
+            0.1,
+            0.26666666666666666
+          ],
+          "gripper_sign_accuracy": 0.5,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "custom_prior": {
+          "cosine_mean": 0.5696618127525943,
+          "expert_direction_valid_count": 10,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            0.23333333333333334,
+            0.1,
+            0.26666666666666666
+          ],
+          "gripper_sign_accuracy": 0.5,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "official_posterior": {
+          "cosine_mean": 0.6394454555645812,
+          "expert_direction_valid_count": 10,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            0.23333333333333334,
+            0.1,
+            0.3
+          ],
+          "gripper_sign_accuracy": 0.5,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "mean": {
+          "cosine_mean": 0.46987041079447317,
+          "expert_direction_valid_count": 10,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            0.23333333333333334,
+            0.03333333333333333,
+            0.3
+          ],
+          "gripper_sign_accuracy": 0.7666666666666667,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "median": {
+          "cosine_mean": 0.5816477562224119,
+          "expert_direction_valid_count": 10,
+          "small_prediction_count": 2,
+          "xyz_axis_sign_accuracy": [
+            0.6666666666666666,
+            0.6666666666666666,
+            0.8666666666666667
+          ],
+          "gripper_sign_accuracy": 0.7666666666666667,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        }
+      },
+      "dual_constant_ratios": {
+        "official_prior": {
+          "mean": {
+            "xyz_normalized_MAE": 0.8723693488767308,
+            "all7_normalized_MAE": 0.9478806473088436,
+            "all7_normalized_RMSE": 1.191295633413
+          },
+          "median": {
+            "xyz_normalized_MAE": 1.074707754379211,
+            "all7_normalized_MAE": 1.4473791291205393,
+            "all7_normalized_RMSE": 1.1891071801807207
+          }
+        },
+        "custom_prior": {
+          "mean": {
+            "xyz_normalized_MAE": 0.8723693488767308,
+            "all7_normalized_MAE": 0.9478806473088436,
+            "all7_normalized_RMSE": 1.191295633413
+          },
+          "median": {
+            "xyz_normalized_MAE": 1.074707754379211,
+            "all7_normalized_MAE": 1.4473791291205393,
+            "all7_normalized_RMSE": 1.1891071801807207
+          }
+        },
+        "official_posterior": {
+          "mean": {
+            "xyz_normalized_MAE": 0.8719712774555584,
+            "all7_normalized_MAE": 0.9468415352451582,
+            "all7_normalized_RMSE": 1.190567376481358
+          },
+          "median": {
+            "xyz_normalized_MAE": 1.0742173537895048,
+            "all7_normalized_MAE": 1.445792442950645,
+            "all7_normalized_RMSE": 1.1883802610834424
+          }
+        }
+      }
+    },
+    {
+      "sample": 5,
+      "demo": 50,
+      "t": 48,
+      "scores": {
+        "official_prior": {
+          "xyz_normalized_MAE": 0.2864405276616948,
+          "all7_normalized_MAE": 0.2572906744132379,
+          "all7_normalized_RMSE": 0.688771900452006,
+          "normalized_MAE_by_dim": [
+            0.13705826570670793,
+            0.15907027998173537,
+            0.5631930372966407,
+            0.013765215035970398,
+            0.0021827585573257276,
+            0.08851194976976472,
+            0.8372532145445198
+          ],
+          "normalized_RMSE_by_dim": [
+            0.37353329101658866,
+            0.381069714319036,
+            1.179621499568342,
+            0.020775835037130402,
+            0.004311090306033329,
+            0.09841052087340686,
+            1.2784616285260364
+          ],
+          "raw_MAE_by_dim": [
+            0.00031967812234749243,
+            0.0003317537244072355,
+            0.002714455591484229,
+            0.00041272868429587106,
+            0.0001260792409690718,
+            0.00023509534020149658,
+            0.8210206821560859
+          ],
+          "raw_RMSE_by_dim": [
+            0.0008712383780047947,
+            0.0007947512068166181,
+            0.0056854931849090766,
+            0.0006229312827744283,
+            0.0002490147120072403,
+            0.0002613867951651785,
+            1.25367501746034
+          ],
+          "raw_MAE": 0.11788006755139877,
+          "valid_steps": 30
+        },
+        "custom_prior": {
+          "xyz_normalized_MAE": 0.2864405276616948,
+          "all7_normalized_MAE": 0.2572906744132379,
+          "all7_normalized_RMSE": 0.688771900452006,
+          "normalized_MAE_by_dim": [
+            0.13705826570670793,
+            0.15907027998173537,
+            0.5631930372966407,
+            0.013765215035970398,
+            0.0021827585573257276,
+            0.08851194976976472,
+            0.8372532145445198
+          ],
+          "normalized_RMSE_by_dim": [
+            0.37353329101658866,
+            0.381069714319036,
+            1.179621499568342,
+            0.020775835037130402,
+            0.004311090306033329,
+            0.09841052087340686,
+            1.2784616285260364
+          ],
+          "raw_MAE_by_dim": [
+            0.00031967812234749243,
+            0.0003317537244072355,
+            0.002714455591484229,
+            0.00041272868429587106,
+            0.0001260792409690718,
+            0.00023509534020149658,
+            0.8210206821560859
+          ],
+          "raw_RMSE_by_dim": [
+            0.0008712383780047947,
+            0.0007947512068166181,
+            0.0056854931849090766,
+            0.0006229312827744283,
+            0.0002490147120072403,
+            0.0002613867951651785,
+            1.25367501746034
+          ],
+          "raw_MAE": 0.11788006755139877,
+          "valid_steps": 30
+        },
+        "official_posterior": {
+          "xyz_normalized_MAE": 0.2867407965298361,
+          "all7_normalized_MAE": 0.2577412183929167,
+          "all7_normalized_RMSE": 0.6893134076989689,
+          "normalized_MAE_by_dim": [
+            0.13725357820670794,
+            0.15934798994267288,
+            0.5636208214401272,
+            0.013789629098470398,
+            0.0021896660606534105,
+            0.0886502961239314,
+            0.8393365478778532
+          ],
+          "normalized_RMSE_by_dim": [
+            0.3735579238235066,
+            0.38104979508868303,
+            1.1797849437331587,
+            0.02077481022116414,
+            0.004314407823048584,
+            0.09850280988736408,
+            1.2803440262588608
+          ],
+          "raw_MAE_by_dim": [
+            0.00032013367410096787,
+            0.0003323329106251549,
+            0.0027165174086292154,
+            0.00041346070220242835,
+            0.0001264782281926576,
+            0.0002354627999996713,
+            0.8230636241535346
+          ],
+          "raw_RMSE_by_dim": [
+            0.0008712958321789232,
+            0.0007947096636769589,
+            0.005686280946649194,
+            0.0006229005552526063,
+            0.0002492063365118296,
+            0.000261631922712245,
+            1.255520919564799
+          ],
+          "raw_MAE": 0.11817257283961209,
+          "valid_steps": 30
+        },
+        "mean": {
+          "xyz_normalized_MAE": 0.31886251598513543,
+          "all7_normalized_MAE": 0.29521263708861345,
+          "all7_normalized_RMSE": 0.6115534263155658,
+          "normalized_MAE_by_dim": [
+            0.2862115877334299,
+            0.1424696941252345,
+            0.527906266096742,
+            0.025557566557734238,
+            0.005390063134282686,
+            0.11323039628278078,
+            0.9657228856900901
+          ],
+          "normalized_RMSE_by_dim": [
+            0.4528982683079198,
+            0.3783404789234818,
+            1.1460208846605584,
+            0.02829679659152296,
+            0.006509317519325674,
+            0.11997231106403906,
+            0.9701157095046286
+          ],
+          "raw_MAE_by_dim": [
+            0.0006675670561636135,
+            0.0002971318818740574,
+            0.002544381803198846,
+            0.0007663041072452219,
+            0.0003113377182579183,
+            0.0003007496570179936,
+            0.9469996037153002
+          ],
+          "raw_RMSE_by_dim": [
+            0.0010563512334011717,
+            0.0007890591692633867,
+            0.005523546266226379,
+            0.0008484356834592548,
+            0.00037598744456132394,
+            0.00031865676168840533,
+            0.9513072601591943
+          ],
+          "raw_MAE": 0.13598386799129397,
+          "valid_steps": 30
+        },
+        "median": {
+          "xyz_normalized_MAE": 0.26950353418000206,
+          "all7_normalized_MAE": 0.22712434822310387,
+          "all7_normalized_RMSE": 0.6608380230471427,
+          "normalized_MAE_by_dim": [
+            0.13542440963679345,
+            0.1396721304703904,
+            0.5334140624328223,
+            0.012377042099049173,
+            0.0019728761348709323,
+            0.08716247587981159,
+            0.6798474409079893
+          ],
+          "normalized_RMSE_by_dim": [
+            0.3734744702154328,
+            0.37883530253380654,
+            1.173666713553317,
+            0.021603485518662844,
+            0.0043085599098934505,
+            0.09691452460746337,
+            1.1775303090483176
+          ],
+          "raw_MAE_by_dim": [
+            0.0003158672756399028,
+            0.00029129734029993416,
+            0.002570928062777966,
+            0.0003711064656575521,
+            0.00011395613352457682,
+            0.00023151102165381115,
+            0.6666666666666666
+          ],
+          "raw_RMSE_by_dim": [
+            0.0008711011828989647,
+            0.0007900911632704925,
+            0.005656792542102546,
+            0.0006477471024624675,
+            0.00024886855272471405,
+            0.0002574133006031788,
+            1.1547005383792515
+          ],
+          "raw_MAE": 0.09579447613803149,
+          "valid_steps": 30
+        }
+      },
+      "direction_gripper": {
+        "official_prior": {
+          "cosine_mean": 0.3922252125142295,
+          "expert_direction_valid_count": 10,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            0.16666666666666666,
+            0.3,
+            0.26666666666666666
+          ],
+          "gripper_sign_accuracy": 0.6,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "custom_prior": {
+          "cosine_mean": 0.3922252125142295,
+          "expert_direction_valid_count": 10,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            0.16666666666666666,
+            0.3,
+            0.26666666666666666
+          ],
+          "gripper_sign_accuracy": 0.6,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "official_posterior": {
+          "cosine_mean": 0.39496684897337775,
+          "expert_direction_valid_count": 10,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            0.16666666666666666,
+            0.3,
+            0.26666666666666666
+          ],
+          "gripper_sign_accuracy": 0.6,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "mean": {
+          "cosine_mean": 0.5737880383202211,
+          "expert_direction_valid_count": 10,
+          "small_prediction_count": 0,
+          "xyz_axis_sign_accuracy": [
+            0.16666666666666666,
+            0.3,
+            0.3
+          ],
+          "gripper_sign_accuracy": 0.6666666666666666,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        },
+        "median": {
+          "cosine_mean": 0.2907809008815931,
+          "expert_direction_valid_count": 10,
+          "small_prediction_count": 5,
+          "xyz_axis_sign_accuracy": [
+            0.6666666666666666,
+            0.6666666666666666,
+            0.6666666666666666
+          ],
+          "gripper_sign_accuracy": 0.6666666666666666,
+          "gripper_zero_prediction_count": 0,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "predicted_transition_count": 1,
+          "valid_adjacent_pairs": 29,
+          "transition_interpretation": "no extra false transitions alone does not establish timing ability"
+        }
+      },
+      "dual_constant_ratios": {
+        "official_prior": {
+          "mean": {
+            "xyz_normalized_MAE": 0.898319850411793,
+            "all7_normalized_MAE": 0.8715435658535424,
+            "all7_normalized_RMSE": 1.1262661131696365
+          },
+          "median": {
+            "xyz_normalized_MAE": 1.0628451628036184,
+            "all7_normalized_MAE": 1.1328185481923836,
+            "all7_normalized_RMSE": 1.042270384618699
+          }
+        },
+        "custom_prior": {
+          "mean": {
+            "xyz_normalized_MAE": 0.898319850411793,
+            "all7_normalized_MAE": 0.8715435658535424,
+            "all7_normalized_RMSE": 1.1262661131696365
+          },
+          "median": {
+            "xyz_normalized_MAE": 1.0628451628036184,
+            "all7_normalized_MAE": 1.1328185481923836,
+            "all7_normalized_RMSE": 1.042270384618699
+          }
+        },
+        "official_posterior": {
+          "mean": {
+            "xyz_normalized_MAE": 0.8992615379827311,
+            "all7_normalized_MAE": 0.8730697335139856,
+            "all7_normalized_RMSE": 1.1271515750502532
+          },
+          "median": {
+            "xyz_normalized_MAE": 1.0639593183899445,
+            "all7_normalized_MAE": 1.1348022367894168,
+            "all7_normalized_RMSE": 1.0430898096942507
+          }
+        }
+      }
+    }
+  ],
+  "equal_state_aggregate": {
+    "official_prior": {
+      "xyz_normalized_MAE": 0.7285397041637036,
+      "all7_normalized_MAE": 0.5392824803111831,
+      "mean_state_normalized_RMSE": 0.9344858123360971,
+      "pooled_valid_step_normalized_RMSE": 0.9614113847481071,
+      "normalized_MAE_by_dim": [
+        0.751957905770996,
+        0.935023263539763,
+        0.4986379431803518,
+        0.29047250761453053,
+        0.17161117830503486,
+        0.46095124060700776,
+        0.6663233231605981
+      ],
+      "raw_MAE_by_dim": [
+        0.0017538854016701559,
+        0.0019500654058215144,
+        0.0024033154946110948,
+        0.008709368911316536,
+        0.009912505911334317,
+        0.0012243260826214927,
+        0.6534047523668657
+      ]
+    },
+    "custom_prior": {
+      "xyz_normalized_MAE": 0.7285397041637036,
+      "all7_normalized_MAE": 0.5392824803111831,
+      "mean_state_normalized_RMSE": 0.9344858123360971,
+      "pooled_valid_step_normalized_RMSE": 0.9614113847481071,
+      "normalized_MAE_by_dim": [
+        0.751957905770996,
+        0.935023263539763,
+        0.4986379431803518,
+        0.29047250761453053,
+        0.17161117830503486,
+        0.46095124060700776,
+        0.6663233231605981
+      ],
+      "raw_MAE_by_dim": [
+        0.0017538854016701559,
+        0.0019500654058215144,
+        0.0024033154946110948,
+        0.008709368911316536,
+        0.009912505911334317,
+        0.0012243260826214927,
+        0.6534047523668657
+      ]
+    },
+    "official_posterior": {
+      "xyz_normalized_MAE": 0.7288922389403325,
+      "all7_normalized_MAE": 0.5396026848894668,
+      "mean_state_normalized_RMSE": 0.9346412326724778,
+      "pooled_valid_step_normalized_RMSE": 0.9615790713715171,
+      "normalized_MAE_by_dim": [
+        0.7524299109793293,
+        0.934803191242958,
+        0.49944361459871045,
+        0.2904684386041139,
+        0.17161906201271715,
+        0.46078034216950786,
+        0.6676742346189313
+      ],
+      "raw_MAE_by_dim": [
+        0.0017549863184077212,
+        0.0019496064275377496,
+        0.0024071986379414173,
+        0.00870924690833211,
+        0.009912961285510847,
+        0.0012238721616943356,
+        0.6547294725683362
+      ]
+    },
+    "mean": {
+      "xyz_normalized_MAE": 0.7406955964469031,
+      "all7_normalized_MAE": 0.5927163319428193,
+      "mean_state_normalized_RMSE": 0.8831266637749431,
+      "pooled_valid_step_normalized_RMSE": 0.9238670174164391,
+      "normalized_MAE_by_dim": [
+        0.716573067744843,
+        0.9418330307484591,
+        0.5636806908474075,
+        0.2982532747055433,
+        0.17289930723313193,
+        0.48663272246668493,
+        0.9691422298536649
+      ],
+      "raw_MAE_by_dim": [
+        0.0016713529216227509,
+        0.001964267717114929,
+        0.0027168059648374565,
+        0.00894266317921534,
+        0.009986910071601938,
+        0.0012925383040264468,
+        0.9503526541771391
+      ]
+    },
+    "median": {
+      "xyz_normalized_MAE": 0.7382437072086483,
+      "all7_normalized_MAE": 0.5436268585186538,
+      "mean_state_normalized_RMSE": 0.9282837299636939,
+      "pooled_valid_step_normalized_RMSE": 0.9729038191863135,
+      "normalized_MAE_by_dim": [
+        0.7684895729610558,
+        0.9389623830766874,
+        0.5072791655882014,
+        0.2901497755350749,
+        0.17159162072835635,
+        0.4660642368559108,
+        0.6628512548852896
+      ],
+      "raw_MAE_by_dim": [
+        0.0017924442751488339,
+        0.001958280753008997,
+        0.0024449641176033767,
+        0.008699692289034526,
+        0.009911376237869264,
+        0.0012379066397746404,
+        0.6499999999999999
+      ]
+    }
+  },
+  "per_demo": {
+    "0": {
+      "official_prior": {
+        "xyz_normalized_MAE": 0.7200034285801733,
+        "all7_normalized_MAE": 0.5267452959969636,
+        "mean_state_normalized_RMSE": 0.9340116273930925,
+        "pooled_valid_step_normalized_RMSE": 0.9559628266387036,
+        "normalized_MAE_by_dim": [
+          0.5450000211536621,
+          1.1687770557542767,
+          0.4462332088325811,
+          0.2782561685880469,
+          0.20574348884137442,
+          0.4267253122960232,
+          0.616481816512781
+        ],
+        "raw_MAE_by_dim": [
+          0.0012711716622372173,
+          0.0024375775367512158,
+          0.0021507372225973618,
+          0.008343080878754943,
+          0.0118840367480819,
+          0.0011334190776248459,
+          0.6045295649363349
+        ]
+      },
+      "custom_prior": {
+        "xyz_normalized_MAE": 0.7200034285801733,
+        "all7_normalized_MAE": 0.5267452959969636,
+        "mean_state_normalized_RMSE": 0.9340116273930925,
+        "pooled_valid_step_normalized_RMSE": 0.9559628266387036,
+        "normalized_MAE_by_dim": [
+          0.5450000211536621,
+          1.1687770557542767,
+          0.4462332088325811,
+          0.2782561685880469,
+          0.20574348884137442,
+          0.4267253122960232,
+          0.616481816512781
+        ],
+        "raw_MAE_by_dim": [
+          0.0012711716622372173,
+          0.0024375775367512158,
+          0.0021507372225973618,
+          0.008343080878754943,
+          0.0118840367480819,
+          0.0011334190776248459,
+          0.6045295649363349
+        ]
+      },
+      "official_posterior": {
+        "xyz_normalized_MAE": 0.7205872706275288,
+        "all7_normalized_MAE": 0.5271604694941417,
+        "mean_state_normalized_RMSE": 0.9340695248049444,
+        "pooled_valid_step_normalized_RMSE": 0.9561269772339243,
+        "normalized_MAE_by_dim": [
+          0.5458463753203286,
+          1.1683486095656144,
+          0.44756682699664363,
+          0.27824599606200523,
+          0.205748681736846,
+          0.42642013651477323,
+          0.617946660262781
+        ],
+        "raw_MAE_by_dim": [
+          0.001273145719835611,
+          0.002436683978137921,
+          0.0021571649428328973,
+          0.008342775871293878,
+          0.011884336697115335,
+          0.001132608504540637,
+          0.6059660085282909
+        ]
+      },
+      "mean": {
+        "xyz_normalized_MAE": 0.7403284463205149,
+        "all7_normalized_MAE": 0.597160710133637,
+        "mean_state_normalized_RMSE": 0.8951630799708379,
+        "pooled_valid_step_normalized_RMSE": 0.9385643029228273,
+        "normalized_MAE_by_dim": [
+          0.5169102515185888,
+          1.1738962912504736,
+          0.5301787961924823,
+          0.2936039003822908,
+          0.20498217058318158,
+          0.49620625053578343,
+          0.9643473104726585
+        ],
+        "raw_MAE_by_dim": [
+          0.001205654381919885,
+          0.0024482541096608515,
+          0.0025553348541364233,
+          0.008803258880610444,
+          0.011840061921912188,
+          0.0013179664167749258,
+          0.9456506979317767
+        ]
+      },
+      "median": {
+        "xyz_normalized_MAE": 0.7337751966138908,
+        "all7_normalized_MAE": 0.5330338025735849,
+        "mean_state_normalized_RMSE": 0.9188026052869436,
+        "pooled_valid_step_normalized_RMSE": 0.9679836207909263,
+        "normalized_MAE_by_dim": [
+          0.5772027301531321,
+          1.1654711742120558,
+          0.4586516854764848,
+          0.27777323041550867,
+          0.20576152856280047,
+          0.43451357237792176,
+          0.6118626968171903
+        ],
+        "raw_MAE_by_dim": [
+          0.0013462820650602225,
+          0.0024306828577816,
+          0.002210591306599478,
+          0.008328600724538168,
+          0.01188507874806722,
+          0.0011541053652763366,
+          0.6
+        ]
+      }
+    },
+    "50": {
+      "official_prior": {
+        "xyz_normalized_MAE": 0.7370759797472339,
+        "all7_normalized_MAE": 0.5518196646254027,
+        "mean_state_normalized_RMSE": 0.9349599972791018,
+        "pooled_valid_step_normalized_RMSE": 0.9668292380412817,
+        "normalized_MAE_by_dim": [
+          0.9589157903883299,
+          0.7012694713252493,
+          0.5510426775281225,
+          0.30268884664101414,
+          0.1374788677686953,
+          0.49517716891799246,
+          0.716164829808415
+        ],
+        "raw_MAE_by_dim": [
+          0.002236599141103094,
+          0.0014625532748918128,
+          0.002655893766624828,
+          0.00907565694387813,
+          0.007940975074586732,
+          0.0013152330876181396,
+          0.7022799397973964
+        ]
+      },
+      "custom_prior": {
+        "xyz_normalized_MAE": 0.7370759797472339,
+        "all7_normalized_MAE": 0.5518196646254027,
+        "mean_state_normalized_RMSE": 0.9349599972791018,
+        "pooled_valid_step_normalized_RMSE": 0.9668292380412817,
+        "normalized_MAE_by_dim": [
+          0.9589157903883299,
+          0.7012694713252493,
+          0.5510426775281225,
+          0.30268884664101414,
+          0.1374788677686953,
+          0.49517716891799246,
+          0.716164829808415
+        ],
+        "raw_MAE_by_dim": [
+          0.002236599141103094,
+          0.0014625532748918128,
+          0.002655893766624828,
+          0.00907565694387813,
+          0.007940975074586732,
+          0.0013152330876181396,
+          0.7022799397973964
+        ]
+      },
+      "official_posterior": {
+        "xyz_normalized_MAE": 0.7371972072531362,
+        "all7_normalized_MAE": 0.5520449002847919,
+        "mean_state_normalized_RMSE": 0.9352129405400111,
+        "pooled_valid_step_normalized_RMSE": 0.9670004262692634,
+        "normalized_MAE_by_dim": [
+          0.9590134466383299,
+          0.7012577729203013,
+          0.5513204022007772,
+          0.3026908811462225,
+          0.1374894422885883,
+          0.4951405478242425,
+          0.7174018089750817
+        ],
+        "raw_MAE_by_dim": [
+          0.002236826916979832,
+          0.0014625288769375782,
+          0.0026572323330499377,
+          0.009075717945370343,
+          0.007941585873906358,
+          0.0013151358188480343,
+          0.7034929366083815
+        ]
+      },
+      "mean": {
+        "xyz_normalized_MAE": 0.7410627465732914,
+        "all7_normalized_MAE": 0.5882719537520015,
+        "mean_state_normalized_RMSE": 0.8710902475790484,
+        "pooled_valid_step_normalized_RMSE": 0.908932110236447,
+        "normalized_MAE_by_dim": [
+          0.9162358839710971,
+          0.7097697702464448,
+          0.5971825855023327,
+          0.30290264902879577,
+          0.14081644388308232,
+          0.47705919439758643,
+          0.9739371492346713
+        ],
+        "raw_MAE_by_dim": [
+          0.0021370514613256167,
+          0.0014802813245690068,
+          0.00287827707553849,
+          0.009082067477820237,
+          0.008133758221291684,
+          0.001267110191277968,
+          0.9550546104225014
+        ]
+      },
+      "median": {
+        "xyz_normalized_MAE": 0.7427122178034057,
+        "all7_normalized_MAE": 0.5542199144637227,
+        "mean_state_normalized_RMSE": 0.9377648546404443,
+        "pooled_valid_step_normalized_RMSE": 0.9777992598969987,
+        "normalized_MAE_by_dim": [
+          0.9597764157689794,
+          0.7124535919413191,
+          0.555906645699918,
+          0.3025263206546412,
+          0.1374217128939122,
+          0.4976149013338999,
+          0.7138398129533887
+        ],
+        "raw_MAE_by_dim": [
+          0.002238606485237445,
+          0.001485878648236394,
+          0.0026793369286072753,
+          0.009070783853530884,
+          0.007937673727671304,
+          0.0013217079142729443,
+          0.7
+        ]
+      }
+    }
+  },
+  "per_chunk_position": {
+    "official_prior": [
+      {
+        "chunk_position": 0,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          2.6374715249837144,
+          3.314075117533828,
+          1.0668679298502246,
+          1.7215271629754725,
+          0.9741041627230851,
+          1.5304058322692105,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          3.6983353588383236,
+          4.515485767754367,
+          1.1207804096717213,
+          2.4211786365711525,
+          1.369420524412677,
+          2.120327201980051,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 1,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.33717762592133593,
+          0.8883099508957837,
+          0.42414198824932436,
+          0.23808994881359813,
+          0.1344672830700692,
+          0.33160411217490876,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.39533314193292324,
+          0.9935098023777541,
+          0.5275885747120876,
+          0.3195590616368656,
+          0.18242554726692892,
+          0.45715698650416314,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 2,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6573025300253412,
+          1.2390699152702294,
+          0.4472352158218809,
+          0.36025760565315945,
+          0.20508357825258114,
+          0.4455100390838105,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8114401664324122,
+          1.4725430577814425,
+          0.5355046823277322,
+          0.5025962134158568,
+          0.2845962790923559,
+          0.5922940101748182,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 3,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.7292316729335916,
+          1.2000251162434123,
+          0.4631790669633953,
+          0.3808628182679298,
+          0.2153474225362717,
+          0.44595056083267104,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.901762573705902,
+          1.4180706106790064,
+          0.5408105720443553,
+          0.5223965425716334,
+          0.29650608495675107,
+          0.5944278628616876,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 4,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          1.0989574958824087,
+          1.5299247034277084,
+          1.3616847435114434,
+          0.37860947369980985,
+          0.21715307098994563,
+          0.4747041965907514,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          1.2830072223332567,
+          1.6430542064459885,
+          2.1847508279956642,
+          0.528077284883631,
+          0.3012452064098102,
+          0.6191673200245381,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 5,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6509522234829747,
+          1.0387117270766177,
+          0.3696224844879973,
+          0.3813313633066629,
+          0.21856876075429882,
+          0.47325879712356067,
+          0.01122227840564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9055320299148488,
+          1.2979826688174585,
+          0.43050977328706413,
+          0.5314901875708284,
+          0.30425673192618885,
+          0.6373781624192326,
+          0.01122227840564354
+        ]
+      },
+      {
+        "chunk_position": 6,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6646398285681832,
+          1.0146561724344652,
+          0.3697383948024692,
+          0.3820541318162716,
+          0.22120557140591487,
+          0.4966085266977451,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9154782959348149,
+          1.2660304909832283,
+          0.4299223778012935,
+          0.5337995060798161,
+          0.30672179584004344,
+          0.6508656806168279,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 7,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.9345175319377552,
+          1.423094599238208,
+          1.2628053674863584,
+          0.3791595366672802,
+          0.21679932956746034,
+          0.503909931963694,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          1.1084427134942887,
+          1.6708427395056396,
+          2.1663152364775984,
+          0.5355329697192059,
+          0.3081988459005022,
+          0.6607902077111087,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 8,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6478295043896851,
+          0.828547562979785,
+          0.2651240314706053,
+          0.37946486871011503,
+          0.2175385838205714,
+          0.5077949909632877,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9250570525015119,
+          1.183919702671968,
+          0.2715216996091973,
+          0.5368824980237058,
+          0.30939657325111103,
+          0.667425533081995,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 9,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6504108632240428,
+          0.8158096777596071,
+          0.2641315415497263,
+          0.3796835396826119,
+          0.21804886378187993,
+          0.5114185974115497,
+          0.5154967198838136
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9299688980613395,
+          1.1691598056167039,
+          0.2715278019497065,
+          0.5381587544403185,
+          0.3103789009615213,
+          0.6728502168801593,
+          1.0142065890119882
+        ]
+      },
+      {
+        "chunk_position": 10,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.652927611348286,
+          0.804543055739381,
+          0.2631419017720838,
+          0.3796676363391576,
+          0.21822285071331488,
+          0.516683741654276,
+          0.5154967198838136
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9339303515885337,
+          1.1565958078368355,
+          0.276234178065322,
+          0.5392919321914561,
+          0.3109849532801124,
+          0.6813956314249265,
+          1.0083971130085452
+        ]
+      },
+      {
+        "chunk_position": 11,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6547521838619665,
+          0.7952639418975138,
+          0.26243148420526574,
+          0.3791430126454701,
+          0.2176333672167129,
+          0.534040114175225,
+          0.5154967198838136
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9388867540294066,
+          1.1464238734308028,
+          0.2990831572467827,
+          0.5400991877782891,
+          0.31045959878242607,
+          0.7080136491471026,
+          1.0103297652872356
+        ]
+      },
+      {
+        "chunk_position": 12,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6548620894499719,
+          0.7864311752216515,
+          0.26219553344874963,
+          0.37921855352687817,
+          0.2173849390276071,
+          0.5472682297247814,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9404066055598521,
+          1.136699198839908,
+          0.31240584229757523,
+          0.5416825163948004,
+          0.3104393130417461,
+          0.7276942088814099,
+          1.4315166927070802
+        ]
+      },
+      {
+        "chunk_position": 13,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6546579505512697,
+          0.7797229326605382,
+          0.262037263189422,
+          0.3791426089861397,
+          0.21715327502090587,
+          0.5511790616676886,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9450692685195516,
+          1.128729126927824,
+          0.32017594772312485,
+          0.5429774883575685,
+          0.31056768709793553,
+          0.7362327476618169,
+          1.4342661292964822
+        ]
+      },
+      {
+        "chunk_position": 14,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6548386309457199,
+          0.7738051361388456,
+          0.26142931591634955,
+          0.37898158763366474,
+          0.2169305862881803,
+          0.5561087539297975,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9459227038082667,
+          1.1218403810539828,
+          0.3208997367105431,
+          0.5441153001447818,
+          0.3107122232006357,
+          0.7439877843448317,
+          1.4342608099150067
+        ]
+      },
+      {
+        "chunk_position": 15,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6553606076211788,
+          0.7683264349925079,
+          0.2608885105425326,
+          0.37849333676238495,
+          0.21653906813474455,
+          0.5581423741415394,
+          1.0207477238619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9492818545866691,
+          1.1161112040500256,
+          0.3268706709707249,
+          0.5450733857720524,
+          0.31061134951362773,
+          0.7484698809624654,
+          1.4315549930228446
+        ]
+      },
+      {
+        "chunk_position": 16,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6562981991155843,
+          0.7644650399890547,
+          0.2602112719836931,
+          0.3779963572794375,
+          0.21611864977805723,
+          0.558926301850825,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9523545004714692,
+          1.1114460997105013,
+          0.3317097602002192,
+          0.5459621579908331,
+          0.31058545022351053,
+          0.7493660771032494,
+          1.4287993438108648
+        ]
+      },
+      {
+        "chunk_position": 17,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6572097866084682,
+          0.7609562206188163,
+          0.2592241248931547,
+          0.3767953293200983,
+          0.2158040514629466,
+          0.5516452578233986,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9551023748320435,
+          1.1084919049575093,
+          0.3394358349334518,
+          0.5463220166219301,
+          0.3106436232656839,
+          0.7403109880337649,
+          1.4287993438108648
+        ]
+      },
+      {
+        "chunk_position": 18,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6573494645321889,
+          0.7586026673115152,
+          0.2585919137861621,
+          0.16258097367644694,
+          0.13751258008848583,
+          0.40686480516242507,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9567173399080294,
+          1.1059908809764647,
+          0.34836486187267923,
+          0.2801700851137246,
+          0.2597211442321641,
+          0.5572074135759356,
+          1.43290005714169
+        ]
+      },
+      {
+        "chunk_position": 19,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6579754821695901,
+          0.7227220949399401,
+          0.2571994590441157,
+          0.13741629793834484,
+          0.13141776635845176,
+          0.39022225718606257,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.959110803064311,
+          1.0736198688749776,
+          0.3493874008643777,
+          0.2701258378812022,
+          0.2610386721888567,
+          0.5357864135971742,
+          1.435646844424058
+        ]
+      },
+      {
+        "chunk_position": 20,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6583982593190904,
+          0.6824413981992838,
+          0.2549329578680233,
+          0.13469075394434804,
+          0.13203111832924383,
+          0.3983293753927068,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9610871239147595,
+          1.0420233414540285,
+          0.34872006815013706,
+          0.26401990230177885,
+          0.2625604373641561,
+          0.5410017572158435,
+          1.38712904296917
+        ]
+      },
+      {
+        "chunk_position": 21,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6577622343835987,
+          0.6594668711925569,
+          0.2518445182247473,
+          0.13246748475666614,
+          0.13259009298855887,
+          0.41117089448658206,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9604120667709747,
+          1.0264145802683025,
+          0.3504703339382825,
+          0.2580090069928612,
+          0.2640527759364289,
+          0.5524882707455009,
+          1.3024101875424197
+        ]
+      },
+      {
+        "chunk_position": 22,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6560901171916995,
+          0.6515497451613692,
+          0.2501277612936443,
+          0.009710431703499214,
+          0.013826134568520625,
+          0.2367264814672758,
+          1.0187945988619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9568151148030313,
+          1.022549091744429,
+          0.3491651229250773,
+          0.013295181541898684,
+          0.02683879959552671,
+          0.34143972841360276,
+          1.4134661118663425
+        ]
+      },
+      {
+        "chunk_position": 23,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6583447789205673,
+          0.6239446982498172,
+          0.24658269511268804,
+          0.009556672139153332,
+          0.001788918409939921,
+          0.2205096770814827,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9574036286982602,
+          0.9652372524277798,
+          0.3437716393237278,
+          0.012945354971023096,
+          0.003159902499255056,
+          0.3381736109789793,
+          1.4215599741758673
+        ]
+      },
+      {
+        "chunk_position": 24,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6608530170980551,
+          0.6008814309173027,
+          0.24176753788540822,
+          0.010179107470828935,
+          0.0019819528143116055,
+          0.22767321980229244,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9579924823739678,
+          0.9079877597902164,
+          0.336966834102476,
+          0.0139224554497168,
+          0.003420156822709299,
+          0.3380303371600707,
+          1.4215599741758673
+        ]
+      },
+      {
+        "chunk_position": 25,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6973053886464607,
+          0.6949936537549284,
+          1.2782773969715755,
+          0.02422774979369139,
+          0.004225675311543588,
+          0.2734384059554976,
+          1.0207477238619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9576052031814084,
+          0.9092287700999372,
+          2.1090470655857034,
+          0.03289228325773347,
+          0.005593869849822467,
+          0.3494250729777064,
+          1.411987333853984
+        ]
+      },
+      {
+        "chunk_position": 26,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6646852167868227,
+          0.6049626873595982,
+          0.3634403624918445,
+          0.02022975168304383,
+          0.004688401610457357,
+          0.2499393549019778,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9509825695764588,
+          0.8911549652845736,
+          0.4168997266433788,
+          0.02295465496264717,
+          0.005503462491437423,
+          0.3208525148192517,
+          1.3416204900939044
+        ]
+      },
+      {
+        "chunk_position": 27,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6759807591975554,
+          0.6348720853641613,
+          0.46270057399952486,
+          0.020778443331119972,
+          0.0033706608899696676,
+          0.26003882375380366,
+          1.0207477238619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9453914173569214,
+          0.9149346416893774,
+          0.5675138726507355,
+          0.026412943537633987,
+          0.004044325687382052,
+          0.3218651386227528,
+          1.2362926514588843
+        ]
+      },
+      {
+        "chunk_position": 28,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.698094041450079,
+          0.8143231556275017,
+          1.515677188719191,
+          0.024857416534775884,
+          0.004818981224254175,
+          0.3604160513922223,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9389707249072731,
+          0.9940949163313113,
+          2.156598930676504,
+          0.02808515937185191,
+          0.005161068154559159,
+          0.4043444758812704,
+          1.3630014356225821
+        ]
+      },
+      {
+        "chunk_position": 29,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.9665005525826929,
+          1.0761989379969594,
+          1.191905759868959,
+          0.01700127337785421,
+          0.005979652012761226,
+          0.2980484515491843,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          1.4563425257454776,
+          1.5426072511182625,
+          1.5193090874022195,
+          0.022065411215874922,
+          0.007142418011835536,
+          0.3339978302073809,
+          1.3980977200841935
+        ]
+      }
+    ],
+    "custom_prior": [
+      {
+        "chunk_position": 0,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          2.6374715249837144,
+          3.314075117533828,
+          1.0668679298502246,
+          1.7215271629754725,
+          0.9741041627230851,
+          1.5304058322692105,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          3.6983353588383236,
+          4.515485767754367,
+          1.1207804096717213,
+          2.4211786365711525,
+          1.369420524412677,
+          2.120327201980051,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 1,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.33717762592133593,
+          0.8883099508957837,
+          0.42414198824932436,
+          0.23808994881359813,
+          0.1344672830700692,
+          0.33160411217490876,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.39533314193292324,
+          0.9935098023777541,
+          0.5275885747120876,
+          0.3195590616368656,
+          0.18242554726692892,
+          0.45715698650416314,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 2,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6573025300253412,
+          1.2390699152702294,
+          0.4472352158218809,
+          0.36025760565315945,
+          0.20508357825258114,
+          0.4455100390838105,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8114401664324122,
+          1.4725430577814425,
+          0.5355046823277322,
+          0.5025962134158568,
+          0.2845962790923559,
+          0.5922940101748182,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 3,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.7292316729335916,
+          1.2000251162434123,
+          0.4631790669633953,
+          0.3808628182679298,
+          0.2153474225362717,
+          0.44595056083267104,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.901762573705902,
+          1.4180706106790064,
+          0.5408105720443553,
+          0.5223965425716334,
+          0.29650608495675107,
+          0.5944278628616876,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 4,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          1.0989574958824087,
+          1.5299247034277084,
+          1.3616847435114434,
+          0.37860947369980985,
+          0.21715307098994563,
+          0.4747041965907514,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          1.2830072223332567,
+          1.6430542064459885,
+          2.1847508279956642,
+          0.528077284883631,
+          0.3012452064098102,
+          0.6191673200245381,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 5,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6509522234829747,
+          1.0387117270766177,
+          0.3696224844879973,
+          0.3813313633066629,
+          0.21856876075429882,
+          0.47325879712356067,
+          0.01122227840564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9055320299148488,
+          1.2979826688174585,
+          0.43050977328706413,
+          0.5314901875708284,
+          0.30425673192618885,
+          0.6373781624192326,
+          0.01122227840564354
+        ]
+      },
+      {
+        "chunk_position": 6,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6646398285681832,
+          1.0146561724344652,
+          0.3697383948024692,
+          0.3820541318162716,
+          0.22120557140591487,
+          0.4966085266977451,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9154782959348149,
+          1.2660304909832283,
+          0.4299223778012935,
+          0.5337995060798161,
+          0.30672179584004344,
+          0.6508656806168279,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 7,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.9345175319377552,
+          1.423094599238208,
+          1.2628053674863584,
+          0.3791595366672802,
+          0.21679932956746034,
+          0.503909931963694,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          1.1084427134942887,
+          1.6708427395056396,
+          2.1663152364775984,
+          0.5355329697192059,
+          0.3081988459005022,
+          0.6607902077111087,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 8,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6478295043896851,
+          0.828547562979785,
+          0.2651240314706053,
+          0.37946486871011503,
+          0.2175385838205714,
+          0.5077949909632877,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9250570525015119,
+          1.183919702671968,
+          0.2715216996091973,
+          0.5368824980237058,
+          0.30939657325111103,
+          0.667425533081995,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 9,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6504108632240428,
+          0.8158096777596071,
+          0.2641315415497263,
+          0.3796835396826119,
+          0.21804886378187993,
+          0.5114185974115497,
+          0.5154967198838136
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9299688980613395,
+          1.1691598056167039,
+          0.2715278019497065,
+          0.5381587544403185,
+          0.3103789009615213,
+          0.6728502168801593,
+          1.0142065890119882
+        ]
+      },
+      {
+        "chunk_position": 10,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.652927611348286,
+          0.804543055739381,
+          0.2631419017720838,
+          0.3796676363391576,
+          0.21822285071331488,
+          0.516683741654276,
+          0.5154967198838136
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9339303515885337,
+          1.1565958078368355,
+          0.276234178065322,
+          0.5392919321914561,
+          0.3109849532801124,
+          0.6813956314249265,
+          1.0083971130085452
+        ]
+      },
+      {
+        "chunk_position": 11,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6547521838619665,
+          0.7952639418975138,
+          0.26243148420526574,
+          0.3791430126454701,
+          0.2176333672167129,
+          0.534040114175225,
+          0.5154967198838136
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9388867540294066,
+          1.1464238734308028,
+          0.2990831572467827,
+          0.5400991877782891,
+          0.31045959878242607,
+          0.7080136491471026,
+          1.0103297652872356
+        ]
+      },
+      {
+        "chunk_position": 12,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6548620894499719,
+          0.7864311752216515,
+          0.26219553344874963,
+          0.37921855352687817,
+          0.2173849390276071,
+          0.5472682297247814,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9404066055598521,
+          1.136699198839908,
+          0.31240584229757523,
+          0.5416825163948004,
+          0.3104393130417461,
+          0.7276942088814099,
+          1.4315166927070802
+        ]
+      },
+      {
+        "chunk_position": 13,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6546579505512697,
+          0.7797229326605382,
+          0.262037263189422,
+          0.3791426089861397,
+          0.21715327502090587,
+          0.5511790616676886,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9450692685195516,
+          1.128729126927824,
+          0.32017594772312485,
+          0.5429774883575685,
+          0.31056768709793553,
+          0.7362327476618169,
+          1.4342661292964822
+        ]
+      },
+      {
+        "chunk_position": 14,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6548386309457199,
+          0.7738051361388456,
+          0.26142931591634955,
+          0.37898158763366474,
+          0.2169305862881803,
+          0.5561087539297975,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9459227038082667,
+          1.1218403810539828,
+          0.3208997367105431,
+          0.5441153001447818,
+          0.3107122232006357,
+          0.7439877843448317,
+          1.4342608099150067
+        ]
+      },
+      {
+        "chunk_position": 15,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6553606076211788,
+          0.7683264349925079,
+          0.2608885105425326,
+          0.37849333676238495,
+          0.21653906813474455,
+          0.5581423741415394,
+          1.0207477238619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9492818545866691,
+          1.1161112040500256,
+          0.3268706709707249,
+          0.5450733857720524,
+          0.31061134951362773,
+          0.7484698809624654,
+          1.4315549930228446
+        ]
+      },
+      {
+        "chunk_position": 16,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6562981991155843,
+          0.7644650399890547,
+          0.2602112719836931,
+          0.3779963572794375,
+          0.21611864977805723,
+          0.558926301850825,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9523545004714692,
+          1.1114460997105013,
+          0.3317097602002192,
+          0.5459621579908331,
+          0.31058545022351053,
+          0.7493660771032494,
+          1.4287993438108648
+        ]
+      },
+      {
+        "chunk_position": 17,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6572097866084682,
+          0.7609562206188163,
+          0.2592241248931547,
+          0.3767953293200983,
+          0.2158040514629466,
+          0.5516452578233986,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9551023748320435,
+          1.1084919049575093,
+          0.3394358349334518,
+          0.5463220166219301,
+          0.3106436232656839,
+          0.7403109880337649,
+          1.4287993438108648
+        ]
+      },
+      {
+        "chunk_position": 18,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6573494645321889,
+          0.7586026673115152,
+          0.2585919137861621,
+          0.16258097367644694,
+          0.13751258008848583,
+          0.40686480516242507,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9567173399080294,
+          1.1059908809764647,
+          0.34836486187267923,
+          0.2801700851137246,
+          0.2597211442321641,
+          0.5572074135759356,
+          1.43290005714169
+        ]
+      },
+      {
+        "chunk_position": 19,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6579754821695901,
+          0.7227220949399401,
+          0.2571994590441157,
+          0.13741629793834484,
+          0.13141776635845176,
+          0.39022225718606257,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.959110803064311,
+          1.0736198688749776,
+          0.3493874008643777,
+          0.2701258378812022,
+          0.2610386721888567,
+          0.5357864135971742,
+          1.435646844424058
+        ]
+      },
+      {
+        "chunk_position": 20,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6583982593190904,
+          0.6824413981992838,
+          0.2549329578680233,
+          0.13469075394434804,
+          0.13203111832924383,
+          0.3983293753927068,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9610871239147595,
+          1.0420233414540285,
+          0.34872006815013706,
+          0.26401990230177885,
+          0.2625604373641561,
+          0.5410017572158435,
+          1.38712904296917
+        ]
+      },
+      {
+        "chunk_position": 21,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6577622343835987,
+          0.6594668711925569,
+          0.2518445182247473,
+          0.13246748475666614,
+          0.13259009298855887,
+          0.41117089448658206,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9604120667709747,
+          1.0264145802683025,
+          0.3504703339382825,
+          0.2580090069928612,
+          0.2640527759364289,
+          0.5524882707455009,
+          1.3024101875424197
+        ]
+      },
+      {
+        "chunk_position": 22,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6560901171916995,
+          0.6515497451613692,
+          0.2501277612936443,
+          0.009710431703499214,
+          0.013826134568520625,
+          0.2367264814672758,
+          1.0187945988619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9568151148030313,
+          1.022549091744429,
+          0.3491651229250773,
+          0.013295181541898684,
+          0.02683879959552671,
+          0.34143972841360276,
+          1.4134661118663425
+        ]
+      },
+      {
+        "chunk_position": 23,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6583447789205673,
+          0.6239446982498172,
+          0.24658269511268804,
+          0.009556672139153332,
+          0.001788918409939921,
+          0.2205096770814827,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9574036286982602,
+          0.9652372524277798,
+          0.3437716393237278,
+          0.012945354971023096,
+          0.003159902499255056,
+          0.3381736109789793,
+          1.4215599741758673
+        ]
+      },
+      {
+        "chunk_position": 24,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6608530170980551,
+          0.6008814309173027,
+          0.24176753788540822,
+          0.010179107470828935,
+          0.0019819528143116055,
+          0.22767321980229244,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9579924823739678,
+          0.9079877597902164,
+          0.336966834102476,
+          0.0139224554497168,
+          0.003420156822709299,
+          0.3380303371600707,
+          1.4215599741758673
+        ]
+      },
+      {
+        "chunk_position": 25,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6973053886464607,
+          0.6949936537549284,
+          1.2782773969715755,
+          0.02422774979369139,
+          0.004225675311543588,
+          0.2734384059554976,
+          1.0207477238619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9576052031814084,
+          0.9092287700999372,
+          2.1090470655857034,
+          0.03289228325773347,
+          0.005593869849822467,
+          0.3494250729777064,
+          1.411987333853984
+        ]
+      },
+      {
+        "chunk_position": 26,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6646852167868227,
+          0.6049626873595982,
+          0.3634403624918445,
+          0.02022975168304383,
+          0.004688401610457357,
+          0.2499393549019778,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9509825695764588,
+          0.8911549652845736,
+          0.4168997266433788,
+          0.02295465496264717,
+          0.005503462491437423,
+          0.3208525148192517,
+          1.3416204900939044
+        ]
+      },
+      {
+        "chunk_position": 27,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6759807591975554,
+          0.6348720853641613,
+          0.46270057399952486,
+          0.020778443331119972,
+          0.0033706608899696676,
+          0.26003882375380366,
+          1.0207477238619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9453914173569214,
+          0.9149346416893774,
+          0.5675138726507355,
+          0.026412943537633987,
+          0.004044325687382052,
+          0.3218651386227528,
+          1.2362926514588843
+        ]
+      },
+      {
+        "chunk_position": 28,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.698094041450079,
+          0.8143231556275017,
+          1.515677188719191,
+          0.024857416534775884,
+          0.004818981224254175,
+          0.3604160513922223,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9389707249072731,
+          0.9940949163313113,
+          2.156598930676504,
+          0.02808515937185191,
+          0.005161068154559159,
+          0.4043444758812704,
+          1.3630014356225821
+        ]
+      },
+      {
+        "chunk_position": 29,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.9665005525826929,
+          1.0761989379969594,
+          1.191905759868959,
+          0.01700127337785421,
+          0.005979652012761226,
+          0.2980484515491843,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          1.4563425257454776,
+          1.5426072511182625,
+          1.5193090874022195,
+          0.022065411215874922,
+          0.007142418011835536,
+          0.3339978302073809,
+          1.3980977200841935
+        ]
+      }
+    ],
+    "official_posterior": [
+      {
+        "chunk_position": 0,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          2.6384480874837144,
+          3.312923078959609,
+          1.0678444923502246,
+          1.7214050926629725,
+          0.9742033448519913,
+          1.5303142795348355,
+          0.00829259090564354
+        ],
+        "normalized_RMSE_by_dim": [
+          3.698825648020956,
+          4.514351130356035,
+          1.1217737030498007,
+          2.421092361507833,
+          1.3694431861119216,
+          2.1202781945336047,
+          0.008463337809492226
+        ]
+      },
+      {
+        "chunk_position": 1,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.33839832904633593,
+          0.8879818869309399,
+          0.42487441012432436,
+          0.23802891365734813,
+          0.1345130594372567,
+          0.33102427819053376,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.3958519937822604,
+          0.9930717644302205,
+          0.5276932047181525,
+          0.31951570841509336,
+          0.18249833010107444,
+          0.45677934261452735,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 2,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6585232331503412,
+          1.2377729181999169,
+          0.4477234970718809,
+          0.36025760565315945,
+          0.2051675015924249,
+          0.4455405566619355,
+          0.00829259090564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8121293713871245,
+          1.4716360395779873,
+          0.5358921939153233,
+          0.5025926342482538,
+          0.28459590827197595,
+          0.5923215556947744,
+          0.008463337809492226
+        ]
+      },
+      {
+        "chunk_position": 3,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.7302082354335916,
+          1.1996970522785686,
+          0.4643997700883953,
+          0.3808017831116798,
+          0.2153016461690842,
+          0.44561486747329604,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9022594668546902,
+          1.4177309634362028,
+          0.5413875010125003,
+          0.5223503356960627,
+          0.2964474143889629,
+          0.5942529308438965,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 4,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          1.1004223396324087,
+          1.5295050867284896,
+          1.3638820091364434,
+          0.37860947369980985,
+          0.21725225311885188,
+          0.4743379856532514,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          1.2836995570091438,
+          1.6427550961278723,
+          2.1855234946401865,
+          0.5281668529173807,
+          0.30134293523855293,
+          0.6184972954617896,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 5,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6519287859829747,
+          1.038444698268024,
+          0.3713314688629973,
+          0.3813008457285379,
+          0.21862216651601757,
+          0.47295362134231067,
+          0.01122227840564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9064450417037017,
+          1.297320656443732,
+          0.43129585424746114,
+          0.5314053375573925,
+          0.3042937285643458,
+          0.6369036706771893,
+          0.01122227840564354
+        ]
+      },
+      {
+        "chunk_position": 6,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6665929535681832,
+          1.0141526323954027,
+          0.3714473791774692,
+          0.3820236142381466,
+          0.22109113048794612,
+          0.4968526673227451,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9165023843553443,
+          1.2652525489270534,
+          0.43163342307177277,
+          0.5337984318046063,
+          0.3066471710305858,
+          0.6509269717329464,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 7,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.9350058131877552,
+          1.4225223946483643,
+          1.2632936487363584,
+          0.3790985015110302,
+          0.21676881198933534,
+          0.504093037432444,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          1.1086680835860747,
+          1.6701551840420958,
+          2.1658884428192033,
+          0.5353999384006979,
+          0.30814634831148097,
+          0.6608677434366933,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 8,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6483177856396851,
+          0.8283720869055663,
+          0.2656123127206053,
+          0.37949538628824003,
+          0.2175843601877589,
+          0.5077339558070377,
+          0.00926915340564354
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9259497344770687,
+          1.1834407303910983,
+          0.271921679612637,
+          0.5368726210724333,
+          0.3094869509305883,
+          0.6672661190430874,
+          0.009472692443174656
+        ]
+      },
+      {
+        "chunk_position": 9,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6508991444740428,
+          0.8152832495369509,
+          0.2655963852997263,
+          0.3797445748388619,
+          0.21799545802016118,
+          0.5116627380365497,
+          0.5154967198838136
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9308654803256431,
+          1.168311887367936,
+          0.27272059907965734,
+          0.5382073740584019,
+          0.3103308921645743,
+          0.6728883672479323,
+          1.0142065890119882
+        ]
+      },
+      {
+        "chunk_position": 10,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.653415892598286,
+          0.805092372145631,
+          0.2641184642720838,
+          0.3797591890735326,
+          0.21824573889690863,
+          0.516317530716776,
+          0.5154967198838136
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9348255140318494,
+          1.1568176005287734,
+          0.27697947838417075,
+          0.5393651724949975,
+          0.3109729007758022,
+          0.6808858544191435,
+          1.0083971130085452
+        ]
+      },
+      {
+        "chunk_position": 11,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6552404651119665,
+          0.7951342421904826,
+          0.26490340803339074,
+          0.3792040478017201,
+          0.2175875908495254,
+          0.533185621987725,
+          0.5154967198838136
+        ],
+        "normalized_RMSE_by_dim": [
+          0.939794500158294,
+          1.1461362467347347,
+          0.30070169864679336,
+          0.5401350848744942,
+          0.31048385281449686,
+          0.7071452404156884,
+          1.0103297652872356
+        ]
+      },
+      {
+        "chunk_position": 12,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6558386519499719,
+          0.7860954818622765,
+          0.26420969360499963,
+          0.37921855352687817,
+          0.21743834478932586,
+          0.5462916672247814,
+          1.0178180363619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9413530529551487,
+          1.136152186039213,
+          0.31335943153229384,
+          0.5416825163948004,
+          0.31053967107543407,
+          0.7265712609520842,
+          1.4301273334198175
+        ]
+      },
+      {
+        "chunk_position": 13,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6551462318012697,
+          0.7798755205511632,
+          0.262525544439422,
+          0.3791731265642647,
+          0.21713801623184337,
+          0.5505076749489386,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9455529563362584,
+          1.1289621593242438,
+          0.32050275052382576,
+          0.5430118079858333,
+          0.3105340844952815,
+          0.735708952657847,
+          1.4342661292964822
+        ]
+      },
+      {
+        "chunk_position": 14,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6553269121957199,
+          0.7735991424865019,
+          0.26313830029134955,
+          0.37892055247741474,
+          0.2169916214444303,
+          0.5563528945547975,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9468784858609477,
+          1.1213902717265751,
+          0.3222465132725194,
+          0.5440814476478529,
+          0.310836163133049,
+          0.7441598351844777,
+          1.4356362158731684
+        ]
+      },
+      {
+        "chunk_position": 15,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6553606076211788,
+          0.7684485053050079,
+          0.2614988621050326,
+          0.37849333676238495,
+          0.21648726185978695,
+          0.5577151280477894,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9497619952186317,
+          1.1161953497261856,
+          0.3280570764962388,
+          0.5450733857720524,
+          0.31059511250567284,
+          0.7479553010468138,
+          1.4315380109013056
+        ]
+      },
+      {
+        "chunk_position": 16,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6562981991155843,
+          0.7642514169421797,
+          0.2611420581165056,
+          0.3780268748575625,
+          0.21617045605301483,
+          0.558804231538325,
+          1.0187945988619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9528424696614157,
+          1.1109932924776824,
+          0.33330881723217126,
+          0.5459624043285931,
+          0.310627052009875,
+          0.7493576582747246,
+          1.4287823289364225
+        ]
+      },
+      {
+        "chunk_position": 17,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6572097866084682,
+          0.7608799266735038,
+          0.2603532752837797,
+          0.3767953293200983,
+          0.2158345690410716,
+          0.5515231875108986,
+          1.0187945988619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9555957733075567,
+          1.1083906763386322,
+          0.341511890656758,
+          0.5463220166219301,
+          0.3106904095711738,
+          0.7403898080729855,
+          1.4287823289364225
+        ]
+      },
+      {
+        "chunk_position": 18,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6573494645321889,
+          0.7587857727802652,
+          0.2592022653486621,
+          0.16258097367644694,
+          0.13743628614317333,
+          0.40704791063117507,
+          1.0187945988619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9567173399080294,
+          1.1059880768193813,
+          0.3490464870141908,
+          0.2801101371061554,
+          0.2597076298428226,
+          0.557428007912369,
+          1.4328884154575159
+        ]
+      },
+      {
+        "chunk_position": 19,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6579754821695901,
+          0.7221422609555651,
+          0.2573215293566157,
+          0.13741629793834484,
+          0.1314466844498156,
+          0.38991708140481257,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.959110803064311,
+          1.0728796941053085,
+          0.3506055101422584,
+          0.2700653252883378,
+          0.26106899983983495,
+          0.5351057190613335,
+          1.435646844424058
+        ]
+      },
+      {
+        "chunk_position": 20,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6583982593190904,
+          0.68249969072091,
+          0.2551770984930233,
+          0.13472127152247304,
+          0.13206926530190008,
+          0.3987566214864568,
+          1.0285602238619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9605962264491921,
+          1.0418101953972483,
+          0.34922708989768836,
+          0.26395982007904445,
+          0.2624842197931045,
+          0.541772664817509,
+          1.3993535351610875
+        ]
+      },
+      {
+        "chunk_position": 21,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6577622343835987,
+          0.6592837657238069,
+          0.2533093619747473,
+          0.13246748475666614,
+          0.13263586935574637,
+          0.41129296479908206,
+          1.0314899113619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9604120667709747,
+          1.0258066248369493,
+          0.3514925371024474,
+          0.25794851646907657,
+          0.26408327246219565,
+          0.5525701718406161,
+          1.3075713841221202
+        ]
+      },
+      {
+        "chunk_position": 22,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6560901171916995,
+          0.6514124160598067,
+          0.2502498316061443,
+          0.009740949281624214,
+          0.013757470017739375,
+          0.2370316572485258,
+          1.0187945988619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9568151148030313,
+          1.0220207303858875,
+          0.3490066041651506,
+          0.013300252780755485,
+          0.026777419870232466,
+          0.34141893479437657,
+          1.4134661118663425
+        ]
+      },
+      {
+        "chunk_position": 23,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6583447789205673,
+          0.6235784873123172,
+          0.24707097636268804,
+          0.009617707295403332,
+          0.001773659620877421,
+          0.2201434661439827,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9574036286982602,
+          0.9644619661252347,
+          0.3440632649925459,
+          0.012997577400481342,
+          0.003095795706137741,
+          0.3376919555485034,
+          1.4215599741758673
+        ]
+      },
+      {
+        "chunk_position": 24,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6608530170980551,
+          0.6009452087081766,
+          0.24156939430335367,
+          0.010209625048953935,
+          0.0020445874573227357,
+          0.22736804402104244,
+          1.0187945988619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9579924823739678,
+          0.9082360057513853,
+          0.33611303300173906,
+          0.013927565764694722,
+          0.0034085980241710715,
+          0.3376312279170368,
+          1.4215536065740353
+        ]
+      },
+      {
+        "chunk_position": 25,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6968171073964607,
+          0.6952988295361784,
+          1.2782773969715755,
+          0.02419723221556639,
+          0.004210416522481088,
+          0.2733163356429976,
+          1.0266070988619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9576026588638064,
+          0.9096633969296155,
+          2.1093359393324955,
+          0.03286692850927191,
+          0.005567744594106694,
+          0.34944353503613296,
+          1.4082164841608396
+        ]
+      },
+      {
+        "chunk_position": 26,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6656617792868227,
+          0.6050820150374744,
+          0.3630741515543445,
+          0.02019923410491883,
+          0.004651854124562236,
+          0.2493290033394778,
+          1.0314899113619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9510005189454365,
+          0.8910579481558035,
+          0.41656347025785345,
+          0.02295543231519441,
+          0.005398241933125118,
+          0.32043100832910615,
+          1.3388242392715726
+        ]
+      },
+      {
+        "chunk_position": 27,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6759807591975554,
+          0.6348720853641613,
+          0.46233436306202486,
+          0.020747925752994972,
+          0.003369061403208538,
+          0.25900122609755366,
+          1.0319781926119838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9453914173569214,
+          0.914978093698028,
+          0.5674179479817694,
+          0.02635595123151029,
+          0.004125547544407771,
+          0.3213601376974044,
+          1.2482966178298265
+        ]
+      },
+      {
+        "chunk_position": 28,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.698582322700079,
+          0.8140484974243767,
+          1.515799259031691,
+          0.024796381378525884,
+          0.004826610618785425,
+          0.3609653677984723,
+          1.0217242863619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9390250250341313,
+          0.9937917540782333,
+          2.156656706520316,
+          0.02803197514841295,
+          0.0051831227728315,
+          0.4048214262785563,
+          1.36565694776241
+        ]
+      },
+      {
+        "chunk_position": 29,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.9665005525826929,
+          1.0761150146571157,
+          1.192027830181459,
+          0.01700127337785421,
+          0.005956763829167476,
+          0.2984146624866843,
+          1.0178180363619838
+        ],
+        "normalized_RMSE_by_dim": [
+          1.4563425257454776,
+          1.5425608200426737,
+          1.519328369617814,
+          0.022094018610463072,
+          0.007074105731813878,
+          0.3342725254896937,
+          1.3980363280599155
+        ]
+      }
+    ],
+    "mean": [
+      {
+        "chunk_position": 0,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          2.435444124686154,
+          3.34296000522914,
+          1.3087167691380037,
+          1.7244559834181195,
+          0.9742720094027725,
+          1.5403850803160855,
+          0.8318942302850897
+        ],
+        "normalized_RMSE_by_dim": [
+          3.501490737729933,
+          4.532423277178271,
+          1.3529591499574183,
+          2.4220672452486847,
+          1.369456939903546,
+          2.1260239969959303,
+          0.8318942302850897
+        ]
+      },
+      {
+        "chunk_position": 1,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.1446605805177677,
+          0.9179577780442213,
+          0.6827078064759952,
+          0.24655339648308022,
+          0.1344672830700692,
+          0.33996592858115876,
+          0.8402534338715372
+        ],
+        "normalized_RMSE_by_dim": [
+          0.1723054354372299,
+          1.0173843180451154,
+          0.7513139272640913,
+          0.32186739224414934,
+          0.18235288496217358,
+          0.45824128125416536,
+          0.8402534338715372
+        ]
+      },
+      {
+        "chunk_position": 2,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.4503841496013354,
+          1.267230010485073,
+          0.7054221353731001,
+          0.3753660563149803,
+          0.2044793448191041,
+          0.4546958300994354,
+          0.8487823358492705
+        ],
+        "normalized_RMSE_by_dim": [
+          0.6052046065815627,
+          1.4935516637948902,
+          0.7642848481497552,
+          0.5039288205765479,
+          0.2844498526965581,
+          0.5961169265804404,
+          0.8487823358492705
+        ]
+      },
+      {
+        "chunk_position": 3,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.5153525239473276,
+          1.229131256380131,
+          0.7233148631802029,
+          0.3734075224305477,
+          0.21837233351910876,
+          0.45483117606704604,
+          0.8574861567242034
+        ],
+        "normalized_RMSE_by_dim": [
+          0.6964862704034095,
+          1.4394721683691583,
+          0.775251739331489,
+          0.5224901842834409,
+          0.29657996802642794,
+          0.5988237872925427,
+          0.8574861567242034
+        ]
+      },
+      {
+        "chunk_position": 4,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          1.0260665408958094,
+          1.5314004843439168,
+          1.496001251457923,
+          0.3933998501536032,
+          0.21721570563295675,
+          0.5038979445908356,
+          0.8663703333551079
+        ],
+        "normalized_RMSE_by_dim": [
+          1.2868846379250827,
+          1.6413016957435056,
+          2.107522997481268,
+          0.5288058493050111,
+          0.30109074314671647,
+          0.6284437297870381,
+          0.8663703333551079
+        ]
+      },
+      {
+        "chunk_position": 5,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.5704386697870139,
+          1.0400617250908417,
+          0.5057871895580086,
+          0.3855615698235171,
+          0.2212963047832124,
+          0.5036582643517213,
+          0.8754405302788252
+        ],
+        "normalized_RMSE_by_dim": [
+          0.7396599845356454,
+          1.3133220437174131,
+          0.6092693888936276,
+          0.5313109974682648,
+          0.3042748348244752,
+          0.645644757809694,
+          0.8754405302788252
+        ]
+      },
+      {
+        "chunk_position": 6,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.5703726490710581,
+          1.0161416013563478,
+          0.5073492163947446,
+          0.39633900482935497,
+          0.22124531786533227,
+          0.5284547255213423,
+          0.8847026517543757
+        ],
+        "normalized_RMSE_by_dim": [
+          0.7478866253008912,
+          1.2809431946581937,
+          0.6119861182664693,
+          0.533887000319519,
+          0.3063936346137645,
+          0.661717014575651,
+          0.8847026517543757
+        ]
+      },
+      {
+        "chunk_position": 7,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.9345175319377552,
+          1.4228046822460205,
+          1.2628053674863582,
+          0.39290862432871065,
+          0.21951856399400443,
+          0.5353094213689324,
+          0.8941628545798089
+        ],
+        "normalized_RMSE_by_dim": [
+          1.0481622207103791,
+          1.6805902693257568,
+          2.046118852677568,
+          0.5351356540538343,
+          0.3079694507775501,
+          0.6713855319801328,
+          0.8941628545798089
+        ]
+      },
+      {
+        "chunk_position": 8,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6478295043896851,
+          0.8300164730299995,
+          0.26512403147060526,
+          0.39285521103234183,
+          0.22026202489628385,
+          0.5406049222939572,
+          0.9038275617402588
+        ],
+        "normalized_RMSE_by_dim": [
+          0.7768656470579742,
+          1.1983458829053293,
+          0.34825244998077876,
+          0.5363049123267434,
+          0.3092104407604995,
+          0.6783765215964965,
+          0.9038275617402588
+        ]
+      },
+      {
+        "chunk_position": 9,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6504108632240431,
+          0.8167069179223967,
+          0.2641315415497262,
+          0.39247770542489235,
+          0.2208085022009897,
+          0.5443192476143494,
+          0.9667373191563746
+        ],
+        "normalized_RMSE_by_dim": [
+          0.7834209846705591,
+          1.1822491043575016,
+          0.35049132490635243,
+          0.5372970205329779,
+          0.31015820238247405,
+          0.6833830430521818,
+          0.9710915556768693
+        ]
+      },
+      {
+        "chunk_position": 10,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.652927611348286,
+          0.8059029036443095,
+          0.26314190177208385,
+          0.39184377450284885,
+          0.22100275454318097,
+          0.5500103740652362,
+          0.9717843807625246
+        ],
+        "normalized_RMSE_by_dim": [
+          0.7900760394875316,
+          1.1694467125921404,
+          0.35291657778118224,
+          0.5381130377678434,
+          0.31066909573573914,
+          0.6911672830364705,
+          0.9753322900585756
+        ]
+      },
+      {
+        "chunk_position": 11,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6547521838619665,
+          0.7962503299699067,
+          0.26244292829706256,
+          0.39079104937309384,
+          0.22047661260625512,
+          0.5680795545401159,
+          0.9769442027368621
+        ],
+        "normalized_RMSE_by_dim": [
+          0.7956543134536812,
+          1.1579189527397442,
+          0.3559178728844619,
+          0.5386972536435005,
+          0.31019536337949677,
+          0.7160022472898048,
+          0.9797563066479321
+        ]
+      },
+      {
+        "chunk_position": 12,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6548620894499719,
+          0.7872776632004855,
+          0.26219553344874963,
+          0.3902647169151594,
+          0.22013866367488583,
+          0.5816271034540242,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.7981632264246471,
+          1.1467572749075627,
+          0.3598034680260788,
+          0.539966495619551,
+          0.31014452550125593,
+          0.7344775225446374,
+          1.0225328347665368
+        ]
+      },
+      {
+        "chunk_position": 13,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.65465795055127,
+          0.7799424159007247,
+          0.26191519287692205,
+          0.38964757559522556,
+          0.21985246969561717,
+          0.5897553918533696,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8003098395667028,
+          1.1377650703022046,
+          0.36375582824821895,
+          0.5411565327838324,
+          0.3102283706466029,
+          0.745551309787066,
+          1.0217967657284523
+        ]
+      },
+      {
+        "chunk_position": 14,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6548386309457201,
+          0.7742142407303474,
+          0.26142931591634955,
+          0.38889901337466093,
+          0.21948829444851986,
+          0.595592388571611,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8032363607717901,
+          1.1307434082451029,
+          0.3676144230112836,
+          0.5422300601421477,
+          0.31026743360869014,
+          0.7534978628865682,
+          1.0211612209965313
+        ]
+      },
+      {
+        "chunk_position": 15,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6553606076211789,
+          0.7694685003770767,
+          0.2631708700367791,
+          0.38796016738373607,
+          0.21908518003698157,
+          0.599719936478962,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.806712080974063,
+          1.1251582715759754,
+          0.3715152310940516,
+          0.5432088328250613,
+          0.3102436892078559,
+          0.7592184770066954,
+          1.020634128010813
+        ]
+      },
+      {
+        "chunk_position": 16,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6562981991155845,
+          0.7662051512184069,
+          0.2694669019772191,
+          0.3868313317039199,
+          0.21863203241324608,
+          0.600859835427197,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.810635689553309,
+          1.1210316081690581,
+          0.37540707032893667,
+          0.5440399440722777,
+          0.310200949272673,
+          0.7607517347337487,
+          1.0202239649402058
+        ]
+      },
+      {
+        "chunk_position": 17,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6572097866084682,
+          0.763451795548869,
+          0.2757989237578818,
+          0.3852596224783068,
+          0.218231221377271,
+          0.594775999242944,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8149939483251855,
+          1.1178104708572443,
+          0.3794006688742643,
+          0.544487564341846,
+          0.3102722180800211,
+          0.7517841607535241,
+          1.0199397988605996
+        ]
+      },
+      {
+        "chunk_position": 18,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6573494645321891,
+          0.7613558055995739,
+          0.28304783215322005,
+          0.1704314509002603,
+          0.1398136413281308,
+          0.4490366824618864,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8190913874729226,
+          1.1153004789641559,
+          0.38423185340761495,
+          0.28718003621804805,
+          0.2577786820306323,
+          0.5859434591691993,
+          1.01979132651726
+        ]
+      },
+      {
+        "chunk_position": 19,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6579754821695902,
+          0.7252437549294316,
+          0.28923639294155135,
+          0.15135376125188746,
+          0.13192205406326835,
+          0.4324162880269291,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8246072680085822,
+          1.0818811372653447,
+          0.38762791482175213,
+          0.27785948106940817,
+          0.2589775105478369,
+          0.5659557034900347,
+          1.0197889178291843
+        ]
+      },
+      {
+        "chunk_position": 20,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6583982593190904,
+          0.6861547088795318,
+          0.2951674239660047,
+          0.14785024071825797,
+          0.13271703033035595,
+          0.4415311310704008,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8302065597991009,
+          1.050089891120605,
+          0.3904866462626339,
+          0.2713084658805763,
+          0.26065888504341445,
+          0.5691644002520986,
+          1.019943662300411
+        ]
+      },
+      {
+        "chunk_position": 21,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6577622343835989,
+          0.6635477725935808,
+          0.3011997740948895,
+          0.1446233707909684,
+          0.13352247610887377,
+          0.4550384009929913,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8332578982702128,
+          1.0341175149774995,
+          0.39340681968875624,
+          0.2649394852346923,
+          0.2622584604512626,
+          0.5786333150346213,
+          1.020267418510814
+        ]
+      },
+      {
+        "chunk_position": 22,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6560901171916995,
+          0.6564228201358464,
+          0.3077261918506135,
+          0.02162295544694489,
+          0.014890733856619102,
+          0.28141796390490065,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8342555450557921,
+          1.0295633341830484,
+          0.3967713550667028,
+          0.023608977775320512,
+          0.025411950425199663,
+          0.33386784487561033,
+          1.0207728668667573
+        ]
+      },
+      {
+        "chunk_position": 23,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6583447789205674,
+          0.6288510674676955,
+          0.313841806131015,
+          0.014848535171722145,
+          0.002931685919848443,
+          0.26659654664195004,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8379060912213145,
+          0.9721103446835986,
+          0.39904233521633636,
+          0.015023454877603079,
+          0.0029563419142359755,
+          0.3252757432712339,
+          1.021473565800282
+        ]
+      },
+      {
+        "chunk_position": 24,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6608530170980553,
+          0.6056976545510784,
+          0.3190764631024598,
+          0.0148861527223776,
+          0.0029203774297953365,
+          0.273826898465245,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8416208339469937,
+          0.9155040060204583,
+          0.4003367267846416,
+          0.014989558151577,
+          0.0029967512183453667,
+          0.32739947141912956,
+          1.0223840116143676
+        ]
+      },
+      {
+        "chunk_position": 25,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6220786113943045,
+          0.7063794530301772,
+          1.3223214813239337,
+          0.024227749793691394,
+          0.005072728508056197,
+          0.27978606220549757,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8379831060111207,
+          0.9178690200563402,
+          2.077943620185335,
+          0.02865455399502504,
+          0.006425335350707809,
+          0.3257415012024352,
+          1.0235197021815061
+        ]
+      },
+      {
+        "chunk_position": 26,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6651734980368227,
+          0.6154149578674109,
+          0.4126634911340335,
+          0.02019923410491883,
+          0.003322838255282508,
+          0.25463906193322783,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8434548855763734,
+          0.8980311675202741,
+          0.45448864686307533,
+          0.021095677567722466,
+          0.003559239195675153,
+          0.3034086033010586,
+          1.0248972047136617
+        ]
+      },
+      {
+        "chunk_position": 27,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6759807591975555,
+          0.6439205472782238,
+          0.5176351799686384,
+          0.016944846928561186,
+          0.0034011784680946684,
+          0.26193091359755366,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8441650386487795,
+          0.9209222229979933,
+          0.578622515662967,
+          0.0213861105074969,
+          0.0037412347445979345,
+          0.3003985407643707,
+          1.0265342278340266
+        ]
+      },
+      {
+        "chunk_position": 28,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6980940414500789,
+          0.8235470936157829,
+          1.515677188719191,
+          0.020676609612107016,
+          0.003697122991060125,
+          0.3196727545399545,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.8468150820288577,
+          1.0017318406678786,
+          2.0991344024269885,
+          0.022109205260352094,
+          0.005052022083617644,
+          0.3551085608121252,
+          1.0284496981954123
+        ]
+      },
+      {
+        "chunk_position": 29,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          1.0427075710913385,
+          1.0813313517872296,
+          1.191905759868959,
+          0.015111158158502164,
+          0.003922730754781858,
+          0.2565458457216897,
+          1.0197711613619838
+        ],
+        "normalized_RMSE_by_dim": [
+          1.5121536216412739,
+          1.5414420757598088,
+          1.5598449215686268,
+          0.017775157177628967,
+          0.005505427511574852,
+          0.289443437986836,
+          1.0306638419072418
+        ]
+      }
+    ],
+    "median": [
+      {
+        "chunk_position": 0,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          2.730107855963586,
+          3.3429600052291404,
+          1.099431473716317,
+          1.7227783836785975,
+          0.9742720094027725,
+          1.5403850803160855,
+          0.0
+        ],
+        "normalized_RMSE_by_dim": [
+          3.747809753528352,
+          4.530300556482526,
+          1.1517414835927888,
+          2.4220604107362087,
+          1.3694966808999913,
+          2.1284358817993208,
+          0.0
+        ]
+      },
+      {
+        "chunk_position": 1,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.4266401287762078,
+          0.9179577780442212,
+          0.46155674871890895,
+          0.23808994881359816,
+          0.1344672830700692,
+          0.33996592858115876,
+          0.0
+        ],
+        "normalized_RMSE_by_dim": [
+          0.44773690080285317,
+          1.0163608525137398,
+          0.5580477583197494,
+          0.3204974361188227,
+          0.1826511751266419,
+          0.46534151685480396,
+          0.0
+        ]
+      },
+      {
+        "chunk_position": 2,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.7350462828802132,
+          1.2672300104850733,
+          0.48804000190524827,
+          0.35980519398227423,
+          0.20519961865731104,
+          0.4546958300994355,
+          0.0
+        ],
+        "normalized_RMSE_by_dim": [
+          0.85704938807949,
+          1.4924425449767809,
+          0.569819255112202,
+          0.5035449292921602,
+          0.2848205407667136,
+          0.6004588953992024,
+          0.0
+        ]
+      },
+      {
+        "chunk_position": 3,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.8006277695384634,
+          1.2291312563801313,
+          0.509826895342837,
+          0.3826314616340536,
+          0.21562811064716683,
+          0.45483117606704604,
+          0.0
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9440272228381609,
+          1.4382368057624382,
+          0.5811663541999136,
+          0.5234826360617013,
+          0.29673225342938997,
+          0.6021707324342285,
+          0.0
+        ]
+      },
+      {
+        "chunk_position": 4,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          1.1576047629348445,
+          1.526427698097772,
+          1.3911358081658438,
+          0.37808409936508386,
+          0.21721570563295675,
+          0.4750832807231402,
+          0.0
+        ],
+        "normalized_RMSE_by_dim": [
+          1.3075624632174105,
+          1.6367038853208393,
+          2.169117931590966,
+          0.5290718499248669,
+          0.3014727238645076,
+          0.6258851069865342,
+          0.0
+        ]
+      },
+      {
+        "chunk_position": 5,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.7066698030354107,
+          1.0352376099302751,
+          0.4036113440338338,
+          0.38133136330666295,
+          0.21858401954336135,
+          0.47414076787097115,
+          0.0
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9409850308189741,
+          1.311021211592482,
+          0.4669280704975268,
+          0.5324343309578373,
+          0.30450871668898905,
+          0.6440247969227422,
+          0.0
+        ]
+      },
+      {
+        "chunk_position": 6,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.7135214706206192,
+          1.0114490840967163,
+          0.4087026901584167,
+          0.38157190137640956,
+          0.22124531786533227,
+          0.49836699479882274,
+          0.0
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9473225914672668,
+          1.278560500864247,
+          0.47283159703994965,
+          0.5347392557973799,
+          0.3068245434856994,
+          0.6582591906671958,
+          0.0
+        ]
+      },
+      {
+        "chunk_position": 7,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.9345175319377553,
+          1.4228046822460205,
+          1.2628053674863582,
+          0.3785313808997366,
+          0.21679932956746034,
+          0.5048194209541855,
+          0.0
+        ],
+        "normalized_RMSE_by_dim": [
+          1.105123139874992,
+          1.6827424069516543,
+          2.125419598497278,
+          0.5364624583083006,
+          0.30832822511433317,
+          0.6674131156617321,
+          0.0
+        ]
+      },
+      {
+        "chunk_position": 8,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6478295043896851,
+          0.8256151328451613,
+          0.2651240314706053,
+          0.37894884366541254,
+          0.21753095442604015,
+          0.5096904732392795,
+          0.0
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9457359303177894,
+          1.1969444282595791,
+          0.2718186794650583,
+          0.5378717606537601,
+          0.3095965598001255,
+          0.673837805111682,
+          0.0
+        ]
+      },
+      {
+        "chunk_position": 9,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.650410863224043,
+          0.8124805191093583,
+          0.26413154154972623,
+          0.3791357079510008,
+          0.21804123438734868,
+          0.512968229988564,
+          0.509885580680992
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9497666592761933,
+          1.180841488313297,
+          0.3745993818061655,
+          0.5390763348267291,
+          0.31057618349560134,
+          0.6783101668679303,
+          1.019771161361984
+        ]
+      },
+      {
+        "chunk_position": 10,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.652927611348286,
+          0.801824248651632,
+          0.2631419017720838,
+          0.3790641429054564,
+          0.21822285071331488,
+          0.5182340997853925,
+          0.509885580680992
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9536996194053922,
+          1.1680358027232294,
+          0.37314102750272077,
+          0.5400938923008909,
+          0.31111750151568623,
+          0.6857191961938428,
+          1.019771161361984
+        ]
+      },
+      {
+        "chunk_position": 11,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6547521838619665,
+          0.7924078057082025,
+          0.2624429282970626,
+          0.3786158674118377,
+          0.21768677297843164,
+          0.53601351075343,
+          0.509885580680992
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9564889203079137,
+          1.1565504937131579,
+          0.3721307968653612,
+          0.5408929560635847,
+          0.3106760607793844,
+          0.7108510609671584,
+          1.019771161361984
+        ]
+      },
+      {
+        "chunk_position": 12,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6548620894499719,
+          0.7836360741885902,
+          0.26219553344874963,
+          0.37866158952426887,
+          0.21738493902760708,
+          0.5492367416615401,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.956317089142457,
+          1.145432988255974,
+          0.3718085919339405,
+          0.5423156946813043,
+          0.3106560115590503,
+          0.7297022322104953,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 13,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6546579505512699,
+          0.7765311031118518,
+          0.261915192876922,
+          0.37861089761700817,
+          0.21715327502090587,
+          0.5569998497519504,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9555980742372517,
+          1.1365030695039595,
+          0.37143827063285983,
+          0.5436190244828809,
+          0.31076650012332424,
+          0.7408270196570366,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 14,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6548386309457201,
+          0.7708574472151593,
+          0.26142931591634955,
+          0.37841409374176105,
+          0.21686795164516917,
+          0.5624494534529965,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9555412270556825,
+          1.129482399643364,
+          0.37075955358454404,
+          0.544780660790381,
+          0.31082570140526056,
+          0.748692547299619,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 15,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6553606076211789,
+          0.7663247909906965,
+          0.26076644023003265,
+          0.37807912957025436,
+          0.21652380934568205,
+          0.5663436304381861,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9560710156902466,
+          1.1239626990614355,
+          0.3698158953441488,
+          0.5458102771585586,
+          0.3108237618904839,
+          0.7542544532401626,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 16,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6562981991155844,
+          0.7627533129794308,
+          0.25993661378056815,
+          0.3775423917286711,
+          0.2161399384748898,
+          0.5671206425216706,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9572182918914426,
+          1.119702113630814,
+          0.3686259626985914,
+          0.5466723946121217,
+          0.3107993365289477,
+          0.7556578613223704,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 17,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6572097866084683,
+          0.7599616566951299,
+          0.2591630897369047,
+          0.3765643361062304,
+          0.21580405146294662,
+          0.5605952838241757,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9584978069891881,
+          1.1164530268271697,
+          0.3674851402141483,
+          0.5471382492959028,
+          0.3108889839883531,
+          0.7469895618111736,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 18,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.657349464532189,
+          0.7577301737003288,
+          0.25859191378616214,
+          0.16228368036168178,
+          0.13748046302359967,
+          0.41433888842039857,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9591207140546222,
+          1.1138784147583953,
+          0.3665894430585849,
+          0.2800580577470791,
+          0.2599357704938787,
+          0.5640560427783169,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 19,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6579754821695902,
+          0.7216664958600038,
+          0.25707738873161573,
+          0.13595271339615653,
+          0.13140250756938923,
+          0.39716818366938694,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9610139619045717,
+          1.0802013976333378,
+          0.36426157242328794,
+          0.26977967020301014,
+          0.2611468726027623,
+          0.5424847855362277,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 20,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6583982593190905,
+          0.6820877034162226,
+          0.2549329578680233,
+          0.13320739873235443,
+          0.13194116508162995,
+          0.40569848600107183,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9624952082147439,
+          1.047814737293798,
+          0.3610357679594247,
+          0.2636148725983901,
+          0.26265311839804006,
+          0.5476693241833739,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 21,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6577622343835989,
+          0.6591616954113069,
+          0.2525769400997473,
+          0.13070560401519668,
+          0.13237044003391374,
+          0.41866995938393736,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.961819777014265,
+          1.0314290456129027,
+          0.3575510208808813,
+          0.2576062234854958,
+          0.26406893123602504,
+          0.5597050568587247,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 22,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6560901171916996,
+          0.6515192275832442,
+          0.2501277612936443,
+          0.008226004401747282,
+          0.013621740402938004,
+          0.24447689397133646,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9590645860437333,
+          1.0264647060039818,
+          0.3539717446638323,
+          0.01254985170241385,
+          0.026896956440303568,
+          0.34351526421649803,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 23,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6583447789205674,
+          0.6238378867263799,
+          0.2461404109056335,
+          0.008429765989755762,
+          0.0017294827404510508,
+          0.2291203862058616,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9596515864007996,
+          0.9691289609757356,
+          0.34831481148541976,
+          0.012979541216938138,
+          0.0032113665403954617,
+          0.339656306938652,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 24,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6608530170980553,
+          0.6009119484954277,
+          0.24144732399085367,
+          0.008817409986454824,
+          0.0018249345026776153,
+          0.2356394334333643,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9602382772991087,
+          0.9129836486190229,
+          0.3416965258369036,
+          0.013910353277462435,
+          0.0033884135762299724,
+          0.3393350649007069,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 25,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6993120306988967,
+          0.7063794530301772,
+          1.2783994672840753,
+          0.024227749793691394,
+          0.004225675311543588,
+          0.2797860622054976,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9610378406706301,
+          0.9168268978396871,
+          2.10985817070276,
+          0.034369407244547956,
+          0.005749572570875444,
+          0.3509234327300794,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 26,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6651734980368226,
+          0.6154149578674107,
+          0.3634403624918445,
+          0.02019923410491883,
+          0.004477977537104615,
+          0.25463906193322783,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9529133081093953,
+          0.8962312223201259,
+          0.4205278571803375,
+          0.023730385442548185,
+          0.005293538290718464,
+          0.3218521275197525,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 27,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.6759807591975555,
+          0.6439205472782238,
+          0.46270057399952486,
+          0.022300463358820924,
+          0.003401178468094668,
+          0.2619309135975537,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9467626269528436,
+          0.9195037012737963,
+          0.5692165529361112,
+          0.02847801226014943,
+          0.004146098488137023,
+          0.3212454942297215,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 28,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.698094041450079,
+          0.8235470936157827,
+          1.515677188719191,
+          0.025790253288078383,
+          0.0047137691875778044,
+          0.3604620767436181,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          0.9402782645458566,
+          0.9994342357272454,
+          2.1568002759536125,
+          0.0299741844592692,
+          0.005127785704747651,
+          0.40163252387956316,
+          1.4421742069150798
+        ]
+      },
+      {
+        "chunk_position": 29,
+        "valid_states": 4,
+        "normalized_MAE_by_dim": [
+          0.9654704730302568,
+          1.0771040933115543,
+          1.191905759868959,
+          0.017892255345076463,
+          0.005792116123002237,
+          0.29805636528403984,
+          1.019771161361984
+        ],
+        "normalized_RMSE_by_dim": [
+          1.4556827909014975,
+          1.5356653798908828,
+          1.5184262356299123,
+          0.02391308736873515,
+          0.00696207761325858,
+          0.3323629049200657,
+          1.4421742069150798
+        ]
+      }
+    ]
+  },
+  "direction_gripper_equal_state": {
+    "official_prior": {
+      "cosine_mean": 0.49881470463536703,
+      "gripper_sign_accuracy": 0.675,
+      "gripper_transition_hamming": 0.05172413793103448,
+      "samples_with_eligible_direction": 4
+    },
+    "custom_prior": {
+      "cosine_mean": 0.49881470463536703,
+      "gripper_sign_accuracy": 0.675,
+      "gripper_transition_hamming": 0.05172413793103448,
+      "samples_with_eligible_direction": 4
+    },
+    "official_posterior": {
+      "cosine_mean": 0.5148711054169486,
+      "gripper_sign_accuracy": 0.675,
+      "gripper_transition_hamming": 0.05172413793103448,
+      "samples_with_eligible_direction": 4
+    },
+    "mean": {
+      "cosine_mean": 0.4800832886034142,
+      "gripper_sign_accuracy": 0.6749999999999999,
+      "gripper_transition_hamming": 0.05172413793103448,
+      "samples_with_eligible_direction": 4
+    },
+    "median": {
+      "cosine_mean": 0.28807650335815704,
+      "gripper_sign_accuracy": 0.6749999999999999,
+      "gripper_transition_hamming": 0.05172413793103448,
+      "samples_with_eligible_direction": 4
+    }
+  },
+  "entry_agreement": [
+    {
+      "sample": 0,
+      "bit_equal": true,
+      "normalized_maxabs": 0.0,
+      "repeat_maxabs": {
+        "official_prior": 0.0,
+        "custom_prior": 0.0
+      },
+      "tolerance": 1e-05,
+      "numeric_unstable": false,
+      "passed": true,
+      "scope": "this repeated state only"
+    },
+    {
+      "sample": 1,
+      "bit_equal": true,
+      "normalized_maxabs": 0.0,
+      "repeat_maxabs": {
+        "official_prior": 0.0,
+        "custom_prior": 0.0
+      },
+      "tolerance": 1e-05,
+      "numeric_unstable": false,
+      "passed": true,
+      "scope": "this repeated state only"
+    },
+    {
+      "sample": 4,
+      "bit_equal": true,
+      "normalized_maxabs": 0.0,
+      "tolerance": 1e-05,
+      "numeric_unstable": null,
+      "passed": true,
+      "scope": "single pair agreement only; no repeat stability claim/no borrowed noise"
+    },
+    {
+      "sample": 5,
+      "bit_equal": true,
+      "normalized_maxabs": 0.0,
+      "tolerance": 1e-05,
+      "numeric_unstable": null,
+      "passed": true,
+      "scope": "single pair agreement only; no repeat stability claim/no borrowed noise"
+    }
+  ],
+  "descriptive_diversity": {
+    "official_prior": {
+      "first_position_across_state_std_by_dim": [
+        0.08667060959234194,
+        0.02888528266390851,
+        0.0010918300671385692,
+        0.001251964813035035,
+        0.00018874079707112092,
+        0.009988669518065499,
+        0.001953125
+      ],
+      "chunk_position_across_state_std_by_dim": [
+        [
+          0.08667060959234194,
+          0.02888528266390851,
+          0.0010918300671385692,
+          0.001251964813035035,
+          0.00018874079707112092,
+          0.009988669518065499,
+          0.001953125
+        ],
+        [
+          0.08349609375,
+          0.029647835001647506,
+          0.001953125,
+          0.00140380859375,
+          0.0003509521484375,
+          0.00836181640625,
+          0.001953125
+        ],
+        [
+          0.07177734375,
+          0.028160246107368437,
+          0.002224226948033276,
+          0.00128173828125,
+          0.000328241344670089,
+          0.00918670345603253,
+          0.001953125
+        ],
+        [
+          0.0654296875,
+          0.0291062701261125,
+          0.004651503633607825,
+          0.0013739690166614292,
+          0.0003434922541653573,
+          0.008880720105158285,
+          0.001953125
+        ],
+        [
+          0.0556640625,
+          0.02870179033862359,
+          0.00537109375,
+          0.00128173828125,
+          0.00035161494817513773,
+          0.00958290828232143,
+          0.001953125
+        ],
+        [
+          0.0537109375,
+          0.02774821069806926,
+          0.005625839170802204,
+          0.00115966796875,
+          0.00036684616943882163,
+          0.0096435546875,
+          0.0
+        ],
+        [
+          0.046875,
+          0.02740478515625,
+          0.009765625,
+          0.00115966796875,
+          0.0001605801786792693,
+          0.010712104636389047,
+          0.001953125
+        ],
+        [
+          0.0400390625,
+          0.028613492652450622,
+          0.01318359375,
+          0.0011628759084019562,
+          0.00019895026871345975,
+          0.00998381997,
+          0.001953125
+        ],
+        [
+          0.0380859375,
+          0.027435438518591267,
+          0.0224609375,
+          0.00115966796875,
+          0.00031299120325875877,
+          0.009460842985756841,
+          0.001953125
+        ],
+        [
+          0.0361328125,
+          0.02557373046875,
+          0.03564453125,
+          0.00103759765625,
+          0.0002977419479536111,
+          0.008057565347026,
+          0.0
+        ],
+        [
+          0.0361328125,
+          0.02508559772234024,
+          0.062255859375,
+          0.0008544921875,
+          0.0001983642578125,
+          0.006287213640157249,
+          0.005859375
+        ],
+        [
+          0.03125,
+          0.02238781574345835,
+          0.11208725092429947,
+          0.0007981382342908948,
+          0.0002454484244101778,
+          0.0042863891274608,
+          0.00390625
+        ],
+        [
+          0.0302734375,
+          0.020126527867828987,
+          0.1317138671875,
+          0.0006103515625,
+          0.0003204345703125,
+          0.0027479380333228585,
+          0.0
+        ],
+        [
+          0.0185546875,
+          0.0186309814453125,
+          0.115112434136327,
+          0.0006103515625,
+          0.000274658203125,
+          0.00634765625,
+          0.00390625
+        ],
+        [
+          0.0166015625,
+          0.01832585648427201,
+          0.110107421875,
+          0.0006103515625,
+          0.0001220703125,
+          0.006409272667092541,
+          0.0
+        ],
+        [
+          0.0107421875,
+          0.018112246891669338,
+          0.06665061419662595,
+          0.000732421875,
+          0.0002750817318316642,
+          0.007996071372399188,
+          0.008896907792133105
+        ],
+        [
+          0.0068359375,
+          0.01870747452547459,
+          0.04849598453246719,
+          0.00067138671875,
+          0.00023871594005068993,
+          0.008486081943957838,
+          0.0078125
+        ],
+        [
+          0.00390625,
+          0.017654484886369396,
+          0.027404921091672883,
+          0.0008860614710057358,
+          0.0003204345703125,
+          0.00927734375,
+          0.0078125
+        ],
+        [
+          0.001953125,
+          0.0175325212727439,
+          0.009033203125,
+          0.0008544921875,
+          0.00021579186437577745,
+          0.007263696476114355,
+          0.005859375
+        ],
+        [
+          0.0009765625,
+          0.0168611966630293,
+          0.0002114319833458102,
+          0.00079345703125,
+          0.00012396298835198915,
+          0.007385758311803724,
+          0.005859375
+        ],
+        [
+          0.0,
+          0.01670838795839887,
+          0.0014850494458735887,
+          0.000764159181246882,
+          0.00018374015165393518,
+          0.007448289946336328,
+          0.0625
+        ],
+        [
+          0.0,
+          0.016516890299606613,
+          0.004041246425109094,
+          0.001068986809578674,
+          0.00023773859330570806,
+          0.008369386684935722,
+          0.779296875
+        ],
+        [
+          0.0009765625,
+          0.01208503800184551,
+          0.00634765625,
+          0.0008544921875,
+          0.0002672467023946685,
+          0.007019573689174844,
+          0.9794931611410913
+        ],
+        [
+          0.0009765625,
+          0.011734504838039768,
+          0.008187815594596682,
+          0.0006741553355216834,
+          0.00013037115089901017,
+          0.008121804929624025,
+          0.990234375
+        ],
+        [
+          0.0009765625,
+          0.01226825619071565,
+          0.0078125,
+          0.0008544921875,
+          0.00013014772117028793,
+          0.006591796875,
+          0.990234375
+        ],
+        [
+          0.0009765625,
+          0.011444620756004616,
+          0.008668711317178219,
+          0.0008544921875,
+          0.0002288818359375,
+          0.00634765625,
+          0.9755869150395503
+        ],
+        [
+          0.0008457279333832408,
+          0.010452292783393234,
+          0.007080078125,
+          0.0007032298963502755,
+          0.000152587890625,
+          0.004703668683332757,
+          0.865234375
+        ],
+        [
+          0.0,
+          0.009052397979938669,
+          0.00439453125,
+          0.0005205908846811517,
+          0.0003127121205432006,
+          0.0019097275204055194,
+          0.4326193919244062
+        ],
+        [
+          0.0,
+          0.009224171473827097,
+          0.0009765625,
+          0.0004920811613951751,
+          0.00010121535615098266,
+          0.006235152729063542,
+          0.0703125
+        ],
+        [
+          0.0,
+          0.009804371618790504,
+          0.001708984375,
+          0.0007032298963502755,
+          5.002928561631775e-05,
+          0.005859375,
+          0.015625
+        ]
+      ],
+      "pairwise_normalized_MAE": [
+        {
+          "samples": [
+            0,
+            1
+          ],
+          "value": 0.08240748814174108
+        },
+        {
+          "samples": [
+            0,
+            4
+          ],
+          "value": 0.00019400460379464285
+        },
+        {
+          "samples": [
+            0,
+            5
+          ],
+          "value": 0.08242093040829614
+        },
+        {
+          "samples": [
+            1,
+            4
+          ],
+          "value": 0.08238525390625
+        },
+        {
+          "samples": [
+            1,
+            5
+          ],
+          "value": 9.017217726934524e-05
+        },
+        {
+          "samples": [
+            4,
+            5
+          ],
+          "value": 0.08239898681640626
+        }
+      ]
+    },
+    "custom_prior": {
+      "first_position_across_state_std_by_dim": [
+        0.08667060959234194,
+        0.02888528266390851,
+        0.0010918300671385692,
+        0.001251964813035035,
+        0.00018874079707112092,
+        0.009988669518065499,
+        0.001953125
+      ],
+      "chunk_position_across_state_std_by_dim": [
+        [
+          0.08667060959234194,
+          0.02888528266390851,
+          0.0010918300671385692,
+          0.001251964813035035,
+          0.00018874079707112092,
+          0.009988669518065499,
+          0.001953125
+        ],
+        [
+          0.08349609375,
+          0.029647835001647506,
+          0.001953125,
+          0.00140380859375,
+          0.0003509521484375,
+          0.00836181640625,
+          0.001953125
+        ],
+        [
+          0.07177734375,
+          0.028160246107368437,
+          0.002224226948033276,
+          0.00128173828125,
+          0.000328241344670089,
+          0.00918670345603253,
+          0.001953125
+        ],
+        [
+          0.0654296875,
+          0.0291062701261125,
+          0.004651503633607825,
+          0.0013739690166614292,
+          0.0003434922541653573,
+          0.008880720105158285,
+          0.001953125
+        ],
+        [
+          0.0556640625,
+          0.02870179033862359,
+          0.00537109375,
+          0.00128173828125,
+          0.00035161494817513773,
+          0.00958290828232143,
+          0.001953125
+        ],
+        [
+          0.0537109375,
+          0.02774821069806926,
+          0.005625839170802204,
+          0.00115966796875,
+          0.00036684616943882163,
+          0.0096435546875,
+          0.0
+        ],
+        [
+          0.046875,
+          0.02740478515625,
+          0.009765625,
+          0.00115966796875,
+          0.0001605801786792693,
+          0.010712104636389047,
+          0.001953125
+        ],
+        [
+          0.0400390625,
+          0.028613492652450622,
+          0.01318359375,
+          0.0011628759084019562,
+          0.00019895026871345975,
+          0.00998381997,
+          0.001953125
+        ],
+        [
+          0.0380859375,
+          0.027435438518591267,
+          0.0224609375,
+          0.00115966796875,
+          0.00031299120325875877,
+          0.009460842985756841,
+          0.001953125
+        ],
+        [
+          0.0361328125,
+          0.02557373046875,
+          0.03564453125,
+          0.00103759765625,
+          0.0002977419479536111,
+          0.008057565347026,
+          0.0
+        ],
+        [
+          0.0361328125,
+          0.02508559772234024,
+          0.062255859375,
+          0.0008544921875,
+          0.0001983642578125,
+          0.006287213640157249,
+          0.005859375
+        ],
+        [
+          0.03125,
+          0.02238781574345835,
+          0.11208725092429947,
+          0.0007981382342908948,
+          0.0002454484244101778,
+          0.0042863891274608,
+          0.00390625
+        ],
+        [
+          0.0302734375,
+          0.020126527867828987,
+          0.1317138671875,
+          0.0006103515625,
+          0.0003204345703125,
+          0.0027479380333228585,
+          0.0
+        ],
+        [
+          0.0185546875,
+          0.0186309814453125,
+          0.115112434136327,
+          0.0006103515625,
+          0.000274658203125,
+          0.00634765625,
+          0.00390625
+        ],
+        [
+          0.0166015625,
+          0.01832585648427201,
+          0.110107421875,
+          0.0006103515625,
+          0.0001220703125,
+          0.006409272667092541,
+          0.0
+        ],
+        [
+          0.0107421875,
+          0.018112246891669338,
+          0.06665061419662595,
+          0.000732421875,
+          0.0002750817318316642,
+          0.007996071372399188,
+          0.008896907792133105
+        ],
+        [
+          0.0068359375,
+          0.01870747452547459,
+          0.04849598453246719,
+          0.00067138671875,
+          0.00023871594005068993,
+          0.008486081943957838,
+          0.0078125
+        ],
+        [
+          0.00390625,
+          0.017654484886369396,
+          0.027404921091672883,
+          0.0008860614710057358,
+          0.0003204345703125,
+          0.00927734375,
+          0.0078125
+        ],
+        [
+          0.001953125,
+          0.0175325212727439,
+          0.009033203125,
+          0.0008544921875,
+          0.00021579186437577745,
+          0.007263696476114355,
+          0.005859375
+        ],
+        [
+          0.0009765625,
+          0.0168611966630293,
+          0.0002114319833458102,
+          0.00079345703125,
+          0.00012396298835198915,
+          0.007385758311803724,
+          0.005859375
+        ],
+        [
+          0.0,
+          0.01670838795839887,
+          0.0014850494458735887,
+          0.000764159181246882,
+          0.00018374015165393518,
+          0.007448289946336328,
+          0.0625
+        ],
+        [
+          0.0,
+          0.016516890299606613,
+          0.004041246425109094,
+          0.001068986809578674,
+          0.00023773859330570806,
+          0.008369386684935722,
+          0.779296875
+        ],
+        [
+          0.0009765625,
+          0.01208503800184551,
+          0.00634765625,
+          0.0008544921875,
+          0.0002672467023946685,
+          0.007019573689174844,
+          0.9794931611410913
+        ],
+        [
+          0.0009765625,
+          0.011734504838039768,
+          0.008187815594596682,
+          0.0006741553355216834,
+          0.00013037115089901017,
+          0.008121804929624025,
+          0.990234375
+        ],
+        [
+          0.0009765625,
+          0.01226825619071565,
+          0.0078125,
+          0.0008544921875,
+          0.00013014772117028793,
+          0.006591796875,
+          0.990234375
+        ],
+        [
+          0.0009765625,
+          0.011444620756004616,
+          0.008668711317178219,
+          0.0008544921875,
+          0.0002288818359375,
+          0.00634765625,
+          0.9755869150395503
+        ],
+        [
+          0.0008457279333832408,
+          0.010452292783393234,
+          0.007080078125,
+          0.0007032298963502755,
+          0.000152587890625,
+          0.004703668683332757,
+          0.865234375
+        ],
+        [
+          0.0,
+          0.009052397979938669,
+          0.00439453125,
+          0.0005205908846811517,
+          0.0003127121205432006,
+          0.0019097275204055194,
+          0.4326193919244062
+        ],
+        [
+          0.0,
+          0.009224171473827097,
+          0.0009765625,
+          0.0004920811613951751,
+          0.00010121535615098266,
+          0.006235152729063542,
+          0.0703125
+        ],
+        [
+          0.0,
+          0.009804371618790504,
+          0.001708984375,
+          0.0007032298963502755,
+          5.002928561631775e-05,
+          0.005859375,
+          0.015625
+        ]
+      ],
+      "pairwise_normalized_MAE": [
+        {
+          "samples": [
+            0,
+            1
+          ],
+          "value": 0.08240748814174108
+        },
+        {
+          "samples": [
+            0,
+            4
+          ],
+          "value": 0.00019400460379464285
+        },
+        {
+          "samples": [
+            0,
+            5
+          ],
+          "value": 0.08242093040829614
+        },
+        {
+          "samples": [
+            1,
+            4
+          ],
+          "value": 0.08238525390625
+        },
+        {
+          "samples": [
+            1,
+            5
+          ],
+          "value": 9.017217726934524e-05
+        },
+        {
+          "samples": [
+            4,
+            5
+          ],
+          "value": 0.08239898681640626
+        }
+      ]
+    },
+    "official_posterior": {
+      "first_position_across_state_std_by_dim": [
+        0.08569405492951335,
+        0.030038447459029748,
+        0.0008457279333832408,
+        0.0013739690166614292,
+        6.950709212603988e-05,
+        0.010075608464176525,
+        0.0016914558667664816
+      ],
+      "chunk_position_across_state_std_by_dim": [
+        [
+          0.08569405492951335,
+          0.030038447459029748,
+          0.0008457279333832408,
+          0.0013739690166614292,
+          6.950709212603988e-05,
+          0.010075608464176525,
+          0.0016914558667664816
+        ],
+        [
+          0.08227611507470373,
+          0.029981438367926137,
+          0.0010641843123878599,
+          0.001406459792700551,
+          0.0003100952367080929,
+          0.008944253900515961,
+          0.001953125
+        ],
+        [
+          0.07055748539719192,
+          0.02945865922350202,
+          0.0010641843123878599,
+          0.0013455449026518922,
+          0.0003100952367080929,
+          0.009155680329499823,
+          0.0016914558667664816
+        ],
+        [
+          0.064453125,
+          0.02943550134690349,
+          0.003588119740405046,
+          0.0013739690166614292,
+          0.00037771282331807137,
+          0.009216712791219385,
+          0.001953125
+        ],
+        [
+          0.054203617501681144,
+          0.029245604913056972,
+          0.004333066247387414,
+          0.0012875380315996697,
+          0.0002628545101463656,
+          0.010085955689973038,
+          0.001953125
+        ],
+        [
+          0.052752456390896506,
+          0.02838483399338515,
+          0.00465790625691868,
+          0.001251964813035035,
+          0.00037771282331807137,
+          0.010084478164868611,
+          0.0
+        ],
+        [
+          0.044932488555966175,
+          0.02827546663189107,
+          0.008064035432086789,
+          0.0011909677918144443,
+          0.00024604058069758756,
+          0.010652820614253797,
+          0.001953125
+        ],
+        [
+          0.0385803990302207,
+          0.02891053231679858,
+          0.011739077422042292,
+          0.0012237510776222792,
+          0.00024604058069758756,
+          0.009922437501716768,
+          0.001953125
+        ],
+        [
+          0.03662760358806582,
+          0.027860654994282058,
+          0.0219780809275916,
+          0.0011299748890120616,
+          0.00022875464402107162,
+          0.009644327253468594,
+          0.001953125
+        ],
+        [
+          0.034674845268712874,
+          0.02646876456541485,
+          0.03470233771724885,
+          0.0009784679896167846,
+          0.00031788126611327606,
+          0.008212347749782306,
+          0.0
+        ],
+        [
+          0.034674845268712874,
+          0.024903540489013595,
+          0.06153312485736373,
+          0.000764159181246882,
+          0.00023871594005068993,
+          0.006906148832106639,
+          0.005859375
+        ],
+        [
+          0.029793159785345313,
+          0.02276337609698289,
+          0.1110692807700034,
+          0.0007374905989742781,
+          0.00020055296978904594,
+          0.0053724807335608854,
+          0.00390625
+        ],
+        [
+          0.029329409018908608,
+          0.020707301177471327,
+          0.1297153598091506,
+          0.0006103515625,
+          0.0002347821434544238,
+          0.0039944234062393,
+          0.0027621358640099515
+        ],
+        [
+          0.018079598224192986,
+          0.01885084288346449,
+          0.1136496899116807,
+          0.0005814379542009781,
+          0.00031159329004916593,
+          0.007019573689174844,
+          0.00390625
+        ],
+        [
+          0.015152461571467676,
+          0.018779117295234276,
+          0.10817468593085451,
+          0.00067138671875,
+          9.1552734375e-05,
+          0.00628958326754381,
+          0.001953125
+        ],
+        [
+          0.009765625,
+          0.0183596841806391,
+          0.06446144743853943,
+          0.000732421875,
+          0.00023378835214301396,
+          0.008546665558698386,
+          0.0078125
+        ],
+        [
+          0.005859375,
+          0.01922922259998005,
+          0.04613533921957316,
+          0.0007032298963502755,
+          0.00024651328157659165,
+          0.008606389893812518,
+          0.006974051199748877
+        ],
+        [
+          0.0029296875,
+          0.0179761487821198,
+          0.025222866014350066,
+          0.0008860614710057358,
+          0.000280114131937955,
+          0.00952930618226257,
+          0.006974051199748877
+        ],
+        [
+          0.001953125,
+          0.01741093359340106,
+          0.009457889333602264,
+          0.0008588407763348565,
+          0.000162919284851552,
+          0.007204217128749756,
+          0.005074367600299445
+        ],
+        [
+          0.0009765625,
+          0.017625446994926637,
+          0.0015822120845722315,
+          0.00091552734375,
+          0.00013126106669681742,
+          0.008431692597328674,
+          0.005859375
+        ],
+        [
+          0.0009765625,
+          0.01738464983327387,
+          0.002501696964345605,
+          0.0008588407763348565,
+          0.0003046985709795511,
+          0.006565465257200194,
+          0.058942646145791325
+        ],
+        [
+          0.0,
+          0.01694165421846023,
+          0.003981813093334983,
+          0.0011299748890120616,
+          0.0002663740577712416,
+          0.008486081943957838,
+          0.7697096874339621
+        ],
+        [
+          0.0009765625,
+          0.012591626328416438,
+          0.0064720293661189275,
+          0.0008251041158810898,
+          0.0002721031875629731,
+          0.0064812323986612715,
+          0.9794931611410913
+        ],
+        [
+          0.0009765625,
+          0.012262475936736742,
+          0.007715577682158439,
+          0.0006741553355216834,
+          0.00017925018500474136,
+          0.00800910567099821,
+          0.990234375
+        ],
+        [
+          0.0009765625,
+          0.01196448646333273,
+          0.007692367067474682,
+          0.0008251041158810898,
+          0.00023773859330570806,
+          0.007387775589632207,
+          0.9912118996300749
+        ],
+        [
+          0.0008457279333832408,
+          0.011174310338737736,
+          0.00793644809511119,
+          0.0008251041158810898,
+          0.00026029544234057586,
+          0.00647893286607207,
+          0.963915668107002
+        ],
+        [
+          0.0008457279333832408,
+          0.010517579028201263,
+          0.007220745322837037,
+          0.0006741553355216834,
+          0.0002758213422016177,
+          0.005330364819256654,
+          0.8439127447213515
+        ],
+        [
+          0.0,
+          0.00905180639306816,
+          0.0043037359774912584,
+          0.0004315837287515549,
+          0.00016715165939488712,
+          0.0029700988917471774,
+          0.4090558504244616
+        ],
+        [
+          0.0008457279333832408,
+          0.00950073463237001,
+          0.0008717563999686097,
+          0.0004920811613951751,
+          0.00011695640347866738,
+          0.006174815479409704,
+          0.06841515581303513
+        ],
+        [
+          0.0,
+          0.009948847483315398,
+          0.001112113474016638,
+          0.0007032298963502755,
+          6.651151952424124e-05,
+          0.006006305957100852,
+          0.01779381558426621
+        ]
+      ],
+      "pairwise_normalized_MAE": [
+        {
+          "samples": [
+            0,
+            1
+          ],
+          "value": 0.08119136265345982
+        },
+        {
+          "samples": [
+            0,
+            4
+          ],
+          "value": 0.0014687674386160714
+        },
+        {
+          "samples": [
+            0,
+            5
+          ],
+          "value": 0.08078191848028274
+        },
+        {
+          "samples": [
+            1,
+            4
+          ],
+          "value": 0.08211139497302827
+        },
+        {
+          "samples": [
+            1,
+            5
+          ],
+          "value": 0.0008186703636532738
+        },
+        {
+          "samples": [
+            4,
+            5
+          ],
+          "value": 0.08174380347842262
+        }
+      ]
+    },
+    "mean": {
+      "first_position_across_state_std_by_dim": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "chunk_position_across_state_std_by_dim": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "pairwise_normalized_MAE": [
+        {
+          "samples": [
+            0,
+            1
+          ],
+          "value": 0.0
+        },
+        {
+          "samples": [
+            0,
+            4
+          ],
+          "value": 0.0
+        },
+        {
+          "samples": [
+            0,
+            5
+          ],
+          "value": 0.0
+        },
+        {
+          "samples": [
+            1,
+            4
+          ],
+          "value": 0.0
+        },
+        {
+          "samples": [
+            1,
+            5
+          ],
+          "value": 0.0
+        },
+        {
+          "samples": [
+            4,
+            5
+          ],
+          "value": 0.0
+        }
+      ]
+    },
+    "median": {
+      "first_position_across_state_std_by_dim": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "chunk_position_across_state_std_by_dim": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "pairwise_normalized_MAE": [
+        {
+          "samples": [
+            0,
+            1
+          ],
+          "value": 0.0
+        },
+        {
+          "samples": [
+            0,
+            4
+          ],
+          "value": 0.0
+        },
+        {
+          "samples": [
+            0,
+            5
+          ],
+          "value": 0.0
+        },
+        {
+          "samples": [
+            1,
+            4
+          ],
+          "value": 0.0
+        },
+        {
+          "samples": [
+            1,
+            5
+          ],
+          "value": 0.0
+        },
+        {
+          "samples": [
+            4,
+            5
+          ],
+          "value": 0.0
+        }
+      ]
+    }
+  },
+  "aggregate_dual_constant_ratios": {
+    "official_prior": {
+      "mean": {
+        "xyz_normalized_MAE": 0.9835885452249062,
+        "all7_normalized_MAE": 0.909849199774048,
+        "mean_state_normalized_RMSE": 1.058156038842286,
+        "pooled_valid_step_normalized_RMSE": 1.0406382808606585
+      },
+      "median": {
+        "xyz_normalized_MAE": 0.9868552851176529,
+        "all7_normalized_MAE": 0.9920085291236184,
+        "mean_state_normalized_RMSE": 1.0066812356741894,
+        "pooled_valid_step_normalized_RMSE": 0.9881874917010623
+      }
+    },
+    "custom_prior": {
+      "mean": {
+        "xyz_normalized_MAE": 0.9835885452249062,
+        "all7_normalized_MAE": 0.909849199774048,
+        "mean_state_normalized_RMSE": 1.058156038842286,
+        "pooled_valid_step_normalized_RMSE": 1.0406382808606585
+      },
+      "median": {
+        "xyz_normalized_MAE": 0.9868552851176529,
+        "all7_normalized_MAE": 0.9920085291236184,
+        "mean_state_normalized_RMSE": 1.0066812356741894,
+        "pooled_valid_step_normalized_RMSE": 0.9881874917010623
+      }
+    },
+    "official_posterior": {
+      "mean": {
+        "xyz_normalized_MAE": 0.9840644961800894,
+        "all7_normalized_MAE": 0.9103894321938872,
+        "mean_state_normalized_RMSE": 1.0583320275682024,
+        "pooled_valid_step_normalized_RMSE": 1.0408197860126434
+      },
+      "median": {
+        "xyz_normalized_MAE": 0.9873328168232217,
+        "all7_normalized_MAE": 0.9925975444992682,
+        "mean_state_normalized_RMSE": 1.0068486632950386,
+        "pooled_valid_step_normalized_RMSE": 0.9883598485364485
+      }
+    }
+  },
+  "arithmetic": "float64; first outputs only for capability scores; valid steps; samples equally weighted",
+  "baseline_anchor": "training-sampling-weighted 30x7 median; mean must also be beaten, no oracle stitching",
+  "independent_demos": 2,
+  "states": 4,
+  "labels": "seen training states only",
+  "repairable_cause_assessment": "not automated; parent research review required before conditional pause",
+  "raw_units": [
+    "m",
+    "m",
+    "m",
+    "axis-angle-coordinate delta rad",
+    "axis-angle-coordinate delta rad",
+    "axis-angle-coordinate delta rad",
+    "unitless gripper command"
+  ],
+  "standard_units": "(raw - frozen action_mean)/frozen action_std",
+  "limitations": [
+    "not task success",
+    "no visual-causal dependence test",
+    "no generalization",
+    "posterior one draw per state only",
+    "samples4/5 have no individual noise estimate"
+  ],
+  "historic_0_of_32_cause": "UNKNOWN",
+  "further_experiment_authorization": false
+}

@@ -1,0 +1,29 @@
+{
+  "utc": "2026-11-03T07:23:15.782877+00:00",
+  "id": "s04_custom_prior",
+  "sample": 4,
+  "branch": "custom_prior",
+  "seed": 20261033,
+  "repeat": false,
+  "batch": 1,
+  "policy_input_keys": [
+    "cam_extrinsics",
+    "image",
+    "qpos"
+  ],
+  "input_hashes": {
+    "image": "21718b0d95c50af3a353eade66b4794028fc7c3e863bdbe25e4acf081dccc016",
+    "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+    "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+  },
+  "internal_input_hashes": {
+    "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+    "image": "ef8621a391c3e91b3f2c326f8bf6a2a9fe9753e2dfaf1b891fde030f03e678b8",
+    "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+  },
+  "output_npz": "results/predictions/s04_custom_prior.npz",
+  "output_sha256": "eea44e907bd26e0f1bde035e72180953a787301787afd0ef6504d2f72c968f35",
+  "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+  "prior_latent": "zero z",
+  "loss": null
+}

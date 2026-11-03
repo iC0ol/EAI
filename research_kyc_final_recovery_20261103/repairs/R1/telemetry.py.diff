@@ -1,0 +1,11 @@
+--- old_harness/telemetry.py
++++ kyc_recovery/telemetry.py
+@@ -1,6 +1,6 @@
+ """Read-only GL queries, context-generation identities, weak renderer registry."""
+-from lc_common import *
+-from owned_release import pointer_value
++from .lc_common import *
++from .owned_release import pointer_value
+ import ctypes,ctypes.util,weakref,threading
+ 
+ FBO_FIELDS=('offFBO','offFBO_r','shadowFBO')

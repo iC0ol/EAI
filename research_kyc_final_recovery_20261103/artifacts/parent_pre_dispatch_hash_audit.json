@@ -1,0 +1,16 @@
+{
+  "utc": "2026-11-03T07:05:59.444126+00:00",
+  "manifest_sha256": "bd4233fbeca8898d0145c3411ae98901897fd24b974984c3b83195cea75843ed",
+  "protocol_sha256": "3fd12394fd845a4c2df528119655af65ab1a830b55833f5aa278c0c8c004c460",
+  "bad_local": [],
+  "bad_sources": [],
+  "bad_cpu": [],
+  "control_exists": {
+    "engineering_gate.json": false,
+    "dispatch/gpu-preflight.json": false,
+    "recovery_state.json": false,
+    "terminal_stop.json": false,
+    "science_clock.json": false
+  },
+  "experiment_processes": []
+}

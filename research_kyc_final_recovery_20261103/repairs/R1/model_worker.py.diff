@@ -1,0 +1,40 @@
+--- old_harness/model_worker.py
++++ kyc_recovery/model_worker.py
+@@ -1,16 +1,18 @@
+ """Worker 2: saved healthy inputs only, no environment/renderer import."""
+-from common import *
+-from gates import worker_gate, reserve
+-from call_guard import CallGuard
++from .common import *
++from .gates import worker_gate, reserve
++from .call_guard import CallGuard
+ import sys
+ 
+ 
+ def main():
+     worker_gate('model')  # fail closed before numpy/torch/ACT imports
+-    from runtime_safety import isolation, torch_guards, cached_backbone_only, forbidden
++    from .runtime_safety import isolation, torch_guards, cached_backbone_only, forbidden
+     isolation()
+     import numpy as np
+     import torch
++    from .loader import load_actual
++    modules, provenance = load_actual()
+     torch_guards(torch)
+     cached_loader = cached_backbone_only(torch)
+     import torchvision.models._api
+@@ -19,10 +21,10 @@
+         def __init__(self, *args, **kwargs):
+             pass
+         step = zero_grad = state_dict = load_state_dict = forbidden
+-    sys.path.insert(0, str(K))
+-    from models.act import ACTPolicy
+-    from models.detr_vae import DETRVAE
+-    import models.detr_vae as builder_module
++    ACTPolicy = modules['models.act'].ACTPolicy
++    DETRVAE = modules['models.detr_vae'].DETRVAE
++    builder_module = modules['models.detr_vae']
++    write(P/'results/model_module_provenance.json', provenance)
+     from types import SimpleNamespace
+     class InferenceTorchProxy:
+         def __getattr__(self, name):

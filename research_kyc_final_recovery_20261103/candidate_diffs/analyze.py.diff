@@ -1,0 +1,22 @@
+--- /home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/analyze.py
++++ /home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/analyze.py
+@@ -1,13 +1,13 @@
+ """Run only on already saved model outputs. No torch/model/env imports."""
+-from common import *
+-from metrics import *
++from .common import *
++from .metrics import *
+ 
+ 
+ def main():
+-    state = read(P/'run_state.json')
+-    require(state and state['active_lease'] is None and state['GPU_seconds'] <= 600
+-            and state['counts']['ACT'] == 16 and state['counts']['workers'] == 2
+-            and state['stages'].get('model', {}).get('exit_code') == 0,
++    state = read(P/'recovery_state.json')
++    require(state and state['active_lease'] is None and state['GPU_seconds'] <= 1800
++            and state['counts']['s1_ACT'] == 16
++            and state['stages'].get('s1-model', {}).get('exit_code') == 0,
+             'model stage not successfully exited within cumulative budget: analysis NOT_RUN')
+     model = read(P/'model_result.json')
+     require(model and model['state'] == 'COMPLETE', 'no complete model result: metrics NOT_RUN')

@@ -1,0 +1,22 @@
+{
+  "state": "APPROVED_CPU_PRE_FLIGHT_AND_REPAIR_ONLY",
+  "protocol_file": "01_有限恢复边界与阶段门.md",
+  "protocol_sha256": "97e7f8a7356aaa1128a1409ec03da462c9caf1bbe2f2cc27f99fda70fbc83076",
+  "codex": {
+    "decision": "APPROVE_CPU_ONLY",
+    "evidence": "notes/01_Codex初始针对性审查.md",
+    "sha256": "8856b3bf8ccae7e0b9b7656bc607f5f052c86a9b4449b4b1f65ea67f5c7372a1"
+  },
+  "deepseek": {
+    "decision": "APPROVE_CPU_ONLY",
+    "evidence": "discussion/31_recovery_scope_response.md",
+    "sha256": "5adf34bcf9335a5ba5f4f477f000fb6cba24ee6b0cefda96b96f39c5f58b144b",
+    "actual_model": "deepseek-flash",
+    "success": true
+  },
+  "cross_handling": "notes/02_初始双审交叉处理.md",
+  "GPU_authorized": false,
+  "Stage1_authorized_now": false,
+  "Stage2_authorized_now": false,
+  "human_conditional_Stage2_scope_exists": true
+}

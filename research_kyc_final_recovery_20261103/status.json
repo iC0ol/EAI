@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-03T07:23:19.347368+00:00",
+  "phase": "s1-model",
+  "state": "WAITING_PARENT_REVIEW",
+  "counts": {
+    "gpu_workers": 3,
+    "make_env": 2,
+    "s1_ACT": 16,
+    "s1_renders": 12,
+    "s1_readPixels": 24,
+    "s2_queries": 0,
+    "s2_renders": 0,
+    "s2_readPixels": 0,
+    "s2_steps": 0,
+    "s2_rollouts": 0,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "GPU_seconds": 53.40354579128325,
+  "active_GPU_lease": null,
+  "no_automatic_next_phase": true
+}

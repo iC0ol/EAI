@@ -1,0 +1,46 @@
+{
+  "checked_utc": "2026-11-03T02:11:19.165114+00:00",
+  "verdict": "ACCEPT_CPU_IMPORT_READY_ONLY",
+  "repair_rounds_used": 2,
+  "raw_evidence_sha256": {
+    "repair_ledger.json": "8e91380876393b7554f89f867297310f38665335edb4d81536adff5fdb680c10",
+    "cpu_preflight/R1/started.json": "eafafcdaaac015c9bfed1db89fe54eb1be1605eeea6d83a586a2958a0b271685",
+    "cpu_preflight/R1/process.json": "031165344e71ad1eb76c6b084d11ff96ca81093bb010a993653a15c3d3431a9c",
+    "cpu_preflight/R1/result.json": "20aad91045bb875e7bd1a4e3ce4f87c19e8f6b046fd6f87ceb8d15712028a98d",
+    "cpu_preflight/R2/started.json": "c8300b0ea2386d01d2c991fd4018895abc18c6919765aab8544351997e1d096b",
+    "cpu_preflight/R2/process.json": "c17c3014ed2bf3b879e37c386880b1374dab2cbeb00dd59293a6298a62d3cfe7",
+    "cpu_preflight/R2/result.json": "179938cc53f8d0f15f05f2cca72abd97ca48fbdaa7fd41c1254b59e92e9104e1",
+    "repairs/R2/runtime_safety.diff": "0181cfb6815bcd33c4eab754e749df8f1c044fa0256cec4dd5af3e7c9f3e76b4",
+    "repairs/R2/before/runtime_safety.py": "d81fb83bd3f8c46fb42a92decfa5c758fbb8abd0839a0c62f347fd960b8b2a39",
+    "repairs/R2/after/runtime_safety.py": "1a758dca83faf1e58971c68153d6b9e7a9338a8a233725fe3685c619242a69d6"
+  },
+  "processes": [
+    {
+      "round": "R1",
+      "pid": 254524,
+      "original_process_inactive": true,
+      "exit_code": 1
+    },
+    {
+      "round": "R2",
+      "pid": 255052,
+      "original_process_inactive": true,
+      "exit_code": 0
+    }
+  ],
+  "actual_upstream_imports": [
+    "experiment_lib",
+    "common",
+    "utils",
+    "eval",
+    "models",
+    "cam_embedding",
+    "models.act",
+    "models.detr_vae"
+  ],
+  "ACT_or_GPU_not_validated": true,
+  "R2_change": "Only opening path resolved to os.devnull bypasses output audit; remove/rename remain checked",
+  "final_new_harness_modules_need_real_CPU_coverage": true,
+  "candidate_code_still_under_preparation": true,
+  "new_experiment_started_by_parent": false
+}

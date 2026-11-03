@@ -1,0 +1,11 @@
+--- old_harness/analyze.py
++++ kyc_recovery/analyze.py
+@@ -1,6 +1,6 @@
+ """Run only on already saved model outputs. No torch/model/env imports."""
+-from common import *
+-from metrics import *
++from .common import *
++from .metrics import *
+ 
+ 
+ def main():

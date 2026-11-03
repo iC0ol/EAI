@@ -1,0 +1,15 @@
+--- old_harness/input_runtime.py
++++ kyc_recovery/input_runtime.py
+@@ -1,8 +1,8 @@
+ """Natural owner-release integration; no held renderer fixture or forced GC."""
+-from common import *
+-from gates import reserve
+-from owned_release import release_owned, pointer_value
+-from telemetry import Telemetry
++from .common import *
++from .gates import reserve
++from .owned_release import release_owned, pointer_value
++from .telemetry import Telemetry
+ 
+ 
+ class InputRuntime:

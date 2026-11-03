@@ -1,0 +1,6 @@
+--- old_harness/lc_common.py
++++ kyc_recovery/lc_common.py
+@@ -1,2 +1,2 @@
+ """Compatibility names for the unchanged, reviewed telemetry source."""
+-from common import *
++from .common import *

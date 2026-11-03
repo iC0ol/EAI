@@ -1,0 +1,17 @@
+{
+  "utc": "2026-11-03T07:31:48.090511+00:00",
+  "state": "NOT_RUN",
+  "reason": "frozen Stage1 numeric investment screen not passed",
+  "xyz_20percent_better_than_both": false,
+  "at_least_3_states_both_demos": false,
+  "actual_simultaneous_wins": 0,
+  "physical_roots_executed": 0,
+  "rollouts_executed": 0,
+  "task_success": "NOT_MEASURED_NOT_ZERO_OF_16",
+  "Codex_decision": "DO_NOT_DISPATCH",
+  "DeepSeek_final_acceptance": "ACCEPT_36_INDEPENDENT_AND_37_CROSS_DO_NOT_DISPATCH",
+  "no_runtime_gate_created": true,
+  "finalized_utc": "2026-11-03T12:23:07.611745+00:00",
+  "joint_decision": "PAUSE_CURRENT_CHECKPOINT_PRIORITY_F_ROUTE",
+  "further_experiments_authorized": false
+}

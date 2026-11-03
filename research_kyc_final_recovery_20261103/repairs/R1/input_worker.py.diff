@@ -1,0 +1,42 @@
+--- old_harness/input_worker.py
++++ kyc_recovery/input_worker.py
+@@ -1,6 +1,6 @@
+ """Worker 1, reachable only after final double review and a new RUN dispatch."""
+-from common import *
+-from gates import worker_gate, reserve
++from .common import *
++from .gates import worker_gate, reserve
+ import contextlib
+ import sys
+ 
+@@ -29,21 +29,23 @@
+ 
+ def main():
+     worker_gate('input')  # must precede ALL numpy/torch/vendor imports
+-    from runtime_safety import isolation, torch_guards, forbidden
++    from .runtime_safety import isolation, torch_guards, forbidden
+     isolation()
+     import numpy as np
+     import torch
+     from PIL import Image
++    from .loader import load_actual
++    modules, provenance = load_actual()
++    lib = modules['experiment_lib']
++    EpisodicDataset = modules['utils'].EpisodicDataset
++    Evaluator = modules['eval'].Evaluator
++    PluckerEmbedder = modules['cam_embedding'].PluckerEmbedder
+     torch_guards(torch)
+-    sys.path.insert(0, str(R/'scripts'))
+-    import experiment_lib as lib
+-    from utils import EpisodicDataset
+-    from eval import Evaluator
+-    from cam_embedding import PluckerEmbedder
++    write(P/'results/input_module_provenance.json', provenance)
+     import robosuite.utils.binding_utils as bu
+     from robosuite.renderers.context import egl_context as ec
+     from robosuite.environments.base import MujocoEnv
+-    from input_runtime import InputRuntime
++    from .input_runtime import InputRuntime
+     from types import SimpleNamespace
+     # Any step or second path to make_env is guarded before its native action.
+     MujocoEnv.step = lambda *a, **kw: reserve('env_steps', 'input', 'forbidden_env.step')

@@ -1,0 +1,81 @@
+{
+  "utc": "2026-11-03T07:27:06.310682+00:00",
+  "kind": "post-run descriptive same-camera paired-state comparison, not a new selection threshold or visual-causality experiment",
+  "rows": [
+    {
+      "sample_pair": [
+        0,
+        4
+      ],
+      "same_camera_T": true,
+      "RGB_pixel_fraction_different": 0.1608734130859375,
+      "prior_bit_equal": false,
+      "prior_normalized_MAE_by_dim": [
+        9.765625e-05,
+        0.00016988118489583333,
+        0.00025634765625,
+        4.0690104166666664e-05,
+        4.475911458333333e-05,
+        0.00022786458333333334,
+        0.0005208333333333333
+      ],
+      "prior_raw_MAE_by_dim": [
+        2.277758767377236e-07,
+        3.543007267126086e-07,
+        1.2355343244507821e-06,
+        1.2200298442621715e-06,
+        2.585350163523496e-06,
+        6.052279028760192e-07,
+        0.0005107354993621508
+      ],
+      "expert_raw_MAE_by_dim": [
+        0.00241130876383977,
+        0.004221740792915322,
+        0.0038126363574216763,
+        0.016401775677998862,
+        0.02346803347269694,
+        0.001997633030017217,
+        1.2
+      ],
+      "gripper_chunk_bit_equal": false
+    },
+    {
+      "sample_pair": [
+        1,
+        5
+      ],
+      "same_camera_T": true,
+      "RGB_pixel_fraction_different": 0.17218017578125,
+      "prior_bit_equal": false,
+      "prior_normalized_MAE_by_dim": [
+        0.0,
+        0.0001708984375,
+        0.00022939046223958333,
+        2.44140625e-05,
+        2.3396809895833335e-05,
+        0.00018310546875,
+        0.0
+      ],
+      "prior_raw_MAE_by_dim": [
+        0.0,
+        3.5642228795040866e-07,
+        1.1056071038240134e-06,
+        7.320179065573029e-07,
+        1.3514330400236454e-06,
+        4.863438505253725e-07,
+        0.0
+      ],
+      "expert_raw_MAE_by_dim": [
+        0.004164648073007508,
+        0.0026522835105424747,
+        0.004884327730784814,
+        0.017973585923512777,
+        0.015754342079162598,
+        0.0024306034048398335,
+        1.4
+      ],
+      "gripper_chunk_bit_equal": true
+    }
+  ],
+  "limits": "two within-demo pairs only; BF16 precision and zero-proprio policy; no architecture/label intervention"
+}

@@ -1,0 +1,9 @@
+--- old_harness/gates.py
++++ kyc_recovery/gates.py
+@@ -1,5 +1,5 @@
+ """Fail-closed, shared two-stage authorization and cumulative budget ledger."""
+-from common import *
++from .common import *
+ 
+ 
+ def gate(stage, full=False):

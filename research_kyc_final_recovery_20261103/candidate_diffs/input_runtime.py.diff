@@ -1,0 +1,42 @@
+--- /home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/input_runtime.py
++++ /home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/input_runtime.py
+@@ -1,14 +1,15 @@
+ """Natural owner-release integration; no held renderer fixture or forced GC."""
+-from common import *
+-from gates import reserve
+-from owned_release import release_owned, pointer_value
+-from telemetry import Telemetry
++from .common import *
++from .gates import reserve,current_stage
++from .owned_release import release_owned, pointer_value
++from .telemetry import Telemetry
+ 
+ 
+ class InputRuntime:
+     def __init__(self, ec, bu, numpy):
+         self.ec = ec; self.bu = bu; self.np = numpy
+-        self.out = P/'results/input'
++        self.phase=current_stage()
++        self.out = P/('results/input' if self.phase=='s1-input' else ('results/'+self.phase+'_readbacks'))
+         self.out.mkdir(exist_ok=False)
+         self.api = Telemetry(ec, self.out, 1)
+         self.entry = 'INIT'; self.frames = {}; self.sentinel = False
+@@ -75,7 +76,8 @@
+             ordinal = reserve('renders', 'input', self.entry)
+             sample = self.entry.split('_')[0]
+             self.per_sample[sample] = self.per_sample.get(sample, 0) + 1
+-            require(self.entry.startswith('s') and self.per_sample[sample] <= 3,
++            require((self.phase=='s1-input' and self.entry.startswith('s') and self.per_sample[sample]<=3)
++                    or (self.phase=='s2-closed' and self.entry.startswith('r')),
+                     'unexpected/implicit render consumed budget')
+             before = api.note('mjr_render_before', ordinal=ordinal)
+             require(bu._MjSim_render_lock.locked() and self.healthy_event(before),
+@@ -90,7 +92,7 @@
+         old_read = bu.mujoco.mjr_readPixels
+         def read_pixels(*args, **kwargs):
+             ordinal = reserve('readPixels', 'input', self.entry)
+-            require(self.entry.startswith('s') and bu._MjSim_render_lock.locked(),
++            require((self.entry.startswith('s') or self.entry.startswith('r')) and bu._MjSim_render_lock.locked(),
+                     'unexpected/unlocked native readPixels')
+             before = api.note('mjr_readPixels_before', ordinal=ordinal, sentinel=self.sentinel)
+             require(self.healthy_event(before), 'STOP_UNHEALTHY_READ_BEFORE')

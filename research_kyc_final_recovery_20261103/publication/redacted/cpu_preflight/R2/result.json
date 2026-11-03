@@ -1,0 +1,195 @@
+{
+  "utc": "2026-11-03T02:06:57.943892+00:00",
+  "status": "CPU_IMPORT_READY",
+  "interpreter": "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+  "cwd": "/home/asus/EAI/research_kyc_final_recovery_20261103",
+  "flags": {
+    "dont_write_bytecode": true
+  },
+  "CUDA_VISIBLE_DEVICES": "",
+  "actual_imports": true,
+  "provenance": {
+    "order": [
+      "experiment_lib",
+      "common",
+      "utils",
+      "eval",
+      "models",
+      "cam_embedding",
+      "models.act",
+      "models.detr_vae"
+    ],
+    "modules": [
+      {
+        "name": "experiment_lib",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py",
+        "module_id": "PROCESS_ADDRESS_REDACTED",
+        "spec_name": "experiment_lib",
+        "sys_modules_same_object": true
+      },
+      {
+        "name": "common",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/common.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/common.py",
+        "module_id": "PROCESS_ADDRESS_REDACTED",
+        "spec_name": "common",
+        "sys_modules_same_object": true
+      },
+      {
+        "name": "utils",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/utils.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/utils.py",
+        "module_id": "PROCESS_ADDRESS_REDACTED",
+        "spec_name": "utils",
+        "sys_modules_same_object": true
+      },
+      {
+        "name": "eval",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/eval.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/eval.py",
+        "module_id": "PROCESS_ADDRESS_REDACTED",
+        "spec_name": "eval",
+        "sys_modules_same_object": true
+      },
+      {
+        "name": "models",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/__init__.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/__init__.py",
+        "module_id": "PROCESS_ADDRESS_REDACTED",
+        "spec_name": "models",
+        "sys_modules_same_object": true
+      },
+      {
+        "name": "cam_embedding",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/cam_embedding.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/cam_embedding.py",
+        "module_id": "PROCESS_ADDRESS_REDACTED",
+        "spec_name": "cam_embedding",
+        "sys_modules_same_object": true
+      },
+      {
+        "name": "models.act",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/act.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/act.py",
+        "module_id": "PROCESS_ADDRESS_REDACTED",
+        "spec_name": "models.act",
+        "sys_modules_same_object": true
+      },
+      {
+        "name": "models.detr_vae",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/detr_vae.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/detr_vae.py",
+        "module_id": "PROCESS_ADDRESS_REDACTED",
+        "spec_name": "models.detr_vae",
+        "sys_modules_same_object": true
+      }
+    ],
+    "ROOT": "/home/asus/EAI/research_expansion_20261029/reproduction",
+    "DATA": "/home/asus/EAI/research_expansion_20261029/reproduction/assets/liftrand_eef_delta.hdf5",
+    "helpers": {
+      "atomic_json": {
+        "module": "common",
+        "source": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/common.py"
+      },
+      "utc": {
+        "module": "common",
+        "source": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/common.py"
+      }
+    },
+    "harness_common": {
+      "name": "kyc_recovery.common",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/common.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/common.py",
+      "module_id": "PROCESS_ADDRESS_REDACTED",
+      "spec_name": "kyc_recovery.common",
+      "sys_modules_same_object": true
+    },
+    "constructor_signatures": {
+      "ACTPolicy": "(args)",
+      "DETRVAE.forward": "(self, data)",
+      "Dataset": "(demo_indices, norm_stats, args, camera_poses_file=None, max_seq_length=None, transform='id', env=None)"
+    }
+  },
+  "official_atomic_semantics": {
+    "JSON_prefix_equal": true,
+    "suffix": "\n",
+    "full_json_document": true,
+    "upstream_source_unchanged": true,
+    "used_for_formal_harness_bookkeeping": false
+  },
+  "utc_semantics": {
+    "value": "2026-11-03T02:07:08.650973+00:00",
+    "ISO8601_timezone_present": true
+  },
+  "resources": {
+    "checkpoint_sha256": "c904a97002571d96e3ee6b66057d09162cbdcb5e926cb6ea0b660ca1390bce13",
+    "checkpoint_tensors": 375,
+    "checkpoint_all_finite": true,
+    "checkpoint_CPU": true,
+    "args_equal": true,
+    "stats_equal": true,
+    "dataset_sha256": "fc89e2a46624b877cd35ae383df9ad09a84b7881c655bc114812164d6ff45377",
+    "cached_resnet_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+    "weighted_constants_sha256": "deae440f7222d5e2140e68f44703c3fac31efb423975b34b323df3c34b2d3b1a",
+    "samples": [
+      {
+        "sample": 0,
+        "state_shape": [
+          58
+        ],
+        "action_shape": [
+          30,
+          7
+        ]
+      },
+      {
+        "sample": 1,
+        "state_shape": [
+          58
+        ],
+        "action_shape": [
+          30,
+          7
+        ]
+      },
+      {
+        "sample": 4,
+        "state_shape": [
+          58
+        ],
+        "action_shape": [
+          30,
+          7
+        ]
+      },
+      {
+        "sample": 5,
+        "state_shape": [
+          58
+        ],
+        "action_shape": [
+          30,
+          7
+        ]
+      }
+    ]
+  },
+  "device_audit": {
+    "blocked": [],
+    "safe_queries": [],
+    "CUDA_initialized_before": false,
+    "CUDA_initialized_after": false,
+    "GL_modules_imported": [],
+    "ACT_constructed": false,
+    "device_constructor_attempts": 0
+  },
+  "GPU_pending": [
+    "actual input construction/cleanup",
+    "ACT construction and strict load",
+    "healthy native readback",
+    "BF16 real forward",
+    "closed-loop execution"
+  ],
+  "ENGINEERING_READY": false
+}

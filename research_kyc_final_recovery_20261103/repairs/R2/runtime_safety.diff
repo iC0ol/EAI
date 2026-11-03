@@ -1,0 +1,13 @@
+--- R2/before
++++ R2/after
+@@ -24,6 +24,10 @@
+     def audit(event, args):
+         if event == 'open':
+             path, mode, flags = args
++            # Opening the standard null sink creates no persistent artifact.
++            # This exception applies to open only, never remove/rename/link.
++            if not isinstance(path, int) and Path(os.fsdecode(path)).resolve() == Path(os.devnull).resolve():
++                return
+             if (mode and any(x in mode for x in 'wax+')) or flags & (os.O_WRONLY | os.O_RDWR | os.O_CREAT | os.O_TRUNC):
+                 write_path(path)
+         elif event in ['os.remove', 'os.rmdir', 'os.mkdir']:

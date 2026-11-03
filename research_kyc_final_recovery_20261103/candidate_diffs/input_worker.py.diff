@@ -1,0 +1,87 @@
+--- /home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/input_worker.py
++++ /home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/input_worker.py
+@@ -1,6 +1,6 @@
+ """Worker 1, reachable only after final double review and a new RUN dispatch."""
+-from common import *
+-from gates import worker_gate, reserve
++from .common import *
++from .gates import worker_gate, reserve
+ import contextlib
+ import sys
+ 
+@@ -28,38 +28,18 @@
+ 
+ 
+ def main():
+-    worker_gate('input')  # must precede ALL numpy/torch/vendor imports
+-    from runtime_safety import isolation, torch_guards, forbidden
++    worker_gate('s1-input')  # must precede ALL numpy/torch/vendor imports
++    from .runtime_safety import isolation, torch_guards, forbidden
+     isolation()
+     import numpy as np
+     import torch
+     from PIL import Image
+-    torch_guards(torch)
+-    sys.path.insert(0, str(R/'scripts'))
+-    import experiment_lib as lib
+-    from utils import EpisodicDataset
+-    from eval import Evaluator
+-    from cam_embedding import PluckerEmbedder
+-    import robosuite.utils.binding_utils as bu
+-    from robosuite.renderers.context import egl_context as ec
+-    from robosuite.environments.base import MujocoEnv
+-    from input_runtime import InputRuntime
+-    from types import SimpleNamespace
+-    # Any step or second path to make_env is guarded before its native action.
+-    MujocoEnv.step = lambda *a, **kw: reserve('env_steps', 'input', 'forbidden_env.step')
+-    original_make_env = lib.make_env
+-    def make_env(*args, **kwargs):
+-        ordinal = reserve('make_env', 'input', 'lib.make_env')
+-        require(ordinal == 1, 'unexpected second make_env attempt; no replacement')
+-        return original_make_env(*args, **kwargs)
+-    lib.make_env = make_env
+-    runtime = InputRuntime(ec, bu, np); runtime.install()
+-    api = runtime.api
+-    args = SimpleNamespace(**read(R/'manifests/C_config.json'))
+-    stats = {k: np.asarray(v, dtype=np.float32) for k, v in read(R/'manifests/dataset_stats.json').items()}
+-    require(args.prob_drop_proprio == 1 and not args.use_cam_pose and args.chunk_size == 30,
+-            'frozen conditioning configuration changed')
+-    env = ds = evaluator = embedder = None
++    from .builders import input_setup
++    bundle = input_setup()
++    env, ds, evaluator, embedder, runtime = [bundle[k] for k in ['env','ds','evaluator','embedder','runtime']]
++    lib, args, stats = bundle['lib'], bundle['args'], bundle['stats']
++    api=runtime.api
++    write(P/'results/input_module_provenance.json',bundle['provenance'])
+     rows = []; result_state = 'PARTIAL'; failure = None
+ 
+     def array(x):
+@@ -121,20 +101,7 @@
+             boundaries=boundaries)
+ 
+     try:
+-        runtime.label('INIT_make_env'); env = lib.make_env(0); api.check()
+-        env.step = lambda *a, **kw: reserve('env_steps', 'input', 'forbidden_wrapped_env.step')
+-        runtime.expected_context = api.owner(env.sim._render_context_offscreen.gl_ctx)
+-        runtime.expected_ids = api.ids(env.sim._render_context_offscreen.con)
+-        require(runtime.expected_context and api.live(runtime.expected_context), 'active renderer owner unknown')
+         (P/'local_only/source_model.xml').write_text(env.model.get_xml())
+-        # Preserve the actual original stage1 constructor order and arguments.
+-        runtime.label('INIT_Dataset')
+-        ds = EpisodicDataset(list(range(200)), stats, args,
+-            camera_poses_file='train_cameras.json', transform='id', env=env, max_seq_length=130)
+-        api.check(); runtime.label('INIT_Evaluator')
+-        evaluator = Evaluator(env, stats, str(lib.DATA), args)
+-        api.check(); runtime.label('INIT_embedder')
+-        embedder = PluckerEmbedder(img_size=256, device='cuda'); api.check()
+         # Exact original pure evaluation preprocessing function, compiled from
+         # its pinned AST without importing old stage1 (which has broad imports).
+         import ast
+@@ -215,6 +182,7 @@
+             if env is not None:
+                 env.close()  # only upstream MjSim.free's own gc.collect, no forced harness GC
+             ds = evaluator = embedder = env = None
++            bundle.update(ds=None, evaluator=None, embedder=None, env=None)
+             api.check()
+             require(not any(x['alive'] for x in api.contexts.values()), 'context still live after original cleanup')
+         except BaseException as exc:

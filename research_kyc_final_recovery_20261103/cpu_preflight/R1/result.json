@@ -1,0 +1,14 @@
+{
+  "utc": "2026-11-03T02:05:42.039936+00:00",
+  "status": "CPU_PREFLIGHT_FAILED",
+  "interpreter": "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+  "cwd": "/home/asus/EAI/research_kyc_final_recovery_20261103",
+  "flags": {
+    "dont_write_bytecode": true
+  },
+  "CUDA_VISIBLE_DEVICES": "",
+  "actual_imports": false,
+  "error": "RuntimeError: write outside new diagnostic scope",
+  "traceback": "logs/cpu_preflight_traceback.log",
+  "device_attempts": []
+}

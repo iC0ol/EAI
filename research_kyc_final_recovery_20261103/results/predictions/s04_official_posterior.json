@@ -1,0 +1,39 @@
+{
+  "utc": "2026-11-03T07:23:16.126498+00:00",
+  "id": "s04_official_posterior",
+  "sample": 4,
+  "branch": "official_posterior",
+  "seed": 20261033,
+  "repeat": false,
+  "batch": 1,
+  "policy_input_keys": [
+    "actions",
+    "cam_extrinsics",
+    "image",
+    "is_pad",
+    "qpos"
+  ],
+  "input_hashes": {
+    "image": "5cf84937e7fceb46cc29f8622b4d7b50f77403d3c88c236ab35295224cc16549",
+    "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+    "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca",
+    "actions": "ccc0d86d59e751316f6021507cf20206c2648126f26f1e9657b9e922877f6568",
+    "is_pad": "7968975186e50b241418a0bbd6501a65297db46311f690ee705176a008fdba60"
+  },
+  "internal_input_hashes": {
+    "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+    "image": "e5b089a7af201bbe31ecaf1d9899a3bed946cbfdb4801396a166a43e4e582436",
+    "actions": "030e83fd1b95449f6ef9205e95b8e0dff72d1eba911fab475ba241d2b171c1a6",
+    "is_pad": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62",
+    "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+  },
+  "output_npz": "results/predictions/s04_official_posterior.npz",
+  "output_sha256": "f42c78c713a88fe2e97d1b0257d03fc357e3ffee995b9249b9d56b1e57dc79d4",
+  "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+  "prior_latent": null,
+  "loss": {
+    "l1": 0.2886902093887329,
+    "kl": 0.011902272701263428,
+    "loss": 0.30059248208999634
+  }
+}

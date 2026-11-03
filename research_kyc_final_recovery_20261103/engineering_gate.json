@@ -1,0 +1,26 @@
+{
+  "state": "APPROVED",
+  "utc": "2026-11-03T07:07:20.083275+00:00",
+  "scope": "GPU_PREFLIGHT_ONLY",
+  "recovery_id": "kyc-last-recovery-441e91b0-ee5f-4294-9501-070606a5f695",
+  "codex": {
+    "decision": "APPROVE",
+    "scope": "GPU_PREFLIGHT_ONLY",
+    "code_manifest_sha256": "bd4233fbeca8898d0145c3411ae98901897fd24b974984c3b83195cea75843ed",
+    "protocol_sha256": "3fd12394fd845a4c2df528119655af65ab1a830b55833f5aa278c0c8c004c460",
+    "evidence_file": "notes/04_GPU预检交叉处理.md",
+    "evidence_sha256": "06b38d1ea1a79703b05e7372bef04fa907cbde082a58c0b3d197085cca6f62db"
+  },
+  "deepseek": {
+    "decision": "APPROVE",
+    "scope": "GPU_PREFLIGHT_ONLY",
+    "code_manifest_sha256": "bd4233fbeca8898d0145c3411ae98901897fd24b974984c3b83195cea75843ed",
+    "protocol_sha256": "3fd12394fd845a4c2df528119655af65ab1a830b55833f5aa278c0c8c004c460",
+    "evidence_file": "discussion/33_gpu_preflight_cross_response.md",
+    "evidence_sha256": "a623e7dd46459ade2419a906347c2c187bd413486cc27df28dddc7445ca0a760"
+  },
+  "independent_codex_evidence": "notes/03_Codex候选独立审查.md",
+  "independent_deepseek_evidence": "discussion/32b_candidate_independent_response.md",
+  "repair_rounds_remaining": 0,
+  "scientific_phase_approved": false
+}

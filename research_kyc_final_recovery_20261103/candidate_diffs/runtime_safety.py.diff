@@ -1,0 +1,30 @@
+--- /home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/runtime_safety.py
++++ /home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/runtime_safety.py
+@@ -1,5 +1,5 @@
+ """Installed only inside an authorized worker; no framework imports here."""
+-from common import *
++from .common import *
+ import socket
+ import sys
+ 
+@@ -24,6 +24,10 @@
+     def audit(event, args):
+         if event == 'open':
+             path, mode, flags = args
++            # Opening the standard null sink creates no persistent artifact.
++            # This exception applies to open only, never remove/rename/link.
++            if not isinstance(path, int) and Path(os.fsdecode(path)).resolve() == Path(os.devnull).resolve():
++                return
+             if (mode and any(x in mode for x in 'wax+')) or flags & (os.O_WRONLY | os.O_RDWR | os.O_CREAT | os.O_TRUNC):
+                 write_path(path)
+         elif event in ['os.remove', 'os.rmdir', 'os.mkdir']:
+@@ -34,8 +38,7 @@
+ 
+ 
+ def torch_guards(torch):
+-    torch.set_num_threads(3)
+-    torch.set_num_interop_threads(1)
++    # The shared actual loader imports experiment_lib, which owns thread setup.
+     torch.set_grad_enabled(False)
+     torch.Tensor.backward = forbidden
+     torch.autograd.backward = forbidden

@@ -1,0 +1,154 @@
+{
+  "utc": "2026-11-03T12:27:53.231169+00:00",
+  "transport": "existing terminal Claude connection",
+  "raw_CLI_and_credentials": "local only",
+  "receipts": [
+    {
+      "turn": "31_recovery_scope",
+      "started_utc": "2026-11-03T01:55:37.754620+00:00",
+      "ended_utc": "2026-11-03T01:56:18.825059+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "permission_denials": [],
+      "response_model_fields": [
+        "deepseek-flash"
+      ],
+      "valid_review": true,
+      "source_metadata_sha256": "2eeec3338c5ba4ac175e51134796294354a77f6930e5adffc7528f8b82dfd3a4",
+      "raw_CLI_sha256": "0d26611a0ed748c1e5e0a5790d9de71315664cb0f3cc835e0cad2703b62c98f6",
+      "prompt_sha256": "7fa844d54dd51971d588bef3af752b7e3a25b6aa221499d1310425fcf71a182f",
+      "response_sha256": "5adf34bcf9335a5ba5f4f477f000fb6cba24ee6b0cefda96b96f39c5f58b144b",
+      "prompt": "discussion/31_recovery_scope_prompt.md",
+      "response": "discussion/31_recovery_scope_response.md"
+    },
+    {
+      "turn": "32_candidate_independent",
+      "started_utc": "2026-11-03T02:58:22.946716+00:00",
+      "ended_utc": "2026-11-03T02:58:30.680563+00:00",
+      "exit_code": 1,
+      "result_status": "success",
+      "permission_denials": [],
+      "response_model_fields": [
+        "<synthetic>",
+        "deepseek-flash"
+      ],
+      "valid_review": false,
+      "source_metadata_sha256": "42617aba717216bd93ee319806e59748a1fedc35d9d3330e8b314b4aa25749f0",
+      "raw_CLI_sha256": "73f78137d60c13796e8a3a691fb085b8b9982a330faa12e2199f344cb2766ca3",
+      "prompt_sha256": "8d5954e6957786bfde23c869f6577cfc7fc72c043309934cae82d6399f1a1f7d",
+      "response_sha256": "b550cee1c69148c4c96e22af7dd14a973a372a8871c99924ae871c15d7088bbe",
+      "prompt": "discussion/32_candidate_independent_prompt.md",
+      "response": "discussion/32_candidate_independent_response.md",
+      "limitation": "API400 context full; result_status alone misleading; exit1, NO VALID APPROVAL"
+    },
+    {
+      "turn": "32b_candidate_independent",
+      "started_utc": "2026-11-03T02:59:43.507162+00:00",
+      "ended_utc": "2026-11-03T03:10:07.757230+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "permission_denials": [],
+      "response_model_fields": [
+        "deepseek-flash"
+      ],
+      "valid_review": true,
+      "source_metadata_sha256": "d18dcce0ea6a92280a812746bdafc381a983c1969dd3c8c7c50caeb6e6c6915d",
+      "raw_CLI_sha256": "810fefdd108e34f230e60b9325f46071613f0080aa649fad707b99d284b1677a",
+      "prompt_sha256": "580cf239d61fce55fa0ee639a640e6337331e660b74cc6492d081e68b60dde57",
+      "response_sha256": "ffbdcea01b5958b672f6a4dd90d4bdcfa91541b41b97ccca5dbf4e5fe139c155",
+      "prompt": "discussion/32b_candidate_independent_prompt.md",
+      "response": "discussion/32b_candidate_independent_response.md"
+    },
+    {
+      "turn": "33_gpu_preflight_cross",
+      "started_utc": "2026-11-03T07:05:22.976203+00:00",
+      "ended_utc": "2026-11-03T07:05:41.040967+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "permission_denials": [],
+      "response_model_fields": [
+        "deepseek-flash"
+      ],
+      "valid_review": true,
+      "source_metadata_sha256": "b739275014bf10d641054de32b18c63f7ec380f6b10b24f5425cf67b3a7caec4",
+      "raw_CLI_sha256": "0674a4331f50f85eadd24139b3a266ce7ad86ef3a82233b8536ba90aaf83bed8",
+      "prompt_sha256": "ccd7fe9fc9353e083e6bce44ff62de61e56bd5465a8954de02b7b22e0c1a2473",
+      "response_sha256": "a623e7dd46459ade2419a906347c2c187bd413486cc27df28dddc7445ca0a760",
+      "prompt": "discussion/33_gpu_preflight_cross_prompt.md",
+      "response": "discussion/33_gpu_preflight_cross_response.md"
+    },
+    {
+      "turn": "34_preflight_acceptance_independent",
+      "started_utc": "2026-11-03T07:11:55.461315+00:00",
+      "ended_utc": "2026-11-03T07:13:01.348355+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "permission_denials": [],
+      "response_model_fields": [
+        "deepseek-flash"
+      ],
+      "valid_review": true,
+      "source_metadata_sha256": "34bbc58a01de2e9a6cf3a34532eb53b03e1d1638e29b6b0b8e2468d9c3567c5a",
+      "raw_CLI_sha256": "508e364add56123ee063fbf666ec96a4d897f483f58369e64abeff4fe51118fd",
+      "prompt_sha256": "ded905b333e7e583b8f36ae7332845cebdf0f293475bebda3d07ea2bd7515090",
+      "response_sha256": "3cd4c2f63ad1fc52997ea47de1205ab877dc888ac5bee89aa86086bf1f8ec2bd",
+      "prompt": "discussion/34_preflight_acceptance_independent_prompt.md",
+      "response": "discussion/34_preflight_acceptance_independent_response.md"
+    },
+    {
+      "turn": "35_stage1_cross",
+      "started_utc": "2026-11-03T07:14:41.858558+00:00",
+      "ended_utc": "2026-11-03T07:14:48.590632+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "permission_denials": [],
+      "response_model_fields": [
+        "deepseek-flash"
+      ],
+      "valid_review": true,
+      "source_metadata_sha256": "05347ee79077d4ebe6203aafb6ba1b1629220d2905d952da5830b0e58cfe0e72",
+      "raw_CLI_sha256": "9f453e39bf6201715a373c5f9868dc440652e3b3a3250faefa12a59b8c8918f9",
+      "prompt_sha256": "cb66b3f553820f3a88af99758c5039966074ea296c7cd6cd5626f5d910e6fdc6",
+      "response_sha256": "9b2eb24d512cd9139980724f5224a82dd6707c4c65200e256e79377c46cc14c7",
+      "prompt": "discussion/35_stage1_cross_prompt.md",
+      "response": "discussion/35_stage1_cross_response.md"
+    },
+    {
+      "turn": "36_model_independent",
+      "started_utc": "2026-11-03T07:29:05.764651+00:00",
+      "ended_utc": "2026-11-03T07:31:47.052525+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "permission_denials": [],
+      "response_model_fields": [
+        "deepseek-flash"
+      ],
+      "valid_review": true,
+      "source_metadata_sha256": "015025baa6353d0a04d860facc3180aa0cd70f89f7f0c547db129c5c57359f09",
+      "raw_CLI_sha256": "c399ddd361b4a68bcc76bf40581ad013e23c9ab1c512fb74354c676dcc5301b1",
+      "prompt_sha256": "33fa6d46dfec62f0682af8fba4ba652a7514558e0d93c444256d20df7ca4acab",
+      "response_sha256": "9d027f886a4c4148715518bc7fe9d75261ece10d5829c68fdf06c25d577b126f",
+      "prompt": "discussion/36_model_independent_prompt.md",
+      "response": "discussion/36_model_independent_response.md",
+      "independence_scope": "Read original JSON arrays and runtime artifacts before Codex notes08; no separate executable arithmetic script"
+    },
+    {
+      "turn": "37_model_cross",
+      "started_utc": "2026-11-03T07:32:53.838678+00:00",
+      "ended_utc": "2026-11-03T07:33:10.955754+00:00",
+      "exit_code": 0,
+      "result_status": "success",
+      "permission_denials": [],
+      "response_model_fields": [
+        "deepseek-flash"
+      ],
+      "valid_review": true,
+      "source_metadata_sha256": "78103c600d335e98b7ac5a1fdea1832e1556079fcc53f1b1ef46328fa9ab398e",
+      "raw_CLI_sha256": "75228868942d0d75adcc2e7352ae800a5e45caea2053454030fdedf716f46a99",
+      "prompt_sha256": "0422f2a54394ea54663babb72761342ddea523f3c0be6da0508508f1ea56dfd6",
+      "response_sha256": "3feb387ea0517da5ea9a365a7187464a7a516b24ddaaa749f70c921cb72bb263",
+      "prompt": "discussion/37_model_cross_prompt.md",
+      "response": "discussion/37_model_cross_response.md"
+    }
+  ]
+}

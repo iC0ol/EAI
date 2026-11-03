@@ -1,0 +1,531 @@
+{
+  "utc": "2026-11-03T07:23:18.683317+00:00",
+  "state": "COMPLETE",
+  "calls": [
+    {
+      "utc": "2026-11-03T07:23:13.127191+00:00",
+      "id": "s00_official_prior",
+      "sample": 0,
+      "branch": "official_prior",
+      "seed": 20261029,
+      "repeat": false,
+      "batch": 1,
+      "policy_input_keys": [
+        "cam_extrinsics",
+        "image",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "3b1fe00564c4d29651fb05bd5e3f56bf66355ee0e107a9cb8c599a963161e347",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "12bdfc2c8e2dacaa70576fe516944ce30654387b9d68aa7dd3dbc825885a20c7",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s00_official_prior.npz",
+      "output_sha256": "0d4cc49629c5f42c3e682198fd46c984510307e2f5f388e5f267efc540a4af66",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": "zero z",
+      "loss": null,
+      "input_file_sha256": "20a181523e9a9335cfbaa3949fd6afcfb3b0b3e25f7d5ef9aafbf66d583e3766"
+    },
+    {
+      "utc": "2026-11-03T07:23:13.560783+00:00",
+      "id": "s00_custom_prior",
+      "sample": 0,
+      "branch": "custom_prior",
+      "seed": 20261029,
+      "repeat": false,
+      "batch": 1,
+      "policy_input_keys": [
+        "cam_extrinsics",
+        "image",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "55f9b4b9266de58783ac0378c3e03172d7f1ba3364a8a0a547dc1ca277a3db9c",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "6151a5f6b7fc8b65ab4af5f1bf7a6fcce1e913cce376bb86149828ae45565ce9",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s00_custom_prior.npz",
+      "output_sha256": "e54fee0d49b6d13f6aa93b8fec39f49160457fcc80723fe4c235a7d97731c0dd",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": "zero z",
+      "loss": null,
+      "input_file_sha256": "20a181523e9a9335cfbaa3949fd6afcfb3b0b3e25f7d5ef9aafbf66d583e3766"
+    },
+    {
+      "utc": "2026-11-03T07:23:13.956790+00:00",
+      "id": "s00_official_posterior",
+      "sample": 0,
+      "branch": "official_posterior",
+      "seed": 20261029,
+      "repeat": false,
+      "batch": 1,
+      "policy_input_keys": [
+        "actions",
+        "cam_extrinsics",
+        "image",
+        "is_pad",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "3b1fe00564c4d29651fb05bd5e3f56bf66355ee0e107a9cb8c599a963161e347",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca",
+        "actions": "4cc16e27e71577f3146a53c4aeb5289159c46c4aba94b75564c3c19c2341de38",
+        "is_pad": "ccb2d04878fd9806e460b69ba0d96ee450b0e318e95e880dd92acd5db4a0707f"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "12bdfc2c8e2dacaa70576fe516944ce30654387b9d68aa7dd3dbc825885a20c7",
+        "actions": "35bcafaa8466204b5c2504bdd4095b1c93acfc8ea900bd4a58b70f886e118f1a",
+        "is_pad": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s00_official_posterior.npz",
+      "output_sha256": "6172dbfbc9a62419aea06adc864aff48fa7997d6f461a47593e849e60215d726",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": null,
+      "loss": {
+        "l1": 0.7656307816505432,
+        "kl": 0.013355374336242676,
+        "loss": 0.7789861559867859
+      },
+      "input_file_sha256": "20a181523e9a9335cfbaa3949fd6afcfb3b0b3e25f7d5ef9aafbf66d583e3766"
+    },
+    {
+      "utc": "2026-11-03T07:23:14.352833+00:00",
+      "id": "s01_official_prior",
+      "sample": 1,
+      "branch": "official_prior",
+      "seed": 20261030,
+      "repeat": false,
+      "batch": 1,
+      "policy_input_keys": [
+        "cam_extrinsics",
+        "image",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "d42dc5b33e070beeb35cd536b15d05566e5c4eff512517637ce204b7e3cf7013",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "000216f8da3073543b02149ad0d6097d6cf930f9827d011064c1b69075370f50",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s01_official_prior.npz",
+      "output_sha256": "6db982af2ec6fb4f698f18b7e2e51e0ae65240a7134bdea355d9bea57c0c40fa",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": "zero z",
+      "loss": null,
+      "input_file_sha256": "d601b35c864005b0d72908703e8541e7fe57edd4ab02fbb04cc4ada1a27bead8"
+    },
+    {
+      "utc": "2026-11-03T07:23:14.688907+00:00",
+      "id": "s01_custom_prior",
+      "sample": 1,
+      "branch": "custom_prior",
+      "seed": 20261030,
+      "repeat": false,
+      "batch": 1,
+      "policy_input_keys": [
+        "cam_extrinsics",
+        "image",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "2a80f3f921012fc7a178024a6ac12bfbbb45cf1c526875e56f415645cca8d58f",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "71f5e59914e5cbaf5125fadab073346b62df04dd4a765eb3af9efc1acb57cc01",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s01_custom_prior.npz",
+      "output_sha256": "ebf8fd5f5615696877662a69696d3047d6b862451d4a3bb174aa7fdbc09634f0",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": "zero z",
+      "loss": null,
+      "input_file_sha256": "d601b35c864005b0d72908703e8541e7fe57edd4ab02fbb04cc4ada1a27bead8"
+    },
+    {
+      "utc": "2026-11-03T07:23:15.017866+00:00",
+      "id": "s01_official_posterior",
+      "sample": 1,
+      "branch": "official_posterior",
+      "seed": 20261030,
+      "repeat": false,
+      "batch": 1,
+      "policy_input_keys": [
+        "actions",
+        "cam_extrinsics",
+        "image",
+        "is_pad",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "d42dc5b33e070beeb35cd536b15d05566e5c4eff512517637ce204b7e3cf7013",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca",
+        "actions": "f44b054db1cd741814ad4083f95c67e93c648c33c18359108ae47d9f50bdf835",
+        "is_pad": "8814d2fcf06d856c12bea14f99497af53ccff667f63902070cf751fbae403a90"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "000216f8da3073543b02149ad0d6097d6cf930f9827d011064c1b69075370f50",
+        "actions": "53787b5bd52123a283e89938fe7156732506b7dcfa7f290f39cbd8987f951a86",
+        "is_pad": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s01_official_posterior.npz",
+      "output_sha256": "4820e449a33be423d396d7746dfd636294a0f32aec85a671926dde07f5d05a29",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": null,
+      "loss": {
+        "l1": 0.8463485240936279,
+        "kl": 0.012164980173110962,
+        "loss": 0.8585134744644165
+      },
+      "input_file_sha256": "d601b35c864005b0d72908703e8541e7fe57edd4ab02fbb04cc4ada1a27bead8"
+    },
+    {
+      "utc": "2026-11-03T07:23:15.443250+00:00",
+      "id": "s04_official_prior",
+      "sample": 4,
+      "branch": "official_prior",
+      "seed": 20261033,
+      "repeat": false,
+      "batch": 1,
+      "policy_input_keys": [
+        "cam_extrinsics",
+        "image",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "5cf84937e7fceb46cc29f8622b4d7b50f77403d3c88c236ab35295224cc16549",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "e5b089a7af201bbe31ecaf1d9899a3bed946cbfdb4801396a166a43e4e582436",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s04_official_prior.npz",
+      "output_sha256": "bf0f6e4a7cfacaec31670d35827b4605ac3cc5370101d54b3be649cf7f2803fb",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": "zero z",
+      "loss": null,
+      "input_file_sha256": "f733f19aff857f04e6f7f8d9669c47958fe64f42aa8056f0ded515ef8ad49009"
+    },
+    {
+      "utc": "2026-11-03T07:23:15.782877+00:00",
+      "id": "s04_custom_prior",
+      "sample": 4,
+      "branch": "custom_prior",
+      "seed": 20261033,
+      "repeat": false,
+      "batch": 1,
+      "policy_input_keys": [
+        "cam_extrinsics",
+        "image",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "21718b0d95c50af3a353eade66b4794028fc7c3e863bdbe25e4acf081dccc016",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "ef8621a391c3e91b3f2c326f8bf6a2a9fe9753e2dfaf1b891fde030f03e678b8",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s04_custom_prior.npz",
+      "output_sha256": "eea44e907bd26e0f1bde035e72180953a787301787afd0ef6504d2f72c968f35",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": "zero z",
+      "loss": null,
+      "input_file_sha256": "f733f19aff857f04e6f7f8d9669c47958fe64f42aa8056f0ded515ef8ad49009"
+    },
+    {
+      "utc": "2026-11-03T07:23:16.126498+00:00",
+      "id": "s04_official_posterior",
+      "sample": 4,
+      "branch": "official_posterior",
+      "seed": 20261033,
+      "repeat": false,
+      "batch": 1,
+      "policy_input_keys": [
+        "actions",
+        "cam_extrinsics",
+        "image",
+        "is_pad",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "5cf84937e7fceb46cc29f8622b4d7b50f77403d3c88c236ab35295224cc16549",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca",
+        "actions": "ccc0d86d59e751316f6021507cf20206c2648126f26f1e9657b9e922877f6568",
+        "is_pad": "7968975186e50b241418a0bbd6501a65297db46311f690ee705176a008fdba60"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "e5b089a7af201bbe31ecaf1d9899a3bed946cbfdb4801396a166a43e4e582436",
+        "actions": "030e83fd1b95449f6ef9205e95b8e0dff72d1eba911fab475ba241d2b171c1a6",
+        "is_pad": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s04_official_posterior.npz",
+      "output_sha256": "f42c78c713a88fe2e97d1b0257d03fc357e3ffee995b9249b9d56b1e57dc79d4",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": null,
+      "loss": {
+        "l1": 0.2886902093887329,
+        "kl": 0.011902272701263428,
+        "loss": 0.30059248208999634
+      },
+      "input_file_sha256": "f733f19aff857f04e6f7f8d9669c47958fe64f42aa8056f0ded515ef8ad49009"
+    },
+    {
+      "utc": "2026-11-03T07:23:16.474883+00:00",
+      "id": "s05_official_prior",
+      "sample": 5,
+      "branch": "official_prior",
+      "seed": 20261034,
+      "repeat": false,
+      "batch": 1,
+      "policy_input_keys": [
+        "cam_extrinsics",
+        "image",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "eedafac6513d858c0654d860876fefe588cdfd3432794c5be29b8e210441cd9e",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "66a0b82238c842a396b58b716f88d75fb7297a1cd46c2ec835bb5e6585211bba",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s05_official_prior.npz",
+      "output_sha256": "f388202a1bbe5b66988febe8bb711582f0120885f18dab0a17d170ab5fe2b9b8",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": "zero z",
+      "loss": null,
+      "input_file_sha256": "e4bc32b2d203cbcf272abcfb061274613404f6155e9206c53098ede3500deed2"
+    },
+    {
+      "utc": "2026-11-03T07:23:16.810199+00:00",
+      "id": "s05_custom_prior",
+      "sample": 5,
+      "branch": "custom_prior",
+      "seed": 20261034,
+      "repeat": false,
+      "batch": 1,
+      "policy_input_keys": [
+        "cam_extrinsics",
+        "image",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "760a141d69f09641a4e90d614937c2acc6a85b27cf5fc41e14b080e7fbafd11e",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "8fcdd8adab389ce55adafd3d0fe726f6febd8f92f34119ed53c8a7030983c5aa",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s05_custom_prior.npz",
+      "output_sha256": "c6fb02b191b16a974f218c686b98ca166226868d8eb95b9e0d55c00fe9db2ce5",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": "zero z",
+      "loss": null,
+      "input_file_sha256": "e4bc32b2d203cbcf272abcfb061274613404f6155e9206c53098ede3500deed2"
+    },
+    {
+      "utc": "2026-11-03T07:23:17.170178+00:00",
+      "id": "s05_official_posterior",
+      "sample": 5,
+      "branch": "official_posterior",
+      "seed": 20261034,
+      "repeat": false,
+      "batch": 1,
+      "policy_input_keys": [
+        "actions",
+        "cam_extrinsics",
+        "image",
+        "is_pad",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "eedafac6513d858c0654d860876fefe588cdfd3432794c5be29b8e210441cd9e",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca",
+        "actions": "2940c208d691c6613e531689fe0898704e3da173753b53fdbc5149bd2b455229",
+        "is_pad": "d0b0377e07afa96aa9a84aa7dc723b10938f7fe854b5834edf37e3c485cc0d1d"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "66a0b82238c842a396b58b716f88d75fb7297a1cd46c2ec835bb5e6585211bba",
+        "actions": "1222dcd3c739eb832c40bc1c24a310bdda31ef3062859ce2222cf8101212dce1",
+        "is_pad": "0679246d6c4216de0daa08e5523fb2674db2b6599c3b72ff946b488a15290b62",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s05_official_posterior.npz",
+      "output_sha256": "83d1f198637aa9eae562455c293c99d269a6285503067fc7eae46800e44ab6a5",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": null,
+      "loss": {
+        "l1": 0.257741242647171,
+        "kl": 0.011594295501708984,
+        "loss": 0.26933553814888
+      },
+      "input_file_sha256": "e4bc32b2d203cbcf272abcfb061274613404f6155e9206c53098ede3500deed2"
+    },
+    {
+      "utc": "2026-11-03T07:23:17.532072+00:00",
+      "id": "s00_official_prior_repeat",
+      "sample": 0,
+      "branch": "official_prior",
+      "seed": 20261029,
+      "repeat": true,
+      "batch": 1,
+      "policy_input_keys": [
+        "cam_extrinsics",
+        "image",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "3b1fe00564c4d29651fb05bd5e3f56bf66355ee0e107a9cb8c599a963161e347",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "12bdfc2c8e2dacaa70576fe516944ce30654387b9d68aa7dd3dbc825885a20c7",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s00_official_prior_repeat.npz",
+      "output_sha256": "0d4cc49629c5f42c3e682198fd46c984510307e2f5f388e5f267efc540a4af66",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": "zero z",
+      "loss": null,
+      "input_file_sha256": "20a181523e9a9335cfbaa3949fd6afcfb3b0b3e25f7d5ef9aafbf66d583e3766"
+    },
+    {
+      "utc": "2026-11-03T07:23:17.870959+00:00",
+      "id": "s00_custom_prior_repeat",
+      "sample": 0,
+      "branch": "custom_prior",
+      "seed": 20261029,
+      "repeat": true,
+      "batch": 1,
+      "policy_input_keys": [
+        "cam_extrinsics",
+        "image",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "55f9b4b9266de58783ac0378c3e03172d7f1ba3364a8a0a547dc1ca277a3db9c",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "6151a5f6b7fc8b65ab4af5f1bf7a6fcce1e913cce376bb86149828ae45565ce9",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s00_custom_prior_repeat.npz",
+      "output_sha256": "e54fee0d49b6d13f6aa93b8fec39f49160457fcc80723fe4c235a7d97731c0dd",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": "zero z",
+      "loss": null,
+      "input_file_sha256": "20a181523e9a9335cfbaa3949fd6afcfb3b0b3e25f7d5ef9aafbf66d583e3766"
+    },
+    {
+      "utc": "2026-11-03T07:23:18.227323+00:00",
+      "id": "s01_official_prior_repeat",
+      "sample": 1,
+      "branch": "official_prior",
+      "seed": 20261030,
+      "repeat": true,
+      "batch": 1,
+      "policy_input_keys": [
+        "cam_extrinsics",
+        "image",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "d42dc5b33e070beeb35cd536b15d05566e5c4eff512517637ce204b7e3cf7013",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "000216f8da3073543b02149ad0d6097d6cf930f9827d011064c1b69075370f50",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s01_official_prior_repeat.npz",
+      "output_sha256": "6db982af2ec6fb4f698f18b7e2e51e0ae65240a7134bdea355d9bea57c0c40fa",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": "zero z",
+      "loss": null,
+      "input_file_sha256": "d601b35c864005b0d72908703e8541e7fe57edd4ab02fbb04cc4ada1a27bead8"
+    },
+    {
+      "utc": "2026-11-03T07:23:18.605349+00:00",
+      "id": "s01_custom_prior_repeat",
+      "sample": 1,
+      "branch": "custom_prior",
+      "seed": 20261030,
+      "repeat": true,
+      "batch": 1,
+      "policy_input_keys": [
+        "cam_extrinsics",
+        "image",
+        "qpos"
+      ],
+      "input_hashes": {
+        "image": "2a80f3f921012fc7a178024a6ac12bfbbb45cf1c526875e56f415645cca8d58f",
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "internal_input_hashes": {
+        "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+        "image": "71f5e59914e5cbaf5125fadab073346b62df04dd4a765eb3af9efc1acb57cc01",
+        "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+      },
+      "output_npz": "results/predictions/s01_custom_prior_repeat.npz",
+      "output_sha256": "ebf8fd5f5615696877662a69696d3047d6b862451d4a3bb174aa7fdbc09634f0",
+      "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+      "prior_latent": "zero z",
+      "loss": null,
+      "input_file_sha256": "d601b35c864005b0d72908703e8541e7fe57edd4ab02fbb04cc4ada1a27bead8"
+    }
+  ],
+  "policy_entries": 16,
+  "internal_entries": 16,
+  "backward": "NOT_RUN",
+  "optimizer": "NOT_CREATED",
+  "rollout": "NOT_RUN"
+}

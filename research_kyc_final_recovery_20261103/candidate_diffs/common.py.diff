@@ -1,0 +1,16 @@
+--- /home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/common.py
++++ /home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/common.py
+@@ -14,8 +14,11 @@
+ K = R / 'vendor/kyc/policy_robosuite'
+ EXECUTOR = {'thread_id': '01a185d0-2da8-70a2-b997-d273c7285042',
+             'model': 'gpt-6.1-sol', 'reasoning_effort': 'max'}
+-CAPS = dict(workers=2, make_env=2, renders=12, readPixels=24, ACT=16,
+-            env_steps=0, rollouts=0, backward=0, optimizer=0)
++CAPS = dict(gpu_workers=5, make_env=11, s1_ACT=16, s1_renders=12, s1_readPixels=24,
++            s2_queries=80, s2_renders=80, s2_readPixels=160, s2_steps=2400, s2_rollouts=16,
++            backward=0, optimizer=0)
++RECOVERY_ID='kyc-last-recovery-441e91b0-ee5f-4294-9501-070606a5f695'
++PHASES=('gpu-preflight','s1-input','s1-model','s2-closed')
+ REFERENCE_SHA = '688297023a217d9874c347fdd0a6821def4d0a57d6abc8899014c63860976c37'
+ 
+ 

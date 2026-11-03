@@ -1,0 +1,28 @@
+{
+  "utc": "2026-11-03T02:06:57.900115+00:00",
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "-B",
+    "/home/asus/EAI/research_kyc_final_recovery_20261103/run.py",
+    "cpu-preflight"
+  ],
+  "cwd": "/home/asus/EAI/research_kyc_final_recovery_20261103",
+  "interpreter": "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+  "identity": {
+    "pid": 255052,
+    "ppid": 255045,
+    "start_ticks": 302557795,
+    "state": "R",
+    "rss": 262144
+  },
+  "supervisor": {
+    "pid": 255045,
+    "ppid": 2974399,
+    "start_ticks": 302557786,
+    "state": "R",
+    "rss": 19398656
+  },
+  "epoch": 1793671617.8995743,
+  "CUDA_VISIBLE_DEVICES": "",
+  "environment_difference_from_GPU": "device visibility only; same loader/cwd/python/order"
+}

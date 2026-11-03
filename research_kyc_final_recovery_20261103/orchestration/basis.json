@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-11-03T01:52:22.128282+00:00",
+  "raw_user_task_sha256": "6c7bb9d47431cb7ea2e1ce4b7325b3860649bff893c5a00a5c9ae44ac0dcbe0e",
+  "prior_public_commit": "36f996fb9c6af97c56260c549b0ef497ad840b7b",
+  "prior_scope_read_only": "/home/asus/EAI/research_kyc_checkpoint_diagnostics_next",
+  "recovery_scope": "last_finite_F_recovery",
+  "original_thread_id": "01a18138-0f15-76b2-b5cf-20e1722782a9",
+  "executor_thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+  "executor_model": "gpt-6.1-sol",
+  "executor_reasoning_effort": "max"
+}

@@ -1,0 +1,465 @@
+{
+  "files": [
+    {
+      "file": "inputs/sample_00.npz",
+      "arrays": 18,
+      "numeric_only": true
+    },
+    {
+      "file": "inputs/sample_01.npz",
+      "arrays": 18,
+      "numeric_only": true
+    },
+    {
+      "file": "inputs/sample_04.npz",
+      "arrays": 18,
+      "numeric_only": true
+    },
+    {
+      "file": "inputs/sample_05.npz",
+      "arrays": 18,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_01_raw.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_02_sentinel.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_03_raw.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_04_sentinel.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_05_raw.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_06_sentinel.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_07_raw.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_08_sentinel.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_09_raw.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_10_sentinel.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_11_raw.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_12_sentinel.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_13_raw.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_14_sentinel.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_15_raw.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_16_sentinel.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_17_raw.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_18_sentinel.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_19_raw.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_20_sentinel.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_21_raw.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_22_sentinel.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_23_raw.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/read_24_sentinel.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s00_custom_flip_input.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s00_custom_flip_output.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s00_custom_saved.npz",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s00_custom_tensor_rgb.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s00_dataset_flip_input.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s00_dataset_flip_output.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s00_dataset_saved.npz",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s00_dataset_tensor_rgb.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s00_evaluator_flip_input.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s00_evaluator_flip_output.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s00_evaluator_saved.npz",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s00_evaluator_tensor_rgb.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s01_custom_flip_input.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s01_custom_flip_output.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s01_custom_saved.npz",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s01_custom_tensor_rgb.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s01_dataset_flip_input.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s01_dataset_flip_output.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s01_dataset_saved.npz",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s01_dataset_tensor_rgb.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s01_evaluator_flip_input.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s01_evaluator_flip_output.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s01_evaluator_saved.npz",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s01_evaluator_tensor_rgb.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s04_custom_flip_input.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s04_custom_flip_output.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s04_custom_saved.npz",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s04_custom_tensor_rgb.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s04_dataset_flip_input.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s04_dataset_flip_output.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s04_dataset_saved.npz",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s04_dataset_tensor_rgb.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s04_evaluator_flip_input.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s04_evaluator_flip_output.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s04_evaluator_saved.npz",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s04_evaluator_tensor_rgb.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s05_custom_flip_input.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s05_custom_flip_output.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s05_custom_saved.npz",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s05_custom_tensor_rgb.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s05_dataset_flip_input.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s05_dataset_flip_output.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s05_dataset_saved.npz",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s05_dataset_tensor_rgb.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s05_evaluator_flip_input.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s05_evaluator_flip_output.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s05_evaluator_saved.npz",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/input/s05_evaluator_tensor_rgb.npy",
+      "arrays": 1,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s00_custom_prior.npz",
+      "arrays": 8,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s00_custom_prior_repeat.npz",
+      "arrays": 8,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s00_official_posterior.npz",
+      "arrays": 10,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s00_official_prior.npz",
+      "arrays": 8,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s00_official_prior_repeat.npz",
+      "arrays": 8,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s01_custom_prior.npz",
+      "arrays": 8,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s01_custom_prior_repeat.npz",
+      "arrays": 8,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s01_official_posterior.npz",
+      "arrays": 10,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s01_official_prior.npz",
+      "arrays": 8,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s01_official_prior_repeat.npz",
+      "arrays": 8,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s04_custom_prior.npz",
+      "arrays": 8,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s04_official_posterior.npz",
+      "arrays": 10,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s04_official_prior.npz",
+      "arrays": 8,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s05_custom_prior.npz",
+      "arrays": 8,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s05_official_posterior.npz",
+      "arrays": 10,
+      "numeric_only": true
+    },
+    {
+      "file": "results/predictions/s05_official_prior.npz",
+      "arrays": 8,
+      "numeric_only": true
+    }
+  ],
+  "all_arrays_numeric_no_pickle": true
+}

@@ -1,0 +1,11 @@
+--- old_harness/supervisor.py
++++ kyc_recovery/supervisor.py
+@@ -1,6 +1,6 @@
+ """Two explicit stage invocations, one cumulative ledger; never run in prep."""
+-from common import *
+-from gates import gate, reserve
++from .common import *
++from .gates import gate, reserve
+ import argparse
+ import secrets
+ import signal

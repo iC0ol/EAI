@@ -1,0 +1,124 @@
+{
+  "recovery_id": "kyc-last-recovery-441e91b0-ee5f-4294-9501-070606a5f695",
+  "counts": {
+    "gpu_workers": 3,
+    "make_env": 2,
+    "s1_ACT": 16,
+    "s1_renders": 12,
+    "s1_readPixels": 24,
+    "s2_queries": 0,
+    "s2_renders": 0,
+    "s2_readPixels": 0,
+    "s2_steps": 0,
+    "s2_rollouts": 0,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "GPU_seconds": 53.40354579128325,
+  "engineering_GPU_seconds": 16.88504482805729,
+  "stage1_GPU_seconds": 36.51850096322596,
+  "stages": {
+    "gpu-preflight": {
+      "utc": "2026-11-03T07:08:49.944613+00:00",
+      "stage": "gpu-preflight",
+      "identity": {
+        "pid": 329107,
+        "ppid": 329066,
+        "start_ticks": 304367320,
+        "state": "R",
+        "rss": 262144
+      },
+      "exit_code": 0,
+      "reason": "EXITED",
+      "GPU_seconds": 16.88504482805729,
+      "cumulative_GPU_seconds": 16.88504482805729,
+      "quota": 180.0,
+      "started_epoch": 1793689713.0594192,
+      "ended_epoch": 1793689729.9446275,
+      "counts_after_exit": {
+        "gpu_workers": 1,
+        "make_env": 1,
+        "s1_ACT": 0,
+        "s1_renders": 0,
+        "s1_readPixels": 0,
+        "s2_queries": 0,
+        "s2_renders": 0,
+        "s2_readPixels": 0,
+        "s2_steps": 0,
+        "s2_rollouts": 0,
+        "backward": 0,
+        "optimizer": 0
+      }
+    },
+    "s1-input": {
+      "utc": "2026-11-03T07:16:54.513910+00:00",
+      "stage": "s1-input",
+      "identity": {
+        "pid": 334233,
+        "ppid": 334180,
+        "start_ticks": 304415481,
+        "state": "R",
+        "rss": 8257536
+      },
+      "exit_code": 0,
+      "reason": "EXITED",
+      "GPU_seconds": 19.8545615891926,
+      "cumulative_GPU_seconds": 36.73960641724989,
+      "quota": 210,
+      "started_epoch": 1793690194.6591783,
+      "ended_epoch": 1793690214.5139215,
+      "counts_after_exit": {
+        "gpu_workers": 2,
+        "make_env": 2,
+        "s1_ACT": 0,
+        "s1_renders": 12,
+        "s1_readPixels": 24,
+        "s2_queries": 0,
+        "s2_renders": 0,
+        "s2_readPixels": 0,
+        "s2_steps": 0,
+        "s2_rollouts": 0,
+        "backward": 0,
+        "optimizer": 0
+      }
+    },
+    "s1-model": {
+      "utc": "2026-11-03T07:23:19.281717+00:00",
+      "stage": "s1-model",
+      "identity": {
+        "pid": 337583,
+        "ppid": 337554,
+        "start_ticks": 304454281,
+        "state": "R",
+        "rss": 262144
+      },
+      "exit_code": 0,
+      "reason": "EXITED",
+      "GPU_seconds": 16.66393937403336,
+      "cumulative_GPU_seconds": 53.40354579128325,
+      "quota": 580.1454384108074,
+      "started_epoch": 1793690582.617604,
+      "ended_epoch": 1793690599.2817285,
+      "counts_after_exit": {
+        "gpu_workers": 3,
+        "make_env": 2,
+        "s1_ACT": 16,
+        "s1_renders": 12,
+        "s1_readPixels": 24,
+        "s2_queries": 0,
+        "s2_renders": 0,
+        "s2_readPixels": 0,
+        "s2_steps": 0,
+        "s2_rollouts": 0,
+        "backward": 0,
+        "optimizer": 0
+      }
+    }
+  },
+  "active_lease": null,
+  "phase_make_env": {
+    "gpu-preflight": 1,
+    "s1-input": 1
+  },
+  "active_rollout": null
+}

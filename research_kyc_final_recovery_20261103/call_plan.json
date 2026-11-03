@@ -1,0 +1,136 @@
+{
+  "calls": [
+    {
+      "id": "s00_official_prior",
+      "sample": 0,
+      "branch": "official_prior",
+      "seed": 20261029,
+      "repeat": false,
+      "batch": 1
+    },
+    {
+      "id": "s00_custom_prior",
+      "sample": 0,
+      "branch": "custom_prior",
+      "seed": 20261029,
+      "repeat": false,
+      "batch": 1
+    },
+    {
+      "id": "s00_official_posterior",
+      "sample": 0,
+      "branch": "official_posterior",
+      "seed": 20261029,
+      "repeat": false,
+      "batch": 1
+    },
+    {
+      "id": "s01_official_prior",
+      "sample": 1,
+      "branch": "official_prior",
+      "seed": 20261030,
+      "repeat": false,
+      "batch": 1
+    },
+    {
+      "id": "s01_custom_prior",
+      "sample": 1,
+      "branch": "custom_prior",
+      "seed": 20261030,
+      "repeat": false,
+      "batch": 1
+    },
+    {
+      "id": "s01_official_posterior",
+      "sample": 1,
+      "branch": "official_posterior",
+      "seed": 20261030,
+      "repeat": false,
+      "batch": 1
+    },
+    {
+      "id": "s04_official_prior",
+      "sample": 4,
+      "branch": "official_prior",
+      "seed": 20261033,
+      "repeat": false,
+      "batch": 1
+    },
+    {
+      "id": "s04_custom_prior",
+      "sample": 4,
+      "branch": "custom_prior",
+      "seed": 20261033,
+      "repeat": false,
+      "batch": 1
+    },
+    {
+      "id": "s04_official_posterior",
+      "sample": 4,
+      "branch": "official_posterior",
+      "seed": 20261033,
+      "repeat": false,
+      "batch": 1
+    },
+    {
+      "id": "s05_official_prior",
+      "sample": 5,
+      "branch": "official_prior",
+      "seed": 20261034,
+      "repeat": false,
+      "batch": 1
+    },
+    {
+      "id": "s05_custom_prior",
+      "sample": 5,
+      "branch": "custom_prior",
+      "seed": 20261034,
+      "repeat": false,
+      "batch": 1
+    },
+    {
+      "id": "s05_official_posterior",
+      "sample": 5,
+      "branch": "official_posterior",
+      "seed": 20261034,
+      "repeat": false,
+      "batch": 1
+    },
+    {
+      "id": "s00_official_prior_repeat",
+      "sample": 0,
+      "branch": "official_prior",
+      "seed": 20261029,
+      "repeat": true,
+      "batch": 1
+    },
+    {
+      "id": "s00_custom_prior_repeat",
+      "sample": 0,
+      "branch": "custom_prior",
+      "seed": 20261029,
+      "repeat": true,
+      "batch": 1
+    },
+    {
+      "id": "s01_official_prior_repeat",
+      "sample": 1,
+      "branch": "official_prior",
+      "seed": 20261030,
+      "repeat": true,
+      "batch": 1
+    },
+    {
+      "id": "s01_custom_prior_repeat",
+      "sample": 1,
+      "branch": "custom_prior",
+      "seed": 20261030,
+      "repeat": true,
+      "batch": 1
+    }
+  ],
+  "call_cap": 16,
+  "latent_prior": "actual upstream zero z",
+  "precision": "FP32 parameters + CUDA BF16 autocast; TF32 off",
+  "no_warmup": true
+}

@@ -1,0 +1,787 @@
+{
+  "utc": "2026-11-03T07:24:58.024353+00:00",
+  "author": "Codex parent independent computation; executor analysis.json not read",
+  "model_result_sha256": "ba077432c143e8badb07aa049b84cddaaf0816e416289b0a3bf53ff092c1d4ca",
+  "sources_and_input_files_reverified": true,
+  "records": [
+    {
+      "id": "s00_official_prior",
+      "raw_file_sha256": "0d4cc49629c5f42c3e682198fd46c984510307e2f5f388e5f267efc540a4af66",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s00_custom_prior",
+      "raw_file_sha256": "e54fee0d49b6d13f6aa93b8fec39f49160457fcc80723fe4c235a7d97731c0dd",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s00_official_posterior",
+      "raw_file_sha256": "6172dbfbc9a62419aea06adc864aff48fa7997d6f461a47593e849e60215d726",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s01_official_prior",
+      "raw_file_sha256": "6db982af2ec6fb4f698f18b7e2e51e0ae65240a7134bdea355d9bea57c0c40fa",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s01_custom_prior",
+      "raw_file_sha256": "ebf8fd5f5615696877662a69696d3047d6b862451d4a3bb174aa7fdbc09634f0",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s01_official_posterior",
+      "raw_file_sha256": "4820e449a33be423d396d7746dfd636294a0f32aec85a671926dde07f5d05a29",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s04_official_prior",
+      "raw_file_sha256": "bf0f6e4a7cfacaec31670d35827b4605ac3cc5370101d54b3be649cf7f2803fb",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s04_custom_prior",
+      "raw_file_sha256": "eea44e907bd26e0f1bde035e72180953a787301787afd0ef6504d2f72c968f35",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s04_official_posterior",
+      "raw_file_sha256": "f42c78c713a88fe2e97d1b0257d03fc357e3ffee995b9249b9d56b1e57dc79d4",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s05_official_prior",
+      "raw_file_sha256": "f388202a1bbe5b66988febe8bb711582f0120885f18dab0a17d170ab5fe2b9b8",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s05_custom_prior",
+      "raw_file_sha256": "c6fb02b191b16a974f218c686b98ca166226868d8eb95b9e0d55c00fe9db2ce5",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s05_official_posterior",
+      "raw_file_sha256": "83d1f198637aa9eae562455c293c99d269a6285503067fc7eae46800e44ab6a5",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s00_official_prior_repeat",
+      "raw_file_sha256": "0d4cc49629c5f42c3e682198fd46c984510307e2f5f388e5f267efc540a4af66",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s00_custom_prior_repeat",
+      "raw_file_sha256": "e54fee0d49b6d13f6aa93b8fec39f49160457fcc80723fe4c235a7d97731c0dd",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s01_official_prior_repeat",
+      "raw_file_sha256": "6db982af2ec6fb4f698f18b7e2e51e0ae65240a7134bdea355d9bea57c0c40fa",
+      "original_input_hashes_match": true
+    },
+    {
+      "id": "s01_custom_prior_repeat",
+      "raw_file_sha256": "ebf8fd5f5615696877662a69696d3047d6b862451d4a3bb174aa7fdbc09634f0",
+      "original_input_hashes_match": true
+    }
+  ],
+  "per_state": [
+    {
+      "sample": 0,
+      "demo": 0,
+      "metrics": {
+        "official_prior": {
+          "xyz_normalized_MAE": 1.145472333830242,
+          "all7_normalized_MAE": 0.7644835784597864,
+          "all7_normalized_RMSE": 1.1376957107417103,
+          "normalized_MAE_by_dim": [
+            0.9985650769365789,
+            2.1035878612186543,
+            0.33426406333549347,
+            0.5494842049973854,
+            0.40686006249472584,
+            0.7716202518300246,
+            0.18700352840564355
+          ],
+          "raw_MAE_by_dim": [
+            0.0023290781273999526,
+            0.004387199844353517,
+            0.0016110727506656985,
+            0.01647543408347095,
+            0.023500816289462514,
+            0.002049489657410201,
+            0.18337793368846178
+          ],
+          "cosine_mean": 0.5057839142075552,
+          "gripper_sign_accuracy": 0.9,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "valid_steps": 30
+        },
+        "custom_prior": {
+          "xyz_normalized_MAE": 1.145472333830242,
+          "all7_normalized_MAE": 0.7644835784597864,
+          "all7_normalized_RMSE": 1.1376957107417103,
+          "normalized_MAE_by_dim": [
+            0.9985650769365789,
+            2.1035878612186543,
+            0.33426406333549347,
+            0.5494842049973854,
+            0.40686006249472584,
+            0.7716202518300246,
+            0.18700352840564355
+          ],
+          "raw_MAE_by_dim": [
+            0.0023290781273999526,
+            0.004387199844353517,
+            0.0016110727506656985,
+            0.01647543408347095,
+            0.023500816289462514,
+            0.002049489657410201,
+            0.18337793368846178
+          ],
+          "cosine_mean": 0.5057839142075552,
+          "gripper_sign_accuracy": 0.9,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "valid_steps": 30
+        },
+        "official_posterior": {
+          "xyz_normalized_MAE": 1.1467744171635752,
+          "all7_normalized_MAE": 0.7656307487536853,
+          "all7_normalized_RMSE": 1.1382579657734446,
+          "normalized_MAE_by_dim": [
+            1.0003879936032456,
+            2.102987682182196,
+            0.33694757570528516,
+            0.549463859945302,
+            0.4068620969999342,
+            0.7712052127675246,
+            0.1915608200723102
+          ],
+          "raw_MAE_by_dim": [
+            0.0023333299437657234,
+            0.004385948123223215,
+            0.0016240066377605443,
+            0.01647482406854882,
+            0.02350093380537904,
+            0.002048387278015677,
+            0.1878468693078806
+          ],
+          "cosine_mean": 0.4934807448474963,
+          "gripper_sign_accuracy": 0.9,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "valid_steps": 30
+        },
+        "mean": {
+          "xyz_normalized_MAE": 1.1430309504763385,
+          "all7_normalized_MAE": 0.8894233148415865,
+          "all7_normalized_RMSE": 1.1772730070881523,
+          "normalized_MAE_by_dim": [
+            0.8028167875242382,
+            2.108869851897527,
+            0.5174062120072501,
+            0.5646765639225914,
+            0.4026117713451434,
+            0.8474306044151022,
+            0.9821514127792524
+          ],
+          "raw_MAE_by_dim": [
+            0.0018725099278141038,
+            0.004398215856145298,
+            0.0024937740565709435,
+            0.016930953470139856,
+            0.023255428946113273,
+            0.0022508484646463333,
+            0.9631096171297026
+          ],
+          "cosine_mean": 0.3100381183455429,
+          "gripper_sign_accuracy": 0.6333333333333333,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "valid_steps": 30
+        },
+        "median": {
+          "xyz_normalized_MAE": 1.1934902851379894,
+          "all7_normalized_MAE": 0.8663915094238965,
+          "all7_normalized_RMSE": 1.2234237841918854,
+          "normalized_MAE_by_dim": [
+            1.0509833089581173,
+            2.100141010389511,
+            0.4293465360663405,
+            0.5491388712254095,
+            0.40704738418960235,
+            0.7802512701395063,
+            0.7478321849987882
+          ],
+          "raw_MAE_by_dim": [
+            0.002451339721058806,
+            0.0043800111627206205,
+            0.0020693475031293928,
+            0.01646507978439331,
+            0.02351163625717163,
+            0.002072414383292198,
+            0.7333333333333333
+          ],
+          "cosine_mean": 0.12902449924187376,
+          "gripper_sign_accuracy": 0.6333333333333333,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "valid_steps": 30
+        }
+      }
+    },
+    {
+      "sample": 1,
+      "demo": 50,
+      "metrics": {
+        "official_prior": {
+          "xyz_normalized_MAE": 1.187711431832773,
+          "all7_normalized_MAE": 0.8463486548375674,
+          "all7_normalized_RMSE": 1.1811480941061976,
+          "normalized_MAE_by_dim": [
+            1.7807733150699518,
+            1.2434686626687632,
+            0.5388923177596042,
+            0.5916124782460579,
+            0.27277497698006486,
+            0.9018423880662202,
+            0.5950764450723102
+          ],
+          "raw_MAE_by_dim": [
+            0.004153520159858696,
+            0.0025933528253763902,
+            0.002597331941765428,
+            0.01773858520346039,
+            0.015755870908204392,
+            0.0023953708350347826,
+            0.583539197438707
+          ],
+          "cosine_mean": 0.5275878790670893,
+          "gripper_sign_accuracy": 0.7,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "valid_steps": 30
+        },
+        "custom_prior": {
+          "xyz_normalized_MAE": 1.187711431832773,
+          "all7_normalized_MAE": 0.8463486548375674,
+          "all7_normalized_RMSE": 1.1811480941061976,
+          "normalized_MAE_by_dim": [
+            1.7807733150699518,
+            1.2434686626687632,
+            0.5388923177596042,
+            0.5916124782460579,
+            0.27277497698006486,
+            0.9018423880662202,
+            0.5950764450723102
+          ],
+          "raw_MAE_by_dim": [
+            0.004153520159858696,
+            0.0025933528253763902,
+            0.002597331941765428,
+            0.01773858520346039,
+            0.015755870908204392,
+            0.0023953708350347826,
+            0.583539197438707
+          ],
+          "cosine_mean": 0.5275878790670893,
+          "gripper_sign_accuracy": 0.7,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "valid_steps": 30
+        },
+        "official_posterior": {
+          "xyz_normalized_MAE": 1.1876536179764363,
+          "all7_normalized_MAE": 0.8463485821766671,
+          "all7_normalized_RMSE": 1.1811124733810534,
+          "normalized_MAE_by_dim": [
+            1.7807733150699518,
+            1.2431675558979298,
+            0.5390199829614272,
+            0.5915921331939746,
+            0.2727892185165232,
+            0.9016307995245536,
+            0.5954670700723101
+          ],
+          "raw_MAE_by_dim": [
+            0.004153520159858696,
+            0.0025927248432500013,
+            0.00259794725747066,
+            0.017737975188538257,
+            0.015756693519620057,
+            0.0023948088376963975,
+            0.5839222490632285
+          ],
+          "cosine_mean": 0.5315913722823388,
+          "gripper_sign_accuracy": 0.7,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "valid_steps": 30
+        },
+        "mean": {
+          "xyz_normalized_MAE": 1.1632629771614473,
+          "all7_normalized_MAE": 0.8813312704153895,
+          "all7_normalized_RMSE": 1.130627068842531,
+          "normalized_MAE_by_dim": [
+            1.5462601802087643,
+            1.277069846367655,
+            0.6664589049079235,
+            0.5802477314998573,
+            0.27624282463188193,
+            0.8408879925123921,
+            0.9821514127792524
+          ],
+          "raw_MAE_by_dim": [
+            0.0036065358664876196,
+            0.0026634307672639564,
+            0.0032121723478781335,
+            0.017397830848395253,
+            0.01595617872432545,
+            0.002233470725537942,
+            0.9631096171297026
+          ],
+          "cosine_mean": 0.5666365869534199,
+          "gripper_sign_accuracy": 0.6333333333333333,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "valid_steps": 30
+        },
+        "median": {
+          "xyz_normalized_MAE": 1.2159209014268093,
+          "all7_normalized_MAE": 0.8813154807043415,
+          "all7_normalized_RMSE": 1.214691686233746,
+          "normalized_MAE_by_dim": [
+            1.7841284219011655,
+            1.2852350534122479,
+            0.5783992289670136,
+            0.5926755992102332,
+            0.2728705496529535,
+            0.9080673267879882,
+            0.7478321849987882
+          ],
+          "raw_MAE_by_dim": [
+            0.004161345694834988,
+            0.0026804599561728536,
+            0.002787745794436584,
+            0.017770461241404214,
+            0.015761391321818034,
+            0.0024119048068920773,
+            0.7333333333333333
+          ],
+          "cosine_mean": 0.1508528570867493,
+          "gripper_sign_accuracy": 0.6333333333333333,
+          "gripper_transition_hamming": 0.034482758620689655,
+          "expert_transition_count": 0,
+          "valid_steps": 30
+        }
+      }
+    },
+    {
+      "sample": 4,
+      "demo": 0,
+      "metrics": {
+        "official_prior": {
+          "xyz_normalized_MAE": 0.29453452333010455,
+          "all7_normalized_MAE": 0.28900701353414077,
+          "all7_normalized_RMSE": 0.7303275440444749,
+          "normalized_MAE_by_dim": [
+            0.09143496537074514,
+            0.23396625028989926,
+            0.5582023543296688,
+            0.007028132178708465,
+            0.004626915188022976,
+            0.08183037276202182,
+            1.0459601046199185
+          ],
+          "raw_MAE_by_dim": [
+            0.00021326519707448217,
+            0.00048795522914891386,
+            0.002690401694529025,
+            0.00021072767403893523,
+            0.00026725720670128794,
+            0.00021734849783949055,
+            1.025681196184208
+          ],
+          "cosine_mean": 0.5696618127525943,
+          "gripper_sign_accuracy": 0.5,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "valid_steps": 30
+        },
+        "custom_prior": {
+          "xyz_normalized_MAE": 0.29453452333010455,
+          "all7_normalized_MAE": 0.28900701353414077,
+          "all7_normalized_RMSE": 0.7303275440444749,
+          "normalized_MAE_by_dim": [
+            0.09143496537074514,
+            0.23396625028989926,
+            0.5582023543296688,
+            0.007028132178708465,
+            0.004626915188022976,
+            0.08183037276202182,
+            1.0459601046199185
+          ],
+          "raw_MAE_by_dim": [
+            0.00021326519707448217,
+            0.00048795522914891386,
+            0.002690401694529025,
+            0.00021072767403893523,
+            0.00026725720670128794,
+            0.00021734849783949055,
+            1.025681196184208
+          ],
+          "cosine_mean": 0.5696618127525943,
+          "gripper_sign_accuracy": 0.5,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "valid_steps": 30
+        },
+        "official_posterior": {
+          "xyz_normalized_MAE": 0.29440012409148236,
+          "all7_normalized_MAE": 0.28869019023459813,
+          "all7_normalized_RMSE": 0.7298810838364442,
+          "normalized_MAE_by_dim": [
+            0.0913047570374118,
+            0.23370953694903276,
+            0.5581860782880022,
+            0.007028132178708465,
+            0.004635266473757793,
+            0.08163506026202182,
+            1.0443325004532518
+          ],
+          "raw_MAE_by_dim": [
+            0.00021296149590549856,
+            0.00048741983305262694,
+            0.0026903232479052503,
+            0.00021072767403893523,
+            0.0002677395888516306,
+            0.00021682973106559682,
+            1.0240851477487012
+          ],
+          "cosine_mean": 0.6394454555645812,
+          "gripper_sign_accuracy": 0.5,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "valid_steps": 30
+        },
+        "mean": {
+          "xyz_normalized_MAE": 0.33762594216469133,
+          "all7_normalized_MAE": 0.30489810542568757,
+          "all7_normalized_RMSE": 0.6130531528535234,
+          "normalized_MAE_by_dim": [
+            0.23100371551293947,
+            0.2389227306034202,
+            0.5429513803777145,
+            0.0225312368419902,
+            0.007352569821219723,
+            0.14498189665646466,
+            0.9465432081660647
+          ],
+          "raw_MAE_by_dim": [
+            0.0005387988360256661,
+            0.0004982923631764046,
+            0.0026168956517019027,
+            0.0006755642910810291,
+            0.00042469489771110395,
+            0.0003850843689035184,
+            0.928191778733851
+          ],
+          "cosine_mean": 0.46987041079447317,
+          "gripper_sign_accuracy": 0.7666666666666667,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "valid_steps": 30
+        },
+        "median": {
+          "xyz_normalized_MAE": 0.2740601080897923,
+          "all7_normalized_MAE": 0.1996760957232733,
+          "all7_normalized_RMSE": 0.6141814263820017,
+          "normalized_MAE_by_dim": [
+            0.1034221513481469,
+            0.23080133803460068,
+            0.48795683488662916,
+            0.00640758960560785,
+            0.004475672935998604,
+            0.08877587461633714,
+            0.4758932086355925
+          ],
+          "raw_MAE_by_dim": [
+            0.00024122440906163925,
+            0.00048135455284257963,
+            0.002351835110069563,
+            0.0001921216646830241,
+            0.00025852123896280923,
+            0.00023579634726047515,
+            0.4666666666666667
+          ],
+          "cosine_mean": 0.5816477562224119,
+          "gripper_sign_accuracy": 0.7666666666666667,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "valid_steps": 30
+        }
+      }
+    },
+    {
+      "sample": 5,
+      "demo": 50,
+      "metrics": {
+        "official_prior": {
+          "xyz_normalized_MAE": 0.2864405276616948,
+          "all7_normalized_MAE": 0.2572906744132379,
+          "all7_normalized_RMSE": 0.688771900452006,
+          "normalized_MAE_by_dim": [
+            0.13705826570670793,
+            0.15907027998173537,
+            0.5631930372966407,
+            0.013765215035970398,
+            0.0021827585573257276,
+            0.08851194976976472,
+            0.8372532145445198
+          ],
+          "raw_MAE_by_dim": [
+            0.00031967812234749243,
+            0.0003317537244072355,
+            0.002714455591484229,
+            0.00041272868429587106,
+            0.0001260792409690718,
+            0.00023509534020149658,
+            0.8210206821560859
+          ],
+          "cosine_mean": 0.3922252125142295,
+          "gripper_sign_accuracy": 0.6,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "valid_steps": 30
+        },
+        "custom_prior": {
+          "xyz_normalized_MAE": 0.2864405276616948,
+          "all7_normalized_MAE": 0.2572906744132379,
+          "all7_normalized_RMSE": 0.688771900452006,
+          "normalized_MAE_by_dim": [
+            0.13705826570670793,
+            0.15907027998173537,
+            0.5631930372966407,
+            0.013765215035970398,
+            0.0021827585573257276,
+            0.08851194976976472,
+            0.8372532145445198
+          ],
+          "raw_MAE_by_dim": [
+            0.00031967812234749243,
+            0.0003317537244072355,
+            0.002714455591484229,
+            0.00041272868429587106,
+            0.0001260792409690718,
+            0.00023509534020149658,
+            0.8210206821560859
+          ],
+          "cosine_mean": 0.3922252125142295,
+          "gripper_sign_accuracy": 0.6,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "valid_steps": 30
+        },
+        "official_posterior": {
+          "xyz_normalized_MAE": 0.2867407965298361,
+          "all7_normalized_MAE": 0.2577412183929167,
+          "all7_normalized_RMSE": 0.6893134076989689,
+          "normalized_MAE_by_dim": [
+            0.13725357820670794,
+            0.15934798994267288,
+            0.5636208214401272,
+            0.013789629098470398,
+            0.0021896660606534105,
+            0.0886502961239314,
+            0.8393365478778532
+          ],
+          "raw_MAE_by_dim": [
+            0.00032013367410096787,
+            0.0003323329106251549,
+            0.0027165174086292154,
+            0.00041346070220242835,
+            0.0001264782281926576,
+            0.0002354627999996713,
+            0.8230636241535346
+          ],
+          "cosine_mean": 0.39496684897337775,
+          "gripper_sign_accuracy": 0.6,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "valid_steps": 30
+        },
+        "mean": {
+          "xyz_normalized_MAE": 0.31886251598513543,
+          "all7_normalized_MAE": 0.29521263708861345,
+          "all7_normalized_RMSE": 0.6115534263155658,
+          "normalized_MAE_by_dim": [
+            0.2862115877334299,
+            0.1424696941252345,
+            0.527906266096742,
+            0.025557566557734238,
+            0.005390063134282686,
+            0.11323039628278078,
+            0.9657228856900901
+          ],
+          "raw_MAE_by_dim": [
+            0.0006675670561636135,
+            0.0002971318818740574,
+            0.002544381803198846,
+            0.0007663041072452219,
+            0.0003113377182579183,
+            0.0003007496570179936,
+            0.9469996037153002
+          ],
+          "cosine_mean": 0.5737880383202211,
+          "gripper_sign_accuracy": 0.6666666666666666,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "valid_steps": 30
+        },
+        "median": {
+          "xyz_normalized_MAE": 0.26950353418000206,
+          "all7_normalized_MAE": 0.22712434822310387,
+          "all7_normalized_RMSE": 0.6608380230471427,
+          "normalized_MAE_by_dim": [
+            0.13542440963679345,
+            0.1396721304703904,
+            0.5334140624328223,
+            0.012377042099049173,
+            0.0019728761348709323,
+            0.08716247587981159,
+            0.6798474409079893
+          ],
+          "raw_MAE_by_dim": [
+            0.0003158672756399028,
+            0.00029129734029993416,
+            0.002570928062777966,
+            0.0003711064656575521,
+            0.00011395613352457682,
+            0.00023151102165381115,
+            0.6666666666666666
+          ],
+          "cosine_mean": 0.2907809008815931,
+          "gripper_sign_accuracy": 0.6666666666666666,
+          "gripper_transition_hamming": 0.06896551724137931,
+          "expert_transition_count": 1,
+          "valid_steps": 30
+        }
+      }
+    }
+  ],
+  "equal_state_aggregate": {
+    "official_prior": {
+      "xyz_normalized_MAE": 0.7285397041637036,
+      "all7_normalized_MAE": 0.5392824803111831,
+      "all7_normalized_RMSE": 0.9344858123360971,
+      "cosine_mean": 0.49881470463536703,
+      "gripper_sign_accuracy": 0.675,
+      "gripper_transition_hamming": 0.05172413793103448
+    },
+    "custom_prior": {
+      "xyz_normalized_MAE": 0.7285397041637036,
+      "all7_normalized_MAE": 0.5392824803111831,
+      "all7_normalized_RMSE": 0.9344858123360971,
+      "cosine_mean": 0.49881470463536703,
+      "gripper_sign_accuracy": 0.675,
+      "gripper_transition_hamming": 0.05172413793103448
+    },
+    "official_posterior": {
+      "xyz_normalized_MAE": 0.7288922389403325,
+      "all7_normalized_MAE": 0.5396026848894668,
+      "all7_normalized_RMSE": 0.9346412326724778,
+      "cosine_mean": 0.5148711054169486,
+      "gripper_sign_accuracy": 0.675,
+      "gripper_transition_hamming": 0.05172413793103448
+    },
+    "mean": {
+      "xyz_normalized_MAE": 0.7406955964469031,
+      "all7_normalized_MAE": 0.5927163319428193,
+      "all7_normalized_RMSE": 0.8831266637749431,
+      "cosine_mean": 0.4800832886034142,
+      "gripper_sign_accuracy": 0.6749999999999999,
+      "gripper_transition_hamming": 0.05172413793103448
+    },
+    "median": {
+      "xyz_normalized_MAE": 0.7382437072086483,
+      "all7_normalized_MAE": 0.5436268585186538,
+      "all7_normalized_RMSE": 0.9282837299636939,
+      "cosine_mean": 0.28807650335815704,
+      "gripper_sign_accuracy": 0.6749999999999999,
+      "gripper_transition_hamming": 0.05172413793103448
+    }
+  },
+  "entry_agreement": [
+    {
+      "sample": 0,
+      "difference": 0.0,
+      "own_repeat_noise": [
+        0.0,
+        0.0
+      ],
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    {
+      "sample": 1,
+      "difference": 0.0,
+      "own_repeat_noise": [
+        0.0,
+        0.0
+      ],
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    {
+      "sample": 4,
+      "difference": 0.0,
+      "own_repeat_noise": null,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    {
+      "sample": 5,
+      "difference": 0.0,
+      "own_repeat_noise": null,
+      "tolerance": 1e-05,
+      "passed": true
+    }
+  ],
+  "investment_checks": {
+    "all_entry_comparisons_pass": true,
+    "xyz_20percent_better_than_both": false,
+    "all7_not_worse_than_both": true,
+    "three_states_both_demos": false,
+    "direction_no_degradation": true,
+    "gripper_sign_no_degradation": true,
+    "gripper_transitions_no_degradation": true,
+    "no_near_zero_floor": true
+  },
+  "numeric_screen_passed": false,
+  "total_GPU_seconds": 53.40354579128325,
+  "counts": {
+    "gpu_workers": 3,
+    "make_env": 2,
+    "s1_ACT": 16,
+    "s1_renders": 12,
+    "s1_readPixels": 24,
+    "s2_queries": 0,
+    "s2_renders": 0,
+    "s2_readPixels": 0,
+    "s2_steps": 0,
+    "s2_rollouts": 0,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "model_event_counts": {
+    "READ_CACHED_PRETRAINED": 2,
+    "POLICY_ENTER": 16,
+    "INTERNAL_FORWARD_ENTER": 16,
+    "POLICY_COMPLETE": 16
+  },
+  "independent_demos": 2,
+  "training_states": 4,
+  "inference_scope": "descriptive only; no task success/generalization/visual-causality claim"
+}

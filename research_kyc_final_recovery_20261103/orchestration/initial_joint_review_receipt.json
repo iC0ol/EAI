@@ -1,0 +1,17 @@
+{
+  "checked_utc": "2026-11-03T02:01:39.651931+00:00",
+  "real_DeepSeek_round": "31_recovery_scope",
+  "started_utc": "2026-11-03T01:55:37.754620+00:00",
+  "ended_utc": "2026-11-03T01:56:18.825059+00:00",
+  "exit_code": 0,
+  "result_status": "success",
+  "actual_model_fields": [
+    "deepseek-flash"
+  ],
+  "codex_note": "notes/01_Codex初始针对性审查.md",
+  "codex_note_sha256": "8856b3bf8ccae7e0b9b7656bc607f5f052c86a9b4449b4b1f65ea67f5c7372a1",
+  "codex_note_mtime_ns": 1793670937693410720,
+  "response_sha256": "5adf34bcf9335a5ba5f4f477f000fb6cba24ee6b0cefda96b96f39c5f58b144b",
+  "only_CPU_dispatch_approved": true,
+  "GPU_code_SHA_approval": "NOT_YET"
+}

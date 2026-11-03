@@ -1,0 +1,36 @@
+{
+  "utc": "2026-11-03T02:05:43.577115+00:00",
+  "round": 1,
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "-B",
+    "/home/asus/EAI/research_kyc_final_recovery_20261103/run.py",
+    "cpu-preflight"
+  ],
+  "identity": {
+    "pid": 254524,
+    "ppid": 254518,
+    "start_ticks": 302550205,
+    "state": "R",
+    "rss": 131072
+  },
+  "exit_code": 1,
+  "elapsed_seconds": 1.5811429722234607,
+  "reason": "PROCESS_EXITED",
+  "actual_status": "CPU_PREFLIGHT_FAILED",
+  "samples": [
+    {
+      "elapsed": 0.02524536196142435,
+      "rss": 20709376,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 1.0433262060396373,
+      "rss": 398721024,
+      "own_GPU_process_seen": false
+    }
+  ],
+  "GPU_allocated_seconds_if_side_effect": 0,
+  "CPU_controlled_process": true,
+  "experimental_GPU_worker": false
+}

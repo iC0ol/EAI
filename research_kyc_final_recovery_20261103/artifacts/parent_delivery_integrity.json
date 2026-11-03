@@ -1,0 +1,42 @@
+{
+  "utc": "2026-11-03T12:26:00.685175+00:00",
+  "candidate_manifest_sha256": "bd4233fbeca8898d0145c3411ae98901897fd24b974984c3b83195cea75843ed",
+  "frozen_files_verified": 55,
+  "frozen_files_changed": [],
+  "workers": [
+    {
+      "record": "stages/gpu-preflight.json",
+      "identity": {
+        "pid": 329107,
+        "ppid": 329066,
+        "start_ticks": 304367320,
+        "state": "R",
+        "rss": 262144
+      },
+      "same_process_running": false
+    },
+    {
+      "record": "stages/s1-input.json",
+      "identity": {
+        "pid": 334233,
+        "ppid": 334180,
+        "start_ticks": 304415481,
+        "state": "R",
+        "rss": 8257536
+      },
+      "same_process_running": false
+    },
+    {
+      "record": "stages/s1-model.json",
+      "identity": {
+        "pid": 337583,
+        "ppid": 337554,
+        "start_ticks": 304454281,
+        "state": "R",
+        "rss": 262144
+      },
+      "same_process_running": false
+    }
+  ],
+  "audit_scope": "CPU file hashes and procfs identity only, no inference/environment initialization"
+}

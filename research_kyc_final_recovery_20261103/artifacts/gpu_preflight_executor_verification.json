@@ -1,0 +1,98 @@
+{
+  "verified_utc": "2026-11-03T07:09:39.996961+00:00",
+  "verdict": "ENGINEERING_READY_INPUT_AND_STRICT_LOAD_ONLY",
+  "GPU_seconds": 16.88504482805729,
+  "counts": {
+    "gpu_workers": 1,
+    "make_env": 1,
+    "s1_ACT": 0,
+    "s1_renders": 0,
+    "s1_readPixels": 0,
+    "s2_queries": 0,
+    "s2_renders": 0,
+    "s2_readPixels": 0,
+    "s2_steps": 0,
+    "s2_rollouts": 0,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "supervisor_identity": {
+    "pid": 329066,
+    "ppid": 2974399,
+    "start_ticks": 304367097
+  },
+  "worker_identity": {
+    "pid": 329107,
+    "ppid": 329066,
+    "start_ticks": 304367320,
+    "state": "R",
+    "rss": 262144
+  },
+  "supervisor_original_process_inactive": true,
+  "worker_original_process_inactive": true,
+  "active_GPU_lease": null,
+  "supervisor_unified_exec_exit_code": 0,
+  "stage_exit_code": 0,
+  "stage_reason": "EXITED",
+  "strict_load": {
+    "utc": "2026-11-03T07:08:47.241031+00:00",
+    "strict": true,
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "checkpoint_sha256": "c904a97002571d96e3ee6b66057d09162cbdcb5e926cb6ea0b660ca1390bce13",
+    "optimizer_created": false,
+    "optimizer_state_loaded": false,
+    "cached_pretrained_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec"
+  },
+  "candidate_files_verified": 55,
+  "readonly_sources_verified": 113,
+  "CPU_snapshot_code_files_verified": 26,
+  "candidate_manifest_sha256": "bd4233fbeca8898d0145c3411ae98901897fd24b974984c3b83195cea75843ed",
+  "protocol_sha256": "3fd12394fd845a4c2df528119655af65ab1a830b55833f5aa278c0c8c004c460",
+  "candidate_source_unchanged": true,
+  "science_clock_present": false,
+  "terminal_stop_present": false,
+  "ledger": [
+    {
+      "utc": "2026-11-03T07:08:33.086030+00:00",
+      "event": "ATTEMPT_BEFORE_OPERATION",
+      "phase": "gpu-preflight",
+      "kind": "workers",
+      "label": "gpu-preflight"
+    },
+    {
+      "utc": "2026-11-03T07:08:40.242272+00:00",
+      "event": "ATTEMPT_BEFORE_OPERATION",
+      "phase": "gpu-preflight",
+      "kind": "make_env",
+      "label": "shared_physics_builder.make_env"
+    }
+  ],
+  "telemetry_event_count": 48,
+  "resource_sampling_count": 9,
+  "sampled_peak_RSS_bytes": 2202853376,
+  "sampled_peak_whole_device_VRAM_bytes": 1248854016,
+  "sampled_peak_directory_bytes": 23074640,
+  "resource_peaks_are_sampled_not_continuous": true,
+  "CPU_affinity_and_numeric_thread_cap": "3 configured in unchanged frozen supervisor/envvars; no separate live post-exit measurement",
+  "scientific_observations": 0,
+  "Stage1": "NOT_DISPATCHED_NOT_RUN",
+  "Stage2": "NOT_DISPATCHED_NOT_RUN",
+  "no_restart_or_repair": true,
+  "evidence_sha256": {
+    "engineering_gate.json": "b0ff51555298ed80894c5e3d671f10adcfd2752adcfc66fdde5466ab7614f738",
+    "dispatch/gpu-preflight.json": "7440ec4aef601bc63551232459c344b8ac6e022dd78760585a143369ca1b4539",
+    "orchestration/gpu_preflight_executor_launch.json": "da573e13700baf47dc97764f68b03c7383c9c6b25a04e409eac1f98d39c53c6c",
+    "stages/gpu-preflight.json": "0d602f0b64d1dc7bfbe47d6f9721959d55f0ba994cb4b8f53af5a80933369691",
+    "status.json": "6c51918f918da678193b17e5fbf9d1cbc8734cb0ed05d90872eeb3b5f9dc757a",
+    "gpu_preflight_result.json": "7ba09eb9ffd705fe4ad827e4dadbf9accc6bcde51c1ebc95f00280c019a99262",
+    "results/preflight_input_provenance.json": "e50dbdccf7f200c3a0c4d30df5afdaabc74d5d412f5e2a7b2ddcfb333b869a34",
+    "results/preflight_strict_load.json": "631a01d0ea3f4d0a0fe184d74e500e8d0f049fe92a23b7d755939125253e478e",
+    "results/gpu-preflight_readbacks/events.jsonl": "440d06e293dc15eb22a4c514a4045ddc4a8847b25cabb69b4b12d3da0c7d4b2f",
+    "commands.jsonl": "2bc7c34dee620837ef439eddd9a6aacfc710515cae1b8f04e0d07b84d27d68c3",
+    "resources.jsonl": "b8546d0822b0b59719a908221bc31dd55d1fef27e0e09395bfd3e5dc465b5cde",
+    "call_ledger.jsonl": "a69d0e2f3cf87c82b73d87847fb18a99f37f2027c0e36f6f0eb16aaa92a050fe",
+    "logs/gpu-preflight.log": "28faa8188b37a6b7bcf132297d52d2f79f822e5cd4a9ff02be5a001d07a5ef60",
+    "orchestration/gpu_preflight_supervisor_stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,6 @@
+--- /home/asus/EAI/research_kyc_checkpoint_diagnostics_next/scripts/lc_common.py
++++ /home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/lc_common.py
+@@ -1,2 +1,2 @@
+ """Compatibility names for the unchanged, reviewed telemetry source."""
+-from common import *
++from .common import *

@@ -1,0 +1,37 @@
+{
+  "recovery_id": "kyc-last-recovery-441e91b0-ee5f-4294-9501-070606a5f695",
+  "max_rounds": 2,
+  "rounds": [
+    {
+      "round": 1,
+      "state": "REAL_CPU_PREFLIGHT_EXPOSED_R2",
+      "proven_error": "previous input ImportError ROOT from diagnostic common",
+      "original_traceback": "repairs/R1/previous_failure_traceback.txt",
+      "traceback_sha256": "6a5173c248b12b410c56357559365404765c8690106deab8a8c00ab9df280e3e",
+      "scope": "isolate harness package and shared actual loader; no injected upstream fields or sys.modules deletions",
+      "started_utc": "2026-11-03T02:03:52.438639+00:00",
+      "real_CPU_result": "cpu_preflight/R1/result.json",
+      "CPU_process": "cpu_preflight/R1/process.json",
+      "original_common_collision_reached_past": true
+    },
+    {
+      "round": 2,
+      "state": "REAL_CPU_PREFLIGHT_PASSED",
+      "proven_error": "h5py CPU platform query opens os.devnull O_RDWR; blanket output audit rejected harmless null sink",
+      "traceback": "repairs/R2/proven_import_traceback.txt",
+      "before_sha256": "d81fb83bd3f8c46fb42a92decfa5c758fbb8abd0839a0c62f347fd960b8b2a39",
+      "after_sha256": "1a758dca83faf1e58971c68153d6b9e7a9338a8a233725fe3685c619242a69d6",
+      "change": "allow open of resolved os.devnull only; outside writes/remove/rename remain denied",
+      "started_utc": "2026-11-03T02:06:57.863739+00:00",
+      "real_CPU_result": "cpu_preflight/R2/result.json",
+      "CPU_process": "cpu_preflight/R2/process.json",
+      "ended_utc": "2026-11-03T02:08:20.525300+00:00"
+    }
+  ],
+  "repair_rounds_used": 2,
+  "repair_rounds_remaining": 0,
+  "status": "CPU_IMPORT_READY_GPU_PENDING",
+  "final_real_CPU_coverage": "cpu_preflight/final/result.json",
+  "final_coverage_process": "cpu_preflight/final/process.json",
+  "final_coverage_is_test_repeat_not_R3": true
+}

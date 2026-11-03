@@ -1,0 +1,12 @@
+{
+  "utc": "2026-11-03T02:47:46.402021+00:00",
+  "older_evidence_files_checked": 521,
+  "reference": "prior locked evidence snapshot in previous scope, not rewritten",
+  "older_evidence_differences": [],
+  "candidate_frozen_files_match": true,
+  "final_CPU_code_snapshot_matches": true,
+  "new_GPU_state_exists": false,
+  "new_phase_dispatch_exists": false,
+  "Git_index_modified_by_executor": false,
+  "automation_modified_by_executor": false
+}

@@ -1,0 +1,30 @@
+{
+  "utc": "2026-11-03T07:24:03.715924+00:00",
+  "epoch": 1793690643.7159338,
+  "monotonic": 3044603.773697376,
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "-B",
+    "/home/asus/EAI/research_kyc_final_recovery_20261103/run.py",
+    "cpu-analyze"
+  ],
+  "cwd": "/home/asus/EAI/research_kyc_final_recovery_20261103",
+  "CPU_process_identity": {
+    "pid": 338101,
+    "ppid": 2974399,
+    "start_ticks": 304460368
+  },
+  "CUDA_VISIBLE_DEVICES": "",
+  "affinity": [
+    0,
+    1,
+    2
+  ],
+  "numeric_threads": 3,
+  "model_worker_inactive": true,
+  "model_supervisor_inactive": true,
+  "completed_model_calls_before_CPU": 16,
+  "forward_count_before_CPU": 16,
+  "GPU_seconds_before_CPU": 53.40354579128325,
+  "output_files_SHA_verified_before_CPU": 16
+}

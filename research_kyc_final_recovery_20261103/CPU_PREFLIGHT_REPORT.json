@@ -1,0 +1,328 @@
+{
+  "utc": "2026-11-03T02:44:11.861432+00:00",
+  "status": "CPU_IMPORT_READY",
+  "ENGINEERING_READY": false,
+  "SCIENCE_OBSERVATIONS": 0,
+  "real_CPU_probes": [
+    {
+      "label": "R1",
+      "exit_code": 1,
+      "elapsed_seconds": 1.5811429722234607,
+      "actual_status": "CPU_PREFLIGHT_FAILED",
+      "GPU_allocated_seconds_if_side_effect": 0
+    },
+    {
+      "label": "R2",
+      "exit_code": 0,
+      "elapsed_seconds": 15.725063944235444,
+      "actual_status": "CPU_IMPORT_READY",
+      "GPU_allocated_seconds_if_side_effect": 0
+    },
+    {
+      "label": "final",
+      "exit_code": 0,
+      "elapsed_seconds": 15.688086875714362,
+      "actual_status": "CPU_IMPORT_READY",
+      "GPU_allocated_seconds_if_side_effect": 0
+    }
+  ],
+  "repair_rounds_used": 2,
+  "repair_rounds_remaining": 0,
+  "actual_interpreter": "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+  "actual_cwd": "/home/asus/EAI/research_kyc_final_recovery_20261103",
+  "flags": {
+    "dont_write_bytecode": true
+  },
+  "CPU_CUDA_VISIBLE_DEVICES": "",
+  "GPU_proposed_CUDA_VISIBLE_DEVICES": "0",
+  "shared_loader": "kyc_recovery.loader.load_actual",
+  "upstream_actual_order": [
+    "experiment_lib",
+    "common",
+    "utils",
+    "eval",
+    "models",
+    "cam_embedding",
+    "models.act",
+    "models.detr_vae"
+  ],
+  "actual_modules": [
+    {
+      "name": "experiment_lib",
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py",
+      "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py",
+      "spec_name": "experiment_lib",
+      "sys_modules_same_object": true
+    },
+    {
+      "name": "common",
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/common.py",
+      "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/common.py",
+      "spec_name": "common",
+      "sys_modules_same_object": true
+    },
+    {
+      "name": "utils",
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/utils.py",
+      "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/utils.py",
+      "spec_name": "utils",
+      "sys_modules_same_object": true
+    },
+    {
+      "name": "eval",
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/eval.py",
+      "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/eval.py",
+      "spec_name": "eval",
+      "sys_modules_same_object": true
+    },
+    {
+      "name": "models",
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/__init__.py",
+      "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/__init__.py",
+      "spec_name": "models",
+      "sys_modules_same_object": true
+    },
+    {
+      "name": "cam_embedding",
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/cam_embedding.py",
+      "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/cam_embedding.py",
+      "spec_name": "cam_embedding",
+      "sys_modules_same_object": true
+    },
+    {
+      "name": "models.act",
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/act.py",
+      "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/act.py",
+      "spec_name": "models.act",
+      "sys_modules_same_object": true
+    },
+    {
+      "name": "models.detr_vae",
+      "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/detr_vae.py",
+      "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/detr_vae.py",
+      "spec_name": "models.detr_vae",
+      "sys_modules_same_object": true
+    }
+  ],
+  "ROOT": "/home/asus/EAI/research_expansion_20261029/reproduction",
+  "DATA": "/home/asus/EAI/research_expansion_20261029/reproduction/assets/liftrand_eef_delta.hdf5",
+  "atomic_json_real_semantics": {
+    "JSON_prefix_equal": true,
+    "suffix": "\n",
+    "full_json_document": true,
+    "upstream_source_unchanged": true,
+    "used_for_formal_harness_bookkeeping": false
+  },
+  "utc_real_semantics": {
+    "value": "2026-11-03T02:34:00.478728+00:00",
+    "ISO8601_timezone_present": true
+  },
+  "constructors_actual_signatures": {
+    "ACTPolicy": "(args)",
+    "DETRVAE.forward": "(self, data)",
+    "Dataset": "(demo_indices, norm_stats, args, camera_poses_file=None, max_seq_length=None, transform='id', env=None)"
+  },
+  "resources_checked_on_CPU": {
+    "checkpoint_sha256": "c904a97002571d96e3ee6b66057d09162cbdcb5e926cb6ea0b660ca1390bce13",
+    "checkpoint_tensors": 375,
+    "checkpoint_all_finite": true,
+    "checkpoint_CPU": true,
+    "args_equal": true,
+    "stats_equal": true,
+    "dataset_sha256": "fc89e2a46624b877cd35ae383df9ad09a84b7881c655bc114812164d6ff45377",
+    "cached_resnet_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+    "weighted_constants_sha256": "deae440f7222d5e2140e68f44703c3fac31efb423975b34b323df3c34b2d3b1a",
+    "samples": [
+      {
+        "sample": 0,
+        "state_shape": [
+          58
+        ],
+        "action_shape": [
+          30,
+          7
+        ]
+      },
+      {
+        "sample": 1,
+        "state_shape": [
+          58
+        ],
+        "action_shape": [
+          30,
+          7
+        ]
+      },
+      {
+        "sample": 4,
+        "state_shape": [
+          58
+        ],
+        "action_shape": [
+          30,
+          7
+        ]
+      },
+      {
+        "sample": 5,
+        "state_shape": [
+          58
+        ],
+        "action_shape": [
+          30,
+          7
+        ]
+      }
+    ]
+  },
+  "device_audit": {
+    "blocked": [],
+    "safe_queries": [],
+    "CUDA_initialized_before": false,
+    "CUDA_initialized_after": false,
+    "GL_modules_imported": [],
+    "ACT_constructed": false,
+    "device_constructor_attempts": 0
+  },
+  "final_entry_modules_verified": [
+    {
+      "mode": "cpu-preflight",
+      "name": "kyc_recovery.cpu_preflight",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/cpu_preflight.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/cpu_preflight.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "aac8cf6b64fd66c2dc832abae5d2dc843c402099a10e514a0fbdc05f9b93ef1a",
+      "native_entry_execution": "CPU_ONLY"
+    },
+    {
+      "mode": "gpu-preflight",
+      "name": "kyc_recovery.gpu_preflight",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/gpu_preflight.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/gpu_preflight.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "b72fe9345e7538f8a8fdc32e29c0b00e9d8055008af6771bb528f7b5f3019aa6",
+      "native_entry_execution": "DEFERRED"
+    },
+    {
+      "mode": "s1-input",
+      "name": "kyc_recovery.input_worker",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/input_worker.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/input_worker.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "727234f59ff7612444cbe5098b18c69831880113e06b1b3cd020c464240ac556",
+      "native_entry_execution": "DEFERRED"
+    },
+    {
+      "mode": "s1-model",
+      "name": "kyc_recovery.model_worker",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/model_worker.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/model_worker.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "25ece8659cc63ca2b3cf10578e52a3d90c367cec0deb25e52ef839c09b59dc3f",
+      "native_entry_execution": "DEFERRED"
+    },
+    {
+      "mode": "s2-closed",
+      "name": "kyc_recovery.closed_worker",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/closed_worker.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/closed_worker.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "3b87463928beaa25220fca5f4d461944b99f7de635f93ca9af4a52ae4a0da2b8",
+      "native_entry_execution": "DEFERRED"
+    },
+    {
+      "mode": "supervise",
+      "name": "kyc_recovery.supervisor",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/supervisor.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/supervisor.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "8b3ff85a6b7c578a2c83e7fd19a9d7089be5ba4f1c28f3b03a716c2b7c742d55",
+      "native_entry_execution": "DEFERRED"
+    },
+    {
+      "mode": "cpu-analyze",
+      "name": "kyc_recovery.analyze",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/analyze.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/analyze.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "11880cc90c0dc16def85ca1cee32508e008b2b84e5a73f8e8e4dc0bda5683d2d",
+      "native_entry_execution": "DEFERRED"
+    },
+    {
+      "name": "kyc_recovery.builders",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/builders.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/builders.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "1d9ca7d1a175a6ca53a1b46be379256a5efb57c2bbe7a0eaf29cd2aeec81bc1f",
+      "constructor_execution": "DEFERRED"
+    },
+    {
+      "name": "kyc_recovery.model_runtime",
+      "file": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/model_runtime.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_final_recovery_20261103/kyc_recovery/model_runtime.py",
+      "sys_modules_same_object": true,
+      "source_sha256": "d123a43109454b9dac295e148394288b1a565866fef4c421e2bf6e7fac5b1480",
+      "constructor_execution": "DEFERRED"
+    }
+  ],
+  "final_code_hashes": {
+    "run.py": "666a14b7f60579d264b4ba44aad11e5414e0fc8fab1ab07ec367fb05b6783c24",
+    "kyc_recovery/__init__.py": "60ed0b8dde5ae6ae9a845feaa74afb1a0faedf2d86bad6963fc47d1348ba25aa",
+    "kyc_recovery/analyze.py": "11880cc90c0dc16def85ca1cee32508e008b2b84e5a73f8e8e4dc0bda5683d2d",
+    "kyc_recovery/builders.py": "1d9ca7d1a175a6ca53a1b46be379256a5efb57c2bbe7a0eaf29cd2aeec81bc1f",
+    "kyc_recovery/call_guard.py": "e440e75d27266c349eab26da877207f1e547b6768ccaf7c55579f3473da1b528",
+    "kyc_recovery/cli.py": "71bf0288242bcc25d2715ad9fff486d873b9918a5baa0af1972f68a01001c9dd",
+    "kyc_recovery/closed_worker.py": "3b87463928beaa25220fca5f4d461944b99f7de635f93ca9af4a52ae4a0da2b8",
+    "kyc_recovery/common.py": "d3251d57827a276834e66a294345033440dbd47256a9f8a278828b7402d5e4c2",
+    "kyc_recovery/cpu_budget_checks.py": "3051bfd15a00b498c061a470f0e095683f4480f61c1972c3e0f1a4445366d40d",
+    "kyc_recovery/cpu_guard.py": "a708c4e2d9a3441feea3086e4235c6a5081dc400fac117ad98d027721150c0e1",
+    "kyc_recovery/cpu_preflight.py": "aac8cf6b64fd66c2dc832abae5d2dc843c402099a10e514a0fbdc05f9b93ef1a",
+    "kyc_recovery/cpu_supervisor.py": "e0d5c96a702f73d5127ea05e47f50432842e65244acf42493545448435151212",
+    "kyc_recovery/gates.py": "a1841c7fd21545c7f404cf7c94f74e91621dc1dbd001e855f661214a53dc8efd",
+    "kyc_recovery/gpu_preflight.py": "b72fe9345e7538f8a8fdc32e29c0b00e9d8055008af6771bb528f7b5f3019aa6",
+    "kyc_recovery/input_runtime.py": "f6569d972696b50bec3a72e9adcd5ab6c396ef42faac6047360ca98bf66459c6",
+    "kyc_recovery/input_worker.py": "727234f59ff7612444cbe5098b18c69831880113e06b1b3cd020c464240ac556",
+    "kyc_recovery/lc_common.py": "bbe169f8bd40bb6e71cf757bd91f80272c249b94e540c09a97dc81b78dfc17e9",
+    "kyc_recovery/loader.py": "35693efcaaa89c0d3076a9e0bf3c637a61a7eb4bd3baabe52a81ec25a9e92dcb",
+    "kyc_recovery/manifest.py": "3601629b020c2587379e1c25092c4f64bec5b18965d777ed0b488713af7f6d26",
+    "kyc_recovery/metrics.py": "994f463caa3ddb58313c7d130ce2176a0013988cd7258da8bb2e4a11cdff94ee",
+    "kyc_recovery/model_runtime.py": "d123a43109454b9dac295e148394288b1a565866fef4c421e2bf6e7fac5b1480",
+    "kyc_recovery/model_worker.py": "25ece8659cc63ca2b3cf10578e52a3d90c367cec0deb25e52ef839c09b59dc3f",
+    "kyc_recovery/owned_release.py": "9bf522cc295656997ffa7f9c72de02095ac799507833ca89176764f61c539cd0",
+    "kyc_recovery/runtime_safety.py": "1a758dca83faf1e58971c68153d6b9e7a9338a8a233725fe3685c619242a69d6",
+    "kyc_recovery/supervisor.py": "8b3ff85a6b7c578a2c83e7fd19a9d7089be5ba4f1c28f3b03a716c2b7c742d55",
+    "kyc_recovery/telemetry.py": "2f02ee0764ede1a5c273f0e4228d0665b1b7cf2936d7a2ec41f30f8443b8c9f7"
+  },
+  "budget_refusals_actual_CPU": [
+    "ACT17",
+    "preflight_render",
+    "preflight_ACT",
+    "S1_step",
+    "optimizer",
+    "rollout_step151"
+  ],
+  "OS_supervised_CPU_termination_exit_code": -15,
+  "budget_test_ledger_is_not_ACT_observations": true,
+  "frozen_old_sources_verified": 113,
+  "frozen_old_sources_match": true,
+  "GPU_DEFERRED": [
+    "actual input construction/cleanup",
+    "ACT construction and strict load",
+    "healthy native readback",
+    "BF16 real forward",
+    "closed-loop execution"
+  ],
+  "GPU_started": false,
+  "model_instantiated": false,
+  "ACT_forward": 0,
+  "render": 0,
+  "readPixels": 0,
+  "env_steps": 0,
+  "CPU_prefix_difference": "CPU explicitly loads Torch to install init interception before the same vendor-loader sequence; device visibility/guard differs, no substituted vendor modules",
+  "candidate_protocol_sha256": "3fd12394fd845a4c2df528119655af65ab1a830b55833f5aa278c0c8c004c460",
+  "candidate_manifest_sha256": "bd4233fbeca8898d0145c3411ae98901897fd24b974984c3b83195cea75843ed",
+  "candidate_code_matches_final_actual_CPU_snapshot": true,
+  "checkpoint_strict_load": "DEFERRED_UNTIL_GPU; CPU loaded state dictionary only",
+  "no_download_install_system_change": true,
+  "Git_index_mutations": 0
+}

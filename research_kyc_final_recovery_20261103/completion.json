@@ -1,0 +1,20 @@
+{
+  "utc": "2026-11-03T12:26:00.685175+00:00",
+  "delivery_status": "REPORT_COMPLETE_PUBLICATION_PENDING",
+  "completed": false,
+  "scientific_state": "SCIENTIFIC_MEASURED",
+  "scientific_classification": "INCONCLUSIVE_MIXED_OR_WEAK_SIGNAL",
+  "engineering": "READY_ACTUALLY_EXECUTED",
+  "stage2": "NOT_RUN",
+  "task_success_reach_grasp": "NOT_MEASURED",
+  "GPU_seconds": 53.40354579128325,
+  "ACT": 16,
+  "renders": 12,
+  "readPixels": 24,
+  "steps": 0,
+  "rollouts": 0,
+  "training_updates": 0,
+  "dual_review": "COMPLETE_36_AND_37",
+  "recommendation": "PAUSE_CURRENT_CHECKPOINT_PRIORITY_F_ROUTE",
+  "one_reset_credit_used": false
+}

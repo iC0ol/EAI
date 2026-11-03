@@ -1,0 +1,20 @@
+{
+  "sent_utc": "2026-11-03T01:59:24.500Z",
+  "mode": "CPU_PRE_FLIGHT_AND_REPAIR_ONLY",
+  "recovery_id": "kyc-last-recovery-441e91b0-ee5f-4294-9501-070606a5f695",
+  "target": "01a185d0-2da8-70a2-b997-d273c7285042",
+  "model": "gpt-6.1-sol",
+  "thinking": "max",
+  "prompt": "正式派发：CPU_PRE_FLIGHT_AND_REPAIR_ONLY。用户2026-11-03已明确授权F最后一轮有限恢复、最多两轮有证据工程修复、真实Pre-flight、Stage1以及通过后条件Stage2；完整原文在 /home/asus/EAI/research_kyc_final_recovery_20261103/00_本轮用户任务书_原文.md。新唯一恢复范围 kyc-last-recovery-441e91b0-ee5f-4294-9501-070606a5f695；实际派发记录 orchestration/preflight_dispatch.json，CPU准备截止今日14:58:25。你是原线程01a185d0-2da8-70a2-b997-d273c7285042的gpt-6.1-sol/max。旧RUN及旧目录全部只读，不恢复上轮余量。\n\n先读新AGENTS.md、01_有限恢复边界与阶段门.md、preflight_scope_gate.json、notes/01和02。Codex与真实DeepSeek31已同意本次CPU修复/预检；GPU/Stage1/Stage2现在都未派发。不要把此范围的新授权误读为仍不能修已知common错误。由你在新目录复制/复用旧候选并真正隔离harness命名空间：不能向错误common补ROOT/atomic_json，也不能随意删sys.modules；正式worker与CPU预检必须使用同一个真实加载器、相同Python环境/cwd/模块顺序，逐项核验experiment_lib、官方common、utils、eval、models、cam_embedding的__file__/spec/module identity及ROOT/DATA/atomic_json/utc语义。保存旧错误traceback、R1变更前后SHA/差异。R1即已知common冲突修复；R2仅限真实预检新暴露的工程问题，最多两轮不可按阶段重置，每轮后真实预检，不能只AST/mock就称通过。两轮后仍失败封存本轮并回传，不新开研究项目。\n\n实际CPU预检要在独立受控进程运行，可以导入真实依赖、CPU读已冻结权重/元数据/数据/统计、检查375tensor与args；不得实例化GL/仿真或ACT、CUDA设备初始化/前向。用CPU可见性保护和真实调用检测区分安全导入与必须GPU待验的路径，若import触发设备副作用立即记录具体依赖并停止，不能当成CPU成功，也不允许偷偷漏计GPU。纯CPU查清资源路径/哈希、共享builder接口/输入输出约定、旧目录完整性，实际测试预算拒绝/监督终止（独立CPU测试账本，不冒充真ACT）。PYTHONDONTWRITEBYTECODE，所有cache/tmp/logs/新产物本目录，无安装/下载/系统更改。\n\n同时准备可审查、尽量复用已有代码的GPU预检与Stage1/条件Stage2协议/源码候选：单一1800GPU分配秒累计账本，init/debug/failure/cleanup都计；建议GPU预检合计≤180秒至多2次，S1≤600秒，S2只可剩余。最多5 GPU worker候选（两预检+输入+模型+闭环），需你说明实际可行路径与清理。当前只写代码不启动GPU。候选GPU预检应说明是否同一worker顺序验证真实input初始化与模型构造strict load（无render/read/ACT/step）；复用正式相同builder/loader。DeepSeek偏好GPU预检仅input init，strict load在S1 model首次ACT前；主审认为单进程可以顺序检查两者，交回真实代码/SHA再判，不能将未验证的分支称ENGINEERING_READY。不要为了预检额外消费16前向或12/24采图配额。\n\nStage1沿用上一轮v2样本0/1/4/5、call_plan16、共同canonical raw、严格加载、原BF16设置/容差、加权mean/median、方向夹爪/20%投入门。输入worker完全退出后回传父审实际看图和数组，只有绑定input_gate及RUN_MODEL再模型；所有等待无GPU。正式科学观测前冻结代码SHA，科学开始后无追加修复。Stage2必须实际S1通过且Codex+DeepSeek阶段验收/冻结闭环协议，之后人类已有条件授权才可派发；当前不要执行。\n\nStage2候选复用 research_kyc_diagnostics_20261029/execution/root_plan.json SHA431b852e4aed785f72cbdc3fd8b59aefd981328c37f2098af5e8cea341a35416：root1000–1007，既定train/dev T及交替顺序，最多16rollout/2400step/80query，每条150step/5query，准确外参无IID/persistent。物理XML/state/RNG精确恢复；**不能拷贝旧closed_loop对dev clean_RGB或旧0/32动作完全相等的assert**，健康修复后的新RGB/动作不能被旧坏结果钉死。旧结果只作解释差异；沿用成功/reach<5cm/grasp谓词，记录真实EEF/物体轨迹、动作块与执行动作、初始state、每root配对。S2每query一次render+normal/sentinel，≤80render/160readPixels单独计数，无额外截图查询或视频；小输出≤150MiB，别保存80份冗余Plucker大张量。CPU3核/线程3、RSS16GiB、整设备VRAM12GiB，单GPU顺序。\n\n准备回传内容：真实CPU入口报告（启动命令/解释器/cwd/flags/真实module来源/已执行与GPU待验边界）、repair_ledger≤2、代码差异及准确candidate manifest/协议SHA、CPU资源/元数据/旧结果完整性、可运行GPU候选与停止条件。状态区分CPU_IMPORT_READY与完整ENGINEERING_READY，未测不得冒充。真实GPU候选需双审，原review_gate不是新代码批准。依据用户分工和新AGENTS已授权你完成或需要阶段验收时主动异步回传主线程01a18138-0f15-76b2-b5cf-20e1722782a9。不要等5小时才回报。\n\n主审会复用更新子6-1-sol-max为本次ACTIVE；你不新建automation、不改主automation、不兑换券。账户共享额度，按真实reset+120秒或最长5h续办，保存检查点，不忙轮询。你不stage/commit/push，Git index主审独占。Stage3只计划，0新训练/optimizer/替换checkpoint/模型/seed。先完成真实CPU预检和有限修复，不再把整个任务停在只读建议。",
+  "receipt": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"01a185d0-2da8-70a2-b997-d273c7285042\"}"
+      }
+    ],
+    "isError": false
+  },
+  "send_count": 1,
+  "tool_accepted": true
+}

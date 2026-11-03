@@ -1,0 +1,106 @@
+{
+  "utc": "2026-11-03T02:07:13.624796+00:00",
+  "round": 2,
+  "command": [
+    "/home/asus/EAI/research_expansion_20261029/reproduction/env/bin/python",
+    "-B",
+    "/home/asus/EAI/research_kyc_final_recovery_20261103/run.py",
+    "cpu-preflight"
+  ],
+  "identity": {
+    "pid": 255052,
+    "ppid": 255045,
+    "start_ticks": 302557795,
+    "state": "R",
+    "rss": 262144
+  },
+  "exit_code": 0,
+  "elapsed_seconds": 15.725063944235444,
+  "reason": "PROCESS_EXITED",
+  "actual_status": "CPU_IMPORT_READY",
+  "samples": [
+    {
+      "elapsed": 0.024864946026355028,
+      "rss": 20054016,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 1.0422515380196273,
+      "rss": 391774208,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 2.0605750707909465,
+      "rss": 449708032,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 3.078365473076701,
+      "rss": 460849152,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 4.0961027238518,
+      "rss": 479330304,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 5.112650657072663,
+      "rss": 493486080,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 6.129603483248502,
+      "rss": 552206336,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 7.146496028173715,
+      "rss": 558366720,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 8.16318648122251,
+      "rss": 576192512,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 9.179916812106967,
+      "rss": 576192512,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 10.198057323228568,
+      "rss": 579338240,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 11.215044347103685,
+      "rss": 606208000,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 12.231959185097367,
+      "rss": 606208000,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 13.24877676088363,
+      "rss": 1447735296,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 14.276310482993722,
+      "rss": 1451147264,
+      "own_GPU_process_seen": false
+    },
+    {
+      "elapsed": 15.293927183840424,
+      "rss": 1337876480,
+      "own_GPU_process_seen": false
+    }
+  ],
+  "GPU_allocated_seconds_if_side_effect": 0,
+  "CPU_controlled_process": true,
+  "experimental_GPU_worker": false
+}
