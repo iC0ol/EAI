@@ -1,7 +1,14 @@
 {
-  "state": "PENDING_FIRST_PUSH",
+  "utc": "2026-11-03T12:29:40.398852+00:00",
+  "state": "VERIFIED",
   "repository": "iC0ol/EAI",
   "branch": "research/u-gate0-v3-overnight",
-  "evidence_commit": null,
-  "verified_remote_sha": null
+  "evidence_commit": "a75b0ab078571667ce51565a5d8d22fa9dcbcd25",
+  "verified_remote_sha": "a75b0ab078571667ce51565a5d8d22fa9dcbcd25",
+  "method": "git push succeeded; git ls-remote exact branch equals local evidence commit",
+  "scope": "Scientific raw results, final report, dual reviews and research decision. This receipt is committed afterward; it does not claim a self-referential closure commit hash.",
+  "report_path": "research_kyc_final_recovery_20261103/02_联合验收与研究决策报告.md",
+  "allowed_files_at_evidence_commit": 392,
+  "scan": "PASS",
+  "reset_card_used": false
 }

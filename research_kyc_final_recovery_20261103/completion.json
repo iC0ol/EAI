@@ -1,7 +1,7 @@
 {
-  "utc": "2026-11-03T12:26:00.685175+00:00",
-  "delivery_status": "REPORT_COMPLETE_PUBLICATION_PENDING",
-  "completed": false,
+  "utc": "2026-11-03T12:29:40.398852+00:00",
+  "delivery_status": "COMPLETED_PUBLISHED_VERIFIED",
+  "completed": true,
   "scientific_state": "SCIENTIFIC_MEASURED",
   "scientific_classification": "INCONCLUSIVE_MIXED_OR_WEAK_SIGNAL",
   "engineering": "READY_ACTUALLY_EXECUTED",
@@ -16,5 +16,10 @@
   "training_updates": 0,
   "dual_review": "COMPLETE_36_AND_37",
   "recommendation": "PAUSE_CURRENT_CHECKPOINT_PRIORITY_F_ROUTE",
-  "one_reset_credit_used": false
+  "one_reset_credit_used": false,
+  "evidence_commit": "a75b0ab078571667ce51565a5d8d22fa9dcbcd25",
+  "remote_verified": true,
+  "main_check": "PAUSED",
+  "executor_check": "PAUSED",
+  "next_experiment": "NONE_AUTHORIZED_FROM_THIS_DELIVERY"
 }

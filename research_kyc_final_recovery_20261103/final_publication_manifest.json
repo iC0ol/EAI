@@ -1,5 +1,5 @@
 {
-  "utc": "2026-11-03T12:27:53.231169+00:00",
+  "utc": "2026-11-03T12:29:40.436465+00:00",
   "scope": "stable published evidence, not mutable delivery records",
   "excluded_mutable_delivery_records": [
     "STATUS.md",
@@ -697,11 +697,11 @@
       "bytes": 2217
     },
     "publication/deepseek_receipts.json": {
-      "sha256": "9312481a4e8c2eac03d0fefba04d9eb340e8ed18681dc728908ddfb361affdda",
+      "sha256": "f714f072488a4d24ba44d3bcd656fe8912a7b7f1f9db62b1b348f8d9b6885eb1",
       "bytes": 7244
     },
     "publication/export_map.json": {
-      "sha256": "db1ddd6c915d9cf57b95319ba733700da6b7565c7e29d67bb2b457b511a09812",
+      "sha256": "6f5d8545ce3033ef9914588505804dd9d4201ba2a1a103dd6230b1f06f4b7371",
       "bytes": 7832
     },
     "publication/numeric_array_inventory.json": {

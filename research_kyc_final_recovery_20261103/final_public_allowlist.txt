@@ -175,6 +175,7 @@ orchestration/stage1_input_dispatch_receipt.json
 orchestration/stage1_model_dispatch_receipt.json
 preflight_scope_gate.json
 publication/README.md
+publication/automation_closure.json
 publication/deepseek_receipts.json
 publication/export_map.json
 publication/numeric_array_inventory.json

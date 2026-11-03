@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-03T12:29:40.398852+00:00",
+  "state": "BOTH_PAUSED_AFTER_PUBLISHED_EVIDENCE_VERIFICATION",
+  "checks": [
+    {
+      "id": "automation",
+      "name": "F 最后一轮结果验收与公开交付",
+      "status": "PAUSED",
+      "rrule": "RRULE:FREQ=DAILY;BYHOUR=0,5,10,15,20;BYMINUTE=11;BYSECOND=59",
+      "updated_at": 1793708925239
+    },
+    {
+      "id": "6-1-sol-max",
+      "name": "6.1-sol max F 有限恢复执行检查",
+      "status": "PAUSED",
+      "rrule": "RRULE:FREQ=DAILY;BYHOUR=0,5,10,15,20;BYMINUTE=11;BYSECOND=59",
+      "updated_at": 1793691107967
+    }
+  ],
+  "new_automation_created": false
+}
