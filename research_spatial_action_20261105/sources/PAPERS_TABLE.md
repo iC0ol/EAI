@@ -8,6 +8,7 @@
 | 2026-11-02 | [2611.03937](https://arxiv.org/abs/2611.03937) | FlowBench: Counterfactual Imagination Training for Spatial Intelligence | A | arXiv | — | — |
 | 2026-10-28 | [2610.38104](https://arxiv.org/abs/2610.38104) | Same Label, Different Interface: Beyond Action-Space Labels in Robot Learning | F | arXiv | — | — |
 | 2026-10-25 | [2610.34051](https://arxiv.org/abs/2610.34051) | BEHAVIOR-Spatial Benchmark: Evaluating Spatial Understanding for Robotics | A | arXiv | — | — |
+| 2026-10-21 | [2610.29646](https://arxiv.org/abs/2610.29646) | From Association to Decision Value: Testing Paired Instruction Dependence for VLA Corpus Selection | P | arXiv | — | — |
 | 2026-10-17 | [2610.24674](https://arxiv.org/abs/2610.24674) | Noise-Invariant Spatial Encoding for 3D Manipulation Policies under Depth Corruption | F | arXiv | [link](https://nise-robotics.github.io/) | — |
 | 2026-10-17 | [2610.24705](https://arxiv.org/abs/2610.24705) | Relational Spatial Alignment for Vision-Language-Action Models | A | arXiv | — | — |
 | 2026-10-16 | [2610.22997](https://arxiv.org/abs/2610.22997) | GR-VIP: Geometric representation conditioning for precise visuomotor policy | P | arXiv | — | — |
@@ -77,6 +78,7 @@
 | 2026-03-12 | [2603.12193](https://arxiv.org/abs/2603.12193) | SaPaVe: Towards Active Perception and Manipulation in Vision-Language-Action Models for Robotics | A | arXiv | — | — |
 | 2026-03-04 | [2603.04639](https://arxiv.org/abs/2603.04639) | RoboMME: Benchmarking and Understanding Memory for Robotic Generalist Policies | A | arXiv | — | — |
 | 2026-02-26 | [2602.23408](https://arxiv.org/abs/2602.23408) | Demystifying Action Space Design for Robotic Manipulation Policies | F | arXiv | — | — |
+| 2026-02-19 | [2602.17659](https://arxiv.org/abs/2602.17659) | When Vision Overrides Language: Evaluating and Mitigating Counterfactual Failures in VLAs | P | arXiv | — | — |
 | 2026-02-12 | [2602.12032](https://arxiv.org/abs/2602.12032) | When would Vision-Proprioception Policies Fail in Robotic Manipulation? | F | arXiv | — | — |
 | 2026-02-06 | [2602.07082](https://arxiv.org/abs/2602.07082) | MosaicThinker: On-Device Visual Spatial Reasoning for Embodied AI via Iterative Construction of Space Representation | A | arXiv | — | — |
 | 2026-02-06 | [2602.06556](https://arxiv.org/abs/2602.06556) | LIBERO-X: Robustness Litmus for Vision-Language-Action Models | P | published | — | — |

@@ -459,6 +459,18 @@ A = {
   "Geometric Anchor Pre-training for data-efficient visuomotor learning. Registered solely to disambiguate it from the gradient-adjustment GAP in 2602.12032; not used as evidence.",
   "https://lambdavi.github.io/gap", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
 
+"2610.29646": ("PARTIAL_TEXT", "VERIFIED", ["decision_value", "evaluation"],
+  "Abstract; Figure 1; held-out protocol",
+  "Methodological standard C1 must meet: predictive ≠ decision-useful",
+  "Tests whether 'paired instruction dependence' (does the demonstrator change its first decision when only the goal changes) predicts downstream corpus selection. Across 136 seeded corpora, 56 development / 80 held-out. The audit is reliable and lowers MAE, but the primary proper-log-score increment is +0.059 nats with a 95% CI of [-0.027, 0.133] and the prespecified top-20% selection gain is not established. Direct lesson: a diagnostic can be reliable and predictive yet add little decision value when compressed into an unsigned statistic, so C1 must be scored on selection utility, not correlation.",
+  "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
+
+"2602.17659": ("PARTIAL_TEXT", "VERIFIED", ["counterfactual_failure", "evidence_use"],
+  "Abstract; method description",
+  "Direct competitor for evidence-use remedies in VLA",
+  "Introduces LIBERO-CF, a counterfactual benchmark that assigns alternative instructions under the same scene, and Counterfactual Action Guidance: a dual-branch scheme comparing a language-conditioned policy against a language-unconditioned vision-action module at action selection. Reports +9.7% language-following accuracy and +3.6% success for pi0.5 on under-observed tasks, +15.5%/+8.5% with a VA model, and 17.2% real-world success gain. Reinforces that vision shortcuts, not missing spatial representation, drive many instruction-following failures.",
+  "UNKNOWN", "UNKNOWN", "LIBERO-CF benchmark stated", "UNKNOWN", "UNKNOWN"),
+
 }
 
 FULL = set("""2510.02268 2610.12696 2609.37292 2610.23891 2609.24124 2609.32762 2610.38104

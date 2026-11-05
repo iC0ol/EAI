@@ -10,7 +10,7 @@
 | 第二部分 3–5 个深度候选（统一 15 字段卡片） | 完成但**只有 1 个合格** | §2：C1 完整 15 字段；C2、C3 为压缩卡片并说明不合格理由 |
 | 第三部分 前两名深挖 A–F | **部分完成** | §3：仅 C1 做完整 A–F；C2 无合格资格，已在 §2 说明依据 |
 | 第四部分 统一评分与取舍 | 完成 | §4：7 个候选 × 5 维评分 + 四类归类 |
-| 第五部分 文献与资源表 | 完成 | §5：24 条核心 + `sources/papers.jsonl` 92 条 |
+| 第五部分 文献与资源表 | 完成 | §5：24 条核心 + `sources/papers.jsonl` 94 条 |
 | 第六部分 对现有偏好的批判（7 问） | 完成 | §6 逐问回答，含反对用户判断的部分 |
 | 第七部分 下一阶段建议与证据分级 | 完成 | §7：四类等级表、四条门槛 |
 
@@ -18,12 +18,12 @@
 
 ## 2. 一手来源与全文覆盖
 
-- 登记 92 篇，全部经 arXiv Atom API 元数据核对（标题、作者、日期）。
+- 登记 94 篇，全部经 arXiv Atom API 元数据核对（标题、作者、日期）。
 - 全文获取：**80 篇**获得可提取文本（PDF 16 篇 + arXiv 官方 HTML 渲染 64 篇）；其中实际完整读取 33 篇、部分读取 15 篇，其余 40 篇仅读摘要（第二轮又补读 6 篇）。
 - 读取层级分布（`sources/papers.jsonl`，按“实际打开过的内容”保守标注）：
   - `FULL_TEXT`：33 篇（读了方法、结果表与限制/结论）
-  - `PARTIAL_TEXT`：15 篇（摘要 + 结论或某一结果段落）
-  - `ABSTRACT_ONLY`：40 篇（仅摘要；多数因 HTML 429 限流，且只用于“方向密度”判断）
+  - `PARTIAL_TEXT`：20 篇（摘要 + 结论或某一结果段落）
+  - `ABSTRACT_ONLY`：41 篇（仅摘要；多数因 HTML 429 限流，且只用于“方向密度”判断）
 - 全部关键结论所依赖的论文均为 `FULL_TEXT`，包括：KYC、Spa-Bench、RSB、A-FAR、ActiveArena、More Structure、LIBERO-RIG、2610.01626、2610.38104、2602.23408、CMA、2609.22299、GAP、ActFovea、BeTTER、ESI-Bench、ESPIRE、GP^A、SeeR-VLA、CamVLA、NISE。
 
 **限制**：`PARTIAL_TEXT` 与 `ABSTRACT_ONLY` 的论文只用于"领域密度/拥挤度"判断，不用于支撑机制性或数值性主张。这一区分在登记表中可核查。
@@ -83,7 +83,7 @@
 
 ## 9. 引用真实性
 
-- 全部 92 条 ID 均来自 arXiv API 返回结果，无手工编造。
+- 全部 94 条 ID 均来自 arXiv API 返回结果，无手工编造。
 - 抽查 8 个 ID 的 abs 页面标题，全部匹配。
 - **发现并处理了 1 处来源异常**：`2609.35039` 的 arXiv 元数据标题与同 ID PDF 标题不一致（"Do Not Cut When Uncertain…" vs "SeeReach-VLA…"），且 PDF 无结果。已标记 `PARTIALLY_VERIFIED` 并从所有主张中排除。
 - **发现并修正了 1 处自身误读**：KYC Table I 的两行表头导致我把 "Pick Place Can" 与 "Assembly Square" 的成功率对调。已在 `notes/full_text/01_kyc_camera_conditioning.md`、`notes/full_text/07_tolerance_and_error_dynamics.md` 与登记表中更正，并据此改写了 C1 的假设（从单因素改为三因素）。这一更正反而加强了报告的诚实性：朴素容差假设被 KYC 自身数据反驳。
@@ -116,5 +116,27 @@
 - `sources/papers.jsonl` 增加 OpenAlex 出版记录（11 篇为会议论文，其余为 arXiv 预印本），不再写 UNKNOWN。
 
 ### 11.3 仍未解决
-- **引文列表仍不可得**：OpenAlex 单篇元数据端点可用，但 `filter=cites:` 与 Semantic Scholar 均返回 429（OpenAlex 明确提示当日共享 IP 预算耗尽，UTC 午夜重置）。替代入口也已尝试：S2 网页 `/arxiv/<id>` → 404、S2 内部 citations API → 404、scite.ai → 403、Crossref（arXiv DOI）→ 404。因此本轮只完成了“出版状态核实”，没有完成“施引文献核实”。
+- **引文列表部分可得**：第三轮 Semantic Scholar citations 端点间歇可用，成功取到 KYC（28 篇施引）、2512.02902（17 篇）、LIBERO-RIG（1 篇）、CMA（1 篇）、RSB（1 篇）；**More Structure 与 2610.01626 持续 429，未取到**。OpenAlex `filter=cites:` 仍 429。S2 网页 `/arxiv/<id>`、S2 citations API、scite、Crossref 四个替代入口均失败（404/404/403/404）。
 - 上述修订使报告结论更保守，但没有改变“五个方向被淘汰”的判断。
+
+
+---
+
+## 12. 第三轮复核（引文追踪）
+
+第三轮用 Semantic Scholar Graph API 补做了第一、二轮都缺失的施引文献核查（读-only，无密钥）。
+
+### 12.1 结果
+- **KYC 2510.02268**：28 篇施引（2025–2026），全部是视角/相机鲁棒性工作，包括 VersaCamVLA、Fisheye-VLA、RayViT、AxisGuide、Cross-View Action Consistency、Selective Cross-View Consistency、Learning to Act Robustly with View-Invariant Latent Actions、OC-VLA++、SeeR-VLA、CamVLA、GP^A 等。**没有一篇研究“哪种任务会从空间升级中受益”**。这直接佐证 A 类饱和。
+- **LIBERO-RIG 2610.18843**：1 篇施引（SEAR），28 条参考文献中无“tolerance × intervention”研究。
+- **CMA 2609.27247 / RSB 2606.02277**：各 1 篇施引；其参考文献里出现 "When Vision Overrides Language"（2602.17659），已补读并登记。
+- **2512.02902**：17 篇施引，均为对齐/适配类。
+- 新发现两篇直接竞争/方法学约束：2602.17659（LIBERO-CF + CAG 双分支反事实选择）与 2610.29646（paired instruction dependence，证明“可靠且相关 ≠ 有决策价值”，+0.059 nats，CI 跨零）。
+
+### 12.2 对结论的影响
+- C2 的独立性进一步下降（CAG 已直接做“证据 vs 捷径”的动作选择）。
+- C1 的评估标准被提高：必须用**选择效用**，不能只报告相关性。门槛增至 7 条。
+- “五年方向被淘汰”的判断未被推翻，反而获得引文级佐证。
+
+### 12.3 仍未解决
+- More Structure 与 2610.01626 的施引列表未取到（持续 429）。理论上仍可能有一篇未检索到的论文做过 C1，但可能性因前五个种子的结果而下降。

@@ -1,13 +1,13 @@
 # Research state — spatial understanding for robot action
 
-Last updated: 2026-11-05 (Asia/Shanghai), second pass. Search cutoff 2026-11-05.
+Last updated: 2026-11-05 (Asia/Shanghai), third pass. Search cutoff 2026-11-05.
 
 ## Status: COMPLETE (second pass, revised conclusions)
 
 ## Pass 1 (initial delivery)
 - 130 queries, ~2,360 unique records, 88 registered at first delivery.
 ## Current totals (after pass 2)
-- 92 registered (4 added in pass 2 for citations that were used but unregistered): 33 full / 18 partial / 41 abstract-only.
+- 94 registered (2 more added in pass 3 from citation chasing): 33 full / 20 partial / 41 abstract-only.
 - Seven candidate directions screened; five eliminated; C1 retained.
 
 ## Pass 2 (this session: re-audit and revision)
@@ -42,3 +42,23 @@ Triggered by the instruction that delivery had not fully passed review. Actions:
 2. Chase citations of 2610.18843, 2607.09825, 2610.01626, 2510.02268, 2512.02902.
 3. If any citing work already does "failure composition predicts representation benefit", mark C1 dead and
    conclude "no candidate qualifies".
+
+## Pass 3 (this session: forward citation chasing)
+
+Semantic Scholar citations endpoint became intermittently available; retrieved citing/reference lists for five seeds:
+- KYC 2510.02268: **28 citing works, all viewpoint/camera-robustness variants** (VersaCamVLA, Fisheye-VLA, RayViT,
+  AxisGuide, Cross-View Action Consistency, ...). None studies benefit prediction. Strong citation-level evidence
+  that category A is saturated.
+- 2512.02902: 17 citing (alignment/adaptation).
+- LIBERO-RIG: 1 citing. CMA: 1 citing. RSB: 1 citing.
+- More Structure 2607.09825 and 2610.01626: persistent 429, **citing lists still missing**.
+
+Two new papers found through the citation graph and registered:
+- 2610.29646 "From Association to Decision Value": a reliable, correlated paired diagnostic yields only +0.059 nats
+  (95% CI [-0.027, 0.133]) and no established top-20% selection gain. Consequence: C1 must be evaluated on
+  selection utility, not correlation. Gate 5 added; total gates now 7.
+- 2602.17659 "When Vision Overrides Language" (LIBERO-CF + CAG): further crowds C2.
+
+## Remaining blocker
+- Citing lists for More Structure and 2610.01626 only. Everything else in the plan is done.
+- OpenAlex filter=cites still 429 (shared IP daily budget).
