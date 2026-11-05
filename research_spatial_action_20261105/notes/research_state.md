@@ -1,8 +1,8 @@
 # Research state — spatial understanding for robot action
 
-Last updated: 2026-11-05 (Asia/Shanghai), fifth pass. Search cutoff 2026-11-05.
+Last updated: 2026-11-05 (Asia/Shanghai), final pass (competitor screens). Search cutoff 2026-11-05.
 
-## Status: COMPLETE (fifth pass; pushed to codex/spatial-action-survey-20261105 — see git log for HEAD)
+## Status: COMPLETE (pushed to codex/spatial-action-survey-20261105 — see git log for HEAD)
 
 ## Pass 1 (initial delivery)
 - 130 queries, ~2,360 unique records, 88 registered at first delivery.
@@ -27,8 +27,8 @@ Triggered by the instruction that delivery had not fully passed review. Actions:
 3. **Publication metadata verified via OpenAlex single-work endpoint** (search/filter endpoints are 429):
    11 of 88 are conference papers (KYC = ICRA 2026; SpatialVLA/LIBERO-X/mid-level = RSS; SpatialVLM/RoboSpatial = CVPR;
    RSB/2609.07047 = EMNLP Findings; 2605.30161/2607.01658/2603.22876/2601.09954 = LNCS). Rest are arXiv-only at retrieval.
-4. **Report revised**: C1 re-scoped to "failure-mode composition → benefit prediction"; score 4.0 → 3.35;
-   judgment "priority" → "conditional, medium-low confidence"; gates 4 → 6.
+4. **Report revised**: C1 re-scoped to "failure-mode composition → benefit prediction"; score 4.0 → 3.35
+   (later 3.1, see Pass 6); judgment "priority" → "conditional, medium-low confidence"; gates 4 → 6 (later 7).
 
 ## Still blocked / unknown
 - **Citation lists**: OpenAlex `filter=cites:` → 429 ("budget used up; resets at midnight UTC");
@@ -85,3 +85,26 @@ Two new papers found through the citation graph and registered:
 ## Remaining blocker
 - None material. OpenAlex filter=cites and S2 for 2607.09825 still 429, but Scholar/OpenAlex both
   indicate zero citations for that paper.
+
+## Pass 6 (competitor screens, final)
+
+Two systematic sweeps of the unread set rather than re-reading:
+
+1. **Abstract-only screen**: listed all 40 titles; only 2611.05058 ("Do Agentic
+   Policies Need to Look at Every Step?") asked a related question, so it was
+   fetched and read. Result: on Ring-on-peg (fine alignment) geometric
+   abstraction reaches 38.0% at revision 3 while pixel reasoning stays 0.0%;
+   Bridge-tower 28/50 vs 12/50 online. Supports C1's H1 in direction but is an
+   LLM policy-synthesis setting, recorded with that caveat.
+2. **New phrasing sweep** (six queries: when-3D, depth-helps, geometry-helps,
+   value-of-3D, task-dependent, which-tasks-benefit) found the decisive paper:
+   **2608.03052 "How Should VLA Models Use Proprioceptive State?"** already runs
+   C1's study design (5 interfaces, fixed backbone, 45 atomic + 20 composite
+   tasks, history 1-96 frames, task-family-dependent effects) for proprioceptive
+   state. C1 is therefore a change of input, not a new design.
+
+Consequences applied: C1 importance 3 -> 2, weighted 3.35 -> **3.1**; new failure
+cause (g) "re-application of an existing design"; 2607.17454 (Gated GeoBoN) added
+as a direct C2 competitor; 2606.13877 (ContactWorld) registered as another
+"which representation matters" study. Registry 95 -> 99 (33 full / 25 partial /
+41 abstract-only). Every cited ID is now registered (78/78).
