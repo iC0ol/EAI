@@ -71,6 +71,17 @@ Two new papers found through the citation graph and registered:
 - New paper registered: 2606.08881 (SO-101 failure/recovery benchmark). Its finding that execution
   instability dominates on low-cost hardware is now a limit on C1's headroom.
 
+## Pass 5 (asset verification for the surviving candidate)
+
+- Checked arXiv HTML hrefs and PDF strings for the four papers C1 would reuse
+  (2607.09825, 2610.18843, 2610.01626, 2512.02902): **no project or code URL in any of them**
+  (only arXiv/LaTeXML boilerplate). GitHub repo search for "LIBERO-RIG" finds no matching repo,
+  although the paper says "We release the benchmark together with manifests".
+- Consequence recorded in the register (`code = NO_URL_IN_PAPER`), in report §2-C1 items 10-11,
+  in §5, and as a new feasibility uncertainty in COMPLETION.json: the failure taxonomy and the
+  tolerance protocol must be reimplemented (estimated 1-2 weeks, unverified).
+- Also refreshed the stale "pushed at" note in this file.
+
 ## Remaining blocker
 - None material. OpenAlex filter=cites and S2 for 2607.09825 still 429, but Scholar/OpenAlex both
   indicate zero citations for that paper.

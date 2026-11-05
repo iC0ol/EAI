@@ -144,8 +144,10 @@ L2（表征）→ L3（决策）之间的**价值判据**；不改变表征，�
 **10. 可用官方基线、数据与评估资源**
 robosuite、ManiSkill、LIBERO（MIT）、LIBERO-Plus、ACT/Diffusion Policy 官方实现、SmolVLA（Apache-2.0, 0.5B）。KYC 仓库可作干预参考但**无权重**（MIT）。More Structure 使用 11 GB 显存的冻结编码器配置，与 3090 兼容 [F]。
 
+**资产核查（2026-11-05，只读）**：C1 想复用的两套协议**都没有可验证的公开代码入口**——More Structure（2607.09825）、LIBERO-RIG（2610.18843）、2610.01626、2512.02902 四篇的 arXiv HTML 与 PDF 中均无 github/项目页链接（仅 arXiv 与 LaTeXML 样板链接）；GitHub 仓库搜索 "LIBERO-RIG" 也无匹配。LIBERO-RIG 正文写了 "We release the benchmark together with manifests"，但未给出 URL。**结论：失败分类器与容差协议都需要自行复现**，这是 C1 的主要工程成本，不能按"直接复用"估算。
+
 **11. 资源需求与工程风险**
-单卡 3090 可完成。最大风险仍是基线可靠性：必须先把 ACT/DP 训到论文量级（如 Lift ≥30%、Stack ≥20%），否则 b 与 Δε 都无法测。
+单卡 3090 可完成，但**没有可直接复用的官方代码**：失败分类器（More Structure 的运动学规则）与轴/阶段容差协议（LIBERO-RIG 的 severity ladder 与 manifests）都需自行实现，按 1–2 周当量估计。最大风险仍是基线可靠性：必须先把 ACT/DP 训到论文量级（如 Lift ≥30%、Stack ≥20%），否则 b 与 Δε 都无法测。
 
 **12. 小论文的潜在独立贡献**
 一个跨任务可外推的"失败模式构成—干预收益"关系，外加一个负面判据（失败以跟踪/遮挡为主时，空间精度类干预不应期待收益）。属于测量科学贡献；但必须承认其与 More Structure 的机制结论高度连续。
@@ -373,8 +375,8 @@ robosuite、ManiSkill、LIBERO（MIT）、LIBERO-Plus、ACT/Diffusion Policy 官
 | 3 | [RSB 2606.02277](https://arxiv.org/abs/2606.02277) | 2026 / EMNLP Findings（OpenAlex） | F | [ZGC-EmbodyAI](https://github.com/ZGC-EmbodyAI/RoboSemanticBench) | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
 | 4 | [A-FAR/BAVO 2609.37292](https://arxiv.org/abs/2609.37292) | 2026 / preprint | F | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
 | 5 | [ActiveArena 2609.24124](https://arxiv.org/abs/2609.24124) | 2026 / preprint | F | 项目页声明 | UNKNOWN | 声明开源 | 声明开源 | UNKNOWN | PARTIAL |
-| 6 | [More Structure 2607.09825](https://arxiv.org/abs/2607.09825) | 2026 / preprint | F | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
-| 7 | [LIBERO-RIG 2610.18843](https://arxiv.org/abs/2610.18843) | 2026 / preprint | F | 未确认 | UNKNOWN | manifests 声明 | 声明 | UNKNOWN | PARTIAL |
+| 6 | [More Structure 2607.09825](https://arxiv.org/abs/2607.09825) | 2026 / preprint | F | NO_URL_IN_PAPER | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
+| 7 | [LIBERO-RIG 2610.18843](https://arxiv.org/abs/2610.18843) | 2026 / preprint | F | NO_URL_IN_PAPER（正文称已发布，无 URL） | UNKNOWN | manifests 声明 | 声明 | UNKNOWN | PARTIAL |
 | 8 | [2610.01626](https://arxiv.org/abs/2610.01626) | 2026 / preprint | F | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
 | 9 | [2610.38104](https://arxiv.org/abs/2610.38104) | 2026 / preprint | F | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
 | 10 | [2602.23408](https://arxiv.org/abs/2602.23408) | 2026 / preprint | F | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
@@ -392,7 +394,7 @@ robosuite、ManiSkill、LIBERO（MIT）、LIBERO-Plus、ACT/Diffusion Policy 官
 | 22 | [SpatialVLA 2501.15830](https://arxiv.org/abs/2501.15830) | 2025 / RSS（OpenAlex） | F | [SpatialVLA](https://github.com/SpatialVLA/SpatialVLA) | 声明发布 | 声明发布 | UNKNOWN | UNKNOWN | PARTIAL |
 | 23 | [LIBERO](https://github.com/Lifelong-Robot-Learning/LIBERO) | 官方仓库 | — | 是 | 无 | 下载脚本 | evaluate.py | MIT | VERIFIED |
 | 24 | [SmolVLA](https://huggingface.co/lerobot/smolvla_base) | 模型卡 | — | LeRobot | 0.5B 公开 | 社区数据 | lerobot-eval | Apache-2.0 | VERIFIED |
-| 25 | [2512.02902](https://arxiv.org/abs/2512.02902) | 2026 / preprint | P | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
+| 25 | [2512.02902](https://arxiv.org/abs/2512.02902) | 2026 / preprint | P | NO_URL_IN_PAPER | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
 | 26 | [2610.29646](https://arxiv.org/abs/2610.29646) | 2026 / preprint | P | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
 | 27 | [2602.17659](https://arxiv.org/abs/2602.17659) | 2026 / preprint | P | UNKNOWN | LIBERO-CF 声明 | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
 | 28 | [2606.08881](https://arxiv.org/abs/2606.08881) | 2026 / preprint | P | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |

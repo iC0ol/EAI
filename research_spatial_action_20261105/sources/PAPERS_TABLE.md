@@ -1,6 +1,6 @@
 # 文献与资产登记表（可读版）
 
-完整字段见 `sources/papers.jsonl`。读取层级：F=FULL_TEXT, P=PARTIAL_TEXT, A=ABSTRACT_ONLY。出版状态来自 OpenAlex 单篇记录（2026-11-05 检索）。
+完整字段见 `sources/papers.jsonl`。读取层级：F=FULL_TEXT, P=PARTIAL_TEXT, A=ABSTRACT_ONLY。出版状态来自 OpenAlex 单篇记录（2026-11-05 检索）。`NO_URL_IN_PAPER` 表示论文正文与 PDF/HTML 中均无项目或代码链接。
 
 | 日期 | arXiv | 标题 | 读取 | 出版状态 | 代码 | 权重 |
 |---|---|---|---|---|---|---|
@@ -14,15 +14,15 @@
 | 2026-10-16 | [2610.22997](https://arxiv.org/abs/2610.22997) | GR-VIP: Geometric representation conditioning for precise visuomotor policy | P | arXiv | — | — |
 | 2026-10-16 | [2610.23396](https://arxiv.org/abs/2610.23396) | AWAM: Active Trajectory-Conditioned View Imagination for Robust Robot Manipulation | A | arXiv | — | — |
 | 2026-10-16 | [2610.23378](https://arxiv.org/abs/2610.23378) | Look Before You Act: Bridging Active Perception and Vision-Language-Action Models via Observation-Aligned Data Adaptation | P | arXiv | — | — |
-| 2026-10-13 | [2610.18843](https://arxiv.org/abs/2610.18843) | LIBERO-RIG: A Hardware-Setup Robustness Benchmark for Vision-Language-Action Models | F | arXiv | — | — |
+| 2026-10-13 | [2610.18843](https://arxiv.org/abs/2610.18843) | LIBERO-RIG: A Hardware-Setup Robustness Benchmark for Vision-Language-Action Models | F | arXiv | NO_URL_IN_PAPER | — |
 | 2026-10-11 | [2610.15572](https://arxiv.org/abs/2610.15572) | Look Before You Move: Agent-Interface-Aligned Supervision for Open-World Mobile Manipulation | A | arXiv | — | — |
 | 2026-10-11 | [2610.15425](https://arxiv.org/abs/2610.15425) | Exploring the Limits of Combinatorial Generalization in Embodied Manipulation | P | arXiv | — | — |
 | 2026-10-09 | [2610.13516](https://arxiv.org/abs/2610.13516) | RESCUE: Is This Alarm Worth Acting On? Counterfactual Evaluation of VLA Runtime Monitors | P | arXiv | — | — |
 | 2026-10-08 | [2610.12696](https://arxiv.org/abs/2610.12696) | Spa-Bench: A Real-Robot Benchmark for Spatial Grounding in Vision-Language-Action Models | F | arXiv | [link](https://justintiensmith.github.io/Spa-Bench/) | — |
 | 2026-10-08 | [2610.11508](https://arxiv.org/abs/2610.11508) | WARP-VLA: Wrist-Camera Adaptation for View-Robust Policy Execution in Vision-Language-Action Models | A | arXiv | — | — |
 | 2026-10-02 | [2610.04139](https://arxiv.org/abs/2610.04139) | From Sight to Foresight: Predictive Spatial Reasoning in Vision-Language Models | A | arXiv | — | — |
-| 2026-10-01 | [2610.01626](https://arxiv.org/abs/2610.01626) | Measuring the Stability Assumption Behind Action Chunking | F | arXiv | — | — |
-| 2026-09-29 | [2609.37292](https://arxiv.org/abs/2609.37292) | Recovering the View: Benchmarking Physical Active Vision for Occlusion Recovery in Robotic Manipulation | F | arXiv | UNKNOWN (paper does not state a public repo in the extracted text) | — |
+| 2026-10-01 | [2610.01626](https://arxiv.org/abs/2610.01626) | Measuring the Stability Assumption Behind Action Chunking | F | arXiv | NO_URL_IN_PAPER | — |
+| 2026-09-29 | [2609.37292](https://arxiv.org/abs/2609.37292) | Recovering the View: Benchmarking Physical Active Vision for Occlusion Recovery in Robotic Manipulation | F | arXiv | UNKNOWN | — |
 | 2026-09-29 | [2609.38285](https://arxiv.org/abs/2609.38285) | GaugeVLM: Structuring Spatial Supervision with Measured Geometric Interventions | P | arXiv | — | — |
 | 2026-09-28 | [2610.23891](https://arxiv.org/abs/2610.23891) | When to Make a Decision: Task-Sufficient Active Perception for Mobile Manipulator Robots | F | arXiv | — | — |
 | 2026-09-28 | [2609.35039](https://arxiv.org/abs/2609.35039) | Do Not Cut When Uncertain: Rejectable and Calibrated Decision Heads for VLA Policies in Robotic Harvesting | P | arXiv | — | — |
@@ -50,8 +50,8 @@
 | 2026-08-02 | [2608.01066](https://arxiv.org/abs/2608.01066) | OC-VLA++: Monocular Geometry-Guided Cross-View Consistency for Viewpoint-Robust Robotic Manipulation | A | arXiv | — | — |
 | 2026-07-31 | [2607.29169](https://arxiv.org/abs/2607.29169) | ActFovea: Runtime Safeguarding for VLA Policies via Spatiotemporal Visual-Action Consistency | F | arXiv | — | — |
 | 2026-07-15 | [2607.13618](https://arxiv.org/abs/2607.13618) | STOCKTAKE: Measuring the Gap Between Perception and Action in LLM Agents with a Fair Oracle | F | arXiv | — | — |
-| 2026-07-13 | [2607.11498](https://arxiv.org/abs/2607.11498) | See like a Robot: Robot-Centric Pointmaps for VLA Models | F | arXiv | Project page referenced in paper | — |
-| 2026-07-10 | [2607.09825](https://arxiv.org/abs/2607.09825) | More Structure, Not More Capacity: Object-Centric Representations for Visuomotor Imitation Learning | F | arXiv | — | — |
+| 2026-07-13 | [2607.11498](https://arxiv.org/abs/2607.11498) | See like a Robot: Robot-Centric Pointmaps for VLA Models | F | arXiv | Project | — |
+| 2026-07-10 | [2607.09825](https://arxiv.org/abs/2607.09825) | More Structure, Not More Capacity: Object-Centric Representations for Visuomotor Imitation Learning | F | arXiv | NO_URL_IN_PAPER | — |
 | 2026-07-06 | [2607.05396](https://arxiv.org/abs/2607.05396) | From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model | F | arXiv | [link](https://alibaba-damo-academy.github.io/CamVLA/) | — |
 | 2026-07-04 | [2607.03758](https://arxiv.org/abs/2607.03758) | Occluding the Solution Space: Planner-Agnostic Adversarial Attacks on Tolerance-Aware Manipulation | F | arXiv | — | — |
 | 2026-07-02 | [2607.01658](https://arxiv.org/abs/2607.01658) | Teaching Vision-Language-Action Models What to See and Where to Look | A | published | — | — |
@@ -75,7 +75,7 @@
 | 2026-03-25 | [2603.26779](https://arxiv.org/abs/2603.26779) | Limits of Spatial Imagery Reasoning in Frontier LLM Models | P | arXiv | — | — |
 | 2026-03-24 | [2603.22876](https://arxiv.org/abs/2603.22876) | Grounding Sim-to-Real Generalization in Robotic Manipulation: An Empirical Study with Vision-Language-Action Models | A | published | — | — |
 | 2026-03-23 | [2603.26757](https://arxiv.org/abs/2603.26757) | Beyond Viewpoint Generalization: What Multi-View Demonstrations Offer and How to Synthesize Them for Robot Manipulation? | A | arXiv | — | — |
-| 2026-03-13 | [2603.13033](https://arxiv.org/abs/2603.13033) | ESPIRE: A Diagnostic Benchmark for Embodied Spatial Reasoning of Vision-Language Models | F | arXiv | The paper states code availability; not independently confirmed | — |
+| 2026-03-13 | [2603.13033](https://arxiv.org/abs/2603.13033) | ESPIRE: A Diagnostic Benchmark for Embodied Spatial Reasoning of Vision-Language Models | F | arXiv | The | — |
 | 2026-03-12 | [2603.12193](https://arxiv.org/abs/2603.12193) | SaPaVe: Towards Active Perception and Manipulation in Vision-Language-Action Models for Robotics | A | arXiv | — | — |
 | 2026-03-04 | [2603.04639](https://arxiv.org/abs/2603.04639) | RoboMME: Benchmarking and Understanding Memory for Robotic Generalist Policies | A | arXiv | — | — |
 | 2026-02-26 | [2602.23408](https://arxiv.org/abs/2602.23408) | Demystifying Action Space Design for Robotic Manipulation Policies | F | arXiv | — | — |
@@ -87,7 +87,7 @@
 | 2026-02-04 | [2602.04243](https://arxiv.org/abs/2602.04243) | Viewpoint Matters: Dynamically Optimizing Viewpoints with Masked Autoencoder for Visual Manipulation | A | arXiv | — | — |
 | 2026-01-15 | [2601.09954](https://arxiv.org/abs/2601.09954) | The Spatial Blindspot of Vision-Language Models | P | arXiv | — | — |
 | 2026-01-13 | [2601.08325](https://arxiv.org/abs/2601.08325) | ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation | A | arXiv | — | — |
-| 2025-12-02 | [2512.02902](https://arxiv.org/abs/2512.02902) | VLA Models Are More Generalizable Than You Think: Revisiting Physical and Spatial Modeling | P | arXiv | — | — |
+| 2025-12-02 | [2512.02902](https://arxiv.org/abs/2512.02902) | VLA Models Are More Generalizable Than You Think: Revisiting Physical and Spatial Modeling | P | arXiv | NO_URL_IN_PAPER | — |
 | 2025-11-21 | [2511.17001](https://arxiv.org/abs/2511.17001) | Unify Robot Actions in Camera Frame | A | arXiv | — | — |
 | 2025-10-14 | [2510.12276](https://arxiv.org/abs/2510.12276) | Spatial Forcing: Implicit Spatial Representation Alignment for Vision-language-action Model | A | arXiv | — | — |
 | 2025-10-02 | [2510.02268](https://arxiv.org/abs/2510.02268) | Do You Know Where Your Camera Is? View-Invariant Policy Learning with Camera Conditioning | F | published | [link](https://github.com/ripl/CamPoseOpensource) | NOT_RELEASED (no checkpoint in repo; training from scratch) |

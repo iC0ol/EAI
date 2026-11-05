@@ -22,6 +22,17 @@ read_fix = {
     "2604.09338": "PARTIAL_TEXT",
 }
 
+# Asset check, 2026-11-05: none of these four papers contains a project or code
+# URL in its arXiv HTML or PDF (only arXiv/LaTeXML boilerplate). GitHub repository
+# search for "LIBERO-RIG" returns no matching repo. Recorded explicitly so the
+# register does not imply availability.
+ASSET_FIX = {
+    "2607.09825": "NO_URL_IN_PAPER",
+    "2610.18843": "NO_URL_IN_PAPER (paper states the benchmark is released, but no URL appears in the text; GitHub search finds no matching repo)",
+    "2610.01626": "NO_URL_IN_PAPER",
+    "2512.02902": "NO_URL_IN_PAPER",
+}
+
 rows = [json.loads(l) for l in open(os.path.join(ROOT, "sources", "papers.jsonl"))]
 for r in rows:
     m = meta.get(r["id"])
@@ -36,6 +47,8 @@ for r in rows:
         r["openalex_cited_by"] = m.get("cited_by_count")
     if r["id"] in read_fix:
         r["read_level"] = read_fix[r["id"]]
+    if r["id"] in ASSET_FIX:
+        r["code"] = ASSET_FIX[r["id"]]
 
 with open(os.path.join(ROOT, "sources", "papers.jsonl"), "w") as f:
     for r in rows:

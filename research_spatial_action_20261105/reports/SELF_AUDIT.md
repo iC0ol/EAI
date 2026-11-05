@@ -56,6 +56,7 @@
 - 只用官方仓库 README、GitHub API 元数据、HuggingFace 模型卡核查，**未安装、未下载权重、未运行**。
 - 关键发现：**KYC 仓库不提供预训练权重**（仅有代码、数据下载脚本、复现配置），这直接解释了用户 F 经历的复现困难，并构成对"以 KYC 为基线"的硬性风险提示。
 - 已核实：LIBERO（MIT）、SmolVLA（Apache-2.0, 0.5B）、openpi（Apache-2.0）、OpenVLA（MIT，仓库自 2025-03 未更新）。
+- **新增（第五轮）**：C1 依赖的四篇论文（More Structure、LIBERO-RIG、2610.01626、2512.02902）在 arXiv HTML 与 PDF 中**均无项目/代码 URL**；GitHub 搜索 "LIBERO-RIG" 无匹配。已把 `code` 字段标为 `NO_URL_IN_PAPER`，并在报告 §2-C1 与 §5 写明：失败分类器与容差协议需自行复现。
 - 未核实：多数 2026 年论文的项目页/数据/权重（登记为 UNKNOWN）。**没有从"有 GitHub"推断"能复现"。**
 
 ## 6. 两篇论文主线
