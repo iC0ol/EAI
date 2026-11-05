@@ -204,6 +204,7 @@ More Structure（单任务机制证明）、LIBERO-RIG（每轴容差 + 严重�
 **7. 可能的方法贡献及其创新风险**
 - 贡献形态：一个**失败模式构成 → 收益**的可证伪预测关系 + 测量协议（不是新模块）。
 - 创新风险很高：审稿人会说"这不过是 More Structure 的跨任务重复"。缓解只能靠两件事：① 在**未见任务**上预测（5 拟合 / 2 留出）；② 证明它优于"任务难度"与"基线成功率"两个朴素预测。若做不到，应放弃。
+- **创新类型（委托 §6.3）**：属于"**新的空间误差诊断与纠正机制**"中的诊断侧——不是新的空间表示、不是新的状态更新、也不是新的决策算法，而是"判断哪类空间误差值得纠正"的判据。**为什么不能被简单修改替代**：现有方法（LIBERO-RIG 的轴容差、More Structure 的失败分类）各自只给出单轴阈值或单任务机制，没有任何一个能在未见任务上预测干预收益；把二者"简单拼接"仍需回答"用哪个量、如何外推"，这正是 C1 的内容。若审稿人认为拼接即足够，C1 应被放弃。
 
 **8. 作用于空间—行动链条的哪个环节**
 L2（表征）→ L3（决策）之间的**价值判据**；不改变表征，只判断何时值得改变。
@@ -510,6 +511,23 @@ C2 与 C4 未通过独立性门槛，故不为其展开七问设计；若未来�
 | 28 | [2606.08881](https://arxiv.org/abs/2606.08881) | 2026 / preprint | P | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
 
 **资产核查方法**：只读取官方仓库 README / GitHub API 元数据 / 模型卡，**未安装、未下载权重、未运行任何评估**。`VERIFIED` 仅表示"有直接官方来源支持该字段"，不表示"能在本机跑通"。
+
+### 5.1 委托 §8.3 十项资产维度的覆盖情况
+
+| 维度 | 已核查对象 | 结论 | 未覆盖 |
+|---|---|---|---|
+| 官方代码 | KYC（MIT）、LIBERO（MIT）、SmolVLA/LeRobot（Apache-2.0）、openpi（Apache-2.0）、OpenVLA（MIT，2025-03 后未更新）、RoboSemanticBench、SpatialVLA、RoboPoint | 7 个有可识别版本；**C1 依赖的四篇（More Structure、LIBERO-RIG、2610.01626、2512.02902）无项目/代码 URL** | 多数 2026 论文项目页 |
+| 预训练权重 | SmolVLA（0.5B，公开）、SpatialVLA（声明发布）、RoboPoint（声明发布） | 部分公开；**KYC 不发布权重** | 其余为 UNKNOWN |
+| 训练数据 | LIBERO（CC BY 4.0）、Spa-Bench（4,092 episodes 声明）、RoboSpatial/SpatialVLM（声明发布） | 部分公开 | 多数 2026 论文 |
+| 评估环境 | LIBERO（evaluate.py）、LIBERO-Plus、robosuite、ManiSkill | 有官方入口 | LIBERO-RIG 的 manifests（称发布但无 URL） |
+| 控制接口 | robosuite/ManiSkill 的 OSC/关节位置接口；KYC 的 delta EEF / 绝对关节 | 可用，但**未验证本机运行** | 真机平台 |
+| 任务指标 | LIBERO 成功率、Spa-Bench 六任务成功判据、RSB 的 GSR/TSR | 定义清楚 | 多数 2026 基准未逐条核对 |
+| 公开结果 | LIBERO 基线、SmolVLA 模型卡（无数字）、KYC Table I | 有可信成功率或专家正例 | 部分论文只给相对提升 |
+| 工程依赖 | robosuite/ManiSkill/LIBERO 的 MuJoCo/EGL 依赖；More Structure 的 11 GB 显存配置 | 已知 | 未安装验证 |
+| 许可证 | MIT（KYC、LIBERO、OpenVLA）、Apache-2.0（LeRobot、openpi）、CC BY 4.0（LIBERO 数据） | 允许研究使用 | 多数 2026 论文 UNKNOWN |
+| 已知 issue | 仅做仓库级观察（OpenVLA 停更、KYC 无权重） | 无系统 issue 扫描 | **未逐仓读 issue 列表** |
+
+**这一节的作用**：把"有 GitHub"与"能复现"分开。对本报告唯一保留的候选 C1 而言，最关键的缺口是第 1 行与第 4 行——**它要复用的失败分类器与容差协议都没有可验证的公开入口**。
 
 ---
 
