@@ -7,7 +7,7 @@ Last updated: 2026-11-05 (Asia/Shanghai), fifth pass. Search cutoff 2026-11-05.
 ## Pass 1 (initial delivery)
 - 130 queries, ~2,360 unique records, 88 registered at first delivery.
 ## Current totals (after pass 2)
-- 95 registered (2 added in pass 3, 1 in pass 4): 33 full / 21 partial / 41 abstract-only.
+- 95 registered (2 added in pass 3, 1 in pass 4): 33 full / 22 partial / 40 abstract-only.
 - Seven candidate directions screened; five eliminated; C1 retained.
 
 ## Pass 2 (this session: re-audit and revision)

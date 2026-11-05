@@ -477,6 +477,12 @@ A = {
   "Real-world SO-101 benchmark of pi0.5, SmolVLA, Wall-X and ACT across four tasks with a structured failure taxonomy, semantic vs execution-level decomposition, and recovery-aware metrics. Finds execution instability the dominant failure source and recovery capability strongly architecture-dependent. Relevant to C1 as evidence that on low-cost hardware the dominant failure mode may be execution, not spatial precision.",
   "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
 
+"2611.05058": ("PARTIAL_TEXT", "VERIFIED", ["agentic_geometry", "when_to_look"],
+  "Abstract; §4 policy synthesis numbers; §5 online execution; §6 query reduction",
+  "Agentic evidence that grounded geometry pays off where fine alignment is required",
+  "Replaces repeated image interpretation with a typed, evidence-aware 3D symbol layer refreshed from calibrated RGB-D and read by the language model, invoking visual reasoning only on demand. Policy synthesis: Geometric Abstraction reaches 45.2% vs 21.2% at R1 on Bridge+cylinder and 57.2% vs 17.2% on Three-cube stacking; Ring-on-peg stays 0% for pixel reasoning through R2 while geometric abstraction reaches 38.0% at R3. Online execution: Bridge-tower 28/50 vs 12/50, Tower relocation 42/50 vs 15/50. Also cuts attached images from 10.94 to 2.72 and model time by 49.4% on Ring-on-peg. Dated 2026-11-03, two days before the cutoff; read at partial depth after a competitor screen of the abstract-only set.",
+  "https://geometric-abstraction.github.io", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
+
 }
 
 FULL = set("""2510.02268 2610.12696 2609.37292 2610.23891 2609.24124 2609.32762 2610.38104
@@ -487,7 +493,7 @@ FULL = set("""2510.02268 2610.12696 2609.37292 2610.23891 2609.24124 2609.32762 
 
 ABSTRACT_ONLY = set("""2603.26757 2605.30557 2608.01826 2608.01066 2606.15232 2610.24705 2610.22997
 2610.23396 2606.26800 2610.15572 2602.07082 2606.03240 2608.24959 2609.13812 2609.24525
-2605.29416 2510.12276 2508.15874 2611.05058 2609.27734 2610.11508 2609.23252 2601.08325
+2605.29416 2510.12276 2508.15874 2609.27734 2610.11508 2609.23252 2601.08325
 2602.04600 2609.07047 2603.04639 2609.18514 2603.12193 2607.01658 2610.04139 2512.02902
 2406.10721 2411.16537 2401.12168 2610.34051 2609.30833 2602.04243 2511.17001 2506.06196
 2611.03937 2608.13605 2603.22876 2606.03943 """.split())

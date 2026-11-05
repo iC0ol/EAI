@@ -4,7 +4,7 @@
 
 | 日期 | arXiv | 标题 | 读取 | 出版状态 | 代码 | 权重 |
 |---|---|---|---|---|---|---|
-| 2026-11-03 | [2611.05058](https://arxiv.org/abs/2611.05058) | Do Agentic Policies Need to Look at Every Step? Geometric Abstraction for Reasoning and Action | A | arXiv | — | — |
+| 2026-11-03 | [2611.05058](https://arxiv.org/abs/2611.05058) | Do Agentic Policies Need to Look at Every Step? Geometric Abstraction for Reasoning and Action | P | arXiv | [link](https://geometric-abstraction.github.io) | — |
 | 2026-11-02 | [2611.03937](https://arxiv.org/abs/2611.03937) | FlowBench: Counterfactual Imagination Training for Spatial Intelligence | A | arXiv | — | — |
 | 2026-10-28 | [2610.38104](https://arxiv.org/abs/2610.38104) | Same Label, Different Interface: Beyond Action-Space Labels in Robot Learning | F | arXiv | — | — |
 | 2026-10-25 | [2610.34051](https://arxiv.org/abs/2610.34051) | BEHAVIOR-Spatial Benchmark: Evaluating Spatial Understanding for Robotics | A | arXiv | — | — |
