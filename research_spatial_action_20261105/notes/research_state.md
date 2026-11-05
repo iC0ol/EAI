@@ -46,7 +46,7 @@ Triggered by the instruction that delivery had not fully passed review. Actions:
 ## Pass 3 (this session: forward citation chasing)
 
 Semantic Scholar citations endpoint became intermittently available; retrieved citing/reference lists for five seeds:
-- KYC 2510.02268: **28 citing works, all viewpoint/camera-robustness variants** (VersaCamVLA, Fisheye-VLA, RayViT,
+- KYC 2510.02268: **28 citing works, about 24 of them viewpoint/camera-robustness variants** (VersaCamVLA, Fisheye-VLA, RayViT,
   AxisGuide, Cross-View Action Consistency, ...). None studies benefit prediction. Strong citation-level evidence
   that category A is saturated.
 - 2512.02902: 17 citing (alignment/adaptation).
