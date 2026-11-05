@@ -10,16 +10,17 @@
 |---|---|---|
 | `https://export.arxiv.org/api/query` (Atom API) | 可用 | 全部布尔检索与元数据来源 |
 | `https://export.arxiv.org/html/<id>v1` (LaTeXML) | 可用，偶发 HTTP 429 | 全文主力来源（0.1–0.6 MB/篇，适合慢链路） |
-| `https://arxiv.org/pdf/<id>` | 间歇失败（SSL 35 / 000） | 前 16 篇用 PDF；后续改用 HTML |
-| `api.semanticscholar.org` | HTTP 429 | **未使用**，不作为任何证据 |
-| `api.openalex.org` | HTTP 429 | **未使用** |
+| `https://arxiv.org/pdf/<id>` | 间歇失败（SSL 35 / 000） | 前 17 篇用 PDF；后续改用 HTML |
+| `api.semanticscholar.org` (citations) | 间歇可用（先 429，后 200） | 第三轮用于施引/参考文献核查（6 个种子） |
+| `api.openalex.org/works/<doi>` (单篇) | 可用 | 出版状态核实（95 条） |
+| `api.openalex.org/works?filter=cites:` | HTTP 429 | 引文列表不可用（共享 IP 日预算耗尽） |
 | GitHub REST API | 可用 | 资产/许可证核查（只读） |
 | 机构页面 / 项目页 | 部分可用 | 用于代码与数据入口确认 |
 
 访问限制说明：
 1. 本机对 `arxiv.org` 直连间歇性返回 `SSL_ERROR_SYSCALL`，故 PDF 仅部分获取；其余全文来自 arXiv 官方 HTML 渲染，属同一论文的官方版本，但**页码/图表编号可能与 PDF 不完全一致**，笔记中以章节标题定位为主。
-2. Semantic Scholar / OpenAlex 被限流，因此**没有做跨库引文追踪**（forward/backward citation chasing）。这是本次覆盖的主要缺口，已在 `reports/SELF_AUDIT.md` 记录。
-3. 9 篇 HTML 抓取遇到 429，降级为 `ABSTRACT_ONLY`，已在登记表中标注。
+2. 引文追踪**部分完成**：第三轮 S2 取到 6 个种子的施引（KYC 28、2512.02902 17、LIBERO-RIG 1、CMA 1、RSB 1、2610.01626 0）；More Structure 的列表持续 429。OpenAlex `filter=cites:` 全程 429。详见本文件"第三轮"节。
+3. 第一轮有 9 篇 HTML 抓取遇到 429，后续轮次又有补读与新增；最终 41 篇为 `ABSTRACT_ONLY`，已在登记表中标注。
 
 ## 检索策略
 
@@ -193,7 +194,7 @@
    - `api.openalex.org/works?search=...` → **429**。
    - **可用**：`api.openalex.org/works/https://doi.org/10.48550/arXiv.<id>`（单篇查询）→ 200。据此为全部 95 条补齐出版状态：11 篇为会议论文（KYC=ICRA 2026；SpatialVLA/LIBERO-X/2506.06196=RSS；SpatialVLM/RoboSpatial=CVPR；RSB/2609.07047=EMNLP Findings；2605.30161/2607.01658/2603.22876/2601.09954=LNCS），其余为 arXiv 预印本。
    - 其他替代入口也失败：`semanticscholar.org/arxiv/2510.02268` → 404；S2 内部 citations API → 404；`scite.ai` → 403。
-   - 结论：**出版状态已核实，施引文献仍不可得**。这是本轮唯一未消除的检索缺口。
+   - 结论：**出版状态已核实，施引文献仍不可得**（该缺口在第三轮部分解决；见下）。
 
 2. **补读全文（6 篇）**
    - `2609.18514` ActiveScale、`2512.02902`、`2610.22997`、`2603.12193`、`2601.08325`、`2602.04600`。
@@ -206,7 +207,7 @@
 
 4. **修订后果**
    - C1 由"容差预测收益"收窄为"失败模式构成预测收益"，评分 4.0→3.35，判定由"优先"改为"有条件、置信中低"。
-   - 实验门槛由 4 条增至 6 条，新增"同任务不同失败模式变体"与"4K 参数级对齐对照"。
+   - 实验门槛由 4 条增至 6 条，新增"同任务不同失败模式变体"与"4K 参数级对齐对照"（第五轮又增至 7 条，加入"选择效用"）。
 
 ## 第三轮（同日，引文追踪）
 
@@ -214,7 +215,7 @@ Semantic Scholar citations 端点在本轮**间歇可用**（前两轮均 429）
 
 | seed | 施引数 | 参考文献数 | 结果 |
 |---|---:|---:|---|
-| 2510.02268 KYC | 28 | 57 | 约 24 篇为视角/相机鲁棒性变体（其余为标定/动作空间/分布偏移）；无“空间升级收益预测”研究 |
+| 2510.02268 KYC | 28 | 57 | 约 24 篇为视角/相机鲁棒性变体（其余为标定/动作空间/分布偏移）；**按标题**无“空间升级收益预测”研究 |
 | 2512.02902 | 17 | 42 | 对齐/适配类；无收益预测 |
 | 2610.18843 LIBERO-RIG | 1 | 28 | 无 tolerance × intervention 研究 |
 | 2609.27247 CMA | 1 | 29 | 发现 2602.17659（已补读） |
@@ -230,7 +231,7 @@ Semantic Scholar citations 端点在本轮**间歇可用**（前两轮均 429）
 
 ## 第四轮（Google Scholar 通道）
 
-前几轮只用了 arXiv API。本轮确认 `scholar.google.com/scholar` 可直接抓取（HTTP 200），因此补了一个非 arXiv 的检索通道，用于找措辞不同或发表在非 arXiv  venue 的工作。
+前两轮主要用 arXiv API（第三轮用了 Semantic Scholar）。本轮确认 `scholar.google.com/scholar` 可直接抓取（HTTP 200），因此补了一个非 arXiv 的检索通道，用于找措辞不同或发表在非 arXiv  venue 的工作。
 
 查询（全部为 2026-11-05）：
 - `"failure mode composition" robot manipulation`
