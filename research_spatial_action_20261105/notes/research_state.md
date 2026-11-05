@@ -6,7 +6,7 @@ Last updated: 2026-11-05 (Asia/Shanghai), final pass (competitor screens). Searc
 
 ## Pass 1 (initial delivery)
 - 130 queries, ~2,360 unique records, 88 registered at first delivery.
-## Current totals (after pass 2)
+## Current totals (final)
 - 99 registered (2 in pass 3, 1 in pass 4, 4 in the competitor screens): 33 full / 25 partial / 41 abstract-only.
 - Seven candidate directions screened; five eliminated; C1 retained.
 
