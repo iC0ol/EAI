@@ -1,0 +1,198 @@
+{
+  "utc": "2026-11-04T17:39:59.328857+00:00",
+  "reviewer": "Codex independent CPU raw audit",
+  "GPU_seconds": 34.58120653964579,
+  "worker_PID_absent": true,
+  "counts": {
+    "workers": 1,
+    "make_env": 4,
+    "resets": 8,
+    "renders": 2,
+    "readPixels": 4,
+    "ACT": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "getitems": 0,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "roots": [
+    {
+      "root": 0,
+      "state_shape": [
+        58
+      ],
+      "state_dtype": "float64",
+      "exact_HDF5_initial_state": true,
+      "first_absolute_target_error": 0.0,
+      "root_file_hashes_valid": true,
+      "cube_size": [
+        0.021028468876827223,
+        0.021184829137724084,
+        0.020092900825439994
+      ]
+    },
+    {
+      "root": 1,
+      "state_shape": [
+        58
+      ],
+      "state_dtype": "float64",
+      "exact_HDF5_initial_state": true,
+      "first_absolute_target_error": 2.384185791015625e-07,
+      "root_file_hashes_valid": true,
+      "cube_size": [
+        0.02179419715996307,
+        0.020596007001377526,
+        0.020524609645192763
+      ]
+    },
+    {
+      "root": 2,
+      "state_shape": [
+        58
+      ],
+      "state_dtype": "float64",
+      "exact_HDF5_initial_state": true,
+      "first_absolute_target_error": 0.0,
+      "root_file_hashes_valid": true,
+      "cube_size": [
+        0.021747726370312637,
+        0.020516900611734147,
+        0.021329702195525064
+      ]
+    },
+    {
+      "root": 3,
+      "state_shape": [
+        58
+      ],
+      "state_dtype": "float64",
+      "exact_HDF5_initial_state": true,
+      "first_absolute_target_error": 0.0,
+      "root_file_hashes_valid": true,
+      "cube_size": [
+        0.020775965035214335,
+        0.02163774685513075,
+        0.020149081570323094
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "name": "preflight_train",
+      "npz_sha256": "a0e490e8073dabdbfea03c3ed80ba284836111d623e0bd8064d1df20674a1e75",
+      "normal_sentinel_exact": true,
+      "PNG_exact_vertical_flip_of_raw": true,
+      "shape": [
+        256,
+        256,
+        3
+      ],
+      "dtype": "uint8",
+      "channel_min": [
+        0,
+        17,
+        0
+      ],
+      "channel_max": [
+        255,
+        255,
+        255
+      ],
+      "channel_std": [
+        43.330873948615285,
+        42.270904245240175,
+        47.80943068295
+      ],
+      "unique_RGB": 2304,
+      "visual_review": "robot/table/green cube visible; no evident stripe/blank pattern"
+    },
+    {
+      "name": "preflight_dev",
+      "npz_sha256": "eb268915acf886c8528fc0731835dd23312d046bd4069ad9f5b04e1b61a4a735",
+      "normal_sentinel_exact": true,
+      "PNG_exact_vertical_flip_of_raw": true,
+      "shape": [
+        256,
+        256,
+        3
+      ],
+      "dtype": "uint8",
+      "channel_min": [
+        0,
+        18,
+        0
+      ],
+      "channel_max": [
+        255,
+        255,
+        255
+      ],
+      "channel_std": [
+        40.67186984267116,
+        40.414338593578734,
+        45.51452689111511
+      ],
+      "unique_RGB": 1744,
+      "visual_review": "robot/table/green cube visible; no evident stripe/blank pattern"
+    }
+  ],
+  "event_counts": {
+    "EGL_constructor_enter": 12,
+    "eglReleaseThread_enter": 24,
+    "eglReleaseThread_exit": 24,
+    "context_registered": 12,
+    "EGL_constructor_exit": 12,
+    "eglMakeCurrent_enter": 37,
+    "eglMakeCurrent_exit": 37,
+    "renderer_constructed": 12,
+    "natural_renderer_release_enter": 12,
+    "owner_bound_before_con_free": 12,
+    "owner_bound_after_con_free": 12,
+    "eglDestroyContext_enter": 12,
+    "eglDestroyContext_exit": 12,
+    "after_owner_egl_free": 12,
+    "restore_native_return": 1,
+    "previous_restored": 1,
+    "owned_release_DONE": 12,
+    "natural_renderer_release_exit": 12,
+    "mjr_render_before": 2,
+    "mjr_render_after": 2,
+    "mjr_readPixels_before": 4,
+    "mjr_readPixels_after": 4
+  },
+  "read_events_owner_FBO_and_errors_valid": true,
+  "source_XML_reconstruction": false,
+  "strict_load": {
+    "utc": "2026-11-04T17:36:02.213409+00:00",
+    "strict": true,
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "checkpoint_sha256": "c904a97002571d96e3ee6b66057d09162cbdcb5e926cb6ea0b660ca1390bce13",
+    "tensors": 375,
+    "optimizer_created": false,
+    "optimizer_state_loaded": false,
+    "cached_pretrained_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec"
+  },
+  "sampled_max_resources": {
+    "rss": 2345078784,
+    "whole_device_vram": 1294991360,
+    "disk_bytes": 27729366
+  },
+  "proposed_allocations": {
+    "expert-a": 180,
+    "policy-b": 360,
+    "c-local": 135,
+    "c-official": 135
+  },
+  "total_with_allocations": 844.5812065396458,
+  "raw_files": {
+    "stages/gpu-preflight.json": "6c1d41be71886bd3f9584bb08173b623594311739c66c559ac71925a5c7c669b",
+    "gpu_preflight_result.json": "9641a55d636f6f4bd0a67deec3d969d4fc71c69f469cb2b7619012e08ad03e12",
+    "roots/manifest.json": "d077f9c724f98227d1eac28e61a311d41597396ae2c223f68c6dd146f4e36e24",
+    "results/gpu-preflight/events.jsonl": "b8d69f67e2afc3abc889b78d50225d22de44d1ad7c8b20ac497d703218c10506",
+    "results/gpu-preflight/readbacks.json": "76e784d5f215f690fe63fe07558251faf52ef3fe61b149d8c641193d89d635c2",
+    "preflight_strict_load.json": "ecb1c1040a68f776ea405bc1596f30863166718cf96dc8ee8b79a8edcde10c34"
+  }
+}

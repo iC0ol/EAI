@@ -1,0 +1,9 @@
+{
+  "source": "research_expansion_20261029/reproduction/results/dev_rollouts.jsonl",
+  "n_with_repeat": 33,
+  "min_seconds": 1.208798992447555,
+  "median_seconds": 1.262974333949387,
+  "max_seconds": 1.3621498229913414,
+  "sum_seconds": 41.54014441790059,
+  "diagnostic_limit": "Historical evaluator timing excludes process initialization; new per-step logging/readback instrumentation overhead and matched surrogate scenes differ. Not a new measured preflight."
+}

@@ -1,0 +1,276 @@
+{
+  "scope_id": "kyc-grasp-rootcause-c96545a9-5b4f-43b9-91f0-8f42b9343836",
+  "counts": {
+    "workers": 5,
+    "make_env": 8,
+    "resets": 24,
+    "renders": 102,
+    "readPixels": 204,
+    "ACT": 40,
+    "env_steps": 1630,
+    "rollouts": 12,
+    "getitems": 44,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "phase_counts": {
+    "gpu-preflight": {
+      "workers": 1,
+      "make_env": 4,
+      "resets": 8,
+      "renders": 2,
+      "readPixels": 4
+    },
+    "expert-a": {
+      "workers": 1,
+      "make_env": 1,
+      "resets": 5,
+      "rollouts": 4,
+      "renders": 8,
+      "readPixels": 16,
+      "env_steps": 430
+    },
+    "policy-b": {
+      "workers": 1,
+      "make_env": 1,
+      "resets": 9,
+      "rollouts": 8,
+      "renders": 48,
+      "readPixels": 96,
+      "ACT": 40,
+      "env_steps": 1200
+    },
+    "c-local": {
+      "workers": 1,
+      "make_env": 1,
+      "resets": 1,
+      "getitems": 22,
+      "renders": 22,
+      "readPixels": 44
+    },
+    "c-official": {
+      "workers": 1,
+      "make_env": 1,
+      "resets": 1,
+      "getitems": 22,
+      "renders": 22,
+      "readPixels": 44
+    }
+  },
+  "stages": {
+    "gpu-preflight": {
+      "utc": "2026-11-04T17:36:04.820492+00:00",
+      "phase": "gpu-preflight",
+      "identity": {
+        "pid": 795521,
+        "ppid": 795485,
+        "start_ticks": 316769045,
+        "state": "R",
+        "rss": 262144
+      },
+      "exit_code": 0,
+      "reason": "EXITED",
+      "GPU_seconds": 34.58120653964579,
+      "cumulative_GPU_seconds": 34.58120653964579,
+      "quota": 90,
+      "started_epoch": 1793813730.2391238,
+      "ended_epoch": 1793813764.8205032,
+      "counts": {
+        "workers": 1,
+        "make_env": 4,
+        "resets": 8,
+        "renders": 2,
+        "readPixels": 4,
+        "ACT": 0,
+        "env_steps": 0,
+        "rollouts": 0,
+        "getitems": 0,
+        "backward": 0,
+        "optimizer": 0
+      },
+      "phase_counts": {
+        "workers": 1,
+        "make_env": 4,
+        "resets": 8,
+        "renders": 2,
+        "readPixels": 4
+      }
+    },
+    "expert-a": {
+      "utc": "2026-11-04T17:45:17.090662+00:00",
+      "phase": "expert-a",
+      "identity": {
+        "pid": 798491,
+        "ppid": 798484,
+        "start_ticks": 316820176,
+        "state": "R",
+        "rss": 131072
+      },
+      "exit_code": 0,
+      "reason": "EXITED",
+      "GPU_seconds": 75.4795101750642,
+      "cumulative_GPU_seconds": 110.06071671471,
+      "quota": 180,
+      "started_epoch": 1793814241.610987,
+      "ended_epoch": 1793814317.090674,
+      "counts": {
+        "workers": 2,
+        "make_env": 5,
+        "resets": 13,
+        "renders": 10,
+        "readPixels": 20,
+        "ACT": 0,
+        "env_steps": 430,
+        "rollouts": 4,
+        "getitems": 0,
+        "backward": 0,
+        "optimizer": 0
+      },
+      "phase_counts": {
+        "workers": 1,
+        "make_env": 1,
+        "resets": 5,
+        "rollouts": 4,
+        "renders": 8,
+        "readPixels": 16,
+        "env_steps": 430
+      }
+    },
+    "policy-b": {
+      "utc": "2026-11-04T22:40:35.969585+00:00",
+      "phase": "policy-b",
+      "identity": {
+        "pid": 863261,
+        "ppid": 863254,
+        "start_ticks": 318579484,
+        "state": "R",
+        "rss": 262144
+      },
+      "exit_code": 0,
+      "reason": "EXITED",
+      "GPU_seconds": 201.26586915692315,
+      "cumulative_GPU_seconds": 311.32658587163314,
+      "quota": 360,
+      "started_epoch": 1793831834.7035377,
+      "ended_epoch": 1793832035.9695966,
+      "counts": {
+        "workers": 3,
+        "make_env": 6,
+        "resets": 22,
+        "renders": 58,
+        "readPixels": 116,
+        "ACT": 40,
+        "env_steps": 1630,
+        "rollouts": 12,
+        "getitems": 0,
+        "backward": 0,
+        "optimizer": 0
+      },
+      "phase_counts": {
+        "workers": 1,
+        "make_env": 1,
+        "resets": 9,
+        "rollouts": 8,
+        "renders": 48,
+        "readPixels": 96,
+        "ACT": 40,
+        "env_steps": 1200
+      }
+    },
+    "c-local": {
+      "utc": "2026-11-04T22:47:26.900449+00:00",
+      "phase": "c-local",
+      "identity": {
+        "pid": 869313,
+        "ppid": 869298,
+        "start_ticks": 318637850,
+        "state": "R",
+        "rss": 262144
+      },
+      "exit_code": 0,
+      "reason": "EXITED",
+      "GPU_seconds": 28.54238737700507,
+      "cumulative_GPU_seconds": 339.8689732486382,
+      "quota": 135,
+      "started_epoch": 1793832418.357874,
+      "ended_epoch": 1793832446.90046,
+      "counts": {
+        "workers": 4,
+        "make_env": 7,
+        "resets": 23,
+        "renders": 80,
+        "readPixels": 160,
+        "ACT": 40,
+        "env_steps": 1630,
+        "rollouts": 12,
+        "getitems": 22,
+        "backward": 0,
+        "optimizer": 0
+      },
+      "phase_counts": {
+        "workers": 1,
+        "make_env": 1,
+        "resets": 1,
+        "getitems": 22,
+        "renders": 22,
+        "readPixels": 44
+      }
+    },
+    "c-official": {
+      "utc": "2026-11-04T22:54:00.906417+00:00",
+      "phase": "c-official",
+      "identity": {
+        "pid": 871770,
+        "ppid": 871758,
+        "start_ticks": 318677321,
+        "state": "R",
+        "rss": 262144
+      },
+      "exit_code": 0,
+      "reason": "EXITED",
+      "GPU_seconds": 27.843600154388696,
+      "cumulative_GPU_seconds": 367.7125734030269,
+      "quota": 135,
+      "started_epoch": 1793832813.0626247,
+      "ended_epoch": 1793832840.9064276,
+      "counts": {
+        "workers": 5,
+        "make_env": 8,
+        "resets": 24,
+        "renders": 102,
+        "readPixels": 204,
+        "ACT": 40,
+        "env_steps": 1630,
+        "rollouts": 12,
+        "getitems": 44,
+        "backward": 0,
+        "optimizer": 0
+      },
+      "phase_counts": {
+        "workers": 1,
+        "make_env": 1,
+        "resets": 1,
+        "getitems": 22,
+        "renders": 22,
+        "readPixels": 44
+      }
+    }
+  },
+  "GPU_seconds": 367.7125734030269,
+  "active_lease": null,
+  "active_rollout": null,
+  "rollout_labels": [
+    "A_root0",
+    "A_root1",
+    "A_root2",
+    "A_root3",
+    "B_root0_train",
+    "B_root0_dev",
+    "B_root1_dev",
+    "B_root1_train",
+    "B_root2_train",
+    "B_root2_dev",
+    "B_root3_dev",
+    "B_root3_train"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "utc": "2026-11-04T12:05:00.930964+00:00",
+  "manifest_sha256": "5323928a81b4d335827bdc779ec9ac57fae2def2b92daeba896a0be4bd59072b",
+  "protocol_sha256": "f6f2a0b1a42b7d1f729ae1118db2b0cacc79b1864d16f4672233ec9e499a6014",
+  "candidate_files_checked": 61,
+  "readonly_sources_checked": 396,
+  "actual_CPU_code_files_checked": 26,
+  "CPU_preflight_exit_code": 0,
+  "CPU_preflight_elapsed_seconds": 14.127569741103798,
+  "CPU_process_inactive": true,
+  "live_scope_processes": [],
+  "GPU_state_dispatch_science_clock_roots_absent": true,
+  "secret_findings": 0,
+  "directory_bytes": 12137170,
+  "public_allowlist_entries": 63
+}

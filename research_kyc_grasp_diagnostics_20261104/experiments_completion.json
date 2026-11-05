@@ -1,0 +1,32 @@
+{
+  "utc": "2026-11-04T22:56:40.688213+00:00",
+  "state": "ALL_AUTHORIZED_EXPERIMENTS_COMPLETE_PENDING_FINAL_DUAL_REVIEW_AND_PUBLICATION",
+  "no_more_GPU_authorized": true,
+  "counts": {
+    "workers": 5,
+    "make_env": 8,
+    "resets": 24,
+    "renders": 102,
+    "readPixels": 204,
+    "ACT": 40,
+    "env_steps": 1630,
+    "rollouts": 12,
+    "getitems": 44,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "GPU_seconds": 367.7125734030269,
+  "GPU_minutes": 6.128542890050449,
+  "all_5_workers_inactive": true,
+  "candidate_files_verified": 81,
+  "read_only_source_files_verified": 396,
+  "all_candidate_and_old_sources_SHA_unchanged": true,
+  "stage_SHA256": {
+    "gpu_preflight_result.json": "9641a55d636f6f4bd0a67deec3d969d4fc71c69f469cb2b7619012e08ad03e12",
+    "expert_result.json": "e1c2b9603a6b02d5237062ef1c9034c91bc8a36c350bebe2ed940fc6ebbbe970",
+    "policy_result.json": "0ae6ab10f9b679d31e6e8680fd1692bc7f7636ab604316f704bf346747c12140",
+    "c-local_result.json": "331725831937a274b05d671d2b51ea207ed68e2005e73e4cce3094c6617b69d9",
+    "c-official_result.json": "114314d59dbdcf6d32c7f22d4932eda0dc95e9e357770f19af3b379d5a42c97f"
+  },
+  "C_contact_sheets_identical": true
+}

@@ -1,0 +1,51 @@
+{
+  "directories": {
+    "results": true,
+    "roots": true,
+    "stages": false,
+    "logs": true,
+    "tmp": true
+  },
+  "experts": [
+    {
+      "demo": 0,
+      "key_present": true,
+      "shape": [
+        105,
+        3
+      ],
+      "source_key": "robot0_eef_pos",
+      "source_exact": true
+    },
+    {
+      "demo": 1,
+      "key_present": true,
+      "shape": [
+        102,
+        3
+      ],
+      "source_key": "robot0_eef_pos",
+      "source_exact": true
+    },
+    {
+      "demo": 2,
+      "key_present": true,
+      "shape": [
+        126,
+        3
+      ],
+      "source_key": "robot0_eef_pos",
+      "source_exact": true
+    },
+    {
+      "demo": 3,
+      "key_present": true,
+      "shape": [
+        97,
+        3
+      ],
+      "source_key": "robot0_eef_pos",
+      "source_exact": true
+    }
+  ]
+}

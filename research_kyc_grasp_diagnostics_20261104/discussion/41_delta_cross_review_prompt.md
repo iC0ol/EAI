@@ -1,0 +1,10 @@
+继续真实session。40已完成；请仅交叉核查已限定的修订，不重复全面查新或重写方案。
+目录/home/asus/EAI/research_kyc_grasp_diagnostics_20261104；新manifest `3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530`，新protocol `8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8`。旧候选归档candidate_history/pre_review40。主审已经独立核验新75项左右候选/396来源/26真实CPU代码与快照（准确计数见artifacts/parent_review40_delta_integrity），来源与旧版完全相同。
+
+先纠正事实：40说当前results/roots不存在、必然启动失败；主审实际检查发现两个父目录一直存在（artifacts/parent_review40_blocker_check.json）。manifest不列空目录不等于目录不存在。仍采取mkdir(parents=True,exist_ok=False)解决干净树风险。四份reference_next_eef原件此前已与HDF5完全相同，此次加入真实CPU断言。
+
+修订仅：两处mkdir；CPU专家参考断言；C原每臂22内用demo0/1的t0 repeat替代其末状态，沿用原状态/相机/seed/crop起点，within_arm_repeat保存原数组/哈希对应比较，缺项NOT_RUN不追补。0预算增加，A/B/动作/成功判据不变。亲读repairs/review40_delta/change.diff（可跳过长报告生成模板）、五个改动运行文件相关段、sample_plan、协议变化、实际CPU result/process和mkdir/EEF/repeat检查。没有新GPU或科学时钟。
+
+请回应：撤回或保留哪些40阻断（按实证）；三项修订是否满足；是否还有具体会阻断下一GPU预检的问题。最终准确列新manifest/protocol SHA，只给APPROVE_GPU_PREFLIGHT_ONLY或REVISE；不要提前批准科学A/B/C。无需重复旧来源阅读，也无需再提出非必要框架增强。
+附：notes07的有限源码补充说明官方周期评估与训练共用env，评估reset会重建model/sim/context，本地省略周期评估可能也改变训练渲染几何分布。这是源码差异不是0/32因果证明，不增加本轮实验。你可以核查该边界，但不因它扩展任务。
+工具只读，不运行实验、不改文件、不读取凭据。

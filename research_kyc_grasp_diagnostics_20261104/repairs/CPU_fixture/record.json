@@ -1,0 +1,12 @@
+{
+  "utc": "2026-11-04T11:47:23.022351+00:00",
+  "scope": "CPU preparation only",
+  "attempt1": "cpu_preflight_attempts/attempt_1",
+  "proven_error": "CPU fixture supplied empty active_rollout {}; production requires truthy rollout and runtime begin_rollout uses a label",
+  "fix": "give synthetic CPU rollout fixtures a label; production charge and budgets unchanged",
+  "before_sha256": "d6e0cb20d4e8b116a377f60b05e4774358b93bf243efb7f9029898172eb58db1",
+  "after_sha256": "b7e945d9c68665fdfa189e909cc505826b24a765b107caca616f6afb1bda9226",
+  "GPU_attempts": 0,
+  "actual_ACT_steps": 0,
+  "next": "one explicit final CPU probe; stop/report if another actual failure"
+}

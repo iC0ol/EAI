@@ -1,0 +1,8 @@
+{
+  "scope": "parent CPU analysis only, no experiment modification",
+  "before_sha256": "74b5779aed9e77bd91144e2d481724bc560ffead2a9b1dfdcbd128e635541d3b",
+  "after_sha256": "df7e75755b1161fe809abfcba1e26a5e1d0d9a01e21046e86300c317c5d27417",
+  "initial_assertion": "wrongly required outer and internal RGB tensor hash equality",
+  "source_evidence": "official models/act.py __call__ applies ImageNet normalization to first3 channels before internal forward",
+  "correction": "require qpos/camera equality; treat image hash difference as expected transform, not a deployment error; no claim to fully recompute unsaved9channel tensors"
+}

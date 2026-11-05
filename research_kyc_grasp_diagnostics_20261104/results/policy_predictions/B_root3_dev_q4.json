@@ -1,0 +1,35 @@
+{
+  "utc": "2026-11-04T22:40:06.867737+00:00",
+  "id": "B_root3_dev_q4",
+  "rollout_id": "B_root3_dev",
+  "root": 3,
+  "condition": "dev",
+  "query": 4,
+  "branch": "official_prior",
+  "sample": 3,
+  "seed": null,
+  "repeat": false,
+  "batch": 1,
+  "policy_input_keys": [
+    "cam_extrinsics",
+    "image",
+    "qpos"
+  ],
+  "input_hashes": {
+    "image": "e2f734679926cc69ff5df7a606b75bca29152c76a3f10d35c3a0ddc1cbdb6a5d",
+    "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+    "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+  },
+  "internal_input_hashes": {
+    "qpos": "ced029d3a2f4335124bc49a9fd8566c07ddf93f8b13b566b90c972f626b5eff5",
+    "image": "bf9d4e58a1995966300fc58243e4f494f4bc1a2523adda42a53dbd2dbea0c677",
+    "cam_extrinsics": "38723a2e5e8a17aa7950dc008209944e898f69a7bd10a23c839d341e935fd5ca"
+  },
+  "output_npz": "results/policy_predictions/B_root3_dev_q4.npz",
+  "output_sha256": "7e3747a29dd073208e43a175f9e164f18b4dcbcf1895ea3ab13425c618c83264",
+  "precision": "FP32 weights/inputs + CUDA BF16 autocast, TF32 off",
+  "raw_execution_dtype": "float32",
+  "official_policy_return_bit_equal_internal": true,
+  "prior_latent": "zero z",
+  "loss": null
+}

@@ -1,0 +1,925 @@
+{
+  "scope": "read-only original32 dev traces; actions and heights only, no simulator/model execution",
+  "roots": [
+    {
+      "root_id": 1000,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.0009100973838940263,
+        -0.0011361621873220429,
+        -0.07668346198624931
+      ],
+      "first_chunk_xyz_sum_m": [
+        -0.00017928617307916284,
+        -0.00022471201737062074,
+        -0.01536569808376953
+      ],
+      "cumulative_axisangle_delta": [
+        -0.013693595479708165,
+        -0.0020248999062459916,
+        0.006035186466760933
+      ],
+      "gripper_positive_fraction": 0.43333333333333335,
+      "gripper_min_max": [
+        -1.0043174028396606,
+        0.9760595560073853
+      ],
+      "object_initial_recorded_height_m": 0.8185271445414887,
+      "object_max_height_m": 0.8198547403261007,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1001,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.002112755784764886,
+        -0.0019367120985407382,
+        -0.12098413248895667
+      ],
+      "first_chunk_xyz_sum_m": [
+        -0.00042528449557721615,
+        -0.00038459287679870613,
+        -0.02421388862421736
+      ],
+      "cumulative_axisangle_delta": [
+        -0.01994502794696018,
+        0.00014855715562589467,
+        0.01091418758733198
+      ],
+      "gripper_positive_fraction": 0.23333333333333334,
+      "gripper_min_max": [
+        -0.9966562986373901,
+        0.9607374668121338
+      ],
+      "object_initial_recorded_height_m": 0.8198429737935944,
+      "object_max_height_m": 0.8211705854552931,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1002,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.0004955463227815926,
+        1.4318071407615207e-05,
+        -0.06824799794412684
+      ],
+      "first_chunk_xyz_sum_m": [
+        -9.728706208989024e-05,
+        4.671186616178602e-06,
+        -0.013657130533829331
+      ],
+      "cumulative_axisangle_delta": [
+        -0.014480514859315008,
+        -0.001020138501189649,
+        0.016786627224064432
+      ],
+      "gripper_positive_fraction": 0.43333333333333335,
+      "gripper_min_max": [
+        -1.0043174028396606,
+        0.9683985710144043
+      ],
+      "object_initial_recorded_height_m": 0.8188718792435433,
+      "object_max_height_m": 0.8201994460326071,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1003,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        0.0009667726117186248,
+        0.0010003985235016444,
+        -0.09008224234275986
+      ],
+      "first_chunk_xyz_sum_m": [
+        0.0001897101174108684,
+        0.000200257914912072,
+        -0.018012094660662115
+      ],
+      "cumulative_axisangle_delta": [
+        -0.017496427230071276,
+        -0.0009461034496780485,
+        0.018231392721645534
+      ],
+      "gripper_positive_fraction": 0.3,
+      "gripper_min_max": [
+        -0.9928258061408997,
+        0.9607374668121338
+      ],
+      "object_initial_recorded_height_m": 0.8197310236141497,
+      "object_max_height_m": 0.8210586142989542,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1004,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.0007734321989119053,
+        -0.0004385928205010714,
+        -0.08369658963056281
+      ],
+      "first_chunk_xyz_sum_m": [
+        -0.00015650864224880934,
+        -8.634379992145114e-05,
+        -0.016740965336794034
+      ],
+      "cumulative_axisangle_delta": [
+        -0.014927045616786927,
+        -0.0012140398903284222,
+        0.021404300016001798
+      ],
+      "gripper_positive_fraction": 0.36666666666666664,
+      "gripper_min_max": [
+        -0.9928258061408997,
+        0.9683985710144043
+      ],
+      "object_initial_recorded_height_m": 0.8189007067570279,
+      "object_max_height_m": 0.8202347141410594,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1005,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        0.023748916399199516,
+        -0.00031982783548301086,
+        -0.13340419439191464
+      ],
+      "first_chunk_xyz_sum_m": [
+        0.0047383945202454925,
+        -6.355822370096575e-05,
+        -0.026678044217987917
+      ],
+      "cumulative_axisangle_delta": [
+        -0.010088407143484801,
+        -0.002916845551226288,
+        0.012993145428481512
+      ],
+      "gripper_positive_fraction": 0.13333333333333333,
+      "gripper_min_max": [
+        -0.9966562986373901,
+        0.9454153776168823
+      ],
+      "object_initial_recorded_height_m": 0.8197310483751268,
+      "object_max_height_m": 0.8210586399510953,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1006,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        0.0012719923979602754,
+        0.004726139903141302,
+        -0.09141779624042101
+      ],
+      "first_chunk_xyz_sum_m": [
+        0.00025804294273257256,
+        0.0009423432402400067,
+        -0.01827420445624739
+      ],
+      "cumulative_axisangle_delta": [
+        -0.01826870726654306,
+        0.0003389330522622913,
+        0.025878015148919076
+      ],
+      "gripper_positive_fraction": 0.2733333333333333,
+      "gripper_min_max": [
+        -1.0004868507385254,
+        0.9530764818191528
+      ],
+      "object_initial_recorded_height_m": 0.8194394383440714,
+      "object_max_height_m": 0.82076706878314,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1007,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        2.8336886316537857e-05,
+        -0.00028023950108035933,
+        -0.057237623346736655
+      ],
+      "first_chunk_xyz_sum_m": [
+        1.2045085895806551e-05,
+        -5.375661748985294e-05,
+        -0.01146258640801534
+      ],
+      "cumulative_axisangle_delta": [
+        -0.013803397887386382,
+        -0.0009390526101924479,
+        0.015384660160634667
+      ],
+      "gripper_positive_fraction": 0.43333333333333335,
+      "gripper_min_max": [
+        -0.9928258061408997,
+        0.9760595560073853
+      ],
+      "object_initial_recorded_height_m": 0.8204274846176002,
+      "object_max_height_m": 0.8217550941066001,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1008,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.0003771031624637544,
+        -0.0009857010190899018,
+        -0.06024291354697198
+      ],
+      "first_chunk_xyz_sum_m": [
+        -8.362054359167814e-05,
+        -0.00019772575433307793,
+        -0.01205270123318769
+      ],
+      "cumulative_axisangle_delta": [
+        -0.016006771475076675,
+        -0.0007821687613613904,
+        0.009804026572965086
+      ],
+      "gripper_positive_fraction": 0.43333333333333335,
+      "gripper_min_max": [
+        -1.0043174028396606,
+        0.9760595560073853
+      ],
+      "object_initial_recorded_height_m": 0.8195959637850658,
+      "object_max_height_m": 0.8209235421466669,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1009,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -6.277323700487614e-05,
+        -0.00012672332195506897,
+        -0.05646188370883465
+      ],
+      "first_chunk_xyz_sum_m": [
+        -1.5287951100617647e-05,
+        -2.8807051421608776e-05,
+        -0.011279903701506555
+      ],
+      "cumulative_axisangle_delta": [
+        -0.014476854761596769,
+        -0.0012210910208523273,
+        0.022565689374459907
+      ],
+      "gripper_positive_fraction": 0.43333333333333335,
+      "gripper_min_max": [
+        -1.0043174028396606,
+        0.9683985710144043
+      ],
+      "object_initial_recorded_height_m": 0.8195270102164174,
+      "object_max_height_m": 0.8208545954394266,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1010,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        0.00040644389810040593,
+        -0.00016631164362479467,
+        -0.07482633589825127
+      ],
+      "first_chunk_xyz_sum_m": [
+        8.037767838686705e-05,
+        -3.2116684451466426e-05,
+        -0.0149615016853204
+      ],
+      "cumulative_axisangle_delta": [
+        -0.014484175015240908,
+        -0.0013268553593661636,
+        0.023266672957106493
+      ],
+      "gripper_positive_fraction": 0.36666666666666664,
+      "gripper_min_max": [
+        -0.9928258061408997,
+        0.9683985710144043
+      ],
+      "object_initial_recorded_height_m": 0.8201982466243688,
+      "object_max_height_m": 0.8215258502786784,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1011,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        0.000725329911801964,
+        0.0023133198874347727,
+        -0.10546229244209826
+      ],
+      "first_chunk_xyz_sum_m": [
+        0.00014415488112717867,
+        0.0004609752440956072,
+        -0.021087987028295174
+      ],
+      "cumulative_axisangle_delta": [
+        -0.013056739757303149,
+        -0.0009355270594824106,
+        0.01577503207954578
+      ],
+      "gripper_positive_fraction": 0.23333333333333334,
+      "gripper_min_max": [
+        -0.9928258061408997,
+        0.9607374668121338
+      ],
+      "object_initial_recorded_height_m": 0.81858227644386,
+      "object_max_height_m": 0.8199098395809014,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1012,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.00023132696514949203,
+        0.000622909123194404,
+        -0.0806256989017129
+      ],
+      "first_chunk_xyz_sum_m": [
+        -4.2620988097041845e-05,
+        0.00012318159497226588,
+        -0.0161258457810618
+      ],
+      "cumulative_axisangle_delta": [
+        -0.01542115758638829,
+        -0.0009989856625907123,
+        0.03174624001258053
+      ],
+      "gripper_positive_fraction": 0.3,
+      "gripper_min_max": [
+        -0.9928258061408997,
+        0.9683985710144043
+      ],
+      "object_initial_recorded_height_m": 0.8194592765358782,
+      "object_max_height_m": 0.8207868591780935,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1013,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        0.0010351057862862945,
+        7.28731738490751e-05,
+        -0.10957691469229758
+      ],
+      "first_chunk_xyz_sum_m": [
+        0.00020793225849047303,
+        1.523656101198867e-05,
+        -0.021914323908276856
+      ],
+      "cumulative_axisangle_delta": [
+        -0.012299101566895843,
+        -0.0015137057926040143,
+        0.016261376047623344
+      ],
+      "gripper_positive_fraction": 0.23333333333333334,
+      "gripper_min_max": [
+        -0.9966562986373901,
+        0.9607374668121338
+      ],
+      "object_initial_recorded_height_m": 0.8195039526774526,
+      "object_max_height_m": 0.8208392529329656,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1014,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.00019032740965485573,
+        0.00010138694597117137,
+        -0.05607533795409836
+      ],
+      "first_chunk_xyz_sum_m": [
+        -3.8065481930971146e-05,
+        1.829160646593664e-05,
+        -0.011198417254490778
+      ],
+      "cumulative_axisangle_delta": [
+        -0.015058809600304812,
+        -0.00155601097503677,
+        0.02889918303117156
+      ],
+      "gripper_positive_fraction": 0.43333333333333335,
+      "gripper_min_max": [
+        -1.0043174028396606,
+        0.9683985710144043
+      ],
+      "object_initial_recorded_height_m": 0.819268243443257,
+      "object_max_height_m": 0.8205958215370563,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1015,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.000367992150131613,
+        -0.00124436177793541,
+        -0.10309241953655146
+      ],
+      "first_chunk_xyz_sum_m": [
+        -7.450953125953674e-05,
+        -0.00024953428146545775,
+        -0.02060436349711381
+      ],
+      "cumulative_axisangle_delta": [
+        -0.016156835306901485,
+        -0.001427331124432385,
+        0.013591024136985652
+      ],
+      "gripper_positive_fraction": 0.26666666666666666,
+      "gripper_min_max": [
+        -0.9928258061408997,
+        0.9607374668121338
+      ],
+      "object_initial_recorded_height_m": 0.8201247407492984,
+      "object_max_height_m": 0.8214523613766136,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1016,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        0.00022422365145757794,
+        0.0005907038175791968,
+        -0.06496500756475143
+      ],
+      "first_chunk_xyz_sum_m": [
+        4.393362905830145e-05,
+        0.00012076301391061861,
+        -0.013008769310545176
+      ],
+      "cumulative_axisangle_delta": [
+        -0.01537357730558142,
+        -0.0016970302385743707,
+        0.024566832144046202
+      ],
+      "gripper_positive_fraction": 0.43333333333333335,
+      "gripper_min_max": [
+        -1.0043174028396606,
+        0.9683985710144043
+      ],
+      "object_initial_recorded_height_m": 0.8198549416226069,
+      "object_max_height_m": 0.8211825363544566,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1017,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.0002586600021459162,
+        0.000998170879938698,
+        -0.06058636220404878
+      ],
+      "first_chunk_xyz_sum_m": [
+        -5.1732000429183245e-05,
+        0.00019332040665176464,
+        -0.012105100991902873
+      ],
+      "cumulative_axisangle_delta": [
+        -0.014396332611795515,
+        -0.0010236638190690428,
+        0.02600122221338097
+      ],
+      "gripper_positive_fraction": 0.43333333333333335,
+      "gripper_min_max": [
+        -1.0043174028396606,
+        0.9683985710144043
+      ],
+      "object_initial_recorded_height_m": 0.8185781653260221,
+      "object_max_height_m": 0.819905723311137,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1018,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.0007278771954588592,
+        0.004011379227449652,
+        -0.08042007064796053
+      ],
+      "first_chunk_xyz_sum_m": [
+        -0.00014284212375059724,
+        0.0007996042650120216,
+        -0.01605906806071289
+      ],
+      "cumulative_axisangle_delta": [
+        -0.014429273142013699,
+        -0.0009020346915349364,
+        0.013160447546397336
+      ],
+      "gripper_positive_fraction": 0.4,
+      "gripper_min_max": [
+        -1.0043174028396606,
+        0.9683985710144043
+      ],
+      "object_initial_recorded_height_m": 0.8189581985831543,
+      "object_max_height_m": 0.820285857369936,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1019,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.0009784299763850868,
+        -0.0009310920358984731,
+        -0.07989614535472356
+      ],
+      "first_chunk_xyz_sum_m": [
+        -0.00019295269157737494,
+        -0.00019059730948356446,
+        -0.015976404974935576
+      ],
+      "cumulative_axisangle_delta": [
+        -0.013598433404695243,
+        -0.001857439463492483,
+        0.005494371551321819
+      ],
+      "gripper_positive_fraction": 0.4,
+      "gripper_min_max": [
+        -1.0043174028396606,
+        0.9760595560073853
+      ],
+      "object_initial_recorded_height_m": 0.8187558977625118,
+      "object_max_height_m": 0.8200835890324351,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1020,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.0005912119522690773,
+        0.008185142340153106,
+        -0.08286488431622274
+      ],
+      "first_chunk_xyz_sum_m": [
+        -0.00011095358058810234,
+        0.0016296843150485074,
+        -0.0165407057502307
+      ],
+      "cumulative_axisangle_delta": [
+        -0.014608617639169097,
+        -0.0008438646618742496,
+        0.015478038170840591
+      ],
+      "gripper_positive_fraction": 0.4,
+      "gripper_min_max": [
+        -1.0043174028396606,
+        0.9683985710144043
+      ],
+      "object_initial_recorded_height_m": 0.8185742086696756,
+      "object_max_height_m": 0.8199017984623714,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1021,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -7.188424933701754e-05,
+        0.0014251775073717,
+        -0.08903468641801737
+      ],
+      "first_chunk_xyz_sum_m": [
+        -1.5287951100617647e-05,
+        0.0002846536217475659,
+        -0.017797935579437762
+      ],
+      "cumulative_axisangle_delta": [
+        -0.016101934132166207,
+        -0.0010888852993957698,
+        0.029117713696905412
+      ],
+      "gripper_positive_fraction": 0.3,
+      "gripper_min_max": [
+        -0.9966562986373901,
+        0.9607374668121338
+      ],
+      "object_initial_recorded_height_m": 0.8187885999932611,
+      "object_max_height_m": 0.8201161645288867,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1022,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        7.844745414331555e-05,
+        0.0012015225192953949,
+        -0.10857348432182334
+      ],
+      "first_chunk_xyz_sum_m": [
+        1.660059206187725e-05,
+        0.00023876425075286534,
+        -0.021699282166082412
+      ],
+      "cumulative_axisangle_delta": [
+        -0.01169152685906738,
+        -0.0010113247553817928,
+        0.02167859792825766
+      ],
+      "gripper_positive_fraction": 0.23333333333333334,
+      "gripper_min_max": [
+        -0.9966562986373901,
+        0.9607374668121338
+      ],
+      "object_initial_recorded_height_m": 0.8186342665815424,
+      "object_max_height_m": 0.8199626145147617,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1023,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        0.0007799959857948124,
+        -0.0007685380205657566,
+        -0.09753427936811931
+      ],
+      "first_chunk_xyz_sum_m": [
+        0.00015782139962539077,
+        -0.00015635530871804804,
+        -0.01949179416988045
+      ],
+      "cumulative_axisangle_delta": [
+        -0.016347161261364818,
+        -0.0016036051092669368,
+        0.02003605269419495
+      ],
+      "gripper_positive_fraction": 0.3,
+      "gripper_min_max": [
+        -0.9966562986373901,
+        0.9607374668121338
+      ],
+      "object_initial_recorded_height_m": 0.8197224386296833,
+      "object_max_height_m": 0.8210500296999266,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1024,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.00011743931099772453,
+        -0.00020297222727094777,
+        -0.05726670948206447
+      ],
+      "first_chunk_xyz_sum_m": [
+        -2.8954469598829746e-05,
+        -4.089994945388753e-05,
+        -0.011450506834080443
+      ],
+      "cumulative_axisangle_delta": [
+        -0.0156297828652896,
+        -0.001462585962144658,
+        0.0260667165130144
+      ],
+      "gripper_positive_fraction": 0.43333333333333335,
+      "gripper_min_max": [
+        -1.0043174028396606,
+        0.9683985710144043
+      ],
+      "object_initial_recorded_height_m": 0.8202368478323028,
+      "object_max_height_m": 0.8215644514395511,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1025,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        0.00027888972545042634,
+        -0.0004375744720164221,
+        -0.071412142860936
+      ],
+      "first_chunk_xyz_sum_m": [
+        5.304464139044285e-05,
+        -8.507085840392392e-05,
+        -0.014301961724413559
+      ],
+      "cumulative_axisangle_delta": [
+        -0.014978287450503558,
+        -0.0008174235408660024,
+        0.015759469126351178
+      ],
+      "gripper_positive_fraction": 0.36666666666666664,
+      "gripper_min_max": [
+        -1.0004868507385254,
+        0.9760595560073853
+      ],
+      "object_initial_recorded_height_m": 0.81868566210013,
+      "object_max_height_m": 0.8200132236387491,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1026,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.0006458780262619257,
+        0.0006348747374431696,
+        -0.08163707124185748
+      ],
+      "first_chunk_xyz_sum_m": [
+        -0.00012917560525238514,
+        0.00012719134610961191,
+        -0.016321766102919355
+      ],
+      "cumulative_axisangle_delta": [
+        -0.017587928799912333,
+        -0.000604132073931396,
+        0.024482532520778477
+      ],
+      "gripper_positive_fraction": 0.36666666666666664,
+      "gripper_min_max": [
+        -0.9966562986373901,
+        0.9683985710144043
+      ],
+      "object_initial_recorded_height_m": 0.819610689945735,
+      "object_max_height_m": 0.820938350694207,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1027,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        0.005494956218171865,
+        0.010306083264367771,
+        -0.11421546401106752
+      ],
+      "first_chunk_xyz_sum_m": [
+        0.0010962579399347305,
+        0.0020619438346329844,
+        -0.022835679570562206
+      ],
+      "cumulative_axisangle_delta": [
+        -0.018360210407990962,
+        -0.0022082247596699744,
+        0.043056165988673456
+      ],
+      "gripper_positive_fraction": 0.1,
+      "gripper_min_max": [
+        -1.0004868507385254,
+        0.9377543926239014
+      ],
+      "object_initial_recorded_height_m": 0.8190510109340966,
+      "object_max_height_m": 0.8203785829134437,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1028,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        0.011034466384444386,
+        0.0013123953249305487,
+        -0.12253149220487103
+      ],
+      "first_chunk_xyz_sum_m": [
+        0.0021986934007145464,
+        0.00025798559545364697,
+        -0.02448070523678325
+      ],
+      "cumulative_axisangle_delta": [
+        -0.011537802056409419,
+        -0.0022540557547472417,
+        0.02635917134466581
+      ],
+      "gripper_positive_fraction": 0.1,
+      "gripper_min_max": [
+        -0.9928258061408997,
+        0.9454153776168823
+      ],
+      "object_initial_recorded_height_m": 0.8201227270801005,
+      "object_max_height_m": 0.8214503291245083,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1029,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        2.3781380150467157e-05,
+        -0.0007365872916125227,
+        -0.08979806999559514
+      ],
+      "first_chunk_xyz_sum_m": [
+        7.489579729735851e-06,
+        -0.00015011792129371315,
+        -0.017956790019525215
+      ],
+      "cumulative_axisangle_delta": [
+        -0.016793690738268197,
+        -0.0011893614137079567,
+        0.017026557005010545
+      ],
+      "gripper_positive_fraction": 0.3,
+      "gripper_min_max": [
+        -0.9966562986373901,
+        0.9683985710144043
+      ],
+      "object_initial_recorded_height_m": 0.8200492486160236,
+      "object_max_height_m": 0.8213768937953118,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1030,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        -0.0006458780262619257,
+        -0.0009310920613643248,
+        -0.06455080874729902
+      ],
+      "first_chunk_xyz_sum_m": [
+        -0.00012462009908631444,
+        -0.00018576015099824872,
+        -0.012911103083752096
+      ],
+      "cumulative_axisangle_delta": [
+        -0.014952666300814599,
+        -0.001487264147726819,
+        0.012187759799417108
+      ],
+      "gripper_positive_fraction": 0.43333333333333335,
+      "gripper_min_max": [
+        -1.0004868507385254,
+        0.9760595560073853
+      ],
+      "object_initial_recorded_height_m": 0.8196134352179482,
+      "object_max_height_m": 0.8209410227848495,
+      "success": false,
+      "grasp": false
+    },
+    {
+      "root_id": 1031,
+      "steps": 150,
+      "cumulative_xyz_delta_m": [
+        0.000647885724902153,
+        -0.00039925907731230836,
+        -0.05000445176847279
+      ],
+      "first_chunk_xyz_sum_m": [
+        0.00012593274004757404,
+        -7.870617082517128e-05,
+        -0.010010539321228862
+      ],
+      "cumulative_axisangle_delta": [
+        -0.015410177409648895,
+        -0.001168208516901359,
+        0.012754512776155025
+      ],
+      "gripper_positive_fraction": 0.43333333333333335,
+      "gripper_min_max": [
+        -0.9966562986373901,
+        0.9760595560073853
+      ],
+      "object_initial_recorded_height_m": 0.8200140065806942,
+      "object_max_height_m": 0.8213415993160035,
+      "success": false,
+      "grasp": false
+    }
+  ],
+  "summary": {
+    "n": 32,
+    "cumulative_xyz_mean_m": [
+      0.0011620915956882527,
+      0.0008273452454830021,
+      -0.08385653017376171
+    ],
+    "cumulative_xyz_min_m": [
+      -0.002112755784764886,
+      -0.0019367120985407382,
+      -0.13340419439191464
+    ],
+    "cumulative_xyz_max_m": [
+      0.023748916399199516,
+      0.010306083264367771,
+      -0.05000445176847279
+    ],
+    "gripper_positive_fraction_min_median_max": [
+      0.1,
+      0.36666666666666664,
+      0.43333333333333335
+    ]
+  },
+  "interpretation_limit": "Deltas accumulated into target; not measured actual EEF displacement. Original traces lack EEF and real gripper qpos. Sign alone is not grasp success. Healthy-looking stored dev1000 final frame is a single example, not all training/query images."
+}

@@ -1,0 +1,5 @@
+请独立验收实际B八条配对闭环，先不要读Codex notes13/parent_policy_acceptance。目录/home/asus/EAI/research_kyc_grasp_diagnostics_20261104。
+读policy_result.json、stages/policy-b.json、policy_strict_load、orchestration/policy_b_completion.json（若有）、各原results/policy-b/B_root*_steps.jsonl初/中/末与轨迹判定、model_events.jsonl、readbacks/events实际证据、figures/policy_b_contact_sheet.png。review_packets/policy_raw_blocks.jsonl是40个原NPZ的raw_chunk逐值无损CPU转写，带原件SHA；可抽对每root至少一块与执行轨迹段，不将汇总字符串当唯一证据。不要假称你独立解析NPZ，说明限制。
+重点给出真实行为解释：训练/dev各4条有无reach/grasp/success、底层是否执行了输出、输入健康/同root恢复是否可信、是否仅相机分布、弱输出变化与不完全常数的区别；缺demoXML仍替代场景，旧0/32历史因果不能直接等号。
+实际官方policy __call__会对RGB前3通道ImageNet normalize，outer/internal image hashes不同本身正常，qpos/T应不变；执行float32反归一与真实ACT返回在运行门留证。完整9通道输入按协议未重复存40份，不能声称全输入重算。
+B失败行为不触发旧MAE门，也不是工程terminal_stop；若运行原件合规，下一仅既定C-local单次≤135GPU秒/22getitem、0ACT/step/训练，不改源码，随后C-official还需新派发。请给ACCEPT_B_BEHAVIORAL_RESULT_AND_APPROVE_C_LOCAL或具体阻断，精确manifest3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530、protocol8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8。科学截止09:43:16.235501不变，总900且不追加轨迹。简明原件审查，不调研/重审所有代码。

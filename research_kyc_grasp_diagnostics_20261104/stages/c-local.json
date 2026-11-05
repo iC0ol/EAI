@@ -1,0 +1,39 @@
+{
+  "utc": "2026-11-04T22:47:26.900449+00:00",
+  "phase": "c-local",
+  "identity": {
+    "pid": 869313,
+    "ppid": 869298,
+    "start_ticks": 318637850,
+    "state": "R",
+    "rss": 262144
+  },
+  "exit_code": 0,
+  "reason": "EXITED",
+  "GPU_seconds": 28.54238737700507,
+  "cumulative_GPU_seconds": 339.8689732486382,
+  "quota": 135,
+  "started_epoch": 1793832418.357874,
+  "ended_epoch": 1793832446.90046,
+  "counts": {
+    "workers": 4,
+    "make_env": 7,
+    "resets": 23,
+    "renders": 80,
+    "readPixels": 160,
+    "ACT": 40,
+    "env_steps": 1630,
+    "rollouts": 12,
+    "getitems": 22,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "phase_counts": {
+    "workers": 1,
+    "make_env": 1,
+    "resets": 1,
+    "getitems": 22,
+    "renders": 22,
+    "readPixels": 44
+  }
+}

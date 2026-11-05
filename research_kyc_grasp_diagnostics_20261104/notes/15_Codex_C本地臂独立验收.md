@@ -1,0 +1,11 @@
+# Codex C本地臂独立验收（先于DeepSeek48）
+
+ACCEPT_C_LOCAL_SAMPLED_HEALTH_AND_NEXT_OFFICIAL。真实22getitem（10val/12train），22render/44read、0新增ACT/step/训练，28.54238737700507GPU秒，累计339.8689732486382，exit0、无清理错、PID失活。
+
+父审直接打开两份真实collate NPZ：全部22×5tensor与实际item哈希相符且有限；全部22个state/action时间片与原HDF5 float32值、归一化后padding/mask逐值一致。6组按冻结计划实际保存的raw normal/sentinel逐位相同，翻转/255/原crop最近邻映射逐位等于collate RGB；唯一full pre/post代表的9通道共同crop逐位相同。未存的16组raw不能说被父审重算，只有运行时双方hash/健康证据；但其全部真实postcrop图像和完整item可由batch独立查看/核验。
+
+22份实际collate RGB已生成并亲自查看索引图，机器人/桌面/绿块与不同示教时刻可辨，无明显条纹空帧；20个不同后处理image hash，另2个为预定相同状态重复，原/重复完整9通道tensor逐位一致，不把预定相同当异常复制。44读GL/FBO36053/错误0核过。两官方guard未执行、无owner修复/强制析构，native目标异常释放窗口NOT_REPRODUCED。
+
+这是有限当前样本的健康证据，没有证实当前污染传播，更不证明旧4.57h从未损坏。HDF5 state与action索引对应，不等于原始示教XML/几何身份已恢复；仍无原demoXML，C不重演官方周期评估/长时reset生命周期。保留数据/学习等未排除假设。
+
+下一仅既定c-official≤135秒/22getitem/22render/44read、0ACT/step/训练，两臂唯一区别原官方两guard；双方阶段验收后新派发，09:43:16.235501截止不延长。manifest3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530；protocol8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8。

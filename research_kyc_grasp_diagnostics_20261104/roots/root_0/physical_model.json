@@ -1,0 +1,225 @@
+{
+  "dimensions": {
+    "nq": 30,
+    "nv": 27,
+    "nu": 9,
+    "nbody": 28,
+    "ngeom": 94,
+    "njnt": 12
+  },
+  "arrays": {
+    "body_pos": {
+      "shape": [
+        28,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "a45fd5e1b6b0915c8a2171847813b397a1c0f414cbada56c0d026566dd41a99a"
+    },
+    "body_quat": {
+      "shape": [
+        28,
+        4
+      ],
+      "dtype": "float64",
+      "sha256": "4611970c1ea55a5e893cea1f8012ddc62b168860e0286636a55d508334297c04"
+    },
+    "body_mass": {
+      "shape": [
+        28
+      ],
+      "dtype": "float64",
+      "sha256": "356d00ad3f0da8162d5135fd76632c8785c2bd6da1f960896ccd68491d1132b2"
+    },
+    "body_inertia": {
+      "shape": [
+        28,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "26a04961e5882066cad03815d249b89c7ee044c480ab975424cebcea8c017c06"
+    },
+    "geom_type": {
+      "shape": [
+        94
+      ],
+      "dtype": "int32",
+      "sha256": "85f9ab14203acdf0e2780735db6ad31d0e247714fb0c5f73b41c7606fc43f2d7"
+    },
+    "geom_size": {
+      "shape": [
+        94,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "8fe0ffcbb8c91cbad5531c6705d61d2f5be9078c55ae9bab007ef7c48d9e83ba"
+    },
+    "geom_pos": {
+      "shape": [
+        94,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "09051b1ff1bf128ce1eedf1ba07b0b7c011440cf16e4ff04e09e6ea73190b987"
+    },
+    "geom_quat": {
+      "shape": [
+        94,
+        4
+      ],
+      "dtype": "float64",
+      "sha256": "e99235493d2f003c4d09cc5cb25451f3a98ee8457dae06a83028e0494c281087"
+    },
+    "geom_friction": {
+      "shape": [
+        94,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "a2d537d7cf3f3c73ef16cdfcecf6fa0ee6341061f63464c4de94c8761a0744c0"
+    },
+    "geom_condim": {
+      "shape": [
+        94
+      ],
+      "dtype": "int32",
+      "sha256": "29eca2c4d5e3aa6ff3c8abd089173a3d0a0315bf8d2f3f23b58a77d33a429d12"
+    },
+    "geom_contype": {
+      "shape": [
+        94
+      ],
+      "dtype": "int32",
+      "sha256": "76e3c12310b4f76b4a03e34d889b889b9ec65da752c22423714a297195f5c0b6"
+    },
+    "geom_conaffinity": {
+      "shape": [
+        94
+      ],
+      "dtype": "int32",
+      "sha256": "8b8d1ecfbcb30e1ae1ad032dedf51f6ed391bf8a022d9b346ac74cdacea03525"
+    },
+    "geom_solref": {
+      "shape": [
+        94,
+        2
+      ],
+      "dtype": "float64",
+      "sha256": "924a2640898edd78e4fd52a2430b1598cd8215ec7960d17bcdf55f4fff428e90"
+    },
+    "geom_solimp": {
+      "shape": [
+        94,
+        5
+      ],
+      "dtype": "float64",
+      "sha256": "e24693a58ae482860c088de5d8957d755175c905f90be3cfec3bd5f47f4ff51b"
+    },
+    "jnt_type": {
+      "shape": [
+        12
+      ],
+      "dtype": "int32",
+      "sha256": "abbf93b7812923e24c1b04704b4afcce47d91f1154baca4da809ff9984868d92"
+    },
+    "jnt_pos": {
+      "shape": [
+        12,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "2d5565fb483d8ea4525a7a9229677d1038ad34b6e22c8d5152e1d7f7b9817597"
+    },
+    "jnt_axis": {
+      "shape": [
+        12,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "4bacf4859b3f7ac4f24f09ca06443fc8126244674d6f5d4511adced14076ac68"
+    },
+    "jnt_range": {
+      "shape": [
+        12,
+        2
+      ],
+      "dtype": "float64",
+      "sha256": "1741853bd6fc71c673a44eab6813e83454bdae7671985b2b9ce83a7a907b9939"
+    },
+    "jnt_stiffness": {
+      "shape": [
+        12
+      ],
+      "dtype": "float64",
+      "sha256": "2ea9ab9198d1638007400cd2c3bef1cc745b864b76011a0e1bc52180ac6452d4"
+    },
+    "dof_damping": {
+      "shape": [
+        27
+      ],
+      "dtype": "float64",
+      "sha256": "90a8afa5bad05b2f31ed2ee39423037bf220d5d3aa3e4f23ac71775aff34b259"
+    },
+    "dof_armature": {
+      "shape": [
+        27
+      ],
+      "dtype": "float64",
+      "sha256": "4145506c59a2ec1680c0d8a89356ca53a7b6e9a1d52aeaa5a9ba050081ebb266"
+    },
+    "actuator_gainprm": {
+      "shape": [
+        9,
+        10
+      ],
+      "dtype": "float64",
+      "sha256": "a633a289f8fe4c28da893520f3e557ee35cf11c9fd559fda1e3fbfd3df875ed7"
+    },
+    "actuator_biasprm": {
+      "shape": [
+        9,
+        10
+      ],
+      "dtype": "float64",
+      "sha256": "0f0db4f769ed44167b1b36f8b1233011aaa035a5433ff0441018e0f0a767bd80"
+    },
+    "actuator_ctrlrange": {
+      "shape": [
+        9,
+        2
+      ],
+      "dtype": "float64",
+      "sha256": "75b8e44e7011102d24b03e3c6993e09dc7587369e9f24903898263737d9d8a5f"
+    },
+    "site_pos": {
+      "shape": [
+        11,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "e0dc5656053ef351b4a9c1023c5dc89aca5a0411673431f052b61a6745b27dba"
+    },
+    "site_quat": {
+      "shape": [
+        11,
+        4
+      ],
+      "dtype": "float64",
+      "sha256": "e1450afb4aff526914b033174acb7f831bfb35d72b1d4c9304db4f753f45335e"
+    },
+    "site_size": {
+      "shape": [
+        11,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "21d1961bec679627359c20334989bad77ffe3ca22c22d5756a0850d744e3a2e6"
+    }
+  },
+  "cube_geom_size": [
+    0.021028468876827223,
+    0.021184829137724084,
+    0.020092900825439994
+  ],
+  "camera_arrays_excluded": true
+}

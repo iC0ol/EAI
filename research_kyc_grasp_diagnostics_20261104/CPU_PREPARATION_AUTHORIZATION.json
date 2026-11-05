@@ -1,0 +1,13 @@
+{
+  "state": "CPU_PREPARATION_ONLY",
+  "scope_id": "kyc-grasp-rootcause-c96545a9-5b4f-43b9-91f0-8f42b9343836",
+  "executor": {
+    "thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "max"
+  },
+  "user_task_sha256": "ac46a6bb2ebd9274e321b9c7bfaa1dc83a01601d002552be2329fcdfb708bc64",
+  "parent_prompt_sha256": "e4137c95b1a407486cbc9e5378e90f534d70c3d373b07e3a5f1840b4c01ec307",
+  "GPU_authorized": false,
+  "CUDA_env_render_step_ACT_authorized": false
+}

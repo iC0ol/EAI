@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-04T17:30:45.539443+00:00",
+  "manifest_sha256": "3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530",
+  "protocol_sha256": "8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8",
+  "candidate_count": 81,
+  "source_count": 396,
+  "CPU_code_count": 26,
+  "all_SHA_current_snapshot_and_sources_match": true,
+  "source_catalog_unchanged": true,
+  "changed_runtime_files": [
+    "kyc_grasp/cpu_budget_checks.py",
+    "kyc_grasp/cpu_preflight.py",
+    "kyc_grasp/reader_worker.py",
+    "kyc_grasp/render_audit.py",
+    "kyc_grasp/roots.py"
+  ],
+  "actual_CPU_exit_code": 0,
+  "actual_CPU_seconds": 14.183402301743627,
+  "GPU_seconds": 0,
+  "review_scope": "three authorized corrections only; no A/B behavior or limits changed"
+}

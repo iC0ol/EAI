@@ -1,0 +1,9 @@
+# Codex GPU预检独立验收（先于DeepSeek42）
+
+APPROVE_PREFLIGHT_AND_ALLOCATION；下一步仅专家A，B仍须本轮A4/4及双审。候选manifest3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530，protocol8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8。
+
+独立读取原NPZ/PNG/HDF5/state/controller/事件链及退出记录，未以执行者总结代替：四root全20文件SHA吻合，原float64初始state与HDF5精确相等，首个绝对目标最大误差2.384185791015625e-7（其余三root为0），小于冻结1e-4门。两个readback原数组与独立sentinel逐位相同，PNG是原数组上下翻转；已亲自查看两PNG，机械臂/绿方块/桌面清楚，无明显条纹空帧。读事件当前context、3FBO/4RBO、FBO36053与GL错误0一致。12个context构造/owner释放闭合。375权重strict-load无缺失或额外键，checkpoint SHA一致，不创建优化器。
+
+真实单worker exit0，PID已不存在，无活租约，34.58120653964579 GPU分配秒；4make_env/8reset/2render/4read，0ACT/step/getitem/rollout/backward/optimizer。独立重算与逐项原件SHA见artifacts/parent_gpu_preflight_acceptance.json。只表示此限定初始化与两帧通过；还未在新worker真正roots.restore、未证明任何任务行为，原demoXML仍缺。
+
+按真实实耗冻结候选A180/B360/C各135，合计含预检844.5812065396458≤900，55.4187934603542不授权追加实验。测量的初始化34.58秒与旧150步轨迹约1.2-1.36秒仅支持预算可试，不能保证新监测耗时；各阶段硬停保持。先A4专家，任一恢复/健康/控制/成功门失败停止，不归因checkpoint。科学8h从A正式派发起算；等待无GPU。C只测原定44样本及两guard，不代表官方周期评估完整生命周期，也不追认旧训练污染。

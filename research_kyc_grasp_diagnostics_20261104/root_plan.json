@@ -1,0 +1,289 @@
+{
+  "state": "CANDIDATE_NO_GPU_ROOT_CREATED",
+  "root_choice": "demo0..3 in index order; generator default42+demo; no outcome search",
+  "roots": [
+    {
+      "root_id": 0,
+      "demo_id": 0,
+      "env_seed": 42,
+      "HDF5_initial_state_sha256": "9cc105d7d767f10f18be3c944148f8654191b92857603f75f0cee3982ddeef8e",
+      "HDF5_actions_sha256": "80bc570c5c62afeae00015206c597bd915a183b9852bf852475cc72242c9846a",
+      "expert_steps": 105,
+      "expert_file": "inputs/expert_demo_0.npz",
+      "expert_file_sha256": "4b2b680c4e02c5dfd264e751bab900e2ca01644a29bbee6bc5005b2aabc36f23",
+      "train_camera_index": 1,
+      "T_train": [
+        [
+          0.8305230356726009,
+          -0.34794925432522517,
+          0.43492850404599553,
+          0.37806304720870987
+        ],
+        [
+          0.5569842791472376,
+          0.5188294926467981,
+          -0.6485248417313697,
+          -0.5706100505135695
+        ],
+        [
+          -0.0,
+          0.7808631595704755,
+          0.6247021098296485,
+          1.3818641093085926
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "T_dev": [
+        [
+          -0.8617029244780403,
+          -0.2967138712654287,
+          0.4116174784246598,
+          0.2723112495425224
+        ],
+        [
+          0.5074131156621718,
+          -0.5038876661060692,
+          0.6990201356185571,
+          0.5226696940450352
+        ],
+        [
+          0.0,
+          0.8112078023200106,
+          0.5847579853709898,
+          1.2993104719326536
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "dev_camera_source_root": 1000,
+      "physical_initial_state_origin": "HDF5 demo initial float64 state + newly generated substitute XML",
+      "source_demo_XML_available": false,
+      "B_condition_order": [
+        "train",
+        "dev"
+      ]
+    },
+    {
+      "root_id": 1,
+      "demo_id": 1,
+      "env_seed": 43,
+      "HDF5_initial_state_sha256": "3bbf807ef8e998c9ca523bbafe3201b809b479e3487a836d6496aa80b5b14639",
+      "HDF5_actions_sha256": "595bebc228cb9c2cbf52d3c104899cd5baa704efc98b5fa607aaff4fe4fa39e0",
+      "expert_steps": 102,
+      "expert_file": "inputs/expert_demo_1.npz",
+      "expert_file_sha256": "2cdb89d8bce4bb1f13f0abfa21f35388cad2bce28f7acba137662c71123c5429",
+      "train_camera_index": 2,
+      "T_train": [
+        [
+          0.8436010458851515,
+          -0.46039539690059295,
+          0.2763572939045109,
+          0.23694428963935515
+        ],
+        [
+          0.5369704604365856,
+          0.72329870442085,
+          -0.434167834830773,
+          -0.31671377781166166
+        ],
+        [
+          -0.0,
+          0.5146601429058458,
+          0.8573942717933999,
+          1.394061126362775
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "T_dev": [
+        [
+          -0.35694273380877045,
+          -0.4731298053501399,
+          0.8054440216864609,
+          0.5668143685167092
+        ],
+        [
+          0.9341262681142851,
+          -0.18078952699725256,
+          0.3077714446581886,
+          0.19523547243560505
+        ],
+        [
+          0.0,
+          0.8622431989975036,
+          0.5064944874157581,
+          1.1866988040985285
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "dev_camera_source_root": 1001,
+      "physical_initial_state_origin": "HDF5 demo initial float64 state + newly generated substitute XML",
+      "source_demo_XML_available": false,
+      "B_condition_order": [
+        "dev",
+        "train"
+      ]
+    },
+    {
+      "root_id": 2,
+      "demo_id": 2,
+      "env_seed": 44,
+      "HDF5_initial_state_sha256": "e2c73145804b8067421596aac34487523b2d01cc3b8c2f5c08f207536310ff9f",
+      "HDF5_actions_sha256": "16e85a9e42c62ad89dda5a49e179eda97977e390309e3297e5a7bda0d813e6b1",
+      "expert_steps": 126,
+      "expert_file": "inputs/expert_demo_2.npz",
+      "expert_file_sha256": "dbd4081eb463fb56bc9fc7f10ab4f0495f0fb7c3b605dcc78c428d95de28b297",
+      "train_camera_index": 3,
+      "T_train": [
+        [
+          0.95245127091745,
+          -0.1823977595403312,
+          0.24406481483901352,
+          0.38029034076586865
+        ],
+        [
+          0.3046909524874909,
+          0.5701678256882805,
+          -0.7629364809878763,
+          -0.8056146924013895
+        ],
+        [
+          -0.0,
+          0.8010241618481717,
+          0.5986320172989696,
+          1.4458973511680573
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "T_dev": [
+        [
+          -0.7114792475598639,
+          -0.5286131550518186,
+          0.46299612589935546,
+          0.29788084768554224
+        ],
+        [
+          0.7027071084681369,
+          -0.5352120183135548,
+          0.468775868791346,
+          0.35262629845131027
+        ],
+        [
+          0.0,
+          0.6588749712645738,
+          0.7522524657594064,
+          1.397435930887287
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "dev_camera_source_root": 1002,
+      "physical_initial_state_origin": "HDF5 demo initial float64 state + newly generated substitute XML",
+      "source_demo_XML_available": false,
+      "B_condition_order": [
+        "train",
+        "dev"
+      ]
+    },
+    {
+      "root_id": 3,
+      "demo_id": 3,
+      "env_seed": 45,
+      "HDF5_initial_state_sha256": "3241538eb3253890c96103fd738e75a7a517cff2558760227b6439d1fda12e0a",
+      "HDF5_actions_sha256": "35a3062ae0b77b9883e81e1f78730b464385db794a2af2a28ef9a0de14e4a97a",
+      "expert_steps": 97,
+      "expert_file": "inputs/expert_demo_3.npz",
+      "expert_file_sha256": "2499c3cc59daff6adca84bca087ea6c3a4298ab99883fb7d24d9eb6c48704a86",
+      "train_camera_index": 4,
+      "T_train": [
+        [
+          -0.8518294291850335,
+          -0.3528316340897452,
+          0.3871646439951101,
+          0.1537929242012482
+        ],
+        [
+          0.5238192661350861,
+          -0.5737711246909001,
+          0.6296031074388369,
+          0.3759208674321865
+        ],
+        [
+          0.0,
+          0.7391187553137182,
+          0.6735751372664376,
+          1.4215869330394446
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "T_dev": [
+        [
+          0.3776243621053483,
+          -0.4685293036464673,
+          0.7986739840317106,
+          0.6587938419764404
+        ],
+        [
+          0.9259588765947054,
+          0.19107552601885375,
+          -0.32571506291863367,
+          -0.24076631488578715
+        ],
+        [
+          -0.0,
+          0.862537207882173,
+          0.5059936412829958,
+          1.377312190420035
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "dev_camera_source_root": 1003,
+      "physical_initial_state_origin": "HDF5 demo initial float64 state + newly generated substitute XML",
+      "source_demo_XML_available": false,
+      "B_condition_order": [
+        "dev",
+        "train"
+      ]
+    }
+  ],
+  "root_snapshot_phase": "gpu-preflight before A/B",
+  "original_demonstrator_XML_reconstruction": false,
+  "borrowed_dev_camera_not_original_dev_physics": true
+}

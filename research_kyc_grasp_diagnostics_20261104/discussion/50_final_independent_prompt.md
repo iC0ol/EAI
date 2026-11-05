@@ -1,0 +1,4 @@
+本轮最后实验c-official完成。请独立验收新原件并独立回答用户六问，先不要读Codex notes17或任何父审最终结论。目录/home/asus/EAI/research_kyc_grasp_diagnostics_20261104。
+读c-official_result.json、stages/c-official.json、orchestration/c_official_completion.json（若尚未落盘以实际原件为准）、两臂matched comparisons/guards、results/c-official/readbacks/events、figures/c-official_actual_collate_RGB.png；可对C-local原对应数据比较。原batch NPZ和raw仍在本地，你未独立解码的限制必须保留。结合已独立看过的A/B原轨迹、原任务书和源码差异（SOURCE_AUDIT、notes07），不是仅读执行者汇总。
+1旧0/32是否已定位具体原因；2checkpoint训练相机有无任务阳性；3弱输出学习vs部署/数据/相机如何区分及剩余假设；4有无具体可复现且与0/32有合理因果关联工程错误；5最小修复/是否需重训；6是否继续KYC为F基础、何种决策性价比更高。清楚区分当前行为失败机制与历史训练根因、替代XML与原示教、有限短采样与4.57h全程、一般F假设与当前checkpoint路线。
+准确总预算依据scope_state/stages重算：不再GPU，不因剩余预算追加。两guard是检查被执行，不必然触发reset；不要把0个guard reset当本阶段初始化也无reset，不把相同图像说成guard修好了错误。独立给结论及证据/不确定性；你可不同意Codex未知意见，之后再交叉。不要新论文检索/训练/修复。本轮最终审查，不再其他实验。

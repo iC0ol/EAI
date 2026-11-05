@@ -1,0 +1,431 @@
+{
+  "utc": "2026-11-04T22:55:51.603196+00:00",
+  "state": "ALL_GPU_EXPERIMENTS_FINISHED_WAITING_FINAL_DUAL_REVIEW",
+  "scope_id": "kyc-grasp-rootcause-c96545a9-5b4f-43b9-91f0-8f42b9343836",
+  "manifest_sha256": "3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530",
+  "protocol_sha256": "8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8",
+  "c_official_result_sha256": "114314d59dbdcf6d32c7f22d4932eda0dc95e9e357770f19af3b379d5a42c97f",
+  "c_local_result_sha256": "331725831937a274b05d671d2b51ea207ed68e2005e73e4cce3094c6617b69d9",
+  "allocated_GPU_seconds": 27.843600154388696,
+  "cumulative_GPU_seconds": 367.7125734030269,
+  "phase_quota_seconds": 135,
+  "phase_GPU_seconds": {
+    "gpu-preflight": 34.58120653964579,
+    "expert-a": 75.4795101750642,
+    "policy-b": 201.26586915692315,
+    "c-local": 28.54238737700507,
+    "c-official": 27.843600154388696
+  },
+  "scope_GPU_cap": 900,
+  "worker_identity": {
+    "pid": 871770,
+    "ppid": 871758,
+    "start_ticks": 318677321,
+    "state": "R",
+    "rss": 262144
+  },
+  "worker_exit_code": 0,
+  "worker_inactive": true,
+  "supervisor_identity": {
+    "pid": 871758,
+    "ppid": 2974399,
+    "start_ticks": 318677089,
+    "state": "R",
+    "rss": 25620480
+  },
+  "supervisor_inactive": true,
+  "active_scope_python_processes": [],
+  "active_GPU_lease": null,
+  "phase_counts": {
+    "workers": 1,
+    "make_env": 1,
+    "resets": 1,
+    "getitems": 22,
+    "renders": 22,
+    "readPixels": 44
+  },
+  "cumulative_counts": {
+    "workers": 5,
+    "make_env": 8,
+    "resets": 24,
+    "renders": 102,
+    "readPixels": 204,
+    "ACT": 40,
+    "env_steps": 1630,
+    "rollouts": 12,
+    "getitems": 44,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "actual_items": 22,
+  "actual_default_collate_batch_sizes": [
+    10,
+    12
+  ],
+  "all_item_boundary_and_collate_contracts_pass": true,
+  "all_readback_machine_health_pass": true,
+  "validation_fault": false,
+  "train_fault": false,
+  "natural_target_window": "NOT_REPRODUCED",
+  "owner_aware_fix_installed": false,
+  "forced_GC_or_destructor": false,
+  "official_guard_positions": [
+    {
+      "position": 0,
+      "actual_guard_executed": true,
+      "resets_added": 0
+    },
+    {
+      "position": 1,
+      "actual_guard_executed": true,
+      "resets_added": 0
+    }
+  ],
+  "within_arm_repeat": [
+    {
+      "id": "train_d0_t0_repeat",
+      "repeat_of": "train_d0_t0",
+      "state": "COMPARISON_RECORDED",
+      "missing_sample_ids": [],
+      "same_source_state": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_camera_index": true,
+      "same_seed": true,
+      "same_crop_draws": true,
+      "same_raw": true,
+      "same_post_crop": true,
+      "original_collate_saved": true,
+      "repeat_collate_saved": true
+    },
+    {
+      "id": "train_d1_t0_repeat",
+      "repeat_of": "train_d1_t0",
+      "state": "COMPARISON_RECORDED",
+      "missing_sample_ids": [],
+      "same_source_state": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_camera_index": true,
+      "same_seed": true,
+      "same_crop_draws": true,
+      "same_raw": true,
+      "same_post_crop": true,
+      "original_collate_saved": true,
+      "repeat_collate_saved": true
+    }
+  ],
+  "actual_arm_comparisons": [
+    {
+      "id": "val_d200_t0",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "val_d201_t0",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "val_d202_t0",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "val_d203_t0",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "val_d204_t0",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "val_d205_t0",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "val_d206_t0",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "val_d207_t0",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "val_d208_t0",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "val_d209_t0",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "train_d0_t0",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "train_d0_t52",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "train_d0_t0_repeat",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "train_d1_t0",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "train_d1_t51",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "train_d1_t0_repeat",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "train_d2_t0",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "train_d2_t63",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "train_d2_t125",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "train_d3_t0",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "train_d3_t48",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    },
+    {
+      "id": "train_d3_t96",
+      "same_source_state": true,
+      "same_source_actions": true,
+      "same_actual_geometry": true,
+      "same_actual_T": true,
+      "same_crop": true,
+      "same_post_transform": true,
+      "same_actual_item_tensors": true,
+      "same_raw": true
+    }
+  ],
+  "paired_batch_artifact_comparisons": [
+    {
+      "split": "validation",
+      "local_sha256": "c2103a476a3fe8ea06422b30297e24e83fd772c58a481ef09981ce933124fb9c",
+      "official_sha256": "c2103a476a3fe8ea06422b30297e24e83fd772c58a481ef09981ce933124fb9c",
+      "entire_npz_SHA_equal": true
+    },
+    {
+      "split": "train",
+      "local_sha256": "a65d5a349caffcaf4eafee7829052aee1013f3db30f7e02ebc7c89552c355eb8",
+      "official_sha256": "a65d5a349caffcaf4eafee7829052aee1013f3db30f7e02ebc7c89552c355eb8",
+      "entire_npz_SHA_equal": true
+    }
+  ],
+  "error": null,
+  "cleanup_error": null,
+  "sampled_resource_peaks_bytes": {
+    "rss": 1780715520,
+    "whole_device_vram": 1377828864,
+    "disk_bytes": 120900085
+  },
+  "resource_sampling_not_continuous": true,
+  "science_clock": {
+    "started_epoch": 1793814196.235501,
+    "deadline_epoch": 1793842996.235501
+  },
+  "science_deadline_local": "2026-11-05T09:43:16.235501+08:00",
+  "candidate_files_verified_unchanged": 81,
+  "raw_artifact_hashes": {
+    "allocation_gate.json": "84c761b54d91db9a9c005e3efa3eb85f7daa79b5c33c7ff570995316f27a4763",
+    "c-local_result.json": "331725831937a274b05d671d2b51ea207ed68e2005e73e4cce3094c6617b69d9",
+    "c-official_progress.json": "e169532f440590dac74b40bf750f1fd0e4860e58f6d707edc00ed5d47f87daf6",
+    "c-official_result.json": "114314d59dbdcf6d32c7f22d4932eda0dc95e9e357770f19af3b379d5a42c97f",
+    "dispatch/c-official.json": "a206aceafd177ae138422f0871ed340b1db3fa959b0cb61b6cd4419863d59133",
+    "logs/c-official.log": "f5b6537904cefa4adaafac11f77e284e97750df378967fc0678e8ed6a9c740dd",
+    "orchestration/c_official_completion_snapshot/commands.jsonl": "b6684ae13963d4686d3793e089120eda1aa3fd9de3871b10d53a4be43bec3d49",
+    "orchestration/c_official_completion_snapshot/resources.jsonl": "43751b1d5e23ce459285e32fbba928c7a67922777caf1c6729e3b69c584a11de",
+    "orchestration/c_official_completion_snapshot/scope_state.json": "e6c8106059c6bd9a5229d9351d99aacb068c7b57fe37dff214a9544378ec712a",
+    "orchestration/c_official_completion_snapshot/status.json": "48c4c1f678a20772c9c2d35165f36e8bbdf27fadf65594ac8f6bad5528612768",
+    "phase_reviews/c-official.json": "ee5de5caba9c6e63a9391bb76706619ed3607e6b53e1a46c46094cadc0f11733",
+    "results/c-official/batch_train.npz": "a65d5a349caffcaf4eafee7829052aee1013f3db30f7e02ebc7c89552c355eb8",
+    "results/c-official/batch_validation.npz": "c2103a476a3fe8ea06422b30297e24e83fd772c58a481ef09981ce933124fb9c",
+    "results/c-official/c-official_train_d0_t0_readback.npz": "081cea0f4c59937351ae20db7103d4f5df3a07215ac3f35eca807e060200ec8d",
+    "results/c-official/c-official_train_d1_t0_readback.npz": "35c37f7d8da965712c52f24bfb18adf0a6d5725679cbe766e0b63593d846a131",
+    "results/c-official/c-official_train_d2_t0_readback.npz": "64598d8aa132468ec11d4044e25f167812f46aa8fe9abd348002a4d415e81039",
+    "results/c-official/c-official_train_d3_t0_readback.npz": "073bbe66cd29c82ebe5409da5500c04ec4eafc1891e919b957a72a2507642dc7",
+    "results/c-official/c-official_val_d200_t0_readback.npz": "545989656bf09f7799574a8e5778c3b152b26d3dd910aa6a48fb70cf3a3cedba",
+    "results/c-official/c-official_val_d209_t0_readback.npz": "430f0b6f45aeedaee7447cbf14755cb3097e859be35e1ea76944762a0a04d63e",
+    "results/c-official/events.jsonl": "97961bba996691c0b279fc40ebb4e968a6b200c464d62f2ca8e2f7bbcde11149",
+    "results/c-official/guard_position_0_generated_model.xml": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "results/c-official/guard_position_1_generated_model.xml": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "results/c-official/initial_generated_model.xml": "9e9281db22eb0ce6b4992b04e1759e85eced44f31836b8b470859f1327b304f7",
+    "results/c-official/initial_model_geometry.json": "ea359c3db93279a921ea7005e4bd12d48db046df68d69124ed21fd9d8272c1cb",
+    "results/c-official/readbacks.json": "f42b5dc0063a356b354c3dd9ab705376c59fb3f42b0b87d2ba68485cecacf731",
+    "results/c-official/train_d0_t0_actual_crop.png": "5f0b2cca24bea7b47b6989a4243b4f01c5cb7038716002f5908096c08570aa3c",
+    "results/c-official/train_d0_t0_pre_post_transform.npz": "3575dd9dcc525dc873d340ef4f18bd67f34f9f0dbd91f66dcf722d66fa8f4840",
+    "results/c-official/train_d0_t0_raw.png": "47e62d09bf76073b8c4af4d0c5a37cdbb85d2d4efa46b504927b7ec8641fcab3",
+    "science_clock.json": "63eb50c9496bb8fb2552e0fc6e03f7bc85a4de01bc0f27e1ddc84c41dff44eab",
+    "science_gate.json": "92adb363f8eaaecb4b41c755243c56bf5cfc3eadb219910caa0516188e2edb6d",
+    "stages/c-official.json": "b47cba35722ab9d74e0c40eebbecb36daaf46a8627e9ef69e6766006f470753c",
+    "stages/c-official_started.json": "f51cd399ae3bd88de697c908efdeda084345b8c5389620444a74e0b39454155a"
+  },
+  "history_of_training_corruption": "UNPROVEN",
+  "pixel_review": "parent and real DeepSeek final original-array/image review pending",
+  "experiments_finished": true,
+  "additional_experiments_authorized": false,
+  "automation_changed": false,
+  "Git_operations": 0,
+  "next": "no more GPU; parent and real DeepSeek final independent/cross review, six-question Chinese report and parent-owned publication"
+}

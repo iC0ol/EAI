@@ -1,0 +1,16 @@
+logs/
+local_only/
+cache/
+tmp/
+__pycache__/
+*.pyc
+*.lock
+*.tmp
+*.pt
+*.pth
+*.h5
+*.hdf5
+*.xml
+discussion/*_raw.jsonl
+discussion/*_metadata.json
+discussion/session*.json

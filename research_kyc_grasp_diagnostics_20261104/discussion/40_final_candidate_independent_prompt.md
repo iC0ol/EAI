@@ -1,0 +1,12 @@
+继续当前真实session的KYC专项抓取诊断。不要重做38/39范围讨论。现在请独立审查最终代码/协议/准确SHA和停止条件；先不要读取Codex notes/05或主审最终候选结论，避免意见锚定。可读用户原任务书、SOURCE_AUDIT、CPU_PREPARATION_REPORT及实际原CPU记录。
+
+目录 /home/asus/EAI/research_kyc_grasp_diagnostics_20261104。
+当前manifest SHA256=5323928a81b4d335827bdc779ec9ac57fae2def2b92daeba896a0be4bd59072b
+PROTOCOL_CANDIDATE.md SHA256=f6f2a0b1a42b7d1f729ae1118db2b0cacc79b1864d16f4672233ec9e499a6014
+候选61文件、只读来源396、真实CPU26代码一致。现阶段无GPU/ACT/step，CPU_PASS不是GPU许可。需要你亲读实际协议、root/rollout/call/sample/phase plans、candidate_manifest，及kyc_grasp实际集成源码，尤其gates/supervisor/ledger/roots/control/model_runtime/builders/preflight_worker/expert_worker/policy_worker/reader_worker/render_audit/owned_release/telemetry。不能只读摘要后批准。
+
+本轮新授权A4专家+B4物理root训练/dev配对8条，总12轨迹，各≤150；0训练/换参数/persistent-IID；总900GPU分配秒含初始化失败清理。下一步只候选GPU预检≤90：4替代root、2render/4read、模型实际构造strictload，0ACT/step/rollout/getitem。真实预检后才冻结科学内预算/8h并A；A4阳性后B；C有限两个22样本臂，不装owner修复、不强制错误，追踪actualgetitem/crop/collate。旧20% MAE门不适用。
+
+请尤其核：官方150步及eef_delta不被改变；A/B实际sim物理状态/几何/控制器匹配、缺demo XML边界；动作前真实EEF及夹爪实际qpos；官方policy返回与internal一致、float32乘加一致；C validation故障后按既定第二guard继续原定train而不新增样本，逐split保存真实污染链；只GL故障不等于坏像素，normal/sentinel差异经过真实crop才可说训练输入不确定；same-state/camera重复和读回/最终tensor证据充足与否；runtime/import/预算硬停是否有可见阻断问题。不要把原native生命周期故障预设为旧0/32原因。
+
+请输出：准确列manifest/protocol SHA；已实际阅读的关键文件；是否发现应在GPU前修复的具体阻断（给文件行/触发）；最终仅对下一次GPU预检给APPROVE_GPU_PREFLIGHT_ONLY或REVISE/BLOCK。不得预先批准A/B/C或宣称行为通过；附后续实际证据条件。用中文，集中于会影响诊断效力的实质问题，无需展开新方案或文献调研。工具只读，不运行程序、不编辑任何文件、不访问凭据。

@@ -1,0 +1,41 @@
+{
+  "utc": "2026-11-04T22:40:35.969585+00:00",
+  "phase": "policy-b",
+  "identity": {
+    "pid": 863261,
+    "ppid": 863254,
+    "start_ticks": 318579484,
+    "state": "R",
+    "rss": 262144
+  },
+  "exit_code": 0,
+  "reason": "EXITED",
+  "GPU_seconds": 201.26586915692315,
+  "cumulative_GPU_seconds": 311.32658587163314,
+  "quota": 360,
+  "started_epoch": 1793831834.7035377,
+  "ended_epoch": 1793832035.9695966,
+  "counts": {
+    "workers": 3,
+    "make_env": 6,
+    "resets": 22,
+    "renders": 58,
+    "readPixels": 116,
+    "ACT": 40,
+    "env_steps": 1630,
+    "rollouts": 12,
+    "getitems": 0,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "phase_counts": {
+    "workers": 1,
+    "make_env": 1,
+    "resets": 9,
+    "rollouts": 8,
+    "renders": 48,
+    "readPixels": 96,
+    "ACT": 40,
+    "env_steps": 1200
+  }
+}

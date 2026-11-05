@@ -1,0 +1,70 @@
+{
+  "state": "CANDIDATE_NOT_APPROVED",
+  "total_GPU_seconds": 900,
+  "preflight_GPU_cap": 90,
+  "science_clock_seconds": 28800,
+  "phase_caps": {
+    "gpu-preflight": {
+      "workers": 1,
+      "make_env": 4,
+      "resets": 12,
+      "renders": 2,
+      "readPixels": 4,
+      "ACT": 0,
+      "env_steps": 0,
+      "rollouts": 0,
+      "getitems": 0
+    },
+    "expert-a": {
+      "workers": 1,
+      "make_env": 1,
+      "resets": 6,
+      "renders": 8,
+      "readPixels": 16,
+      "ACT": 0,
+      "env_steps": 600,
+      "rollouts": 4,
+      "getitems": 0
+    },
+    "policy-b": {
+      "workers": 1,
+      "make_env": 1,
+      "resets": 10,
+      "renders": 48,
+      "readPixels": 96,
+      "ACT": 40,
+      "env_steps": 1200,
+      "rollouts": 8,
+      "getitems": 0
+    },
+    "c-local": {
+      "workers": 1,
+      "make_env": 1,
+      "resets": 4,
+      "renders": 22,
+      "readPixels": 44,
+      "ACT": 0,
+      "env_steps": 0,
+      "rollouts": 0,
+      "getitems": 22
+    },
+    "c-official": {
+      "workers": 1,
+      "make_env": 1,
+      "resets": 4,
+      "renders": 22,
+      "readPixels": 44,
+      "ACT": 0,
+      "env_steps": 0,
+      "rollouts": 0,
+      "getitems": 22
+    }
+  },
+  "science_GPU_allocation": "must be frozen by parent after actual preflight, sum all allocations including used <=900",
+  "tentative_only": {
+    "expert-a": 180,
+    "policy-b": 360,
+    "c-local": 135,
+    "c-official": 135
+  }
+}

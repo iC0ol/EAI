@@ -1,0 +1,242 @@
+{
+  "utc": "2026-11-04T06:55:43.661913+00:00",
+  "kind": "parent independent CPU source/data audit, no env/GPU/model imports",
+  "dataset": {
+    "data_attrs": [
+      "action_space",
+      "env_args",
+      "total"
+    ],
+    "env_args": {
+      "env_name": "LiftRand",
+      "env_version": "1.4.1",
+      "type": 1,
+      "env_kwargs": {
+        "has_renderer": false,
+        "has_offscreen_renderer": false,
+        "ignore_done": true,
+        "use_object_obs": true,
+        "use_camera_obs": false,
+        "control_freq": 20,
+        "controller_configs": {
+          "type": "BASIC",
+          "body_parts": {
+            "right": {
+              "type": "OSC_POSE",
+              "input_type": "absolute",
+              "input_ref_frame": "world",
+              "interpolation": null,
+              "gripper": {
+                "type": "GRIP"
+              }
+            }
+          }
+        },
+        "robots": [
+          "Panda"
+        ],
+        "camera_depths": false,
+        "camera_heights": 84,
+        "camera_widths": 84,
+        "reward_shaping": false
+      }
+    },
+    "action_space": "eef_delta",
+    "demonstrations": [
+      {
+        "demo": 0,
+        "keys": [
+          "actions",
+          "dones",
+          "next_obs",
+          "obs",
+          "rewards",
+          "starting_abs_action",
+          "states"
+        ],
+        "attrs": [],
+        "states_shape": [
+          105,
+          58
+        ],
+        "actions_shape": [
+          105,
+          7
+        ],
+        "starting_abs_action_shape": [
+          7
+        ],
+        "states_dtype": "float64",
+        "states0_sha256": "9cc105d7d767f10f18be3c944148f8654191b92857603f75f0cee3982ddeef8e",
+        "expert_action_count": 105
+      },
+      {
+        "demo": 1,
+        "keys": [
+          "actions",
+          "dones",
+          "next_obs",
+          "obs",
+          "rewards",
+          "starting_abs_action",
+          "states"
+        ],
+        "attrs": [],
+        "states_shape": [
+          102,
+          58
+        ],
+        "actions_shape": [
+          102,
+          7
+        ],
+        "starting_abs_action_shape": [
+          7
+        ],
+        "states_dtype": "float64",
+        "states0_sha256": "3bbf807ef8e998c9ca523bbafe3201b809b479e3487a836d6496aa80b5b14639",
+        "expert_action_count": 102
+      },
+      {
+        "demo": 2,
+        "keys": [
+          "actions",
+          "dones",
+          "next_obs",
+          "obs",
+          "rewards",
+          "starting_abs_action",
+          "states"
+        ],
+        "attrs": [],
+        "states_shape": [
+          126,
+          58
+        ],
+        "actions_shape": [
+          126,
+          7
+        ],
+        "starting_abs_action_shape": [
+          7
+        ],
+        "states_dtype": "float64",
+        "states0_sha256": "e2c73145804b8067421596aac34487523b2d01cc3b8c2f5c08f207536310ff9f",
+        "expert_action_count": 126
+      },
+      {
+        "demo": 3,
+        "keys": [
+          "actions",
+          "dones",
+          "next_obs",
+          "obs",
+          "rewards",
+          "starting_abs_action",
+          "states"
+        ],
+        "attrs": [],
+        "states_shape": [
+          97,
+          58
+        ],
+        "actions_shape": [
+          97,
+          7
+        ],
+        "starting_abs_action_shape": [
+          7
+        ],
+        "states_dtype": "float64",
+        "states0_sha256": "3241538eb3253890c96103fd738e75a7a517cff2558760227b6439d1fda12e0a",
+        "expert_action_count": 97
+      }
+    ]
+  },
+  "existing_expert_replays": [
+    {
+      "demo": 0,
+      "success": true,
+      "steps": 105,
+      "seconds": 3.9228334119543433,
+      "first_absolute_command_max_error": 0.0,
+      "eef_position_error_mean_m": 1.0553045905985154e-06,
+      "eef_position_error_max_m": 1.128122864832087e-05,
+      "max_object_height_m": 0.9440005990665696,
+      "source_default_seed": 42,
+      "geometry_limitation": "Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search."
+    },
+    {
+      "demo": 1,
+      "success": true,
+      "steps": 102,
+      "seconds": 0.8018536269664764,
+      "first_absolute_command_max_error": 2.384185791015625e-07,
+      "eef_position_error_mean_m": 1.7387098067670067e-07,
+      "eef_position_error_max_m": 1.9669941201259197e-06,
+      "max_object_height_m": 0.9451030342177027,
+      "source_default_seed": 43,
+      "geometry_limitation": "Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search."
+    },
+    {
+      "demo": 2,
+      "success": true,
+      "steps": 126,
+      "seconds": 0.9408285026438534,
+      "first_absolute_command_max_error": 0.0,
+      "eef_position_error_mean_m": 9.457010446874661e-09,
+      "eef_position_error_max_m": 1.3969932973996527e-07,
+      "max_object_height_m": 0.9476977883678043,
+      "source_default_seed": 44,
+      "geometry_limitation": "Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search."
+    },
+    {
+      "demo": 3,
+      "success": true,
+      "steps": 97,
+      "seconds": 0.7426128722727299,
+      "first_absolute_command_max_error": 0.0,
+      "eef_position_error_mean_m": 2.8286008192145704e-08,
+      "eef_position_error_max_m": 1.6965099340787634e-07,
+      "max_object_height_m": 0.9447652495641743,
+      "source_default_seed": 45,
+      "geometry_limitation": "Public HDF5 lacks per-demo XML/cube dimensions. Official generator default seed used once, no seed search."
+    }
+  ],
+  "training_log": {
+    "rows": 60003,
+    "first_update": 1,
+    "last_update": 60003,
+    "fields": [
+      "batch_n",
+      "completed_epochs",
+      "data_render_seconds",
+      "demo_order",
+      "epoch_offset",
+      "kl",
+      "l1",
+      "loss",
+      "model_seconds",
+      "seconds",
+      "update",
+      "utc",
+      "vram_allocated_peak_bytes",
+      "vram_reserved_peak_bytes"
+    ],
+    "RGB_or_FBO_per_step_fields": false,
+    "interpretation": "loss values cannot establish historical input health"
+  },
+  "source_sha256": {
+    "vendor/kyc/policy_robosuite/train.py": "ca901eca853681a82affd54cb2bb66731d35591c59603767992d02ceb045cacd",
+    "vendor/kyc/policy_robosuite/eval.py": "702c7daf81cc73326edd9a86b55173e5440e17ce1efa169ec7ff2a66ab043571",
+    "vendor/kyc/policy_robosuite/utils.py": "fbe212146cd0f93e8aa04a98913c736aabf2e4f06ff40eb6544934d0acf9fa1a",
+    "vendor/kyc/reproduce/paper_runs.yaml": "2fdf49927a78307b97a204f50107a8f61aa3057960e2895527c59fe954fa032e",
+    "vendor/robosuite/robosuite/wrappers/action_wrapper.py": "25549efccf50530875c3f31873063db84c2459124303219103583e597f0e1499",
+    "scripts/run_experiment.py": "85a8d72a932c870bcb18e22e792041d9c48da7a082324d7163c276494b6ac256",
+    "scripts/evaluate.py": "46fba926311a4092c6c606499ae53cd36590694af1413e3e85d9440d8f69df13",
+    "scripts/experiment_lib.py": "c3aa5e196a9dfaaf9ce94fd307987c508570deb1d87f6f9f25686d6912b3073c",
+    "scripts/validate_semantics.py": "cfb4f8817e94327f14e7a8b505ad38608c0dcbc8e8478de0e12d66338269d644",
+    "logs/training_steps.jsonl": "df914f651d2b5fb977e3f731e914222f4a7760db99f8ad03a35b3d7a981dce0a",
+    "results/dev_summary.json": "9a420fa8347770c908aa400e74d9b0b51a4b0cf2c1a416c4ec5dcb3f880e8059"
+  }
+}

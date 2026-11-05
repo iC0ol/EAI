@@ -1,0 +1,16 @@
+{
+  "mode": "RUN_PHASE",
+  "phase": "expert-a",
+  "scope_id": "kyc-grasp-rootcause-c96545a9-5b4f-43b9-91f0-8f42b9343836",
+  "executor": {
+    "thread_id": "01a185d0-2da8-70a2-b997-d273c7285042",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "max"
+  },
+  "manifest_sha256": "3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530",
+  "protocol_sha256": "8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8",
+  "total_GPU_seconds": 900,
+  "phase_GPU_seconds": 180,
+  "dispatch_epoch": 1793814196.235501,
+  "deadline_epoch": 1793842996.235501
+}

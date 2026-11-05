@@ -1,0 +1,20 @@
+{
+  "state": "APPROVED",
+  "scope_id": "kyc-grasp-rootcause-c96545a9-5b4f-43b9-91f0-8f42b9343836",
+  "phase": "c-official",
+  "c_local_result_sha256": "331725831937a274b05d671d2b51ea207ed68e2005e73e4cce3094c6617b69d9",
+  "codex": {
+    "decision": "APPROVE",
+    "manifest_sha256": "3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530",
+    "protocol_sha256": "8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8",
+    "evidence_file": "notes/16_C本地臂交叉与官方臂放行.md",
+    "evidence_sha256": "7628065e0996fb7c2f569f4f1ec9a238269553a295268a8bb958d24634eabc89"
+  },
+  "deepseek": {
+    "decision": "APPROVE",
+    "manifest_sha256": "3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530",
+    "protocol_sha256": "8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8",
+    "evidence_file": "discussion/49_c_local_cross_response.md",
+    "evidence_sha256": "cd942347d0fbed053f1cf66ff35e302a8f6bb6edfbb61fe2ed60c8019a96261a"
+  }
+}

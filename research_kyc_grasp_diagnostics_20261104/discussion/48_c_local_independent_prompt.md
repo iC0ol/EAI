@@ -1,0 +1,4 @@
+请独立验收C-local原件，先不读Codex notes15/parent_c-local_acceptance。目录/home/asus/EAI/research_kyc_grasp_diagnostics_20261104。
+读c-local_result.json（22 actual items/2真实collate/2repeat/2guard）、stages/c-local.json、orchestration/c_local_completion.json、results/c-local/readbacks.json与events原记录、figures/c-local_actual_collate_RGB.png（由全部22真实batchRGB切片直接制图）及代表raw/actual_crop PNG。原完整batch NPZ、6对raw、一个full pre/post代表在results/c-local。你不能直接解码NPZ的限制明确说明；不要把runtime布尔或父审图注当独立数组计算。
+判断：有限当前reader是否发现坏RGB/传播到实际item/collate、重复是否在相同state/camera/crop而合理、动作/状态索引及原XML身份边界、是否能解释历史0/32；本臂没有ownerfix/强制GC，没有官方guard，目标释放窗口未触发是限制不能隐去。最多22/22render/44read/135秒，新增0ACT/step/train。
+如原件支持通过并做既定比较，给ACCEPT_C_LOCAL_AND_APPROVE_C_OFFICIAL，只准下一新c-official单次135GPU秒/22getitem，唯一添加实际官方两guard，其余不改；总900/科学09:43:16.235501不延长。manifest3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530，protocol8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8。简短原件验收，不重复源码大审。

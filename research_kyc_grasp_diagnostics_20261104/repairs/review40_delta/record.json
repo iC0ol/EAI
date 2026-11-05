@@ -1,0 +1,192 @@
+{
+  "utc": "2026-11-04T17:29:08.740585+00:00",
+  "authorization": "notes/06_Codex对DeepSeek40的核查与有限修订.md and parent limited revision instruction",
+  "old_manifest_sha256": "5323928a81b4d335827bdc779ec9ac57fae2def2b92daeba896a0be4bd59072b",
+  "old_protocol_sha256": "f6f2a0b1a42b7d1f729ae1118db2b0cacc79b1864d16f4672233ec9e499a6014",
+  "old_candidate_archive": "candidate_history/pre_review40",
+  "old_CPU_archive": "cpu_preflight_attempts/attempt_4",
+  "changed_files": [
+    "kyc_grasp/render_audit.py",
+    "kyc_grasp/roots.py",
+    "kyc_grasp/cpu_preflight.py",
+    "kyc_grasp/cpu_budget_checks.py",
+    "kyc_grasp/reader_worker.py",
+    "sample_plan.json",
+    "PROTOCOL_CANDIDATE.md",
+    "STORAGE_AND_STOP_PLAN.md",
+    "scripts/freeze_candidate.py"
+  ],
+  "unchanged_AB_phase_plan_hashes": {
+    "root_plan.json": "93421992b1d82048df232d48d0f14c556fbc1882eae01aca5d996194b9adb806",
+    "rollout_plan.json": "2f1d1462bc42c317443edd3769a959ec50dfc0bb4891e518aa769f2076103e53",
+    "call_plan.json": "a45ffc694200eee85c791c4b78cd2bed34b0fd78ecef5c38c3ee81fd84a21b84",
+    "phase_plan.json": "106b1201d31ee2662996c34fa5558e58251c17865c38ef785409ed13400103d7"
+  },
+  "state": "LIMITED_DELTA_FINAL_ACTUAL_CPU_PASS_GPU_NOT_AUTHORIZED",
+  "GPU_operations": 0,
+  "three_changes": [
+    "parents=True and exist_ok=False for stage/root output mkdir, actual CPU missing-parent and no-overwrite contracts",
+    "four reference_next_eef existence/shape/finite/exact HDF5 assertions",
+    "two t0 repeats replace demo0/1 final-state slots, source/camera/seed preserved, metadata comparisons or explicit NOT_RUN without replays"
+  ],
+  "before_file_hashes": {
+    "kyc_grasp/render_audit.py": "ed9731c42c443f5051bcd3a3a89c5fd1d670eed97b8f89acedc490a5397845cd",
+    "kyc_grasp/roots.py": "3d162d9524a8dcb85a0d1448885569a2801d7e047f1e6d434760e33c73d69d57",
+    "kyc_grasp/cpu_preflight.py": "278caa4f06858e3bfaf94d7b8dc35dc87c68287365d871ec6a8bcc89d0c37704",
+    "kyc_grasp/cpu_budget_checks.py": "4c08a024fa244fbbb1c2b118ff393c8edea3f17c87d977ed99ec6ee6e491fd30",
+    "kyc_grasp/reader_worker.py": "2e91f5544c52f3040b812e91790d62d3cd19484b3c86d2f8109b2ba6c656d303",
+    "sample_plan.json": "aae1c8638bad9baec3654076249a5076a3d27b91ed9e6181c1e90b55a348bb87",
+    "PROTOCOL_CANDIDATE.md": "f6f2a0b1a42b7d1f729ae1118db2b0cacc79b1864d16f4672233ec9e499a6014",
+    "STORAGE_AND_STOP_PLAN.md": "ba6234fa8afe6a1afcf32b66ed46512cdb45708a7f6a02dacc462b04e9de1afb",
+    "scripts/freeze_candidate.py": "095165de8766feb1c4cb218e1848942d5b4214146499a2e6dc194ef6a08194cc"
+  },
+  "after_file_hashes": {
+    "kyc_grasp/render_audit.py": "3db36f55a9eda01988e6adad2c4726e54766b2c0e197a7d21d52209b16bf908e",
+    "kyc_grasp/roots.py": "4f8bb9709f8685dc99ae859d177cd00c02c2ef8b77fa202e3447a9958df3bf34",
+    "kyc_grasp/cpu_preflight.py": "dcc0f91da89ee1e1bcf7472036f0dc7423887fdd39666bf8d8402c8ec1af55ba",
+    "kyc_grasp/cpu_budget_checks.py": "c36c5cf3ad400eff7ef34a93796a24f69f33bbc3b5e7a94af82ef686a7ac25f2",
+    "kyc_grasp/reader_worker.py": "12894352392123b025b7a125ee7683158e134d6e2e200e8f5271da60c1869d17",
+    "sample_plan.json": "3a424c4d3e37e3b28e3492b24e7148f02caf744f08320ebbd3856f4e011d5084",
+    "PROTOCOL_CANDIDATE.md": "8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8",
+    "STORAGE_AND_STOP_PLAN.md": "ff78ba3ece35412acbf8bd2eb79567c7c2e0a632eb66cf8cba46d99f310a916c",
+    "scripts/freeze_candidate.py": "c57fc2260214e62cbb9a49694733b9f7c0703e8309abf11a090be077a21baf4d"
+  },
+  "diff_sha256": "8a3eaff6c6a55a5e3b67aadf23f753e42f7f7b23db6a624c497d8445a6859f5b",
+  "CPU_final_attempt": 5,
+  "CPU_delta_runs": 1,
+  "CPU_elapsed_seconds": 14.183402301743627,
+  "CPU_exit_code": 0,
+  "CPU_result_sha256": "f8baff68823f957009a4834b2a3dbc165100a61dc167101e7044bfcefdc9b0e5",
+  "CPU_process_sha256": "51793aa8296e55dc00c82db633b43ea314fda5c5a0a3ca54b5a810218c4ecdec",
+  "CPU_code_files": 26,
+  "CPU_device_audit": {
+    "blocked": [],
+    "safe_queries": [],
+    "CUDA_initialized_before": false,
+    "CUDA_initialized_after": false,
+    "GL_modules_imported": [],
+    "ACT_constructed": false,
+    "device_constructor_attempts": 0
+  },
+  "CPU_production_mkdir_contracts": [
+    {
+      "source": "kyc_grasp/render_audit.py",
+      "source_sha256": "3db36f55a9eda01988e6adad2c4726e54766b2c0e197a7d21d52209b16bf908e",
+      "actual_production_mkdir_expression_executed": true,
+      "missing_parents_created": true,
+      "existing_directory_refused": true,
+      "existing_evidence_unchanged": true,
+      "device_constructor_executed": false
+    },
+    {
+      "source": "kyc_grasp/roots.py",
+      "source_sha256": "4f8bb9709f8685dc99ae859d177cd00c02c2ef8b77fa202e3447a9958df3bf34",
+      "actual_production_mkdir_expression_executed": true,
+      "missing_parents_created": true,
+      "existing_directory_refused": true,
+      "existing_evidence_unchanged": true,
+      "device_constructor_executed": false
+    }
+  ],
+  "CPU_expert_reference_checks": [
+    {
+      "demo": 0,
+      "steps": 105,
+      "state_shape": [
+        105,
+        58
+      ],
+      "actions_dtype": "float64",
+      "attrs": [],
+      "reference_next_eef_present": true,
+      "reference_next_eef_shape": [
+        105,
+        3
+      ],
+      "reference_next_eef_finite": true,
+      "reference_next_eef_HDF5_exact": true
+    },
+    {
+      "demo": 1,
+      "steps": 102,
+      "state_shape": [
+        102,
+        58
+      ],
+      "actions_dtype": "float64",
+      "attrs": [],
+      "reference_next_eef_present": true,
+      "reference_next_eef_shape": [
+        102,
+        3
+      ],
+      "reference_next_eef_finite": true,
+      "reference_next_eef_HDF5_exact": true
+    },
+    {
+      "demo": 2,
+      "steps": 126,
+      "state_shape": [
+        126,
+        58
+      ],
+      "actions_dtype": "float64",
+      "attrs": [],
+      "reference_next_eef_present": true,
+      "reference_next_eef_shape": [
+        126,
+        3
+      ],
+      "reference_next_eef_finite": true,
+      "reference_next_eef_HDF5_exact": true
+    },
+    {
+      "demo": 3,
+      "steps": 97,
+      "state_shape": [
+        97,
+        58
+      ],
+      "actions_dtype": "float64",
+      "attrs": [],
+      "reference_next_eef_present": true,
+      "reference_next_eef_shape": [
+        97,
+        3
+      ],
+      "reference_next_eef_finite": true,
+      "reference_next_eef_HDF5_exact": true
+    }
+  ],
+  "CPU_unexecuted_repeat_contract": [
+    {
+      "id": "train_d0_t0_repeat",
+      "repeat_of": "train_d0_t0",
+      "state": "NOT_RUN",
+      "missing_sample_ids": [
+        "train_d0_t0",
+        "train_d0_t0_repeat"
+      ]
+    },
+    {
+      "id": "train_d1_t0_repeat",
+      "repeat_of": "train_d1_t0",
+      "state": "NOT_RUN",
+      "missing_sample_ids": [
+        "train_d1_t0",
+        "train_d1_t0_repeat"
+      ]
+    }
+  ],
+  "GPU_seconds": 0,
+  "ACT": 0,
+  "render": 0,
+  "env_steps": 0,
+  "A_rollouts": 4,
+  "B_rollouts": 8,
+  "B_ACT_cap": 40,
+  "C_getitem_cap": 44,
+  "old_MAE_gate_applies": false,
+  "root_geometry_controller_GL_ACT_and_actual_repeat_comparisons": "DEFERRED",
+  "main_owns_git_and_reviews": true
+}

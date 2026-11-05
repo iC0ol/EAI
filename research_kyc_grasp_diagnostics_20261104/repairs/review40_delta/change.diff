@@ -1,0 +1,232 @@
+--- before/kyc_grasp/render_audit.py
++++ after/kyc_grasp/render_audit.py
+@@ -11,7 +11,7 @@
+         from robosuite.renderers.context import egl_context as ec
+         from robosuite.environments.base import MujocoEnv
+         self.np=np;self.bu=bu;self.env=None;self.strict=strict;self.owner_release=owner_release;self.stage=current_stage();self.entry='INIT';self.frames={};self.persist_arrays=True;self.last_arrays=None
+-        self.out=P/('results/'+self.stage);self.out.mkdir(exist_ok=False)
++        self.out=P/('results/'+self.stage);self.out.mkdir(parents=True,exist_ok=False)
+         self.api=Telemetry(ec,self.out,PHASES.index(self.stage)+1);api=self.api
+         old_init=ec.EGLGLContext.__init__
+         def init(obj,*a,**kw):
+--- before/kyc_grasp/roots.py
++++ after/kyc_grasp/roots.py
+@@ -37,7 +37,7 @@
+     env._asw_last_abs_pose=np.asarray(value['wrapper_abs_pose'],float).copy()
+ def freeze_one(env,lib,audit,root):
+     import numpy as np,torch
+-    directory=P/('roots/root_'+str(root['root_id']));directory.mkdir(exist_ok=False)
++    directory=P/('roots/root_'+str(root['root_id']));directory.mkdir(parents=True,exist_ok=False)
+     with np.load(P/root['expert_file'],allow_pickle=False) as z:source=z['source_initial_state'].copy();first=z['starting_abs_action'].copy();action=z['actions'][0].copy()
+     env.sim.set_state_from_flattened(source);env.sim.forward();env.set_init_action()
+     xml=env.model.get_xml();(directory/'model.xml').write_text(xml)
+--- before/kyc_grasp/cpu_preflight.py
++++ after/kyc_grasp/cpu_preflight.py
+@@ -40,14 +40,26 @@
+             for root in rootplan['roots']:
+                 d=data['data/demo_'+str(root['demo_id'])]
+                 with np.load(P/root['expert_file'],allow_pickle=False) as z:
++                    require('reference_next_eef' in z.files,'expert reference_next_eef missing')
++                    reference=z['reference_next_eef'];source_reference=d['next_obs/robot0_eef_pos'][()]
++                    require(reference.shape==(root['expert_steps'],3) and np.isfinite(reference).all() and np.array_equal(reference,source_reference),'expert reference_next_eef shape/finite/HDF5 source mismatch')
+                     require(np.array_equal(z['source_initial_state'],d['states'][0]) and np.array_equal(z['actions'],d['actions'][()]) and np.array_equal(z['starting_abs_action'],d['starting_abs_action'][()]),'expert/initial state source changed')
+                     require(hashlib.sha256(z['actions'].tobytes()).hexdigest()==root['HDF5_actions_sha256'] and sha(P/root['expert_file'])==root['expert_file_sha256'],'plan expert SHA mismatch')
+                     require(z['actions'].shape==(root['expert_steps'],7) and root['expert_steps']<=150 and all(np.isfinite(z[k]).all() for k in z.files),'expert arrays invalid')
+                 require(root['env_seed']==42+root['demo_id'] and root['demo_id']<=root['train_camera_index']<root['demo_id']+3,'root/camera index changed')
+-                data_rows.append(dict(demo=root['demo_id'],steps=root['expert_steps'],state_shape=list(d['states'].shape),actions_dtype=str(d['actions'].dtype),attrs=list(d.attrs)))
++                data_rows.append(dict(demo=root['demo_id'],steps=root['expert_steps'],state_shape=list(d['states'].shape),actions_dtype=str(d['actions'].dtype),attrs=list(d.attrs),reference_next_eef_present=True,reference_next_eef_shape=list(reference.shape),reference_next_eef_finite=True,reference_next_eef_HDF5_exact=True))
+             require(len(rootplan['roots'])==4 and sum(x['steps'] for x in data_rows)==430,'expert plan')
+             for item in sampleplan['samples']:require(0<=item['t']<len(data['data/demo_'+str(item['demo_id'])+'/actions']),'C time index out of range')
+         require(len(read(P/'rollout_plan.json')['rollouts'])==12 and len(read(P/'call_plan.json')['calls'])==40 and len(sampleplan['samples'])==22 and sampleplan['total_getitems']==44,'planned caps differ')
++        by_id={x['id']:x for x in sampleplan['samples']};repeats=[x for x in sampleplan['samples'] if 'repeat_of' in x]
++        require(len(by_id)==22 and sum(x['split']=='validation' for x in by_id.values())==10 and sum(x['split']=='train' for x in by_id.values())==12,'C split/unique sample contract changed')
++        require([(x['id'],x['repeat_of']) for x in repeats]==[('train_d0_t0_repeat','train_d0_t0'),('train_d1_t0_repeat','train_d1_t0')],'C bounded repeat plan differs')
++        for repeat in repeats:
++            original=by_id[repeat['repeat_of']]
++            require(all(repeat[k]==original[k] for k in ['split','dataset_index','demo_id','t','camera_index','seed']),'C repeat state/camera/RNG start differs')
++        from .reader_worker import within_arm_repeats
++        not_run=within_arm_repeats(sampleplan['samples'],[])
++        require(len(not_run)==2 and all(x['state']=='NOT_RUN' and len(x['missing_sample_ids'])==2 for x in not_run),'C unexecuted repeats must remain NOT_RUN')
+         from .cli import ROUTES,resolve
+         entries=[]
+         for mode in ROUTES:
+@@ -60,7 +72,7 @@
+         import shutil
+         for n in code:
+             target=snapshot/n;target.parent.mkdir(exist_ok=True,parents=True);shutil.copyfile(P/n,target)
+-        result.update(status='CPU_IMPORT_READY',actual_imports=True,provenance=provenance,actual_local_entry_imports=local,final_entry_modules_verified=entries,code_hashes=code,device_audit=device,budget_and_wrapper_CPU_checks=checks,checkpoint_tensors=375,checkpoint_all_CPU_finite=True,args_and_stats_match=True,checkpoint_updates=ck['updates'],checkpoint_epochs=ck['completed_epochs'],expert_sources=data_rows,per_demo_XML_available=False,env_spec=spec,actual_GPU_workers=0,actual_GPU_seconds=0,actual_env_render_ACT_step=0,ENGINEERING_READY=False,GPU_DEFERRED=['four substitute root generation and exact physical/controller restore','actual input/GL construction/cleanup','two healthy readbacks','ACT construct/strict load','all A/B trajectories','actual Dataset crop+collate arms'],torch_version=torch.__version__,numeric_threads=torch.get_num_threads(),interop_threads=torch.get_num_interop_threads())
++        result.update(status='CPU_IMPORT_READY',actual_imports=True,provenance=provenance,actual_local_entry_imports=local,final_entry_modules_verified=entries,code_hashes=code,device_audit=device,budget_and_wrapper_CPU_checks=checks,checkpoint_tensors=375,checkpoint_all_CPU_finite=True,args_and_stats_match=True,checkpoint_updates=ck['updates'],checkpoint_epochs=ck['completed_epochs'],expert_sources=data_rows,C_repeat_plan=dict(repeats=repeats,same_state_camera_seed_asserted=True,unexecuted_comparison_contract=not_run,per_arm_getitems=22,total_getitems=44),per_demo_XML_available=False,env_spec=spec,actual_GPU_workers=0,actual_GPU_seconds=0,actual_env_render_ACT_step=0,ENGINEERING_READY=False,GPU_DEFERRED=['four substitute root generation and exact physical/controller restore','actual input/GL construction/cleanup','two healthy readbacks','ACT construct/strict load','all A/B trajectories','actual Dataset crop+collate arms'],torch_version=torch.__version__,numeric_threads=torch.get_num_threads(),interop_threads=torch.get_num_interop_threads())
+         del ck,state
+     except BaseException as exc:
+         import traceback
+--- before/kyc_grasp/cpu_budget_checks.py
++++ after/kyc_grasp/cpu_budget_checks.py
+@@ -50,6 +50,21 @@
+     from .model_runtime import execute_denormalize
+     import torch
+     from types import SimpleNamespace
++    mkdir_checks=[]
++    for name,receiver in [('render_audit','self.out'),('roots','directory')]:
++        mkdir_source=P/('kyc_grasp/'+name+'.py');tree=ast.parse(mkdir_source.read_text())
++        calls=[n for n in ast.walk(tree) if isinstance(n,ast.Call) and isinstance(n.func,ast.Attribute) and n.func.attr=='mkdir' and ast.unparse(n.func.value)==receiver]
++        require(len(calls)==1,'production output mkdir call changed')
++        target=P/('tmp/review40_mkdir_'+name+'/missing_parent/leaf');require(not target.parent.exists(),'mkdir contract requires an absent parent')
++        namespace={'self':SimpleNamespace(out=target),'directory':target}
++        statement=ast.fix_missing_locations(ast.Module(body=[ast.Expr(value=copy.deepcopy(calls[0]))],type_ignores=[]));code=compile(statement,str(mkdir_source),'exec')
++        exec(code,namespace);require(target.is_dir(),'production mkdir did not create missing parents')
++        marker=target/'existing_evidence.txt';marker.write_text('preserve existing evidence\n')
++        try:exec(code,namespace)
++        except FileExistsError:pass
++        else:raise RuntimeError('production mkdir allowed an existing output directory')
++        require(marker.read_text()=='preserve existing evidence\n','existing evidence changed')
++        mkdir_checks.append(dict(source=str(mkdir_source.relative_to(P)),source_sha256=sha(mkdir_source),actual_production_mkdir_expression_executed=True,missing_parents_created=True,existing_directory_refused=True,existing_evidence_unchanged=True,device_constructor_executed=False))
+     normalized=np.linspace(-1.1,1.3,210,dtype=np.float32).reshape(30,7)
+     stats={k:np.asarray(v,np.float32) for k,v in read(R/'manifests/dataset_stats.json').items()}
+     tree=ast.parse((K/'eval.py').read_text());candidates=[n for n in ast.walk(tree) if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='action_chunk' for t in n.targets) and isinstance(n.value,ast.BinOp) and 'action_std' in ast.unparse(n.value)]
+@@ -59,4 +74,4 @@
+     arithmetic=dict(official_source_sha256=sha(K/'eval.py'),actual_official_expression_executed_on_real_CPU_tensor=True,output_dtype=str(execution.dtype),bit_equal=True,actual_ACT_calls=0)
+     from .gates import gate
+     refused('GPU_gate_without_RUN',lambda:gate('gpu-preflight'))
+-    return dict(state='PASS_CPU_INTERFACE_AND_REFUSALS_ONLY',logical_mock_ACT_tickets=40,matching_mock_internal_entries=40,actual_ACT=0,actual_env_steps=0,refusals=rows,real_sleep_process_identity=identity,real_sleep_process_exit_code=sleeper.returncode,real_sleep_process_inactive=True,actual_supervisor_terminate_exercised=True,wrapper_source_sha256=sha(source),actual_wrapper_function_executed_on_fake_CPU_base=True,wrapper_absolute_commands=[v.tolist() for v in env.commands],official_float32_execution_contract=arithmetic,physics_and_control_success='DEFERRED')
++    return dict(state='PASS_CPU_INTERFACE_AND_REFUSALS_ONLY',logical_mock_ACT_tickets=40,matching_mock_internal_entries=40,actual_ACT=0,actual_env_steps=0,refusals=rows,real_sleep_process_identity=identity,real_sleep_process_exit_code=sleeper.returncode,real_sleep_process_inactive=True,actual_supervisor_terminate_exercised=True,wrapper_source_sha256=sha(source),actual_wrapper_function_executed_on_fake_CPU_base=True,wrapper_absolute_commands=[v.tolist() for v in env.commands],production_mkdir_contracts=mkdir_checks,official_float32_execution_contract=arithmetic,physics_and_control_success='DEFERRED')
+--- before/kyc_grasp/reader_worker.py
++++ after/kyc_grasp/reader_worker.py
+@@ -30,6 +30,19 @@
+     for n in nodes:
+         module=ast.parse('def guard(env,gl):\n    pass\n');module.body[0].body=[copy.deepcopy(n)];ast.fix_missing_locations(module);scope={};exec(compile(module,str(source),'exec'),scope);funcs.append((scope['guard'],n.lineno))
+     return funcs
++
++def within_arm_repeats(plan,rows):
++    import numpy as np
++    actual={x['id']:x for x in rows};pairs=[]
++    for sample in plan:
++        if 'repeat_of' not in sample:continue
++        ids=[sample['repeat_of'],sample['id']];missing=[x for x in ids if x not in actual]
++        pair=dict(id=sample['id'],repeat_of=sample['repeat_of'],state='NOT_RUN',missing_sample_ids=missing)
++        if not missing:
++            first,repeat=(actual[x] for x in ids)
++            pair.update(state='COMPARISON_RECORDED',same_source_state=first['source_state']==repeat['source_state'],same_actual_geometry=first['actual_geometry']==repeat['actual_geometry'],same_actual_T=bool(np.array_equal(first['actual_T'],repeat['actual_T'])),same_camera_index=first['sample']['camera_index']==repeat['sample']['camera_index'],same_seed=first['sample']['seed']==repeat['sample']['seed'],same_crop_draws=first['crop']==repeat['crop'],same_raw=first['frame']['raw_sha256']==repeat['frame']['raw_sha256'],same_post_crop=first['post_transform']==repeat['post_transform'],original_collate_saved=bool(first.get('collate_slice')),repeat_collate_saved=bool(repeat.get('collate_slice')))
++        pairs.append(pair)
++    return pairs
+ 
+ def main(stage):
+     worker_gate(stage)
+@@ -124,6 +137,7 @@
+         events=[json.loads(x) for x in (audit.out/'events.jsonl').read_text().splitlines()] if (audit.out/'events.jsonl').exists() else []
+         target=[i for i,e in enumerate(events) if e['event']=='natural_renderer_release_enter' and e.get('releasing_owner') and e.get('previous_context') and e['releasing_owner']!=e['previous_context'] and e['entry']!='CLEANUP']
+         result=dict(utc=utc(),state=state,error=error,cleanup_error=cleanup,items=rows,batches=batches,guards=guard_rows,validation_fault=split_faults['validation'],train_fault=split_faults['train'],split_first_fault_stop_rule=True,natural_target_window='OBSERVED' if target else 'NOT_REPRODUCED',natural_target_indices=target,owner_aware_fix_installed=False,forced_GC_or_destructor=False,current_health_fault_with_actual_item_and_collate_saved=fault_seen and bool(batches),readback_nondeterminism_propagated_to_crop_and_collate=any(x.get('normal_sentinel_nondeterminism_survives_actual_crop') and x.get('collate_slice') for x in rows),readback_nondeterminism_propagated_to_actual_train_tensor=any(x['sample']['split']=='train' and x.get('normal_sentinel_nondeterminism_survives_actual_crop') and x.get('collate_slice') for x in rows),GL_fault_alone_does_not_prove_bad_pixel_content=True,pixel_stripes_blankness_and_duplicates='parent actual-array/image review required',history_of_training_corruption='UNPROVEN_NO_HISTORIC_RGB_FBO_LOGS',no_loss_used=True,ACT=0,optimizer_created=False,provenance=provenance,full_item_output_storage='each item exactly recoverable from actual collated tensor slice; selected representatives also stored separately to avoid44 duplicated9channel tensors')
++        result['within_arm_repeat']=within_arm_repeats(read(P/'sample_plan.json')['samples'],rows)
+         if stage=='c-official' and (P/'c-local_result.json').exists():
+             local=read(P/'c-local_result.json');pairs=[]
+             for row in rows:
+--- before/sample_plan.json
++++ after/sample_plan.json
+@@ -137,15 +137,16 @@
+       "save_raw": false
+     },
+     {
+-      "id": "train_d0_t104",
++      "id": "train_d0_t0_repeat",
+       "split": "train",
+       "dataset_index": 0,
+       "demo_id": 0,
+-      "t": 104,
+-      "camera_index": 1,
+-      "seed": 20261106,
+-      "save_full_tensor": false,
+-      "save_raw": false
++      "t": 0,
++      "camera_index": 1,
++      "seed": 20261104,
++      "save_full_tensor": false,
++      "save_raw": false,
++      "repeat_of": "train_d0_t0"
+     },
+     {
+       "id": "train_d1_t0",
+@@ -170,15 +171,16 @@
+       "save_raw": false
+     },
+     {
+-      "id": "train_d1_t101",
++      "id": "train_d1_t0_repeat",
+       "split": "train",
+       "dataset_index": 1,
+       "demo_id": 1,
+-      "t": 101,
+-      "camera_index": 2,
+-      "seed": 20261206,
+-      "save_full_tensor": false,
+-      "save_raw": false
++      "t": 0,
++      "camera_index": 2,
++      "seed": 20261204,
++      "save_full_tensor": false,
++      "save_raw": false,
++      "repeat_of": "train_d1_t0"
+     },
+     {
+       "id": "train_d2_t0",
+@@ -253,5 +255,6 @@
+   "train_items": 12,
+   "comparison": "same local init and controlled sampling; only official two guard/reset snippets added in official arm",
+   "natural_lifecycle_only": true,
+-  "storage": "all44 postcrop item tensors retained once in actual collate arrays with exact slice hashes;12 raw pairs and2 full precrop representatives, plus first fault if any"
++  "storage": "all44 postcrop item tensors retained once in actual collate arrays with exact slice hashes;12 raw pairs and2 full precrop representatives, plus first fault if any",
++  "within_arm_repeat": "demo0/1 t0 independently rendered again in their original final-state slots, same source/camera/seed/crop RNG; missing original/repeat after first-fault stop is NOT_RUN, no replay"
+ }
+--- before/PROTOCOL_CANDIDATE.md
++++ after/PROTOCOL_CANDIDATE.md
+@@ -6,9 +6,9 @@
+ 
+ 唯一实验入口是既有`reproduction/env/bin/python -B run.py MODE`，cwd为本目录。harness隔离在kyc_grasp，所有P由自身路径计算。实际共用loader验证experiment_lib、官方common/utils/eval/models/cam_embedding及act/detr_vae的file/spec/sys.modules身份，不删除或注入旧模块。R指向既有只读runtime/源码/数据/权重；cache/tmp仅在新目录。父审独占Git。
+ 
+-CPU预检以同一解释器/cwd/run.py/loader真实导入所有安全分支，并真实导入本地run_experiment/evaluate/validate_semantics。CPUAudit在Torch前阻止robosuite/MuJoCo/GL模块，阻断CUDA初始化/迁移与ACT/make_env构造；独立CPU supervisor监测原PID是否出现在GPU、165秒/RSS/输出限制。实际读取375个CPU有限checkpoint tensor、args/stats、HDF5/四专家/采样与资源SHA，不执行policy构造/strict-load。真实预算拒绝测试和OS终止测试只是CPU接口检查，不伪称ACT/物理成功；官方wrapper提取函数在假CPU底层上验证累计契约，不替代真实A。
++CPU预检以同一解释器/cwd/run.py/loader真实导入所有安全分支，并真实导入本地run_experiment/evaluate/validate_semantics。CPUAudit在Torch前阻止robosuite/MuJoCo/GL模块，阻断CUDA初始化/迁移与ACT/make_env构造；独立CPU supervisor监测原PID是否出现在GPU、165秒/RSS/输出限制。实际读取375个CPU有限checkpoint tensor、args/stats、HDF5/四专家/采样与资源SHA；四份reference_next_eef必须存在、为原动作长度×3、有限且与HDF5 next_obs/robot0_eef_pos原值精确相等，不执行policy构造/strict-load。真实预算拒绝测试和OS终止测试只是CPU接口检查，不伪称ACT/物理成功；官方wrapper提取函数在假CPU底层上验证累计契约，不替代真实A。
+ 
+-代码完成后保存实际CPU时源码快照。任何候选代码与快照不一致，GPU gate拒绝。官方执行float32乘加在真实CPU Tensor上执行原eval算术表达式，要求逐位相同；GPU时另要求policy返回的[0].float()与捕获internal normalized_chunk逐位一致。执行动作保持float32，分析若需float64不能反向驱动控制。
++results/阶段与roots/root目录创建使用parents=True、exist_ok=False，补建缺失父目录且禁止覆盖既有输出。CPU实际执行两处原mkdir语句，核实缺失父目录可创建、第二次被FileExistsError拒绝且既有证据未变；不执行GL构造器。代码完成后保存实际CPU时源码快照。任何候选代码与快照不一致，GPU gate拒绝。官方执行float32乘加在真实CPU Tensor上执行原eval算术表达式，要求逐位相同；GPU时另要求policy返回的[0].float()与捕获internal normalized_chunk逐位一致。执行动作保持float32，分析若需float64不能反向驱动控制。
+ 
+ ## 固定替代root与相机
+ 
+@@ -46,13 +46,13 @@
+ 
+ 两臂各fresh process，一个make_env(0)给真实train Dataset0..199/crop与val200..209/id共享；不构造模型或optimizer、不训练、不计算loss。两臂均为原本地训练初始化与同一受控采样，仅c-official在官方两个位置执行从固定train.py提取的原IF guard/reset语句（先验证、后训练）。不执行有CUDA顶层副作用的整个官方train.py，不伪称完整长训重放；本地原Loader批70被有限审计选择的10val+12train子集替代，default_collate仍是实际同一函数。
+ 
+-每臂10个val t0，加demo0..3各t0/中点/末尾12个train，总22；两臂44getitem、44render、88read，无额外render搜索错误。时间/相机两次选择受控并留证，每对使用相同Python/NumPy/Torch/CUDA RNG起点；其余Dataset逻辑/RandomCrop实际执行一次。记录实际3个random.randint crop参数、source float32 state、demo/time/window/camera/T/K、raw normal/sentinel、flip/uint8→pre-crop、实际crop后item→实际default_collate模型前所有tensor、动作序列/mask/索引及源头SHA。NumPy CPU复核原nearest映射与实际crop RGB逐位一致，不新增CUDA transform或ACT。
++每臂10个val t0，加demo0..3各3个train，总22；demo2/3仍为t0/中点/末尾，demo0/1原末状态槽位分别替换为train_d0_t0_repeat和train_d1_t0_repeat（repeat_of指向各自t0）。两次重复使用原t0源状态、相机1/2、seed20261104/20261204及相同crop RNG起点，保持序列位置和原保存标记；两臂44getitem、44render、88read，无额外render搜索错误。时间/相机两次选择受控并留证，每对使用相同Python/NumPy/Torch/CUDA RNG起点；其余Dataset逻辑/RandomCrop实际执行一次。记录实际3个random.randint crop参数、source float32 state、demo/time/window/camera/T/K、raw normal/sentinel、flip/uint8→pre-crop、实际crop后item→实际default_collate模型前所有tensor、动作序列/mask/索引及源头SHA。NumPy CPU复核原nearest映射与实际crop RGB逐位一致，不新增CUDA transform或ACT。
+ 
+ 所有44个实际crop后item tensor完整保存在真实collate的可索引数组中，逐item与batch slice逐位核对，避免另存44份同内容；每个item有准确文件/索引/hash。原始readback对保存12个预定代表及首个故障，其余仍实际双读并记录双方hash/健康/差异。2个预定train代表额外保存完整pre-crop+post RGB数组；故障时每split最多额外保存首个真实pre/post/标签及collate。不能用代表帧健康代替最终训练tensor证据；全部batch image/qpos/actions/is_pad/cam_extrinsics都保存。
+ 
+ C不安装owner-aware释放修复，不HELD、不强制析构/额外GC；仅原生析构外加测量。GL/EGL只读查询与glGetError drain、CPU拷贝/保存会改变时序/错误队列可见性，须列测量影响；不绑定/重建FBO、不强迫错误。A/B与预检则安装既有受控owner-aware修复和严格读回健康门。
+ 
+-每臂记录初始XML/actual sim cube尺寸和物理指纹，guard前后XML/几何、reset次数；每item保留actual geometry。两臂只在source state/camera/RNG和实际几何相等时解释纯guard效果；几何不同标混淆。公开HDF5无原demo XML，所以当前训练场景与原收集场景身份仍未证明。
++每臂within_arm_repeat记录原样本与重复样本的source state、actual geometry、T、相机、seed、实际crop参数、raw hash和postcrop hash比较及两者collate是否保存；差异只记录待审。若故障早停使任一未执行，明确NOT_RUN及缺失id，不追补、不额外render/read/getitem。重复项不另存raw数组，hash和完整实际collate切片仍保留。每臂记录初始XML/actual sim cube尺寸和物理指纹，guard前后XML/几何、reset次数；每item保留actual geometry。两臂只在source state/camera/RNG和实际几何相等时解释纯guard效果；几何不同标混淆。公开HDF5无原demo XML，所以当前训练场景与原收集场景身份仍未证明。
+ 
+ 每个split首次健康错误后保留真实item/collate及链并停止该split；validation故障后仍进入原定第二guard和train split，最多原12个训练sample、无新增重试。分别记录validation_fault/train_fault及两条实际collate链。若native异常在tensor前发生，诚实标PARTIAL/未证实传播。GL/FBO异常单独不足以证明像素坏；normal/sentinel不确定性须确认差异经过实际crop并进入collate才标当前readback不确定性传播。若差异全被crop去除，不能说最终训练输入污染。可疑条纹/重复需主审看实际数组；全健康且自然目标窗口未出现记NOT_REPRODUCED。无论何结果，都不能追认旧4.57h曾同样损坏。
+ 
+--- before/STORAGE_AND_STOP_PLAN.md
++++ after/STORAGE_AND_STOP_PLAN.md
+@@ -1,6 +1,6 @@
+ # 存储、终止与测量边界
+ 
+-目录150MiB包括真实DeepSeek raw、log、源代码、根快照、所有数组和结果，不能只算worker输出。B只保存40块动作、RGB/T和输入hash，不保存40份9通道输入。C所有实际item完整恢复自对应collate切片，不再重复44份item tensor；仅2个预定train代表另外保存完整pre-crop和post RGB，故障时最多追加每臂每split各1个真实链。
++目录150MiB包括真实DeepSeek raw、log、源代码、根快照、所有数组和结果，不能只算worker输出。B只保存40块动作、RGB/T和输入hash，不保存40份9通道输入。C所有实际item完整恢复自对应collate切片，不再重复44份item tensor；仅2个预定train代表另外保存完整pre-crop和post RGB，故障时最多追加每臂每split各1个真实链。demo0/1的两组t0重复只替换原末状态槽位，仍每臂22/总44，原save_raw/save_full_tensor标记不变；within_arm_repeat只增元数据比较，未执行项NOT_RUN且不追补，没有额外数组副本或render/read/getitem。
+ 
+ 按未压缩float32上界，44个collate image共99MiB；AB/预检全部和C代表/首故障normal+sentinel最多74对，约27.75MiB；2个正常加最多4个故障pre/post RGB代表最多18MiB。主要数组最坏约144.75MiB，另有PNG/轨迹/XML/日志，故**不能承诺未压缩全量在150MiB内**。实际采用无损压缩并在CPU内存先得实际字节，再检查整个目录；不把压缩率当保证。save_npz在used+archive>146MiB前拒绝写，保留4MiB日志/清理；supervisor全目录150MiB/RSS/显存/时间独立终止。若不能容纳完整证据就PARTIAL停止，不扩输出预算、不删旧原件、也不伪称完整C。
+ 
+--- before/scripts/freeze_candidate.py
++++ after/scripts/freeze_candidate.py
+@@ -42,10 +42,10 @@
+  previous=json.loads((W/'research_kyc_final_recovery_20261103/candidate_manifest.json').read_text())['sources']
+  matched={n:v for n,v in sources.items() if n in previous};assert all(v==previous[n] for n,v in matched.items()),'old previously pinned source changed'
+  save('source_manifest.json',dict(utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),sources=sources,all_older_paths_readonly=True,previously_frozen_intersection_checked=len(matched),previously_frozen_intersection_all_match=True,mesh_texture_dependency_witness='older canonical Panda/Lift XML only identifies assets; does not establish demo scene identity',asset_dependencies=sorted(set(assets))))
+- report=clean(cpu);report['process']=process;report['source_count']=len(sources);report['source_bytes']=sum(Path(n).stat().st_size for n in sources);report['scope']='CPU preparation only, GPU pending exact dual review+RUN';report['CPU_attempts']=[dict(attempt=1,state='FAILED_CPU_TEST_FIXTURE',elapsed_seconds=14.2018291358836,archive='cpu_preflight_attempts/attempt_1'),dict(attempt=2,state='PASS_BEFORE_PARENT_FLOAT32_STEERING',elapsed_seconds=13.644495673011988,archive='cpu_preflight_attempts/attempt_2'),dict(attempt=3,state='PASS_OFFICIAL_FLOAT32_CONTRACT_BEFORE_PARENT_C_SPLIT_STEERING',elapsed_seconds=13.824397867079824,archive='cpu_preflight_attempts/attempt_3'),dict(attempt=4,state='FINAL_ACTUAL_CPU_CODE_COVERAGE',elapsed_seconds=process['elapsed_seconds'],archive='cpu_preflight')]
++ report=clean(cpu);report['process']=process;report['source_count']=len(sources);report['source_bytes']=sum(Path(n).stat().st_size for n in sources);report['scope']='CPU preparation only, GPU pending exact dual review+RUN';report['CPU_attempts']=[dict(attempt=1,state='FAILED_CPU_TEST_FIXTURE',elapsed_seconds=14.2018291358836,archive='cpu_preflight_attempts/attempt_1'),dict(attempt=2,state='PASS_BEFORE_PARENT_FLOAT32_STEERING',elapsed_seconds=13.644495673011988,archive='cpu_preflight_attempts/attempt_2'),dict(attempt=3,state='PASS_OFFICIAL_FLOAT32_CONTRACT_BEFORE_PARENT_C_SPLIT_STEERING',elapsed_seconds=13.824397867079824,archive='cpu_preflight_attempts/attempt_3'),dict(attempt=4,state='PASS_C_SPLIT_RULE_BEFORE_REVIEW40',elapsed_seconds=14.127569741103798,archive='cpu_preflight_attempts/attempt_4'),dict(attempt=5,state='FINAL_LIMITED_REVIEW40_DELTA_CPU_CODE_COVERAGE',elapsed_seconds=process['elapsed_seconds'],archive='cpu_preflight')]
+  report['protocol_sha256']=sha(P/'PROTOCOL_CANDIDATE.md');report['planned_trajectories']=12;report['planned_A_steps']=430;report['planned_B_steps']=1200;report['planned_ACT']=40;report['planned_C_getitems']=44
+  save('CPU_PREPARATION_REPORT.json',report)
+- text=f'''# CPU准备交付：GPU尚未批准\n\n**CPU_IMPORT_READY，仅CPU入口/资源/接口通过。** 最终同runtime/cwd/run.py实际进程exit0，{process['elapsed_seconds']:.6f}秒；真实上游loader、本地run_experiment/evaluate/validate_semantics、安全CLI分支和辅助模块均实际导入。当前{len(cpu['code_hashes'])}个Python源码与实际CPU快照SHA一致；安全入口/辅助身份记录共{len(cpu['final_entry_modules_verified'])}项。没有执行构造器、CUDA、GL、make_env、render、ACT、step、训练或真实optimizer。\n\n真实CPU读375项有限checkpoint张量、原args/stats、HDF5与四专家原始来源。固定demo0..3动作105/102/126/97，共430；原数据无逐demo XML，替代场景身份明确。CPU guard前后CUDA initialized=false、GL模块空、阻断设备尝试0；独立supervisor未观察到该CPU PID使用GPU，已退出。Torch数值线程3、interop1。\n\nCPU测试使用正式charge/CallGuard：40个**模拟**logical/internal ticket计数相符，ACT41、每rollout第6查询/151步、13轨迹/45getitem及预检禁用操作/optimizer/GPU门均拒绝；实际ACT/step为0。生产terminate函数确实SIGTERM了独立sleep子进程、exit-15，原PID失活。提取的真实wrapper函数在假CPU底层验证累计契约，绝不是物理阳性。官方eval原算术表达式在真实CPU Tensor上执行，与候选float32乘加bit equal，无新ACT；GPU时另断言policy返回等于内部捕获。\n\n四次CPU实际运行均留存：第一次预算测试夹具active_rollout为空，被正式guard正确拒绝；只把测试夹具改为带label，没有削弱正式guard，原traceback/前后源码/diff见repairs/CPU_fixture。第二次真实通过。父审随后要求执行float32/真实policy返回一致性，修改留diff，第三次实际通过官方算术契约。父审最后要求C validation故障后仍进入预定train split，追加后进行了本次最终实际覆盖。这两次是准备阶段明确修订后的测试覆盖，不是GPU重跑。所有旧原件均保留；没有GPU额度消耗或科学时钟。\n\n候选新scope共用root恢复、base.step观测、严格加载、native/sentinel读回和ticket账本。A4+B8总12轨迹，B40 prior、C44实际getitem，取消旧20%门；详见协议与plan。C完整crop后item保存在实际collate的可索引数组中，代表pre-crop另存，防止大数组重复。正式内秒额必须真实GPU预检后再双审冻结；预检候选≤90，总≤900。\n\n{len(sources)}个旧只读来源已锁SHA（含实际Panda/Lift XML引用的mesh/texture、官方/本地源码、数据/权重/日志），与前次已冻来源的交集{len(matched)}项全部匹配。当前源码/权重/数据/旧结果没有写入。原始cpu_preflight/result含Python对象身份id等，仅本地保存；公开报告已剔除module_id。公开只按public_allowlist，排除runtime/cache/tmp/原生地址/凭据/完整模型数据。\n\n**DEFERRED：** 实际4root生成/恢复、真实sim几何和控制器、GL初始化/健康读回、GPU模型strict-load、40 ACT/闭环、C实际crop/collate。CPU通过不能代替这些。全部GPU工程与科学阶段当前NOT_RUN；六问不作新增根因结论。准确候选manifest SHA见CANDIDATE_SHA256SUMS.txt；等待父审与真实DeepSeek准确SHA批准和新的phase dispatch，不自批，不Git操作，不更改automation。\n'''
++ text=f'''# CPU准备交付：GPU尚未批准\n\n**CPU_IMPORT_READY，仅CPU入口/资源/接口通过。** 最终同runtime/cwd/run.py实际进程exit0，{process['elapsed_seconds']:.6f}秒；真实上游loader、本地run_experiment/evaluate/validate_semantics、安全CLI分支和辅助模块均实际导入。当前{len(cpu['code_hashes'])}个Python源码与实际CPU快照SHA一致；安全入口/辅助身份记录共{len(cpu['final_entry_modules_verified'])}项。没有执行构造器、CUDA、GL、make_env、render、ACT、step、训练或真实optimizer。\n\n真实CPU读375项有限checkpoint张量、原args/stats、HDF5与四专家原始来源；四份reference_next_eef存在、形状/有限性通过且与HDF5 next_obs/robot0_eef_pos原值精确相等。固定demo0..3动作105/102/126/97，共430；原数据无逐demo XML，替代场景身份明确。CPU guard前后CUDA initialized=false、GL模块空、阻断设备尝试0；独立supervisor未观察到该CPU PID使用GPU，已退出。Torch数值线程3、interop1。\n\nCPU测试使用正式charge/CallGuard：40个**模拟**logical/internal ticket计数相符，ACT41、每rollout第6查询/151步、13轨迹/45getitem及预检禁用操作/optimizer/GPU门均拒绝；实际ACT/step为0。生产terminate函数确实SIGTERM了独立sleep子进程、exit-15，原PID失活。提取的真实wrapper函数在假CPU底层验证累计契约，绝不是物理阳性。官方eval原算术表达式在真实CPU Tensor上执行，与候选float32乘加bit equal，无新ACT；GPU时另断言policy返回等于内部捕获。\n\n五次CPU实际运行均留存：第一次预算测试夹具active_rollout为空，被正式guard正确拒绝；只把测试夹具改为带label，没有削弱正式guard，原traceback/前后源码/diff见repairs/CPU_fixture。第二次真实通过。父审随后要求执行float32/真实policy返回一致性，修改留diff，第三次实际通过官方算术契约。父审随后要求C validation故障后仍进入预定train split，追加后第四次真实通过。DeepSeek40及主审notes06又限定三项修订：目录缺失父目录创建且仍拒绝覆盖、四专家EEF源头断言、C原22槽位内demo0/1的t0重复。本次第五次是该限定修订后的唯一最终CPU覆盖。CPU确实执行两处生产mkdir语句，缺失父目录创建成功，重入被FileExistsError拒绝且已有marker未变；没有执行设备构造器。两组repeat的源状态/相机/seed约束已检查，未执行项实际调用比较函数输出NOT_RUN；没有执行真实C。上述均为准备阶段明确修订后的测试覆盖，不是GPU重跑。旧manifest/协议归档candidate_history/pre_review40，九个被改文件前后及diff见repairs/review40_delta。所有旧原件均保留；没有GPU额度消耗或科学时钟。\n\n候选新scope共用root恢复、base.step观测、严格加载、native/sentinel读回和ticket账本。A4+B8总12轨迹，B40 prior、C44实际getitem，取消旧20%门；详见协议与plan。C完整crop后item保存在实际collate的可索引数组中，代表pre-crop另存，防止大数组重复；两组t0重复沿用原末状态槽位与保存标记，within_arm_repeat只记录source/geometry/T/crop/raw/postcrop对比，早停缺项NOT_RUN且不追补。正式内秒额必须真实GPU预检后再双审冻结；预检候选≤90，总≤900。\n\n{len(sources)}个旧只读来源已锁SHA（含实际Panda/Lift XML引用的mesh/texture、官方/本地源码、数据/权重/日志），与前次已冻来源的交集{len(matched)}项全部匹配。当前源码/权重/数据/旧结果没有写入。原始cpu_preflight/result含Python对象身份id等，仅本地保存；公开报告已剔除module_id。公开只按public_allowlist，排除runtime/cache/tmp/原生地址/凭据/完整模型数据。\n\n**DEFERRED：** 实际4root生成/恢复、真实sim几何和控制器、GL初始化/健康读回、GPU模型strict-load、40 ACT/闭环、C实际crop/collate。CPU通过不能代替这些。全部GPU工程与科学阶段当前NOT_RUN；六问不作新增根因结论。准确候选manifest SHA见CANDIDATE_SHA256SUMS.txt；等待父审与真实DeepSeek准确SHA批准和新的phase dispatch，不自批，不Git操作，不更改automation。\n'''
+  (P/'CPU_PREPARATION_REPORT.md').write_text(text)
+  (P/'EXECUTOR_STATUS.md').write_text('CPU_IMPORT_READY / CANDIDATE_RETURN_PENDING / GPU_NOT_AUTHORIZED。最终代码真实CPU覆盖通过；所有GPU构造/渲染/ACT/A/B/C均NOT_RUN，等待精确SHA双审和新RUN。\n')
+  files=[P/'run.py']+sorted((P/'kyc_grasp').glob('*.py'))

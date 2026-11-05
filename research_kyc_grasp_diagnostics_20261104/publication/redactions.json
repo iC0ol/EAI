@@ -1,0 +1,135 @@
+{
+  "purpose": "omit address-sized native identifiers; originals remain immutable locally",
+  "files": [
+    {
+      "local_original": "c-local_result.json",
+      "original_sha256": "331725831937a274b05d671d2b51ea207ed68e2005e73e4cce3094c6617b69d9",
+      "public_derivative": "publication/redacted/c-local_result.json",
+      "public_sha256": "81300475a78f55047a494bbbc82f4c5e424863a9f43083e82751fb45ce4e038d",
+      "replaced_fields_and_counts": {
+        "thread_id": 88
+      },
+      "scientific_numeric_values_changed": false
+    },
+    {
+      "local_original": "c-official_result.json",
+      "original_sha256": "114314d59dbdcf6d32c7f22d4932eda0dc95e9e357770f19af3b379d5a42c97f",
+      "public_derivative": "publication/redacted/c-official_result.json",
+      "public_sha256": "e15f80512489e03c978c8ed7e62e58ce80173354dd125b3bcd815d24cd2c7447",
+      "replaced_fields_and_counts": {
+        "thread_id": 88
+      },
+      "scientific_numeric_values_changed": false
+    },
+    {
+      "local_original": "policy_result.json",
+      "original_sha256": "0ae6ab10f9b679d31e6e8680fd1692bc7f7636ab604316f704bf346747c12140",
+      "public_derivative": "publication/redacted/policy_result.json",
+      "public_sha256": "ee1e5043ce6790695a1efabfd1c3f5ff9e55a6fdb98ef08478e7eec658a532db",
+      "replaced_fields_and_counts": {
+        "thread_id": 160
+      },
+      "scientific_numeric_values_changed": false
+    },
+    {
+      "local_original": "results/c-local/events.jsonl",
+      "original_sha256": "e9f1c82b7eeb859243b78fb652c1bb26be0d6697cf4c4c560bd6cafa4b1a62b1",
+      "public_derivative": "publication/redacted/results/c-local/events.jsonl",
+      "public_sha256": "f4a3439ac8cad9c3421769d00726a88d5a3d0f4108f7db3773f8840b7247b741",
+      "replaced_fields_and_counts": {
+        "thread_id": 162
+      },
+      "scientific_numeric_values_changed": false
+    },
+    {
+      "local_original": "results/c-local/readbacks.json",
+      "original_sha256": "89512c1a3e8dd16a7d56080fe7d322b443e1936dc721852c0bc106f447eaf07b",
+      "public_derivative": "publication/redacted/results/c-local/readbacks.json",
+      "public_sha256": "d5ea6517d9b67c83d7770b5917857d0f4372e2ac665d509f584e50ca21ccfc28",
+      "replaced_fields_and_counts": {
+        "thread_id": 88
+      },
+      "scientific_numeric_values_changed": false
+    },
+    {
+      "local_original": "results/c-official/events.jsonl",
+      "original_sha256": "97961bba996691c0b279fc40ebb4e968a6b200c464d62f2ca8e2f7bbcde11149",
+      "public_derivative": "publication/redacted/results/c-official/events.jsonl",
+      "public_sha256": "5a086a1c0fab0a6d2f6e3cdc63680e1875b64c42fb538d3d117731bb4a544ce5",
+      "replaced_fields_and_counts": {
+        "thread_id": 162
+      },
+      "scientific_numeric_values_changed": false
+    },
+    {
+      "local_original": "results/c-official/readbacks.json",
+      "original_sha256": "f42b5dc0063a356b354c3dd9ab705376c59fb3f42b0b87d2ba68485cecacf731",
+      "public_derivative": "publication/redacted/results/c-official/readbacks.json",
+      "public_sha256": "40b6ecaefdc57d9db009c3e05ebba421732cc5a2978b812939ff9703015dbd2e",
+      "replaced_fields_and_counts": {
+        "thread_id": 88
+      },
+      "scientific_numeric_values_changed": false
+    },
+    {
+      "local_original": "results/expert-a/events.jsonl",
+      "original_sha256": "9479e2033af0de8202e846d0e6a7f9bf591449c010c032a19c206189898f58f8",
+      "public_derivative": "publication/redacted/results/expert-a/events.jsonl",
+      "public_sha256": "f313f1a20297ef3d05a24f883ba6d8884a3d1684fdc0db208758d8e2105f1479",
+      "replaced_fields_and_counts": {
+        "thread_id": 180
+      },
+      "scientific_numeric_values_changed": false
+    },
+    {
+      "local_original": "results/expert-a/readbacks.json",
+      "original_sha256": "394617a8feeb9af5daf7eb4a583235a0d7ee6948d65b4c4e20f329f3b9e12686",
+      "public_derivative": "publication/redacted/results/expert-a/readbacks.json",
+      "public_sha256": "7ff4aac395bc05fb81ad29feafb8eff23573269b35586e0186262811c769d28e",
+      "replaced_fields_and_counts": {
+        "thread_id": 32
+      },
+      "scientific_numeric_values_changed": false
+    },
+    {
+      "local_original": "results/gpu-preflight/events.jsonl",
+      "original_sha256": "b8d69f67e2afc3abc889b78d50225d22de44d1ad7c8b20ac497d703218c10506",
+      "public_derivative": "publication/redacted/results/gpu-preflight/events.jsonl",
+      "public_sha256": "23393213dee6fcd11a32ba6b3c4507b4fda0e448478d2da9fe84a7439ccdc72b",
+      "replaced_fields_and_counts": {
+        "thread_id": 280
+      },
+      "scientific_numeric_values_changed": false
+    },
+    {
+      "local_original": "results/gpu-preflight/readbacks.json",
+      "original_sha256": "76e784d5f215f690fe63fe07558251faf52ef3fe61b149d8c641193d89d635c2",
+      "public_derivative": "publication/redacted/results/gpu-preflight/readbacks.json",
+      "public_sha256": "720375ede3ddd84a089ccade7b2f3bfa369da6c3c9f85435bb7fc336cda1de01",
+      "replaced_fields_and_counts": {
+        "thread_id": 8
+      },
+      "scientific_numeric_values_changed": false
+    },
+    {
+      "local_original": "results/policy-b/events.jsonl",
+      "original_sha256": "76c2fbe59761f0dd8c9d0df60f9d830eb3c1ed5647ee58fa463617ab783830b1",
+      "public_derivative": "publication/redacted/results/policy-b/events.jsonl",
+      "public_sha256": "71f1c61d16ee0828499a64b6057e69dc678f389c315a993442552e52a7795293",
+      "replaced_fields_and_counts": {
+        "thread_id": 508
+      },
+      "scientific_numeric_values_changed": false
+    },
+    {
+      "local_original": "results/policy-b/readbacks.json",
+      "original_sha256": "e7be8151ebe6ab819540515b04f357e73f4d71e9918ce74eb9e5aa07029448b0",
+      "public_derivative": "publication/redacted/results/policy-b/readbacks.json",
+      "public_sha256": "1f777e9aa93a53d7199f7d468b3a09c410eb04cf4cc00a1a060ceebcc9fac85e",
+      "replaced_fields_and_counts": {
+        "thread_id": 192
+      },
+      "scientific_numeric_values_changed": false
+    }
+  ]
+}

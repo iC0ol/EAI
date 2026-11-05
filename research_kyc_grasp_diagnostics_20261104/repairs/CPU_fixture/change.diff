@@ -1,0 +1,25 @@
+--- before/cpu_budget_checks.py
++++ after/cpu_budget_checks.py
+@@ -14,17 +14,17 @@
+         else:raise RuntimeError('budget refusal absent: '+label)
+     for kind in ['ACT','env_steps','rollouts','getitems']:
+         s=fresh();refused('preflight_'+kind,lambda s=s,kind=kind:charge(s,kind,'gpu-preflight','synthetic_CPU_only'))
+-    s=fresh();s['active_rollout']={};refused('training_optimizer',lambda:charge(s,'optimizer','policy-b','CPU'))
+-    s=fresh();s['active_rollout']={};guard=CallGuard(lambda kind,*args:charge(s,kind,'policy-b','CPU_ticket'),lambda *a:None)
++    s=fresh();s['active_rollout']={'label':'CPU_only_fixture'};refused('training_optimizer',lambda:charge(s,'optimizer','policy-b','CPU'))
++    s=fresh();s['active_rollout']={'label':'CPU_only_fixture'};guard=CallGuard(lambda kind,*args:charge(s,kind,'policy-b','CPU_ticket'),lambda *a:None)
+     for i in range(40):
+-        if i%5==0:s['active_rollout']={}
++        if i%5==0:s['active_rollout']={'label':'CPU_only_fixture'}
+         item=dict(branch='official_prior',batch=1,id=str(i));guard.expect(item);guard.policy_enter('official_prior',keys={'image','qpos','cam_extrinsics'},batch=1);guard.internal_enter(has_labels=False,batch=1);guard.complete()
+     require(s['counts']['ACT']==guard.policy_entries==guard.internal_entries==40,'matching internal call double counted')
+     refused('ACT41',lambda:charge(s,'ACT','policy-b','CPU_41'))
+-    s=fresh();s['active_rollout']={}
++    s=fresh();s['active_rollout']={'label':'CPU_only_fixture'}
+     for _ in range(150):charge(s,'env_steps','policy-b','CPU_step')
+     refused('per_rollout_step151',lambda:charge(s,'env_steps','policy-b','CPU_step151'))
+-    s=fresh();s['active_rollout']={}
++    s=fresh();s['active_rollout']={'label':'CPU_only_fixture'}
+     for _ in range(5):charge(s,'ACT','policy-b','CPU_query')
+     refused('per_rollout_query6',lambda:charge(s,'ACT','policy-b','CPU_query6'))
+     s=fresh()

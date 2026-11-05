@@ -1,0 +1,28 @@
+{
+  "state": "APPROVED",
+  "scope_id": "kyc-grasp-rootcause-c96545a9-5b4f-43b9-91f0-8f42b9343836",
+  "utc": "2026-11-04T17:34:46.909930+00:00",
+  "authorization_scope": "GPU_PREFLIGHT_ONLY; single attempt; no scientific phases yet",
+  "limits": {
+    "GPU_seconds": 90,
+    "total_GPU_seconds": 900,
+    "ACT": 0,
+    "steps": 0,
+    "rollouts": 0,
+    "getitems": 0
+  },
+  "codex": {
+    "decision": "APPROVE",
+    "manifest_sha256": "3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530",
+    "protocol_sha256": "8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8",
+    "evidence_file": "notes/08_Codex修订候选独立复审.md",
+    "evidence_sha256": "24c2e666259d54555d252e37e910461749b8825b8f33ae906705271b61c1e870"
+  },
+  "deepseek": {
+    "decision": "APPROVE",
+    "manifest_sha256": "3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530",
+    "protocol_sha256": "8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8",
+    "evidence_file": "discussion/41_delta_cross_review_response.md",
+    "evidence_sha256": "8e1a3fdf4864ce1023c562350850288ddd2f285d5cf6dedbd6f0c39c3fe6e3ae"
+  }
+}

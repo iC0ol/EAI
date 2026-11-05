@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-05T03:57:59.005926+00:00",
+  "status": "PASS",
+  "failures": [],
+  "text_files_scanned": 268,
+  "numeric_array_headers_checked": 396,
+  "native_identifier_derivative_files": 13,
+  "rules": [
+    "API_token",
+    "private_key",
+    "literal_bearer",
+    "native_hex_address",
+    "XML_content",
+    "prohibited_paths",
+    "numeric_arrays_only",
+    "entrypoint_links"
+  ],
+  "limitations": "Pattern and header checks supplement an explicit path allowlist; not a universal secrecy proof.",
+  "frozen_candidate_files_rechecked": 81,
+  "all_workers_inactive": true
+}

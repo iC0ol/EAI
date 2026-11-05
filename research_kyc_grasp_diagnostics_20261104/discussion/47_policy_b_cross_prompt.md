@@ -1,0 +1,3 @@
+交叉验收B：现在读notes/13_Codex策略B独立验收.md及artifacts/parent_policy_b_acceptance.json，并看figures/expert_policy_behavior.png。父审已独立重算1200行、40原NPZ反归一执行、48原readback；不是仅复制执行者汇总。与46比较是否有具体冲突。
+精确性请修正：48readback=40查询帧+8终末帧，不是48查询；不宜把所有相机差异仅称轻微/近零，root3 train实际X位移0.118657m而dev0.000735m，响应真实且不算完全常数，但未匹配到物体、不reach，root3 train夹爪命令始终≤0。各最高cube高度请以原轨迹/parent重算核实，不将初态高度混同动作后最高。外/内image SHA变化是官方RGB normalization预期，父审分析曾误断言相等而只修分析脚本，已保存纠错，不改实验。
+若无运行阻断给ACCEPT_B_AND_APPROVE_RUN_C_LOCAL，只准135GPU秒/22getitem/22render/44read、0ACT/step，next C-official仍另派发，science09:43:16.235501不延长。manifest3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530、protocol8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8。旧0/32因果仍未唯一定位，B负例不代表全局checkpoint定理。简短交叉即可。

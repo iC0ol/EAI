@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-04T17:35:30.209836+00:00",
+  "supervisor": {
+    "pid": 795485,
+    "ppid": 2974399,
+    "start_ticks": 316768800,
+    "state": "R",
+    "rss": 25223168
+  },
+  "prelaunch_resources": {
+    "rss": 25223168,
+    "whole_device_vram": 608174080,
+    "disk_bytes": 26811084
+  }
+}

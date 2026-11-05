@@ -1,0 +1,103 @@
+{
+  "rollouts": [
+    {
+      "id": "A_root0",
+      "phase": "expert-a",
+      "root": 0,
+      "condition": "train",
+      "steps": 105,
+      "source": "all original expert actions once; no padding or success early stop"
+    },
+    {
+      "id": "A_root1",
+      "phase": "expert-a",
+      "root": 1,
+      "condition": "train",
+      "steps": 102,
+      "source": "all original expert actions once; no padding or success early stop"
+    },
+    {
+      "id": "A_root2",
+      "phase": "expert-a",
+      "root": 2,
+      "condition": "train",
+      "steps": 126,
+      "source": "all original expert actions once; no padding or success early stop"
+    },
+    {
+      "id": "A_root3",
+      "phase": "expert-a",
+      "root": 3,
+      "condition": "train",
+      "steps": 97,
+      "source": "all original expert actions once; no padding or success early stop"
+    },
+    {
+      "id": "B_root0_train",
+      "phase": "policy-b",
+      "root": 0,
+      "condition": "train",
+      "steps": 150,
+      "queries": 5
+    },
+    {
+      "id": "B_root0_dev",
+      "phase": "policy-b",
+      "root": 0,
+      "condition": "dev",
+      "steps": 150,
+      "queries": 5
+    },
+    {
+      "id": "B_root1_dev",
+      "phase": "policy-b",
+      "root": 1,
+      "condition": "dev",
+      "steps": 150,
+      "queries": 5
+    },
+    {
+      "id": "B_root1_train",
+      "phase": "policy-b",
+      "root": 1,
+      "condition": "train",
+      "steps": 150,
+      "queries": 5
+    },
+    {
+      "id": "B_root2_train",
+      "phase": "policy-b",
+      "root": 2,
+      "condition": "train",
+      "steps": 150,
+      "queries": 5
+    },
+    {
+      "id": "B_root2_dev",
+      "phase": "policy-b",
+      "root": 2,
+      "condition": "dev",
+      "steps": 150,
+      "queries": 5
+    },
+    {
+      "id": "B_root3_dev",
+      "phase": "policy-b",
+      "root": 3,
+      "condition": "dev",
+      "steps": 150,
+      "queries": 5
+    },
+    {
+      "id": "B_root3_train",
+      "phase": "policy-b",
+      "root": 3,
+      "condition": "train",
+      "steps": 150,
+      "queries": 5
+    }
+  ],
+  "total_rollouts": 12,
+  "max_steps": 150,
+  "expert_success_required_for_B": "all4 expert rollouts complete and task-positive, restoration/control checks pass; parent gate required"
+}

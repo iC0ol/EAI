@@ -1,0 +1,35 @@
+--- before/model_runtime.py
++++ after/model_runtime.py
+@@ -3,6 +3,13 @@
+ from .ledger import reserve
+ from .call_guard import CallGuard
+ from .loader import load_actual
++
++
++def execute_denormalize(normalized,stats):
++    """Exactly official eval float32 multiply/add; never float64-driven control."""
++    import numpy as np
++    value=np.asarray(normalized,dtype=np.float32)
++    return value*np.asarray(stats['action_std'],dtype=np.float32)+np.asarray(stats['action_mean'],dtype=np.float32)
+ 
+ 
+ class ModelRuntime:
+@@ -46,12 +53,17 @@
+         torch.cuda.synchronize()
+         require(self.captured is not None and self.captured['normalized_chunk'].shape==(30,7)
+             and all(np.isfinite(v).all() for v in self.captured.values()),'malformed/nonfinite model output')
+-        raw=self.captured['normalized_chunk'].astype(float)*np.asarray(stats['action_std'],float)+np.asarray(stats['action_mean'],float)
++        require(torch.is_tensor(output) and tuple(output.shape)==(1,30,7),'prior policy returned wrong interface')
++        returned=output[0].float().cpu().numpy().copy()
++        require(np.array_equal(returned,self.captured['normalized_chunk']),'official policy return differs from captured internal action')
++        raw=execute_denormalize(returned,stats)
++        require(raw.dtype==np.float32 and np.isfinite(raw).all(),'execution actions must be finite official float32')
+         folder.mkdir(exist_ok=True,parents=True);path=folder/(item['id']+'.npz');require(not path.exists(),'prediction overwrite/retry')
+         save_npz(path,raw_chunk=raw,**self.captured,**{'internal_'+k:v for k,v in self.internal_arrays.items()})
+         record=dict(utc=utc(),**item,policy_input_keys=sorted(inputs),input_hashes=hashes,
+             internal_input_hashes=self.internal_hashes,output_npz=str(path.relative_to(P)),output_sha256=sha(path),
+             precision='FP32 weights/inputs + CUDA BF16 autocast, TF32 off',
++            raw_execution_dtype=str(raw.dtype),official_policy_return_bit_equal_internal=True,
+             prior_latent='zero z' if item['branch']!='official_posterior' else None,
+             loss={k:float(v) for k,v in output.items()} if isinstance(output,dict) else None)
+         write(folder/(item['id']+'.json'),record)

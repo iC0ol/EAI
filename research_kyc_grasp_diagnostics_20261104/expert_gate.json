@@ -1,0 +1,20 @@
+{
+  "state": "APPROVED",
+  "scope_id": "kyc-grasp-rootcause-c96545a9-5b4f-43b9-91f0-8f42b9343836",
+  "expert_result_sha256": "e1c2b9603a6b02d5237062ef1c9034c91bc8a36c350bebe2ed940fc6ebbbe970",
+  "roots_manifest_sha256": "d077f9c724f98227d1eac28e61a311d41597396ae2c223f68c6dd146f4e36e24",
+  "codex": {
+    "decision": "APPROVE",
+    "manifest_sha256": "3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530",
+    "protocol_sha256": "8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8",
+    "evidence_file": "notes/12_专家A交叉与B资格.md",
+    "evidence_sha256": "40435191d7b860905af063a172675e63be94e49726c272ec5863e476c8aba7dc"
+  },
+  "deepseek": {
+    "decision": "APPROVE",
+    "manifest_sha256": "3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530",
+    "protocol_sha256": "8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8",
+    "evidence_file": "discussion/45_expert_a_cross_response.md",
+    "evidence_sha256": "08e24ef354b927924110dd88257fcb31b9c2ac8d60e283d40afb3b4e6a6cad93"
+  }
+}

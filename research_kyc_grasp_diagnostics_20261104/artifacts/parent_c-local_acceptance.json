@@ -1,0 +1,331 @@
+{
+  "phase": "c-local",
+  "stage": {
+    "utc": "2026-11-04T22:47:26.900449+00:00",
+    "phase": "c-local",
+    "identity": {
+      "pid": 869313,
+      "ppid": 869298,
+      "start_ticks": 318637850,
+      "state": "R",
+      "rss": 262144
+    },
+    "exit_code": 0,
+    "reason": "EXITED",
+    "GPU_seconds": 28.54238737700507,
+    "cumulative_GPU_seconds": 339.8689732486382,
+    "quota": 135,
+    "started_epoch": 1793832418.357874,
+    "ended_epoch": 1793832446.90046,
+    "counts": {
+      "workers": 4,
+      "make_env": 7,
+      "resets": 23,
+      "renders": 80,
+      "readPixels": 160,
+      "ACT": 40,
+      "env_steps": 1630,
+      "rollouts": 12,
+      "getitems": 22,
+      "backward": 0,
+      "optimizer": 0
+    },
+    "phase_counts": {
+      "workers": 1,
+      "make_env": 1,
+      "resets": 1,
+      "getitems": 22,
+      "renders": 22,
+      "readPixels": 44
+    }
+  },
+  "items": [
+    {
+      "id": "val_d200_t0",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": true,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.17169417440891266,
+      "image_sha256": "4a49802fdfa8042647725cd6d73c5c8ac6aa1fc4b9637383237903042721c5a0"
+    },
+    {
+      "id": "val_d201_t0",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.16019275784492493,
+      "image_sha256": "3fac6c0fd885fa35ab04590c5e3169055acb142a062f4643f8dbb11cfa24adbc"
+    },
+    {
+      "id": "val_d202_t0",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.17506399750709534,
+      "image_sha256": "db81438303391c9b139fbbcd1e60b001115f0a392ba41e0399e22de0c6de2f10"
+    },
+    {
+      "id": "val_d203_t0",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.21928970515727997,
+      "image_sha256": "ceb50d616f2321a1d08274bf315f832b42f3eabdff0f5e9173e70c0c9bc4c583"
+    },
+    {
+      "id": "val_d204_t0",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.17682184278964996,
+      "image_sha256": "84a1f20a01b1ab68769da5c739ff496790a1a208f6d6aa9abe41f836d5f12098"
+    },
+    {
+      "id": "val_d205_t0",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.10761185735464096,
+      "image_sha256": "7b9178d1060c14de8160fb09b2e703ae8d2e517fdcdcadb892f2fcccbd08fb31"
+    },
+    {
+      "id": "val_d206_t0",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.1850406378507614,
+      "image_sha256": "f94dd95d365986fd7076c7bce833454f1d0abaf50d1faeefed7bfd5f940b20f1"
+    },
+    {
+      "id": "val_d207_t0",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.1529429703950882,
+      "image_sha256": "63081c4f0b481cb195554d8d5a6335c5b7b443199d0b8892e6f5d10e5f6812ab"
+    },
+    {
+      "id": "val_d208_t0",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.16898681223392487,
+      "image_sha256": "f9797a8b6a6f0119a16e36e9873ecee1f010c8edb4f62eaa1b5110c7e889cf39"
+    },
+    {
+      "id": "val_d209_t0",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": true,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.16331486403942108,
+      "image_sha256": "b1f7272b4dbcb1accb0d0b84816cd443613be1f4d3b3bfba4b22e7b4e638a037"
+    },
+    {
+      "id": "train_d0_t0",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": true,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.17455917596817017,
+      "image_sha256": "f14aba3f85516ae28d11d805ec6026d6f2b5c4692a5e51cc062acc10492f914f"
+    },
+    {
+      "id": "train_d0_t52",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.22721469402313232,
+      "image_sha256": "91aee528b62a8a7e54cfc654617306bf0f16ffec64ebff96d83ac0d56ad7eb4b"
+    },
+    {
+      "id": "train_d0_t0_repeat",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.17455917596817017,
+      "image_sha256": "f14aba3f85516ae28d11d805ec6026d6f2b5c4692a5e51cc062acc10492f914f"
+    },
+    {
+      "id": "train_d1_t0",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": true,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.16050417721271515,
+      "image_sha256": "27f89caa22dd268de6f816d288856e9ee191e1b644dc0b0fa2b6182ea75efbbb"
+    },
+    {
+      "id": "train_d1_t51",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.16466273367404938,
+      "image_sha256": "17d5f9045a7d2ac11e7dea1fc35c14765c3f529080d760dcd8761a81801d3492"
+    },
+    {
+      "id": "train_d1_t0_repeat",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.16050417721271515,
+      "image_sha256": "27f89caa22dd268de6f816d288856e9ee191e1b644dc0b0fa2b6182ea75efbbb"
+    },
+    {
+      "id": "train_d2_t0",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": true,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.16642159223556519,
+      "image_sha256": "c2b44292cf962fd5c9e1c861a16813ccc9014e559a5972048114a89f37378ac4"
+    },
+    {
+      "id": "train_d2_t63",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.1787491887807846,
+      "image_sha256": "23a8d8b85cf211e84b4a257857a69aad865ad50fbf90e973e568b1b992835d3c"
+    },
+    {
+      "id": "train_d2_t125",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.16598999500274658,
+      "image_sha256": "2d97c33dda4969965dc8a98e622e424783a9056ccb54cbbfb2be8e366f06f8e7"
+    },
+    {
+      "id": "train_d3_t0",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": true,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.2335483282804489,
+      "image_sha256": "58ac82b7d40f1c5d7992552b6b6ca0550d2424165ac965730fdf877f2f3fdcb8"
+    },
+    {
+      "id": "train_d3_t48",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.22509463131427765,
+      "image_sha256": "dea6e9b9fe4ffde5268fc8dbead529c2300fbed55f423612866d4760f5c54e2b"
+    },
+    {
+      "id": "train_d3_t96",
+      "all_actual_item_tensors_match_saved_collate_hashes": true,
+      "HDF5_state_actions_time_mask_exact": true,
+      "source_scene_XML_identity": "UNAVAILABLE",
+      "raw_to_crop_recomputed": false,
+      "RGB_min": 0.0,
+      "RGB_max": 1.0,
+      "RGB_std": 0.2233286201953888,
+      "image_sha256": "439b3e6757a4dbb8d84548702f8ae60a028ba39d122e809cdbd098458a361c64"
+    }
+  ],
+  "raw_array_pairs_independently_recomputed": 6,
+  "full9channel_prepost_representatives_recomputed": 1,
+  "repeat_comparisons": [
+    {
+      "id": "train_d0_t0_repeat",
+      "repeat_of": "train_d0_t0",
+      "actual_full9channel_tensors_bit_equal": true
+    },
+    {
+      "id": "train_d1_t0_repeat",
+      "repeat_of": "train_d1_t0",
+      "actual_full9channel_tensors_bit_equal": true
+    }
+  ],
+  "unique_post_images": 20,
+  "within_sampled_window_no_GL_or_tensor_fault": true,
+  "all_actual_post_crop_RGB_visually_reviewable_in_contact_sheet": true,
+  "native_target_window": "NOT_REPRODUCED",
+  "guard_executed": [
+    false,
+    false
+  ],
+  "guard_resets": [
+    0,
+    0
+  ],
+  "event_counts": {
+    "EGL_constructor_enter": 2,
+    "eglReleaseThread_enter": 4,
+    "eglReleaseThread_exit": 4,
+    "context_registered": 2,
+    "EGL_constructor_exit": 2,
+    "eglMakeCurrent_enter": 3,
+    "eglMakeCurrent_exit": 3,
+    "renderer_constructed": 2,
+    "mjr_render_before": 22,
+    "mjr_render_after": 22,
+    "mjr_readPixels_before": 44,
+    "mjr_readPixels_after": 44,
+    "natural_renderer_release_enter": 2,
+    "eglDestroyContext_enter": 2,
+    "eglDestroyContext_exit": 2,
+    "natural_renderer_release_exit": 2
+  },
+  "unpersisted_raws_verified_only_by_runtime_hash_and_health_metadata": true
+}

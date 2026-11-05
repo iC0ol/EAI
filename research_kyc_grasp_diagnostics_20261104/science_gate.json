@@ -1,0 +1,21 @@
+{
+  "state": "APPROVED",
+  "scope_id": "kyc-grasp-rootcause-c96545a9-5b4f-43b9-91f0-8f42b9343836",
+  "approved_next_phase": "expert-a",
+  "later_phases_require_separate_dispatch": true,
+  "B_requires_actual_expert_dual_acceptance": true,
+  "codex": {
+    "decision": "APPROVE",
+    "manifest_sha256": "3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530",
+    "protocol_sha256": "8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8",
+    "evidence_file": "notes/10_预检交叉与专家A放行.md",
+    "evidence_sha256": "90fd376dd82e17624e0a25c7c5caa816d5ab9924b15862c7a639083e05ebb5f5"
+  },
+  "deepseek": {
+    "decision": "APPROVE",
+    "manifest_sha256": "3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530",
+    "protocol_sha256": "8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8",
+    "evidence_file": "discussion/43_gpu_preflight_cross_response.md",
+    "evidence_sha256": "e30bbfa498ea98e4435e6cfb4dd85a8569d9bc2a3669c42886030ccf43cb4114"
+  }
+}

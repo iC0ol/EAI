@@ -1,0 +1,11 @@
+{
+  "utc": "2026-11-04T12:02:08.807948+00:00",
+  "manifest_sha256": "5323928a81b4d335827bdc779ec9ac57fae2def2b92daeba896a0be4bd59072b",
+  "protocol_sha256": "f6f2a0b1a42b7d1f729ae1118db2b0cacc79b1864d16f4672233ec9e499a6014",
+  "candidate_files": 61,
+  "source_files": 396,
+  "CPU_covered_code": 26,
+  "all_hashes_match": true,
+  "changed_files": [],
+  "no_GPU_ledger_or_dispatch": true
+}

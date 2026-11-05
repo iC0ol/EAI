@@ -1,0 +1,38 @@
+{
+  "utc": "2026-11-04T17:36:04.820492+00:00",
+  "phase": "gpu-preflight",
+  "identity": {
+    "pid": 795521,
+    "ppid": 795485,
+    "start_ticks": 316769045,
+    "state": "R",
+    "rss": 262144
+  },
+  "exit_code": 0,
+  "reason": "EXITED",
+  "GPU_seconds": 34.58120653964579,
+  "cumulative_GPU_seconds": 34.58120653964579,
+  "quota": 90,
+  "started_epoch": 1793813730.2391238,
+  "ended_epoch": 1793813764.8205032,
+  "counts": {
+    "workers": 1,
+    "make_env": 4,
+    "resets": 8,
+    "renders": 2,
+    "readPixels": 4,
+    "ACT": 0,
+    "env_steps": 0,
+    "rollouts": 0,
+    "getitems": 0,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "phase_counts": {
+    "workers": 1,
+    "make_env": 4,
+    "resets": 8,
+    "renders": 2,
+    "readPixels": 4
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "utc": "2026-11-04T22:37:23.179040+00:00",
+  "strict": true,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "checkpoint_sha256": "c904a97002571d96e3ee6b66057d09162cbdcb5e926cb6ea0b660ca1390bce13",
+  "tensors": 375,
+  "optimizer_created": false,
+  "optimizer_state_loaded": false,
+  "cached_pretrained_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec"
+}

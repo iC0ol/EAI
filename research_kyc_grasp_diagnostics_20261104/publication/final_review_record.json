@@ -1,0 +1,85 @@
+{
+  "utc": "2026-11-05T03:57:59.005926+00:00",
+  "state": "EXPERIMENTS_AND_DUAL_REVIEW_COMPLETE",
+  "decision": "STOP_CURRENT_CHECKPOINT_RECOVERY_AND_DEPENDENT_F_EXPERIMENTS",
+  "historical_0_of_32_cause": "NOT_UNIQUELY_IDENTIFIED",
+  "deepseek_final_cross": "ACCEPT_FINAL_CROSS_CONCLUSION_WITH_REPORT_CORRECTIONS",
+  "three_report_corrections_applied_by_Codex": true,
+  "claim_DeepSeek_reviewed_final_report_file_SHA": false,
+  "file_SHA256": {
+    "02_联合根因报告.md": "959747b71e86b35af8912a4e5d5c8257921c45f5dd28e29bd9295ed55bb332c9",
+    "notes/17_Codex最终独立验收与六问.md": "f261588fc97e53e2681bf0be9cd32e407fb61adca62c9e131ee746b70e6b0fd4",
+    "notes/18_最终交叉验收与报告勘误.md": "9c80d7cc7a69ee6470e42f18dfc1754ecb594d8417280b285aed711ea8ef6fc7",
+    "discussion/50_final_independent_response.md": "f18c815e15b8c293c5eed6ab26f0a9f0ae4eadd28426657eef05a47bc1df241c",
+    "discussion/51_final_cross_response.md": "dd8490694f00e5dce8299ffe9d4f643bf6355e7655fb5b169e6aefe04ee4c4d9"
+  },
+  "candidate_manifest_sha256": "3179c07a0cf77758d4dff01d57ffebcca1af0c11bc4034a0753b32610f40b530",
+  "protocol_sha256": "8773f4b7733335898d2bed5803f0d7729798896892abe6bdefd604a1f71a8ed8",
+  "GPU_seconds": 367.7125734030269,
+  "counts": {
+    "workers": 5,
+    "make_env": 8,
+    "resets": 24,
+    "renders": 102,
+    "readPixels": 204,
+    "ACT": 40,
+    "env_steps": 1630,
+    "rollouts": 12,
+    "getitems": 44,
+    "backward": 0,
+    "optimizer": 0
+  },
+  "current_process_check": [
+    {
+      "phase": "gpu-preflight",
+      "role": "identity",
+      "same_process_active": false
+    },
+    {
+      "phase": "gpu-preflight",
+      "role": "supervisor",
+      "same_process_active": false
+    },
+    {
+      "phase": "expert-a",
+      "role": "identity",
+      "same_process_active": false
+    },
+    {
+      "phase": "expert-a",
+      "role": "supervisor",
+      "same_process_active": false
+    },
+    {
+      "phase": "policy-b",
+      "role": "identity",
+      "same_process_active": false
+    },
+    {
+      "phase": "policy-b",
+      "role": "supervisor",
+      "same_process_active": false
+    },
+    {
+      "phase": "c-local",
+      "role": "identity",
+      "same_process_active": false
+    },
+    {
+      "phase": "c-local",
+      "role": "supervisor",
+      "same_process_active": false
+    },
+    {
+      "phase": "c-official",
+      "role": "identity",
+      "same_process_active": false
+    },
+    {
+      "phase": "c-official",
+      "role": "supervisor",
+      "same_process_active": false
+    }
+  ],
+  "additional_experiments_authorized": false
+}

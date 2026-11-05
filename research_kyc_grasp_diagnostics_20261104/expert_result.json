@@ -1,0 +1,578 @@
+{
+  "utc": "2026-11-04T17:45:16.356327+00:00",
+  "state": "ALL_FOUR_MATCHED_EXPERT_CONTROLS_PASS",
+  "error": null,
+  "cleanup_error": null,
+  "rollouts": [
+    {
+      "steps": 105,
+      "success": true,
+      "reach": true,
+      "grasp": true,
+      "success_interfaces_agree": true,
+      "minimum_EEF_cube_distance_m": 0.005493094673305109,
+      "initial_EEF": [
+        -0.10088472299301258,
+        -0.007695997714550143,
+        1.0161032526135052
+      ],
+      "initial_EEF_rotation": [
+        [
+          0.003977284297979539,
+          0.9922292822469836,
+          0.12435928860059273
+        ],
+        [
+          0.9999912575257934,
+          -0.003785884362133579,
+          -0.001775373643969208
+        ],
+        [
+          -0.0012907678304767412,
+          0.12436526255843719,
+          -0.9922356652465056
+        ]
+      ],
+      "initial_gripper": {
+        "by_arm": {
+          "right": {
+            "joint_names": [
+              "gripper0_right_finger_joint1",
+              "gripper0_right_finger_joint2"
+            ],
+            "qpos_indexes": [
+              7,
+              8
+            ],
+            "qpos": [
+              0.020833,
+              -0.020833
+            ],
+            "actual_named_sim_joints_verified": true
+          }
+        },
+        "qpos": [
+          0.020833,
+          -0.020833
+        ],
+        "observation_fields": {},
+        "source": "named actual sim joints, crosschecked with obs when present"
+      },
+      "initial_cube": [
+        -0.001929235955491937,
+        -0.18624459155391265,
+        0.8300929008254401
+      ],
+      "initial_step_EEF": [
+        -0.09985713473389177,
+        -0.011019590726351475,
+        1.0151684693895078
+      ],
+      "final_EEF": [
+        -0.011090423937217393,
+        -0.1834630826118734,
+        0.9494302738038433
+      ],
+      "maximum_cube_height_m": 0.9439705156360709,
+      "trajectory": "results/expert-a/A_root0_steps.jsonl",
+      "id": "A_root0",
+      "root": 0,
+      "restore": {
+        "root_id": 0,
+        "root_files": {
+          "roots/root_0/control.json": "694544053f50dd6400257ab29cc83fa6b65c7f2aae5e45a9887c6dbf3b7b6da0",
+          "roots/root_0/model.xml": "32f0ae21cd478990de55c441b359a935d364e9a42a6541b306799cf47b02963c",
+          "roots/root_0/physical_model.json": "b1c4f7286695677cb3e3b7ceedca86d7ac62b8c42cb7871238cf0e16651bb0aa",
+          "roots/root_0/rng.pt": "7baa584503b4956fa6dd2358ab76ef1f80c14970df5a7a4afdaa24e20b0df79b",
+          "roots/root_0/state.npy": "c9477dd487262f664c0b6d908fba6a54bf5381dab582e964466402c92377e97a"
+        },
+        "state_exact": true,
+        "physical_model_exact": true,
+        "controller_exact": true,
+        "T": [
+          [
+            0.8305230356726009,
+            -0.34794925432522517,
+            0.43492850404599553,
+            0.37806304720870987
+          ],
+          [
+            0.5569842791472376,
+            0.5188294926467981,
+            -0.6485248417313697,
+            -0.5706100505135695
+          ],
+          [
+            -0.0,
+            0.7808631595704755,
+            0.6247021098296485,
+            1.3818641093085926
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "expert_EEF_deviation_max_m": 0.00028595151378560743,
+      "expert_EEF_deviation_mean_m": 0.0001414979313912419,
+      "control_checks_pass": true
+    },
+    {
+      "steps": 102,
+      "success": true,
+      "reach": true,
+      "grasp": true,
+      "success_interfaces_agree": true,
+      "minimum_EEF_cube_distance_m": 0.005163061376679157,
+      "initial_EEF": [
+        -0.10970733762414367,
+        -0.007429420302760521,
+        1.0061373872496349
+      ],
+      "initial_EEF_rotation": [
+        [
+          0.012144989460083,
+          0.991997338990074,
+          0.1256733013317655
+        ],
+        [
+          0.9999262334014016,
+          -0.012028037502947586,
+          -0.0016893991569720684
+        ],
+        [
+          -0.00016427628667067817,
+          0.12568454857474703,
+          -0.9920702431092577
+        ]
+      ],
+      "initial_gripper": {
+        "by_arm": {
+          "right": {
+            "joint_names": [
+              "gripper0_right_finger_joint1",
+              "gripper0_right_finger_joint2"
+            ],
+            "qpos_indexes": [
+              7,
+              8
+            ],
+            "qpos": [
+              0.020833,
+              -0.020833
+            ],
+            "actual_named_sim_joints_verified": true
+          }
+        },
+        "qpos": [
+          0.020833,
+          -0.020833
+        ],
+        "observation_fields": {},
+        "source": "named actual sim joints, crosschecked with obs when present"
+      },
+      "initial_cube": [
+        0.06887091179047045,
+        0.05151431835286446,
+        0.8305246096451928
+      ],
+      "initial_step_EEF": [
+        -0.10771725446891392,
+        -0.005289301498097727,
+        1.0050773082871673
+      ],
+      "final_EEF": [
+        0.06037879238431043,
+        0.05244967363470617,
+        0.9492090289397719
+      ],
+      "maximum_cube_height_m": 0.9450914252274004,
+      "trajectory": "results/expert-a/A_root1_steps.jsonl",
+      "id": "A_root1",
+      "root": 1,
+      "restore": {
+        "root_id": 1,
+        "root_files": {
+          "roots/root_1/control.json": "010177cd470010a6302e5f01e6be5e055b8d0846e6fc82c4ed03d366a6f827ee",
+          "roots/root_1/model.xml": "db77d4ea6ac3be9c20fc7f0414e725df57f1da18ad9f454e6351ae2134cb8bf8",
+          "roots/root_1/physical_model.json": "f882e59b70eee53df0162d96b73e44a920a3d166d9ac5a2ba21423d6022fbd7e",
+          "roots/root_1/rng.pt": "a4d723e590c567611445a9b4bae9e24a08a7b5e10061955447e519f9012c6038",
+          "roots/root_1/state.npy": "cf5f235eab3051cea443cca28b5ca51c66aab3e6ab24395f6c1ccf5fc28e8676"
+        },
+        "state_exact": true,
+        "physical_model_exact": true,
+        "controller_exact": true,
+        "T": [
+          [
+            0.8436010458851515,
+            -0.46039539690059295,
+            0.2763572939045109,
+            0.23694428963935515
+          ],
+          [
+            0.5369704604365856,
+            0.72329870442085,
+            -0.434167834830773,
+            -0.31671377781166166
+          ],
+          [
+            -0.0,
+            0.5146601429058458,
+            0.8573942717933999,
+            1.394061126362775
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "expert_EEF_deviation_max_m": 9.476429700089748e-05,
+      "expert_EEF_deviation_mean_m": 5.154186472066799e-05,
+      "control_checks_pass": true
+    },
+    {
+      "steps": 126,
+      "success": true,
+      "reach": true,
+      "grasp": true,
+      "success_interfaces_agree": true,
+      "minimum_EEF_cube_distance_m": 0.007063775319630068,
+      "initial_EEF": [
+        -0.09715858070767297,
+        -0.004924326712075214,
+        1.0166227739331728
+      ],
+      "initial_EEF_rotation": [
+        [
+          0.0025720234608456725,
+          0.9872438958953439,
+          0.15919445565941664
+        ],
+        [
+          0.9999918682699528,
+          -0.0020447274942735918,
+          -0.003475986685981855
+        ],
+        [
+          -0.0031061373575263646,
+          0.15920210145238434,
+          -0.9872411269815792
+        ]
+      ],
+      "initial_gripper": {
+        "by_arm": {
+          "right": {
+            "joint_names": [
+              "gripper0_right_finger_joint1",
+              "gripper0_right_finger_joint2"
+            ],
+            "qpos_indexes": [
+              7,
+              8
+            ],
+            "qpos": [
+              0.020833,
+              -0.020833
+            ],
+            "actual_named_sim_joints_verified": true
+          }
+        },
+        "qpos": [
+          0.020833,
+          -0.020833
+        ],
+        "observation_fields": {},
+        "source": "named actual sim joints, crosschecked with obs when present"
+      },
+      "initial_cube": [
+        0.19632907239231268,
+        0.12200688023218093,
+        0.8313297021955252
+      ],
+      "initial_step_EEF": [
+        -0.09509400102362896,
+        -0.00603023111199166,
+        1.0159246302416816
+      ],
+      "final_EEF": [
+        0.18964852962405304,
+        0.12137229490032289,
+        0.9581683235115241
+      ],
+      "maximum_cube_height_m": 0.9476996118641741,
+      "trajectory": "results/expert-a/A_root2_steps.jsonl",
+      "id": "A_root2",
+      "root": 2,
+      "restore": {
+        "root_id": 2,
+        "root_files": {
+          "roots/root_2/control.json": "41ae3789477b2bbf4dcd10231daecbfa777161fbdb0648e309186e906007d645",
+          "roots/root_2/model.xml": "1eea81aed11c96625bcc5d4fc105845e0ff6f5b6df550dc0ed129112f740f17f",
+          "roots/root_2/physical_model.json": "c3e2d32f285fa17dd636a6608d6a068ebfea4809595acb2dc6abd24e9d536fc1",
+          "roots/root_2/rng.pt": "44d03e2f8ff0328c2edc14253f53c0b3e8459909bbb1c040bfe9ec702f977555",
+          "roots/root_2/state.npy": "ea633e64408bae8e5992e0554d12936a285c67ed81f2604dd1dae529752a0e70"
+        },
+        "state_exact": true,
+        "physical_model_exact": true,
+        "controller_exact": true,
+        "T": [
+          [
+            0.95245127091745,
+            -0.1823977595403312,
+            0.24406481483901352,
+            0.38029034076586865
+          ],
+          [
+            0.3046909524874909,
+            0.5701678256882805,
+            -0.7629364809878763,
+            -0.8056146924013895
+          ],
+          [
+            -0.0,
+            0.8010241618481717,
+            0.5986320172989696,
+            1.4458973511680573
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "expert_EEF_deviation_max_m": 0.00010113350932889828,
+      "expert_EEF_deviation_mean_m": 6.6931599366178725e-06,
+      "control_checks_pass": true
+    },
+    {
+      "steps": 97,
+      "success": true,
+      "reach": true,
+      "grasp": true,
+      "success_interfaces_agree": true,
+      "minimum_EEF_cube_distance_m": 0.0064311080920438435,
+      "initial_EEF": [
+        -0.09277550780404437,
+        -0.001312570843653496,
+        1.0156256787724134
+      ],
+      "initial_EEF_rotation": [
+        [
+          -0.03702100538936228,
+          0.9894998923253085,
+          0.139711875830797
+        ],
+        [
+          0.9992606548491393,
+          0.0381065860448939,
+          -0.005102133913249013
+        ],
+        [
+          -0.010372503575629022,
+          0.13941969440578447,
+          -0.9901790545054807
+        ]
+      ],
+      "initial_gripper": {
+        "by_arm": {
+          "right": {
+            "joint_names": [
+              "gripper0_right_finger_joint1",
+              "gripper0_right_finger_joint2"
+            ],
+            "qpos_indexes": [
+              7,
+              8
+            ],
+            "qpos": [
+              0.020833,
+              -0.020833
+            ],
+            "actual_named_sim_joints_verified": true
+          }
+        },
+        "qpos": [
+          0.020833,
+          -0.020833
+        ],
+        "observation_fields": {},
+        "source": "named actual sim joints, crosschecked with obs when present"
+      },
+      "initial_cube": [
+        0.022973081072830304,
+        -0.09921992008337793,
+        0.8301490815703232
+      ],
+      "initial_step_EEF": [
+        -0.09115340783163733,
+        -0.0007873067421750688,
+        1.0143967385271004
+      ],
+      "final_EEF": [
+        0.011767091963238501,
+        -0.09659995754850119,
+        0.9499407497278727
+      ],
+      "maximum_cube_height_m": 0.9447495724381628,
+      "trajectory": "results/expert-a/A_root3_steps.jsonl",
+      "id": "A_root3",
+      "root": 3,
+      "restore": {
+        "root_id": 3,
+        "root_files": {
+          "roots/root_3/control.json": "bbcd9587b54fb65ed8b5e7ff2e88ed90f8524e2d2af820d27e30f48d88788ccc",
+          "roots/root_3/model.xml": "200c8324de0500ed9973a6c8a5a876a664c98e89d26a13bdd73fa3b58bdbfe77",
+          "roots/root_3/physical_model.json": "54fb89bc29567629452eb8f0428efb3c7329005f0b2c59856a9e231acdd57383",
+          "roots/root_3/rng.pt": "4ced9e135714abd857c6909d296e30e4d210a5b573f7606835069dea1e598738",
+          "roots/root_3/state.npy": "b1a31e33240af06d5787840088914d64b3a743f13b4c92c1877e778584dc1226"
+        },
+        "state_exact": true,
+        "physical_model_exact": true,
+        "controller_exact": true,
+        "T": [
+          [
+            -0.8518294291850335,
+            -0.3528316340897452,
+            0.3871646439951101,
+            0.1537929242012482
+          ],
+          [
+            0.5238192661350861,
+            -0.5737711246909001,
+            0.6296031074388369,
+            0.3759208674321865
+          ],
+          [
+            0.0,
+            0.7391187553137182,
+            0.6735751372664376,
+            1.4215869330394446
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "expert_EEF_deviation_max_m": 0.000148184611302563,
+      "expert_EEF_deviation_mean_m": 6.555072666991836e-05,
+      "control_checks_pass": true
+    }
+  ],
+  "roots_manifest_sha256": "d077f9c724f98227d1eac28e61a311d41597396ae2c223f68c6dd146f4e36e24",
+  "ACT": 0,
+  "provenance": {
+    "order": [
+      "experiment_lib",
+      "common",
+      "utils",
+      "eval",
+      "models",
+      "cam_embedding",
+      "models.act",
+      "models.detr_vae"
+    ],
+    "modules": [
+      {
+        "name": "experiment_lib",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/experiment_lib.py",
+        "module_id": 139194227744400,
+        "spec_name": "experiment_lib",
+        "sys_modules_same_object": true
+      },
+      {
+        "name": "common",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/common.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/common.py",
+        "module_id": 139194227751920,
+        "spec_name": "common",
+        "sys_modules_same_object": true
+      },
+      {
+        "name": "utils",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/utils.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/utils.py",
+        "module_id": 139190877067984,
+        "spec_name": "utils",
+        "sys_modules_same_object": true
+      },
+      {
+        "name": "eval",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/eval.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/eval.py",
+        "module_id": 139190476145424,
+        "spec_name": "eval",
+        "sys_modules_same_object": true
+      },
+      {
+        "name": "models",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/__init__.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/__init__.py",
+        "module_id": 139190476659488,
+        "spec_name": "models",
+        "sys_modules_same_object": true
+      },
+      {
+        "name": "cam_embedding",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/cam_embedding.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/cam_embedding.py",
+        "module_id": 139190701293168,
+        "spec_name": "cam_embedding",
+        "sys_modules_same_object": true
+      },
+      {
+        "name": "models.act",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/act.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/act.py",
+        "module_id": 139190476661248,
+        "spec_name": "models.act",
+        "sys_modules_same_object": true
+      },
+      {
+        "name": "models.detr_vae",
+        "file": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/detr_vae.py",
+        "spec_origin": "/home/asus/EAI/research_expansion_20261029/reproduction/vendor/kyc/policy_robosuite/models/detr_vae.py",
+        "module_id": 139190476662048,
+        "spec_name": "models.detr_vae",
+        "sys_modules_same_object": true
+      }
+    ],
+    "ROOT": "/home/asus/EAI/research_expansion_20261029/reproduction",
+    "DATA": "/home/asus/EAI/research_expansion_20261029/reproduction/assets/liftrand_eef_delta.hdf5",
+    "helpers": {
+      "atomic_json": {
+        "module": "common",
+        "source": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/common.py"
+      },
+      "utc": {
+        "module": "common",
+        "source": "/home/asus/EAI/research_expansion_20261029/reproduction/scripts/common.py"
+      }
+    },
+    "harness_common": {
+      "name": "kyc_grasp.common",
+      "file": "/home/asus/EAI/research_kyc_grasp_diagnostics_20261104/kyc_grasp/common.py",
+      "spec_origin": "/home/asus/EAI/research_kyc_grasp_diagnostics_20261104/kyc_grasp/common.py",
+      "module_id": 139194280589200,
+      "spec_name": "kyc_grasp.common",
+      "sys_modules_same_object": true
+    },
+    "constructor_signatures": {
+      "ACTPolicy": "(args)",
+      "DETRVAE.forward": "(self, data)",
+      "Dataset": "(demo_indices, norm_stats, args, camera_poses_file=None, max_seq_length=None, transform='id', env=None)"
+    }
+  },
+  "not_original_demo_XML": true
+}
