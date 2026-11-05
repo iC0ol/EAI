@@ -471,6 +471,12 @@ A = {
   "Introduces LIBERO-CF, a counterfactual benchmark that assigns alternative instructions under the same scene, and Counterfactual Action Guidance: a dual-branch scheme comparing a language-conditioned policy against a language-unconditioned vision-action module at action selection. Reports +9.7% language-following accuracy and +3.6% success for pi0.5 on under-observed tasks, +15.5%/+8.5% with a VA model, and 17.2% real-world success gain. Reinforces that vision shortcuts, not missing spatial representation, drive many instruction-following failures.",
   "UNKNOWN", "UNKNOWN", "LIBERO-CF benchmark stated", "UNKNOWN", "UNKNOWN"),
 
+"2606.08881": ("PARTIAL_TEXT", "VERIFIED", ["failure_taxonomy", "benchmark"],
+  "Abstract; §1; §5 Limitations",
+  "Failure-taxonomy benchmark on low-cost hardware; execution instability dominates",
+  "Real-world SO-101 benchmark of pi0.5, SmolVLA, Wall-X and ACT across four tasks with a structured failure taxonomy, semantic vs execution-level decomposition, and recovery-aware metrics. Finds execution instability the dominant failure source and recovery capability strongly architecture-dependent. Relevant to C1 as evidence that on low-cost hardware the dominant failure mode may be execution, not spatial precision.",
+  "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
+
 }
 
 FULL = set("""2510.02268 2610.12696 2609.37292 2610.23891 2609.24124 2609.32762 2610.38104

@@ -32,7 +32,7 @@
 - **R5（12 条，132 命中，新增 78）**：多模态冲突、传感器仲裁、模态缺失、因果混淆、捷径。
 - **R6（12 条，198 命中，新增 101）**：容差、误差预算、精度需求、"何时有帮助"、阶段划分、扰动研究、oracle 差距。
 
-累计去重后进入标题级筛选的记录约 **2360** 条（R1–R6 元数据合并）。标题级筛出约 300 条相关，进一步选出 **94 篇**进入结构化登记；其中 **86 篇**获得可提取全文（PDF 或 arXiv HTML），实际完整读取 33 篇、部分读取 20 篇，其余 41 篇仅读摘要（第三轮补读后）。
+累计去重后进入标题级筛选的记录约 **2360** 条（R1–R6 元数据合并）。标题级筛出约 300 条相关，进一步选出 **95 篇**进入结构化登记；其中 **87 篇**获得可提取全文（PDF 或 arXiv HTML），实际完整读取 33 篇、部分读取 21 篇，其余 41 篇仅读摘要（第四轮补读后）。
 
 ## 查询明细
 
@@ -179,7 +179,7 @@
 
 ## 未覆盖 / 待补
 
-- 未做引文网络追踪（S2/OpenAlex 限流）；因此"未被研究"只能表述为"在本轮 6 组查询与 94 篇登记中未发现"，不能表述为不存在。
+- 未做引文网络追踪（S2/OpenAlex 限流）；因此"未被研究"只能表述为"在本轮查询与 95 篇登记中未发现"，不能表述为不存在。
 - 未检索中文文献库（CNKI/万方）与 IEEE Xplore 全文；会议终稿与 arXiv 版本的差异未逐篇比对。
 - 部分 2026 年论文仅摘要级；其方法细节与实验强度未核实，报告中不据此下强结论。
 
@@ -227,3 +227,23 @@ Semantic Scholar citations 端点在本轮**间歇可用**（前两轮均 429）
 - `2602.17659` When Vision Overrides Language：LIBERO-CF 反事实基准 + CAG 双分支动作选择，直接与 C2 竞争。
 
 工具状态：OpenAlex `filter=cites:` 仍 429（共享 IP 日预算）；S2 web `/arxiv/<id>` 404、S2 旧 citations API 404、scite 403、Crossref（arXiv DOI）404。
+
+## 第四轮（Google Scholar 通道）
+
+前几轮只用了 arXiv API。本轮确认 `scholar.google.com/scholar` 可直接抓取（HTTP 200），因此补了一个非 arXiv 的检索通道，用于找措辞不同或发表在非 arXiv  venue 的工作。
+
+查询（全部为 2026-11-05）：
+- `"failure mode composition" robot manipulation`
+- `"spatial tolerance" robot policy success`
+- `"near-miss" "no-grasp" manipulation failure taxonomy`
+- `predict "which tasks" "spatial representation" robot benefit`
+- `"representation upgrade" robot manipulation benefit`
+- `"More Structure, Not More Capacity"`（精确标题，用于确认施引数）
+
+发现：
+1. **没有**任何结果把“失败模式构成”作为预测表征收益的自变量；命中的是 Spa-Bench（基准）、More Structure（机制）与一篇 SO-101 失败/恢复基准（2606.08881，已补读登记）。
+2. “spatial tolerance robot policy success” 的命中全部是定位/导航/执行相关，无 tolerance 作为任务属性预测收益的工作。
+3. More Structure 的精确标题仅 1 条结果，页面**没有 "Cited by N"**，与 OpenAlex 的 cited_by=0 一致——其施引列表很可能本来就是空的，S2 的 429 因此不再是实质缺口。
+4. 新发现 2606.08881：低成本 SO-101 真机上“执行不稳定”是主导失败源，已写入报告的失败模式与 C1 风险。
+
+局限：Scholar 每次只返回前 10–20 条，且不做布尔完备检索；本通道用于“反向证伪”（找是否存在），不用于穷举。

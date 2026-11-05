@@ -1,13 +1,13 @@
 # Research state — spatial understanding for robot action
 
-Last updated: 2026-11-05 (Asia/Shanghai), third pass. Search cutoff 2026-11-05.
+Last updated: 2026-11-05 (Asia/Shanghai), fourth pass. Search cutoff 2026-11-05.
 
 ## Status: COMPLETE (second pass, revised conclusions)
 
 ## Pass 1 (initial delivery)
 - 130 queries, ~2,360 unique records, 88 registered at first delivery.
 ## Current totals (after pass 2)
-- 94 registered (2 more added in pass 3 from citation chasing): 33 full / 20 partial / 41 abstract-only.
+- 95 registered (2 added in pass 3, 1 in pass 4): 33 full / 21 partial / 41 abstract-only.
 - Seven candidate directions screened; five eliminated; C1 retained.
 
 ## Pass 2 (this session: re-audit and revision)
@@ -59,6 +59,18 @@ Two new papers found through the citation graph and registered:
   selection utility, not correlation. Gate 5 added; total gates now 7.
 - 2602.17659 "When Vision Overrides Language" (LIBERO-CF + CAG): further crowds C2.
 
+## Pass 4 (Google Scholar channel)
+
+- `scholar.google.com/scholar` is reachable and parseable. Ran six C1-targeted queries
+  ("failure mode composition", "spatial tolerance", "near-miss"/"no-grasp", "which tasks predict
+  representation benefit", "representation upgrade", exact-title lookup).
+- **No work found** that uses failure-mode composition to predict representation benefit.
+- Exact-title lookup for More Structure returns one result with **no "Cited by N"**, consistent with
+  OpenAlex cited_by=0. The unretrieved S2 citing list is therefore very likely empty; the 429 gap is
+  effectively closed.
+- New paper registered: 2606.08881 (SO-101 failure/recovery benchmark). Its finding that execution
+  instability dominates on low-cost hardware is now a limit on C1's headroom.
+
 ## Remaining blocker
-- Citing lists for More Structure and 2610.01626 only. Everything else in the plan is done.
-- OpenAlex filter=cites still 429 (shared IP daily budget).
+- None material. OpenAlex filter=cites and S2 for 2607.09825 still 429, but Scholar/OpenAlex both
+  indicate zero citations for that paper.

@@ -58,6 +58,7 @@
 | 2026-06-25 | [2606.26800](https://arxiv.org/abs/2606.26800) | SSI-Policy: Learning Structured Scene Interfaces for Vision-Language Robotic Manipulation | A | arXiv | — | — |
 | 2026-06-15 | [2606.16667](https://arxiv.org/abs/2606.16667) | Look Again Before You Abstain:Budgeted Conformal Evidence Acquisition for Reliable Vision-Language Model | F | arXiv | — | — |
 | 2026-06-13 | [2606.15232](https://arxiv.org/abs/2606.15232) | Rethinking Implicit Spatial Representation in Visuomotor Policy Learning | A | arXiv | — | — |
+| 2026-06-07 | [2606.08881](https://arxiv.org/abs/2606.08881) | Benchmarking Vision-Language-Action Models on SO-101: Failure and Recovery Analysis | P | arXiv | — | — |
 | 2026-06-02 | [2606.03943](https://arxiv.org/abs/2606.03943) | PointAction: 3D Points as Universal Action Representations for Robot Control | A | arXiv | — | — |
 | 2026-06-02 | [2606.03240](https://arxiv.org/abs/2606.03240) | GeoAlign: Beyond Semantics with State-Guided Spatial Alignment in VLA Models | A | arXiv | — | — |
 | 2026-06-01 | [2606.02277](https://arxiv.org/abs/2606.02277) | RoboSemanticBench: Diagnosing Semantic Grounding in Action Prediction for VLA Models | F | published | [link](https://github.com/ZGC-EmbodyAI/RoboSemanticBench) | — |
