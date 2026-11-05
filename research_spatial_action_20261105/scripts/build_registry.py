@@ -435,6 +435,30 @@ A = {
   "Abstract; §1", "Tolerance exists in planning but as a feasibility region, not a predictor of representation benefit",
   "Planner-agnostic adversarial attack for tolerance-aware manipulation: success is task-level feasibility over goal regions rather than exact-pose tracking. Confirms that 'tolerance' in robotics usually means a feasible goal set, which is a different construct from the action-tolerance-versus-representation-benefit question raised in this report.",
   "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
+"2509.18644": ("FULL_TEXT", "VERIFIED", ["modality_arbitration", "proprioception"],
+  "Abstract; experiments",
+  "Counter-evidence to 'more state input helps'",
+  "Asks whether proprioceptive states are needed in visuomotor policies. Cited as a counterweight to ActiveArena's +12/+30 pp proprioception result: the benefit is setting-dependent, not universal.",
+  "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
+
+"2603.26779": ("ABSTRACT_ONLY", "VERIFIED", ["E_representation_probe"],
+  "Abstract only",
+  "Bound on spatial imagery reasoning in frontier models",
+  "Argues frontier LLMs have limits in spatial imagery reasoning. Recorded as an adjacent capability bound; no claim in this report relies on it.",
+  "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
+
+"2604.09338": ("FULL_TEXT", "VERIFIED", ["E_reasoning_bound", "navigation"],
+  "Abstract; §5 Conclusion; Figure 10",
+  "Best evidence that classical planning beats LLM spatial reasoning on navigation",
+  "Spatial-Gym: 2D grid pathfinding with interacting constraints, step-by-step and backtracking. Best model 16.0% vs human 98.0%; vision input reduces solve rate by 73%; A* solves navigation, so constraint satisfaction is the bottleneck. Supports the report's claim that navigation/planning is not the place to look for novelty.",
+  "UNKNOWN", "UNKNOWN", "Gymnasium environment stated", "UNKNOWN", "UNKNOWN"),
+
+"2605.15836": ("ABSTRACT_ONLY", "VERIFIED", ["shortcut", "representation"],
+  "Abstract only",
+  "Name collision only: different 'GAP' from 2602.12032",
+  "Geometric Anchor Pre-training for data-efficient visuomotor learning. Registered solely to disambiguate it from the gradient-adjustment GAP in 2602.12032; not used as evidence.",
+  "https://lambdavi.github.io/gap", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
+
 }
 
 FULL = set("""2510.02268 2610.12696 2609.37292 2610.23891 2609.24124 2609.32762 2610.38104
