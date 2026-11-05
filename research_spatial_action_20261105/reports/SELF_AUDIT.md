@@ -213,3 +213,20 @@
 2. 会议终稿与 arXiv 版本的差异；
 3. 真机实验的 20–30 trials/条件是否足以支撑其结论；
 4. C1 的核心前提（同任务不同失败模式变体可构造）——只能由实验回答。
+---
+
+## 15. 发布范围核查（2026-11-05）
+
+**我的提交范围**：`7266076..HEAD` 共 28 个 commit，`git log --name-only` 显示**没有任何一个文件落在 `research_spatial_action_20261105/` 之外**。逐项 stage、未使用 `git add .` 的要求已满足。
+
+**但分支并非干净隔离**：该分支的基线 `7266076` 本身建立在一串更早的提交之上，这些提交包含其他研究目录：
+
+- `d_alignment_pilot/`、`m_direction_pilot/`、`u_consistency_pilot/`
+- `research_expansion_20261029/`、`research_kyc_diagnostics_20261029/`、`research_kyc_final_recovery_20261103/`、`research_kyc_checkpoint_diagnostics_next/`、`research_kyc_grasp_diagnostics_20261104/`、`research_selection_20261028/`
+- `spatial_intervention_pilot/`（这一项也在 main 上）
+
+`main` 当前只含 `spatial_intervention_pilot/`。因此 **这些目录随本分支一同公开**。
+
+**这不是本任务引入的**：它们存在于我第一次 push 之前的分支历史中（首次 push 为 `7266076..97096af`，远端当时已有 `7266076` 及其祖先）。按委托要求，我未做 force push、未改写他人提交、未 `amend`，也未删除这些目录。
+
+**给研究者的提示**：若这些目录本不应公开，需要在分支策略层面处理（例如从 `main` 重建一个只含本任务提交的分支），而不是在本任务内改写历史。本任务只记录了事实，未采取行动。
