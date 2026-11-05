@@ -10,7 +10,7 @@
 | 第二部分 3–5 个深度候选（统一 15 字段卡片） | 完成但**只有 1 个合格** | §2：C1、C2、C4 均为完整 15 字段卡片；C2、C4 附不合格理由 |
 | 第三部分 前两名深挖 A–F | **部分完成** | §3：仅 C1 做完整 A–F；C2 无合格资格，已在 §2 说明依据 |
 | 第四部分 统一评分与取舍 | 完成 | §4：7 个候选 × 5 维评分 + 四类归类 |
-| 第五部分 文献与资源表 | 完成 | §5：28 条核心 + `sources/papers.jsonl` 95 条；§5.1 十项资产维度覆盖表 |
+| 第五部分 文献与资源表 | 完成 | §5：28 条核心 + `sources/papers.jsonl` 98 条；§5.1 十项资产维度覆盖表 |
 | 第六部分 对现有偏好的批判（7 问） | 完成 | §6 逐问回答，含反对用户判断的部分 |
 | 第七部分 下一阶段建议与证据分级 | 完成 | §7：四类等级表、**七条门槛**（含选择效用与引文核查） |
 
@@ -18,11 +18,11 @@
 
 ## 2. 一手来源与全文覆盖
 
-- 登记 95 篇，全部经 arXiv Atom API 元数据核对（标题、作者、日期）。
-- 全文获取：**88 篇**获得可提取文本（PDF 17 篇 + arXiv 官方 HTML 渲染 71 篇）；其中实际完整读取 33 篇、部分读取 22 篇，其余 40 篇仅读摘要，3 篇未取得文本。
+- 登记 98 篇，全部经 arXiv Atom API 元数据核对（标题、作者、日期）。
+- 全文获取：**88 篇**获得可提取文本（PDF 17 篇 + arXiv 官方 HTML 渲染 71 篇）；其中实际完整读取 33 篇、部分读取 25 篇，其余 40 篇仅读摘要，3 篇未取得文本。
 - 读取层级分布（`sources/papers.jsonl`，按“实际打开过的内容”保守标注）：
   - `FULL_TEXT`：33 篇（读了方法、结果表与限制/结论）
-  - `PARTIAL_TEXT`：22 篇（摘要 + 结论或某一结果段落）
+  - `PARTIAL_TEXT`：25 篇（摘要 + 结论或某一结果段落）
   - `ABSTRACT_ONLY`：40 篇（仅摘要；多数因 HTML 429 限流，且只用于“方向密度”判断）
 - 全部关键结论所依赖的论文均为 `FULL_TEXT`，包括：KYC、Spa-Bench、RSB、A-FAR、ActiveArena、More Structure、LIBERO-RIG、2610.01626、2610.38104、2602.23408、CMA、2609.22299、GAP、ActFovea、BeTTER、ESI-Bench、ESPIRE、GP^A、SeeR-VLA、CamVLA、NISE。
 
@@ -84,7 +84,7 @@
 
 ## 9. 引用真实性
 
-- 全部 95 条 ID 均来自 arXiv API 返回结果，无手工编造。
+- 全部 98 条 ID 均来自 arXiv API 返回结果，无手工编造。
 - 抽查 8 个 ID 的 abs 页面标题，全部匹配。
 - **发现并处理了 1 处来源异常**：`2609.35039` 的 arXiv 元数据标题与同 ID PDF 标题不一致（"Do Not Cut When Uncertain…" vs "SeeReach-VLA…"），且 PDF 无结果。已标记 `PARTIALLY_VERIFIED` 并从所有主张中排除。
 - **发现并修正了 1 处自身误读**：KYC Table I 的两行表头导致我把 "Pick Place Can" 与 "Assembly Square" 的成功率对调。已在 `notes/full_text/01_kyc_camera_conditioning.md`、`notes/full_text/07_tolerance_and_error_dynamics.md` 与登记表中更正，并据此改写了 C1 的假设（从单因素改为三因素）。这一更正反而加强了报告的诚实性：朴素容差假设被 KYC 自身数据反驳。

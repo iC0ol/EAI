@@ -46,9 +46,11 @@
 | 2026-08-24 | [2608.23138](https://arxiv.org/abs/2608.23138) | Pointing-VLA: Typed Spatial Grounding Interfaces for Vision-Language-Action Manipulation | P | arXiv | — | — |
 | 2026-08-11 | [2608.13605](https://arxiv.org/abs/2608.13605) | Active Perception for Embodied Disambiguation | A | arXiv | — | — |
 | 2026-08-06 | [2608.05730](https://arxiv.org/abs/2608.05730) | SpaceVLA: Spatially Grounded VLA for Robotic Manipulation with User-Authored Grasp and Place Anchors | F | arXiv | — | — |
+| 2026-08-04 | [2608.03052](https://arxiv.org/abs/2608.03052) | How Should Vision-Language-Action Models Use Proprioceptive State? | P | arXiv | — | — |
 | 2026-08-03 | [2608.01826](https://arxiv.org/abs/2608.01826) | Multi-View Unified Camera Fields: Geometry-Shaped Action-Facing Representations for RGB-Only Multi-Camera VLA Policies | A | arXiv | — | — |
 | 2026-08-02 | [2608.01066](https://arxiv.org/abs/2608.01066) | OC-VLA++: Monocular Geometry-Guided Cross-View Consistency for Viewpoint-Robust Robotic Manipulation | A | arXiv | — | — |
 | 2026-07-31 | [2607.29169](https://arxiv.org/abs/2607.29169) | ActFovea: Runtime Safeguarding for VLA Policies via Spatiotemporal Visual-Action Consistency | F | arXiv | — | — |
+| 2026-07-20 | [2607.17454](https://arxiv.org/abs/2607.17454) | Test-Time Scaling for World Action Models via Zero-Shot Geometric Evaluation | P | arXiv | — | — |
 | 2026-07-15 | [2607.13618](https://arxiv.org/abs/2607.13618) | STOCKTAKE: Measuring the Gap Between Perception and Action in LLM Agents with a Fair Oracle | F | arXiv | — | — |
 | 2026-07-13 | [2607.11498](https://arxiv.org/abs/2607.11498) | See like a Robot: Robot-Centric Pointmaps for VLA Models | F | arXiv | Project | — |
 | 2026-07-10 | [2607.09825](https://arxiv.org/abs/2607.09825) | More Structure, Not More Capacity: Object-Centric Representations for Visuomotor Imitation Learning | F | arXiv | NO_URL_IN_PAPER | — |
@@ -58,6 +60,7 @@
 | 2026-06-25 | [2606.26800](https://arxiv.org/abs/2606.26800) | SSI-Policy: Learning Structured Scene Interfaces for Vision-Language Robotic Manipulation | A | arXiv | — | — |
 | 2026-06-15 | [2606.16667](https://arxiv.org/abs/2606.16667) | Look Again Before You Abstain:Budgeted Conformal Evidence Acquisition for Reliable Vision-Language Model | F | arXiv | — | — |
 | 2026-06-13 | [2606.15232](https://arxiv.org/abs/2606.15232) | Rethinking Implicit Spatial Representation in Visuomotor Policy Learning | A | arXiv | — | — |
+| 2026-06-11 | [2606.13877](https://arxiv.org/abs/2606.13877) | ContactWorld: What Representations Matter for Vision-Tactile Latent World Models in Contact-Rich Manipulation | P | arXiv | — | — |
 | 2026-06-07 | [2606.08881](https://arxiv.org/abs/2606.08881) | Benchmarking Vision-Language-Action Models on SO-101: Failure and Recovery Analysis | P | arXiv | — | — |
 | 2026-06-02 | [2606.03943](https://arxiv.org/abs/2606.03943) | PointAction: 3D Points as Universal Action Representations for Robot Control | A | arXiv | — | — |
 | 2026-06-02 | [2606.03240](https://arxiv.org/abs/2606.03240) | GeoAlign: Beyond Semantics with State-Guided Spatial Alignment in VLA Models | A | arXiv | — | — |

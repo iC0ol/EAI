@@ -1,0 +1,3 @@
+2608.03052 how_vla_use_proprioceptive_state
+2606.13877 contactworld_which_representations
+2607.17454 test_time_geometric_evaluation

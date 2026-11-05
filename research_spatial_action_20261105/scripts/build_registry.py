@@ -483,6 +483,24 @@ A = {
   "Replaces repeated image interpretation with a typed, evidence-aware 3D symbol layer refreshed from calibrated RGB-D and read by the language model, invoking visual reasoning only on demand. Policy synthesis: Geometric Abstraction reaches 45.2% vs 21.2% at R1 on Bridge+cylinder and 57.2% vs 17.2% on Three-cube stacking; Ring-on-peg stays 0% for pixel reasoning through R2 while geometric abstraction reaches 38.0% at R3. Online execution: Bridge-tower 28/50 vs 12/50, Tower relocation 42/50 vs 15/50. Also cuts attached images from 10.94 to 2.72 and model time by 49.4% on Ring-on-peg. Dated 2026-11-03, two days before the cutoff; read at partial depth after a competitor screen of the abstract-only set.",
   "https://geometric-abstraction.github.io", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
 
+"2608.03052": ("PARTIAL_TEXT", "VERIFIED", ["input_ablation", "methodological_precedent"],
+  "Abstract; §1 three questions; §4-5 task-family results",
+  "Closest methodological precedent to C1: does input X help, on which tasks, via which interface",
+  "Controlled study of how VLAs should use proprioceptive state: five interfaces (discrete prompt, VLM prefix, action prefix, state expert, feature modulation) under a fixed backbone, data, action representation and protocol; 45 atomic tasks in three families plus 20 composite tasks; history swept 1-96 frames. Asks explicitly whether current state improves closed-loop control and on which tasks, and finds the effect is not uniform across task families. This is the same study design C1 proposes, applied to state rather than spatial geometry, so C1's novelty is lower than a first reading suggests.",
+  "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
+
+"2606.13877": ("PARTIAL_TEXT", "VERIFIED", ["representation_study", "world_models"],
+  "Abstract; results table",
+  "Second 'which representation matters' precedent, for world models",
+  "ContactWorld benchmarks vision-tactile world models over 12 contact-rich tasks and asks which representation properties support long-horizon planning. Point-cloud observations raise average planning success from 20.7% (wrist view) and 22.0% (front view) to 32.1%; adding tactile force fields reaches 36.1%. Spatially structured and temporally continuous representations win. Relevant as further evidence that 'which representation matters' is an established empirical genre.",
+  "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
+
+"2607.17454": ("PARTIAL_TEXT", "VERIFIED", ["spatial_verification", "action_selection"],
+  "Abstract; gating results",
+  "Spatial consistency used to change the executed action",
+  "Gated GeoBoN ranks sampled action chunks by cross-view depth reprojection consistency computed with a frozen geometry model, and invokes the selector only when the initial rollout looks internally inconsistent. Fixed-budget GeoBoN improves N=8 success in every setting (RoboCasa group average 66.3%->68.4% with Cosmos Policy; 80.8%->82.5% with X-WAM); gating recovers 74.8% of the always-on gain while triggering on only 26.2% of decision points. A concrete case where a spatial consistency check changes which action is executed.",
+  "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
+
 }
 
 FULL = set("""2510.02268 2610.12696 2609.37292 2610.23891 2609.24124 2609.32762 2610.38104
