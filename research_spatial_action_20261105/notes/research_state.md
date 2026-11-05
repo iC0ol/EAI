@@ -99,12 +99,17 @@ Two systematic sweeps of the unread set rather than re-reading:
 2. **New phrasing sweep** (six queries: when-3D, depth-helps, geometry-helps,
    value-of-3D, task-dependent, which-tasks-benefit) found the decisive paper:
    **2608.03052 "How Should VLA Models Use Proprioceptive State?"** already runs
-   C1's study design (5 interfaces, fixed backbone, 45 atomic + 20 composite
-   tasks, history 1-96 frames, task-family-dependent effects) for proprioceptive
-   state. C1 is therefore a change of input, not a new design.
+   the controlled-ablation paradigm (5 interfaces, fixed backbone, 45 atomic + 20
+   composite tasks, history 1-96 frames, task-family-dependent effects) for
+   proprioceptive state. Correction after reading its mechanism section: it
+   varies interface and history depth, **not input precision** (its noise analysis
+   concerns action-generation noise). So C1 is not "a change of input" but "same
+   paradigm, different independent variable"; LIBERO-RIG separately provides the
+   precision-to-success ladder. C1's contribution is therefore the combination
+   into a cross-task prediction, not a new variable.
 
 Consequences applied: C1 importance 3 -> 2, weighted 3.35 -> **3.1**; new failure
-cause (g) "re-application of an existing design"; 2607.17454 (Gated GeoBoN) added
+cause (g) "combinational reuse of an established paradigm and ladder"; 2607.17454 (Gated GeoBoN) added
 as a direct C2 competitor; 2606.13877 (ContactWorld) registered as another
 "which representation matters" study. Registry 95 -> 99 (33 full / 25 partial /
 41 abstract-only). Every cited ID is now registered (78/78).
