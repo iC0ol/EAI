@@ -8,10 +8,10 @@
 
 ---
 
-## C1 行动容差与空间表征收益的可预测性（保留，优先级最高）
+## C1 失败模式构成与空间表征收益的可预测性（保留，置信中低）
 
-**暂定名**：How Much Spatial Precision Does the Action Need? Predicting the Action Benefit of Spatial Representation Upgrades
-（中文：行动需要多高的空间精度？——预测空间表征升级的行动收益）
+**暂定名**：Does Failure-Mode Composition Predict the Action Benefit of Spatial Representation Upgrades?
+（中文：失败模式构成能否预测空间表征升级的行动收益？）
 
 ### 最近邻学习方法
 
