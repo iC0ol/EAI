@@ -16,23 +16,23 @@
 
 2024–2026 年，"让机器人更好地理解空间"这一层**已经不再稀缺**：显式几何、机器人中心坐标、点云/点图、深度、多视角、3D 基础模型，每一条都有大量 2026 年工作，且多数以"加一个空间分支"为贡献。真正稀缺的不是空间表征，而是**关于"空间信息何时、以何种方式改变执行决策"的可证伪知识**。
 
-一个直接的量化证据：同一类"相机条件化"干预，在六个任务上的行动收益从 **+1.0 pp 到 +27.0 pp** 不等（KYC, Table I [F]，<https://arxiv.org/abs/2510.02268>）；同一类"3D 增强"，在仿真上 +6.4 pp、在真机上 +32.5 pp（SeeR-VLA [F]，<https://arxiv.org/abs/2607.11498>）；而"不完美的 3D"在某些任务上**比 2D 更差**（ESI-Bench [F]，<https://arxiv.org/abs/2605.18746>）。领域能造出有效的空间模块，却**不能预测它何时有效、有效多少**。
+一个直接的量化证据：同一类"相机条件化"干预，在六个任务上的行动收益从 **+1.0 pp 到 +27.0 pp** 不等（KYC, Table I [F]，<https://arxiv.org/abs/2510.02268>）；同一类"3D 增强"，在仿真上 +6.4 pp、在真机上 +32.5 pp（SeeR-VLA [F]，<https://arxiv.org/abs/2607.11498>）；而"不完美的 3D"在某些任务上**比 2D 更差**（ESI-Bench [F]，<https://arxiv.org/abs/2605.18746>）。领域能造出有效的空间模块，却仍缺少一个能跨任务预测"何时有效、有效多少"的关系——现有的只是单任务机制（More Structure）与单轴阈值（LIBERO-RIG）。
 
 ### 1.2 主流研究问题（按证据密度排序）
 
 | 序 | 研究问题 | 2024–2026 代表工作 | 成熟度 |
 |---|---|---|---|
 | 1 | 如何把相机/视角变化与动作解耦 | KYC [F] 2510.02268；GP^A [F] 2609.32762；SeeR-VLA [F] 2607.11498；CamVLA [F] 2607.05396；InfiNoVA、WARP-VLA、OC-VLA++ [A] | **成熟**：配方公开（稠密 token + 机器人系位置编码 + 机器人中心点图） |
-| 2 | 如何把 3D/深度/点云注入 VLA | SpatialVLA [F] 2501.15830；Bridge3D、GeomVLA、GaussVLA、3DVLA [A]；PointAction [P] 2606.03943 | **成熟但脆弱**：NISE [F] 2610.24674 证明真实深度损坏会造成"悬崖" |
+| 2 | 如何把 3D/深度/点云注入 VLA | SpatialVLA [P] 2501.15830；Bridge3D、GeomVLA、GaussVLA、3DVLA [A]；PointAction [A] 2606.03943 | **成熟但脆弱**：NISE [F] 2610.24674 证明真实深度损坏会造成"悬崖" |
 | 3 | 如何让机器人主动获取被遮挡信息 | A-FAR/BAVO [F] 2609.37292；ActiveArena [F] 2609.24124；ActiveVLA、SaPaVe、Look Before You Act、ActiveScale [F/A] | **系统成熟、机制未解**：能学会移动视角，但"看到≠用上" |
-| 4 | 如何维持跨时序的空间记忆 | ActiveArena [F]；RoboMME [F] 2603.04639；MEMOBench [F] 2609.07047；CMA [F] 2609.27247 | **评测成熟、因果未解**：CMA 显示"记忆改变动作"≠"记忆指导选择" |
+| 4 | 如何维持跨时序的空间记忆 | ActiveArena [F]；RoboMME [A] 2603.04639；MEMOBench [A] 2609.07047；CMA [F] 2609.27247 | **评测成熟、因果未解**：CMA 显示"记忆改变动作"≠"记忆指导选择" |
 | 5 | 空间推理能力是否等于行动能力 | Spa-Bench [F] 2610.12696；RSB [F] 2606.02277；ESPIRE [F] 2603.13033；ESI-Bench [F] 2605.18746 | **已证伪"等号"**：配对设计下差距 28–40 pp |
 | 6 | 空间表征的收益从何而来 | More Structure [F] 2607.09825；LIBERO-RIG [F] 2610.18843；2610.01626 [F] | **仅剩跨任务预测**：机制与单轴容差已有，预测关系没有 |
 
 ### 1.3 已经较成熟的能力
 
 1. **显式几何消除跨视角不一致**。把观测变换到基座/末端系，或直接条件化外参，可以稳定提升跨视角成功率；GP^A 明确声明"不是新架构"，只是三个已知成分的组合 [F] 2609.32762。CamVLA 更进一步，直接预测相机中心动作与手眼矩阵，做到 calibration-free [F] 2607.05396。**因此"跨视角导致空间目标不一致"作为科学问题，已基本失效。** 引文追踪给出直接佐证：KYC 一篇在 2026 年就有 **28 篇**施引工作，全部是视角/相机鲁棒性变体——VersaCamVLA、Fisheye-VLA、RayViT、AxisGuide、Cross-View Action Consistency、Selective Cross-View Consistency、Learning to Act Robustly with View-Invariant Latent Actions 等（S2 citations，2026-11-05）。这条赛道不是"仍有挑战"，而是"每周都有新变体"。
-2. **空间 affordance 的监督数据与模型**。RoboPoint、RoboSpatial、SpatialVLM 已提供公开数据与模型 [F] 2406.10721 / 2411.16537 / 2401.12168。
+2. **空间 affordance 的监督数据与模型**。RoboPoint、RoboSpatial、SpatialVLM 已提供公开数据与模型 [A] 2406.10721 / 2411.16537 / 2401.12168（三篇均为摘要级核对）。
 3. **空间 grounding 的评测**。真机配对指令（Spa-Bench）、语义目标分解（RSB）、参考系诊断（ESPIRE）、序列化感知—行动（ESI-Bench）已覆盖主要维度。
 4. **动作接口设计空间**。类型化读出、锚点、走廊、点动态、机器人中心点图，至少六种接口已有行动层结果（见 `notes/full_text/09_spatial_interfaces.md`）。
 5. **"空间表征不足"很可能只是对齐问题**。仅 4K 参数的 Feature Token Modulation 就把 LIBERO 跨视角成功率从 48.5% 提到 87.1%，4.7M 参数版本达 90.8%，超过 π0.5 LoRA（467M）[P] <https://arxiv.org/abs/2512.02902>。这削弱了所有"必须换更强空间表征"的叙事。

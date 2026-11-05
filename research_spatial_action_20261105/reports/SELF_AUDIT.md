@@ -116,7 +116,7 @@
 - `sources/papers.jsonl` 增加 OpenAlex 出版记录（11 篇为会议论文，其余为 arXiv 预印本），不再写 UNKNOWN。
 
 ### 11.3 仍未解决
-- **引文列表部分可得**：第三轮 Semantic Scholar citations 端点间歇可用，成功取到 KYC（28 篇施引）、2512.02902（17 篇）、LIBERO-RIG（1 篇）、CMA（1 篇）、RSB（1 篇）；**More Structure 与 2610.01626 持续 429，未取到**。OpenAlex `filter=cites:` 仍 429。S2 网页 `/arxiv/<id>`、S2 citations API、scite、Crossref 四个替代入口均失败（404/404/403/404）。
+- **引文列表部分可得**：第三轮 Semantic Scholar citations 端点间歇可用，成功取到 KYC（28 篇施引）、2512.02902（17 篇）、LIBERO-RIG（1 篇）、CMA（1 篇）、RSB（1 篇）；**More Structure 持续 429；2610.01626 取到 0 篇施引**。OpenAlex `filter=cites:` 仍 429。S2 网页 `/arxiv/<id>`、S2 citations API、scite、Crossref 四个替代入口均失败（404/404/403/404）。
 - 上述修订使报告结论更保守，但没有改变“五个方向被淘汰”的判断。
 
 
@@ -139,4 +139,4 @@
 - “五年方向被淘汰”的判断未被推翻，反而获得引文级佐证。
 
 ### 12.3 仍未解决
-- More Structure 与 2610.01626 的施引列表未取到（持续 429）。理论上仍可能有一篇未检索到的论文做过 C1，但可能性因前五个种子的结果而下降。
+- 2610.01626 取到 **0 篇施引**；More Structure 的施引列表经四次重试（30–60s 间隔）与 S2 batch POST 仍为 429，**未取到**。理论上仍可能有一篇未检索到的论文做过 C1，但可能性因其余种子的结果而下降。
