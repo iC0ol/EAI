@@ -1,0 +1,25 @@
+{
+  "status": "COMPLETE",
+  "report_path": "reports/FINAL_REPORT.md",
+  "search_cutoff": "2026-11-05",
+  "self_audit": {
+    "seven_report_parts": true,
+    "primary_sources_checked": true,
+    "key_full_texts_read_or_access_limits_disclosed": true,
+    "direct_competitors_and_classical_counterexamples": true,
+    "action_metrics_and_confounds": true,
+    "asset_and_resource_audit": true,
+    "short_paper_and_thesis_continuity": true,
+    "unknowns_and_negative_findings_disclosed": true,
+    "no_experiments_performed": true
+  },
+  "remaining_uncertainties": [
+    "No citation chasing was possible (Semantic Scholar and OpenAlex returned HTTP 429), so 'no paper found' cannot be read as 'no paper exists' for the surviving candidate.",
+    "The surviving candidate C1 depends on an unverified premise: that task pairs with equal difficulty but different spatial tolerance can be constructed. No pilot evidence exists.",
+    "43 of 88 registered papers were read at abstract level only (arXiv HTML rate limits); they may contain direct competitors that would change the crowding judgement.",
+    "Conference-versus-arXiv version differences were not compared, and venue status could not be verified for most 2026 preprints.",
+    "Real-robot evidence throughout the field is based on 20-30 trials per condition, which limits the statistical strength of any action-level claim, including future ones.",
+    "Whether a measurement/prediction contribution is acceptable as the master's small paper is a taste/advisor judgement that literature research cannot settle."
+  ],
+  "conclusion": "Across 130 queries and 88 registered papers, five of seven screened directions (cross-view consistency, 3D representation upgrades, active re-observation, spatial-interface design, phase-localised grounding diagnosis) fail the hard vetoes because multiple 2024-2026 papers already solve them or the increment can be obtained by a simple modification. Only one candidate survives: C1, whether task action tolerance plus baseline shortcut reliance and effective spatial-error reduction can predict the action benefit of a spatial representation upgrade. It survives as a measurement-and-prediction question, not as a new module, and it is conditional on constructing same-difficulty/different-tolerance task pairs and on first establishing a reliable baseline. The report therefore recommends no experiment until four explicit gates are met."
+}

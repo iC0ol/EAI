@@ -1,0 +1,45 @@
+[
+ {"label":"A_view_invariance","q":"all:\"view-invariant\" AND all:manipulation","n":40},
+ {"label":"A_camera_pose","q":"abs:\"camera pose\" AND abs:policy AND abs:robot","n":40},
+ {"label":"A_camera_cond","q":"abs:\"camera-conditioned\" OR abs:\"camera conditioning\"","n":30},
+ {"label":"A_coordinate_frame","q":"abs:\"coordinate frame\" AND abs:manipulation AND abs:learning","n":40},
+ {"label":"A_cross_view","q":"abs:\"cross-view\" AND abs:manipulation","n":40},
+ {"label":"A_frame_reference","q":"abs:\"frame of reference\" AND abs:robot","n":30},
+ {"label":"A_6dof_generalization","q":"abs:\"6-DoF\" AND abs:\"generalization\" AND abs:manipulation","n":30},
+
+ {"label":"B_affordance_vla","q":"abs:affordance AND abs:\"vision-language-action\"","n":40},
+ {"label":"B_3d_vla","q":"abs:\"3D\" AND abs:\"vision-language-action\" AND abs:manipulation","n":40},
+ {"label":"B_pointcloud_policy","q":"abs:\"point cloud\" AND abs:manipulation AND abs:policy","n":40},
+ {"label":"B_reachability","q":"abs:reachability AND abs:manipulation AND abs:learning","n":30},
+ {"label":"B_spatial_rep","q":"abs:\"spatial representation\" AND abs:robot","n":40},
+ {"label":"B_grasp_vlm","q":"abs:\"grasp\" AND abs:\"vision-language model\" AND abs:manipulation","n":40},
+
+ {"label":"C_spatial_memory","q":"abs:\"spatial memory\" AND abs:manipulation","n":40},
+ {"label":"C_object_permanence","q":"abs:\"object permanence\" AND abs:robot","n":30},
+ {"label":"C_occlusion","q":"abs:occlusion AND abs:\"manipulation\" AND abs:policy","n":40},
+ {"label":"C_belief_state","q":"abs:\"belief state\" AND abs:manipulation","n":30},
+ {"label":"C_dynamic_manip","q":"abs:\"dynamic scene\" AND abs:manipulation AND abs:policy","n":40},
+ {"label":"C_vla_memory","q":"abs:memory AND abs:\"vision-language-action\"","n":40},
+
+ {"label":"D_active_perception","q":"abs:\"active perception\" AND abs:manipulation","n":40},
+ {"label":"D_nbv","q":"abs:\"next-best-view\" AND abs:manipulation","n":30},
+ {"label":"D_info_gain","q":"abs:\"information gain\" AND abs:manipulation AND abs:robot","n":30},
+ {"label":"D_active_vla","q":"abs:\"active\" AND abs:\"vision-language-action\" AND abs:manipulation","n":40},
+ {"label":"D_active_vision","q":"abs:\"active vision\" AND abs:\"manipulation\"","n":40},
+
+ {"label":"E_spatial_bench","q":"abs:\"spatial reasoning\" AND abs:benchmark AND abs:\"vision-language\"","n":50},
+ {"label":"E_spatial_intelligence","q":"abs:\"spatial intelligence\" AND abs:robot","n":40},
+ {"label":"E_vlm_spatial_fail","q":"abs:\"spatial\" AND abs:\"vision-language models\" AND abs:\"fail\"","n":40},
+ {"label":"E_spatial_action","q":"abs:\"spatial reasoning\" AND abs:\"robot\" AND abs:\"action\"","n":50},
+ {"label":"E_grounding_action","q":"abs:\"spatial grounding\" AND abs:manipulation","n":40},
+ {"label":"E_vsi","q":"abs:\"spatial\" AND abs:\"video\" AND abs:benchmark AND abs:reasoning AND abs:robot","n":40},
+
+ {"label":"F_world_model","q":"abs:\"world model\" AND abs:manipulation AND abs:action","n":40},
+ {"label":"F_spatial_vla","q":"abs:\"spatial\" AND abs:\"vision-language-action\"","n":50},
+ {"label":"F_depth_vla","q":"abs:depth AND abs:\"vision-language-action\"","n":30},
+ {"label":"F_3dfm","q":"abs:\"3D foundation model\" AND abs:robot","n":30},
+ {"label":"F_scene_graph","q":"abs:\"scene graph\" AND abs:manipulation AND abs:policy","n":30},
+ {"label":"F_spatial_prompt","q":"abs:\"spatial prompting\" OR abs:\"spatial prompting\"","n":20},
+ {"label":"F_gaussian_splat","q":"abs:\"Gaussian splatting\" AND abs:manipulation AND abs:robot","n":30},
+ {"label":"F_imitation_spatial","q":"abs:\"imitation learning\" AND abs:\"spatial\" AND abs:manipulation","n":40}
+]

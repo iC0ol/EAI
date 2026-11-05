@@ -1,0 +1,15 @@
+2609.27247 memory_changes_action_audit
+2604.18000 illusion_embodied_reasoning_vla
+2609.28955 actgaze_counterfactual_visual
+2606.16667 look_again_before_abstain
+2605.20544 yes_man_abstention
+2607.13618 stocktake_perception_action_gap
+2605.18746 esi_bench_perception_action_loop
+2609.30833 planning_execution_gap_hierarchical
+2609.22299 when_test_time_physical_diagnosis
+2610.13516 rescue_runtime_monitor_counterfactual
+2602.04243 viewpoint_matters_mae
+2511.17001 unify_actions_camera_frame
+2506.06196 spatially_grounded_midlevel
+2611.03937 flowbench_counterfactual_imagination
+2608.13605 active_perception_disambiguation

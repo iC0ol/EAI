@@ -1,0 +1,20 @@
+[
+ {"label":"J_extrinsic_error","q":"abs:\"extrinsic\" AND abs:\"error\" AND abs:\"manipulation\"","n":30},
+ {"label":"J_calibration_drift","q":"abs:\"calibration drift\" OR abs:\"calibration error\" AND abs:\"policy\"","n":25},
+ {"label":"J_systematic_vs_random","q":"abs:\"systematic\" AND abs:\"random\" AND abs:\"error\" AND abs:\"policy\"","n":20},
+ {"label":"J_sensor_bias","q":"abs:\"bias\" AND abs:\"camera\" AND abs:\"manipulation\" AND abs:\"learning\"","n":25},
+ {"label":"J_pose_noise","q":"abs:\"pose noise\" AND abs:\"policy\"","n":20},
+ {"label":"J_robust_calibration","q":"abs:\"calibration-free\" AND abs:\"manipulation\"","n":20},
+ {"label":"J_spatial_distractor","q":"abs:\"distractor\" AND abs:\"spatial\" AND abs:\"robot\"","n":25},
+ {"label":"J_irrelevant_spatial","q":"abs:\"task-irrelevant\" AND abs:\"spatial\"","n":20},
+ {"label":"J_minimal_info","q":"abs:\"minimal\" AND abs:\"sufficient\" AND abs:\"state\" AND abs:\"robot\"","n":20},
+ {"label":"J_information_bottleneck","q":"abs:\"information bottleneck\" AND abs:\"manipulation\"","n":20},
+ {"label":"J_when_3d_helps","q":"abs:\"3D\" AND abs:\"helps\" AND abs:\"policy\" AND abs:\"manipulation\"","n":25},
+ {"label":"J_depth_value","q":"abs:\"depth\" AND abs:\"benefit\" AND abs:\"policy\"","n":20},
+ {"label":"J_negative_result","q":"abs:\"negative result\" AND abs:\"robot\"","n":20},
+ {"label":"J_ablation_spatial","q":"abs:\"ablation\" AND abs:\"spatial\" AND abs:\"policy\" AND abs:\"manipulation\"","n":25},
+ {"label":"J_geometry_vs_semantics","q":"abs:\"geometry\" AND abs:\"semantics\" AND abs:\"policy\" AND abs:\"manipulation\"","n":25},
+ {"label":"J_error_propagation","q":"abs:\"error propagation\" AND abs:\"manipulation\"","n":20},
+ {"label":"J_sensitivity_analysis","q":"abs:\"sensitivity\" AND abs:\"action\" AND abs:\"perturbation\" AND abs:\"policy\"","n":25},
+ {"label":"J_representation_necessity","q":"abs:\"representation\" AND abs:\"necessary\" AND abs:\"robot\" AND abs:\"action\"","n":20}
+]

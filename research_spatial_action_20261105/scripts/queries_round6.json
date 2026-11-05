@@ -1,0 +1,14 @@
+[
+ {"label":"L_tolerance","q":"abs:\"tolerance\" AND abs:\"pose\" AND abs:\"manipulation\"","n":25},
+ {"label":"L_error_budget","q":"abs:\"error budget\" AND abs:\"robot\"","n":20},
+ {"label":"L_precision_requirement","q":"abs:\"precision requirement\" AND abs:\"manipulation\"","n":20},
+ {"label":"L_when_does_help","q":"abs:\"when does\" AND abs:\"help\" AND abs:\"robot\" AND abs:\"representation\"","n":25},
+ {"label":"L_benefit_predict","q":"abs:\"predict\" AND abs:\"benefit\" AND abs:\"robot\" AND abs:\"policy\"","n":25},
+ {"label":"L_task_demand","q":"abs:\"task\" AND abs:\"demand\" AND abs:\"spatial\" AND abs:\"robot\"","n":25},
+ {"label":"L_sensitivity_task","q":"abs:\"sensitivity\" AND abs:\"task\" AND abs:\"spatial\" AND abs:\"manipulation\"","n":25},
+ {"label":"L_heterogeneous","q":"abs:\"heterogeneous\" AND abs:\"benefit\" AND abs:\"robot\"","n":20},
+ {"label":"L_phase","q":"abs:\"phase\" AND abs:\"spatial\" AND abs:\"policy\" AND abs:\"manipulation\"","n":25},
+ {"label":"L_perturbation_study","q":"abs:\"perturbation\" AND abs:\"study\" AND abs:\"manipulation\" AND abs:\"policy\"","n":25},
+ {"label":"L_oracle_gap","q":"abs:\"oracle\" AND abs:\"gap\" AND abs:\"policy\" AND abs:\"manipulation\"","n":20},
+ {"label":"L_representation_choice","q":"abs:\"which representation\" OR abs:\"representation choice\" AND abs:\"robot\"","n":20}
+]

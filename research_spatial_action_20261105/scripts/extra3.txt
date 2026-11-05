@@ -1,0 +1,6 @@
+2602.12032 vision_proprio_fail
+2609.16815 visual_embodiment_dependence
+2607.29169 actfovea_safeguard
+2605.18045 confidence_gated_autonomy
+2609.30833 fast_plans_faithful_actions
+2609.12641 breaking_vision_action_shortcut

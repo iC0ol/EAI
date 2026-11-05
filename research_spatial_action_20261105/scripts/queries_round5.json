@@ -1,0 +1,14 @@
+[
+ {"label":"K_conflict","q":"abs:\"conflict\" AND abs:\"modalities\" AND abs:\"policy\" AND abs:\"robot\"","n":25},
+ {"label":"K_arbitration","q":"abs:\"arbitration\" AND abs:\"sensor\" AND abs:\"robot\"","n":25},
+ {"label":"K_trust_sensor","q":"abs:\"trust\" AND abs:\"sensor\" AND abs:\"manipulation\"","n":20},
+ {"label":"K_proprio_vision_conflict","q":"abs:\"proprioception\" AND abs:\"vision\" AND abs:\"conflict\"","n":20},
+ {"label":"K_reliability_weight","q":"abs:\"reliability\" AND abs:\"fusion\" AND abs:\"manipulation\"","n":25},
+ {"label":"K_modality_dropout","q":"abs:\"modality dropout\" AND abs:\"robot\"","n":20},
+ {"label":"K_sensor_failure","q":"abs:\"sensor failure\" AND abs:\"policy\" AND abs:\"manipulation\"","n":25},
+ {"label":"K_which_modality","q":"abs:\"which modality\" AND abs:\"robot\"","n":20},
+ {"label":"K_visual_proprio","q":"abs:\"visual\" AND abs:\"proprioceptive\" AND abs:\"policy\" AND abs:\"manipulation\"","n":25},
+ {"label":"K_state_estimation_policy","q":"abs:\"state estimation\" AND abs:\"end-to-end\" AND abs:\"manipulation\"","n":25},
+ {"label":"K_causal_confusion","q":"abs:\"causal confusion\" AND abs:\"imitation\"","n":25},
+ {"label":"K_shortcut","q":"abs:\"shortcut\" AND abs:\"visuomotor\"","n":25}
+]
