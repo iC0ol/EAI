@@ -377,7 +377,7 @@ robosuite、ManiSkill、LIBERO（MIT）、LIBERO-Plus、ACT/Diffusion Policy 官
 | 5 | [ActiveArena 2609.24124](https://arxiv.org/abs/2609.24124) | 2026 / preprint | F | 项目页声明 | UNKNOWN | 声明开源 | 声明开源 | UNKNOWN | PARTIAL |
 | 6 | [More Structure 2607.09825](https://arxiv.org/abs/2607.09825) | 2026 / preprint | F | NO_URL_IN_PAPER | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
 | 7 | [LIBERO-RIG 2610.18843](https://arxiv.org/abs/2610.18843) | 2026 / preprint | F | NO_URL_IN_PAPER（正文称已发布，无 URL） | UNKNOWN | manifests 声明 | 声明 | UNKNOWN | PARTIAL |
-| 8 | [2610.01626](https://arxiv.org/abs/2610.01626) | 2026 / preprint | F | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
+| 8 | [2610.01626](https://arxiv.org/abs/2610.01626) | 2026 / preprint | F | NO_URL_IN_PAPER | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
 | 9 | [2610.38104](https://arxiv.org/abs/2610.38104) | 2026 / preprint | F | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
 | 10 | [2602.23408](https://arxiv.org/abs/2602.23408) | 2026 / preprint | F | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
 | 11 | [CMA 2609.27247](https://arxiv.org/abs/2609.27247) | 2026 / preprint | F | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | UNKNOWN | PARTIAL |
