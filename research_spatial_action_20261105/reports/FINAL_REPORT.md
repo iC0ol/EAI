@@ -224,7 +224,7 @@ robosuite、ManiSkill、LIBERO（MIT）、LIBERO-Plus、ACT/Diffusion Policy 官
 
 **直接竞争**
 - More Structure：已在单任务上证明"空间 grounding 只修 Near-Miss、不修 No-Grasp"，机制层面**最接近**，但没有跨任务预测 [F]。
-- LIBERO-RIG：已有 "tolerance per axis" 表与严重度曲线；但轴间不可比、且不测表征收益 [F]。
+- LIBERO-RIG：已有 "tolerance per axis" 表与严重度曲线；但轴间不可比、且不测表征收益 [F]（详见 `notes/full_text/10_libero_rig_tolerance.md`）。
 - 2610.01626：误差注入与传播率，但不涉及失败模式构成或表征收益 [F]。
 - 2512.02902：轻量对齐即可恢复跨视角，构成对"表征升级"叙事的最强反例 [P]。
 - ESI-Bench/NISE：不完美 3D 可能更差，是 H1 的竞争解释 [F]。
@@ -264,7 +264,7 @@ robosuite、ManiSkill、LIBERO（MIT）、LIBERO-Plus、ACT/Diffusion Policy 官
 
 **正面结果形态**：留出任务预测误差 < 10 pp；加入 Δε 与 s 后显著优于仅 b 的模型；**并且在"选哪些任务值得上空间升级"这一决策上产生增量价值**（top-k 选择的实际收益优于随机与按难度选择）。
 
-**必须按"决策价值"而非"相关性"评估**：2610.29646 已在 136 个语料上证明，一个可靠且与下游正确率相关的配对诊断，其 proper-log-score 增量仅 +0.059 nats（95% CI [−0.027, 0.133]），预设的 top-20% 选择增益也不成立 [P] <https://arxiv.org/abs/2610.29646>。C1 若只报告"b 与 Δsuccess 相关"，会重复这个失败模式；必须把效用定义为"帮研究者少做错一次表征投资"。
+**必须按"决策价值"而非"相关性"评估**（详见 `notes/full_text/11_decision_value_and_citations.md`）：2610.29646 已在 136 个语料上证明，一个可靠且与下游正确率相关的配对诊断，其 proper-log-score 增量仅 +0.059 nats（95% CI [−0.027, 0.133]），预设的 top-20% 选择增益也不成立 [P] <https://arxiv.org/abs/2610.29646>。C1 若只报告"b 与 Δsuccess 相关"，会重复这个失败模式；必须把效用定义为"帮研究者少做错一次表征投资"。
 
 **负面结果的早期识别**：3 个任务上 b 与 Δsuccess 的 Spearman |ρ| < 0.3，或加入 Δε 后仍 < 0.5，即停止。
 

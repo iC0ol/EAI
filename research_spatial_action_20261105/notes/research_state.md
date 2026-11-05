@@ -1,8 +1,8 @@
 # Research state — spatial understanding for robot action
 
-Last updated: 2026-11-05 (Asia/Shanghai), fourth pass. Search cutoff 2026-11-05.
+Last updated: 2026-11-05 (Asia/Shanghai), fifth pass. Search cutoff 2026-11-05.
 
-## Status: COMPLETE (fourth pass, revised conclusions; pushed at 5255a74)
+## Status: COMPLETE (fifth pass; pushed to codex/spatial-action-survey-20261105 — see git log for HEAD)
 
 ## Pass 1 (initial delivery)
 - 130 queries, ~2,360 unique records, 88 registered at first delivery.
