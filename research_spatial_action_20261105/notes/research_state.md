@@ -51,7 +51,7 @@ Semantic Scholar citations endpoint became intermittently available; retrieved c
   that category A is saturated.
 - 2512.02902: 17 citing (alignment/adaptation).
 - LIBERO-RIG: 1 citing. CMA: 1 citing. RSB: 1 citing.
-- More Structure 2607.09825 and 2610.01626: persistent 429, **citing lists still missing**.
+- More Structure 2607.09825: persistent 429, citing list still missing; 2610.01626 retrieved with 0 citing works.
 
 Two new papers found through the citation graph and registered:
 - 2610.29646 "From Association to Decision Value": a reliable, correlated paired diagnostic yields only +0.059 nats
