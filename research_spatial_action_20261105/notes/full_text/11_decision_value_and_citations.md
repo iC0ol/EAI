@@ -22,7 +22,7 @@
 
 | 种子 | 施引数 | 性质 |
 |---|---:|---|
-| 2510.02268 KYC | 28 | 全部为视角/相机鲁棒性变体（VersaCamVLA、Fisheye-VLA、RayViT、AxisGuide、Cross-View Action Consistency、Selective Cross-View Consistency、OC-VLA++、SeeR-VLA、CamVLA、GP^A 等） |
+| 2510.02268 KYC | 28 | 约 24/28 为视角/相机鲁棒性变体，其余 4 篇为手眼标定、动作空间 grounding、分布偏移等（VersaCamVLA、Fisheye-VLA、RayViT、AxisGuide、Cross-View Action Consistency、Selective Cross-View Consistency、OC-VLA++、SeeR-VLA、CamVLA、GP^A 等） |
 | 2512.02902 | 17 | 对齐/轻量适配类 |
 | 2610.18843 LIBERO-RIG | 1 | SEAR（自演化 agentic robotics），与本问题无关 |
 | 2609.27247 CMA | 1 | Artifact-to-Capability（能力形成诊断） |

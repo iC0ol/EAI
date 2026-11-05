@@ -128,7 +128,7 @@
 第三轮用 Semantic Scholar Graph API 补做了第一、二轮都缺失的施引文献核查（读-only，无密钥）。
 
 ### 12.1 结果
-- **KYC 2510.02268**：28 篇施引（2025–2026），全部是视角/相机鲁棒性工作，包括 VersaCamVLA、Fisheye-VLA、RayViT、AxisGuide、Cross-View Action Consistency、Selective Cross-View Consistency、Learning to Act Robustly with View-Invariant Latent Actions、OC-VLA++、SeeR-VLA、CamVLA、GP^A 等。**没有一篇研究“哪种任务会从空间升级中受益”**。这直接佐证 A 类饱和。
+- **KYC 2510.02268**：28 篇施引（2025–2026），其中约 24 篇是视角/相机鲁棒性工作，包括 VersaCamVLA、Fisheye-VLA、RayViT、AxisGuide、Cross-View Action Consistency、Selective Cross-View Consistency、Learning to Act Robustly with View-Invariant Latent Actions、OC-VLA++、SeeR-VLA、CamVLA、GP^A 等。**没有一篇研究“哪种任务会从空间升级中受益”**。这直接佐证 A 类饱和。
 - **LIBERO-RIG 2610.18843**：1 篇施引（SEAR），28 条参考文献中无“tolerance × intervention”研究。
 - **CMA 2609.27247 / RSB 2606.02277**：各 1 篇施引；其参考文献里出现 "When Vision Overrides Language"（2602.17659），已补读并登记。
 - **2512.02902**：17 篇施引，均为对齐/适配类。

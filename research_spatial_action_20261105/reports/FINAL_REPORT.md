@@ -31,7 +31,7 @@
 
 ### 1.3 已经较成熟的能力
 
-1. **显式几何消除跨视角不一致**。把观测变换到基座/末端系，或直接条件化外参，可以稳定提升跨视角成功率；GP^A 明确声明"不是新架构"，只是三个已知成分的组合 [F] 2609.32762。CamVLA 更进一步，直接预测相机中心动作与手眼矩阵，做到 calibration-free [F] 2607.05396。**因此"跨视角导致空间目标不一致"作为科学问题，已基本失效。** 引文追踪给出直接佐证：KYC 一篇在 2026 年就有 **28 篇**施引工作，全部是视角/相机鲁棒性变体——VersaCamVLA、Fisheye-VLA、RayViT、AxisGuide、Cross-View Action Consistency、Selective Cross-View Consistency、Learning to Act Robustly with View-Invariant Latent Actions 等（S2 citations，2026-11-05）。这条赛道不是"仍有挑战"，而是"每周都有新变体"。
+1. **显式几何消除跨视角不一致**。把观测变换到基座/末端系，或直接条件化外参，可以稳定提升跨视角成功率；GP^A 明确声明"不是新架构"，只是三个已知成分的组合 [F] 2609.32762。CamVLA 更进一步，直接预测相机中心动作与手眼矩阵，做到 calibration-free [F] 2607.05396。**因此"跨视角导致空间目标不一致"作为科学问题，已基本失效。** 引文追踪给出直接佐证：KYC 一篇在 2026 年就有 **28 篇**施引工作，其中约 **24 篇**是视角/相机鲁棒性变体（VersaCamVLA、Fisheye-VLA、RayViT、AxisGuide、Cross-View Action Consistency、Selective Cross-View Consistency、Learning to Act Robustly with View-Invariant Latent Actions 等），其余为手眼标定（AnchorHEC）、动作空间 grounding（VLMs are Native Action Models）、分布偏移（Rob-ACT）等（S2 citations，2026-11-05）。这条赛道不是"仍有挑战"，而是"每周都有新变体"。
 2. **空间 affordance 的监督数据与模型**。RoboPoint、RoboSpatial、SpatialVLM 已提供公开数据与模型 [A] 2406.10721 / 2411.16537 / 2401.12168（三篇均为摘要级核对）。
 3. **空间 grounding 的评测**。真机配对指令（Spa-Bench）、语义目标分解（RSB）、参考系诊断（ESPIRE）、序列化感知—行动（ESI-Bench）已覆盖主要维度。
 4. **动作接口设计空间**。类型化读出、锚点、走廊、点动态、机器人中心点图，至少六种接口已有行动层结果（见 `notes/full_text/09_spatial_interfaces.md`）。
