@@ -113,3 +113,44 @@ cause (g) "combinational reuse of an established paradigm and ladder"; 2607.1745
 as a direct C2 competitor; 2606.13877 (ContactWorld) registered as another
 "which representation matters" study. Registry 95 -> 99 (33 full / 25 partial /
 41 abstract-only). Every cited ID is now registered (78/78).
+
+## Pass 7 (background continuation: delivery-integrity review, 2026-11-05)
+
+Triggered by the instruction that delivery had not fully passed review. This pass did not re-run
+the survey; it audited whether the delivered artifacts are self-consistent and traceable, and
+fixed what was not.
+
+### Checks performed
+1. **All 101 arXiv IDs re-fetched** from `arxiv.org/abs/<id>` and title-matched against the
+   registry: 101/101 identical. No fabricated IDs.
+2. **Registry ↔ local files ↔ report** cross-check by script. Citations in the report are all
+   registered; 8 registry entries have no local file (all ABSTRACT_ONLY, consistent).
+3. **Round-4 raw dump screen**: found `2609.12641` (LIT) downloaded but never registered.
+4. **Citation retry**: S2 returned More Structure's citation list (empty). OpenAlex single-work
+   `cited_by_count` discovered to be non-informative (returns 0 for KYC, which has 22-28).
+5. **Counts re-derived**: 136 queries in `notes/*.queries.json`, 2,480 unique IDs in the dumps.
+
+### Material findings
+- **LIT (2609.12641)** is a direct C2 competitor (goal-change counterfactual) and, more
+  importantly, a **counterexample to sharp failure-mode specificity**: on the real robot its
+  generic interface fix raises lighting/camera/distractor success by +16.7/+16.7/+13.3. It is
+  also open code + weights + data (Apache-2.0), unlike every paper C1 would reuse.
+- **Headroom confound**: across LIT's four architectures on the same camera perturbation, gain
+  tracks (1 - baseline): +27.43 at 16.40, +22.01 at 58.29, +9.01 at 39.40, +2.39 at 82.16.
+  C1 must beat a headroom null model, not just a task-difficulty model. This is now H5, a stop
+  condition, and part of gate 5.
+- **2512.02902 is one-shot adaptation**: gate 4 now requires equal data budget for the
+  alignment control.
+- **RRDF (2610.02813)** registered abstract-only as C2's ACT-scale nearest neighbour.
+
+### Deliverable state
+- Registry 101 (34 full / 25 partial / 42 abstract). Report, executive summary, self-audit,
+  nearest-neighbour review, search log and completion JSON all updated.
+- Conclusion unchanged: C1 is the only surviving candidate, 3.1 (ceiling), conditional.
+- No experiments, no downloads of weights/data, no installs.
+
+### Remaining unknowns
+- 42 abstract-only papers could hide a competitor (crowding judgement only).
+- S2 has indexing lag for very recent papers, so "0 citing" is weak for 2026-10+ work.
+- C1's core premise (constructing same-task/different-failure-mode variants) is still untested
+  and can only be answered by an authorized experiment.

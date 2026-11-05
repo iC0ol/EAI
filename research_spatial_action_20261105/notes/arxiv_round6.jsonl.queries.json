@@ -1,0 +1,62 @@
+[
+ {
+  "query": "abs:\"tolerance\" AND abs:\"pose\" AND abs:\"manipulation\"",
+  "label": "L_tolerance",
+  "n": 25
+ },
+ {
+  "query": "abs:\"error budget\" AND abs:\"robot\"",
+  "label": "L_error_budget",
+  "n": 3
+ },
+ {
+  "query": "abs:\"precision requirement\" AND abs:\"manipulation\"",
+  "label": "L_precision_requirement",
+  "n": 20
+ },
+ {
+  "query": "abs:\"when does\" AND abs:\"help\" AND abs:\"robot\" AND abs:\"representation\"",
+  "label": "L_when_does_help",
+  "n": 0
+ },
+ {
+  "query": "abs:\"predict\" AND abs:\"benefit\" AND abs:\"robot\" AND abs:\"policy\"",
+  "label": "L_benefit_predict",
+  "n": 25
+ },
+ {
+  "query": "abs:\"task\" AND abs:\"demand\" AND abs:\"spatial\" AND abs:\"robot\"",
+  "label": "L_task_demand",
+  "n": 25
+ },
+ {
+  "query": "abs:\"sensitivity\" AND abs:\"task\" AND abs:\"spatial\" AND abs:\"manipulation\"",
+  "label": "L_sensitivity_task",
+  "n": 25
+ },
+ {
+  "query": "abs:\"heterogeneous\" AND abs:\"benefit\" AND abs:\"robot\"",
+  "label": "L_heterogeneous",
+  "n": 20
+ },
+ {
+  "query": "abs:\"phase\" AND abs:\"spatial\" AND abs:\"policy\" AND abs:\"manipulation\"",
+  "label": "L_phase",
+  "n": 21
+ },
+ {
+  "query": "abs:\"perturbation\" AND abs:\"study\" AND abs:\"manipulation\" AND abs:\"policy\"",
+  "label": "L_perturbation_study",
+  "n": 25
+ },
+ {
+  "query": "abs:\"oracle\" AND abs:\"gap\" AND abs:\"policy\" AND abs:\"manipulation\"",
+  "label": "L_oracle_gap",
+  "n": 9
+ },
+ {
+  "query": "abs:\"which representation\" OR abs:\"representation choice\" AND abs:\"robot\"",
+  "label": "L_representation_choice",
+  "n": 0
+ }
+]

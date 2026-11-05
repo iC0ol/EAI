@@ -1,0 +1,192 @@
+[
+ {
+  "query": "all:\"view-invariant\" AND all:manipulation",
+  "label": "A_view_invariance",
+  "n": 16
+ },
+ {
+  "query": "abs:\"camera pose\" AND abs:policy AND abs:robot",
+  "label": "A_camera_pose",
+  "n": 40
+ },
+ {
+  "query": "abs:\"camera-conditioned\" OR abs:\"camera conditioning\"",
+  "label": "A_camera_cond",
+  "n": 30
+ },
+ {
+  "query": "abs:\"coordinate frame\" AND abs:manipulation AND abs:learning",
+  "label": "A_coordinate_frame",
+  "n": 14
+ },
+ {
+  "query": "abs:\"cross-view\" AND abs:manipulation",
+  "label": "A_cross_view",
+  "n": 40
+ },
+ {
+  "query": "abs:\"frame of reference\" AND abs:robot",
+  "label": "A_frame_reference",
+  "n": 19
+ },
+ {
+  "query": "abs:\"6-DoF\" AND abs:\"generalization\" AND abs:manipulation",
+  "label": "A_6dof_generalization",
+  "n": 30
+ },
+ {
+  "query": "abs:affordance AND abs:\"vision-language-action\"",
+  "label": "B_affordance_vla",
+  "n": 40
+ },
+ {
+  "query": "abs:\"3D\" AND abs:\"vision-language-action\" AND abs:manipulation",
+  "label": "B_3d_vla",
+  "n": 40
+ },
+ {
+  "query": "abs:\"point cloud\" AND abs:manipulation AND abs:policy",
+  "label": "B_pointcloud_policy",
+  "n": 40
+ },
+ {
+  "query": "abs:reachability AND abs:manipulation AND abs:learning",
+  "label": "B_reachability",
+  "n": 30
+ },
+ {
+  "query": "abs:\"spatial representation\" AND abs:robot",
+  "label": "B_spatial_rep",
+  "n": 40
+ },
+ {
+  "query": "abs:\"grasp\" AND abs:\"vision-language model\" AND abs:manipulation",
+  "label": "B_grasp_vlm",
+  "n": 40
+ },
+ {
+  "query": "abs:\"spatial memory\" AND abs:manipulation",
+  "label": "C_spatial_memory",
+  "n": 23
+ },
+ {
+  "query": "abs:\"object permanence\" AND abs:robot",
+  "label": "C_object_permanence",
+  "n": 14
+ },
+ {
+  "query": "abs:occlusion AND abs:\"manipulation\" AND abs:policy",
+  "label": "C_occlusion",
+  "n": 40
+ },
+ {
+  "query": "abs:\"belief state\" AND abs:manipulation",
+  "label": "C_belief_state",
+  "n": 20
+ },
+ {
+  "query": "abs:\"dynamic scene\" AND abs:manipulation AND abs:policy",
+  "label": "C_dynamic_manip",
+  "n": 19
+ },
+ {
+  "query": "abs:memory AND abs:\"vision-language-action\"",
+  "label": "C_vla_memory",
+  "n": 40
+ },
+ {
+  "query": "abs:\"active perception\" AND abs:manipulation",
+  "label": "D_active_perception",
+  "n": 40
+ },
+ {
+  "query": "abs:\"next-best-view\" AND abs:manipulation",
+  "label": "D_nbv",
+  "n": 22
+ },
+ {
+  "query": "abs:\"information gain\" AND abs:manipulation AND abs:robot",
+  "label": "D_info_gain",
+  "n": 30
+ },
+ {
+  "query": "abs:\"active\" AND abs:\"vision-language-action\" AND abs:manipulation",
+  "label": "D_active_vla",
+  "n": 40
+ },
+ {
+  "query": "abs:\"active vision\" AND abs:\"manipulation\"",
+  "label": "D_active_vision",
+  "n": 25
+ },
+ {
+  "query": "abs:\"spatial reasoning\" AND abs:benchmark AND abs:\"vision-language\"",
+  "label": "E_spatial_bench",
+  "n": 50
+ },
+ {
+  "query": "abs:\"spatial intelligence\" AND abs:robot",
+  "label": "E_spatial_intelligence",
+  "n": 40
+ },
+ {
+  "query": "abs:\"spatial\" AND abs:\"vision-language models\" AND abs:\"fail\"",
+  "label": "E_vlm_spatial_fail",
+  "n": 40
+ },
+ {
+  "query": "abs:\"spatial reasoning\" AND abs:\"robot\" AND abs:\"action\"",
+  "label": "E_spatial_action",
+  "n": 50
+ },
+ {
+  "query": "abs:\"spatial grounding\" AND abs:manipulation",
+  "label": "E_grounding_action",
+  "n": 40
+ },
+ {
+  "query": "abs:\"spatial\" AND abs:\"video\" AND abs:benchmark AND abs:reasoning AND abs:robot",
+  "label": "E_vsi",
+  "n": 40
+ },
+ {
+  "query": "abs:\"world model\" AND abs:manipulation AND abs:action",
+  "label": "F_world_model",
+  "n": 40
+ },
+ {
+  "query": "abs:\"spatial\" AND abs:\"vision-language-action\"",
+  "label": "F_spatial_vla",
+  "n": 50
+ },
+ {
+  "query": "abs:depth AND abs:\"vision-language-action\"",
+  "label": "F_depth_vla",
+  "n": 30
+ },
+ {
+  "query": "abs:\"3D foundation model\" AND abs:robot",
+  "label": "F_3dfm",
+  "n": 30
+ },
+ {
+  "query": "abs:\"scene graph\" AND abs:manipulation AND abs:policy",
+  "label": "F_scene_graph",
+  "n": 19
+ },
+ {
+  "query": "abs:\"spatial prompting\" OR abs:\"spatial prompting\"",
+  "label": "F_spatial_prompt",
+  "n": 20
+ },
+ {
+  "query": "abs:\"Gaussian splatting\" AND abs:manipulation AND abs:robot",
+  "label": "F_gaussian_splat",
+  "n": 30
+ },
+ {
+  "query": "abs:\"imitation learning\" AND abs:\"spatial\" AND abs:manipulation",
+  "label": "F_imitation_spatial",
+  "n": 40
+ }
+]

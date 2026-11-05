@@ -1,0 +1,132 @@
+[
+ {
+  "query": "ti:\"RoboPoint\"",
+  "label": "G_roboPoint",
+  "n": 1
+ },
+ {
+  "query": "ti:\"VSI-Bench\"",
+  "label": "G_vsibench",
+  "n": 0
+ },
+ {
+  "query": "ti:\"RoboSpatial\"",
+  "label": "G_robospatial",
+  "n": 2
+ },
+ {
+  "query": "ti:\"SpatialVLM\"",
+  "label": "G_spatialvlm",
+  "n": 1
+ },
+ {
+  "query": "ti:\"spatial\" AND ti:\"referring\"",
+  "label": "G_roboreferral",
+  "n": 20
+ },
+ {
+  "query": "abs:\"action space\" AND abs:\"generalization\" AND abs:manipulation",
+  "label": "H_action_space",
+  "n": 40
+ },
+ {
+  "query": "abs:\"relative action\" OR abs:\"delta action\"",
+  "label": "H_relative_action",
+  "n": 30
+ },
+ {
+  "query": "abs:equivariant AND abs:policy AND abs:manipulation",
+  "label": "H_equivariant",
+  "n": 40
+ },
+ {
+  "query": "abs:calibration AND abs:\"manipulation\" AND abs:\"uncertainty\" AND abs:policy",
+  "label": "H_calibration",
+  "n": 16
+ },
+ {
+  "query": "abs:uncertainty AND abs:\"visuomotor\" AND abs:policy",
+  "label": "H_uncertainty_action",
+  "n": 15
+ },
+ {
+  "query": "abs:\"chain-of-thought\" AND abs:\"spatial\" AND abs:robot",
+  "label": "H_spatial_cot",
+  "n": 30
+ },
+ {
+  "query": "abs:\"vision-language\" AND abs:\"action\" AND abs:\"gap\" AND abs:robot",
+  "label": "H_vlm_action_gap",
+  "n": 30
+ },
+ {
+  "query": "abs:\"grounding\" AND abs:\"failure\" AND abs:\"manipulation\" AND abs:\"vision-language\"",
+  "label": "H_grounding_fail",
+  "n": 30
+ },
+ {
+  "query": "abs:\"monocular depth\" AND abs:\"manipulation\" AND abs:policy",
+  "label": "H_depth_est",
+  "n": 5
+ },
+ {
+  "query": "abs:\"hand-eye\" AND abs:\"calibration\" AND abs:\"policy\"",
+  "label": "H_handeye",
+  "n": 3
+ },
+ {
+  "query": "abs:affordance AND abs:\"generalization\" AND abs:\"manipulation\"",
+  "label": "H_affordance_transfer",
+  "n": 40
+ },
+ {
+  "query": "abs:\"spatial\" AND abs:\"pretraining\" AND abs:\"robot\"",
+  "label": "H_spatial_pretrain",
+  "n": 30
+ },
+ {
+  "query": "abs:\"world model\" AND abs:\"action\" AND abs:\"spatial\" AND abs:robot",
+  "label": "H_world_model_action",
+  "n": 30
+ },
+ {
+  "query": "abs:\"spatial\" AND abs:\"VLM\" AND abs:\"robot\" AND abs:\"benchmark\"",
+  "label": "H_gui_ground",
+  "n": 40
+ },
+ {
+  "query": "abs:\"failure recovery\" AND abs:\"manipulation\" AND abs:\"vision-language\"",
+  "label": "H_recovery",
+  "n": 19
+ },
+ {
+  "query": "abs:\"interactive perception\" AND abs:manipulation",
+  "label": "H_interactive_perc",
+  "n": 17
+ },
+ {
+  "query": "abs:\"occlusion\" AND abs:\"benchmark\" AND abs:\"robot\"",
+  "label": "H_occlusion_bench",
+  "n": 30
+ },
+ {
+  "query": "abs:\"camera\" AND abs:\"calibration\" AND abs:\"manipulation\" AND abs:\"learning\"",
+  "label": "H_camera_intrinsics",
+  "n": 30
+ },
+ {
+  "query": "abs:\"3D scene graph\" AND abs:\"manipulation\"",
+  "label": "H_3d_scene_graph_action",
+  "n": 20
+ },
+ {
+  "query": "abs:\"grasp pose\" AND abs:\"vision-language\"",
+  "label": "H_grasp_pose_vlm",
+  "n": 23
+ },
+ {
+  "query": "abs:\"spatial interface\" OR abs:\"action interface\" AND abs:\"robot\"",
+  "label": "H_spatial_interface",
+  "n": 30
+ }
+]

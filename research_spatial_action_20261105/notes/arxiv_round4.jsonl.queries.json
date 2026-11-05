@@ -1,0 +1,92 @@
+[
+ {
+  "query": "abs:\"extrinsic\" AND abs:\"error\" AND abs:\"manipulation\"",
+  "label": "J_extrinsic_error",
+  "n": 13
+ },
+ {
+  "query": "abs:\"calibration drift\" OR abs:\"calibration error\" AND abs:\"policy\"",
+  "label": "J_calibration_drift",
+  "n": 25
+ },
+ {
+  "query": "abs:\"systematic\" AND abs:\"random\" AND abs:\"error\" AND abs:\"policy\"",
+  "label": "J_systematic_vs_random",
+  "n": 10
+ },
+ {
+  "query": "abs:\"bias\" AND abs:\"camera\" AND abs:\"manipulation\" AND abs:\"learning\"",
+  "label": "J_sensor_bias",
+  "n": 6
+ },
+ {
+  "query": "abs:\"pose noise\" AND abs:\"policy\"",
+  "label": "J_pose_noise",
+  "n": 4
+ },
+ {
+  "query": "abs:\"calibration-free\" AND abs:\"manipulation\"",
+  "label": "J_robust_calibration",
+  "n": 6
+ },
+ {
+  "query": "abs:\"distractor\" AND abs:\"spatial\" AND abs:\"robot\"",
+  "label": "J_spatial_distractor",
+  "n": 25
+ },
+ {
+  "query": "abs:\"task-irrelevant\" AND abs:\"spatial\"",
+  "label": "J_irrelevant_spatial",
+  "n": 20
+ },
+ {
+  "query": "abs:\"minimal\" AND abs:\"sufficient\" AND abs:\"state\" AND abs:\"robot\"",
+  "label": "J_minimal_info",
+  "n": 20
+ },
+ {
+  "query": "abs:\"information bottleneck\" AND abs:\"manipulation\"",
+  "label": "J_information_bottleneck",
+  "n": 20
+ },
+ {
+  "query": "abs:\"3D\" AND abs:\"helps\" AND abs:\"policy\" AND abs:\"manipulation\"",
+  "label": "J_when_3d_helps",
+  "n": 9
+ },
+ {
+  "query": "abs:\"depth\" AND abs:\"benefit\" AND abs:\"policy\"",
+  "label": "J_depth_value",
+  "n": 20
+ },
+ {
+  "query": "abs:\"negative result\" AND abs:\"robot\"",
+  "label": "J_negative_result",
+  "n": 11
+ },
+ {
+  "query": "abs:\"ablation\" AND abs:\"spatial\" AND abs:\"policy\" AND abs:\"manipulation\"",
+  "label": "J_ablation_spatial",
+  "n": 25
+ },
+ {
+  "query": "abs:\"geometry\" AND abs:\"semantics\" AND abs:\"policy\" AND abs:\"manipulation\"",
+  "label": "J_geometry_vs_semantics",
+  "n": 25
+ },
+ {
+  "query": "abs:\"error propagation\" AND abs:\"manipulation\"",
+  "label": "J_error_propagation",
+  "n": 18
+ },
+ {
+  "query": "abs:\"sensitivity\" AND abs:\"action\" AND abs:\"perturbation\" AND abs:\"policy\"",
+  "label": "J_sensitivity_analysis",
+  "n": 25
+ },
+ {
+  "query": "abs:\"representation\" AND abs:\"necessary\" AND abs:\"robot\" AND abs:\"action\"",
+  "label": "J_representation_necessity",
+  "n": 20
+ }
+]

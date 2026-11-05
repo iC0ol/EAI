@@ -1,0 +1,1093 @@
+2026-11-04|2611.06918v1|F_depth_vla|From Pixels to Actions - Towards Native Vision-Language-Action Policies
+2026-11-03|2611.05058v1|E_spatial_action|Do Agentic Policies Need to Look at Every Step? Geometric Abstraction for Reasoning and Action
+2026-11-03|2611.04472v1|F_spatial_prompt|Beyond Token Representations: Explicit Visual Object Grounding for Video Reasoning Segmentation
+2026-11-02|2611.02930v1|A_camera_pose|PointPilot: Unified Robotic Manipulation via Object-Centric 3D Point Flow Prediction
+2026-11-02|2611.02968v1|C_occlusion|ReContact: Reconstruct and Retarget Human Contacts from Video for Contact-Rich Humanoid Manipulation
+2026-11-02|2611.02660v1|C_vla_memory|HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation
+2026-11-02|2611.03648v1|D_active_perception|Pixel: A Co-Designed Full-Stack Robot System for Learning General-Purpose Mobile Manipulation
+2026-11-02|2611.02884v1|F_3dfm|AnchorHEC: Targetless Hand-Eye Calibration of Wrist and Fixed Cameras
+2026-11-01|2611.01600v1|F_world_model|SCOUT: Planning under Occlusion via Object-Centric World Model Rollouts
+2026-10-31|2611.00658v1|A_camera_cond|SE-Mem: Semantic-Episodic Memory for Scene-Consistent Generative View Synthesis
+2026-10-31|2611.00634v1|C_vla_memory|PREM: Prediction-Regulated Memory for Robot Manipulation
+2026-10-30|2610.41688v1|C_spatial_memory|When the Past Shapes Action: Understanding Embodied Memory
+2026-10-30|2611.00177v2|C_occlusion|AuroraWorld: Structured 4D World Modeling for Exo-to-Ego Video Generation in Robot Manipulation
+2026-10-30|2610.41377v1|C_occlusion|MolmoSpaces-CommonSense: Evaluating Commonsense in Robotic Manipulation Policies
+2026-10-30|2611.00158v1|E_spatial_action|Scaling Trusted Autonomy: Towards Generally Capable Verifiable Robots
+2026-10-29|2610.40026v2|B_affordance_vla|RoboSeed: Multidimensional Evaluation of Vision-Language-Action and World-Action Models: Capability, Resource Affordability, and Research Evidence
+2026-10-29|2610.39076v3|C_occlusion|Tactus: Tactile & Pose Sensing Glove for Natural Dexterity Data Collection
+2026-10-27|2610.36859v1|D_active_perception|ActiveAlign: Aligning Egocentric Manipulation via Active Perception
+2026-10-26|2610.36011v1|F_3dfm|E0.5: From Reconstructive to Future-Predictive 3D Foundations for Robotic World-Action Modeling
+2026-10-25|2610.34251v1|C_vla_memory|Variational Cognitive Memory Abstraction for Long-Horizon Vision-Language-Action Models
+2026-10-24|2610.33807v1|E_vsi|RoboWorM: Evaluating Movement Realism, Consistency and Acceleration Affects in Embodied Video World Models
+2026-10-24|2610.33941v2|F_world_model|TurboWAM: Learning What Matters for Fast World Action Models
+2026-10-23|2610.32312v1|B_affordance_vla|MAST-VLA: Skill-Conditioned Adaptation with Trajectory-Affordance Priors for Multi-Skill Robot Manipulation
+2026-10-23|2610.32102v1|D_active_vla|Coupling Execution Horizon and Sampling Depth in Flow-Matching VLA Policies
+2026-10-23|2610.32965v1|E_spatial_action|RynnUnify: Towards Unified Embodied Brain
+2026-10-22|2610.31166v1|C_dynamic_manip|Memory before Goal: Role of Pre-History Memory for Humanoid Loco-Manipulation
+2026-10-22|2610.31613v1|D_active_vla|Progress Probes $P^2$: Lightweight Runtime Monitoring for Vision-Language-Action Models
+2026-10-22|2610.31494v1|E_vsi|AgentVQA: A Unified Benchmark for Agentic Visual Understanding
+2026-10-22|2610.30988v2|F_world_model|In-Context Learning World Models for Robot Dual-Arm Manipulation of Soft Garment with Partial Observations
+2026-10-21|2610.29282v1|A_cross_view|Relational Geometry Forcing for World Action Models
+2026-10-21|2610.29964v1|D_active_perception|Object- and Task-Aware Active Perception for Safe Navigation of Mobile Manipulators in Semi-Static Environments
+2026-10-20|2610.28953v1|B_spatial_rep|GGraph: A GPU-Accelerated Library for Graph-Based Robot Deployment and Learning
+2026-10-20|2610.28948v1|D_active_vision|COWBOY: A Scalable Sim-to-Real Framework for Learning Contextual Whole-Body Manipulation
+2026-10-20|2610.27865v1|E_spatial_action|Frontier LLMs Enter the World of Robotics: A Cross-Model Evaluation on RoboColiseum
+2026-10-19|2610.26855v1|A_camera_pose|Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience
+2026-10-19|2610.26717v2|C_occlusion|Robot Learning with Vision-Language-Action Models for Agricultural Manipulation
+2026-10-18|2610.25273v1|A_camera_cond|GeoART: Geometry-Aware Refinement via Test-Time Scaling for Camera-Conditioned Video Diffusion
+2026-10-17|2610.24705v1|B_3d_vla|Relational Spatial Alignment for Vision-Language-Action Models
+2026-10-17|2610.24573v1|C_vla_memory|Retrieval-triggered Action Projection Adjustment for Frozen VLA Policies: An Empirical Study and Failure Analysis
+2026-10-16|2610.22997v1|A_camera_pose|GR-VIP: Geometric representation conditioning for precise visuomotor policy
+2026-10-16|2610.23622v1|C_spatial_memory|Foundation-Model-Driven 3D Scene Graphs for Mobile Manipulation
+2026-10-16|2610.23319v1|C_vla_memory|From Sliding Windows to Self-evolving Lifelong Memory: A Dual-perspective Survey of Memory Paradigms for Long-Horizon Robotics VLA Models
+2026-10-16|2610.23372v1|C_vla_memory|Beyond Success Rate: Interventional Evaluation of Memory in Vision-Language-Action Systems
+2026-10-16|2610.23378v1|D_active_perception|Look Before You Act: Bridging Active Perception and Vision-Language-Action Models via Observation-Aligned Data Adaptation
+2026-10-16|2610.23396v1|D_active_perception|AWAM: Active Trajectory-Conditioned View Imagination for Robust Robot Manipulation
+2026-10-16|2610.23302v1|E_spatial_bench|Look, Reason, Draw a Region: Recursive Refinement for Spatial Context Prediction
+2026-10-15|2610.21152v1|A_camera_pose|KODA: Kinematics--Observation Data Alignment for Humanoid Learning from Human Egocentric Demonstration
+2026-10-15|2610.21429v1|C_spatial_memory|MuSTMM: Learning Sound-Triggered Mobile Manipulation across Multiple Scenes
+2026-10-14|2610.20552v1|A_cross_view|KinoGen: Customizable Humanoid Loco-Manipulation References via Kinematically Grounded Video Generation
+2026-10-14|2610.20998v1|C_spatial_memory|MoCaP: Mobile Code-as-Policies for Zero-Shot Mobile Manipulation from Passive Human Videos
+2026-10-14|2610.20320v2|E_grounding_action|TacClaw-Infinity: A Large-Scale Vision-Tactile-Language-Action Dataset for Dexterous Manipulation
+2026-10-13|2610.18650v1|C_occlusion|ForkCast: Predictive Recovery for Vision-Language-Action Policies via Counterfactual Futures
+2026-10-13|2610.19082v1|D_nbv|Receding-Horizon Next-Best-View Planning for Highly Occluded Target Perception
+2026-10-13|2610.18568v1|F_world_model|WAVE-0: Bridging VLA Policies and WAMs with Lightweight Latent Future Prediction
+2026-10-13|2610.17521v1|F_3dfm|YUBI-Real2Sim: 3DGS Scene Verification for Reliable Policy Evaluation
+2026-10-12|2610.16160v1|B_3d_vla|FlowVLA: Enabling World Dynamics Understanding through Pluggable 3D Flow Learning
+2026-10-12|2610.16641v1|F_world_model|What Limits Cross-Task Generalization in World Action Models?
+2026-10-12|2610.17462v1|F_3dfm|Act4R: Action-conditioned 4D reconstruction for kinematics-free control
+2026-10-11|2610.15572v1|D_active_vision|Look Before You Move: Agent-Interface-Aligned Supervision for Open-World Mobile Manipulation
+2026-10-11|2610.15294v1|F_world_model|ProWorld: Multi-View World Model with Proprioceptive Feedback for Closed-Loop Policy Evaluation
+2026-10-11|2610.15956v1|F_depth_vla|ADAPT: Audio-Depth Action Planning with Transition-Aware Rewards for Lights-Out Industrial Navigation
+2026-10-10|2610.14415v1|A_camera_pose|Red-Teaming of Vision-Language-Action Models via Quality Diversity Environment Generation
+2026-10-09|2610.12999v1|C_occlusion|EgoReveal: Learning Active Vision and Object Manipulation under Partial Occlusions from Egocentric Demonstrations
+2026-10-09|2610.14406v1|C_vla_memory|Memory Without Curation: Learning Multi-Stream Latent Memory for Robot Policies
+2026-10-09|2610.12832v1|E_spatial_action|VLMs are Native Action Models: Unleashing the Manipulation Capabilities of VLMs with Explicit Action-Space Grounding
+2026-10-09|2610.13643v4|F_gaussian_splat|DexBioLab: Benchmarking Dexterous Manipulation with Dynamic Experimental Phenomena in Realistic Laboratories
+2026-10-08|2610.11508v2|A_camera_pose|WARP-VLA: Wrist-Camera Adaptation for View-Robust Policy Execution in Vision-Language-Action Models
+2026-10-08|2610.14106v1|B_grasp_vlm|Embodied Zero-Shot Task Planning via Hardware-Aware LLM-VLM Integration for Grounded Robotic Manipulation
+2026-10-08|2610.12089v1|D_active_vla|ManiUnit: A Manipulation Skill Dataset and Benchmark for Long-Horizon Tasks
+2026-10-08|2610.12696v1|E_grounding_action|Spa-Bench: A Real-Robot Benchmark for Spatial Grounding in Vision-Language-Action Models
+2026-10-08|2610.12793v1|E_grounding_action|Gamma: Grounded Multi-Agent Memory with Mechanical Audit for Memory-Intensive Manipulation
+2026-10-08|2610.12470v1|F_scene_graph|Dex-One2Many: Learning Dexterous Manipulation from a Single Human Demonstration
+2026-10-07|2610.09496v1|D_active_vla|Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models
+2026-10-07|2610.09718v1|E_grounding_action|YUBI-STAG: Contact and Semantic-Rich Alignment for VLAs via Automated Video-Language Grounding
+2026-10-07|2610.10846v1|F_world_model|Cross-Embodiment Robot Foundation World Models with Latent Actions
+2026-10-06|2610.08110v1|D_info_gain|Reactive Exploration of Unknown Environments for Redundant Robots using Virtual Model Control
+2026-10-05|2610.06318v1|B_affordance_vla|Wiring Matters: Injection Topology and Initialization of Affordance Heads in Vision-Language-Action Policies
+2026-10-05|2610.05678v1|B_reachability|Dataset-Free Compliant Humanoid Loco-Manipulation with Dynamic Online Posture
+2026-10-04|2610.06999v1|B_affordance_vla|ProactiveVLA: Augmenting Embodied Memory through Proactive Environment Exploration
+2026-10-04|2610.05417v2|E_vlm_spatial_fail|Render to Reason: Novel-View Semantic Prediction Improves Spatial Understanding in VLMs
+2026-10-04|2610.05026v1|E_spatial_action|GeoBridge-VLA: Geometry-Aware Residual Adaptation for Vision-Language-Action Models
+2026-10-03|2610.04607v2|A_camera_pose|ForeAct3D: Policy-Grounded Future World Modeling for VLA Policies
+2026-10-03|2610.04805v1|B_3d_vla|ExStereo: Lifting 2D Vision-Language-Action Models to 3D with Explicit Stereo Representations
+2026-10-03|2610.04432v3|E_vsi|Video2World: Benchmarking Coding Agents for Interactive World Modeling from Embodied Videos
+2026-10-03|2610.04301v1|F_scene_graph|EnvDreamer: Large-Scale Multimodal-to-Environment Generation for Embodied AI
+2026-10-02|2610.02840v1|A_coordinate_frame|PointWAM: 3D World Action Modeling for Dexterous Robotic Manipulation
+2026-10-02|2610.03498v2|D_active_vla|Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models
+2026-10-02|2610.04139v1|E_spatial_bench|From Sight to Foresight: Predictive Spatial Reasoning in Vision-Language Models
+2026-10-02|2610.03333v1|F_imitation_spatial|Equivariant Visual-Tactile Diffusion Policy for Contact-Rich Manipulation
+2026-10-01|2610.01229v2|C_dynamic_manip|A Compact Explicit 4D Representation for Dynamic Scenes
+2026-10-01|2610.01698v1|D_active_vision|ActiveWAM: Evidence-Aware Active Vision for World-Action Models
+2026-10-01|2610.01742v1|E_spatial_intelligence|World Motion Models: Flexible Sequence Modeling of SE(3) Trajectories
+2026-10-01|2610.00854v3|E_spatial_action|Are Frontier VLM Agents Ready to Be Robot Generalists? An Empirical Study with the Embodied Agent Arena
+2026-09-30|2609.39504v1|A_camera_cond|PartiCam: Camera Controlled Video Generation with Reward Guidance
+2026-09-30|2610.23913v1|A_cross_view|UMI-WM: Interactive World Modeling for Bimanual Manipulation from Wrist Cameras
+2026-09-30|2609.39403v1|B_affordance_vla|IronMind: Scaling Humanoid Dexterous Manipulation via Camera-Space Ego-Centric Pretraining
+2026-09-30|2609.38989v1|C_dynamic_manip|Cue the Flow: Steering Flow-Matching Policies for Open-World Delivery Manipulation
+2026-09-30|2609.39794v1|C_vla_memory|Inline Memory Meets Reusable Skills: Memory-centric Framework for Vision-Language-Action Model
+2026-09-30|2609.40244v1|F_3dfm|StreamRig: Exploiting Intra-Rig Geometry for Streaming Multi-Camera Odometry
+2026-09-30|2609.39670v1|F_scene_graph|From Local Whole-Body VLA Behaviors to Scene-Scale Aerial Manipulation
+2026-09-29|2609.36575v1|B_pointcloud_policy|EquivDP3: A SIM(3)-Invariant Point-Cloud Encoder for Data-Efficient Humanoid Loco-Manipulation
+2026-09-29|2609.37292v1|C_occlusion|Recovering the View: Benchmarking Physical Active Vision for Occlusion Recovery in Robotic Manipulation
+2026-09-29|2609.36720v1|C_vla_memory|T$^2$Mem: Learning Test-Time Memory for Robotics
+2026-09-29|2609.38641v1|C_vla_memory|Vision-Language-Action Autonomous Driving Agent with Language-based Memory
+2026-09-29|2609.38285v1|E_vlm_spatial_fail|GaugeVLM: Structuring Spatial Supervision with Measured Geometric Interventions
+2026-09-29|2609.38418v1|F_gaussian_splat|PneuTac: Tactile Manipulation with Soft Pneumatic Robots via Unified MPM-Gaussian Splatting Simulation
+2026-09-28|2609.34554v1|C_object_permanence|Where Memory Belongs: Ledger, an Object Ledger for Memory-Augmented VLAs
+2026-09-28|2610.23891v1|C_belief_state|When to Make a Decision: Task-Sufficient Active Perception for Mobile Manipulator Robots
+2026-09-28|2609.35652v1|E_grounding_action|MM-ABC: Towards Generalist Mobile Manipulation via Seeing, Coordinating and Imagining
+2026-09-28|2609.35096v1|E_grounding_action|DF-CBM: Region-Aware Concept Bottleneck Models for Deepfake Detection
+2026-09-28|2609.34630v1|E_vsi|Long Time No See: Benchmarking VLMs for Out-of-Sight Spatiotemporal Reasoning in Egocentric Videos
+2026-09-27|2609.38216v1|D_active_vla|Fiatlux: A Long-Horizon Benchmark for Humanoid Ladder Climbing and Light-Bulb Replacement
+2026-09-27|2609.33872v1|F_gaussian_splat|Robot-GST: geometry-aware spatial-temporal robot policy representation and evaluation
+2026-09-26|2609.32762v1|A_camera_pose|An Empirical Study on What Matters for Viewpoint-Generalizable Policies in Visual Imitation Learning
+2026-09-25|2609.31103v1|A_camera_cond|DepthEvidence: Unifying Metric Depth Prediction and Geometric Reasoning in Multimodal Language Models
+2026-09-25|2609.31112v2|B_grasp_vlm|DualManip: Agentic Dynamic Manipulation via Dual-Path Semantic Reasoning and Geometric Adaptation
+2026-09-24|2609.28984v2|B_reachability|CrossSafe: Towards Cross-Embodiment Latent Safety Filters
+2026-09-23|2609.27734v1|A_camera_pose|InfiNoVA: Infinite Novel View Augmentation for Viewpoint Invariant Robot Policies
+2026-09-22|2609.26314v1|A_cross_view|TriWorldBench: A Tri-View Consistency Perspective on Embodied World Models
+2026-09-22|2609.25627v1|B_affordance_vla|MachEmbodied-U0: Unified Understanding and Generation Model for Embodied Intelligence
+2026-09-21|2609.24525v1|B_3d_vla|Bridge3D: Enabling Vision-Language-Action Models to See and Act in 3D
+2026-09-21|2609.24124v2|C_vla_memory|ActiveArena: Benchmarking and Understanding Active Perception in Robotic Manipulation
+2026-09-21|2609.24813v1|E_spatial_bench|INTCORT: Training-Free Spatial Reasoning Enhancement for Vision-Language Models via Input Transformations and Confidence Routing
+2026-09-20|2609.23610v1|E_spatial_intelligence|PRIMO: Prior-Informed Odometry from Human-Motion Tracking for Humanoid Robots
+2026-09-19|2609.23252v1|A_camera_pose|Robot World Models Are Not Invariant to How the Actions Are Written
+2026-09-19|2609.22726v1|B_spatial_rep|Decentralized Multi-Robot Exploration with Probabilistic Peer Intent and Multi-hop Plan Propagation
+2026-09-19|2609.22684v1|C_occlusion|StateMem: Single-State Residual Memory with Adaptive Inference for Vision-Language-Action Policies
+2026-09-19|2609.23100v1|D_nbv|Splat-CBF: Safe Next-Best-View Control in 3D Gaussian-Splat Maps
+2026-09-18|2609.21929v1|D_active_perception|MAAP: Multi-Agent Active Perception for Collaborative Manipulation
+2026-09-18|2609.21753v1|D_active_vla|PSR: Predictive Sensorimotor Representation Learning for Contact-Rich Manipulation
+2026-09-18|2609.21448v1|F_world_model|Robotic Multiphase Interaction: Manipulating Coupled Liquid and Solid Dynamics with a World Model
+2026-09-18|2609.21502v1|F_3dfm|Adaptive World Memory 3D Foundation Model for Scalable 3D Mapping, Localization, and Rendering
+2026-09-17|2609.20107v1|A_view_invariance|AnyViewDex: View-Invariant Dexterous Manipulation from RGB Observations
+2026-09-16|2609.22332v3|B_affordance_vla|AffordanceWAM: Affordance-Aware Joint World-Action Modeling for Robot Manipulation
+2026-09-16|2609.18514v2|D_active_perception|ActiveScale: Scaling Active Perception for Robots across Model, Data, and Hardware
+2026-09-16|2609.18548v1|D_active_perception|HAP: A Hand-Driven Active Perception Framework for Egocentric Head Motion Prediction
+2026-09-16|2609.19447v1|E_spatial_intelligence|From Wizard-of-Oz Human-Robot Dialogue Collection to a Taxonomy of Robot Response Decisions: A Retrospective Analysis of Assistive Pilot Interactions
+2026-09-16|2609.19413v1|F_scene_graph|From Rollout to Reset: A Graph-Based Harness for Autonomous Long-Horizon Manipulation Evaluation
+2026-09-15|2609.17463v1|A_frame_reference|Gaussian Processes for Modelling Spatial Fields with Robot Swarms
+2026-09-15|2609.17714v1|F_imitation_spatial|Vision-Language Grounded Task-Context-Aware Imitation Learning for Robotic Disassembly
+2026-09-14|2609.14899v1|A_cross_view|What Makes a 3D Scene Editable? A Factorized Benchmark of Fidelity, Locality, Consistency, and Preservation
+2026-09-14|2609.22293v1|B_affordance_vla|Validating, Not Sampling: Region-Level Robustness of Vision-Language and Vision-Language-Action Models
+2026-09-14|2609.16233v1|E_spatial_bench|SceneBench: A Hierarchical Benchmark for Vision-Language Understanding of 3D Scenes
+2026-09-14|2609.15976v2|E_grounding_action|MessyMem: Learning-from-Doing Memory for Mobile Manipulation
+2026-09-13|2609.14310v1|A_6dof_generalization|VLBiMan++: Expanding the Generalization Boundary of Vision-Language Anchored One-Shot Bimanual Manipulation
+2026-09-12|2609.13812v2|A_coordinate_frame|GeomVLA: Unifying Scene, Motion, and Action in 3D
+2026-09-11|2609.12384v1|D_active_perception|Understanding Whole-Body Robot Teleoperation Strategies Under Diverse Task Objectives and Constraints
+2026-09-11|2609.12898v1|F_3dfm|UniPart: Towards Zero-shot Language-Grounded 3D Part Segmentation for Embodied Interaction
+2026-09-08|2609.08493v1|D_nbv|AURORA: Active Uncertainty-Driven Re-Orientation for In-Hand Reconstruction
+2026-09-08|2609.08224v1|E_grounding_action|3DWay: Generalizing Robot Manipulation via 3D Consistent Waypoints
+2026-09-07|2609.07747v3|B_pointcloud_policy|Dex-X: Learning Visual-Tactile Dexterous Manipulation From Human Videos with Simulated Interaction
+2026-09-07|2609.07047v1|C_vla_memory|MEMOBench: A Process Level Memory Benchmark for Robotic Manipulation
+2026-09-07|2609.07258v1|E_spatial_bench|MV-STRIDE: Enabling MLLMs to Master Multi-View Spatial Reasoning via Hierarchical Capability Modeling
+2026-09-05|2609.05834v2|C_belief_state|Learning Counterfactual World Models for Embodied Reasoning under Partial Observability
+2026-09-05|2609.06221v1|F_scene_graph|RefGuard: Identity-Aware Language-Guided Robot Manipulation via Joint Target-Anchor-Frame Grounding
+2026-09-04|2609.05369v1|A_cross_view|Towards Neuro-Symbolic Procedural Reasoning for Long-Horizon Vision-Language-Action Manipulation
+2026-09-04|2609.04911v2|A_cross_view|TourPhysics: Bringing Physics to World Models for Exploration and Manipulation from a Single Image
+2026-09-04|2609.05324v1|F_spatial_vla|RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Horizon Tasks?
+2026-09-03|2609.03952v1|A_camera_cond|WorldReward: Reward Modeling for Camera-Conditioned World Models
+2026-09-03|2609.04193v1|B_affordance_vla|GIFT: Guided Intermediate Feature Training via Action-Oriented Structural Supervision for Robotic Manipulation
+2026-09-02|2609.13231v1|B_reachability|ShieldVLA: Feasibility-Aware Safety Alignment for Vision-Language-Action Models
+2026-09-02|2609.03199v2|C_occlusion|RoboTok: A Scalable Data Engine for Internet Demonstration Video Retrieval and Dexterous Manipulation Learning
+2026-09-02|2609.02493v1|D_info_gain|MS-MEM: Multi-Skill Manipulation-Enhanced Mapping via Uncertainty- and Disturbance-Aware Action Selection
+2026-09-02|2609.02097v1|E_grounding_action|Evidence-Guided Detection, Localization and Explanation for Text-Centric Image Forensics
+2026-09-01|2609.01059v1|E_spatial_bench|Dyn-3D: Unveiling and Resolving Ego-Motion Ambiguity in Vision-Language Models
+2026-08-31|2608.30935v2|E_spatial_intelligence|LightNav-0: Eliciting VLM Spatial Intelligence for Generalist Embodied Navigation
+2026-08-31|2608.30237v2|F_world_model|Motus2: A Self-Evolving General World Model for Dexterous Manipulation
+2026-08-31|2608.30821v1|F_scene_graph|Lucida: Parse, Generate, and Place for Composable Real-to-Sim Scene Modeling
+2026-08-30|2608.29537v2|C_vla_memory|AGM: Achievement-Grounded Memory for Closed-Loop Agents with Frozen VLA Policies
+2026-08-26|2608.25872v1|C_occlusion|VISTA: Visually Inferred Spatial ConTact Attention for Contact-Rich Manipulation
+2026-08-26|2608.25299v1|E_grounding_action|PointRL: Learning Point-Level Vision-Language Grounding from Verifiable Annotation Evidence
+2026-08-26|2608.25308v1|E_grounding_action|V-Link: Recovering Lost Visual Representations in Action DiT for Vision-Language-Action Models
+2026-08-26|2608.26383v1|F_gaussian_splat|Cross-Platform Benchmark of Neural 3D Reconstruction for Autonomous Laboratory Robots
+2026-08-25|2608.24714v1|A_cross_view|GaussianWAM: Distilling Geometry and Semantics from 3D Gaussian Fields into World-Action Models
+2026-08-25|2608.24959v1|F_spatial_vla|GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model
+2026-08-24|2608.23650v1|B_spatial_rep|Concept-Guided Exploration: Building Persistent, Actionable Scene Graphs
+2026-08-24|2608.22869v2|C_vla_memory|UniMem: Unifying Visual and Textual Memory in VLAs for Non-Markovian Tasks
+2026-08-24|2608.22857v1|E_vlm_spatial_fail|SAVER: Selective Auditing of Verbal Evidence for Error Recovery in VLM Change Reasoning
+2026-08-24|2608.22990v1|E_spatial_action|InstructMove: A Text-Indispensable Benchmark for Instruction-Following Manipulation
+2026-08-24|2608.23138v1|F_spatial_vla|Pointing-VLA: Typed Spatial Grounding Interfaces for Vision-Language-Action Manipulation
+2026-08-23|2608.22296v2|B_reachability|TONAV: Task-Oriented Navigation and Action-Velocity Chunk Learning for Articulated Object Quadrupedal Mobile Manipulation
+2026-08-23|2608.22637v1|E_spatial_bench|OmniCAD: A Large-Scale Benchmark for 3D Spatial Reasoning in Robotics Assemblies
+2026-08-21|2608.21355v1|B_grasp_vlm|ViTacPhys: Physical Property-Aware Grasping from Human Visual-Tactile Demonstrations
+2026-08-21|2608.21550v1|C_spatial_memory|GOLEM: Modular Humanoid Autonomy Towards Electric Vehicle Battery Disassembly
+2026-08-21|2608.21031v2|D_active_perception|PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration
+2026-08-21|2608.21140v1|E_vlm_spatial_fail|A Modular Agent for Reliable and Auditable Spatial Relation Verification in CT Scans
+2026-08-20|2608.20251v1|A_camera_cond|Video2DoorTraversal: Push Door Traversal via Simulated Door Twins
+2026-08-16|2608.15605v1|B_spatial_rep|AlloEgo-VLM: Disambiguating Allocentric and Egocentric Reference Frames in Vision-Language Models
+2026-08-15|2608.14986v1|C_spatial_memory|GaussMemory: Task-Driven 3D Gaussian Scene Memory for Long-Horizon Robotic Manipulation
+2026-08-15|2608.15269v1|C_vla_memory|Remember Smarter: Visual History Compressor and Hyperbolic Experience Space for Robotic Memory
+2026-08-15|2609.27753v1|F_world_model|AWM-VLA: AlignedWorld Modeling for Efficient and Explainable Vision-Language-Action Policies
+2026-08-13|2608.13220v1|A_6dof_generalization|FAM-DQ: A Dual-Quadrotor-Based Fully Actuated Aerial Manipulator for High-Torque Interaction
+2026-08-13|2608.13049v1|F_world_model|H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models
+2026-08-11|2608.10756v1|B_3d_vla|Embodied Multimodal Grounding for Open-Vocabulary Mobile Manipulation via Semantic 3D Gaussian Splatting
+2026-08-10|2608.09778v1|B_grasp_vlm|RoboSeg: Online Part-Level Semantic Reconstruction for Robotic Manipulation via a Single Eye-in-Hand Camera
+2026-08-10|2608.09818v1|F_spatial_prompt|MedPixel: A Unified Pixel-Language Model for Medical Reasoning and Segmentation
+2026-08-09|2608.08904v2|F_depth_vla|From Recovery to Drop-off: How Action Post-training Reduces a VLM's Late-Layer Depth Decodability
+2026-08-08|2608.07955v1|E_vlm_spatial_fail|Self-Evolving Neuro-Symbolic Skills for Tool-Augmented Spatial Reasoning
+2026-08-06|2608.06231v1|A_camera_cond|EmoWorld: A Decoupled Affective Field for Controllable Emotional Video Generation
+2026-08-06|2608.05730v1|F_spatial_vla|SpaceVLA: Spatially Grounded VLA for Robotic Manipulation with User-Authored Grasp and Place Anchors
+2026-08-06|2608.07596v1|F_depth_vla|LIRA: Local Cross-Layer Information Routing for Vision-Language-Action Decoding
+2026-08-05|2608.05042v1|B_3d_vla|BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation
+2026-08-05|2608.04633v2|B_3d_vla|Mind-VLA: Instruction-Aware Spatial Representation Alignment for Vision-Language-Action Models
+2026-08-05|2608.05215v1|B_grasp_vlm|VLAff: Vision-Language-Affordance Model for Unified Actionable Affordances
+2026-08-05|2608.04425v1|F_scene_graph|SSC: A Verifiable Structured Representation for Bimanual Manipulation Labelling
+2026-08-03|2608.01826v1|A_cross_view|Multi-View Unified Camera Fields: Geometry-Shaped Action-Facing Representations for RGB-Only Multi-Camera VLA Policies
+2026-08-03|2608.01834v1|D_active_vision|Teleopit: A Full-Embodiment Humanoid Teleoperation System
+2026-08-03|2609.26071v1|E_grounding_action|StrataVLA: Hierarchical and Efficient 3D Geometric Grounding for Vision-Language-Action Models
+2026-08-03|2608.02257v1|F_spatial_vla|Learning Panorama-Aware VLA for Mobile Manipulation with Whole-Body Teleoperation
+2026-08-02|2608.01066v1|A_cross_view|OC-VLA++: Monocular Geometry-Guided Cross-View Consistency for Viewpoint-Robust Robotic Manipulation
+2026-08-01|2608.00486v1|A_6dof_generalization|DreamTraj: Generating 6-DoF Object Trajectories by Reading Unrendered Video Diffusion Latents
+2026-08-01|2608.00829v2|A_6dof_generalization|GeminiPainter's sequence-formed pipeline comprised of perception, cognition, planning, and action stages
+2026-07-30|2607.28261v2|A_camera_cond|TARS: Timestep-Aware Data Scaling for 3D-Free Video Re-Shooting
+2026-07-29|2607.26513v1|B_3d_vla|Explicit Kinematic Guidance from Analytic Concepts for Vision-Language-Action Models
+2026-07-29|2607.26579v1|F_world_model|ContactFlow: A video action conditioning that transfers across embodiments
+2026-07-28|2607.25912v1|B_3d_vla|SAM3D-Guided Object-Centric Representation Alignment for Vision-Language-Action Models
+2026-07-28|2607.26047v2|F_imitation_spatial|S2A2: Audio-Visual Imitation Learning for Manipulation Tasks Using Acoustic Spatial Information
+2026-07-27|2607.24591v1|A_camera_cond|CameraAnything: Refilming Videos with Arbitrary Camera Control
+2026-07-27|2607.24159v1|B_affordance_vla|DeVA: Decoupled Video-Action Model with physical guidance for robot policy learning
+2026-07-24|2607.22530v2|F_world_model|ViTacWorld: Scaling Visuo-Tactile World Models for Contact-Rich Robot Manipulation
+2026-07-21|2607.19190v5|A_camera_pose|Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents
+2026-07-21|2607.19479v2|D_active_perception|ModPack: Extensible Teleoperation Interface for Bimanual Mobile Manipulation
+2026-07-20|2607.18231v1|C_vla_memory|FM-VLA: Force-based Memory for Vision-Language-Action Models in Contact-Rich Manipulation
+2026-07-20|2607.17977v2|E_spatial_action|RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model
+2026-07-18|2607.16805v1|A_cross_view|Scene-SAM3D: Multi-View Scene Asset Generation Without Fine-Tuning
+2026-07-17|2607.16123v2|D_info_gain|BayesContact: Uncertain Pose Estimation via Visuo-Tactile Proposals and Simulation-based Inference
+2026-07-17|2607.15714v1|E_grounding_action|AC-VLA: Robust Out-of-Distribution Action Execution via Compositional Learning
+2026-07-16|2607.14439v1|D_info_gain|Active Real-World Factor-Based Evaluation for Generalist Robot Policies
+2026-07-15|2607.14005v1|A_cross_view|M$^\text{4}$World: A Multi-view Multimodal Driving World Model for Interactive Object Manipulation and Minute-long Streaming
+2026-07-15|2607.13926v1|F_spatial_vla|S-squared-VLA: Decoupling Semantic and Spatial Streams in Vision-Language-Action Models for Autonomous Driving
+2026-07-14|2607.12287v1|C_dynamic_manip|Reducing Temporal Redundancy for Efficient Vision-Language-Action Inference
+2026-07-14|2607.13154v2|F_gaussian_splat|Worlds in One Demo: A Synthetic Data Engine for Learning Open-World Mobile Manipulation
+2026-07-13|2607.11498v2|E_spatial_action|See like a Robot: Robot-Centric Pointmaps for VLA Models
+2026-07-12|2607.10706v1|E_spatial_action|Action Map Policy: Learning 3D Closed-loop Manipulation via Pixel Classification
+2026-07-10|2607.09825v1|E_grounding_action|More Structure, Not More Capacity: Object-Centric Representations for Visuomotor Imitation Learning
+2026-07-10|2607.09818v1|F_spatial_vla|TS-Mask VLA: 2D Temporal-Spatial Masking for Vision-Language-Action Model with Effective Bridging
+2026-07-08|2607.07251v1|E_spatial_bench|Evaluation of Multilingual Ability to Use Spatial Deictic Expressions in Vision-Language Models
+2026-07-07|2607.06564v1|B_3d_vla|Lift3D-VLA: Lifting VLA Models to 3D Geometry and Dynamics-Aware Manipulation
+2026-07-07|2607.06186v2|B_grasp_vlm|Calf-Integrated Arms for Bimanual Quadruped Loco-Manipulation
+2026-07-07|2607.06678v2|C_vla_memory|NativeMEM: Native Memory Compression for Long-Horizon Robotic Manipulation
+2026-07-05|2607.04426v1|C_spatial_memory|ACE-Brain-0.5: A Unified Embodied Foundational Model for Physical Agentic AI
+2026-07-03|2607.03449v1|C_vla_memory|HiMe: Hierarchical Embodied Memory for Long-Horizon Vision-Language-Action Control
+2026-07-03|2607.03209v1|F_3dfm|Fast 3D Foundation Model Initialized Gaussian Splatting
+2026-07-02|2607.02417v2|A_camera_pose|LIME: Learning Intent-aware Camera Motion from Egocentric Video
+2026-07-02|2607.01962v1|A_camera_cond|NeoMap: Training-free Novel-View Synthesis from Single Images and Videos
+2026-07-02|2607.01663v1|A_camera_cond|Unified Panoramic-Gaussian Representation for Monocular 4D Scene Synthesis
+2026-07-02|2607.01628v1|D_nbv|Online Segment 3D Gaussians via Launching Virtual Drones
+2026-07-02|2607.01784v1|E_vsi|SpaceEra++: A Unified Framework Towards 3D Spatial Reasoning in Video
+2026-07-02|2607.01938v1|F_world_model|PhysMani: Physics-principled 3D World Model for Dynamic Object Manipulation
+2026-07-02|2607.02403v2|F_world_model|ACID: Action Consistency via Inverse Dynamics for Planning with World Models
+2026-07-02|2607.01658v1|F_spatial_vla|Teaching Vision-Language-Action Models What to See and Where to Look
+2026-07-02|2607.01869v1|F_spatial_prompt|QWERTY: Training-Free Motion Control via Query-Warped Video Diffusion Transformers
+2026-07-01|2607.00836v8|E_spatial_intelligence|From World Models to World Action Models: A Concise Tutorial for Robotics
+2026-07-01|2607.00678v2|F_world_model|ABot-M0.5: Unified Mobility-and-Manipulation World Action Model
+2026-06-30|2606.31329v2|B_3d_vla|3D HAMSTER: Bridging Planning and Control in Hierarchical Vision Language Action Models through 3D Trajectory Guidance
+2026-06-30|2606.31200v1|B_grasp_vlm|Agentic RAG-VLM: Affordance-Aware Retrieval-Augmented Generation with Self-Reflective Planning for Robotic Grasping
+2026-06-30|2606.31909v1|B_grasp_vlm|CoDex: Learning Compositional Dexterous Functional Manipulation without Demonstrations
+2026-06-30|2606.31916v1|C_belief_state|Theory of Mind and Persuasion Beyond Conversation: Assessing the Capacity of LLMs to Induce Belief States via Planning and Action
+2026-06-29|2606.30456v1|A_coordinate_frame|Vision-Language-Action Models: Experimental Insights from a Real-World UR5 Platform
+2026-06-28|2606.29501v1|F_world_model|Learning Transferable Dynamics Priors from Action to World Modeling
+2026-06-27|2606.29089v1|F_spatial_vla|TAP-VLA: Tactile Annotation Prompting for Vision Language Action Models
+2026-06-26|2606.27872v1|C_belief_state|S$^2$-VLA: State-Space Guided Vision-Language-Action Models for Long-Horizon Manipulation
+2026-06-26|2606.27624v2|E_spatial_intelligence|Physics-Guided Robotic Radiation Source Localization along Arbitrary Measurement Paths in Unstructured Environments
+2026-06-25|2606.26928v1|E_spatial_intelligence|UAV-MapFusion: RTK-Aligned Uncertainty-Aware Coarse-to-Fine Multi-Session UAV Mapping
+2026-06-25|2606.26800v2|E_grounding_action|SSI-Policy: Learning Structured Scene Interfaces for Vision-Language Robotic Manipulation
+2026-06-24|2606.26087v1|A_camera_cond|MVTrack4Gen: Multi-View Point Tracking as Geometric Supervision for 4D Video Generation
+2026-06-24|2606.26443v1|E_vsi|WatchAct: A Benchmark for Behavior-Grounded Robot Manipulation
+2026-06-24|2606.25880v2|F_spatial_prompt|USS: Unifying Spatial-Semantic Prompting for End to End Embodied Visual Tracking
+2026-06-23|2606.24208v1|B_reachability|Grounding Generative Policies in Physics: Optimization-Guided Diffusion for Robot Control
+2026-06-23|2606.24448v1|B_spatial_rep|Supervise What Survives: Geometry-Guided VLA Adaptation from Synthetic Robot Videos
+2026-06-23|2606.24628v1|F_gaussian_splat|ArtiTwinSplat: Interactable Digital Twin Reconstruction via Gaussian Splatting from RGB-D videos
+2026-06-22|2606.23625v2|A_camera_pose|Learning to See While Learning to Act: Diffusion Models for Active Perception in Robot Imitation
+2026-06-22|2606.23565v1|C_spatial_memory|HoloAgent-0: A Unified Embodied Agent Framework with 3D Spatial Memory
+2026-06-22|2606.23147v2|D_active_vla|Assistron: Bayesian Shared Autonomy with Off-the-shelf Vision-Language-Action Models
+2026-06-22|2606.23085v1|F_world_model|Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents
+2026-06-21|2606.22694v2|E_spatial_bench|SATURN: Symbolic Spatial Reasoning for Multi-Perspective Grounding
+2026-06-19|2606.21788v1|B_pointcloud_policy|Rotation-Aware Point-Cloud Embeddings for Vision-Based In-Hand Reorientation
+2026-06-19|2606.21188v1|C_vla_memory|Remember what you did?: Learning Behavioral Memories for Partially Observable Object Manipulation
+2026-06-18|2606.20562v1|C_vla_memory|MemoryWAM: Efficient World Action Modeling with Persistent Memory
+2026-06-18|2606.20092v3|C_vla_memory|EventVLA: Event-Driven Visual Evidence Memory for Long-Horizon Vision-Language-Action Policies
+2026-06-17|2606.19340v3|B_grasp_vlm|ZeroDex: Zero-Shot Long-Horizon Dexterous Manipulation via Multi-View 3D-Grounded VLM Reasoning
+2026-06-17|2606.18772v1|D_active_perception|HALOMI: Learning Humanoid Loco-Manipulation with Active Perception from Human Demonstrations
+2026-06-17|2606.18960v3|F_world_model|Mem-World: Memory-Augmented Action-Conditioned World Models for Persistent Robot Manipulation
+2026-06-16|2606.17520v1|A_camera_pose|GASE: Gaussian Splatting-Based Automated System for Reconstructing Embodied-Simulation Environments
+2026-06-16|2606.18375v3|A_cross_view|PAIWorld: A 3D-Consistent World Foundation Model for Robotic Manipulation
+2026-06-16|2606.17463v3|C_vla_memory|LoopVLA: cross-subtask event memory for looped task execution
+2026-06-16|2606.17906v1|F_world_model|WAM-RL: World-Action Model Reinforcement Learning with Reconstruction Rewards and Online Video SFT
+2026-06-15|2606.17040v1|B_3d_vla|R2RDreamer: 3D-aware Data Augmentation for Spatially-generalized 2D Manipulation Policies
+2026-06-15|2606.17046v2|B_3d_vla|Geometric Action Model for Robot Policy Learning
+2026-06-15|2606.16690v1|C_occlusion|PATCH: Action-Chunk-Conditioned Latent Patch Innovation Monitoring for Robot Manipulation
+2026-06-14|2606.15516v2|C_occlusion|Transferring Contact, Not Just Motion: Compliant Grasping Across Dexterous Hands
+2026-06-14|2606.15568v3|D_active_vla|SAPS: Shared Autonomy for Policy Steering by Blending Teleoperation with a Pretrained VLA
+2026-06-14|2606.15861v1|E_vlm_spatial_fail|Object Tokens as a Bridge Between Segmentation and Visual Question Answering in Robotic Surgery
+2026-06-13|2606.15232v1|B_spatial_rep|Rethinking Implicit Spatial Representation in Visuomotor Policy Learning
+2026-06-12|2606.14535v2|F_imitation_spatial|Spatially Conditioned Diffusion Policy: Learning Precise and Robust Manipulation with a Single RGB Camera
+2026-06-11|2606.12910v2|B_grasp_vlm|Bounding Boxes as Goals: Language-Conditioned Grasping via Neuro-Symbolic Planning
+2026-06-11|2606.13673v1|E_spatial_bench|SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning
+2026-06-10|2606.12334v1|B_pointcloud_policy|Fourier Features Let Agents Learn High Precision Policies with Imitation Learning
+2026-06-10|2606.11525v1|B_reachability|Learning Object Manipulation from Scratch via Contrastive Interaction
+2026-06-10|2606.11909v1|E_spatial_intelligence|Embodied-BenchClaw: An Autonomous Multi-Agent System for Embodied Spatial Intelligence Benchmark Construction
+2026-06-10|2606.12396v1|F_spatial_vla|VLGA: Vision-Language-Geometry-Action Models for Autonomous Driving
+2026-06-09|2606.11151v1|B_grasp_vlm|JOIN: Anchor-Grasp-Conditioned Joining via Opposition, Inference, and Navigation for Bimanual Assistive Manipulation
+2026-06-09|2606.10645v1|C_dynamic_manip|ManiSplat: Manipulation Trajectory Synthesis from Monocular Video via Decoupled 3D Gaussian Splatting
+2026-06-08|2606.09215v1|F_world_model|MotionWAM: Towards Foundation World Action Models for Real-Time Humanoid Loco-Manipulation
+2026-06-08|2606.09813v1|F_world_model|iMaC: Translating Actions into Motion and Contact Images for Embodied World Models
+2026-06-07|2606.08881v2|B_affordance_vla|Benchmarking Vision-Language-Action Models on SO-101: Failure and Recovery Analysis
+2026-06-07|2606.08765v3|C_occlusion|Tac2Pix: Image-Space Visuo-Tactile Fusion for Dexterous Manipulation
+2026-06-06|2606.08169v1|D_active_vla|CLASP: Language-Driven Robot Skill Selection and Composition using Task-Parameterized Learning
+2026-06-06|2607.00020v1|E_grounding_action|EmbodimentSemantic: A Spatial Scene-Graph Dataset and Benchmark for Vision-Language Models on Embodied Manipulation Trajectories
+2026-06-04|2606.06155v2|B_affordance_vla|AffordanceVLA: A Vision-Language-Action Model Empowering Action Generation through Affordance-Aware Understanding
+2026-06-04|2606.06194v1|D_active_perception|ActiveMimic: Egocentric Video Pretraining with Active Perception
+2026-06-04|2606.05677v1|E_vsi|LongSpace: Exploring Long-Horizon Spatial Memory from Perception to Recall in Video
+2026-06-04|2606.06147v1|F_spatial_vla|WorldFly: A World-Model-Based Vision-Language-Action Model for UAV Navigation
+2026-06-04|2606.06245v3|F_depth_vla|MPCoT: Reward-Guided Multi-Path Latent Reasoning for Test-Time Scalable Vision-Language-Action
+2026-06-03|2606.04825v2|D_active_vla|HapTile: A Haptic-Informed Vision-Tactile-Language-Action Dataset for Contact-Rich Imitation Learning
+2026-06-02|2606.03890v2|E_vsi|OVO-S-Bench: A Hierarchical Benchmark for Streaming Spatial Intelligence in Multimodal LLMs
+2026-06-02|2606.03240v2|F_spatial_vla|GeoAlign: Beyond Semantics with State-Guided Spatial Alignment in VLA Models
+2026-06-02|2606.04269v2|F_imitation_spatial|Instant-Fold: In-Context Imitation Learning for Deformable Object Manipulation
+2026-06-01|2606.02274v2|A_view_invariance|Dexterity-BEV: Aligning 3D World and Actions for Generalizable Robot Policies Learning
+2026-05-31|2606.01072v2|C_dynamic_manip|Expanding Spatial and Temporal Context for Robotic Imitation Learning With Scene Graphs
+2026-05-31|2606.01367v1|E_spatial_intelligence|ActMVS: Active Scene Reconstruction with Monocular Multi-View Stereo
+2026-05-31|2606.01027v2|F_world_model|$τ_0$-WM: A Unified Video-Action World Model for Robotic Manipulation
+2026-05-31|2606.01458v2|F_gaussian_splat|LEGS: Fine-Tuning Teleop-Free VLAs for Humanoid Loco-manipulation in an Embodied Gaussian Splatting World
+2026-05-30|2606.00773v3|D_active_vla|SafeVLA-Bench: A Benchmark for the Success-Safety Gap in Vision-Language-Action Models
+2026-05-29|2605.30895v2|A_camera_cond|CamGeo: Sparse Camera-Conditioned Image-to-Video Generation with 3D Geometry Priors
+2026-05-29|2605.31387v1|E_spatial_action|Multi-Turn Multi-Agent Dialogue for Collaborative Reconstruction Improves VLM Performance on Spatial Reasoning, But Only Barely
+2026-05-28|2605.29416v1|B_3d_vla|3DVLA: Enhancing Vision-Language-Action Models via 3D Spatial and Instance Understanding
+2026-05-28|2605.30503v1|B_reachability|Physics-informed Goal-Conditioned Reinforcement Learning under Hybrid Contact Dynamics
+2026-05-28|2605.29562v2|C_vla_memory|VLA-Pro: Cross-Task Procedural Memory Transfer for Vision-Language-Action Models
+2026-05-28|2605.30161v1|E_spatial_bench|Why Far Looks Up: Probing Spatial Representation in Vision-Language Models
+2026-05-28|2605.30557v2|E_vlm_spatial_fail|Seeing Isn't Knowing: Do VLMs Know When Not to Answer Spatial Questions (and Why)?
+2026-05-28|2605.30280v2|E_spatial_action|Qwen-VLA: Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments
+2026-05-28|2605.29577v1|E_spatial_action|Mitigating State Aliasing in Vision-Language-Action Models via Inverse Dynamics Learning
+2026-05-27|2605.29042v1|C_belief_state|Differentiable Belief-based Opponent Shaping
+2026-05-27|2605.29074v1|E_spatial_intelligence|Embodied3DBench: Benchmarking Low-Level Embodied Spatial Intelligence of Vision Language Models
+2026-05-27|2606.00113v1|F_world_model|World Models for Robotic Manipulation: A Survey
+2026-05-25|2605.25346v1|B_reachability|Parallel Differentiable Reachability for Learning and Planning with Certified Neural Dynamics and Controllers
+2026-05-25|2605.25524v1|E_spatial_bench|ProSR: Process-Shaped Spatial Reasoning for Reliable Chain-of-Thought in VLMs
+2026-05-24|2605.24807v1|F_spatial_prompt|CLIP-Guided SAM: Parameter-Efficient Semantic Conditioning for Promptable Segmentation
+2026-05-23|2606.00090v1|B_affordance_vla|Silent Failures in Physical AI: A Literature Review of Runtime Action Authorization for Autonomous Systems
+2026-05-23|2605.24630v1|C_spatial_memory|DexSIM: Real-time Dexterous Simulation with Unified Causal Video Diffusion
+2026-05-22|2605.24203v1|B_affordance_vla|Afford-VLA: Action-Aligned Visual Planning via Internalized Affordance
+2026-05-22|2605.23898v1|E_vlm_spatial_fail|SPACENUM: Revisiting Spatial Numerical Understanding in VLMs
+2026-05-21|2605.22283v1|C_spatial_memory|Spatial Memory for Out-of-Vision Manipulation in Vision-Language-Action
+2026-05-21|2605.21935v1|C_spatial_memory|Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments
+2026-05-21|2605.22812v1|F_spatial_vla|GesVLA: Gesture-Aware Vision-Language-Action Model Embedded Representations
+2026-05-20|2605.21414v1|B_3d_vla|PointACT: Vision-Language-Action Models with Multi-Scale Point-Action Interaction
+2026-05-20|2605.20752v2|B_3d_vla|GaussianDream: A Feed-Forward 3D Gaussian World Model for Robotic Manipulation
+2026-05-20|2605.20837v1|E_spatial_intelligence|ArchSIBench: Benchmarking the Architectural Spatial Intelligence of Vision-Language Models
+2026-05-19|2605.20085v2|F_spatial_prompt|Spatially Prompted Visual Trajectory Prediction for Egocentric Manipulation
+2026-05-18|2605.18162v2|E_spatial_bench|Self-Evolving Spatial Reasoning in Vision Language Models via Geometric Logic Consistency
+2026-05-18|2605.18431v3|E_vsi|Seeing Together: Multi-Robot Cooperative Egocentric Spatial Reasoning with Multimodal Large Language Models
+2026-05-17|2605.17300v1|A_frame_reference|HCLM: A Hierarchical Framework for Cooperative Loco-Manipulation with Dual Quadrupeds
+2026-05-17|2605.17517v1|B_affordance_vla|AffordVLA: Injecting Affordance Representations into Vision-Language-Action Models via Implicit Feature Alignment
+2026-05-17|2605.17630v3|F_spatial_prompt|SegRAG: Retrieval Augmented Spatial Prompting for Open Vocabulary Semantic Segmentation
+2026-05-15|2605.16043v1|C_occlusion|Learning Sim-Grounded Policies for Bimanual Rope Manipulation from Human Teleoperation Data
+2026-05-14|2605.14504v2|C_spatial_memory|When Robots Do the Chores: A Benchmark and Agent for Long-Horizon Household Task Execution
+2026-05-14|2605.14950v1|F_depth_vla|Evo-Depth: A Lightweight Depth-Enhanced Vision-Language-Action Model
+2026-05-14|2605.15298v1|F_depth_vla|PhysBrain 1.0 Technical Report
+2026-05-14|2605.14393v1|F_3dfm|Analogical Trajectory Transfer
+2026-05-13|2605.13067v1|A_frame_reference|When Absolute State Fails: Evaluating Proprioceptive Encodings for Robust Manipulation
+2026-05-12|2605.11762v1|A_camera_pose|NavOL: Navigation Policy with Online Imitation Learning
+2026-05-12|2605.11727v1|A_camera_cond|Allegory of the Cave: Measurement-Grounded Vision-Language Learning
+2026-05-12|2605.11809v1|A_coordinate_frame|Beyond World-Frame Action Heads: Motion-Centric Action Frames for Vision-Language-Action Models
+2026-05-12|2605.12228v1|A_6dof_generalization|Morphologically Equivariant Flow Matching for Bimanual Mobile Manipulation
+2026-05-12|2605.11832v1|B_3d_vla|Learning Action Manifold with Multi-view Latent Priors for Robotic Manipulation
+2026-05-12|2605.11462v1|E_spatial_bench|SpatialForge: Bootstrapping 3D-Aware Spatial Reasoning from Open-World 2D Images
+2026-05-12|2605.12162v1|E_spatial_action|X-Imitator: Spatial-Aware Imitation Learning via Bidirectional Action-Pose Interaction
+2026-05-11|2605.09989v3|B_3d_vla|StereoPolicy: Improving Robotic Manipulation Policies via Stereo Perception
+2026-05-11|2605.10485v1|E_grounding_action|VEGA: Visual Encoder Grounding Alignment for Spatially-Aware Vision-Language-Action Models
+2026-05-09|2605.10993v1|C_vla_memory|ECHO: Continuous Hierarchical Memory for Vision-Language-Action Models
+2026-05-09|2605.08787v2|E_spatial_bench|Lost in Volume: The CT-SpatialVQA Benchmark for Evaluating Semantic-Spatial Understanding of 3D Medical Vision-Language Models
+2026-05-08|2606.18260v1|A_cross_view|FluidViews: Adaptive Drag-and-Drop Token Filters for Heterogeneous Multi-View Visual Analytics
+2026-05-08|2605.07943v2|D_active_vision|TAVIS: A Benchmark for Egocentric Active Vision and Anticipatory Gaze in Imitation Learning
+2026-05-08|2605.08452v1|E_vlm_spatial_fail|NICE FACT: Diagnosing and Calibrating VLMs in Quantitative Reasoning for Kinematic Physics
+2026-05-08|2605.08064v1|E_vlm_spatial_fail|Proxy3D: Efficient 3D Representations for Vision-Language Models via Semantic Clustering and Alignment
+2026-05-08|2605.08330v1|E_spatial_action|Hierarchical Prompting with Dual LLM Modules for Robotic Task and Motion Planning
+2026-05-08|2605.07605v2|E_grounding_action|BrickCraft: Visuomotor Skill Composition with Situated Manual Guidance for Long-Horizon Interlocking Brick Assembly
+2026-05-07|2605.06311v1|E_grounding_action|Toward Visually Realistic Simulation: A Benchmark for Evaluating Robot Manipulation in Simulation
+2026-05-05|2605.04128v2|F_spatial_vla|JoyAI-Image: Awaking Spatial Intelligence in Unified Multimodal Understanding and Generation
+2026-05-03|2605.01799v2|E_vsi|Embody4D: A Generalist Data Engine for Embodied 4D World Modeling
+2026-05-01|2605.00471v1|F_spatial_vla|Stereo Multistage Spatial Attention for Real-Time Mobile Manipulation Under Visual Scale Variation and Disturbances
+2026-04-30|2604.27448v1|A_camera_pose|LA-Pose: Latent Action Pretraining Meets Pose Estimation
+2026-04-30|2604.28001v1|B_affordance_vla|A Pattern Language for Resilient Visual Agents
+2026-04-29|2604.26848v2|B_3d_vla|STARRY: Spatial-Temporal Action-Centric World Modeling for Robotic Manipulation
+2026-04-29|2604.26934v1|E_spatial_bench|World2VLM: Distilling World Model Imagination into VLMs for Dynamic Spatial Reasoning
+2026-04-27|2604.24681v2|B_3d_vla|Learning Human-Intention Priors from Large-Scale Human Demonstrations for Robotic Manipulation
+2026-04-25|2604.23387v1|A_6dof_generalization|Keypoint-based Dynamic Object 6-DoF Pose Tracking via Event Camera
+2026-04-23|2604.21331v3|A_camera_pose|FingerViP: Learning Real-World Dexterous Manipulation with Fingertip Visual Perception
+2026-04-23|2604.21914v1|A_cross_view|VistaBot: View-Robust Robot Manipulation via Spatiotemporal-Aware View Synthesis
+2026-04-23|2604.21190v3|E_spatial_bench|SpatiO: Adaptive Test-Time Orchestration of Vision-Language Agents for Spatial Reasoning
+2026-04-23|2604.21241v2|F_spatial_vla|CorridorVLA: Explicit Spatial Constraints for Generative Action Heads via Sparse Anchors
+2026-04-22|2604.20834v2|B_affordance_vla|PokeVLA: Empowering Pocket-Sized Vision-Language-Action Model with Comprehensive World Knowledge Guidance
+2026-04-21|2604.20038v1|A_cross_view|FluSplat: Sparse-View 3D Editing without Test-Time Optimization
+2026-04-21|2604.19092v2|E_spatial_action|RoboWM-Bench: A Benchmark for Evaluating World Models in Robotic Manipulation
+2026-04-20|2604.17818v1|A_camera_cond|AnyLift: Scaling Motion Reconstruction from Internet Videos via 2D Diffusion
+2026-04-20|2604.18484v2|B_affordance_vla|XEmbodied: A Foundation Model with Enhanced Geometric and Physical Cues for Large-Scale Embodied Environments
+2026-04-20|2604.17887v1|E_spatial_action|StableIDM: Stabilizing Inverse Dynamics Model against Manipulator Truncation via Spatio-Temporal Refinement
+2026-04-20|2604.17880v1|E_grounding_action|ST-$π$: Structured SpatioTemporal VLA for Robotic Manipulation
+2026-04-16|2604.15215v4|F_imitation_spatial|A Hierarchical Spatiotemporal Action Tokenizer for In-Context Imitation Learning in Robotics
+2026-04-15|2604.13633v1|C_spatial_memory|ESCAPE: Episodic Spatial Memory and Adaptive Execution Policy for Long-Horizon Mobile Manipulation
+2026-04-15|2604.14089v1|C_dynamic_manip|UMI-3D: Extending Universal Manipulation Interface from Vision-Limited to 3D Spatial Perception
+2026-04-13|2604.11674v4|B_affordance_vla|AffordSim: A Scalable Data Generator and Benchmark for Affordance-Aware Robotic Manipulation
+2026-04-13|2604.11302v1|C_spatial_memory|3D-Anchored Lookahead Planning for Persistent Robotic Scene Memory via World-Model-Based MCTS
+2026-04-13|2604.11135v1|E_vsi|AIM: Intent-Aware Unified world action Modeling with Spatial Value Maps
+2026-04-12|2604.10432v3|F_spatial_vla|AnySlot: Goal-Conditioned Vision-Language-Action Policies for Zero-Shot Slot-Level Placement
+2026-04-10|2604.09535v1|E_grounding_action|EgoTL: Egocentric Think-Aloud Chains for Long-Horizon Tasks
+2026-04-09|2604.08475v2|B_3d_vla|LAMP: Lift Image-Editing as General 3D Priors for Open-world Manipulation
+2026-04-09|2604.08726v1|B_grasp_vlm|Task-Aware Bimanual Affordance Prediction via VLM-Guided Semantic-Geometric Reasoning
+2026-04-09|2604.08534v1|D_active_vision|ActiveGlasses: Learning Manipulation with Active Vision from Ego-centric Human Demonstration
+2026-04-09|2604.07973v1|F_spatial_vla|How Far Are Large Multimodal Models from Human-Level Spatial Action? A Benchmark for Goal-Oriented Embodied Navigation in Urban Airspace
+2026-04-08|2604.07105v3|F_gaussian_splat|Genie Sim PanoRecon: Fast Immersive Scene Generation from Single-View Panorama
+2026-04-07|2604.05672v3|B_affordance_vla|A1: A Fully Transparent Open-Source, Adaptive and Efficient Truncated Vision-Language-Action Model
+2026-04-03|2604.03181v2|B_3d_vla|SpatialVAM:Spatial-Aware Multi-View Video Diffusion as a Data-Efficient Robot Policy
+2026-04-02|2604.01618v1|B_3d_vla|Tex3D: Objects as Attack Surfaces via Adversarial 3D Textures for Vision-Language-Action Models
+2026-04-02|2604.02502v1|E_vlm_spatial_fail|An Explainable Vision-Language Model Framework with Adaptive PID-Tversky Loss for Lumbar Spinal Stenosis Diagnosis
+2026-04-02|2604.02190v1|F_spatial_vla|UniDriveVLA: Unifying Understanding, Perception, and Action Planning for Autonomous Driving
+2026-04-02|2604.01765v1|F_depth_vla|DriveDreamer-Policy: A Geometry-Grounded World-Action Model for Unified Generation and Planning
+2026-04-01|2604.01371v1|B_affordance_vla|AffordTissue: Dense Affordance Prediction for Tool-Action Specific Tissue Interaction
+2026-03-30|2603.27967v1|A_cross_view|Learning Multi-View Spatial Reasoning from Cross-View Relations
+2026-03-30|2603.28422v1|D_active_vision|Active Stereo-Camera Outperforms Multi-Sensor Setup in ACT Imitation Learning for Humanoid Manipulation
+2026-03-30|2603.28955v1|F_world_model|Enhancing Policy Learning with World-Action Model
+2026-03-29|2603.27797v1|A_view_invariance|Which Reconstruction Model Should a Robot Use? Routing Image-to-3D Models for Cost-Aware Robotic Manipulation
+2026-03-28|2603.27437v3|E_spatial_bench|SpatialStack: Layered Geometry-Language Fusion for 3D VLM Spatial Reasoning
+2026-03-27|2603.26412v1|B_grasp_vlm|Generalizable task-oriented object grasping through LLM-guided ontology and similarity-based planning
+2026-03-27|2603.26089v3|C_belief_state|Selective Deficits in LLM Mental Self-Modeling in a Behavior-Based Test of Theory of Mind
+2026-03-27|2603.26322v1|F_depth_vla|DiffusionAnything: End-to-End In-context Diffusion Learning for Unified Navigation and Pre-Grasp Motion
+2026-03-26|2603.25707v1|A_cross_view|TRACE: Object Motion Editing in Videos with First-Frame Trajectory Guidance
+2026-03-26|2603.25481v1|A_6dof_generalization|LILAC: Language-Conditioned Object-Centric Optical Flow for Open-Loop Trajectory Generation
+2026-03-25|2603.24393v1|B_3d_vla|3D-Mix for VLA: A Plug-and-Play Module for Integrating VGGT-based 3D Information into Vision-Language-Action Models
+2026-03-25|2603.24060v3|C_vla_memory|RoboHarness: A Memory-Augmented Policy Harness for Vision-Language-Action Model Robustness via In-Context Adaptation
+2026-03-25|2603.23997v3|F_3dfm|HGGT: Robust and Flexible 3D Hand Mesh Reconstruction from Uncalibrated Images
+2026-03-25|2603.24083v1|F_scene_graph|Knowledge-Guided Manipulation Using Multi-Task Reinforcement Learning
+2026-03-24|2603.22899v1|B_affordance_vla|Agile-VLA: Few-Shot Industrial Pose Rectification via Implicit Affordance Anchoring
+2026-03-24|2603.22760v1|B_affordance_vla|SG-VLA: Learning Spatially-Grounded Vision-Language-Action Models for Mobile Manipulation
+2026-03-24|2603.23202v2|D_active_vla|Gaze-Regularized Vision-Language-Action Models for Robotic Manipulation
+2026-03-23|2603.26757v3|A_cross_view|Beyond Viewpoint Generalization: What Multi-View Demonstrations Offer and How to Synthesize Them for Robot Manipulation?
+2026-03-23|2603.22003v3|B_affordance_vla|VP-VLA: Visual Prompting as an Interface for Vision-Language-Action Models
+2026-03-22|2603.21051v1|E_spatial_action|Cortical Policy: A Dual-Stream View Transformer for Robotic Manipulation
+2026-03-19|2603.19183v2|D_active_vla|Sparse Autoencoders Reveal Interpretable and Steerable Features in VLA Models
+2026-03-19|2603.18892v2|E_spatial_bench|MultihopSpatial: Multi-hop Compositional Spatial Reasoning Benchmark for Vision-Language Model
+2026-03-18|2603.17993v1|A_6dof_generalization|GMT: Goal-Conditioned Multimodal Transformer for 6-DOF Object Trajectory Synthesis in 3D Scenes
+2026-03-18|2603.17720v2|E_vsi|VolumeDP: Modeling Volumetric Representation for Manipulation Policy Learning
+2026-03-17|2603.17117v1|A_camera_cond|MosaicMem: Hybrid Spatial Memory for Controllable Video World Models
+2026-03-17|2603.16270v2|A_6dof_generalization|MG-Grasp: Metric-Scale Geometric 6-DoF Grasping Framework with Sparse RGB Observations
+2026-03-17|2603.16471v1|D_nbv|Coverage First Next Best View for Inspection of Cluttered Pipe Networks Using Mobile Manipulators
+2026-03-17|2603.16958v1|E_vsi|PhysQuantAgent: An Inference Pipeline of Mass Estimation for Vision-Language Models
+2026-03-16|2603.14811v1|A_cross_view|Ego to World: Collaborative Spatial Reasoning in Embodied Systems via Reinforcement Learning
+2026-03-16|2603.14880v1|B_grasp_vlm|RealVLG-R1: A Large-Scale Real-World Visual-Language Grounding Benchmark for Robotic Perception and Manipulation
+2026-03-16|2603.16952v2|C_vla_memory|Embodied Foundation Models at the Edge: A Survey of Deployment Constraints and Mitigation Strategies
+2026-03-16|2603.15097v2|D_active_perception|AeroGrab: A Unified Framework for Aerial Grasping in Cluttered Environments
+2026-03-15|2603.14523v1|D_active_vla|VLA-Thinker: Boosting Vision-Language-Action Models through Thinking-with-Image Reasoning
+2026-03-15|2603.14401v1|F_3dfm|OCRA: Object-Centric Learning with 3D and Tactile Priors for Human-to-Robot Action Transfer
+2026-03-14|2603.13788v1|B_3d_vla|ST-VLA: Enabling 4D-Aware Spatiotemporal Understanding for General Robot Manipulation
+2026-03-14|2603.13869v2|B_pointcloud_policy|TransDex: Pre-training Visuo-Tactile Policy with Point Cloud Reconstruction for Dexterous Manipulation of Transparent Objects
+2026-03-14|2603.13825v1|F_world_model|Building Explicit World Model for Zero-Shot Open-World Object Manipulation
+2026-03-13|2603.12939v2|C_object_permanence|RoboStream: Weaving Spatio-Temporal Reasoning with Memory in Vision-Language Models for Robotics
+2026-03-13|2603.12665v4|C_occlusion|TacVLA: Contact-Aware Tactile Fusion for Robust Vision-Language-Action Manipulation
+2026-03-13|2603.12942v1|C_vla_memory|ReMem-VLA: Empowering Vision-Language-Action Model with Memory via Dual-Level Recurrent Queries
+2026-03-13|2603.13033v1|E_spatial_bench|ESPIRE: A Diagnostic Benchmark for Embodied Spatial Reasoning of Vision-Language Models
+2026-03-13|2603.13433v1|E_grounding_action|Spatially Grounded Long-Horizon Task Planning in the Wild
+2026-03-13|2603.12730v1|F_spatial_vla|AnchorVLA4D: an Anchor-Based Spatial-Temporal Vision-Language-Action Model for Robotic Manipulation
+2026-03-12|2603.12193v1|D_active_perception|SaPaVe: Towards Active Perception and Manipulation in Vision-Language-Action Models for Robotics
+2026-03-12|2603.12265v1|E_vsi|OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams
+2026-03-11|2603.10871v1|B_3d_vla|FG-CLTP: Fine-Grained Contrastive Language Tactile Pretraining for Robotic Manipulation
+2026-03-11|2603.10616v1|B_grasp_vlm|AdaClearGrasp: Learning Adaptive Clearing for Zero-Shot Robust Dexterous Grasping in Densely Cluttered Environments
+2026-03-11|2603.10340v1|D_active_vla|Overcoming Visual Clutter in Vision Language Action Models via Concept-Gated Visual Distillation
+2026-03-11|2603.10828v1|F_spatial_prompt|BALD-SAM: Disagreement-based Active Prompting in Interactive Segmentation
+2026-03-10|2603.09542v3|D_active_vla|NS-VLA: Towards Neuro-Symbolic Vision-Language-Action Models
+2026-03-10|2603.10158v1|D_active_vla|Cross-Hand Latent Representation for Vision-Language-Action Models
+2026-03-09|2603.08255v2|A_view_invariance|FlowTouch: View-Invariant Visuo-Tactile Prediction
+2026-03-09|2603.08668v1|B_grasp_vlm|Exp-Force: Experience-Conditioned Pre-Grasp Force Selection with Vision-Language Models
+2026-03-09|2603.08988v1|B_grasp_vlm|Characterization, Analytical Planning, and Hybrid Force Control for the Inspire RH56DFX Hand
+2026-03-09|2603.08007v1|E_spatial_bench|ViSA-Enhanced Aerial VLN: A Visual-Spatial Reasoning Enhanced Framework for Aerial Vision-Language Navigation
+2026-03-08|2603.07751v3|E_vlm_spatial_fail|3ViewSense: Spatial and Mental Perspective Reasoning from Orthographic Views in Vision-Language Models
+2026-03-07|2603.07165v1|F_imitation_spatial|RoTri-Diff: A Spatial Robot-Object Triadic Interaction-Guided Diffusion Model for Bimanual Manipulation
+2026-03-06|2603.06846v1|E_vsi|MotionBits: Video Segmentation through Motion-Level Analysis of Rigid Bodies
+2026-03-05|2603.05355v2|C_occlusion|OmniDP: Beyond-FOV Large-Workspace Humanoid Manipulation with Omnidirectional 3D Perception
+2026-03-04|2603.04639v3|C_vla_memory|RoboMME: Benchmarking and Understanding Memory for Robotic Generalist Policies
+2026-03-04|2603.03944v2|E_vsi|SCP: Spatial Causal Prediction in Video
+2026-03-04|2603.03739v1|F_spatial_vla|PROSPECT: Unified Streaming Vision-Language Navigation via Semantic--Spatial Fusion and Latent Predictive Representation
+2026-03-03|2603.02976v2|B_spatial_rep|DreamFlow: Local Navigation Beyond Observation via Conditional Flow Matching in the Latent Space
+2026-03-03|2603.03243v2|D_active_perception|HoMMI: Learning Whole-Body Mobile Manipulation from Human Demonstrations
+2026-03-03|2603.03198v1|E_spatial_intelligence|ACE-Brain-0: Spatial Intelligence as a Shared Scaffold for Universal Embodiments
+2026-03-03|2603.02511v1|E_spatial_action|Learning Object-Centric Spatial Reasoning for Sequential Manipulation in Cluttered Environments
+2026-03-01|2603.02271v1|C_vla_memory|Characterizing VLA Models: Identifying the Action Generation Bottleneck for Edge AI Architectures
+2026-02-28|2603.00500v1|F_gaussian_splat|Zero-Shot Robotic Manipulation via 3D Gaussian Splatting-Enhanced Multimodal Retrieval-Augmented Generation
+2026-02-27|2602.23721v2|B_3d_vla|StemVLA:An Open-Source Vision-Language-Action Model with Future 3D Spatial Geometry Knowledge and 4D Historical Representation
+2026-02-27|2602.23814v1|B_pointcloud_policy|Action-Geometry Prediction with 3D Geometric Prior for Bimanual Manipulation
+2026-02-26|2602.22998v1|D_active_vision|A Perspective on Open Challenges in Deformable Object Manipulation
+2026-02-26|2602.22862v1|F_imitation_spatial|GraspLDP: Towards Generalizable Grasping Policy via Latent Diffusion
+2026-02-25|2602.22461v1|D_active_vision|EgoAVFlow: Robot Policy Learning with Active Vision from Human Egocentric Videos via 3D Flow
+2026-02-24|2602.20566v1|A_cross_view|BFA++: Hierarchical Best-Feature-Aware Token Prune for Multi-View Vision Language Action Model
+2026-02-24|2602.21013v2|C_vla_memory|Notes-to-Self: Scratchpad Augmented VLAs for Memory Dependent Manipulation Tasks
+2026-02-24|2602.21186v2|E_spatial_bench|Spa3R: Predictive Spatial Field Modeling for 3D Visual Reasoning
+2026-02-23|2602.20079v1|A_camera_cond|SemanticNVS: Improving Semantic Scene Understanding in Generative Novel View Synthesis
+2026-02-23|2602.20055v2|D_active_perception|CoReLIN: Constraint-based Reasoning for Zero-shot Lifelong Interactive Navigation
+2026-02-23|2602.20231v2|F_depth_vla|UniLACT: Depth-Aware RGB Latent Action Learning for Vision-Language-Action Models
+2026-02-20|2602.18374v1|B_grasp_vlm|Zero-shot Interactive Perception
+2026-02-19|2602.17537v1|A_6dof_generalization|IRIS: Learning-Driven Task-Specific Cinema Robot Arm for Visuomotor Motion Control
+2026-02-18|2603.00110v2|C_object_permanence|Learning Physics from Pretrained Video Models: A Multimodal Continuous and Sequential World Interaction Models for Robotic Manipulation
+2026-02-16|2602.14363v2|C_occlusion|AdaptManip: Learning Adaptive Whole-Body Object Lifting and Delivery with Online Recurrent State Estimation
+2026-02-15|2602.13961v1|E_vlm_spatial_fail|MarsRetrieval: Benchmarking Vision-Language Models for Planetary-Scale Geospatial Retrieval on Mars
+2026-02-15|2602.14193v1|F_imitation_spatial|Learning Part-Aware Dense 3D Feature Field for Generalizable Articulated Object Manipulation
+2026-02-12|2602.11885v2|C_dynamic_manip|Choose What to Manipulate: Revealing Data Scaling Laws in Bounding-Box Guided Policies for Semantic Manipulation
+2026-02-11|2602.10743v2|C_belief_state|Kalman Linear Attention: Parallel Bayesian Filtering For Efficient Language Modelling and State Tracking
+2026-02-11|2602.10983v2|F_world_model|Scaling World Model for Hierarchical Manipulation Policies
+2026-02-11|2602.13329v1|F_spatial_vla|HiST-VLA: A Hierarchical Spatio-Temporal Vision-Language-Action Model for End-to-End Autonomous Driving
+2026-02-11|2602.10698v1|F_depth_vla|AugVLA-3D: Depth-Driven Feature Augmentation for Vision-Language-Action Models
+2026-02-10|2602.09878v3|A_cross_view|MVISTA-4D: View-Consistent 4D World Model with Test-Time Action Inference for Robotic Manipulation
+2026-02-10|2602.15892v2|E_vlm_spatial_fail|Egocentric Bias in Vision-Language Models
+2026-02-10|2602.10109v1|F_spatial_vla|ST4VLA: Spatially Guided Training for Vision-Language-Action Models
+2026-02-10|2602.10101v2|F_imitation_spatial|Robo3R: Enhancing Robotic Manipulation with Accurate Feed-Forward 3D Reconstruction
+2026-02-09|2602.08167v2|B_affordance_vla|Self-Supervised Bootstrapping of Action-Predictive Embodied Reasoning
+2026-02-09|2602.08266v1|D_nbv|Informative Object-centric Next Best View for Object-aware 3D Gaussian Splatting in Cluttered Scenes
+2026-02-08|2602.07845v1|F_depth_vla|Recurrent-Depth VLA: Implicit Test-Time Compute Scaling of Vision-Language-Action Models via Latent Iterative Reasoning
+2026-02-07|2602.07541v1|C_dynamic_manip|Differentiate-and-Inject: Enhancing VLAs via Functional Differentiation Induced by In-Parameter Structural Reasoning
+2026-02-06|2602.06575v2|D_active_vla|Think Proprioceptively: State-Grounded Visual Token Selection for VLA Policies
+2026-02-06|2602.07082v1|E_spatial_action|MosaicThinker: On-Device Visual Spatial Reasoning for Embodied AI via Iterative Construction of Space Representation
+2026-02-05|2602.05441v1|B_affordance_vla|Benchmarking Affordance Generalization with BusyBox
+2026-02-05|2602.06001v1|C_object_permanence|Visuo-Tactile World Models
+2026-02-04|2602.04315v1|B_affordance_vla|GeneralVLA: Generalizable Vision-Language-Action Models with Knowledge-Guided Trajectory Planning
+2026-02-04|2602.04600v2|D_active_perception|Act, Sense, Act: Learning Active Perception from Large-Scale Egocentric Human Data
+2026-02-04|2602.04877v1|E_vsi|CoWTracker: Tracking by Warping instead of Correlation
+2026-02-03|2602.03547v1|E_grounding_action|AffordanceGrasp-R1:Leveraging Reasoning-Based Affordance Segmentation with Reinforcement Learning for Robotic Grasping
+2026-02-02|2602.02467v1|C_belief_state|Indications of Belief-Guided Agency and Meta-Cognitive Monitoring in Large Language Models
+2026-02-02|2602.01731v1|D_active_perception|Uncertainty-Aware Non-Prehensile Manipulation with Mobile Manipulators under Object-Induced Occlusion
+2026-02-02|2602.01939v3|D_active_perception|Towards Exploratory and Focused Manipulation with Bimanual Active Perception: A New Problem, Benchmark and Strategy
+2026-02-02|2602.02430v1|F_3dfm|3D Foundation Model-Based Loop Closing for Decentralized Collaborative SLAM
+2026-02-02|2602.02402v2|F_gaussian_splat|SoMA: A Real-to-Sim Neural Simulator for Robotic Soft-body Manipulation
+2026-01-31|2602.00937v3|B_pointcloud_policy|CLAMP: Contrastive Learning for 3D Multi-View Action-Conditioned Robotic Manipulation Pretraining
+2026-01-31|2602.00686v2|C_dynamic_manip|Learning to Accelerate Vision-Language-Action Models through Adaptive Visual Token Caching
+2026-01-31|2602.00743v1|E_grounding_action|SA-VLA: Spatially-Aware Flow-Matching for Vision-Language-Action Reinforcement Learning
+2026-01-31|2602.00635v1|F_spatial_prompt|S$^3$POT: Contrast-Driven Face Occlusion Segmentation via Self-Supervised Prompt Learning
+2026-01-30|2601.22988v2|A_camera_pose|Learning Geometrically-Grounded Amodal 3D Representations for View-Generalizable Robotic Manipulation
+2026-01-29|2602.00169v2|A_frame_reference|Towards Agentic Intelligence for Materials Science
+2026-01-29|2601.21282v2|C_object_permanence|WorldBench: Benchmarking Physical Understanding of World Models by Isolating Physics Concepts
+2026-01-29|2601.21713v1|C_occlusion|Disentangling perception and reasoning for improving data efficiency in learning cloth manipulation without demonstrations
+2026-01-29|2601.21199v1|E_vsi|Thinker: A vision-language foundation model for embodied intelligence
+2026-01-28|2601.20334v2|D_active_vla|Demonstration-Free Robotic Control via LLM Agents
+2026-01-28|2602.15872v3|E_grounding_action|MARVL: Multi-Stage Guidance for Robotic Manipulation via Vision-Language Models
+2026-01-27|2601.19099v2|E_spatial_bench|m2sv: A Scalable Benchmark for Map-to-Street-View Spatial Reasoning
+2026-01-27|2601.19712v1|E_vlm_spatial_fail|Physics-Aware Novel-View Acoustic Synthesis with Vision-Language Priors and 3D Acoustic Environment Modeling
+2026-01-26|2601.18328v1|C_spatial_memory|MarioChart: Autonomous Tangibles as Active Proxy Interfaces for Embodied Casual Data Exploration
+2026-01-26|2601.18100v2|E_spatial_bench|Spatial-Conditioned Reasoning in Long-Egocentric Videos
+2026-01-26|2601.18252v2|F_spatial_prompt|Co-PLNet: A Collaborative Point-Line Network for Prompt-Guided Wireframe Parsing
+2026-01-25|2601.17885v2|A_cross_view|PEAfowl: Perception-Enhanced Multi-View Vision-Language-Action for Bimanual Manipulation
+2026-01-24|2601.17486v1|B_pointcloud_policy|EquiForm: Noise-Robust SE(3)-Equivariant Policy Learning from 3D Point Clouds
+2026-01-22|2601.16207v2|B_3d_vla|IVRA: Improving Visual-Token Relations for Robot Action Policy with Training-Free Hint-Based Guidance
+2026-01-22|2601.16046v2|B_grasp_vlm|DextER: Language-driven Dexterous Grasp Generation with Embodied Reasoning
+2026-01-21|2601.14874v1|B_grasp_vlm|HumanoidVLM: Vision-Language-Guided Impedance Control for Contact-Rich Humanoid Manipulation
+2026-01-21|2601.14628v2|C_vla_memory|NeuroVLA: A Brain-inspired Embodied Intelligence for Fluid and Fast Reflexive Robotics Control
+2026-01-20|2601.13639v1|D_active_perception|A General One-Shot Multimodal Active Perception Framework for Robotic Manipulation: Learning to Predict Optimal Viewpoint
+2026-01-20|2601.13809v2|D_active_vla|DroneVLA: VLA based Aerial Manipulation
+2026-01-15|2601.09954v2|E_spatial_bench|The Spatial Blindspot of Vision-Language Models
+2026-01-14|2601.09230v2|E_spatial_intelligence|CLIDD: Cross-Layer Independent Deformable Description for Efficient and Discriminative Local Feature Representation
+2026-01-13|2601.08325v1|B_3d_vla|ActiveVLA: Injecting Active Perception into Vision-Language-Action Models for Precise 3D Robotic Manipulation
+2026-01-13|2601.09031v1|E_vsi|Generalizable Geometric Prior and Recurrent Spiking Feature Learning for Humanoid Robot Manipulation
+2026-01-11|2601.07060v2|B_affordance_vla|PALM: Progress-Aware Policy Learning via Affordance Reasoning for Long-Horizon Robotic Manipulation
+2026-01-07|2601.04052v2|B_affordance_vla|Stable Language Guidance for Vision-Language-Action Models
+2026-01-07|2601.03520v1|B_spatial_rep|A Reinforcement Learning-Based Model for Mapping and Goal-Directed Navigation Using Multiscale Place Fields
+2026-01-07|2601.03579v1|B_spatial_rep|SpatiaLoc: Leveraging Multi-Level Spatial Enhanced Descriptors for Cross-Modal Localization
+2026-01-07|2601.03590v1|E_spatial_intelligence|Can LLMs See Without Pixels? Benchmarking Spatial Intelligence from Textual Descriptions
+2026-01-07|2601.03782v1|F_world_model|PointWorld: Scaling 3D World Models for In-The-Wild Robotic Manipulation
+2026-01-05|2601.02102v1|E_spatial_intelligence|360-GeoGS: Geometrically Consistent Feed-Forward 3D Gaussian Splatting Reconstruction for 360 Images
+2026-01-04|2601.01618v1|C_dynamic_manip|Action-Sketcher: From Reasoning to Action via Visual Sketches for Long-Horizon Robotic Manipulation
+2026-01-04|2601.01547v2|E_spatial_bench|Vision-language models lag human performance on physical dynamics and intent reasoning
+2025-12-28|2512.22854v2|A_cross_view|ByteLoom: Weaving Geometry-Consistent Human-Object Interactions through Progressive Curriculum Learning
+2025-12-26|2512.21970v2|F_spatial_vla|StereoVLA: Enhancing Vision-Language-Action Models with Stereo Vision
+2025-12-23|2512.20783v1|F_spatial_prompt|NULLBUS: Multimodal Mixed-Supervision for Breast Ultrasound Segmentation via Nullable Global-Local Prompts
+2025-12-20|2512.18477v1|F_world_model|STORM: Search-Guided Generative World Models for Robotic Manipulation
+2025-12-19|2512.17568v1|B_pointcloud_policy|Kinematics-Aware Diffusion Policy with Consistent 3D Observation and Action Space for Whole-Arm Robotic Manipulation
+2025-12-18|2512.16811v2|B_3d_vla|GeoPredict: Leveraging Predictive Kinematics and 3D Gaussian Geometry for Precise VLA Manipulation
+2025-12-17|2512.15020v3|B_pointcloud_policy|ISS Policy : Scalable Diffusion Policy with Implicit Scene Supervision
+2025-12-15|2512.13380v1|B_grasp_vlm|Universal Dexterous Functional Grasping via Demonstration-Editing Reinforcement Learning
+2025-12-15|2512.13080v1|E_spatial_action|Spatial-Aware VLA Pretraining through Visual-Physical Alignment from Human Videos
+2025-12-11|2512.11921v1|B_affordance_vla|Towards Accessible Physical AI: LoRA-Based Fine-Tuning of VLA Models for Real-World Robot Control
+2025-12-11|2512.10863v1|E_spatial_intelligence|MMSI-Video-Bench: A Holistic Benchmark for Video-Based Spatial Intelligence
+2025-12-10|2512.09619v1|B_3d_vla|GLaD: Geometric Latent Distillation for Vision-Language-Action Models
+2025-12-10|2512.09903v1|B_spatial_rep|YOPO-Nav: Visual Navigation using 3DGS Graphs from One-Pass Videos
+2025-12-10|2512.09656v2|F_gaussian_splat|ReMoSPLAT: Reactive Mobile Manipulation Control on a Gaussian Splat
+2025-12-08|2512.07472v1|B_affordance_vla|Affordance Field Intervention: Enabling VLAs to Escape Memory Traps in Robotic Manipulation
+2025-12-08|2512.07215v2|B_grasp_vlm|VFM-VLM: Vision Foundation Model and Vision Language Model based Visual Comparison for 3D Pose Estimation
+2025-12-05|2512.06096v1|E_vlm_spatial_fail|BeLLA: End-to-End Birds Eye View Large Language Assistant for Autonomous Driving
+2025-12-04|2512.04686v2|A_cross_view|Towards Cross-View Point Correspondence in Vision-Language Models
+2025-12-04|2512.04884v3|A_cross_view|Hoi! - A Multimodal Dataset for Force-Grounded, Cross-View Articulated Manipulation
+2025-12-04|2512.06032v1|F_spatial_prompt|The SAM2-to-SAM3 Gap in the Segment Anything Model Family: Why Prompt-Based Expertise Fails in Concept-Driven Image Segmentation
+2025-12-03|2512.03422v2|F_3dfm|What Is The Best 3D Scene Representation for Robotics? From Geometric to Foundation Models
+2025-12-03|2512.03913v1|F_scene_graph|Hierarchical Vision Language Action Model Using Success and Failure Demonstrations
+2025-12-02|2512.02340v1|E_spatial_bench|Reasoning Path and Latent State Analysis for Multi-view Visual Spatial Reasoning: A Cognitive Science Perspective
+2025-12-02|2512.02902v2|F_spatial_vla|VLA Models Are More Generalizable Than You Think: Revisiting Physical and Spatial Modeling
+2025-12-01|2512.01773v2|C_dynamic_manip|IGen: Scalable Data Generation for Robot Learning from Open-World Images
+2025-12-01|2512.01188v1|D_active_perception|Real-World Reinforcement Learning of Active Perception Behaviors
+2025-12-01|2512.01889v1|E_spatial_intelligence|KM-ViPE: Online Tightly Coupled Vision-Language-Geometry Fusion for Open-Vocabulary Semantic SLAM
+2025-12-01|2512.01924v1|F_world_model|Real-World Robot Control by Deep Active Inference With a Temporally Hierarchical World Model
+2025-11-30|2512.00939v3|B_reachability|Constant-Time Planning for Chaining Collision-free Motion to Manipulation Behaviors
+2025-11-29|2512.00493v1|A_camera_cond|CC-FMO: Camera-Conditioned Zero-Shot Single Image to 3D Scene Generation with Foundation Model Orchestration
+2025-11-27|2511.22777v1|B_affordance_vla|Improving Robotic Manipulation Robustness via NICE Scene Surgery
+2025-11-27|2511.22659v1|E_vlm_spatial_fail|Geometrically-Constrained Agent for Spatial Reasoning
+2025-11-25|2511.19827v1|A_camera_cond|ReDirector: Creating Any-Length Video Retakes with Rotary Camera Encoding
+2025-11-25|2511.20841v1|B_grasp_vlm|OVAL-Grasp: Open-Vocabulary Affordance Localization for Task Oriented Grasping
+2025-11-25|2511.20644v2|E_spatial_bench|Vision-Language Memory for Spatial Reasoning
+2025-11-24|2511.18960v4|D_active_vla|AVA-VLA: Improving Vision-Language-Action models with Active Visual Attention
+2025-11-22|2511.18140v2|A_camera_pose|Observer-Actor: Active Vision Imitation Learning with Sparse-View Gaussian Splatting
+2025-11-21|2511.17199v1|B_3d_vla|VLA-4D: Embedding 4D Awareness into Vision-Language-Action Models for SpatioTemporally Coherent Robotic Manipulation
+2025-11-21|2511.17793v1|E_vlm_spatial_fail|Attention Guided Alignment in Efficient Vision-Language Models
+2025-11-21|2511.17792v2|E_vsi|Target-Bench: Can Video World Models Achieve Mapless Path Planning with Semantic Targets?
+2025-11-19|2511.15194v1|E_spatial_action|Eq.Bot: Enhance Robotic Manipulation Learning via Group Equivariant Canonicalization
+2025-11-18|2511.14086v2|E_grounding_action|Error-Driven Scene Editing for 3D Grounding in Large Language Models
+2025-11-17|2511.13001v1|F_spatial_prompt|Medal S: Spatio-Textual Prompt Model for Medical Segmentation
+2025-11-14|2511.11052v2|B_grasp_vlm|AdaptPNP: Integrating Prehensile and Non-Prehensile Skills for Adaptive Robotic Manipulation
+2025-11-14|2511.10946v3|E_spatial_intelligence|Abstract 3D Perception for Spatial Intelligence in Vision-Language Models
+2025-11-12|2511.09516v1|C_vla_memory|MAP-VLA: Memory-Augmented Prompting for Vision-Language-Action Model in Robotic Manipulation
+2025-11-12|2511.11702v1|E_grounding_action|Task-Aware 3D Affordance Segmentation via 2D Guidance and Geometric Refinement
+2025-11-11|2511.08823v1|A_camera_cond|DT-NVS: Diffusion Transformers for Novel View Synthesis
+2025-11-10|2511.06745v1|C_object_permanence|Physically-Grounded Goal Imagination: Physics-Informed Variational Autoencoder for Self-Supervised Reinforcement Learning
+2025-11-08|2511.05791v2|B_grasp_vlm|VLAD-Grasp: Zero-shot Grasp Detection via Vision-Language Models
+2025-11-08|2511.05936v1|F_spatial_vla|10 Open Challenges Steering the Future of Vision-Language-Action Models
+2025-11-07|2511.05491v1|F_spatial_vla|Visual Spatial Tuning
+2025-11-06|2511.03992v2|A_camera_cond|Camera-Aware Cross-View Alignment for Referring 3D Gaussian Splatting Segmentation
+2025-11-06|2511.04199v1|D_nbv|GraspView: Active Perception Scoring and Best-View Optimization for Robotic Grasping in Cluttered Environments
+2025-11-06|2511.04665v2|F_gaussian_splat|Real-to-Sim Robot Policy Evaluation with Gaussian Splatting Simulation of Soft-Body Interactions
+2025-11-03|2511.01210v3|E_spatial_intelligence|OmniVLA: Physically-Grounded Multimodal VLA with Unified Multi-Sensor Perception for Robotic Manipulation
+2025-10-29|2510.25760v2|E_spatial_bench|Multimodal Spatial Reasoning in the Large Model Era: A Survey and Benchmarks
+2025-10-27|2510.24792v2|E_vlm_spatial_fail|PISA-Bench: The PISA Index as a Multilingual and Multimodal Metric for the Evaluation of Vision-Language Models
+2025-10-24|2510.21571v1|D_active_vla|Scalable Vision-Language-Action Model Pretraining for Robotic Manipulation with Real-Life Human Activity Videos
+2025-10-23|2510.20813v1|F_gaussian_splat|GSWorld: Closed-Loop Photo-Realistic Simulation Suite for Robotic Manipulation
+2025-10-22|2510.19752v1|B_affordance_vla|Learning Affordances at Inference-Time for Vision-Language-Action Models
+2025-10-22|2510.19400v2|E_spatial_intelligence|Seeing Across Views: Benchmarking Spatial Reasoning of Vision-Language Models in Robotic Scenes
+2025-10-21|2510.18316v4|B_reachability|MoMaGen: Generating Demonstrations under Soft and Hard Constraints for Multi-Step Bimanual Mobile Manipulation
+2025-10-21|2510.18873v1|E_vlm_spatial_fail|DSI-Bench: A Benchmark for Dynamic Spatial Intelligence
+2025-10-20|2510.17111v3|C_vla_memory|Efficient Vision-Language-Action Models for Embodied Manipulation: A Systematic Survey
+2025-10-20|2510.17640v4|D_active_vla|RESample: A Robust Data Augmentation Framework via Exploratory Sampling for Robotic Manipulation
+2025-10-20|2510.17439v3|F_spatial_vla|From Spatial to Actions: Grounding Vision-Language-Action Model in Spatial Foundation Priors
+2025-10-17|2510.15530v4|B_pointcloud_policy|VO-DP: Semantic-Geometric Adaptive Diffusion Policy for Vision-Only Robotic Manipulation
+2025-10-16|2510.14836v3|B_3d_vla|QDepth-VLA: Quantized Depth Prediction as Auxiliary Supervision for Vision-Language-Action Models
+2025-10-15|2510.13595v2|D_info_gain|Active Tactile Exploration for Rigid Body Pose and Shape Estimation
+2025-10-15|2510.13394v4|E_spatial_bench|Spatial-DISE: A Unified Benchmark for Evaluating Spatial Reasoning in Vision-Language Models
+2025-10-15|2510.14018v1|E_spatial_intelligence|Spatially Intelligent Patrol Routes for Concealed Emitter Localization by Robot Swarms
+2025-10-15|2510.13778v1|E_spatial_action|InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy
+2025-10-15|2510.13375v1|F_spatial_vla|DepthVLA: Enhancing Vision-Language-Action Models with Depth-Aware Spatial Reasoning
+2025-10-14|2510.12971v2|A_6dof_generalization|Actron3D: Learning Actionable Neural Functions from Videos for Transferable Robotic Manipulation
+2025-10-14|2510.13016v3|E_vsi|SVAG-Bench: A Large-Scale Benchmark for Multi-Instance Spatio-temporal Video Action Grounding
+2025-10-14|2510.12276v2|F_spatial_vla|Spatial Forcing: Implicit Spatial Representation Alignment for Vision-language-action Model
+2025-10-13|2510.11027v2|E_spatial_bench|Vlaser: Vision-Language-Action Model with Synergistic Embodied Reasoning
+2025-10-13|2510.10912v2|E_grounding_action|More than A Point: Capturing Uncertainty with Adaptive Affordance Heatmaps for Spatial Grounding in Robotic Tasks
+2025-10-13|2510.11258v1|F_imitation_spatial|DemoHLM: From One Demonstration to Generalizable Humanoid Loco-Manipulation
+2025-10-11|2510.10181v3|C_vla_memory|Dejavu: Towards Experience Feedback Learning for Embodied Intelligence
+2025-10-10|2510.09606v2|E_vsi|SpaceVista: All-Scale Visual Spatial Reasoning from mm to km
+2025-10-09|2510.07975v1|B_grasp_vlm|Executable Analytic Concepts as the Missing Link Between VLM Insight and Precise Manipulation
+2025-10-09|2510.08531v1|E_spatial_bench|SpatialLadder: Progressive Training for Spatial Reasoning in Vision-Language Models
+2025-10-09|2510.08173v2|E_spatial_intelligence|NavSpace: How Navigation Agents Follow Spatial Intelligence Instructions
+2025-10-09|2510.07778v1|E_grounding_action|IntentionVLA: Generalizable and Efficient Embodied Intention Reasoning for Human-Robot Interaction
+2025-10-09|2510.08759v3|E_vsi|Dissecting Embodied Abilities in Multimodal Language Models through Skill-level Evaluation and Diagnosis
+2025-10-09|2510.08551v1|F_3dfm|ARTDECO: Towards Efficient and High-Fidelity On-the-Fly 3D Reconstruction with Structured Scene Representation
+2025-10-08|2510.07313v1|A_cross_view|WristWorld: Generating Wrist-Views via 4D World Models for Robotic Manipulation
+2025-10-08|2510.07134v1|E_spatial_action|TrackVLA++: Unleashing Reasoning and Memory Capabilities in VLA Models for Embodied Visual Tracking
+2025-10-07|2510.21746v1|A_camera_pose|Avi: Action from Volumetric Inference
+2025-10-07|2510.06067v2|E_spatial_bench|Reasoning under Vision: Understanding Visual-Spatial Cognition in Vision-Language Models for CAPTCHA
+2025-10-07|2510.21744v1|F_scene_graph|FORGE-Tree: Diffusion-Forcing Tree Search for Long-Horizon Robot Manipulation
+2025-10-04|2510.03895v2|E_spatial_action|NoTVLA: Semantics-Preserving Robot Adaptation via Narrative Action Interfaces
+2025-10-03|2510.06251v2|E_vlm_spatial_fail|Physics Knowledge in Frontier Models: A Diagnostic Study of Failure Modes
+2025-10-03|2510.03135v2|E_vsi|Mask2IV: Interaction-Centric Video Generation via Mask Trajectories
+2025-10-02|2510.02268v1|A_view_invariance|Do You Know Where Your Camera Is? View-Invariant Policy Learning with Camera Conditioning
+2025-10-02|2510.01623v1|B_affordance_vla|VLA-R1: Enhancing Reasoning in Vision-Language-Action Models
+2025-10-02|2510.01607v1|D_active_perception|ActiveUMI: Robotic Manipulation with Active Perception from Robot-Free Human Demonstrations
+2025-10-01|2510.01433v3|C_occlusion|AFFORD2ACT: How Far Can Sparse Keypoints Go for Robot Manipulation?
+2025-10-01|2510.01483v3|E_vsi|Spatiotemporal Knowledge Graphs as Persistent Scene Memory for Embodied Question Answering
+2025-09-30|2509.25966v1|F_spatial_vla|MUVLA: Learning to Explore Object Navigation via Map Understanding
+2025-09-26|2509.22578v2|A_camera_pose|EgoDemoGen: Egocentric Demonstration Generation for Viewpoint Generalization in Robotic Manipulation
+2025-09-26|2509.22642v2|C_object_permanence|WoW: Towards a World omniscient World model Through Embodied Interaction
+2025-09-26|2509.21723v4|C_dynamic_manip|VLBiMan: Vision-Language Anchored One-Shot Demonstration Enables Generalizable Bimanual Robotic Manipulation
+2025-09-26|2509.21797v3|F_world_model|MoWM: Mixture-of-World-Models for Embodied Planning via Latent-to-Pixel Feature Modulation
+2025-09-25|2509.21243v2|E_spatial_action|RetoVLA: Reusing Register Tokens for Spatial Reasoning in Vision-Language-Action Models
+2025-09-24|2509.20297v3|C_spatial_memory|mindmap: Spatial Memory in Deep Feature Maps for 3D Action Policies
+2025-09-23|2509.19571v2|B_affordance_vla|Agentic Scene Policies
+2025-09-23|2509.18671v2|B_reachability|N2M: Bridging Navigation and Manipulation by Learning Pose Preference from Rollout
+2025-09-23|2509.19012v3|D_active_vla|Pure Vision Language Action (VLA) Models: A Comprehensive Survey
+2025-09-23|2509.18778v2|E_grounding_action|VGGT-DP: Generalizable Robot Control via Vision Foundation Models
+2025-09-21|2509.17125v3|B_pointcloud_policy|Imagine2Act: Leveraging Object-Action Motion Consistency from Imagined Goals for Robotic Manipulation
+2025-09-20|2509.16532v1|B_pointcloud_policy|No Need for Real 3D: Fusing 2D Vision with Pseudo 3D Representations for Robotic Manipulation Learning
+2025-09-19|2509.16053v2|F_scene_graph|Compose by Focus: Scene Graph-based Atomic Skills
+2025-09-18|2509.14787v2|D_info_gain|COMPASS: Confined-space Manipulation Planning with Active Sensing Strategy
+2025-09-18|2509.15490v1|E_spatial_bench|SmolRGPT: Efficient Spatial Reasoning for Warehouse Environments with 600M Parameters
+2025-09-18|2509.14630v1|E_spatial_action|Toward Embodiment Equivariant Vision-Language-Action Policy
+2025-09-17|2509.14117v4|A_camera_pose|GeoAware-VLA: Implicit Geometry Aware Vision-Language-Action Model
+2025-09-15|2509.11688v1|A_frame_reference|Tensor Invariant Data-Assisted Control and Dynamic Decomposition of Multibody Systems
+2025-09-14|2509.11125v3|A_view_invariance|ManiVID-3D: Generalizable View-Invariant Reinforcement Learning for Robotic Manipulation via Disentangled 3D Representations
+2025-09-14|2509.11364v2|A_camera_pose|ActivePose: Active 6D Object Pose Estimation and Tracking for Robotic Manipulation
+2025-09-14|2509.11417v2|B_affordance_vla|Enhancing Generalization in Vision-Language-Action Models by Preserving Pretrained Representations
+2025-09-14|2509.11109v4|F_imitation_spatial|FEWT: Frequency-Enhanced Wavelet-based Transformer for Multimodal Wheeled Bimanual Manipulation
+2025-09-11|2509.09154v1|E_spatial_intelligence|Mind Meets Space: Rethinking Agentic Spatial Intelligence from a Neuroscience-inspired Perspective
+2025-09-10|2509.08813v2|F_3dfm|Calib3R: Hand-Eye Calibration and 3D Metric-Scaled Scene Reconstruction with 3D Foundation Models
+2025-09-09|2509.07957v1|E_vsi|Graph-Fused Vision-Language-Action for Policy Reasoning in Multi-Arm Robotic Manipulation
+2025-09-08|2509.06953v1|C_dynamic_manip|Deep Reactive Policy: Learning Reactive Manipulator Motion Planning for Dynamic Environments
+2025-09-08|2509.06266v2|E_vsi|Spatial Reasoning with Vision-Language Models in Ego-Centric Multi-View Scenes
+2025-09-04|2509.04645v1|B_pointcloud_policy|Planning from Point Clouds over Continuous Actions for Multi-object Rearrangement
+2025-09-04|2509.04443v3|F_imitation_spatial|EMMA: Scaling Mobile Manipulation via Egocentric Human Data
+2025-09-03|2509.02966v2|E_vlm_spatial_fail|KEPT: Knowledge-Enhanced Prediction of Trajectories from Consecutive Driving Frames with Vision-Language Models
+2025-08-31|2509.00823v2|A_6dof_generalization|Inverse Kinematics for a 6-Degree-of-Freedom Robot Manipulator Using Comprehensive Gröbner Systems
+2025-08-30|2509.00310v2|B_spatial_rep|TReF-6: Inferring Task-Relevant Frames from a Single Demonstration for One-Shot Skill Generalization
+2025-08-30|2509.00465v1|E_spatial_intelligence|Embodied Spatial Intelligence: from Implicit Scene Modeling to Spatial Reasoning
+2025-08-26|2508.19204v1|C_object_permanence|LSD-3D: Large-Scale 3D Driving Scene Generation with Geometry Grounding
+2025-08-25|2508.17643v1|C_occlusion|SEBVS: Synthetic Event-based Visual Servoing for Robot Navigation and Manipulation
+2025-08-24|2508.17230v2|B_3d_vla|4D Visual Pre-training for Robot Learning
+2025-08-23|2508.16932v1|A_camera_cond|Align 3D Representation and Text Embedding for 3D Content Personalization
+2025-08-21|2508.15874v2|E_spatial_action|Spatial Policy: Guiding Visuomotor Robotic Manipulation with Spatial-Aware Modeling and Reasoning
+2025-08-19|2508.13534v1|A_coordinate_frame|MimicFunc: Imitating Tool Manipulation from a Single Human Video via Functional Correspondence
+2025-08-18|2508.13103v1|A_cross_view|Grounding Actions in Camera Space: Observation-Centric Vision-Language-Action Policy
+2025-08-18|2508.12916v1|D_active_perception|RoboRetriever: Single-Camera Robot Object Retrieval via Active and Interactive Perception with Dynamic Scene Graph
+2025-08-15|2508.11275v1|B_reachability|Learning Differentiable Reachability Maps for Optimization-based Humanoid Motion Generation
+2025-08-14|2508.10688v3|A_camera_cond|Novel View Synthesis using DDIM Inversion
+2025-08-13|2508.09855v1|A_camera_pose|Toward Human-Robot Teaming: Learning Handover Behaviors from 3D Scenes
+2025-08-12|2508.09032v1|F_spatial_vla|Spatial Traces: Enhancing VLA Models with Spatial-Temporal Understanding
+2025-08-11|2508.07770v2|D_active_vla|AgentWorld: An Interactive Simulation Platform for Scene Construction and Mobile Robotic Manipulation
+2025-08-11|2508.08113v1|E_grounding_action|AimBot: A Simple Auxiliary Visual Cue to Enhance Spatial Awareness of Visuomotor Policies
+2025-08-07|2508.05186v5|A_camera_pose|Learning to See and Act: Task-Aware Virtual View Exploration for Robotic Manipulation
+2025-08-07|2508.05342v2|F_scene_graph|Information-Theoretic Graph Fusion with Vision-Language-Action Model for Policy Reasoning and Dual Robotic Control
+2025-08-04|2508.02549v4|F_depth_vla|MonoDream: Monocular Vision-Language Navigation with Panoramic Dreaming
+2025-08-03|2508.01600v1|A_camera_pose|CLASS: Contrastive Learning via Action Sequence Supervision for Robot Manipulation
+2025-08-01|2508.00823v1|A_camera_pose|IGL-Nav: Incremental 3D Gaussian Localization for Image-goal Navigation
+2025-07-31|2508.00213v1|F_spatial_prompt|SAM-PTx: Text-Guided Fine-Tuning of SAM with Parameter-Efficient, Parallel-Text Adapters
+2025-07-23|2507.17141v1|B_reachability|Towards Human-level Intelligence via Human-like Whole-Body Manipulation
+2025-07-22|2507.17085v2|C_occlusion|Deformable Cluster Manipulation via Whole-Arm Policy Learning
+2025-07-21|2507.15833v3|D_active_vision|Look, Focus, Act: Efficient and Robust Robot Learning via Human Gaze and Foveated Vision Transformers
+2025-07-17|2507.12744v4|A_cross_view|ASC-SW: A Lightweight Atrous Strip Convolution Network for DLOs Segmentation on Edge mobile Robots
+2025-07-14|2507.10496v2|A_camera_cond|Cameras as Relative Positional Encoding
+2025-07-12|2507.09183v2|F_spatial_prompt|Revisiting Pool-based Prompt Learning for Few-shot Class-incremental Learning
+2025-07-11|2507.08726v1|A_camera_pose|Learning human-to-robot handovers through 3D scene reconstruction
+2025-07-10|2507.07781v1|E_spatial_bench|SURPRISE3D: A Dataset for Spatial Understanding and Reasoning in Complex 3D Scenes
+2025-07-09|2507.06822v1|B_pointcloud_policy|Hierarchical Reinforcement Learning for Articulated Tool Manipulation with Multifingered Hand
+2025-07-07|2507.05522v1|D_info_gain|Gaussian Process-Based Active Exploration Strategies in Vision and Touch
+2025-07-06|2507.13362v1|E_vlm_spatial_fail|Enhancing Spatial Reasoning in Vision-Language Models via Chain-of-Thought Prompting and Reinforcement Learning
+2025-07-03|2507.02600v1|F_gaussian_splat|ArtGS:3D Gaussian Splatting for Interactive Visual-Physical Modeling and Manipulation of Articulated Objects
+2025-07-02|2507.01925v1|B_affordance_vla|A Survey on Vision-Language-Action Models: An Action Tokenization Perspective
+2025-07-01|2507.01099v4|A_camera_pose|Geometry-aware 4D Video Generation for Robot Manipulation
+2025-07-01|2507.00416v3|F_depth_vla|Evo-0: Vision-Language-Action Model with Implicit Spatial Understanding
+2025-06-30|2507.00243v2|E_spatial_intelligence|VOCAL: Visual Odometry via ContrAstive Learning
+2025-06-28|2506.22756v1|F_gaussian_splat|RoboPearls: Editable Video Simulation for Robot Manipulation
+2025-06-26|2506.21250v1|E_spatial_action|ACTLLM: Action Consistency Tuned Large Language Model
+2025-06-24|2506.19498v1|B_spatial_rep|T-Rex: Task-Adaptive Spatial Representation Extraction for Robotic Manipulation with Vision-Language Models
+2025-06-24|2506.19303v1|B_grasp_vlm|Robotic Perception with a Large Tactile-Vision-Language Model for Physical Property Inference
+2025-06-24|2506.19842v1|F_gaussian_splat|ManiGaussian++: General Robotic Bimanual Manipulation with Hierarchical Gaussian World Model
+2025-06-23|2506.18385v1|E_spatial_bench|InternSpatial: A Comprehensive Dataset for Spatial Reasoning in Vision-Language Models
+2025-06-23|2506.18825v1|F_scene_graph|SViP: Sequencing Bimanual Visuomotor Policies with Object-Centric Motion Primitives
+2025-06-19|2506.16652v1|F_imitation_spatial|CodeDiffuser: Attention-Enhanced Diffusion Policy via VLM-Generated Code for Instruction Ambiguity
+2025-06-18|2506.15666v1|D_active_perception|Vision in Action: Learning Active Perception from Human Demonstrations
+2025-06-17|2506.14135v5|F_gaussian_splat|GAF: Gaussian Action Field as a 4D Representation for Dynamic World Modeling in Robotic Manipulation
+2025-06-16|2506.13536v1|A_camera_pose|What Matters in Learning from Large-Scale Datasets for Robot Manipulation
+2025-06-12|2506.10686v1|B_spatial_rep|An $O(n$)-Algorithm for the Higher-Order Kinematics and Inverse Dynamics of Serial Manipulators using Spatial Representation of Twists
+2025-06-12|2506.10966v1|F_scene_graph|GENMANIP: LLM-driven Simulation for Generalizable Instruction-Following Manipulation
+2025-06-09|2506.07530v2|C_vla_memory|BitVLA: 1-bit Vision-Language-Action Models for Robotics Manipulation
+2025-06-06|2506.06199v1|F_world_model|3DFlowAction: Learning Cross-Embodiment Manipulation from 3D Flow World Model
+2025-06-04|2506.03834v4|A_camera_pose|CARE: Enhancing Safety of Visual Navigation through Collision Avoidance via Repulsive Estimation
+2025-06-03|2506.02577v1|B_reachability|Reachability Weighted Offline Goal-conditioned Resampling
+2025-06-03|2506.06361v3|D_active_perception|Tactile MNIST: Benchmarking Active Tactile Perception
+2025-06-03|2506.03135v3|E_spatial_bench|OmniSpatial: Towards Comprehensive Spatial Reasoning Benchmark for Vision Language Models
+2025-06-02|2506.01844v1|B_affordance_vla|SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics
+2025-06-02|2506.02286v2|D_nbv|Efficient Manipulation-Enhanced Semantic Mapping With Uncertainty-Informed Action Selection
+2025-06-02|2506.01933v3|E_spatial_intelligence|E3D-Bench: A Benchmark for End-to-End 3D Geometric Foundation Models
+2025-06-01|2506.01196v2|A_view_invariance|OG-VLA: Orthographic Image Generation for 3D-Aware Vision-Language Action Model
+2025-05-30|2506.00285v1|C_belief_state|Lazy Heuristic Search for Solving POMDPs with Expensive-to-Compute Belief Transitions
+2025-05-30|2506.00123v1|E_spatial_intelligence|Visual Embodied Brain: Let Multimodal Large Language Models See, Think, and Control in Spaces
+2025-05-30|2505.24870v2|E_vlm_spatial_fail|GenSpace: Benchmarking Spatially-Aware Image Generation
+2025-05-30|2505.24819v1|F_3dfm|Bi-Manual Joint Camera Calibration and Scene Representation
+2025-05-29|2505.23171v2|A_cross_view|RoboTransfer: Controllable Geometry-Consistent Video Diffusion for Manipulation Policy Transfer
+2025-05-29|2505.23079v1|A_cross_view|iTrace : Interactive Tracing of Cross-View Data Relationships
+2025-05-29|2505.22974v2|D_active_perception|Learning coordinated badminton skills for legged manipulators
+2025-05-28|2505.21906v2|E_spatial_intelligence|ChatVLA-2: Vision-Language-Action Model with Open-World Embodied Reasoning from Pretrained Knowledge
+2025-05-27|2505.20814v1|B_spatial_rep|Spatial RoboGrasp: Generalized Robotic Grasping Control Policy
+2025-05-27|2505.21500v2|E_vlm_spatial_fail|ViewSpatial-Bench: Evaluating Multi-perspective Spatial Localization in Vision-Language Models
+2025-05-26|2505.20148v3|E_spatial_intelligence|MineAnyBuild: Benchmarking Spatial Planning for Open-world AI Agents
+2025-05-26|2505.20283v1|E_grounding_action|Category-Agnostic Neural Object Rigging
+2025-05-25|2505.19306v1|F_3dfm|From Single Images to Motion Policies via Video-Generation Environment Representations
+2025-05-24|2505.18474v2|B_pointcloud_policy|Canonical Policy: Learning Canonical 3D Representation for SE(3)-Equivariant Policy
+2025-05-23|2505.18364v2|F_3dfm|ImLPR: Image-based LiDAR Place Recognition using Vision Foundation Models
+2025-05-22|2505.16969v3|B_pointcloud_policy|3D Equivariant Visuomotor Policy Learning via Spherical Projection
+2025-05-22|2505.16196v3|B_pointcloud_policy|SEM: Enhancing Spatial Understanding for Robust Robot Manipulation
+2025-05-22|2505.16547v3|C_occlusion|Find the Fruit: Zero-Shot Sim2Real RL for Occlusion-Aware Plant Manipulation
+2025-05-20|2505.13888v3|E_spatial_action|InSpire: Vision-Language-Action Models with Intrinsic Spatial Reasoning
+2025-05-19|2505.13731v4|E_vlm_spatial_fail|GeoRanker: Distance-Aware Ranking for Worldwide Image Geolocalization
+2025-05-15|2505.10075v1|F_world_model|FlowDreamer: A RGB-D World Model with Flow-based Motion Representations for Robot Manipulation
+2025-05-14|2505.09118v1|E_vlm_spatial_fail|Seeing Beyond the Scene: Enhancing Vision-Language Models with Interactional Reasoning
+2025-05-13|2505.08548v3|E_spatial_bench|From Seeing to Doing: Bridging Reasoning and Decision for Robotic Manipulation
+2025-05-09|2505.05800v2|B_3d_vla|3D CAVLA: Leveraging Depth and 3D Context to Generalize Vision Language Action Models for Unseen Tasks
+2025-05-08|2505.05456v2|E_spatial_intelligence|SITE: towards Spatial Intelligence Thorough Evaluation
+2025-04-29|2504.20969v2|C_occlusion|XPG-RL: Reinforcement Learning with Explainable Priority Guidance for Efficiency-Boosted Mechanical Search
+2025-04-29|2504.20648v1|E_spatial_bench|SpaRE: Enhancing Spatial Reasoning in Vision-Language Models with Synthetic Data
+2025-04-28|2504.20024v2|E_spatial_bench|SpatialReasoner: Towards Explicit and Generalizable 3D Spatial Reasoning
+2025-04-27|2504.19341v1|C_occlusion|PolyTouch: A Robust Multi-Modal Tactile Sensor for Contact-rich Manipulation Using Tactile-Diffusion Policies
+2025-04-25|2504.18738v1|E_spatial_bench|A Review of 3D Object Detection with Vision-Language Models
+2025-04-23|2504.16464v1|F_world_model|ManipDreamer: Boosting Robotic Manipulation World Model with Action Tree and Visual Guidance
+2025-04-22|2504.15517v1|B_spatial_rep|Few-Shot Vision-Language Action-Incremental Policy Learning
+2025-04-21|2504.15280v2|A_cross_view|Seeing from Another Perspective: Evaluating Multi-View Understanding in MLLMs
+2025-04-21|2504.15229v1|F_gaussian_splat|Immersive Teleoperation Framework for Locomanipulation Tasks
+2025-04-18|2504.13440v1|E_vsi|Temporal Propagation of Asymmetric Feature Pyramid for Surgical Scene Segmentation
+2025-04-18|2504.13713v6|F_gaussian_splat|SLAM&Render: A Benchmark for the Intersection Between Neural Rendering, Gaussian Splatting and SLAM
+2025-04-13|2504.09705v2|B_spatial_rep|From Movement Primitives to Distance Fields to Dynamical Systems
+2025-04-04|2504.03129v1|F_3dfm|GraphSeg: Segmented 3D Representations via Graph Edge Addition and Contraction
+2025-04-03|2504.02477v3|C_spatial_memory|Multimodal Fusion and Vision-Language Models: A Survey for Robot Vision
+2025-03-28|2503.22588v1|D_info_gain|Next-Best-Trajectory Planning of Robot Manipulators for Effective Observation and Exploration
+2025-03-25|2503.19707v1|E_spatial_bench|Mind the Gap: Benchmarking Spatial Reasoning in Vision-Language Models
+2025-03-21|2503.16803v1|C_belief_state|BEAC: Imitating Complex Exploration and Task-oriented Behaviors for Invisible Object Nonprehensile Manipulation
+2025-03-21|2503.17349v2|E_vlm_spatial_fail|Beyond Semantics: Rediscovering Spatial Awareness in Vision-Language Models
+2025-03-20|2503.15973v2|F_spatial_prompt|STOP: Integrated Spatial-Temporal Dynamic Prompting for Video Understanding
+2025-03-19|2503.15035v1|B_grasp_vlm|GraspCorrect: Robotic Grasp Correction via Vision-Language Model-Guided Feedback
+2025-03-19|2503.15368v1|F_imitation_spatial|Online Imitation Learning for Manipulation via Decaying Relative Correction through Teleoperation
+2025-03-16|2503.12533v2|D_active_vision|Being-0: A Humanoid Robotic Agent with Vision-Language Models and Modular Skills
+2025-03-13|2503.10592v1|A_camera_cond|CameraCtrl II: Dynamic Scene Exploration via Camera-controlled Video Diffusion Models
+2025-03-12|2503.09040v4|F_gaussian_splat|Motion Blender Gaussian Splatting for Dynamic Scene Reconstruction
+2025-03-11|2503.08481v2|B_spatial_rep|PhysVLM: Enabling Visual Language Models to Understand Robotic Physical Reachability
+2025-03-07|2503.05578v4|A_6dof_generalization|Scalable Unseen Objects 6-DoF Absolute Pose Estimation with Robotic Integration
+2025-03-07|2503.05652v2|B_reachability|BEHAVIOR Robot Suite: Streamlining Real-World Whole-Body Manipulation for Everyday Household Activities
+2025-03-07|2503.05189v1|F_gaussian_splat|Persistent Object Gaussian Splat (POGS) for Tracking Human and Robot Manipulation of Irregularly Shaped Objects
+2025-03-06|2503.04877v2|A_camera_pose|Adapt3R: Adaptive 3D Scene Representation for Domain Transfer in Imitation Learning
+2025-03-05|2503.03081v3|F_imitation_spatial|AirExo-2: Scaling up Generalizable Robotic Imitation Learning with Low-Cost Exoskeletons
+2025-03-03|2503.01616v1|B_grasp_vlm|RoboDexVLM: Visual Language Model-Enabled Task Planning and Motion Control for Dexterous Robot Manipulation
+2025-03-03|2503.01439v4|C_occlusion|AVR: Active Vision-Driven Precise Robot Manipulation with Viewpoint and Focal Length Optimization
+2025-03-03|2503.01773v3|E_spatial_bench|Why Is Spatial Reasoning Hard for VLMs? An Attention Mechanism Perspective on Focus Areas
+2025-03-02|2503.00778v1|B_grasp_vlm|AffordGrasp: In-Context Affordance Reasoning for Open-Vocabulary Task-Oriented Grasping in Clutter
+2025-03-01|2503.00508v1|A_6dof_generalization|HGDiffuser: Efficient Task-Oriented Grasp Generation via Human-Guided Grasp Diffusion Models
+2025-02-28|2502.20606v3|D_info_gain|Map Space Belief Prediction for Manipulation-Enhanced Mapping
+2025-02-20|2502.14254v3|E_spatial_bench|Mem2Ego: Empowering Vision-Language Models with Global-to-Ego Memory for Long-Horizon Embodied Navigation
+2025-02-18|2502.13143v2|A_6dof_generalization|SoFar: Language-Grounded Orientation Bridges Spatial Reasoning and Object Manipulation
+2025-02-17|2502.12320v2|B_pointcloud_policy|Towards Fusing Point Cloud and Visual Representations for Imitation Learning
+2025-02-13|2502.09389v3|B_spatial_rep|S$^2$-Diffusion: Generalizing from Instance-level to Category-level Skills in Robot Manipulation
+2025-02-12|2502.08645v4|A_cross_view|Re$^3$Sim: Generating High-Fidelity Simulation Data via 3D-Photorealistic Real-to-Sim for Robotic Manipulation
+2025-02-12|2502.08449v2|B_pointcloud_policy|CordViP: Correspondence-based Visuomotor Policy for Dexterous Manipulation in Real-World
+2025-02-09|2502.05728v3|A_coordinate_frame|Hierarchical Equivariant Policy via Frame Transfer
+2025-02-07|2502.05271v2|B_spatial_rep|RobotMover: Learning to Move Large Objects From Human Demonstrations
+2025-02-07|2502.04873v4|B_grasp_vlm|Training-free Task-oriented Grasp Generation
+2025-02-04|2502.02454v4|A_cross_view|IMDPrompter: Adapting SAM to Image Manipulation Detection by Cross-View Automated Prompt Learning
+2025-02-04|2502.02663v2|D_active_perception|Learning to Double Guess: An Active Perception Approach for Estimating the Center of Mass of Arbitrary Objects
+2025-02-02|2502.00935v3|B_reachability|Generalizing Safety Beyond Collision-Avoidance via Latent-Space Reachability Analysis
+2025-01-31|2501.18867v3|F_spatial_vla|UP-VLA: A Unified Understanding and Prediction Model for Embodied Agent
+2025-01-30|2501.18564v4|C_spatial_memory|SAM2Act: Integrating Visual Foundation Model with A Memory Architecture for Robotic Manipulation
+2025-01-30|2501.18733v1|C_dynamic_manip|Integrating LMM Planners and 3D Skill Policies for Generalizable Manipulation
+2025-01-28|2501.16698v2|B_3d_vla|3D-MoE: Towards Spatial Intelligence with Mixture-of-Experts for 3D Reasoning and Action Generation
+2025-01-27|2501.15830v5|B_spatial_rep|SpatialVLA: Exploring Spatial Representations for Visual-Language-Action Model
+2025-01-24|2501.14208v2|F_imitation_spatial|You Only Teach Once: Learn One-Shot Bimanual Robotic Manipulation from Video Demonstrations
+2025-01-23|2501.13507v1|B_grasp_vlm|Iterative Shaping of Multi-Particle Aggregates based on Action Trees and VLM
+2025-01-17|2501.10074v3|E_grounding_action|SpatialCoT: Advancing Spatial Reasoning through Coordinate Alignment and Chain-of-Thought for Embodied Task Planning
+2025-01-15|2501.09167v1|E_spatial_bench|Embodied Scene Understanding for Vision Language Models via MetaVQA
+2025-01-13|2501.07554v1|E_vlm_spatial_fail|SST-EM: Advanced Metrics for Evaluating Semantic, Spatial and Temporal Aspects in Video Editing
+2025-01-07|2501.03841v1|B_affordance_vla|OmniManip: Towards General Robotic Manipulation via Object-Centric Interaction Primitives as Spatial Constraints
+2024-12-29|2412.20451v2|B_affordance_vla|CoA-VLA: Improving Vision-Language-Action Models via Visual-Textual Chain-of-Affordance
+2024-12-17|2412.13376v1|A_view_invariance|Targeted View-Invariant Adversarial Perturbations for 3D Object Recognition
+2024-12-17|2412.13157v1|C_occlusion|Learning Visuotactile Estimation and Control for Non-prehensile Manipulation under Occlusions
+2024-12-17|2412.12693v4|E_spatial_bench|SPHERE: Unveiling Spatial Blind Spots in Vision-Language Models Through Hierarchical Evaluation
+2024-12-16|2412.11974v2|E_spatial_action|Emma-X: An Embodied Multimodal Action Model with Grounded Chain of Thought and Look-ahead Spatial Reasoning
+2024-12-15|2412.11026v2|E_vsi|SceneLLM: Implicit Language Reasoning in LLM for Dynamic Scene Graph Generation
+2024-12-14|2412.10694v1|B_grasp_vlm|Grasp What You Want: Embodied Dexterous Grasping System Driven by Your Voice
+2024-12-13|2412.10515v1|D_info_gain|Active Semantic Mapping with Mobile Manipulator in Horticultural Environments
+2024-12-10|2412.07825v4|E_vsi|3DSRBench: A Comprehensive 3D Spatial Reasoning Benchmark
+2024-12-02|2412.01034v1|D_active_vla|Quantization-Aware Imitation-Learning for Resource-Efficient Robotic Control
+2024-11-27|2411.18369v3|C_occlusion|G3Flow: Generative 3D Semantic Flow for Pose-aware and Generalizable Object Manipulation
+2024-11-26|2411.17458v1|B_spatial_rep|Spatially Visual Perception for End-to-End Robotic Learning
+2024-11-15|2411.10203v1|F_imitation_spatial|Learning Generalizable 3D Manipulation With 10 Demonstrations
+2024-11-13|2411.09020v1|D_info_gain|Predictive Visuo-Tactile Interactive Perception Framework for Object Properties Inference
+2024-11-11|2411.07056v1|A_frame_reference|Distributed Spatial Awareness for Robot Swarms
+2024-11-11|2411.06782v2|B_reachability|QuadWBG: Generalizable Quadrupedal Whole-Body Grasping
+2024-11-06|2411.03990v2|F_imitation_spatial|ET-SEED: Efficient Trajectory-Level SE(3) Equivariant Diffusion Policy
+2024-11-05|2411.03555v1|F_gaussian_splat|Object and Contact Point Tracking in Demonstrations Using 3D Gaussian Splatting
+2024-11-04|2411.01850v3|E_spatial_intelligence|ManiBox: Enhancing Embodied Spatial Generalization via Scalable Simulation Data Generations
+2024-11-01|2411.00704v1|F_imitation_spatial|Learning to Look Around: Enhancing Teleoperation and Learning with a Human-like Actuated Neck
+2024-10-31|2410.24091v2|F_imitation_spatial|3D-ViTac: Learning Fine-Grained Manipulation with Visuo-Tactile Sensing
+2024-10-22|2410.17385v2|E_vlm_spatial_fail|Do Vision-Language Models Represent Space and How? Evaluating Spatial Frame of Reference Under Ambiguities
+2024-10-21|2410.16162v4|E_vlm_spatial_fail|Sparkle: Mastering Basic Spatial Capabilities in Vision Language Models Elicits Generalization to Spatial Reasoning
+2024-10-15|2410.11345v3|B_pointcloud_policy|Visual Manipulation with Legs
+2024-10-14|2410.10394v2|F_world_model|PIVOT-R: Primitive-Driven Waypoint-Aware World Model for Robotic Manipulation
+2024-10-07|2410.04680v4|D_nbv|Next Best Sense: Guiding Vision and Touch with FisherRF for 3D Gaussian Splatting
+2024-10-07|2410.05044v1|F_3dfm|PhotoReg: Photometrically Registering 3D Gaussian Splatting Models
+2024-10-02|2410.01292v1|C_occlusion|Robust Imitation Learning for Mobile Manipulator Focusing on Task-Related Viewpoints and Regions
+2024-09-30|2410.00231v1|B_reachability|Helpful DoggyBot: Open-World Object Fetching using Legged Robots and Vision-Language Models
+2024-09-30|2410.00064v3|F_imitation_spatial|M2Distill: Multi-Modal Distillation for Lifelong Imitation Learning
+2024-09-28|2409.19190v1|B_reachability|RAIL: Reachability-Aided Imitation Learning for Safe Policy Execution
+2024-09-26|2409.17435v2|A_camera_pose|Active Vision Might Be All You Need: Exploring Active Vision in Bimanual Robotic Manipulation
+2024-09-26|2409.17641v2|D_active_perception|Scene Exploration by Vision-Language Models
+2024-09-25|2409.17080v1|E_vlm_spatial_fail|Can Vision Language Models Learn from Visual Demonstrations of Ambiguous Spatial Reasoning?
+2024-09-25|2409.16915v2|F_gaussian_splat|Let's Make a Splan: Risk-Aware Trajectory Optimization in a Normalized Gaussian Splat
+2024-09-23|2409.14891v3|C_occlusion|Observe Then Act: Asynchronous Active Vision-Action Model for Robotic Manipulation
+2024-09-22|2409.14615v3|D_active_perception|Optimizing Active Perception for Learning Simultaneous Viewpoint Selection and Manipulation with Diffusion Policy
+2024-09-17|2410.03551v1|E_vlm_spatial_fail|Constructive Apraxia: An Unexpected Limit of Instructible Vision-Language Models and Analog for Human Cognitive Disorders
+2024-09-16|2409.10161v3|F_gaussian_splat|SplatSim: Zero-Shot Sim2Real Transfer of RGB Manipulation Policies Using Gaussian Splatting
+2024-09-13|2409.09140v1|B_reachability|ResPilot: Teleoperated Finger Gaiting via Gaussian Process Residual Learning
+2024-09-13|2409.08750v2|F_world_model|DexSim2Real$^{2}$: Building Explicit World Model for Precise Articulated Object Dexterous Manipulation
+2024-09-11|2409.07454v1|A_cross_view|DreamMesh: Jointly Manipulating and Texturing Triangle Meshes for Text-to-3D Generation
+2024-09-09|2409.05493v2|B_grasp_vlm|DexDiff: Towards Extrinsic Dexterity Manipulation of Ungraspable Objects in Unrestricted Environments
+2024-09-06|2409.04576v1|E_spatial_action|ActionFlow: Equivariant, Accurate, and Efficient Policies with Spatially Symmetric Flow Matching
+2024-09-06|2409.03966v1|E_spatial_action|Automating Robot Failure Recovery Using Vision-Language Models With Optimized Prompts
+2024-09-05|2409.03685v3|A_view_invariance|View-Invariant Policy Learning via Zero-Shot Novel View Synthesis
+2024-08-27|2408.14873v2|B_spatial_rep|Robo-GS: A Physics Consistent Spatial-Temporal Model for Robotic Arm with Hybrid Representation
+2024-08-22|2408.12130v3|D_info_gain|S-EPOA: Overcoming the Indistinguishability of Segments with Skill-Driven Preference-Based Reinforcement Learning
+2024-08-05|2408.02231v1|E_spatial_bench|REVISION: Rendering Tools Enable Spatial Fidelity in Vision-Language Models
+2024-07-23|2407.16820v1|A_camera_pose|Domain Adaptation of Visual Policies with a Single Demonstration
+2024-07-18|2407.13368v1|B_grasp_vlm|Affordance Perception by a Knowledge-Guided Vision-Language Model with Efficient Error Correction
+2024-07-14|2407.10331v1|F_3dfm|3D Foundation Models Enable Simultaneous Geometry and Pose Estimation of Grasped Objects
+2024-07-11|2407.08585v1|E_grounding_action|HACMan++: Spatially-Grounded Motion Primitives for Manipulation
+2024-07-08|2407.06296v1|A_frame_reference|Anchor-Oriented Localized Voronoi Partitioning for GPS-denied Multi-Robot Coverage
+2024-07-03|2407.03074v2|C_belief_state|Dynamics of An Information Theoretic Analog of Two Masses on a Spring
+2024-07-02|2407.01863v1|E_vlm_spatial_fail|VSP: Assessing the dual challenges of perception and reasoning in spatial planning tasks for VLMs
+2024-06-21|2406.14852v2|E_spatial_bench|Is A Picture Worth A Thousand Words? Delving Into Spatial Reasoning for Vision Language Models
+2024-06-19|2406.13807v2|E_vsi|AlanaVLM: A Multimodal Embodied AI Foundation Model for Egocentric Video Understanding
+2024-06-18|2406.12441v1|A_view_invariance|Cycle-Correspondence Loss: Learning Dense View-Invariant Visual Features from Unlabeled and Unordered RGB Images
+2024-06-13|2406.09039v3|B_grasp_vlm|Language-Driven Closed-Loop Grasping with Model-Predictive Trajectory Replanning
+2024-05-28|2405.17940v1|A_camera_pose|World Models for General Surgical Grasping
+2024-05-23|2405.14868v2|C_object_permanence|Generative Camera Dolly: Extreme Monocular Dynamic Novel View Synthesis
+2024-05-15|2405.09581v2|B_reachability|Self-Supervised Learning of Dynamic Planar Manipulation of Free-End Cables
+2024-05-07|2405.04378v4|F_gaussian_splat|Splat-MOVER: Multi-Stage, Open-Vocabulary Robotic Manipulation via Editable Gaussian Splatting
+2024-04-24|2404.15709v3|B_pointcloud_policy|ViViDex: Learning Vision-based Dexterous Manipulation from Human Videos
+2024-04-24|2404.16027v1|D_active_perception|ORBIT-Surgical: An Open-Simulation Framework for Learning Surgical Augmented Dexterity
+2024-04-23|2404.14968v1|A_6dof_generalization|CenterArt: Joint Shape Reconstruction and 6-DoF Grasp Estimation of Articulated Objects
+2024-04-18|2404.12281v3|B_pointcloud_policy|RISE: 3D Perception Makes Real-World Robot Imitation Simple and Effective
+2024-04-17|2404.11683v1|F_3dfm|Unifying Scene Representation and Hand-Eye Calibration with 3D Foundation Models
+2024-04-10|2404.07344v2|D_info_gain|Interactive Learning of Physical Object Properties Through Robot Manipulation and Database of Object Measurements
+2024-04-02|2404.01867v3|D_info_gain|Active Exploration in Bayesian Model-based Reinforcement Learning for Robot Manipulation
+2024-03-22|2403.15306v3|D_active_perception|HortiBot: An Adaptive Multi-Arm System for Robotic Horticulture of Sweet Peppers
+2024-03-20|2403.14000v1|F_imitation_spatial|Visual Imitation Learning of Task-Oriented Object Grasping and Rearrangement
+2024-03-19|2403.12465v3|B_reachability|Teaching Robots Where To Go And How To Act With Human Sketches via Spatial Diagrammatic Instructions
+2024-03-19|2403.13085v1|B_reachability|Subgoal Diffuser: Coarse-to-fine Subgoal Generation to Guide Model Predictive Control for Robot Manipulation
+2024-03-19|2403.12550v2|B_spatial_rep|RGBD GS-ICP SLAM
+2024-03-19|2403.12891v1|F_imitation_spatial|Adaptive Visual Imitation Learning for Robotic Assisted Feeding Across Varied Bowl Configurations and Food Types
+2024-03-18|2403.13438v5|F_3dfm|SpatialPIN: Enhancing Spatial Reasoning Capabilities of Vision-Language Models through Prompting and Interacting 3D Priors
+2024-03-15|2403.10401v1|B_pointcloud_policy|SculptDiff: Learning Robotic Clay Sculpting from Humans with Goal Conditioned Diffusion Policy
+2024-03-14|2403.09315v1|F_spatial_prompt|Semi- and Weakly-Supervised Learning for Mammogram Mass Segmentation with Limited Annotations
+2024-03-13|2403.08248v1|B_grasp_vlm|CoPa: General Robotic Manipulation through Spatial Constraints of Parts with Foundation Models
+2024-03-13|2403.08231v1|C_object_permanence|Object Permanence Filter for Robust Tracking with Interactive Robots
+2024-03-13|2403.08321v2|F_gaussian_splat|ManiGaussian: Dynamic Gaussian Splatting for Multi-task Robotic Manipulation
+2024-03-11|2403.06351v1|A_cross_view|Put Myself in Your Shoes: Lifting the Egocentric Perspective from Exocentric Videos
+2024-03-08|2403.05225v1|B_spatial_rep|Trust Recognition in Human-Robot Cooperation Using EEG
+2024-03-08|2403.05177v2|D_active_vision|Interactive Perception for Deformable Object Manipulation
+2024-03-06|2403.04050v1|C_belief_state|Belief-Enriched Pessimistic Q-Learning against Adversarial State Perturbations
+2024-03-05|2403.02741v2|C_belief_state|State-Constrained Zero-Sum Differential Games with One-Sided Information
+2024-03-05|2403.02709v1|F_imitation_spatial|RT-Sketch: Goal-Conditioned Imitation Learning from Hand-Drawn Sketches
+2024-02-16|2402.10450v3|C_belief_state|PRISE: LLM-Style Sequence Compression for Learning Temporal Action Abstractions in Control
+2024-02-13|2402.08191v2|A_camera_pose|THE COLOSSEUM: A Benchmark for Evaluating Generalization for Robotic Manipulation
+2024-02-06|2402.04070v2|B_spatial_rep|Spatial Assisted Human-Drone Collaborative Navigation and Interaction through Immersive Mixed Reality
+2024-02-04|2402.02500v3|B_pointcloud_policy|Point Cloud Matters: Rethinking the Impact of Different Observation Spaces on Robot Learning
+2024-01-22|2401.12202v2|B_grasp_vlm|OK-Robot: What Really Matters in Integrating Open-Knowledge Models for Robotics
+2024-01-22|2401.12168v1|E_spatial_bench|SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities
+2024-01-19|2401.10512v1|A_camera_cond|Exploring Color Invariance through Image-Level Ensemble Learning
+2024-01-09|2401.04320v1|A_coordinate_frame|Autonomous robotic re-alignment for face-to-face underwater human-robot interaction
+2024-01-09|2401.04377v2|A_6dof_generalization|Towards Real-World Aerial Vision Guidance with Categorical 6D Pose Tracker
+2024-01-09|2401.04651v1|F_spatial_prompt|Learning to Prompt Segment Anything Models
+2023-12-20|2312.13469v1|C_occlusion|Neural feels with neural fields: Visuo-tactile perception for in-hand manipulation
+2023-12-18|2312.11243v2|A_6dof_generalization|GraspLDM: Generative 6-DoF Grasp Synthesis using Latent Diffusion Models
+2023-12-05|2312.02697v1|C_occlusion|Hierarchical Visual Policy Learning for Long-Horizon Robot Manipulation in Densely Cluttered Scenes
+2023-12-05|2312.02488v2|C_dynamic_manip|Design and Evaluation of an Uncertainty-Aware Shared-Autonomy System with Hierarchical Conservative Skill Inference
+2023-11-20|2311.12015v4|B_grasp_vlm|GPT-4V(ision) for Robotics: Multimodal Task Planning from Human Demonstration
+2023-10-27|2310.17994v2|A_camera_cond|ZeroNVS: Zero-Shot 360-Degree View Synthesis from a Single Image
+2023-10-23|2310.14700v1|D_active_vision|Interaction-Driven Active 3D Reconstruction with Object Interiors
+2023-10-13|2310.09069v1|B_pointcloud_policy|ImageManip: Image-based Robotic Manipulation with Affordance-guided Next View Selection
+2023-10-05|2310.03478v2|B_pointcloud_policy|RGBManip: Monocular Image-based Robotic Manipulation through Active Object Pose Estimation
+2023-09-30|2310.00433v2|D_active_perception|Active-Perceptive Motion Generation for Mobile Manipulation
+2023-09-28|2309.16778v1|D_active_perception|Coupled Active Perception and Manipulation Planning for a Mobile Manipulator in Precision Agriculture Applications
+2023-09-27|2309.15596v1|B_pointcloud_policy|PolarNet: 3D Point Clouds for Language-Guided Robotic Manipulation
+2023-09-19|2309.10911v1|A_6dof_generalization|Language-Conditioned Affordance-Pose Detection in 3D Point Clouds
+2023-09-18|2309.09556v2|D_nbv|Affordance-Driven Next-Best-View Planning for Robotic Grasping
+2023-08-30|2308.15774v1|C_spatial_memory|Comparing Spatial Navigation and Human Environment Interaction in Virtual Reality vs. Identical Real Environments across the Adult Lifespan
+2023-08-26|2308.13955v1|C_spatial_memory|Evaluating 3D User Interaction Techniques on Spatial Working Memory for 3D Scatter Plot Exploration in Immersive Analytics
+2023-08-21|2308.10901v1|F_world_model|Structured World Models from Human Videos
+2023-08-18|2308.09387v2|C_spatial_memory|Multi-Level Compositional Reasoning for Interactive Instruction Following
+2023-08-05|2308.02954v1|A_6dof_generalization|Choosing the Correct Generalized Inverse for the Numerical Solution of the Inverse Kinematics of Incommensurate Robotic Manipulators
+2023-07-27|2308.07931v2|A_6dof_generalization|Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation
+2023-07-19|2307.10063v1|A_coordinate_frame|Object-centric Representations for Interactive Online Learning with Non-Parametric Methods
+2023-07-12|2307.05959v1|A_6dof_generalization|Giving Robots a Hand: Learning Generalizable Manipulation with Eye-in-Hand Human Video Demonstrations
+2023-06-30|2306.17817v2|C_occlusion|Act3D: 3D Feature Field Transformers for Multi-Task Robotic Manipulation
+2023-06-21|2306.12392v2|B_pointcloud_policy|One-shot Imitation Learning via Interaction Warping
+2023-06-21|2306.12372v1|B_pointcloud_policy|One Policy to Dress Them All: Learning to Dress People with Diverse Poses and Garments
+2023-06-02|2306.01364v1|A_cross_view|Towards Robust GAN-generated Image Detection: a Multi-view Completion Representation
+2023-06-01|2306.00975v2|D_active_vision|Active Vision Reinforcement Learning under Limited Visual Observability
+2023-05-23|2305.14022v4|A_camera_cond|Realistic Noise Synthesis with Diffusion Models
+2023-05-21|2305.12427v2|B_spatial_rep|VL-Fields: Towards Language-Grounded Neural Implicit Spatial Representations
+2023-05-16|2305.09761v1|B_spatial_rep|NerfBridge: Bringing Real-time, Online Neural Radiance Field Training to Robotics
+2023-05-13|2305.09470v1|A_6dof_generalization|Integrated Planning and Control of Robotic Surgical Instruments for Tasks Autonomy
+2023-05-08|2305.04718v3|C_occlusion|The Treachery of Images: Bayesian Scene Keypoints for Deep Policy Learning in Robotic Manipulation
+2023-05-06|2305.03942v5|B_pointcloud_policy|HACMan: Learning Hybrid Actor-Critic Maps for 6D Non-Prehensile Manipulation
+2023-04-23|2304.11740v1|B_spatial_rep|A Neuro-Symbolic Approach for Enhanced Human Motion Prediction
+2023-04-11|2304.05147v1|A_frame_reference|Artificial Collective Intelligence Engineering: a Survey of Concepts and Perspectives
+2023-03-29|2303.16958v1|B_pointcloud_policy|PartManip: Learning Cross-Category Generalizable Part Manipulation Policy from Point Cloud Observations
+2023-03-12|2303.06766v1|D_info_gain|Next-Best-View Selection for Robot Eye-in-Hand Calibration
+2023-01-17|2301.06698v2|A_6dof_generalization|Tactile Tool Manipulation
+2022-12-15|2212.08070v1|A_cross_view|NeRF-Art: Text-Driven Neural Radiance Fields Stylization
+2022-12-12|2212.06088v1|A_6dof_generalization|MIRA: Mental Imagery for Robotic Affordances
+2022-12-03|2212.01639v1|A_camera_cond|Visual Question Answering From Another Perspective: CLEVR Mental Rotation Tests
+2022-11-17|2211.09423v2|B_pointcloud_policy|DexPoint: Generalizable Point Cloud Reinforcement Learning for Sim-to-Real Dexterous Manipulation
+2022-11-16|2211.09006v1|B_pointcloud_policy|ToolFlowNet: Robotic Manipulation with Tools via Predicting Tool Flow from Point Clouds
+2022-10-23|2210.12806v1|D_info_gain|Active Exploration for Robotic Manipulation
+2022-10-21|2210.12209v1|C_dynamic_manip|Motion Policy Networks
+2022-10-20|2210.10992v3|F_imitation_spatial|NIFT: Neural Interaction Field and Template for Object Manipulation
+2022-10-14|2210.07442v1|A_coordinate_frame|Frame Mining: a Free Lunch for Learning Robotic Manipulation from 3D Point Clouds
+2022-09-20|2209.09614v1|D_info_gain|Deep Model Predictive Variable Impedance Control
+2022-09-13|2209.06331v1|A_frame_reference|Learning Category-Level Manipulation Tasks from Point Clouds with Dynamic Graph CNNs
+2022-09-12|2209.05213v1|A_view_invariance|Learning Dense Visual Descriptors using Image Augmentations for Robot Manipulation Tasks
+2022-09-01|2209.01012v1|E_spatial_action|CASPER: Cognitive Architecture for Social Perception and Engagement in Robots
+2022-07-21|2207.10543v1|D_nbv|Closed-Loop Next-Best-View Planning for Target-Driven Grasping
+2022-07-11|2207.04638v1|B_pointcloud_policy|Learning Closed-loop Dough Manipulation Using a Differentiable Reset Module
+2022-06-24|2206.12145v1|A_view_invariance|Efficient and Robust Training of Dense Object Nets for Multi-Object Robot Manipulation
+2022-06-23|2206.11733v1|B_reachability|Walk the Random Walk: Learning to Discover and Reach Goals Without Supervision
+2022-06-10|2206.04928v5|D_active_vision|GAMR: A Guided Attention Model for (visual) Reasoning
+2022-05-17|2205.08316v2|C_occlusion|Self-Supervised Learning of Multi-Object Keypoints for Robotic Manipulation
+2022-05-12|2205.06311v1|B_reachability|Provably Safe Deep Reinforcement Learning for Robotic Manipulation in Human Environments
+2022-05-10|2205.04697v1|D_info_gain|An Empirical Evaluation of Various Information Gain Criteria for Active Tactile Action Selection for Pose Estimation
+2022-05-06|2205.03471v1|B_reachability|Dynamically writing coupled memories using a reinforcement learning agent, meeting physical bounds
+2022-04-27|2204.13022v1|F_world_model|Binding Actions to Objects in World Models
+2022-04-09|2204.04330v1|A_coordinate_frame|Improved Object Pose Estimation via Deep Pre-touch Sensing
+2022-04-09|2204.04444v2|C_belief_state|Path-Tree Optimization in Discrete Partially Observable Environments using Rapidly-Exploring Belief-Space Graphs
+2022-03-29|2203.15210v2|A_camera_cond|Camera-Conditioned Stable Feature Generation for Isolated Camera Supervised Person Re-IDentification
+2022-03-21|2203.10820v3|B_spatial_rep|Hierarchical Path-planning from Speech Instructions with Spatial Concept-based Topometric Semantic Mapping
+2022-03-18|2203.10113v1|D_nbv|Online Next-Best-View Planner for 3D-Exploration and Inspection With a Mobile Manipulator Robot
+2022-03-08|2203.04051v3|B_reachability|Robot Learning of Mobile Manipulation with Reachability Behavior Priors
+2022-02-23|2202.11792v1|B_pointcloud_policy|Let's Handle It: Generalizable Manipulation of Articulated Objects
+2022-02-13|2202.06172v4|B_spatial_rep|Efficient Spatial Representation and Routing of Deformable One-Dimensional Objects for Manipulation
+2022-01-30|2201.12716v2|A_coordinate_frame|You Only Demonstrate Once: Category-Level Manipulation from Single Visual Demonstration
+2022-01-19|2201.07779v2|A_cross_view|Look Closer: Bridging Egocentric and Third-Person Views with Transformers for Robotic Manipulation
+2021-12-20|2112.10578v2|A_frame_reference|From Robot Self-Localization to Global-Localization: An RSSI Based Approach
+2021-12-15|2112.08526v3|A_camera_pose|Invariance Through Latent Alignment
+2021-11-04|2111.03062v1|B_pointcloud_policy|Generalization in Dexterous Manipulation via Geometry-Aware Multi-Task Learning
+2021-11-04|2111.02571v1|B_reachability|Learning suction graspability considering grasp quality and robot reachability for bin-picking
+2021-11-02|2111.01376v1|A_6dof_generalization|SEED: Series Elastic End Effectors in 6D for Visuotactile Tool Use
+2021-10-24|2110.12435v2|D_info_gain|Contact Information Flow and Design of Compliance
+2021-10-02|2110.00717v2|D_nbv|Mobile Manipulation Leveraging Multiple Views
+2021-10-01|2110.00238v1|C_object_permanence|Improving Object Permanence using Agent Actions and Reasoning
+2021-09-28|2109.13910v2|D_active_perception|Online Object Model Reconstruction and Reuse for Lifelong Improvement of Robot Manipulation
+2021-09-28|2109.13540v2|D_info_gain|Comparison of Information-Gain Criteria for Action Selection
+2021-09-24|2109.12098v1|F_imitation_spatial|CLIPort: What and Where Pathways for Robotic Manipulation
+2021-09-16|2109.07752v3|B_spatial_rep|Deep Visual Navigation under Partial Observability
+2021-09-08|2109.03891v3|E_spatial_action|SORNet: Spatial Object-Centric Representations for Sequential Manipulation
+2021-08-09|2108.04015v1|D_info_gain|Active Visuo-Tactile Point Cloud Registration for Accurate Pose Estimation of Objects in an Unknown Workspace
+2021-08-06|2108.02982v1|A_view_invariance|Improving Contrastive Learning by Visualizing Feature Transformation
+2021-07-30|2107.14483v5|B_pointcloud_policy|ManiSkill: Generalizable Manipulation Skill Benchmark with Large-Scale Demonstrations
+2021-07-27|2107.12715v1|D_info_gain|Information-Theoretic Based Target Search with Multiple Agents
+2021-07-07|2107.03105v1|A_view_invariance|Rotation Transformation Network: Learning View-Invariant Point Cloud for Classification and Segmentation
+2021-07-07|2107.03038v1|C_object_permanence|Maintaining a Reliable World Model using Action-aware Perceptual Anchoring
+2021-07-01|2107.00541v1|B_reachability|Goal-Conditioned Reinforcement Learning with Imagined Subgoals
+2021-06-28|2106.14396v3|A_coordinate_frame|Single RGB-D Camera Teleoperation for General Robotic Manipulation
+2021-06-22|2106.11481v1|B_spatial_rep|SeqNetVLAD vs PointNetVLAD: Image Sequence vs 3D Point Clouds for Day-Night Place Recognition
+2021-06-21|2106.11266v1|A_frame_reference|PHYSFRAME: Type Checking Physical Frames of Reference for Robotic Systems
+2021-03-25|2103.14127v1|A_6dof_generalization|Contact-GraspNet: Efficient 6-DoF Grasp Generation in Cluttered Scenes
+2021-03-11|2103.06443v2|E_spatial_intelligence|Where is your place, Visual Place Recognition?
+2021-03-04|2103.02789v2|D_nbv|Learning the Next Best View for 3D Point Clouds via Topological Features
+2021-02-28|2103.00375v2|F_imitation_spatial|Generalization Through Hand-Eye Coordination: An Action Space for Learning Spatially-Invariant Visuomotor Control
+2021-02-27|2103.00293v4|C_belief_state|N-Shot Learning for Augmenting Task-Oriented Dialogue State Tracking
+2021-02-25|2102.13177v4|F_imitation_spatial|Efficient and Interpretable Robot Manipulation with Graph Neural Networks
+2021-02-16|2102.08096v1|A_camera_pose|Supervised Training of Dense Object Nets using Optimal Descriptors for Industrial Robotic Applications
+2021-02-15|2102.07764v2|C_spatial_memory|End-to-End Egospheric Spatial Memory
+2020-12-26|2101.01052v1|A_6dof_generalization|Imitation Learning for High Precision Peg-in-Hole Tasks
+2020-12-15|2012.08419v1|C_object_permanence|Detecting Invisible People
+2020-12-04|2012.02705v3|A_frame_reference|Spatial Language Understanding for Object Search in Partially Observed City-scale Environments
+2020-11-12|2011.06425v2|B_spatial_rep|StrObe: Streaming Object Detection from LiDAR Packets
+2020-10-25|2010.13108v2|D_nbv|Active and Interactive Mapping with Dynamic Gaussian Process Implicit Surfaces for Mobile Manipulators
+2020-10-20|2010.09948v3|C_object_permanence|Object Permanence Through Audio-Visual Representations
+2020-09-14|2009.06490v1|C_spatial_memory|Simplex: Repurposing Intel Memory Protection Extensions for Information Hiding
+2020-09-07|2009.03457v1|C_belief_state|Robust Conversational AI with Grounded Text Generation
+2020-08-25|2008.10816v1|A_coordinate_frame|A Robotic Line Scan System with Adaptive ROI for Inspection of Defects over Convex Free-form Specular Surfaces
+2020-08-18|2008.08050v6|A_frame_reference|The MRS UAV System: Pushing the Frontiers of Reproducible Research, Real-world Deployment, and Education with Autonomous Unmanned Aerial Vehicles
+2020-07-16|2007.08082v2|D_active_vision|Distributed Reinforcement Learning of Targeted Grasping with Active Vision for Mobile Manipulators
+2020-07-04|2007.02084v1|D_nbv|Multi-Sensor Next-Best-View Planning as Matroid-Constrained Submodular Maximization
+2020-06-18|2006.10807v1|D_nbv|Semantic Linking Maps for Active Visual Object Search
+2020-04-26|2004.12281v1|A_6dof_generalization|A Point Cloud-Based Method for Automatic Groove Detection and Trajectory Generation of Robotic Arc Welding Tasks
+2020-03-31|2003.14034v2|E_spatial_intelligence|SPARE3D: A Dataset for SPAtial REasoning on Three-View Line Drawings
+2020-03-28|2003.12698v2|C_occlusion|Learning Dense Visual Correspondences in Simulation to Smooth and Fold Real Fabrics
+2020-03-15|2003.06734v1|D_active_perception|Active Perception and Representation for Robotic Manipulation
+2020-03-13|2003.06082v4|D_info_gain|An Adversarial Objective for Scalable Exploration
+2020-02-07|2002.02638v1|A_frame_reference|Statistical Outlier Identification in Multi-robot Visual SLAM using Expectation Maximization
+2020-02-05|2002.02012v1|B_spatial_rep|From Route Instructions to Landmark Graphs
+2020-01-25|2001.09373v1|E_spatial_action|Following Instructions by Imagining and Reaching Visual Goals
+2019-11-15|1911.06543v1|B_spatial_rep|Fine-grained Qualitative Spatial Reasoning about Point Positions
+2019-11-11|1911.04577v2|C_belief_state|Online Replanning in Belief Space for Partially Observable Task and Motion Problems
+2019-09-05|1909.02295v1|B_spatial_rep|The homunculus for proprioception: Toward learning the representation of a humanoid robot's joint space using self-organizing maps
+2019-08-02|1908.00722v3|C_dynamic_manip|Learning to combine primitive skills: A step towards versatile robotic manipulation
+2019-07-02|1907.01285v1|B_reachability|Learning the Arrow of Time
+2019-04-03|1904.02111v2|A_frame_reference|Multidimensional Capacitive Sensing for Robot-Assisted Dressing and Bathing
+2019-03-28|1903.12302v1|C_belief_state|Amortized Object and Scene Perception for Long-term Robot Manipulation
+2018-11-20|1811.08067v2|C_occlusion|Reinforcement Learning of Active Vision for Manipulating Objects under Occlusions
+2018-10-09|1810.04285v2|B_spatial_rep|Warped Hypertime Representations for Long-term Autonomy of Mobile Robots
+2018-10-02|1810.01344v2|B_spatial_rep|Unsupervised Emergence of Spatial Structure from Sensorimotor Prediction
+2018-09-21|1809.07896v1|D_nbv|3D Move to See: Multi-perspective visual servoing for improving object views with semantic segmentation
+2018-07-14|1807.05452v2|A_frame_reference|Free-View, 3D Gaze-Guided, Assistive Robotic System for Activities of Daily Living
+2018-06-15|1806.05798v1|B_spatial_rep|SATR-DL: Improving Surgical Skill Assessment and Task Recognition in Robot-assisted Surgery with Deep Neural Networks
+2018-03-12|1803.04228v1|A_camera_pose|Omnidirectional CNN for Visual Place Recognition and Navigation
+2018-02-15|1802.06072v3|A_frame_reference|3-D Volumetric Gamma-ray Imaging and Source Localization with a Mobile Robot
+2018-01-28|1801.09178v10|A_frame_reference|On the Dynamics of a Rolling Ball Actuated by Internal Point Masses
+2017-12-20|1712.07642v1|A_view_invariance|Sim2Real View Invariant Visual Servoing by Recurrent Control
+2017-08-14|1708.04185v1|D_active_vision|Active vision for dexterous grasping of novel objects
+2017-02-16|1702.05156v1|A_frame_reference|An Analysis of Parallelized Motion Masking Using Dual-Mode Single Gaussian Models
+2016-11-18|1611.06145v1|E_spatial_action|CoSTAR: Instructing Collaborative Robots with Behavior Trees and Vision
+2016-08-10|1608.03037v1|D_nbv|Highly Efficient Compact Pose SLAM with SLAM++
+2016-07-26|1607.07565v1|B_spatial_rep|Grounding Dynamic Spatial Relations for Embodied (Robot) Interaction
+2015-03-23|1503.06813v2|A_view_invariance|Factorization of View-Object Manifolds for Joint Object Recognition and Pose Estimation
+2014-02-04|1402.0649v2|C_occlusion|Robotic manipulation of multiple objects as a POMDP
+2014-01-01|1401.0282v1|E_spatial_intelligence|Design of a GIS-based Assistant Software Agent for the Incident Commander to Coordinate Emergency Response Operations
+2011-09-09|1109.2135v1|C_belief_state|A Framework for Sequential Planning in Multi-Agent Settings

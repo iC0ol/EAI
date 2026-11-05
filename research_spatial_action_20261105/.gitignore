@@ -1,5 +1,8 @@
 logs/
 papers/
+# raw arXiv API response dumps (~4.8 MB of third-party metadata); the query strings
+# (*.queries.json), the title screen (index_round1.txt) and notes/search_log.md are published
+notes/arxiv_round*.jsonl
 orchestration/runtime/
 __pycache__/
 *.py[cod]

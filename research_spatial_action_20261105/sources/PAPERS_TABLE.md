@@ -2,6 +2,8 @@
 
 完整字段见 `sources/papers.jsonl`。读取层级：F=FULL_TEXT, P=PARTIAL_TEXT, A=ABSTRACT_ONLY。出版状态来自 OpenAlex 单篇记录（2026-11-05 检索）。`NO_URL_IN_PAPER` 表示论文正文与 PDF/HTML 中均无项目或代码链接。
 
+> **注意（2026-11-05 第七轮更正）**：`papers.jsonl` 的 `openalex_cited_by` 字段在这些 arXiv DOI 记录上**不可靠**——它对我已知有 22–28 次施引的 KYC（2510.02268）同样返回 0。因此本表与报告中**不把 OpenAlex 的 0 当作"无人引用"的证据**；零引用判断只能由 Semantic Scholar 施引列表与 Google Scholar "Cited by" 共同支持。
+
 | 日期 | arXiv | 标题 | 读取 | 出版状态 | 代码 | 权重 |
 |---|---|---|---|---|---|---|
 | 2026-11-03 | [2611.05058](https://arxiv.org/abs/2611.05058) | Do Agentic Policies Need to Look at Every Step? Geometric Abstraction for Reasoning and Action | P | arXiv | [link](https://geometric-abstraction.github.io) | — |
@@ -21,6 +23,7 @@
 | 2026-10-08 | [2610.12696](https://arxiv.org/abs/2610.12696) | Spa-Bench: A Real-Robot Benchmark for Spatial Grounding in Vision-Language-Action Models | F | arXiv | [link](https://justintiensmith.github.io/Spa-Bench/) | — |
 | 2026-10-08 | [2610.11508](https://arxiv.org/abs/2610.11508) | WARP-VLA: Wrist-Camera Adaptation for View-Robust Policy Execution in Vision-Language-Action Models | A | arXiv | — | — |
 | 2026-10-02 | [2610.04139](https://arxiv.org/abs/2610.04139) | From Sight to Foresight: Predictive Spatial Reasoning in Vision-Language Models | A | arXiv | — | — |
+| 2026-10-02 | [2610.02813](https://arxiv.org/abs/2610.02813) | Register-Routed Delayed Fusion: Rewiring Shortcut-Prone Observation Fusion in Visuomotor Imitation | A | arXiv | — | — |
 | 2026-10-01 | [2610.01626](https://arxiv.org/abs/2610.01626) | Measuring the Stability Assumption Behind Action Chunking | F | arXiv | NO_URL_IN_PAPER | — |
 | 2026-09-29 | [2609.37292](https://arxiv.org/abs/2609.37292) | Recovering the View: Benchmarking Physical Active Vision for Occlusion Recovery in Robotic Manipulation | F | arXiv | UNKNOWN | — |
 | 2026-09-29 | [2609.38285](https://arxiv.org/abs/2609.38285) | GaugeVLM: Structuring Spatial Supervision with Measured Geometric Interventions | P | arXiv | — | — |
@@ -39,6 +42,7 @@
 | 2026-09-15 | [2609.16815](https://arxiv.org/abs/2609.16815) | Rethinking Visual Embodiment Dependence in Visuomotor Policies | F | arXiv | [link](https://tonyfang.net/ved) | — |
 | 2026-09-14 | [2609.22299](https://arxiv.org/abs/2609.22299) | When Does Test-Time Physical Diagnosis Pay? | F | arXiv | — | — |
 | 2026-09-12 | [2609.13812](https://arxiv.org/abs/2609.13812) | GeomVLA: Unifying Scene, Motion, and Action in 3D | A | arXiv | — | — |
+| 2026-09-11 | [2609.12641](https://arxiv.org/abs/2609.12641) | Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models | F | arXiv | [link](https://github.com/MAGICLAB-NUS/LIT) | HF (public) |
 | 2026-09-07 | [2609.07047](https://arxiv.org/abs/2609.07047) | MEMOBench: A Process Level Memory Benchmark for Robotic Manipulation | A | published | — | — |
 | 2026-09-05 | [2609.06114](https://arxiv.org/abs/2609.06114) | Where Success Breaks: Failure-Boundary Learning for Robust Vision-Language-Action Models | P | arXiv | — | — |
 | 2026-09-04 | [2609.05376](https://arxiv.org/abs/2609.05376) | What Matters, When? Diagnosing and Improving Conditional Visual Grounding in Visuomotor Imitation Policies | F | arXiv | — | — |

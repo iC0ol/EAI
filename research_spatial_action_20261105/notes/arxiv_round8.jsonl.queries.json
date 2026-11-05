@@ -1,0 +1,32 @@
+[
+ {
+  "query": "abs:\"when\" AND abs:\"3D representation\" AND abs:manipulation",
+  "label": "M_when_3d",
+  "n": 13
+ },
+ {
+  "query": "abs:\"depth\" AND abs:\"helps\" AND abs:\"policy\"",
+  "label": "M_depth_helps",
+  "n": 25
+ },
+ {
+  "query": "abs:\"geometry\" AND abs:\"helps\" AND abs:\"manipulation\"",
+  "label": "M_geometry_helps",
+  "n": 25
+ },
+ {
+  "query": "abs:\"value of\" AND abs:\"3D\" AND abs:\"robot\"",
+  "label": "M_value_of_3d",
+  "n": 25
+ },
+ {
+  "query": "abs:\"task-dependent\" AND abs:\"manipulation\" AND abs:\"representation\"",
+  "label": "M_task_dependent",
+  "n": 13
+ },
+ {
+  "query": "abs:\"which tasks\" AND abs:\"benefit\"",
+  "label": "M_which_tasks",
+  "n": 25
+ }
+]

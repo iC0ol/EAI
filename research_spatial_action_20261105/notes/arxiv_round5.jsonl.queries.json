@@ -1,0 +1,62 @@
+[
+ {
+  "query": "abs:\"conflict\" AND abs:\"modalities\" AND abs:\"policy\" AND abs:\"robot\"",
+  "label": "K_conflict",
+  "n": 4
+ },
+ {
+  "query": "abs:\"arbitration\" AND abs:\"sensor\" AND abs:\"robot\"",
+  "label": "K_arbitration",
+  "n": 2
+ },
+ {
+  "query": "abs:\"trust\" AND abs:\"sensor\" AND abs:\"manipulation\"",
+  "label": "K_trust_sensor",
+  "n": 20
+ },
+ {
+  "query": "abs:\"proprioception\" AND abs:\"vision\" AND abs:\"conflict\"",
+  "label": "K_proprio_vision_conflict",
+  "n": 4
+ },
+ {
+  "query": "abs:\"reliability\" AND abs:\"fusion\" AND abs:\"manipulation\"",
+  "label": "K_reliability_weight",
+  "n": 25
+ },
+ {
+  "query": "abs:\"modality dropout\" AND abs:\"robot\"",
+  "label": "K_modality_dropout",
+  "n": 6
+ },
+ {
+  "query": "abs:\"sensor failure\" AND abs:\"policy\" AND abs:\"manipulation\"",
+  "label": "K_sensor_failure",
+  "n": 1
+ },
+ {
+  "query": "abs:\"which modality\" AND abs:\"robot\"",
+  "label": "K_which_modality",
+  "n": 3
+ },
+ {
+  "query": "abs:\"visual\" AND abs:\"proprioceptive\" AND abs:\"policy\" AND abs:\"manipulation\"",
+  "label": "K_visual_proprio",
+  "n": 25
+ },
+ {
+  "query": "abs:\"state estimation\" AND abs:\"end-to-end\" AND abs:\"manipulation\"",
+  "label": "K_state_estimation_policy",
+  "n": 19
+ },
+ {
+  "query": "abs:\"causal confusion\" AND abs:\"imitation\"",
+  "label": "K_causal_confusion",
+  "n": 18
+ },
+ {
+  "query": "abs:\"shortcut\" AND abs:\"visuomotor\"",
+  "label": "K_shortcut",
+  "n": 5
+ }
+]
