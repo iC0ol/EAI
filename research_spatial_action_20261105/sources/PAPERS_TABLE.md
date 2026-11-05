@@ -46,6 +46,7 @@
 | 2026-08-24 | [2608.23138](https://arxiv.org/abs/2608.23138) | Pointing-VLA: Typed Spatial Grounding Interfaces for Vision-Language-Action Manipulation | P | arXiv | — | — |
 | 2026-08-11 | [2608.13605](https://arxiv.org/abs/2608.13605) | Active Perception for Embodied Disambiguation | A | arXiv | — | — |
 | 2026-08-06 | [2608.05730](https://arxiv.org/abs/2608.05730) | SpaceVLA: Spatially Grounded VLA for Robotic Manipulation with User-Authored Grasp and Place Anchors | F | arXiv | — | — |
+| 2026-08-05 | [2608.04673](https://arxiv.org/abs/2608.04673) | Differential 6-DOF Pose Estimation with Provable First-Order Immunity to Camera Calibration Errors | A | arXiv | — | — |
 | 2026-08-04 | [2608.03052](https://arxiv.org/abs/2608.03052) | How Should Vision-Language-Action Models Use Proprioceptive State? | P | arXiv | — | — |
 | 2026-08-03 | [2608.01826](https://arxiv.org/abs/2608.01826) | Multi-View Unified Camera Fields: Geometry-Shaped Action-Facing Representations for RGB-Only Multi-Camera VLA Policies | A | arXiv | — | — |
 | 2026-08-02 | [2608.01066](https://arxiv.org/abs/2608.01066) | OC-VLA++: Monocular Geometry-Guided Cross-View Consistency for Viewpoint-Robust Robotic Manipulation | A | arXiv | — | — |

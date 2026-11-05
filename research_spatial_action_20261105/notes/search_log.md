@@ -12,7 +12,7 @@
 | `https://export.arxiv.org/html/<id>v1` (LaTeXML) | 可用，偶发 HTTP 429 | 全文主力来源（0.1–0.6 MB/篇，适合慢链路） |
 | `https://arxiv.org/pdf/<id>` | 间歇失败（SSL 35 / 000） | 前 17 篇用 PDF；后续改用 HTML |
 | `api.semanticscholar.org` (citations) | 间歇可用（先 429，后 200） | 第三轮用于施引/参考文献核查（6 个种子） |
-| `api.openalex.org/works/<doi>` (单篇) | 可用 | 出版状态核实（95 条） |
+| `api.openalex.org/works/<doi>` (单篇) | 可用 | 出版状态核实（99 条） |
 | `api.openalex.org/works?filter=cites:` | HTTP 429 | 引文列表不可用（共享 IP 日预算耗尽） |
 | GitHub REST API | 可用 | 资产/许可证核查（只读） |
 | 机构页面 / 项目页 | 部分可用 | 用于代码与数据入口确认 |
@@ -33,7 +33,7 @@
 - **R5（12 条，132 命中，新增 78）**：多模态冲突、传感器仲裁、模态缺失、因果混淆、捷径。
 - **R6（12 条，198 命中，新增 101）**：容差、误差预算、精度需求、"何时有帮助"、阶段划分、扰动研究、oracle 差距。
 
-累计去重后进入标题级筛选的记录约 **2360** 条（R1–R6 元数据合并）。标题级筛出约 300 条相关，进一步选出 **98 篇**进入结构化登记；其中 **88 篇**获得可提取全文（PDF 17 篇 + arXiv HTML 71 篇），实际完整读取 33 篇、部分读取 25 篇，其余 40 篇仅读摘要（第四轮补读后）。
+累计去重后进入标题级筛选的记录约 **2360** 条（R1–R6 元数据合并）。标题级筛出约 300 条相关，进一步选出 **99 篇**进入结构化登记；其中 **88 篇**获得可提取全文（PDF 17 篇 + arXiv HTML 71 篇），实际完整读取 33 篇、部分读取 25 篇，其余 40 篇仅读摘要（第四轮补读后）。
 
 ## 查询明细
 
@@ -180,7 +180,7 @@
 
 ## 未覆盖 / 待补
 
-- 引文网络**部分完成**（第三、四轮）：S2 取到 6 个种子（KYC 28 篇施引、2512.02902 17、LIBERO-RIG 1、CMA 1、RSB 1、2610.01626 0），Google Scholar 另做 6 条关键词查询。**未穷举**；More Structure 的 S2 施引列表仍 429，但 OpenAlex 与 Scholar 均示零引用。因此"未被研究"只能表述为"在本轮查询与 98 篇登记中未发现"。
+- 引文网络**部分完成**（第三、四轮）：S2 取到 6 个种子（KYC 28 篇施引、2512.02902 17、LIBERO-RIG 1、CMA 1、RSB 1、2610.01626 0），Google Scholar 另做 6 条关键词查询。**未穷举**；More Structure 的 S2 施引列表仍 429，但 OpenAlex 与 Scholar 均示零引用。因此"未被研究"只能表述为"在本轮查询与 99 篇登记中未发现"。
 - 未检索中文文献库（CNKI/万方）与 IEEE Xplore 全文；会议终稿与 arXiv 版本的差异未逐篇比对。
 - 40 篇仅摘要级；其方法细节与实验强度未核实，报告中不据此下强结论。
 
@@ -192,7 +192,7 @@
    - `api.semanticscholar.org/graph/v1/paper/arXiv:2510.02268` → **429**（"Too Many Requests"）。
    - `api.openalex.org/works?filter=cites:W4414928220` → **429**（"budget ... used up ($0 remaining; resets at midnight UTC)"）。
    - `api.openalex.org/works?search=...` → **429**。
-   - **可用**：`api.openalex.org/works/https://doi.org/10.48550/arXiv.<id>`（单篇查询）→ 200。据此为全部 95 条补齐出版状态：11 篇为会议论文（KYC=ICRA 2026；SpatialVLA/LIBERO-X/2506.06196=RSS；SpatialVLM/RoboSpatial=CVPR；RSB/2609.07047=EMNLP Findings；2605.30161/2607.01658/2603.22876/2601.09954=LNCS），其余为 arXiv 预印本。
+   - **可用**：`api.openalex.org/works/https://doi.org/10.48550/arXiv.<id>`（单篇查询）→ 200。据此为全部 99 条补齐出版状态：11 篇为会议论文（KYC=ICRA 2026；SpatialVLA/LIBERO-X/2506.06196=RSS；SpatialVLM/RoboSpatial=CVPR；RSB/2609.07047=EMNLP Findings；2605.30161/2607.01658/2603.22876/2601.09954=LNCS），其余为 arXiv 预印本。
    - 其他替代入口也失败：`semanticscholar.org/arxiv/2510.02268` → 404；S2 内部 citations API → 404；`scite.ai` → 403。
    - 结论：**出版状态已核实，施引文献仍不可得**（该缺口在第三轮部分解决；见下）。
 

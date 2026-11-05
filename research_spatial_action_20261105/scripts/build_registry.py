@@ -501,6 +501,12 @@ A = {
   "Gated GeoBoN ranks sampled action chunks by cross-view depth reprojection consistency computed with a frozen geometry model, and invokes the selector only when the initial rollout looks internally inconsistent. Fixed-budget GeoBoN improves N=8 success in every setting (RoboCasa group average 66.3%->68.4% with Cosmos Policy; 80.8%->82.5% with X-WAM); gating recovers 74.8% of the always-on gain while triggering on only 26.2% of decision points. A concrete case where a spatial consistency check changes which action is executed.",
   "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
 
+"2608.04673": ("ABSTRACT_ONLY", "VERIFIED", ["calibration", "pose_estimation"],
+  "Abstract only",
+  "Classical/geometric alternative for calibration-error immunity (C4 counterexample)",
+  "Differential 6-DOF pose estimation with provable first-order immunity to camera calibration errors. Cited in the C4 card as the classical route that makes persistent-bias robustness an estimation problem rather than a learning problem. Read at abstract level only.",
+  "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN", "UNKNOWN"),
+
 }
 
 FULL = set("""2510.02268 2610.12696 2609.37292 2610.23891 2609.24124 2609.32762 2610.38104
@@ -514,7 +520,7 @@ ABSTRACT_ONLY = set("""2603.26757 2605.30557 2608.01826 2608.01066 2606.15232 26
 2605.29416 2510.12276 2508.15874 2609.27734 2610.11508 2609.23252 2601.08325
 2602.04600 2609.07047 2603.04639 2609.18514 2603.12193 2607.01658 2610.04139 2512.02902
 2406.10721 2411.16537 2401.12168 2610.34051 2609.30833 2602.04243 2511.17001 2506.06196
-2611.03937 2608.13605 2603.22876 2606.03943 """.split())
+2611.03937 2608.13605 2603.22876 2606.03943 2608.04673""".split())
 
 out = []
 for pid, (lvl, ver, tags, ev, rel, ann, code, weights, data, evalentry, lic) in A.items():
