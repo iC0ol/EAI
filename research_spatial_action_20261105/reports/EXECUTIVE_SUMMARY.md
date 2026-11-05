@@ -50,6 +50,12 @@
 
 七条不同时满足，**不建议申请任何实验授权**。
 
+## 发布范围提示（请研究者处理，本次未自行处置）
+
+分支 `codex/spatial-action-survey-20261105` 已按要求推送，但**该分支的公开树里不止本任务的目录**：它从 `main` 之外的基点分出，自带 `d_alignment_pilot/`、`m_direction_pilot/`、`u_consistency_pilot/`、`research_expansion_20261029/`、`research_kyc_diagnostics_20261029/`、`research_kyc_final_recovery_20261103/`、`research_kyc_checkpoint_diagnostics_next/`、`research_kyc_grasp_diagnostics_20261104/`、`research_selection_20261028/`、`spatial_intervention_pilot/`。它们随本分支一并公开，**不是本次提交引入的**（本任务每个 commit 只新增/修改 `research_spatial_action_20261105/` 下的文件，已逐条核对）。按委托，我未做 force push、未改写他人提交、未删除这些目录。
+
+**建议**：若这些历史实验目录不应公开，需要由研究者决定在分支策略层处理（例如从 `main` 新建一个只含本任务提交的交付分支，或将这些目录移出公开仓库），而不是在本任务内改写历史。详见 `reports/SELF_AUDIT.md` §15。
+
 ## 不建议投入的方向（明确）
 
 - 再给 VLA 加 3D/深度/点云分支；

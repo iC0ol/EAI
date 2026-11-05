@@ -91,8 +91,9 @@ interface. Applied unchanged to π0.5, MolmoAct2 (VLAs) and FAST-WAM, ImageWAM (
   MolmoAct2's +21.74 sensor-noise etc.). Other cells were not transcribed.
 - Real-robot evidence is 25 rollouts/task ID and 10/task OOD — the same small-sample regime
   flagged elsewhere in the report.
-- LIT's four host models are 4B-class; nothing here says the effect transfers to an ACT/DP-scale
-  policy on a 3090, which is the regime C1 would use.
+- LIT's four host models are 3–4B-class or larger (π0.5 ≈3B; ImageWAM uses FLUX.2 Klein 4B per the
+  README config name; MolmoAct2 size not verified here). Nothing here says the effect transfers to
+  an ACT/DP-scale policy on a 3090, which is the regime C1 would use.
 
 ## 2610.02813 — Register-Routed Delayed Fusion (RRDF)
 

@@ -217,7 +217,7 @@
 
 ## 15. 发布范围核查（2026-11-05）
 
-**我的提交范围**：`7266076..HEAD` 共 28 个 commit，`git log --name-only` 显示**没有任何一个文件落在 `research_spatial_action_20261105/` 之外**。逐项 stage、未使用 `git add .` 的要求已满足。
+**我的提交范围**：`7266076..HEAD` 共 **45** 个 commit（第七轮复核时点），`git log --name-only` 显示**没有任何一个文件落在 `research_spatial_action_20261105/` 之外**。逐项 stage、未使用 `git add .` 的要求已满足。**第七轮复核再次确认**：`git diff --cached --name-only | grep -v '^research_spatial_action_20261105/'` 计数为 0。
 
 **但分支并非干净隔离**：该分支的基线 `7266076` 本身建立在一串更早的提交之上，这些提交包含其他研究目录：
 
