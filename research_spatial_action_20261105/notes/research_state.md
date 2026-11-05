@@ -2,7 +2,7 @@
 
 Last updated: 2026-11-05 (Asia/Shanghai), fourth pass. Search cutoff 2026-11-05.
 
-## Status: COMPLETE (second pass, revised conclusions)
+## Status: COMPLETE (fourth pass, revised conclusions; pushed at 5255a74)
 
 ## Pass 1 (initial delivery)
 - 130 queries, ~2,360 unique records, 88 registered at first delivery.
@@ -34,7 +34,7 @@ Triggered by the instruction that delivery had not fully passed review. Actions:
 - **Citation lists**: OpenAlex `filter=cites:` → 429 ("budget used up; resets at midnight UTC");
   Semantic Scholar → 429. Single-work metadata works, forward citations do not. This is the one gap that could
   overturn C1 (someone may have already run the cross-task prediction).
-- 40 papers remain abstract-only; they affect crowding judgements but not the core claims.
+- 41 papers remain abstract-only; they affect crowding judgements but not the core claims.
 - C1's core premise (same task, different failure-mode variants) is a design proposal with no pilot data.
 
 ## If work resumes

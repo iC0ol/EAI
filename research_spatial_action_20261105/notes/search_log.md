@@ -175,13 +175,13 @@
 2. **R2 确认了经典工作已进入对比基线**：RoboPoint、RoboSpatial、SpatialVLM 均为公开资产，任何"空间提示/空间 VQA"类贡献都必须以它们为基线。
 3. **R3/R4 是最有价值的一轮**：它把"空间信息是否被用于决策"变成可审计的问题（反事实审计、证据使用链、误差传播），同时显示该问题已被多条线并行占据（记忆审计、测试时诊断、运行时一致性）。
 4. **R5 否定了"多模态冲突/仲裁"作为新颖切口**：视觉—本体感觉冲突与阶段依赖已被 2602.12032 直接研究并给出机制（本体感觉梯度主导）与补救（GAP）。
-5. **R6 找到唯一未被直接占据的构念**：现有"tolerance"在机器人学中指**规划可行域**（2607.03758）或训练目标中的**允许偏差走廊**（2604.21241），而不是"任务对空间误差的容忍度，以及它能否预测空间表征升级的行动收益"。LIBERO-RIG 给出严重度—成功率曲线，但不估计每任务阈值，也不与表征收益挂钩。
+5. **R6 找到唯一未被直接占据的构念（此判断在第二、四轮被部分修正）**：现有"tolerance"在机器人学中指**规划可行域**（2607.03758）或训练目标中的**允许偏差走廊**（2604.21241）。第一轮写"LIBERO-RIG 不估计每任务阈值"是**错误的**——其 Table 5 正是 "Tolerance per axis"。修正后的缺口是：LIBERO-RIG 的容差按扰动轴、轴间不可比，且不预测"换空间表征能挽回多少"；More Structure 已单任务证明机制；二者未被连成跨任务预测关系。
 
 ## 未覆盖 / 待补
 
-- 未做引文网络追踪（S2/OpenAlex 限流）；因此"未被研究"只能表述为"在本轮查询与 95 篇登记中未发现"，不能表述为不存在。
+- 引文网络**部分完成**（第三、四轮）：S2 取到 6 个种子（KYC 28 篇施引、2512.02902 17、LIBERO-RIG 1、CMA 1、RSB 1、2610.01626 0），Google Scholar 另做 6 条关键词查询。**未穷举**；More Structure 的 S2 施引列表仍 429，但 OpenAlex 与 Scholar 均示零引用。因此"未被研究"只能表述为"在本轮查询与 95 篇登记中未发现"。
 - 未检索中文文献库（CNKI/万方）与 IEEE Xplore 全文；会议终稿与 arXiv 版本的差异未逐篇比对。
-- 部分 2026 年论文仅摘要级；其方法细节与实验强度未核实，报告中不据此下强结论。
+- 41 篇仅摘要级；其方法细节与实验强度未核实，报告中不据此下强结论。
 
 ## 第二轮（后台接续，同日）
 
@@ -191,7 +191,7 @@
    - `api.semanticscholar.org/graph/v1/paper/arXiv:2510.02268` → **429**（"Too Many Requests"）。
    - `api.openalex.org/works?filter=cites:W4414928220` → **429**（"budget ... used up ($0 remaining; resets at midnight UTC)"）。
    - `api.openalex.org/works?search=...` → **429**。
-   - **可用**：`api.openalex.org/works/https://doi.org/10.48550/arXiv.<id>`（单篇查询）→ 200。据此为全部 94 条补齐出版状态：11 篇为会议论文（KYC=ICRA 2026；SpatialVLA/LIBERO-X/2506.06196=RSS；SpatialVLM/RoboSpatial=CVPR；RSB/2609.07047=EMNLP Findings；2605.30161/2607.01658/2603.22876/2601.09954=LNCS），其余为 arXiv 预印本。
+   - **可用**：`api.openalex.org/works/https://doi.org/10.48550/arXiv.<id>`（单篇查询）→ 200。据此为全部 95 条补齐出版状态：11 篇为会议论文（KYC=ICRA 2026；SpatialVLA/LIBERO-X/2506.06196=RSS；SpatialVLM/RoboSpatial=CVPR；RSB/2609.07047=EMNLP Findings；2605.30161/2607.01658/2603.22876/2601.09954=LNCS），其余为 arXiv 预印本。
    - 其他替代入口也失败：`semanticscholar.org/arxiv/2510.02268` → 404；S2 内部 citations API → 404；`scite.ai` → 403。
    - 结论：**出版状态已核实，施引文献仍不可得**。这是本轮唯一未消除的检索缺口。
 
