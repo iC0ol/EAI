@@ -84,4 +84,6 @@ A1 只有在留出阶段/任务上同时优于 1–6 才算成立；否则降级
 - 第三方论文全文、arXiv 查询日志、运行时缓存均在 `.gitignore` 中（`papers/`、`logs/`、`orchestration/runtime/`），不提交。
 - 提交前检查 staged diff 的文件列表，确保没有其他任务目录、凭据、Python 环境或大文件。
 - push 后以 `git ls-remote origin refs/heads/codex/spatial-action-review-20261106` 与本地 `HEAD` 对照，并确认本目录无未提交修改。
-- 具体 commit、远端 SHA、时间与核验命令输出见 `reports/PUBLICATION_VERIFICATION.md`（提交后追加）。
+- 具体 commit、远端 SHA、时间与核验命令输出见 `reports/PUBLICATION_VERIFICATION.md`。
+- 首次交付 commit `a19fc7e5315607d036e7ccf691caaa496a259a81` 已 push；`git ls-remote origin refs/heads/codex/spatial-action-review-20261106` 返回同一 SHA；本目录无未提交修改（2026-11-06 12:19 CST）。
+- 最终交付以本文件所在的最新 commit 为准；该 commit 只追加发布核验记录，不改动报告结论。
