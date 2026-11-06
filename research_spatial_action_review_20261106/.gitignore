@@ -1,0 +1,11 @@
+papers/
+logs/
+orchestration/runtime/
+__pycache__/
+*.py[cod]
+.venv*/
+venv*/
+.env*
+*.key
+*.pem
+*.part
