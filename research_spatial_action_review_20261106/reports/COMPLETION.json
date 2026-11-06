@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETE",
+  "report_path": "reports/FINAL_REPORT.md",
+  "search_cutoff": "2026-11-06",
+  "self_audit": {
+    "eight_report_parts": true,
+    "c1_five_questions": true,
+    "prior_reports_independently_reviewed": true,
+    "primary_sources_and_reading_levels": true,
+    "limitations_differences_and_confounds": true,
+    "strong_simple_baselines_and_competitors": true,
+    "asset_audit_and_gate_order": true,
+    "short_paper_and_thesis_continuity": true,
+    "six_final_questions_answered": true,
+    "uncertainties_disclosed": true,
+    "no_experiments_performed": true
+  },
+  "remaining_uncertainties": [
+    "Whether a state-level local spatial margin tau(s) can be measured reproducibly (target: phase differences >2x with non-overlapping bootstrap CIs) is UNVERIFIED; no public protocol exists.",
+    "Whether the closed-loop error gain g(s) is separable from task difficulty is UNVERIFIED; no paper measures the gain from spatial estimation error to task error.",
+    "Whether 2605.19986 MetaFine, 2610.12457 SpatialHarness or 2610.01626 already connect margin/gain to intervention benefit is only partially checked (abstract-level for the first two).",
+    "LIBERO-RIG's claimed manifests and code were not located; asset status remains PARTIAL.",
+    "The A-FAR figure 41.0->28.0 was taken from prior notes and not re-verified this round (PARTIAL).",
+    "42 abstract-level papers from the prior registry were not upgraded to full text; they may contain direct competitors.",
+    "Prior-round citation tracking (Semantic Scholar / Google Scholar) was not independently re-run; 'no isomorphic work found' remains a bounded negative."
+  ],
+  "conclusion": "C1 should be dropped: its central construct (task tolerance / spatial precision upgrade) was never defined consistently, its predictors are post-intervention, and n=5 tasks cannot support its multivariate held-out prediction. The prior round's broader claim that the direction has no researchable problem is also not supported: it conflated module-level saturation with mechanism-level resolution. The only residual question worth Gate A read-only verification is whether a state-level local spatial margin tau(s) and closed-loop gain g(s) predict when precision improvements change action outcomes; it is a HYPOTHESIS, not an experiment-ready project, and must beat analytic geometry, headroom, failure-mode proportion, crop augmentation and equal-budget test-time adaptation. No Gate B/C experiment is proposed or authorized."
+}
