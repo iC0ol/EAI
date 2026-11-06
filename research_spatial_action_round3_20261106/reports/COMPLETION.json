@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETE",
+  "round": 3,
+  "report_path": "reports/FINAL_REPORT.md",
+  "self_audit": {
+    "causal_and_measurement_definitions": true,
+    "geometry_and_policy_tolerance_separated": true,
+    "metafine_readonly_code_audit": true,
+    "closest_competitors_checked": true,
+    "analytical_learning_and_new_mechanism_comparison": true,
+    "at_most_two_alternatives": true,
+    "explicit_research_decision": true,
+    "gates_and_statistics": true,
+    "short_paper_thesis_distinct_contributions": true,
+    "evidence_levels_and_unknowns_disclosed": true,
+    "no_experiments_performed": true
+  },
+  "remaining_uncertainties": [
+    "Whether EGR (2609.03142) or its appendix/ follow-ups already gate on task geometric margin rather than visibility/contact is not fully checked; only key sections were read.",
+    "Whether the MetaFine HF dataset includes object/target pose perturbation scripts or only camera/light perturbations is unknown; the dataset was not downloaded.",
+    "No citation tracking was performed this round; 'no paper measures the product R_pi * P_c / c' is a bounded negative.",
+    "Pix2Act (2607.11167) and MixVLA (2610.02898) were read at abstract level only; their method details may change the competition assessment.",
+    "MetaFine has no policy checkpoints in the repository; the paper's 7-policy results cannot be reproduced without VLA-scale fine-tuning.",
+    "The paper claims 431 objects/1,078 parts/4,312 grasp poses, while the repository contains 40 capabilities; the remaining assets are in a separate dataset that was not downloaded.",
+    "The MetaFine paper's multi-scale encoder intervention and peg-in-hole Grasp/Align/Insert stage flags are not present in the public code; reproducibility is PARTIAL."
+  ],
+  "decision": "Option 4: none of the current candidates qualifies. A1's original definition is not identifiable (perception error unobservable, R_pi and P_c conflated into g, geometric margin and policy tolerance conflated into tau), and its revised form is a measurement/error-budget framework rather than an independent method mechanism; its method variants are occupied by EGR, APEX, MetaFine, ActGaze, Pix2Act and MixVLA. B1/B2/B3 are weaker. A1 is retained only as a measurement-type thesis chapter, not as a method-oriented short paper; no Gate B/C is proposed."
+}
