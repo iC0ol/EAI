@@ -107,3 +107,10 @@
 - Gate B v2 不再使用简单 r_tol - d_xy 作为 clearance，也不再把单次 rollout winner 当作无噪声 oracle 标签。
 - Gate B v2 采用 checkpoint-first、固定 horizon 配对扫描、共同状态分支和 horizon×clearance 交互分析。
 - 本次修订没有下载 checkpoint、安装依赖、运行训练/推理/仿真或 benchmark；Gate B 仍未执行。
+
+
+## 14. DP 论文评估样本数补充
+
+- 已核对 Diffusion Policy 论文评估方法与脚注：通用描述为 3 个训练 seed、名义 50 个环境初始条件；robomimic 任务因评估代码 bug 实际只使用 22 个环境初始条件。
+- 修订后的 FINAL_REPORT 不再声称 Square 论文结果来自 3 seeds × 50 个独立初始条件。
+- Gate B 使用独立冻结的 100 个初始状态，并保存 seed 清单、每个 horizon 的配对结果和评估脚本版本。
