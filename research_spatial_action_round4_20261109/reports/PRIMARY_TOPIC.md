@@ -19,7 +19,7 @@
 ## 3. 为什么这是一个真实问题
 
 1. **动作块固定长度的权衡已被作者报告。** Diffusion Policy 论文 §4.3：horizon 8 对多数任务最优；太长降低反应，太短损失一致性 [F 2303.04137]。这是**任务级固定选择**，不是状态级。
-2. **误差增长是状态相关的。** 2610.01626 在 robomimic 上测得中位传播率：can 0.009、lift 0.015、square 0.017、tool hang 0.026；78% 的 lift 状态落在 deadband，闭环稳定罕见 [F 2610.01626 §4.2]。同一 chunk 在不同状态的安全长度不应相同。
+2. **误差传播具有状态与拟合窗口依赖性。** 2610.01626 在 robomimic 的 K=24 open-loop demonstration/rollout stamps 中报告中位 λ：can 0.009、lift 0.015、square 0.017、tool hang 0.026；这些数值不是最佳 horizon，也不是所有 policy-chunk 的统一传播率。DP policy-chunk stamps 的窗口受 8-action chunk 限制；论文强调短窗口可能高估长窗口传播，并明确说 λ 本身不能确定最优执行长度 [F 2610.01626 §4.2–4.3]。因此它只支持“全局单一传播率不足”的动机，不直接证明 CAC。
 3. **精度任务的失败是具体的。** robomimic Square 是 nut-on-peg 精密插入；DP 图像策略作者报告 avg 0.80–0.92（ph/mh），即 8–20% 失败 [F 2303.04137 Table 2]。失败集中在插入对准/接触，而不是"完全不会抓"。
 4. **现有自适应 horizon 方法没有用几何余量。** 2609.00908 用 action expert 的 cross-attention entropy plateau 做 training-free 截断（VLA，π0.5/X-VLA）；2607.01804 用 latent visual monitor 做反应式截断/重规划；2608.15938 分析开环 vs 闭环但无几何判据 [A/P]。**用任务空间 clearance + 预测误差增长做预测式 commitment 的工作未被直接做**（本轮有界检索）。
 
@@ -27,7 +27,7 @@
 
 ### 4.1 输入/输出
 
-- **输入：** 当前观测（图像 + proprio，或 Gate B 的特权状态）、策略预测的 H=16 步 action chunk、当前任务空间余量 `c_t`（nut-peg 横向偏移与孔/peg 公差）。
+- **输入：** 当前观测（图像 + proprio，或 Gate B 的特权状态）、策略预测的 H=16 步 action chunk、当前任务空间余量 c_t（nut 坐标系下 peg 外轮廓相对 nut 内孔的最小有符号几何间隙；相对 yaw 由轮廓投影体现，轴向 d_z 单独记录）。
 - **输出：** 本次执行的步数 `h ∈ {1,2,4,8,16}`；剩余 chunk 丢弃，下一步重新预测。
 
 ### 4.2 规则（文字伪代码）
@@ -63,7 +63,7 @@ at decision step t:
 | 策略 | **Diffusion Policy（图像，CNN）** | 官方 repo MIT；`square_image.yaml`；horizon 16 / n_action_steps 8 [静态源码] |
 | 动作接口 | 7-D OSC pose delta + gripper | DP 配置 action shape [7]；robomimic 标准 |
 | 观测 | 2×84×84 RGB（agentview + wrist）+ eef pos/quat + gripper qpos | `square_image.yaml` |
-| 数据 | raw Square ph 69 MB / mh 74 MB；本地渲染 84×84 图像 | HF 文件头；预渲染 84.8 GB 包不下载 |
+| 数据/权重 | raw Square ph 69 MB / mh 74 MB；官方 Square-MH image CNN checkpoint：train_2 / epoch=1950-test_mean_score=1.000.ckpt（约 4 GB）；本地加载未验证 | 官方实验档案；checkpoint 优先，失败再训练；预渲染 84.8 GB 包不下载 |
 | 评估 | robomimic env；success = nut on peg；`n_test=50`（Gate B 加到 100） | DP config；robomimic 文档 |
 | 硬件 | 单卡 3090 24GB；训练 3000 epochs；eval 8 envs | DP 论文 §5；config |
 | 备选任务 | ToolHang（同代码/数据；DP image avg 0.73–0.84；λ 最高 0.026） | DP Table 2；2610.01626 |
@@ -89,7 +89,7 @@ at decision step t:
 
 ## 8. 未验证事项（必须如实标注）
 
-1. **本地 DP Square 正基线**：作者报告 0.80–0.92；本地未跑。Gate B 门槛 ≥0.70。
+1. **本地 DP Square 正基线**：作者报告 0.80–0.92；官方 Square-MH checkpoint 已确认存在（约 4 GB），但本地尚未加载/评估。先做 checkpoint compatibility test；本地 100-episode 门槛 ≥0.70。
 2. **固定 horizon 的效应量**：DP 论文只给任务级 8 最优；Square 上不同 horizon 的差异未报告。Gate B 测。
 3. **clearance 是否预测 oracle horizon**：未有任何论文直接测；Gate B 测（AUROC ≥0.7）。
 4. **always-short 是否已经最好**：若最好，CAC 的成功率增益消失；Gate B 测。
@@ -100,8 +100,16 @@ at decision step t:
 
 ## 9. 首个待授权实验
 
-见 `reports/GATE_B_PROTOCOL.md`：在 Square 上训练一个 DP 图像基线，做固定 horizon 扫描（1/2/4/8/16），测 oracle horizon 与 clearance 的相关性。**不训练 CAC 方法。**
+见 reports/GATE_B_PROTOCOL.md：先加载官方 Square-MH checkpoint 并完成本地 smoke test；兼容后做固定 horizon 扫描，再从共同的插入前状态分支评估不同 horizon 与 clearance 的交互。只有 checkpoint 不兼容/分布明显不符时才按官方配置重训。**不训练 CAC 方法。**
 
 ## 10. 一句话
 
 **如果实验证明"几何余量能预测安全 horizon，且 CAC 在等算力下优于固定/不确定性基线"，这就是一篇方法型小论文；如果不能，Gate B 会在两周内给出干净的否定，并把资产留给 P2/P3。**
+
+
+## 11. 2026-11-10 修订
+
+- 官方 Square-MH image CNN checkpoint 存在：train_2/checkpoints/epoch=1950-test_mean_score=1.000.ckpt，约 4 GB。该文件名中的分数是发布实验记录，不是本地复现结果；本地加载与评估仍待验证。
+- 2610.01626 的 square λ=0.017 是 K=24 demonstration/rollout 统计中的任务中位数；不能写成 policy-chunk 的通用传播率，也不能据此推出最优 horizon。
+- Gate B 的 clearance 采用仿真几何的最小有符号间隙，不再使用简单 r_tol - d_xy；yaw 纳入轮廓投影，d_z 独立记录。
+- J2 改为共同状态分支实验和 horizon×clearance 交互分析；单次 episode 的 winner 不再直接作为无噪声 oracle 标签。
