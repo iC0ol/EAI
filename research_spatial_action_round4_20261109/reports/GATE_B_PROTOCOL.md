@@ -63,7 +63,7 @@ Gate B 不实现预测误差模型、不训练 CAC、不做跨任务论文实验
 | 单 episode | reset、rollout、终止谓词正常；视频可检查 | 未通过不得进入 horizon 扫描 |
 | 100-episode baseline | 成功率 ≥0.70 作为继续门槛 | <0.60：排错后再试；仍低则 checkpoint/config/platform BLOCKED；0.60–0.70 记录边缘基线，不宣称复现 |
 
-DP 论文报告的 0.80–0.92 是作者跨实验结果，不是本地验收值。公开 checkpoint 文件名的 1.000 也不是本地 baseline。
+DP 论文报告的 0.80–0.92 是作者跨实验结果，不是本地验收值；论文脚注披露 robomimic 任务实际只使用 22 个环境初始条件，而非名义 50。公开 checkpoint 文件名的 1.000 也不是本地 baseline。
 
 ## 4. B1：固定 horizon 扫描
 
@@ -124,10 +124,10 @@ c_xy > 0 表示投影轮廓仍有正间隙，c_xy = 0 表示临界接触，c_xy 
 
 ### 6.1 取样与分支
 
-1. 从固定的 h=8 pilot rollout 中，按预先定义的插入前阶段抽取 30 个 decision states；覆盖成功与失败轨迹，不只选成功状态。
+1. 从固定的 h=8 rollout 中，按预先定义的插入前阶段抽取 decision states；每个 episode 最多取一个 state，初始 discovery 集至少 30 个不同初始状态，覆盖成功与失败轨迹，不只选成功状态。若 B1 pilot 只有 20 个 h=8 episode，则额外补足至少 10 个独立初始状态。
 2. 对每个 state 保存完整 simulator state、robot state、object state、observation 和随机数状态；验证恢复后能重现同一状态。
 3. 从同一保存状态分支执行 h ∈ {1,2,4,8,16} 中的一个 commitment：重新预测 H=16，执行前 h 步；随后统一恢复 h=8 策略直到 episode 结束。
-4. 每个 state × h 先跑 3 个 policy sampling seeds。pilot 若显示明显交互，再扩展到 50 states 和更多随机重复。
+4. discovery 集每个 state × h 先跑 3 个 policy sampling seeds。若 discovery 显示方向一致且值得继续，再额外收集至少 30 个不同初始状态作为独立 confirmation 集；confirmation 集不用于选 clearance 阈值或改分析定义。若要提高每个状态成功概率估计精度，再增加随机重复数。
 5. 如果 robosuite/robomimic 无法可靠 snapshot/restore，则用相同 reset seed 与确定性 replay 重建状态；若仍无法复现，B2 不得以“配对状态”名义继续。
 
 ### 6.2 主要统计问题
@@ -136,7 +136,7 @@ J2 不再定义为“每个 episode 哪个 horizon 赢了”再直接计算 AURO
 
 success ~ categorical(h) + c_xy + categorical(h):c_xy
 
-采用按 state_id 聚类的 bootstrap 或合适的 mixed-effects logistic model；检验 horizon × clearance 交互项，并画出不同 clearance 区间内各 horizon 的预测成功率与置信区间。
+采用按初始 episode/state_id 聚类的 bootstrap 或合适的 mixed-effects logistic model；discovery 与 confirmation 按 episode 分离；检验 horizon × clearance 交互项，并画出不同 clearance 区间内各 horizon 的预测成功率与置信区间。
 
 - 若 clearance 越紧时短 horizon 的相对收益越大、clearance 越宽时较长 horizon 的收益/调用效率更好，且交互在 held-out states 上保持，才支持 CAC 的核心现象。
 - 用每个 state × h 的重复 rollout 估计成功概率；只有 best-vs-next 差异超过预先设定的实际意义阈值且不确定性足够小时，才给出 oracle horizon 标签。
@@ -175,7 +175,7 @@ Gate B 不训练 error model、不实现完整 CAC、不做第二任务、不宣
 
 - Checkpoint：约 4 GB；本地下载与加载时间取决于网络/磁盘。
 - B1：pilot 100 episodes；扩展 500 episodes。
-- B2：pilot 30 states × 5 horizons × 3 stochastic repeats = 450 branch episodes；若信号存在再扩展。
+- B2：discovery 至少 30 states × 5 horizons × 3 stochastic repeats = 450 branch episodes；若信号存在，再收集至少 30 个独立 confirmation states（另 450 branch episodes）。
 - 训练：checkpoint-first 默认不训练；若必须重训，按发布 config 实测，不预先承诺 3000 epochs 或 1–2 天。
 - 不下载 84.8 GB 预渲染图像包。
 
