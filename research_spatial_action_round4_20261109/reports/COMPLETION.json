@@ -24,7 +24,8 @@
     "Whether simulator collision geometry can be exposed reliably for the signed clearance calculation is unverified.",
     "Whether the local environment can snapshot/restore or deterministically replay matched pre-insertion states is unverified.",
     "Whether always-short is already best, or whether an adaptive oracle has a meaningful advantage over the best fixed horizon, remains unknown.",
-    "2609.00908 and 2607.01804 remain abstract-level competitors; exact behavior on DP/Square is not yet compared."
+    "2609.00908 and 2607.01804 remain abstract-level competitors; exact behavior on DP/Square is not yet compared.",
+    "The original Diffusion Policy paper notes that its robomimic evaluation code used 22 initial conditions rather than the nominal 50; Gate B will use a new, explicitly recorded set of 100 initial states."
   ],
   "revision": {
     "date": "2026-11-10",
@@ -33,7 +34,8 @@
       "Corrected public Square-MH image CNN checkpoint availability; checkpoint-first path.",
       "Clarified 2610.01626 square lambda context and finite-window limitation.",
       "Redefined geometric clearance using signed polygon/collision-geometry margin.",
-      "Replaced episode-winner oracle with common-state branching and horizon-clearance interaction analysis."
+      "Replaced episode-winner oracle with common-state branching and horizon-clearance interaction analysis.",
+      "Added the robomimic evaluation-footnote caveat: 22 actual initial conditions rather than the nominal 50."
     ],
     "experiment_execution": false
   }
