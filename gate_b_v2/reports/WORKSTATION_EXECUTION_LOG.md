@@ -23,7 +23,7 @@ Append dated entries here after actual workstation actions. Do not pre-fill succ
 | 2026-11-10 19:38 | — | Policy query on official stored observations | Predicted pose 0.8–2.5 cm from next demo pose; gripper sign matches | `reports/policy_replay_check.json` | Policy/action path correct |
 | 2026-11-10 19:40 | — | Closed loop from official `demo_0` start state | **Success** at ~120 steps (200 cap) | console log | Harness validated |
 | 2026-11-10 19:41 | — | Read checkpoint `task.env_runner` | `test_start_seed=4,500,000`, `n_test=50` — not the protocol's 100000 | checkpoint payload | B0 is a new measurement |
-| 2026-11-10 19:43→ | — | CPU smoke on checkpoint's own seeds 4,500,000/4,500,001 | Running; not an official B0 result | `runs/cpu_official_seeds2/` | Await |
+| 2026-11-10 19:43→20:01 | — | CPU smoke on checkpoint's own seeds 4,500,000/4,500,001 | **2/2 success** (500 steps, 63 calls each, max_reward 1.0); not an official B0 result | `reports/cpu_official_seeds2_*` | Harness validated |
 | 2026-11-10 18:40 | 3edc36b | `pytest -q`; `compileall`; `bash -n` | 25 passed; clean; clean | `tests/`, `reports/CODE_REVIEW.md` | Commit |
 
 ## Current decision

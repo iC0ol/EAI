@@ -48,9 +48,19 @@ not a harness bug. The checkpoint's own evaluation used
 seeds 100000–100099. The checkpoint filename's 1.000 therefore says nothing
 about the protocol seeds; B0 must measure them.
 
-A CPU smoke on the checkpoint's own seeds (4,500,000/4,500,001) is running at
-report time to confirm that the harness reproduces the checkpoint's intended
-evaluation conditions. It is still CPU-only and not the official baseline.
+A CPU smoke on the checkpoint's own seeds confirms the harness reproduces its
+intended evaluation conditions:
+
+| Seed | Steps | Policy calls | Success | max_reward |
+|---|---:|---:|---|---:|
+| 4,500,000 | 500 | 63 | **true** | 1.0 |
+| 4,500,001 | 500 | 63 | **true** | 1.0 |
+
+These are still CPU-only runs and not the official baseline, but they show
+that observation, action, controller, renderer, EMA/normalizer and success
+logic all work. The Gate B seeds 100000/100001 failed under the same code, so
+the protocol seed set is simply different from the checkpoint's evaluation
+seed set. B0 must measure it on the 3090.
 
 CPU policy-call time is ~7 s versus a fraction of a second on a 3090, so 100
 full episodes would take roughly 12 hours on CPU. That is neither the

@@ -99,8 +99,10 @@ B0 score on the protocol seeds.
   matches the stored gripper action sign at all three sampled states.
 - **Closed loop:** starting from the official `demo_0` initial state, the
   harness reaches task success in about 120 steps.
-- These three checks localize the CPU seed-100000/100001 failures to the
-  seed set rather than to observation, action, controller, renderer or success
+- **Checkpoint's own seeds:** CPU smoke on seeds 4,500,000 and 4,500,001
+  succeeds 2/2 (500 steps, 63 policy calls, max_reward 1.0).
+- These four checks localize the CPU seed-100000/100001 failures to the seed
+  set rather than to observation, action, controller, renderer or success
   logic.
 
 ## Protocol deviations requiring researcher attention
