@@ -14,14 +14,15 @@
 - **官方资产存在**：DP repo/config MIT；robomimic 数据；ManiSkill ACT baseline；MetaFine repo。
 - **第三方复现**：未核查。
 - **本地跑通**：无。
-- 报告严格区分以上四层；没有把作者报告写成"本地可用"，也没有把"有代码"写成"已跑通"。
-- 没有编造权重、数据或实验结果；DP 没有 Square checkpoint，报告明确写"需训练"。
+- **官方 checkpoint**：Square-MH image CNN 的 train_2 / epoch=1950 checkpoint 公开存在（约 4 GB）；本地加载/评估尚未验证。
+- 报告严格区分作者报告、公开资产存在与本地复现；没有把 checkpoint 存在写成已跑通。
+- 修订后不再声称 DP Square 没有 checkpoint；默认 checkpoint-first，只有兼容性失败时才重训。
 - 84.8 GB 预渲染图像包明确标注 HIGH_RISK；主路径是 raw demo 69/74 MB + 本地渲染。
 
 ## 3. 具体行动失败 vs 泛泛表述
 
-- 失败：Square nut-on-peg 插入失败（8–20%），不是"空间理解不足"。
-- 证据：DP Table 2（成功率<1）+ 2610.01626（square λ=0.017，状态依赖）+ DP §4.3（horizon 8 任务级折中）。
+- 失败：Square nut-on-peg 插入失败（作者报告有 8–20% 失败，不等于本地失败率），不是"空间理解不足"。
+- 证据：DP Table 2（作者报告成功率）+ 2610.01626（K=24 demonstration/rollout 的 square 任务中位 λ=0.017；拟合窗口敏感，不能推出最优 horizon）+ DP §4.3（horizon 8 任务级折中）。
 - 区分了：感知/几何估计、策略使用、动作接口、闭环执行、数据/评测。报告把失败主要归因于"固定 horizon 下的闭环误差/接触"，并明确这是**合理假设**，Gate B 才分解。
 - 报告列出了推翻条件（horizon 无效、always-short 最好、clearance 不预测）。
 
@@ -88,11 +89,21 @@
 
 ## 12. 已知限制
 
-1. DP Square 本地基线未跑；0.80–0.92 是作者报告。
-2. 本地渲染图像与 DP 论文分布是否一致未验证。
+1. DP Square 本地基线未跑；0.80–0.92 是作者报告；Square-MH 官方 checkpoint 已存在但尚未本地加载。
+2. checkpoint/config 与当前本地依赖、渲染图像分布是否兼容未验证；只有重训时才需要完整本地渲染。
 3. DP/robomimic 旧栈在 3090 上能否稳定运行未验证。
 4. 2609.00908/VLA-Corrector 仅摘要级；其方法细节可能改变竞争判断。
 5. Gated GeoBoN/RAIN 仅摘要级；P2 的竞争判断有限。
 6. 没有做引文追踪；"未被直接做"是有界否定。
-7. 8 pp/0.7 AUROC 是工程门槛，不是统计定律；Gate B 可根据 pilot 方差调整并记录。
+7. v1 的 8 pp/AUROC 门槛不是统计定律；Gate B v2 将 J2 主检验改为共同状态分支中的 horizon×clearance 交互，AUROC/oracle 仅作次级分析。
 8. 若 Gate B 的 100 episodes 不足，报告不会把"不显著"解释为"现象不存在"，而是增加 episodes 或停止并说明功效不足。
+
+
+## 13. 2026-11-10 修订自检
+
+- 已核对 Diffusion Policy 官方 README 与 Square-MH image/CNN/train_2 checkpoint 目录；公开文件约 4 GB，尚未下载或本地加载。
+- 已修正“无 checkpoint”的事实错误；本地成功率仍明确标注为 UNKNOWN。
+- 已修正 2610.01626 的 λ 解释：square 0.017 对应 K=24 demonstration/rollout 任务中位数，论文明确 λ 受拟合窗口影响且不直接决定最优 horizon。
+- Gate B v2 不再使用简单 r_tol - d_xy 作为 clearance，也不再把单次 rollout winner 当作无噪声 oracle 标签。
+- Gate B v2 采用 checkpoint-first、固定 horizon 配对扫描、共同状态分支和 horizon×clearance 交互分析。
+- 本次修订没有下载 checkpoint、安装依赖、运行训练/推理/仿真或 benchmark；Gate B 仍未执行。
