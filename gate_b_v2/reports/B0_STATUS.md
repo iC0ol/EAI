@@ -37,13 +37,20 @@ not the protocol's 3090 baseline.
 | 16-step end-to-end rollout | OK; 2 policy calls; 15.15 s | `runs/cpu_pipeline_smoke/` |
 | Full 500-step CPU smoke, seeds 100000/100001 | **0/2**; 63 policy calls each | `runs/cpu_smoke_full5/` |
 | 500-step failure-mode diagnostic, seed 100000 | Robot approaches the SquareNut but hovers ~3–5 cm off and never closes the gripper (−1 = open) | `runs/diag500/`, `runs/diag100000/` |
+| Render comparison vs official `image.hdf5` states | Direct orientation matches: corr 0.998, mean abs diff 1.2–1.6/255. Horizontal/vertical flips are clearly wrong (corr ≤0.63). OSMesa rendering is faithful. | `reports/render_comparison.json`, `runs/render_compare/` |
+| Policy query on official stored observations | Predicted absolute position within 0.8–2.5 cm of the next demonstration pose; gripper sign matches the stored action at all three states. | `reports/policy_replay_check.json` |
+| Closed-loop from official demo_0 start state | **Success** at ~120 steps (200-step cap) | console log |
 
-The 0/2 CPU result is **not** an official baseline and is not yet interpreted
-as a policy failure: the renderer is OSMesa/llvmpipe, while the checkpoint was
-trained and evaluated with GPU OpenGL. A direct comparison against the official
-`image.hdf5` observations is in progress (download at report time). If the
-rendered frames match the stored training frames, the failure points to a real
-harness bug and must be fixed before any GPU baseline.
+These checks show the observation, action-conversion, controller and success
+paths are correct. The Gate B seed failures are therefore a seed-set effect,
+not a harness bug. The checkpoint's own evaluation used
+`test_start_seed = 4,500,000` (50 episodes), whereas the Gate B protocol fixes
+seeds 100000–100099. The checkpoint filename's 1.000 therefore says nothing
+about the protocol seeds; B0 must measure them.
+
+A CPU smoke on the checkpoint's own seeds (4,500,000/4,500,001) is running at
+report time to confirm that the harness reproduces the checkpoint's intended
+evaluation conditions. It is still CPU-only and not the official baseline.
 
 CPU policy-call time is ~7 s versus a fraction of a second on a 3090, so 100
 full episodes would take roughly 12 hours on CPU. That is neither the

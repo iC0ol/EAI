@@ -18,7 +18,12 @@ Append dated entries here after actual workstation actions. Do not pre-fill succ
 | 2026-11-10 18:34 | — | `nvidia-smi` / torch CUDA check | **BLOCKED**: kernel 550.144.03 vs userspace 580.178.04; CUDA error 804 | `reports/B0_STATUS.md` | Official B0 cannot start |
 | 2026-11-10 18:32→18:52 | — | 5×500-step CPU-only smoke (pipeline validation) | Stopped after 2 episodes: 0/2, 63 calls each | `runs/cpu_smoke_full5/` | Investigate |
 | 2026-11-10 18:53→19:05 | — | 500-step failure-mode diagnostic, seed 100000 | Approaches nut but hovers 3–5 cm off; gripper never closes | `runs/diag500/`, `runs/diag100000/` | Compare against official images |
-| 2026-11-10 19:07→ | — | Downloading official `image.hdf5` (6.96 GB) for a render comparison | In progress; single-task file, not the 84.8 GB bundle | `assets/square_mh/image.hdf5` | Pending |
+| 2026-11-10 19:07→19:35 | — | Downloaded official `image.hdf5` (6.96 GB) with resume | Complete; SHA256 `d675c4a9…ff403`; single task, not the 84.8 GB bundle | `assets/square_mh/image.hdf5` | Compare |
+| 2026-11-10 19:37 | — | Rendered 3 official states and compared with stored frames | Direct orientation corr 0.998/0.9998; mean diff 1.2–1.6/255; flips decisively worse | `reports/render_comparison.json` | Renderer is faithful |
+| 2026-11-10 19:38 | — | Policy query on official stored observations | Predicted pose 0.8–2.5 cm from next demo pose; gripper sign matches | `reports/policy_replay_check.json` | Policy/action path correct |
+| 2026-11-10 19:40 | — | Closed loop from official `demo_0` start state | **Success** at ~120 steps (200 cap) | console log | Harness validated |
+| 2026-11-10 19:41 | — | Read checkpoint `task.env_runner` | `test_start_seed=4,500,000`, `n_test=50` — not the protocol's 100000 | checkpoint payload | B0 is a new measurement |
+| 2026-11-10 19:43→ | — | CPU smoke on checkpoint's own seeds 4,500,000/4,500,001 | Running; not an official B0 result | `runs/cpu_official_seeds2/` | Await |
 | 2026-11-10 18:40 | 3edc36b | `pytest -q`; `compileall`; `bash -n` | 25 passed; clean; clean | `tests/`, `reports/CODE_REVIEW.md` | Commit |
 
 ## Current decision

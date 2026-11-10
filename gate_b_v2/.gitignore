@@ -19,3 +19,4 @@ outputs/
 *.pkl.gz
 *.npz
 *.log
+reports/train_2_logs.json.txt

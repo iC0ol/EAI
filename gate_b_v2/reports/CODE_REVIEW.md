@@ -77,6 +77,32 @@ MuJoCo/OSMesa libraries and offline wandb. All launchers source it.
 - DP's image normalizer is `[0,1] → [-1,1]`; robomimic returns processed
   `[0,1]` CHW images by default (`postprocess_visual_obs=True`).
 
+## Evaluation-seed discrepancy
+
+The checkpoint payload's `task.env_runner` uses `test_start_seed = 4,500,000`
+with `n_test = 50`, while the published directory config and the Gate B
+protocol use 100000. The checkpoint filename's `test_mean_score=1.000`
+therefore covers seeds 4,500,000–4,500,049, **not** the Gate B seeds
+100000–100099. The training-time metrics log also reports fractions with an
+11-episode denominator, not 50. The 1.000 must not be treated as the expected
+B0 score on the protocol seeds.
+
+## Additional workstation validation
+
+- **Rendering:** restoring official `image.hdf5` states and rendering through
+  the harness reproduces the stored training frames in the direct orientation
+  (agentview corr 0.998, mean abs diff 1.6/255; eye-in-hand corr 0.9998, mean
+  abs diff 1.2–1.5/255). Vertical/horizontal flips are decisively worse.
+  The OSMesa CPU renderer is therefore faithful for this task.
+- **Policy replay:** querying the policy on official stored observations
+  predicts absolute positions 0.8–2.5 cm from the next demonstration pose and
+  matches the stored gripper action sign at all three sampled states.
+- **Closed loop:** starting from the official `demo_0` initial state, the
+  harness reaches task success in about 120 steps.
+- These three checks localize the CPU seed-100000/100001 failures to the
+  seed set rather than to observation, action, controller, renderer or success
+  logic.
+
 ## Protocol deviations requiring researcher attention
 
 1. **Action space:** the named checkpoint is 10-D absolute-action, while the
@@ -88,6 +114,9 @@ MuJoCo/OSMesa libraries and offline wandb. All launchers source it.
    15 in place of 16).
 3. **B2** remains blocked by the unfrozen insertion-stage window; no B2 state
    was collected.
+4. **Seed provenance:** the checkpoint's 1.000 was measured on seeds
+   4,500,000+, not the protocol's 100000+. B0 on the protocol seeds is a new
+   measurement, not a reproduction of 1.000.
 
 ## Verification
 
