@@ -39,7 +39,7 @@
 ## 为什么选它（在不完美选项中）
 
 1. **正基线最可靠**：DP 图像 Square 有作者报告的 0.80–0.92，代码/配置/数据公开。
-2. **失败具体**：8–20% 的 nut-on-peg 失败；2610.01626 测得 square 的误差传播率 0.017，状态依赖。
+2. **失败具体**：DP 图像策略在 Square 上存在作者报告的失败空间（结果随 PH/MH 与 DP-C/DP-T 配置而异）；2610.01626 的 square λ=0.017 是 K=24 demonstration/rollout 任务中位数，不能当作 policy-chunk 的通用传播率或最优 horizon 证据。
 3. **第一项实验最便宜**：只改 eval 的 `n_action_steps`，不训练新模型；1–2 周可得到 J1/J2 的明确结论。
 4. **强简单基线清楚**：固定 8、always-short、不确定性、反应式监控、oracle；方法必须全部击败或至少优于最佳固定。
 5. **3090 可行**：DP 图像训练/评估在单卡范围；不需要 VLA 或大数据。
@@ -53,9 +53,9 @@
 
 | # | 任务 + 模型 | 官方来源 | 权重/数据 | 动作接口 | 正成功证据 | 3090 | 复现风险 | 状态 |
 |---|---|---|---|---|---|---|---|---|
-| 1 | **robomimic Square + DP（图像）** | DP 2303.04137；repo `real-stanford/diffusion_policy`（MIT）；`square_image.yaml` | 官方 checkpoint：Square-MH image / train_2 / epoch=1950-test_mean_score=1.000.ckpt（约 4 GB；本地未加载）；raw ph 69 MB / mh 74 MB；预渲染 image zip 84.8 GB（不下载） | 7-D OSC pose delta + gripper；2×84×84 RGB + proprio | **作者报告 avg 0.80–0.92**（ph/mh，3 seeds × 50 init） | 训练 1–2 天；eval 2–4 h | 旧栈（PyTorch/gym/MuJoCo）；需验证 checkpoint 与环境兼容；公开权重存在但本地未加载 | **VERIFIED（作者报告）/ 本地未跑** |
+| 1 | **robomimic Square + DP（图像）** | DP 2303.04137；repo `real-stanford/diffusion_policy`（MIT）；`square_image.yaml` | 官方 checkpoint：Square-MH image / train_2 / epoch=1950-test_mean_score=1.000.ckpt（约 4 GB；本地未加载）；raw ph 69 MB / mh 74 MB；预渲染 image zip 84.8 GB（不下载） | 7-D OSC pose delta + gripper；2×84×84 RGB + proprio | **作者报告结果约 0.80–0.92**（具体取决于 PH/MH 与 DP-C/DP-T；3 个训练 seed；robomimic 评估代码有已披露 bug，实际仅使用 22 个环境初始条件，而非名义 50） | 训练 1–2 天；eval 2–4 h | 旧栈（PyTorch/gym/MuJoCo）；需验证 checkpoint 与环境兼容；公开权重存在但本地未加载 | **VERIFIED（作者报告）/ 本地未跑** |
 | 2 | robomimic ToolHang + DP | 同上 | 同上 | 同上 | 作者报告 avg 0.73–0.84（image） | 同上 | 任务更难、更长 | **VERIFIED（作者报告）** |
-| 3 | ManiSkill3 PickCube + ACT | ManiSkill3 2410.00425；`examples/baselines/act` | 100 motion-planning demos；30k iters；无 checkpoint | pd_ee_delta_pos；RGB/state | 官方 baseline 存在；**精确成功率未在 README/正文给出** | 训练数小时–1 天；GPU 并行 eval | ACT 历史 0 成功风险；基线数字 PARTIAL | **PARTIAL** |
+| 3 | ManiSkill3 PickCube + ACT | ManiSkill3 2410.00425；`examples/baselines/act` | 100 motion-planning demos；30k iters；无 checkpoint | pd_ee_delta_pos；RGB/state | 官方 baseline 存在；**精确成功率未在 README/正文给出** | checkpoint-first；仅必要时按发布配置重训；GPU 并行 eval | ACT 历史 0 成功风险；基线数字 PARTIAL | **PARTIAL** |
 | 4 | MetaFine Grasp/Toggle + ACT/DP3 | MetaFine 2605.19986；repo MIT | 仓库 40 assets；演示可生成；无 checkpoint | pd_joint_delta_pos 等 | ACT 49/63/63；DP3 75/85/63（Grasp/Toggle/Press） | 可行 | **精度任务 Peg/Plug/Stack ACT/DP3 = 0%**；任务偏 coarse | **VERIFIED（作者报告）/ 不作主平台** |
 
 **结论**：只有 #1/#2 同时满足"精度任务 + 作者报告的正基线 + 可改 horizon + 3090 + 数据可管理"。#3 是平台 fallback；#4 的精度任务无正基线，不能作主平台。
@@ -250,7 +250,7 @@
 
 ## H1. 关键来源（详见 `sources/sources.jsonl`）
 
-- DP 2303.04137 [F]：Table 2 Square image 的作者报告结果；§4.3 horizon 8；作者报告结果不等于本地复现。
+- DP 2303.04137 [F]：Table 2 Square image 的作者报告结果；§4.3 horizon 8；robomimic 评估脚注披露实际仅使用 22 个环境初始条件；作者报告结果不等于本地复现。
 - DP repo [静态源码]：square_image.yaml；horizon 16/n_action_steps 8；MIT。
 - DP 官方实验档案：Square-MH image / diffusion_policy_cnn / train_2 / epoch=1950-test_mean_score=1.000.ckpt（目录列出约 4 GB 文件；本地加载未验证）。
 - robomimic 数据 [元信息]：Square ph 69 MB / mh 74 MB；PH 200/MH 300。
@@ -297,3 +297,6 @@
 3. **clearance 定义收紧**：不再用 r_tol - d_xy 作为最终几何量。Gate B 应从仿真碰撞几何/轮廓计算 nut 坐标系下 peg 外轮廓相对 nut 内孔的最小有符号间隙；相对 yaw 通过轮廓投影体现，轴向 d_z 单独记录。若仿真几何无法可靠读取，不得用径向近似冒充 clearance，应先记录为实现阻塞。
 4. **J2 统计设计收紧**：不再把单次 rollout 中“哪个 horizon 成功”直接当作无噪声 oracle 标签。Gate B v2 采用同一保存状态上的分支评估，检验 horizon 与 clearance 的交互；oracle horizon/AUROC 只作为次级分析。
 5. **实验状态**：本次只修订文档并核对公开资料；没有下载 checkpoint、安装依赖、运行仿真、训练或评估。Gate B 仍未执行。
+
+
+6. **评估样本数补充**：Diffusion Policy 论文的通用评估说明写 3 个训练 seed、名义 50 个环境初始条件，但脚注明确指出 robomimic 任务因评估代码 bug 实际只使用 22 个初始条件。因此本报告不再把 Square 结果表述为“3 seeds × 50 independent initializations”。Gate B 将使用自己冻结的 100 个初始状态，并公开 seed 清单与配对日志。
