@@ -1,133 +1,186 @@
-# Gate B 冻结协议：几何余量感知的动作块提交（CAC）
+# Gate B v2.0：几何余量感知的动作块提交（CAC）
 
-- 状态：**设计，未执行**。需研究者单独授权。
-- 目的：用最小实验判断"目标现象是否真实存在、平台是否有正成功率、CAC 假设是否值得继续"，**不验证 CAC 方法本身**。
-- 主任务：robomimic **Square**（nut-on-peg 精密插入），图像 DP。
-- 备选：Square-ph；ToolHang；ManiSkill3 PickCube + ACT（见 §10）。
+- 修订日期：2026-11-10
+- 状态：**协议已修订，实验未执行**。
+- 目标：验证平台基线、固定 horizon 的效果，以及局部几何 clearance 是否调节不同 horizon 的任务结果。**不训练 CAC，不声称方法有效。**
+- 主任务：robomimic Square-MH + Diffusion Policy image CNN。
+- 硬件目标：单卡 RTX 3090 24 GB；本地硬件/环境尚未验证。
 
 ---
 
-## 1. 前置条件（不满足则不进入主实验）
+## 0. 本版相对 v1 的关键更正
 
-| # | 条件 | 检查方式 | 失败处理 |
-|---|---|---|---|
-| P1 | robomimic + DP 环境可在 3090 上安装并运行 | `python -c "import robomimic, diffusion_policy"`；跑 1 个 episode | 5 个工作日内不能解决 → 平台 fallback（§10） |
-| P2 | Square raw demo 可下载（ph 69 MB / mh 74 MB） | 文件校验 | 换 ph/mh 或 fallback |
-| P3 | 本地渲染 84×84 图像可用 | 渲染 5 条 demo，检查图像/键名与 DP dataset 兼容 | 修复渲染脚本；否则用预渲染包（84.8 GB，需磁盘/带宽） |
-| P4 | DP 图像基线训练到 ≥0.70（见 §4） | 100 episodes 评估 | <0.60 两次尝试 → 停止/fallback；0.60–0.70 边缘，记录并谨慎继续 |
-| P5 | horizon 可在 eval 时改变，且不重训 | 改 `n_action_steps`；确认 policy 仍预测 16 步 | 修复 eval 封装 |
+1. 官方 Square-MH image CNN checkpoint 已公开，优先走 checkpoint-first，不默认从头训练。
+2. square λ=0.017 是 2610.01626 的 K=24 demonstration/rollout 任务中位数，不是 policy-chunk 通用值，也不代表最佳 horizon。
+3. clearance 不再用 r_tol - d_xy 近似；必须从仿真碰撞几何/物体轮廓计算最小有符号间隙。
+4. J2 不用单次 episode 的 horizon winner 直接制造 oracle 标签；采用同一保存状态上的分支评估与 horizon×clearance 交互分析。
 
-## 2. 唯一核心判断
+## 1. 公开资产与 checkpoint-first 路径
 
-**在 Square 上，最佳开环执行 horizon 是否是状态相关的，并且由局部几何余量（nut-peg 横向偏移相对公差）预测？**
+### 1.1 官方权重
 
-拆成两个可观测子判断（同一实验）：
-- **J1（horizon 有影响）**：固定 horizon 1/2/4/8/16 的成功率差异 ≥8 pp（配对，95% CI 排除 0）。
-- **J2（clearance 可预测）**：插入前状态的 clearance 能区分"短 horizon 更好"与"长 horizon 更好"的 episode（AUROC ≥0.7，或 Spearman |ρ|≥0.5 且 CI 排除 0）。
+官方实验目录列出：
 
-**只有 J1 与 J2 同时成立，才进入 Gate C 训练 CAC 方法。** 若 J1 成立但 J2 不成立，CAC 的核心假设失败；可考虑改用误差增长/不确定性信号（pivot）。
+- 任务：Square-MH，image，Diffusion Policy CNN
+- seed/run：train_2
+- checkpoint：epoch=1950-test_mean_score=1.000.ckpt
+- 文件大小：约 4 GB
+- 目录：https://diffusion-policy.cs.columbia.edu/data/experiments/image/square_mh/diffusion_policy_cnn/train_2/checkpoints/
+- 官方 README 说明论文实验提供 config、训练/评估日志与 best/latest checkpoints：https://github.com/real-stanford/diffusion_policy#-checkout-our-experiment-logs
 
-## 3. 最小运行范围
+**证据边界：** 公开目录存在不等于本地下载成功、可加载或能复现论文成功率。文件名中的 test_mean_score=1.000 也不等于在本项目的 100 个新初始状态上成功率为 100%。
 
-| 项 | 规格 |
-|---|---|
-| 任务 | Square-mh（300 demos）；ph（200 demos）作复现 |
-| 策略 | DP 图像 CNN（官方 `square_image.yaml`）；horizon 16；训练 3000 epochs；batch 64；1 个训练 seed（Gate B 只验证现象；Gate C 用 3 seeds） |
-| 观测 | 2×84×84 RGB + eef pos/quat + gripper qpos |
-| 动作 | 7-D OSC pose delta + gripper |
-| 评估 | 100 个固定初始状态（seeds 100000–100099），5 个 horizon 共用同一组状态（配对） |
-| Horizon | `n_action_steps ∈ {1,2,4,8,16}`；每次执行 h 步后重新预测 |
-| 总 rollouts | 5 × 100 = 500 episodes（不含训练/调试） |
-| 训练数据 | 本地渲染 84×84 图像；约 300 demos × 400 steps × 2 cameras ≈ 240k frames；存储约 5–10 GB |
-| 训练时间 | 3090 约 1–2 天（3000 epochs；若过慢降到 2000 epochs，基线门槛不变） |
-| 评估时间 | 8 envs，约 2–4 小时（500 episodes × 400 steps） |
-| 显存/内存 | <24 GB GPU；建议 ≥32 GB RAM；CPU 8 核 |
-| 代码改动 | 仅 eval 的 horizon 参数与日志；不改策略/训练 |
+### 1.2 启动顺序
 
-### 3.1 可选快速预检（2–3 天，建议先做）
+1. 下载 checkpoint 和同目录发布的 config.yaml；先核对 config 与 checkpoint 对应关系。
+2. 按仓库的兼容环境安装依赖；不要先升级到最新 PyTorch/MuJoCo/robosuite。
+3. 加载模型，检查 observation keys、两路 84×84 RGB、proprio 维度、action normalization、动作坐标系和 gripper 语义。
+4. 跑 5–10 个 smoke-test episodes，保存视频与完整日志。
+5. smoke test 通过后，跑 100 个固定初始状态建立本地 baseline。
+6. 只有 checkpoint 无法加载、环境接口不兼容，或本地结果经排错后仍明显偏离时，才考虑按官方 Square-MH 发布配置重训。重训前先确认实际 task config 的 epoch 数，不要直接照搬通用默认 config。
 
-在渲染图像/训练图像 DP 之前，用 **低维 DP Square**（`robomimic_lowdim.zip` 1.93 GB；DP 低维 avg 0.89–0.93）跑同样的 horizon 扫描（1/2/4/8/16 × 50 episodes）。目的：
-- 验证 horizon eval 封装、clearance 日志、oracle 计算；
-- 快速看 J1/J2 是否值得继续。
+重训时才需要下载 raw Square-MH demos 并本地渲染图像。不要下载 84.8 GB 预渲染包，除非本地渲染确实失败且磁盘/带宽允许。
 
-规则：
-- 低维通过（J1 ≥8 pp、J2 AUROC ≥0.7）→ 直接进入图像主实验。
-- 低维 J1 <5 pp：**不能据此停止**（低维接近 ceiling，可能压缩效应）；记录并进入图像主实验，但把图像训练预算控制在 1 个 seed。
-- 低维 always-short 最好：记录；图像仍可能不同（视觉多模态/纹理），但提高对 CAC 的怀疑，Gate C 设计需更谨慎。
+## 2. Gate B 的研究问题与阶段边界
 
-低维结果只作为管线/现象预检，不作为最终论文证据。
+**问题：在 Square 插入前的同一物理状态，较短或较长的 action commitment 对后续成功率的影响是否随几何 clearance 系统性变化？**
 
-## 4. 指标与日志
+Gate B 分三段：
 
-每个 episode 记录：
-- `success`（nut on peg，robomimic 谓词）；
-- `episode_length`；
-- 每步：`nut_pose`、`peg_pose`、横向偏移 `d_xy`、插入深度 `d_z`、`clearance = r_tol - d_xy`（`r_tol` 由任务几何/公差确定，记录定义）；
-- 每步：当前 action chunk（16×7）、执行的 h、replan 次数；
-- 失败模式：未对准、掉落、碰撞、超时；
-- 墙钟时间、policy call 次数。
+- **B0 平台与 checkpoint 验证**：证明公开资产在本地能加载并执行。
+- **B1 固定 horizon 全 episode 扫描**：检验全局 horizon 是否影响任务成功率。
+- **B2 共同状态分支实验**：检验局部 clearance 是否调节单次 commitment 长度的效果。
 
-**统计单位：** episode（同一初始状态的 5 个 horizon 为配对）；训练 seed 是方差来源，Gate B 只用 1 个；报告配对差值 + bootstrap CI（按 episode 重采样）。
+Gate B 不实现预测误差模型、不训练 CAC、不做跨任务论文实验。B0/B1/B2 完成后再决定是否进入 Gate C。
 
-## 5. 对照与混杂
+## 3. B0：平台与基线门槛
 
-| 混杂 | 控制 |
-|---|---|
-| 初始状态不同 | 5 个 horizon 共用同一组 100 个 seeds；`reset_to` 确认状态一致 |
-| 训练 seed | Gate B 固定 1 个 seed；Gate C 用 3 个 |
-| 动作随机性 | DP 采样固定 noise seed；或报告均值/方差 |
-| 图像渲染差异 | 同一渲染脚本/分辨率；与 DP 论文的 84×84 对齐 |
-| horizon 改变 episode 长度 | 报告 success 与 episode length；必要时按步数分层 |
-| 选择偏差 | 不用成功轨迹估 clearance；用全部 episodes，条件在"到达插入前状态" |
-| 多 horizon 比较 | 配对 McNemar / bootstrap；不把 5 个 horizon 当独立样本 |
+| 检查 | 最低要求 | 失败处理 |
+|---|---|---|
+| 环境与 checkpoint | checkpoint 可加载；依赖版本与发布 config 对齐 | 先排错；记录完整错误，不立即重训 |
+| 观测接口 | 两路 RGB 84×84、proprio 键名/维度匹配 | 修正 adapter，不改变 observation 语义 |
+| 动作接口 | 7-D action、坐标系、delta/absolute、gripper scaling 一致 | 对照发布 config 与 runner 源码 |
+| 单 episode | reset、rollout、终止谓词正常；视频可检查 | 未通过不得进入 horizon 扫描 |
+| 100-episode baseline | 成功率 ≥0.70 作为继续门槛 | <0.60：排错后再试；仍低则 checkpoint/config/platform BLOCKED；0.60–0.70 记录边缘基线，不宣称复现 |
 
-## 6. 通过/停止标准
+DP 论文报告的 0.80–0.92 是作者跨实验结果，不是本地验收值。公开 checkpoint 文件名的 1.000 也不是本地 baseline。
 
-### 通过（进入 Gate C）
-- P4：基线 ≥0.70；
-- J1：max horizon 成功率差 ≥8 pp，95% CI 排除 0；
-- J2：clearance 对 oracle horizon 的 AUROC ≥0.70（或 Spearman |ρ|≥0.5，CI 排除 0）；
-- Oracle 上界：per-episode oracle horizon 比最佳固定 horizon 高 ≥8 pp（说明有自适应空间）。
+## 4. B1：固定 horizon 扫描
+
+### 4.1 设计
+
+- 固定模型与 checkpoint；不改权重。
+- 预测 horizon 保持 H=16。
+- 每个 episode 全程固定执行长度 h ∈ {1,2,4,8,16}：每次决策仍重新预测 16 步，只执行前 h 步，丢弃剩余动作并重新观测/预测。
+- 先做 20 个固定初始状态 × 5 horizons 的 pilot；若环境稳定且没有明显 ceiling/floor，再扩展到 100 个初始状态 × 5 horizons。
+- 同一初始状态在五个 horizon 下配对；固定环境 seed，并记录 policy sampling seed。若能实现按 decision index 管理随机数，则使用 common random numbers；否则明确记录随机流不同，不把它称为完全配对随机性。
+- 总量：pilot 100 episodes；扩展后 500 episodes（不含 smoke tests）。
+
+### 4.2 主要指标
+
+- 主指标：episode success（nut-on-peg predicate）。
+- 次指标：episode length、policy calls、wall-clock、碰撞/掉落/未对准/超时类别。
+- 同时报 success-vs-policy-calls 与 success-vs-wall-clock；h=1 可能提高调用次数，不能只看成功率。
+
+### 4.3 统计分析
+
+- 统计单位：初始状态 seed；五个 horizon 是同一 seed 的配对重复条件，不是五组独立样本。
+- 先报告五水平的整体配对检验（Cochran's Q 或配对 cluster bootstrap）。
+- 预注册的成对比较以 h=8 为参照，报告风险差及按初始状态 cluster bootstrap 的 95% CI；若进行多重比较，使用 Holm 校正。
+- 不用“观察到的最高成功率”单独宣称某 horizon 显著优于其他 horizon；报告全部 horizon 和不确定性。
+- 如果所有 horizon 均接近 100% 或均接近 0%，该任务/ checkpoint 对 horizon 效应缺乏可识别性，记录 ceiling/floor，不得硬凑结论。
+
+## 5. Clearance 的操作定义
+
+### 5.1 不采用的近似
+
+不把 clearance = r_tol - d_xy 作为最终几何定义。单纯横向距离会忽略 Square 插入中的相对 yaw、孔/peg 轮廓和轴向位置，可能把几何上不可插入的状态误标为“余量充足”。
+
+### 5.2 主定义
+
+在插入前的预先定义阶段，使用仿真器的真实碰撞几何或物体轮廓，在 nut 坐标系中计算 peg 外轮廓相对 nut 内孔的最小有符号间隙：
+
+c_xy(t) = min over n in N_hole of [ b_hole(n) - n^T p(t) - h_peg(R(theta_t)^T n) ]
+
+其中：
+
+- N_hole：nut 内孔边界的外法向集合（至少包含四个面及其反向）；
+- b_hole(n)：内孔沿 n 方向的边界支持值；
+- p(t)：peg 中心相对 nut 孔中心的位置，表达在 nut 坐标系；
+- h_peg：peg 碰撞轮廓的支持函数；
+- R(theta_t)：peg 相对 nut 的平面旋转。
+
+c_xy > 0 表示投影轮廓仍有正间隙，c_xy = 0 表示临界接触，c_xy < 0 表示投影轮廓已违反至少一个孔边界约束。若实际碰撞几何不是理想方形，必须直接使用仿真几何/碰撞查询，不得套用理想方形公式。
+
+轴向位置/插入深度 d_z、接触状态和阶段事件独立记录，不混进 c_xy。J2 只在预先定义的“插入前、轴向处于指定窗口”决策点比较；阶段窗口必须在看结果前冻结。
+
+### 5.3 几何读取的阻塞条件
+
+- 必须核对 nut、peg 的实际 collision geom、尺寸、局部坐标系和 yaw 定义。
+- 若环境只暴露 visual mesh 而没有可靠 collision geom，需先验证二者差异。
+- 若无法得到可靠有符号间隙，B2 标记为 BLOCKED；可以报告 dx, dy, yaw, dz 向量，但不能将其冒称为 clearance 标量。
+
+## 6. B2：共同状态分支实验（J2 主检验）
+
+### 6.1 取样与分支
+
+1. 从固定的 h=8 pilot rollout 中，按预先定义的插入前阶段抽取 30 个 decision states；覆盖成功与失败轨迹，不只选成功状态。
+2. 对每个 state 保存完整 simulator state、robot state、object state、observation 和随机数状态；验证恢复后能重现同一状态。
+3. 从同一保存状态分支执行 h ∈ {1,2,4,8,16} 中的一个 commitment：重新预测 H=16，执行前 h 步；随后统一恢复 h=8 策略直到 episode 结束。
+4. 每个 state × h 先跑 3 个 policy sampling seeds。pilot 若显示明显交互，再扩展到 50 states 和更多随机重复。
+5. 如果 robosuite/robomimic 无法可靠 snapshot/restore，则用相同 reset seed 与确定性 replay 重建状态；若仍无法复现，B2 不得以“配对状态”名义继续。
+
+### 6.2 主要统计问题
+
+J2 不再定义为“每个 episode 哪个 horizon 赢了”再直接计算 AUROC。主要检验是：
+
+success ~ categorical(h) + c_xy + categorical(h):c_xy
+
+采用按 state_id 聚类的 bootstrap 或合适的 mixed-effects logistic model；检验 horizon × clearance 交互项，并画出不同 clearance 区间内各 horizon 的预测成功率与置信区间。
+
+- 若 clearance 越紧时短 horizon 的相对收益越大、clearance 越宽时较长 horizon 的收益/调用效率更好，且交互在 held-out states 上保持，才支持 CAC 的核心现象。
+- 用每个 state × h 的重复 rollout 估计成功概率；只有 best-vs-next 差异超过预先设定的实际意义阈值且不确定性足够小时，才给出 oracle horizon 标签。
+- oracle horizon、AUROC/Spearman 是次级摘要，不取代交互检验；并列、全成功、全失败或低置信状态标记为 ambiguous，不强行分类。
+- 所有阈值在看 held-out 结果前冻结；验证集用于选阈值，测试集只用于最终报告。
+
+## 7. 通过、停止与转向
+
+### 进入 Gate C 的最低证据
+
+1. B0 通过：checkpoint/环境可用，100-episode 本地 baseline 达到预设门槛。
+2. B1 显示 horizon 扫描不是完全无效/ceiling/floor；报告配对效应量和 CI。
+3. B2 在 held-out states 上出现可重复的 horizon × clearance 交互；不能只靠训练/取样状态上的相关性。
+4. 以 clearance 选择 horizon 的 oracle/可达上界相对最佳固定 horizon 有实际收益；同时报告额外 policy calls 和 wall-clock 成本。
+5. 若 B1 的全局差异小但 B2 的状态交互明确，不自动判失败；这可能是不同状态效应相互抵消，需根据 B2 的 held-out 结果判断。
 
 ### 停止/转向
-- 基线 <0.60（两次尝试）→ 平台/任务问题，fallback（§10）。
-- J1 差 <5 pp → horizon 不是有效变量，停止 CAC；可在同一平台转 P2（selection）或 P3（auxiliary）。
-- J2 AUROC <0.60 → 几何余量不预测 horizon；停止 CAC 的几何版本；可试误差增长/不确定性信号（但那是另一个问题）。
-- Always-short（h=1）已是最佳，且 oracle 增益 <5 pp → 自适应 horizon 无 success 空间；CAC 只剩算力效率，降级或不立项。
-- 环境/渲染 5 个工作日不能跑通 → 平台 fallback，不训练方法。
 
-## 7. 无正成功率时的处理
+- B0 经排错仍无法加载或评估：先解决平台，不训练 CAC。
+- B1/B2 都没有可识别的 horizon 效应，或 B2 交互 CI 覆盖零且效应上界很小：停止 CAC。
+- h=1 全局最好且 state-level oracle 相对最佳固定 h 没有实际收益：停止 CAC 的成功率主张；如有明确调用成本收益，只能另行评估效率型问题。
+- clearance 不产生增量预测能力：放弃几何版本；不得仅靠改名保留 CAC。
+- 几何量读取不可靠或状态恢复不一致：B2 标记 BLOCKED，不做虚假 AUROC。
 
-1. 先检查数据/渲染/动作归一化/eval 谓词，排除工程 bug；
-2. 换 ph↔mh，或降低训练 epoch/ batch；
-3. 若仍 <0.60：改用 **低维 DP Square**（`robomimic_lowdim.zip` 1.93 GB；DP 低维 avg 0.89–0.93）验证 horizon 现象；低维成功后再回到图像；
-4. 若低维也失败：改用 **ManiSkill3 PickCube + ACT**（官方 baseline；正基线数字 PARTIAL，Gate B 重新确认）；
-5. 若两个平台都无正基线：记录 BLOCKED 的具体证据，停止本轮课题，不训练 CAC。
+## 8. 与 Gate C 的边界
 
-## 8. 资源与成本
+Gate B 不训练 error model、不实现完整 CAC、不做第二任务、不宣称方法有效。
 
-- 下载：raw Square 69/74 MB；DP/robomimic 代码 <1 GB；本地渲染存储 5–10 GB；**不下载 84.8 GB 预渲染包**（除非渲染失败且磁盘/带宽允许）。
-- 训练：1–2 天 × 1 seed；Gate C 3 seeds 约 3–6 天。
-- 评估：2–4 小时/500 episodes。
-- 失败成本：若 J1/J2 失败，损失约 1–2 周 + 一次训练；资产（DP/robomimic/Square 数据/渲染管线）可复用于 P2/P3。
+只有 Gate B 通过后，Gate C 才：
+- 训练任务空间误差动力学预测器；
+- 设计视觉 clearance 估计；
+- 比较 fixed / always-short / uncertainty / reactive monitor / CAC / oracle；
+- 在 Square 与 ToolHang 等第二任务上做多 seed、消融和等调用预算评估。
 
-## 9. 与 Gate C 的边界
+## 9. 资源估算与第一天清单
 
-- Gate B **不训练** error model、不实现 CAC 规则、不做多任务。
-- Gate C 才训练 task-space error dynamics model，做 2 任务 × 3 seeds × 100 episodes，比较 fixed/always-short/uncertainty/CAC/APEX/oracle，等 policy-call 预算。
-- Gate B 的任何结果都不写成"方法有效"；只写"现象是否存在/可测"。
+- Checkpoint：约 4 GB；本地下载与加载时间取决于网络/磁盘。
+- B1：pilot 100 episodes；扩展 500 episodes。
+- B2：pilot 30 states × 5 horizons × 3 stochastic repeats = 450 branch episodes；若信号存在再扩展。
+- 训练：checkpoint-first 默认不训练；若必须重训，按发布 config 实测，不预先承诺 3000 epochs 或 1–2 天。
+- 不下载 84.8 GB 预渲染图像包。
 
-## 10. 平台 fallback
-
-| fallback | 触发 | 资产 | 风险 |
-|---|---|---|---|
-| Square-ph | mh 数据/渲染问题 | 69 MB raw；DP ph | 基线略高（0.90–0.98 max） |
-| 低维 DP Square | 图像渲染/训练失败 | 1.93 GB lowdim zip | 状态基，空间感知弱；基线接近 ceiling |
-| ToolHang image | Square 太饱和/失败模式不清 | 同 DP/robomimic；DP avg 0.73–0.84 | 任务更难，训练更久 |
-| ManiSkill3 PickCube + ACT | DP/robomimic 环境不可用 | 官方 ACT baseline；100 demos；30k iters | 正基线数字 PARTIAL；ACT 曾出现 0 成功历史 |
-
-## 11. 授权后第一天要做的三件事
-
-1. 安装/验证 robomimic + DP 环境；跑通 1 个 Square episode。
-2. 下载 raw Square mh；渲染 5 条 demo，检查键名/图像与 `robomimic_replay_image_dataset` 兼容。
-3. 启动 DP 训练（3000 epochs），同时写 horizon eval 封装与日志。
+第一天：
+1. 核对 checkpoint、config、依赖版本和 GPU；
+2. 加载 checkpoint，验证 observation/action schema；
+3. 跑 5–10 个 smoke-test episodes 并保存视频；
+4. 记录是否通过 B0，不启动 CAC 训练。
