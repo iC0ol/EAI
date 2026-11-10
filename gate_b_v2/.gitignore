@@ -4,6 +4,7 @@ __pycache__/
 .venv/
 .conda/
 .mujoco/
+.mesa/
 .cache/
 logs/
 assets/

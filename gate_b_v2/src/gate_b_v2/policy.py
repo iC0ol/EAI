@@ -8,6 +8,13 @@ from typing import Any, Dict, Mapping
 import numpy as np
 
 
+def coerce_bool(value: Any) -> bool:
+    """Parse booleans that arrive as YAML/OmegaConf strings or native bools."""
+    if isinstance(value, str):
+        return value.strip().lower() in {"true", "1", "yes"}
+    return bool(value)
+
+
 def load_diffusion_policy_checkpoint(dp_root: Path, checkpoint_path: Path, device: str):
     """Load a native Diffusion Policy checkpoint using the upstream eval.py path."""
     dp_root = Path(dp_root).resolve()
@@ -65,6 +72,16 @@ def load_diffusion_policy_checkpoint(dp_root: Path, checkpoint_path: Path, devic
     if not hasattr(policy, "predict_action"):
         raise TypeError("Loaded checkpoint policy has no predict_action method")
 
+    abs_action = coerce_bool(cfg.task.get("abs_action", False))
+    rotation_rep = str(_cfg_get(cfg, "task.dataset.rotation_rep", "rotation_6d"))
+    expected_action_dim = 10 if abs_action else 7
+    if action_dim != expected_action_dim:
+        raise ValueError(
+            "Checkpoint action_dim={} but abs_action={} implies {}-D actions.".format(
+                action_dim, abs_action, expected_action_dim
+            )
+        )
+
     return {
         "torch": torch,
         "workspace": workspace,
@@ -74,8 +91,20 @@ def load_diffusion_policy_checkpoint(dp_root: Path, checkpoint_path: Path, devic
         "n_obs_steps": n_obs_steps,
         "prediction_horizon": prediction_horizon,
         "action_dim": action_dim,
+        "abs_action": abs_action,
+        "rotation_rep": rotation_rep,
         "use_ema": use_ema,
     }
+
+
+def _cfg_get(cfg: Any, dotted: str, default: Any = None) -> Any:
+    value = cfg
+    for part in dotted.split("."):
+        try:
+            value = value[part]
+        except Exception:
+            return default
+    return value
 
 
 def predict_full_future_chunk(

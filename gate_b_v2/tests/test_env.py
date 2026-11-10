@@ -42,3 +42,24 @@ def test_success_fails_closed_and_records_predicate_error():
     env = _episode_env(_RobomimicEnv(error=RuntimeError("bad state")))
     assert env.success() is False
     assert env.success_error is not None
+
+
+def test_image_camera_names_are_derived_from_rgb_shape_meta():
+    from gate_b_v2.env import image_camera_names
+
+    shape_meta = {
+        "obs": {
+            "agentview_image": {"shape": [3, 84, 84], "type": "rgb"},
+            "robot0_eye_in_hand_image": {"shape": [3, 84, 84], "type": "rgb"},
+            "robot0_eef_pos": {"shape": [3]},
+        }
+    }
+    assert image_camera_names(shape_meta) == ["agentview", "robot0_eye_in_hand"]
+
+
+def test_image_camera_names_fail_closed_without_rgb():
+    import pytest
+    from gate_b_v2.env import image_camera_names
+
+    with pytest.raises(RuntimeError, match="no RGB image"):
+        image_camera_names({"obs": {"robot0_eef_pos": {"shape": [3]}}})

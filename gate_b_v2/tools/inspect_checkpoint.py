@@ -16,10 +16,9 @@ from omegaconf import OmegaConf
 
 
 def _plain(value):
-    try:
-        return OmegaConf.to_container(value, resolve=True)
-    except Exception:
-        return repr(value)
+    if not OmegaConf.is_config(value):
+        return value
+    return OmegaConf.to_container(value, resolve=True)
 
 
 def main() -> int:
@@ -61,10 +60,21 @@ def main() -> int:
         "dataset_type": _plain(cfg.task.dataset_type),
         "dataset_path": _plain(cfg.task.dataset_path),
         "abs_action": _plain(cfg.task.get("abs_action")),
+        "rotation_rep": _plain(cfg.task.get("dataset", {}).get("rotation_rep"))
+        if OmegaConf.is_config(cfg.task.get("dataset")) else None,
+        "action_dim": int(shape_meta["action"]["shape"][0]),
         "shape_meta": shape_meta,
         "state_dict_keys": sorted(payload.get("state_dicts", {}).keys()),
         "pickle_keys": sorted(payload.get("pickles", {}).keys()),
-        "normalizer_present": "normalizer" in payload.get("pickles", {}),
+        "normalizer_state_keys": {
+            name: len([key for key in state_dict if "normalizer" in key])
+            for name, state_dict in payload.get("state_dicts", {}).items()
+        },
+        "normalizer_present": any(
+            "normalizer" in key
+            for state_dict in payload.get("state_dicts", {}).values()
+            for key in state_dict
+        ),
         "ema_state_present": "ema_model" in payload.get("state_dicts", {}),
     }
     text = json.dumps(result, indent=2, sort_keys=True, default=str)

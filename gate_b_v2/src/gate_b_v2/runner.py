@@ -20,6 +20,7 @@ from .core import (
     validate_horizons,
     write_json,
 )
+from .actions import undo_transform_action
 from .env import EpisodeEnv, create_square_image_env, image_for_video
 from .geometry import compute_square_clearance
 from .policy import load_diffusion_policy_checkpoint, predict_full_future_chunk
@@ -78,6 +79,8 @@ class GateBExperiment:
         self.n_obs_steps = int(self.runtime["n_obs_steps"])
         self.prediction_horizon = int(self.runtime["prediction_horizon"])
         self.action_dim = int(self.runtime["action_dim"])
+        self.abs_action = bool(self.runtime["abs_action"])
+        self.rotation_rep = str(self.runtime["rotation_rep"])
         self.cfg = self.runtime["cfg"]
 
         expected_horizon = int(evaluation.get("expected_prediction_horizon", 16))
@@ -100,7 +103,9 @@ class GateBExperiment:
         if self.max_steps <= 0:
             raise ValueError("max_steps must be positive")
 
-        self.wrapper, self.env_meta = create_square_image_env(self.dp_root, self.dataset, self.shape_meta)
+        self.wrapper, self.env_meta = create_square_image_env(
+            self.dp_root, self.dataset, self.shape_meta, abs_action=self.abs_action
+        )
         self.env = EpisodeEnv(
             wrapper=self.wrapper,
             shape_meta=self.shape_meta,
@@ -116,6 +121,9 @@ class GateBExperiment:
             "n_action_steps_checkpoint": int(getattr(self.policy, "n_action_steps", -1)),
             "available_future_actions": self.prediction_horizon - (self.n_obs_steps - 1),
             "action_dim": self.action_dim,
+            "abs_action": self.abs_action,
+            "rotation_rep": self.rotation_rep,
+            "env_action_dim": 7 if self.abs_action else self.action_dim,
             "env_name": self.env_meta.get("env_name"),
             "env_version_dataset": self.env_meta.get("env_version"),
             "max_steps": self.max_steps,
@@ -138,6 +146,12 @@ class GateBExperiment:
             fallback = path.with_suffix(".npz")
             np.savez_compressed(str(fallback), frames=np.asarray(frames, dtype=np.uint8))
             return "{} (video encoder unavailable: {})".format(fallback, exc)
+
+    def _env_action(self, policy_action: np.ndarray) -> np.ndarray:
+        """Map a policy-space action to the robosuite OSC_POSE action."""
+        if self.abs_action:
+            return undo_transform_action(policy_action)
+        return np.asarray(policy_action, dtype=np.float32)
 
     def _run_episode(
         self,
@@ -183,7 +197,7 @@ class GateBExperiment:
             )
             execute_n = min(int(horizon), self.max_steps - self.env.steps)
             for action_index in range(execute_n):
-                obs, _, done, _ = self.env.step(chunk[action_index])
+                obs, _, done, _ = self.env.step(self._env_action(chunk[action_index]))
                 if capture and (self.env.steps % video_stride == 0 or self.env.steps >= self.max_steps):
                     frames.append(image_for_video(obs))
                 if done:
@@ -392,7 +406,7 @@ class GateBExperiment:
             )
             execute_n = min(h, self.max_steps - self.env.steps)
             for action_index in range(execute_n):
-                _, _, done, _ = self.env.step(chunk[action_index])
+                _, _, done, _ = self.env.step(self._env_action(chunk[action_index]))
                 if done:
                     env_done = True
                     break
@@ -470,7 +484,7 @@ class GateBExperiment:
                 )
                 thresholds = self.config["b2"].get("snapshot_validation", {})
                 report = validate_snapshot_restore(
-                    self.env, snapshot, probe_chunk[0],
+                    self.env, snapshot, self._env_action(probe_chunk[0]),
                     state_atol=float(thresholds.get("state_atol", 1e-7)),
                     observation_mean_abs_tol=float(thresholds.get("observation_mean_abs_tol", 1e-3)),
                 )

@@ -4,7 +4,7 @@ import copy
 import hashlib
 from collections import deque
 from pathlib import Path
-from typing import Any, Deque, Dict, Mapping, Optional, Sequence, Tuple
+from typing import Any, Deque, Dict, List, Mapping, Optional, Sequence, Tuple
 
 import numpy as np
 
@@ -25,7 +25,23 @@ def _seed_robosuite_rng(wrapper: Any, seed: int) -> None:
         rng.bit_generator.state = np.random.default_rng(int(seed)).bit_generator.state
 
 
-def create_square_image_env(dp_root: Path, dataset_path: Path, shape_meta: Mapping[str, Any]):
+def image_camera_names(shape_meta: Mapping[str, Any]) -> List[str]:
+    """Derive robosuite camera names from the checkpoint's RGB observation keys."""
+    names = [
+        key[: -len("_image")] for key, attr in shape_meta["obs"].items()
+        if key.endswith("_image") and attr.get("type", "low_dim") == "rgb"
+    ]
+    if not names:
+        raise RuntimeError("shape_meta has no RGB image observations")
+    return names
+
+
+def create_square_image_env(
+    dp_root: Path,
+    dataset_path: Path,
+    shape_meta: Mapping[str, Any],
+    abs_action: bool = False,
+):
     """Create the same robomimic image environment used by the upstream DP runner."""
     dp_root = Path(dp_root).resolve()
     if str(dp_root) not in __import__("sys").path:
@@ -48,6 +64,16 @@ def create_square_image_env(dp_root: Path, dataset_path: Path, shape_meta: Mappi
     env_meta["env_kwargs"]["use_object_obs"] = False
     # The official image runner disables hard reset to avoid repeated renderer allocation.
     env_meta["env_kwargs"]["hard_reset"] = False
+    # The low-dim metadata omits the image dataset's camera_names list. Rebuild
+    # it from the checkpoint's RGB observation keys so both cameras are rendered.
+    env_meta["env_kwargs"]["camera_names"] = image_camera_names(shape_meta)
+    if abs_action:
+        # DP's RobomimicImageRunner switches the OSC controller to absolute pose
+        # when the checkpoint was trained with abs_action=True.
+        controllers = env_meta["env_kwargs"].get("controller_configs")
+        if not isinstance(controllers, dict):
+            raise RuntimeError("Dataset env_args has no controller_configs for abs_action")
+        controllers["control_delta"] = False
     env = EnvUtils.create_env_from_metadata(
         env_meta=env_meta,
         render=False,

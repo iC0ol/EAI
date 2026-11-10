@@ -10,8 +10,21 @@ unset PYTHONPATH PYTHONHOME
 export PYTHONNOUSERSITE=1
 export PYTHONPATH="$GATE_B_ROOT/src:$GATE_B_ROOT/third_party/diffusion_policy"
 
-export MUJOCO_PY_MUJOCO_PATH="$GATE_B_ROOT/.mujoco/mujoco210"
-export LD_LIBRARY_PATH="$GATE_B_ROOT/.mujoco/mujoco210/bin${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+# free-mujoco-py bundles MuJoCo 2.1 and overwrites MUJOCO_PY_MUJOCO_PATH at
+# import. Its Linux GPU auto-detection does not recognise the Ubuntu
+# /usr/lib/x86_64-linux-gnu driver layout, so this runtime uses the OSMesa
+# software-render build. glibc caches LD_LIBRARY_PATH at process start, so both
+# the bundled MuJoCo bin and the local OSMesa library must be set here.
+MUJOCO_PY_BIN="$GATE_B_ROOT/.venv/lib/python3.9/site-packages/mujoco_py/binaries/linux/mujoco210/bin"
+export MUJOCO_PY_MUJOCO_PATH="$GATE_B_ROOT/.venv/lib/python3.9/site-packages/mujoco_py/binaries/linux/mujoco210"
+export LD_LIBRARY_PATH="$MUJOCO_PY_BIN:$GATE_B_ROOT/.mesa/usr/lib/x86_64-linux-gnu"
+export CPATH="$GATE_B_ROOT/.mesa/usr/include${CPATH:+:$CPATH}"
+export LIBRARY_PATH="$MUJOCO_PY_BIN:$GATE_B_ROOT/.mesa/usr/lib/x86_64-linux-gnu${LIBRARY_PATH:+:$LIBRARY_PATH}"
+export MUJOCO_PY_FORCE_CPU=1
+# The OSMesa/LLVM stack needs the system libstdc++ (GLIBCXX_3.4.30); the
+# extension build adds an Anaconda rpath with an older libstdc++, so preload
+# the system copy before that search path is consulted.
+export LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libstdc++.so.6${LD_PRELOAD:+:$LD_PRELOAD}"
 export PATH="$GATE_B_ROOT/.venv/bin:$PATH"
 
 # Workspace construction imports wandb; never open a network run.
