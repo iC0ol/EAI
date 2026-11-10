@@ -47,3 +47,10 @@
 - dependencies installed: **no**
 - training / inference / simulation / benchmark: **not run**
 - Gate B v2: **ready for local execution after environment/checkpoint smoke test**
+
+
+5. **DP 论文评估样本数补充**
+   - 论文评估方法的通用描述为 3 个训练 seed、名义 50 个环境初始条件。
+   - 脚注明确指出 robomimic 任务因评估代码 bug 实际只使用 22 个环境初始条件。
+   - 报告与自检已避免把 Square 结果写成 3 seeds × 50 个独立初始条件；Gate B 使用独立 100 个初始状态。
+   - 来源：https://journals.sagepub.com/doi/10.1177/02783649241273668
