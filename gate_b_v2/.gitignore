@@ -5,6 +5,7 @@ __pycache__/
 .conda/
 .mujoco/
 .cache/
+logs/
 assets/
 third_party/
 runs/

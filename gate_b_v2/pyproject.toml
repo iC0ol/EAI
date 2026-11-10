@@ -17,3 +17,7 @@ gate-b = "gate_b_v2.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["third_party", "assets", "runs", ".venv", ".mujoco"]

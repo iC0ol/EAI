@@ -40,8 +40,39 @@ def sha256_array(array: np.ndarray) -> str:
     return digest.hexdigest()
 
 
+def sha256_tree(root: Path) -> str:
+    """Deterministic digest of a source tree (paths + file contents)."""
+    root = Path(root).resolve()
+    digest = hashlib.sha256()
+    files = sorted(
+        p for p in root.rglob("*")
+        if p.is_file()
+        and "__pycache__" not in p.parts
+        and p.suffix not in (".pyc", ".pyo")
+    )
+    for path in files:
+        relative = path.relative_to(root).as_posix()
+        digest.update(relative.encode("utf-8"))
+        digest.update(b"\0")
+        digest.update(sha256_file(path).encode("ascii"))
+        digest.update(b"\n")
+    return digest.hexdigest()
+
+
 def git_commit(path: Path) -> Optional[str]:
+    """Return HEAD only when @path is itself the root of a git work tree.
+
+    A bare checkout nested inside another repository must not inherit the parent
+    repository's commit as its own identity.
+    """
+    path = Path(path).resolve()
     try:
+        top = subprocess.run(
+            ["git", "-C", str(path), "rev-parse", "--show-toplevel"],
+            check=True, capture_output=True, text=True,
+        )
+        if Path(top.stdout.strip()).resolve() != path:
+            return None
         result = subprocess.run(
             ["git", "-C", str(path), "rev-parse", "HEAD"],
             check=True, capture_output=True, text=True,
@@ -136,7 +167,29 @@ def stack_observation_history(
                         key, arr.shape, expected
                     )
                 )
-            if attr.get("type", "low_dim") != "rgb":
+            if attr.get("type", "low_dim") == "rgb":
+                # The Diffusion Policy image normalizer maps [0, 1] -> [-1, 1].
+                # Robomimic returns processed CHW float images in [0, 1]; accept
+                # raw uint8 HWC only by applying the identical /255 conversion,
+                # and fail closed on any other range instead of silently feeding
+                # the network a differently scaled observation.
+                if arr.dtype == np.uint8:
+                    arr = arr.astype(np.float32) / 255.0
+                elif not np.issubdtype(arr.dtype, np.floating):
+                    raise ValueError(
+                        "RGB observation {!r} has unsupported dtype {}".format(key, arr.dtype)
+                    )
+                if not np.all(np.isfinite(arr)):
+                    raise ValueError("RGB observation {!r} contains NaN/Inf".format(key))
+                low = float(np.min(arr))
+                high = float(np.max(arr))
+                if low < -1e-6 or high > 1.0 + 1e-6:
+                    raise ValueError(
+                        "RGB observation {!r} must be in [0, 1] for the DP image "
+                        "normalizer; got [{:.6f}, {:.6f}]".format(key, low, high)
+                    )
+                arr = arr.astype(np.float32, copy=False)
+            else:
                 arr = arr.astype(np.float32, copy=False)
             values.append(np.ascontiguousarray(arr))
         result[key] = np.stack(values, axis=0)
@@ -196,6 +249,10 @@ def environment_fingerprint(dp_root: Path, checkpoint: Path, dataset: Path, devi
         "platform": platform.platform(),
         "dp_root": str(dp_root),
         "dp_git_commit": git_commit(dp_root),
+        "dp_source_tree_sha256": (
+            sha256_tree(dp_root / "diffusion_policy")
+            if (dp_root / "diffusion_policy").is_dir() else None
+        ),
         "checkpoint": str(checkpoint),
         "checkpoint_bytes": checkpoint.stat().st_size,
         "checkpoint_sha256": sha256_file(checkpoint),

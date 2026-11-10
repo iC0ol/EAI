@@ -4,9 +4,12 @@ project:
 
 paths:
   # Override with CLI flags if the workstation uses another layout.
-  dp_root: ../third_party/diffusion_policy
-  checkpoint: ../assets/square_mh/epoch=1950-test_mean_score=1.000.ckpt
-  dataset: ../assets/square_mh/image.hdf5
+  # All local assets live inside gate_b_v2/ and are excluded from Git.
+  dp_root: third_party/diffusion_policy
+  checkpoint: assets/square_mh/epoch=1950-test_mean_score=1.000.ckpt
+  # Evaluation needs only the dataset's env_args metadata, not the images.
+  # The official low-dim MH HDF5 carries the same Square/Panda/OSC metadata.
+  dataset: assets/square_mh/low_dim.hdf5
   output_root: runs
 
 evaluation:

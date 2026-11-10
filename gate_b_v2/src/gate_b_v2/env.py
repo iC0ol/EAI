@@ -74,6 +74,7 @@ class EpisodeEnv:
         self.steps = 0
         self.max_reward = float("-inf")
         self.success_seen = False
+        self.success_error: Optional[str] = None
         self.last_info: Dict[str, Any] = {}
 
     @property
@@ -99,6 +100,7 @@ class EpisodeEnv:
         self.steps = 0
         self.max_reward = float("-inf")
         self.success_seen = False
+        self.success_error = None
         self.last_info = {}
         return obs
 
@@ -123,10 +125,20 @@ class EpisodeEnv:
         return obs, float(reward), bool(done), self.last_info
 
     def success(self, threshold: Optional[float] = None) -> bool:
-        # Use robomimic/robosuite is_success task predicate only. Do not infer task
-        # success from shaped reward magnitude. The threshold argument is retained
-        # for API compatibility but intentionally unused.
-        return bool(self.success_seen)
+        # Use the robomimic/robosuite is_success task predicate on the final
+        # simulator state, matching robomimic's own rollout evaluation. The sticky
+        # success_seen flag is logged separately as a diagnostic, not as success.
+        # Do not infer task success from shaped reward magnitude. The threshold
+        # argument is retained for API compatibility but intentionally unused.
+        try:
+            value = self.robomimic_env.is_success()
+        except Exception as exc:
+            self.success_error = repr(exc)
+            return False
+        self.success_error = None
+        if isinstance(value, Mapping):
+            value = value.get("task", False)
+        return bool(value)
 
     def initial_state_hash(self) -> str:
         state = self.robomimic_env.get_state()
