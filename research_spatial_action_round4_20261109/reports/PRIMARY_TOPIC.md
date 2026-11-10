@@ -65,8 +65,8 @@ at decision step t:
 | 观测 | 2×84×84 RGB（agentview + wrist）+ eef pos/quat + gripper qpos | `square_image.yaml` |
 | 数据/权重 | raw Square ph 69 MB / mh 74 MB；官方 Square-MH image CNN checkpoint：train_2 / epoch=1950-test_mean_score=1.000.ckpt（约 4 GB）；本地加载未验证 | 官方实验档案；checkpoint 优先，失败再训练；预渲染 84.8 GB 包不下载 |
 | 评估 | robomimic env；success = nut on peg；`n_test=50`（Gate B 加到 100） | DP config；robomimic 文档 |
-| 硬件 | 单卡 3090 24GB；训练 3000 epochs；eval 8 envs | DP 论文 §5；config |
-| 备选任务 | ToolHang（同代码/数据；DP image avg 0.73–0.84；λ 最高 0.026） | DP Table 2；2610.01626 |
+| 硬件 | 单卡 3090 24GB；优先复用 Square-MH 官方 checkpoint；仅必要时按发布配置重训；eval 8 envs | DP 官方实验档案；config |
+| 备选任务 | ToolHang（同代码/数据；DP image avg 0.73–0.84；2610.01626 的 K=24 demonstration/rollout 中位 λ 为 0.026） | DP Table 2；2610.01626 |
 | 平台 fallback | ManiSkill3 PickCube + ACT（官方 baseline；正基线数字 PARTIAL） | ManiSkill3 论文；ACT README |
 
 ## 6. 强基线
@@ -113,3 +113,6 @@ at decision step t:
 - 2610.01626 的 square λ=0.017 是 K=24 demonstration/rollout 统计中的任务中位数；不能写成 policy-chunk 的通用传播率，也不能据此推出最优 horizon。
 - Gate B 的 clearance 采用仿真几何的最小有符号间隙，不再使用简单 r_tol - d_xy；yaw 纳入轮廓投影，d_z 独立记录。
 - J2 改为共同状态分支实验和 horizon×clearance 交互分析；单次 episode 的 winner 不再直接作为无噪声 oracle 标签。
+
+
+- DP 论文评估口径补充：虽然正文说明名义上 3 个训练 seed × 50 个环境初始条件，但脚注披露 robomimic 任务因评估代码 bug 实际只使用 22 个初始条件；本地 Gate B 的 100 个初始状态是独立新评估，不将论文名义数量当作本地基线。
