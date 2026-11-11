@@ -45,8 +45,11 @@ below.
 2. **Formal B0 completed**: 84/100 (0.84) on seeds 100000–100099, h=8, 500
    steps, device cuda:0. Wilson 95 % CI 0.7558–0.8990. No episode was skipped
    or replaced; 16 real failures are retained. See `reports/B0_REPORT.md`.
-3. **B1 remains blocked**: h=16 is not executable with H=16/To=2 (15 future
-   actions). Needs a researcher-approved horizon amendment. Not started.
+3. **B1 protocol amended, not started**: h list is now `{1,2,4,8,15}`
+   (h=16 still rejected), B1 seeds start at 200000, Pilot (20 states) and
+   Full (100 states) have separate record files, and the paired/cluster
+   statistics are pre-registered. B1 awaits independent acceptance and
+   explicit authorization; no B1 episode has been run.
 4. **B2 remains blocked**: insertion-stage window is not frozen and no
    snapshot/restore replay was run. No B2 state was collected.
 

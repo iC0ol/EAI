@@ -9,7 +9,11 @@ from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple
 import numpy as np
 
 from .core import (
+    B1_PHASES,
     append_jsonl,
+    b1_records_filename,
+    b1_run_filename,
+    ensure_new_records_path,
     environment_fingerprint,
     jsonable,
     policy_noise_seed,
@@ -289,21 +293,70 @@ class GateBExperiment:
             raise ValueError("B2 z_gap_min_m must be less than z_gap_max_m")
         return gate
 
-    def run_b1(self, episodes: Optional[int] = None, collect_b2_states: bool = False) -> Path:
+    def run_b1(
+        self,
+        episodes: Optional[int] = None,
+        collect_b2_states: bool = False,
+        phase: str = "pilot",
+    ) -> Path:
+        if phase not in B1_PHASES:
+            raise ValueError("B1 phase must be one of {}, got {!r}".format(B1_PHASES, phase))
         evaluation = self.config["evaluation"]
-        count = int(episodes or evaluation.get("b1_pilot_episodes", 20))
-        requested_horizons = [int(x) for x in evaluation.get("horizons", [1, 2, 4, 8, 16])]
+        default_count = (
+            evaluation.get("b1_pilot_episodes", 20)
+            if phase == "pilot"
+            else evaluation.get("b1_full_episodes", 100)
+        )
+        count = int(episodes if episodes is not None else default_count)
+        if count <= 0:
+            raise ValueError("B1 episode count must be positive")
+        requested_horizons = [int(x) for x in evaluation.get("horizons", [1, 2, 4, 8, 15])]
         horizons = validate_horizons(requested_horizons, self.prediction_horizon, self.n_obs_steps)
+        reference_horizon = int(evaluation.get("b1_reference_horizon", 8))
+        if reference_horizon not in horizons:
+            raise ValueError(
+                "B1 reference horizon h={} is not in horizons {}".format(reference_horizon, horizons)
+            )
+        if phase == "full":
+            pilot_count = int(evaluation.get("b1_pilot_episodes", 20))
+            if count < pilot_count:
+                raise ValueError(
+                    "Full B1 must include the pilot states: count {} < pilot {}".format(
+                        count, pilot_count
+                    )
+                )
         if collect_b2_states:
             stage_gate = self._stage_gate()
         else:
             stage_gate = None
 
-        records_path = self.run_dir / "b1_episodes.jsonl"
+        records_path = self.run_dir / b1_records_filename(phase)
+        ensure_new_records_path(records_path)
         state_dir = self.run_dir / "states" / "b2_candidates"
         candidates: List[Dict[str, Any]] = []
-        seed_start = int(evaluation.get("seed_start", 100000))
+        seed_start = int(evaluation.get("b1_seed_start", 200000))
+        b0_seed_start = int(evaluation.get("seed_start", 100000))
+        if seed_start == b0_seed_start:
+            raise RuntimeError(
+                "B1 seed_start must be independent of the B0 seed_start ({}); "
+                "do not reuse B0 initial states.".format(b0_seed_start)
+            )
         base_policy_seed = int(evaluation.get("policy_seed_offset", 700000))
+        write_json(self.run_dir / b1_run_filename(phase), {
+            "b1_phase": phase,
+            "episodes": count,
+            "seed_start": seed_start,
+            "seed_end": seed_start + count - 1,
+            "horizons": horizons,
+            "reference_horizon": reference_horizon,
+            "max_steps": self.max_steps,
+            "policy_seed_offset": base_policy_seed,
+            "records_file": records_path.name,
+            "note": (
+                "Pilot and Full are separate record files. Full repeats the pilot seed "
+                "range first and then extends it; pilot-only checks do not select horizons."
+            ),
+        })
         for index in range(count):
             seed = seed_start + index
             paired_initial_hash = None
@@ -348,8 +401,10 @@ class GateBExperiment:
                     horizon=horizon,
                     policy_seed=base_policy_seed + seed,
                     decision_callback=maybe_save_state if collect_b2_states else None,
-                    phase="B1",
+                    phase="B1_{}".format(phase),
                 )
+                record["b1_phase"] = phase
+                record["b1_seed_start"] = seed_start
                 if paired_initial_hash is None:
                     paired_initial_hash = record["initial_state_sha256"]
                 elif record["initial_state_sha256"] != paired_initial_hash:
@@ -458,7 +513,7 @@ class GateBExperiment:
             )
 
         horizons = validate_horizons(
-            self.config["evaluation"].get("horizons", [1, 2, 4, 8, 16]),
+            self.config["evaluation"].get("horizons", [1, 2, 4, 8, 15]),
             self.prediction_horizon,
             self.n_obs_steps,
         )

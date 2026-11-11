@@ -128,7 +128,11 @@ def _cmd_b1(args: argparse.Namespace) -> int:
     config = _load_config(args.config)
     experiment = _build_experiment(args, config)
     try:
-        path = experiment.run_b1(args.episodes, collect_b2_states=args.collect_b2_states)
+        path = experiment.run_b1(
+            args.episodes,
+            collect_b2_states=args.collect_b2_states,
+            phase=args.b1_phase,
+        )
         print("B1 episodes written to {}".format(path))
         print("Run directory: {}".format(experiment.run_dir))
     finally:
@@ -151,11 +155,47 @@ def _cmd_analyze(args: argparse.Namespace) -> int:
     run_dir = Path(args.run_dir).expanduser().resolve()
     if not run_dir.is_dir():
         raise FileNotFoundError("Run directory does not exist: {}".format(run_dir))
+    config = _load_config(args.config)
+    evaluation = config["evaluation"]
     n_bootstrap = int(args.bootstrap_samples)
     seed = int(args.seed)
     results = {}
-    if (run_dir / "b1_episodes.jsonl").is_file():
-        results["b1"] = analyze_b1(run_dir, n_bootstrap=n_bootstrap, seed=seed)
+    b1_file = (
+        run_dir / "b1_{}_episodes.jsonl".format(args.b1_phase)
+        if args.b1_phase
+        else None
+    )
+    if b1_file is not None and b1_file.is_file():
+        results["b1_{}".format(args.b1_phase)] = analyze_b1(
+            run_dir,
+            n_bootstrap=n_bootstrap,
+            seed=seed,
+            phase=args.b1_phase,
+            reference=int(evaluation.get("b1_reference_horizon", 8)),
+            alpha=float(evaluation.get("b1_alpha", 0.05)),
+            practical_diff=float(evaluation.get("b1_practical_diff", 0.08)),
+            ceiling_threshold=float(evaluation.get("b1_ceiling_threshold", 0.95)),
+            floor_threshold=float(evaluation.get("b1_floor_threshold", 0.05)),
+            expected_horizons=[int(x) for x in evaluation.get("horizons", [1, 2, 4, 8, 15])],
+        )
+    elif args.b1_phase is not None:
+        raise FileNotFoundError("B1 {} records not found: {}".format(args.b1_phase, b1_file))
+    elif any(
+        (run_dir / name).is_file()
+        for name in ("b1_pilot_episodes.jsonl", "b1_full_episodes.jsonl", "b1_episodes.jsonl")
+    ):
+        results["b1"] = analyze_b1(
+            run_dir,
+            n_bootstrap=n_bootstrap,
+            seed=seed,
+            phase=None,
+            reference=int(evaluation.get("b1_reference_horizon", 8)),
+            alpha=float(evaluation.get("b1_alpha", 0.05)),
+            practical_diff=float(evaluation.get("b1_practical_diff", 0.08)),
+            ceiling_threshold=float(evaluation.get("b1_ceiling_threshold", 0.95)),
+            floor_threshold=float(evaluation.get("b1_floor_threshold", 0.05)),
+            expected_horizons=[int(x) for x in evaluation.get("horizons", [1, 2, 4, 8, 15])],
+        )
     for split in ("discovery", "confirmation"):
         if (run_dir / "b2_{}_episodes.jsonl".format(split)).is_file():
             results["b2_{}".format(split)] = analyze_b2_split(
@@ -189,6 +229,8 @@ def build_parser() -> argparse.ArgumentParser:
     b1 = subparsers.add_parser("b1", help="Run paired full-episode horizon sweep")
     _add_runtime_args(b1)
     b1.add_argument("--episodes", type=int, default=None)
+    b1.add_argument("--b1-phase", choices=["pilot", "full"], default="pilot",
+                    help="Pilot (20 states) or Full (100 states); separate records")
     b1.add_argument("--collect-b2-states", action="store_true")
     b1.set_defaults(func=_cmd_b1)
 
@@ -199,6 +241,9 @@ def build_parser() -> argparse.ArgumentParser:
 
     analyze = subparsers.add_parser("analyze", help="Analyze saved B1/B2 JSONL results")
     analyze.add_argument("--run-dir", required=True)
+    analyze.add_argument("--config", default=None, help="YAML config for B1 statistical settings")
+    analyze.add_argument("--b1-phase", choices=["pilot", "full"], default=None,
+                         help="Select b1_pilot/b1_full records; auto-detect if omitted")
     analyze.add_argument("--bootstrap-samples", type=int, default=5000)
     analyze.add_argument("--seed", type=int, default=20261110)
     analyze.set_defaults(func=_cmd_analyze)

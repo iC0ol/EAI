@@ -21,11 +21,23 @@ evaluation:
   smoke_episodes: 10
   smoke_video_episodes: 2
   max_steps: null # null = read the official checkpoint runner config; expected 500 for MH
+  # B0 uses its own historical seed range; B1 must never reuse these states.
   seed_start: 100000
   b0_baseline_episodes: 100
+  # B1 uses an independent range. Pilot and Full both start here, so the
+  # first 20 states of the 100-state Full run are exactly the Pilot states.
+  b1_seed_start: 200000
   b1_pilot_episodes: 20
   b1_full_episodes: 100
-  horizons: [1, 2, 4, 8, 16]
+  # H (prediction horizon) is fixed at 16 by the checkpoint. h is the
+  # execution horizon; H - (To - 1) = 15 is the largest legal value.
+  horizons: [1, 2, 4, 8, 15]
+  b1_reference_horizon: 8
+  # Pre-registered B1 analysis settings (no Pilot-based threshold tuning).
+  b1_alpha: 0.05
+  b1_practical_diff: 0.08
+  b1_ceiling_threshold: 0.95
+  b1_floor_threshold: 0.05
   policy_seed_offset: 700000
   success_threshold: 0.99
   bootstrap_samples: 5000

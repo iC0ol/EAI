@@ -14,6 +14,9 @@ Then read `reports/IMPLEMENTATION_STATUS.md`, `configs/gate_b.yaml`, and this di
 `AGENTS.md`. The code is an evaluation harness only: it does not train CAC or modify the official
 checkpoint. Run `python -m pytest -q` before simulator work.
 
-**Important blockers are intentional:** the code refuses h=16 if checkpoint temporal alignment
-leaves fewer than 16 future actions, and B2 refuses to collect states until the insertion-stage
-window is researcher-frozen. No workstation checkpoint/MuJoCo integration run has yet been done.
+**Important boundaries are intentional:** the B1 protocol is amended to
+`h ∈ {1,2,4,8,15}` because H=16 with To=2 leaves 15 executable future actions; the code still
+refuses h=16. B2 refuses to collect states until the insertion-stage window is researcher-frozen.
+B0 is complete at 84/100 on the RTX 3090 (`reports/B0_REPORT.md`). B1 has **not** been run and
+awaits explicit authorization; see `reports/B1_PROTOCOL_AMENDMENT.md` and
+`reports/B1_READINESS_REPORT.md`.

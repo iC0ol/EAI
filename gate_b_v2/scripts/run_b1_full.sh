@@ -2,4 +2,4 @@
 set -euo pipefail
 source "$(dirname "$0")/gateb_env.sh"
 cd "$GATE_B_ROOT"
-python -m gate_b_v2.cli b1 --episodes 100 --collect-b2-states "$@"
+python -m gate_b_v2.cli b1 --b1-phase full "$@"

@@ -1,10 +1,10 @@
 # Gate B v2.0：几何余量感知的动作块提交（CAC）
 
-- 修订日期：2026-11-10
-- 状态：**协议已修订，实验未执行**。
+- 修订日期：2026-11-11（B0 验收后协议修订）
+- 状态：**B0 已完成；协议已修订；B1 未执行，等待研究负责人授权。**
 - 目标：验证平台基线、固定 horizon 的效果，以及局部几何 clearance 是否调节不同 horizon 的任务结果。**不训练 CAC，不声称方法有效。**
 - 主任务：robomimic Square-MH + Diffusion Policy image CNN。
-- 硬件目标：单卡 RTX 3090 24 GB；本地硬件/环境尚未验证。
+- 硬件：单卡 RTX 3090 24 GB；本地驱动、CUDA、MuJoCo 与 checkpoint 已实际验证。
 
 ---
 
@@ -14,6 +14,16 @@
 2. square λ=0.017 是 2610.01626 的 K=24 demonstration/rollout 任务中位数，不是 policy-chunk 通用值，也不代表最佳 horizon。
 3. clearance 不再用 r_tol - d_xy 近似；必须从仿真碰撞几何/物体轮廓计算最小有符号间隙。
 4. J2 不用单次 episode 的 horizon winner 直接制造 oracle 标签；采用同一保存状态上的分支评估与 horizon×clearance 交互分析。
+
+## 0.1 2026-11-11 B0 验收后修订记录
+
+本节是 B0 之后对协议的正式补充，**不修改任何 B0 历史数据或统计结果**。
+
+1. **动作空间**：实际 checkpoint 是 10-D absolute action（3-D position + 6-D rotation + 1-D gripper），不是 7-D delta。实验统一使用 checkpoint-native 动作语义，经 `RotationTransformer` 等价的 6-D→axis-angle 转换送入 7-D OSC_POSE 控制器，并设置 `control_delta=false`。
+2. **Horizon**：固定 prediction horizon `H=16`；`To=2`；可执行未来动作 `H_available = 16 - (2-1) = 15`。B1 的 execution horizon 正式修订为 `h ∈ {1,2,4,8,15}`；`h=16` 仍被代码拒绝。
+3. **B1 设计**：使用独立于 B0 的初始状态种子 200000 起；Pilot 为 20 状态 × 5 horizons = 100 episodes；Full 为 100 状态 × 5 horizons = 500 episodes。Full 的前 20 个状态即 Pilot 状态，二者记录文件分离。
+4. **统计**：预注册 h=8 为参照；Cochran's Q 或按初始状态聚类的配对 bootstrap；四个对照使用 Holm 校正；报告 Wilson 区间与效应量；Pilot 不用于挑选 horizon 或阈值。
+5. **B0 历史**：`gate_b_v2/reports/b0_*`、`B0_REPORT.md`、`B0_STATUS.md` 和 commit `09e9ca63b89349c3905a7dc2bca9fd8e2b99844b` 全部保留，未重跑、未覆盖。
 
 ## 1. 公开资产与 checkpoint-first 路径
 
@@ -27,6 +37,14 @@
 - 文件大小：约 4 GB
 - 目录：https://diffusion-policy.cs.columbia.edu/data/experiments/image/square_mh/diffusion_policy_cnn/train_2/checkpoints/
 - 官方 README 说明论文实验提供 config、训练/评估日志与 best/latest checkpoints：https://github.com/real-stanford/diffusion_policy#-checkout-our-experiment-logs
+
+实际 checkpoint payload 审计（2026-11-11）：
+
+- `horizon H=16`、`n_obs_steps To=2`、`n_action_steps=8`；可执行未来动作 **15**。
+- `shape_meta.action.shape=[10]`，`abs_action=true`，`rotation_rep=rotation_6d`。
+- `training.use_ema=true`，EMA state 存在；normalizer 的 36 个参数在 model/EMA state_dict 内。
+- 观测：`agentview_image`、`robot0_eye_in_hand_image` 均为 `[3,84,84]`，另有 eef_pos[3]、eef_quat[4]、gripper_qpos[2]。
+- checkpoint 自身 env_runner 的 `test_start_seed=4,500,000`，不是 B0/B1 的种子范围；文件名中的 `test_mean_score=1.000` 不能当作协议种子上的预期成功率。
 
 **证据边界：** 公开目录存在不等于本地下载成功、可加载或能复现论文成功率。文件名中的 test_mean_score=1.000 也不等于在本项目的 100 个新初始状态上成功率为 100%。
 
@@ -59,36 +77,49 @@ Gate B 不实现预测误差模型、不训练 CAC、不做跨任务论文实验
 |---|---|---|
 | 环境与 checkpoint | checkpoint 可加载；依赖版本与发布 config 对齐 | 先排错；记录完整错误，不立即重训 |
 | 观测接口 | 两路 RGB 84×84、proprio 键名/维度匹配 | 修正 adapter，不改变 observation 语义 |
-| 动作接口 | 7-D action、坐标系、delta/absolute、gripper scaling 一致 | 对照发布 config 与 runner 源码 |
+| 动作接口 | checkpoint-native **10-D absolute action**（3-D position + 6-D rotation + 1-D gripper），经等价 6-D→axis-angle 转换送入 **7-D OSC_POSE**，`control_delta=false`；gripper 末维语义一致 | 对照发布 config、checkpoint payload 与 runner 源码 |
 | 单 episode | reset、rollout、终止谓词正常；视频可检查 | 未通过不得进入 horizon 扫描 |
 | 100-episode baseline | 成功率 ≥0.70 作为继续门槛 | <0.60：排错后再试；仍低则 checkpoint/config/platform BLOCKED；0.60–0.70 记录边缘基线，不宣称复现 |
 
-DP 论文报告的 0.80–0.92 是作者跨实验结果，不是本地验收值；论文脚注披露 robomimic 任务实际只使用 22 个环境初始条件，而非名义 50。公开 checkpoint 文件名的 1.000 也不是本地 baseline。
+2026-11-11 正式 B0（RTX 3090，种子 100000–100099，h=8，500 steps）：**84/100 = 0.84**，Wilson 95% CI 0.7558–0.8990，Clopper–Pearson 95% CI 0.7532–0.9057。达到 ≥0.70 继续门槛。16 个失败种子全部保留，未替换、未跳过。完整记录见 `gate_b_v2/reports/B0_REPORT.md`。
+
+DP 论文报告的 0.80–0.92 是作者跨实验结果，不是本地验收值；论文脚注披露 robomimic 任务实际只使用 22 个环境初始条件，而非名义 50。公开 checkpoint 文件名的 1.000 是在其自身 `test_start_seed=4,500,000` 上测得，不是本地 baseline，也不覆盖种子 100000–100099。
 
 ## 4. B1：固定 horizon 扫描
 
 ### 4.1 设计
 
-- 固定模型与 checkpoint；不改权重。
-- 预测 horizon 保持 H=16。
-- 每个 episode 全程固定执行长度 h ∈ {1,2,4,8,16}：每次决策仍重新预测 16 步，只执行前 h 步，丢弃剩余动作并重新观测/预测。
-- 先做 20 个固定初始状态 × 5 horizons 的 pilot；若环境稳定且没有明显 ceiling/floor，再扩展到 100 个初始状态 × 5 horizons。
-- 同一初始状态在五个 horizon 下配对；固定环境 seed，并记录 policy sampling seed。若能实现按 decision index 管理随机数，则使用 common random numbers；否则明确记录随机流不同，不把它称为完全配对随机性。
-- 总量：pilot 100 episodes；扩展后 500 episodes（不含 smoke tests）。
+- 固定模型与 checkpoint；不改权重、不更换 checkpoint、不训练。
+- **H 与 h 的定义必须区分**：
+  - `H = 16`：模型一次预测的完整动作序列长度（prediction horizon），由 checkpoint 固定。
+  - `h`：每次预测后实际执行的未来动作数量（execution horizon）。
+  - `To = 2`；`H_available = H - (To - 1) = 15`。
+- 正式 execution horizon 列表：**`h ∈ {1,2,4,8,15}`**。`h=16` 不可执行，必须由代码拒绝；不得静默截断、补齐或重复最后一个动作。
+- 每个 episode 全程固定执行长度 h：每次决策仍重新预测 H=16 步，只执行前 h 步，丢弃剩余动作并重新观测/预测。
+- **Pilot**：20 个固定初始状态 × 5 horizons = 100 episodes，种子 **200000–200019**。目的仅为检查五种 h 是否可执行、初始状态配对、记录完整性、环境稳定性和初步 ceiling/floor；不得据 Pilot 结果挑选 horizon 或修改阈值。
+- **Full**：100 个固定初始状态 × 5 horizons = 500 episodes，种子 **200000–200099**。Full 的前 20 个状态与 Pilot 完全相同，另外扩展 80 个状态；前提是 Pilot 仅用于执行与环境可行性检查。
+- Pilot 和 Full 使用**不同的记录文件**（`b1_pilot_episodes.jsonl`、`b1_full_episodes.jsonl`），统计口径分离；Full 不能与 Pilot 混合成一个数据集。若 Pilot 后改变模型、动作语义、h 列表或其他参数，必须重新建立独立正式数据集。
+- `B0` 的种子范围 100000–100099 不作为 B1 的初始状态；B1 使用独立的 200000–200099。
+- 同一初始状态在五个 horizon 下配对；必须验证同一 seed 的 `initial_state_sha256` 在五个 h 下完全一致。初始状态一致不代表轨迹一致：不同 h 会导致后续状态分化。
+- 固定环境随机流，并记录 policy sampling seed。当前实现按 policy call index 调度随机种子，使相同 call index 在不同 h 下使用相同噪声种子；这不是整条轨迹共享随机数，报告时必须如实说明轨迹会分化。
 
 ### 4.2 主要指标
 
-- 主指标：episode success（nut-on-peg predicate）。
+- 主指标：episode success（最终状态 nut-on-peg robomimic predicate，非 sticky success_seen）。
 - 次指标：episode length、policy calls、wall-clock、碰撞/掉落/未对准/超时类别。
 - 同时报 success-vs-policy-calls 与 success-vs-wall-clock；h=1 可能提高调用次数，不能只看成功率。
 
-### 4.3 统计分析
+### 4.3 统计分析（预注册）
 
-- 统计单位：初始状态 seed；五个 horizon 是同一 seed 的配对重复条件，不是五组独立样本。
-- 先报告五水平的整体配对检验（Cochran's Q 或配对 cluster bootstrap）。
-- 预注册的成对比较以 h=8 为参照，报告风险差及按初始状态 cluster bootstrap 的 95% CI；若进行多重比较，使用 Holm 校正。
-- 不用“观察到的最高成功率”单独宣称某 horizon 显著优于其他 horizon；报告全部 horizon 和不确定性。
-- 如果所有 horizon 均接近 100% 或均接近 0%，该任务/ checkpoint 对 horizon 效应缺乏可识别性，记录 ceiling/floor，不得硬凑结论。
+- 统计单位：**初始状态 seed**。五个 horizon 是同一 seed 的配对条件，不是五组独立样本；不得把 500 个 episode 当作完全独立样本。
+- 报告每个 horizon 的原始成功数、成功率及 Wilson 95% 区间。
+- 五水平整体差异：**Cochran's Q** 检验；同时报告按初始状态 seed 聚类的配对 bootstrap 结果。
+- **预先指定 h=8 为唯一参照组**。分别计算 h=1、2、4、15 相对 h=8 的成功率风险差，报告按 seed 聚类的配对 bootstrap 95% CI。
+- 四个对照的 McNemar 精确检验 p 值使用 **Holm step-down** 多重比较校正；报告未校正与校正后的 p 值。
+- 预先注册的实际意义阈值：最大 horizon 成功率差 **≥8 个百分点**（0.08）才视为存在值得继续研究的实际信号；该阈值不因 Pilot 结果调整。
+- 不得仅因某个 horizon 的观测成功率最高就宣称它显著优于其他 horizon；必须同时报告全部 horizon、CI、整体检验和校正后结果。
+- **Ceiling/Floor**：若所有 horizon 成功率均 ≥0.95，记录 ceiling effect；若均 ≤0.05，记录 floor effect。此时该任务/ checkpoint 对 horizon 效应缺乏可识别性，不得硬凑结论。
+- Pilot 只用于执行、配对和记录完整性检查；不得用 Pilot 的成功率挑选 horizon、修改 h 列表或重新设定阈值。Full 的统计分析不因 Pilot 结果改变。
 
 ## 5. Clearance 的操作定义
 
@@ -126,7 +157,7 @@ c_xy > 0 表示投影轮廓仍有正间隙，c_xy = 0 表示临界接触，c_xy 
 
 1. 从固定的 h=8 rollout 中，按预先定义的插入前阶段抽取 decision states；每个 episode 最多取一个 state，初始 discovery 集至少 30 个不同初始状态，覆盖成功与失败轨迹，不只选成功状态。若 B1 pilot 只有 20 个 h=8 episode，则额外补足至少 10 个独立初始状态。
 2. 对每个 state 保存完整 simulator state、robot state、object state、observation 和随机数状态；验证恢复后能重现同一状态。
-3. 从同一保存状态分支执行 h ∈ {1,2,4,8,16} 中的一个 commitment：重新预测 H=16，执行前 h 步；随后统一恢复 h=8 策略直到 episode 结束。
+3. 从同一保存状态分支执行 h ∈ {1,2,4,8,15} 中的一个 commitment：重新预测 H=16，执行前 h 步；随后统一恢复 h=8 策略直到 episode 结束。
 4. discovery 集每个 state × h 先跑 3 个 policy sampling seeds。若 discovery 显示方向一致且值得继续，再额外收集至少 30 个不同初始状态作为独立 confirmation 集；confirmation 集不用于选 clearance 阈值或改分析定义。若要提高每个状态成功概率估计精度，再增加随机重复数。
 5. 如果 robosuite/robomimic 无法可靠 snapshot/restore，则用相同 reset seed 与确定性 replay 重建状态；若仍无法复现，B2 不得以“配对状态”名义继续。
 
@@ -184,3 +215,13 @@ Gate B 不训练 error model、不实现完整 CAC、不做第二任务、不宣
 2. 加载 checkpoint，验证 observation/action schema；
 3. 跑 5–10 个 smoke-test episodes 并保存视频；
 4. 记录是否通过 B0，不启动 CAC 训练。
+
+## 10. 当前执行状态（2026-11-11）
+
+| 阶段 | 状态 | 说明 |
+|---|---|---|
+| B0 | **COMPLETED** | RTX 3090，种子 100000–100099，h=8，500 steps；84/100 = 0.84，Wilson 95% CI 0.7558–0.8990。历史数据未改动。 |
+| B1 | **未执行** | 协议已修订为 h∈{1,2,4,8,15}、B1 种子 200000 起、Pilot/Full 分离、统计方案预注册；等待研究负责人独立验收与明确启动授权。 |
+| B2 | **未执行** | 插入阶段窗口未冻结；snapshot/restore 确定性 replay 未完成；未收集 B2 状态。 |
+
+B0 通过不等于整个 Gate B 通过；B1 不证明 CAC 有效，不得提前开展 B2 分支实验。

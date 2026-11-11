@@ -30,7 +30,8 @@ Append dated entries here after actual workstation actions. Do not pre-fill succ
 | 2026-11-11 12:04 | 0559e16 | Added workspace-local `.cuda_compat/libcuda.so` symlink; cuDNN conv test | Conv OK; no system file changed | `reports/B0_SMOKE_GPU.md` | Retry |
 | 2026-11-11 12:03→12:23 | 0559e16 | GPU smoke, independent seeds 4,600,000–4,600,009, h=8 | **10/10 success**, 500 steps, 63 calls, 113 s each; max util 90 %, max mem 3,567 MiB | `reports/b0_smoke_gpu_*` | Proceed to B0 |
 | 2026-11-11 12:23→15:32 | — | **Formal B0, original config, seeds 100000–100099, h=8, 500 steps, cuda:0** | **84/100 success (0.84)**; Wilson CI 0.7558–0.8990; no errors; 16 failures retained | `runs/b0_gpu3090_20261111T1230/` | Complete |
-| 2026-11-11 15:34 | — | Integrity and statistics analysis | 100 unique seeds/states, h=8, 500 steps, 63 calls, no `success_error` | `reports/b0_analysis.json`, `reports/B0_REPORT.md` | Report |
+| 2026-11-11 15:34 | 09e9ca6 | Integrity and statistics analysis | 100 unique seeds/states, h=8, 500 steps, 63 calls, no `success_error` | `reports/b0_analysis.json`, `reports/B0_REPORT.md` | B0 complete |
+| 2026-11-11 (post-B0) | — | Static protocol amendment and B1 preparation; no simulator/GPU run | h∈{1,2,4,8,15}; B1 seeds 200000+; Pilot/Full separate; 38 tests pass | `reports/B1_PROTOCOL_AMENDMENT.md`, `reports/B1_READINESS_REPORT.md` | Await independent acceptance |
 
 ## Current decision
 

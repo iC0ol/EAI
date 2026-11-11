@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Mapping, Sequence, Tuple
 
 import numpy as np
+from scipy.stats import binomtest, chi2
 
 from .core import load_jsonl, write_json
 
@@ -18,11 +19,95 @@ def _bootstrap_mean_ci(values: np.ndarray, n_boot: int, seed: int) -> Tuple[floa
     return float(np.quantile(samples, 0.025)), float(np.quantile(samples, 0.975))
 
 
-def analyze_b1(run_dir: Path, n_bootstrap: int = 5000, seed: int = 20261110) -> Dict[str, Any]:
+def _wilson_interval(k: int, n: int, z: float = 1.959963984540054) -> Tuple[float, float]:
+    """Wilson score interval for one horizon's marginal success rate."""
+    if n == 0:
+        return float("nan"), float("nan")
+    p = k / n
+    denom = 1.0 + z * z / n
+    center = (p + z * z / (2 * n)) / denom
+    half = z * np.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / denom
+    return max(0.0, float(center - half)), min(1.0, float(center + half))
+
+
+def _mcnemar_exact(higher: int, lower: int) -> float:
+    """Two-sided exact McNemar p-value for paired binary outcomes."""
+    n = int(higher + lower)
+    if n == 0:
+        return 1.0
+    return float(binomtest(int(higher), n, 0.5, alternative="two-sided").pvalue)
+
+
+def _holm_adjust(pvalues: Sequence[float]) -> List[float]:
+    """Holm step-down adjusted p-values, preserving input order."""
+    values = [float(p) for p in pvalues]
+    m = len(values)
+    if m == 0:
+        return []
+    order = sorted(range(m), key=lambda index: values[index])
+    adjusted = [1.0] * m
+    running = 0.0
+    for rank, index in enumerate(order):
+        candidate = min(1.0, (m - rank) * values[index])
+        running = max(running, candidate)
+        adjusted[index] = running
+    return adjusted
+
+
+def _cochran_q(matrix: np.ndarray) -> Tuple[float, int, float]:
+    """Cochran's Q for k paired binary treatments across n blocks."""
+    matrix = np.asarray(matrix, dtype=np.float64)
+    n, k = matrix.shape
+    if n == 0 or k < 2:
+        return float("nan"), max(k - 1, 0), 1.0
+    column = matrix.sum(axis=0)
+    row = matrix.sum(axis=1)
+    denominator = k * row.sum() - float(np.sum(row * row))
+    if denominator <= 0:
+        return float("nan"), k - 1, 1.0
+    q = (k - 1) * (k * float(np.sum(column * column)) - float(column.sum()) ** 2) / denominator
+    q = max(0.0, float(q))
+    return q, k - 1, float(chi2.sf(q, k - 1))
+
+
+def _select_b1_records(run_dir: Path, phase: Any) -> Tuple[Path, Any]:
+    from .core import B1_PHASES
+
+    if phase is not None:
+        if phase not in B1_PHASES:
+            raise ValueError("B1 phase must be one of {}, got {!r}".format(B1_PHASES, phase))
+        path = run_dir / "b1_{}_episodes.jsonl".format(phase)
+        if not path.is_file():
+            raise FileNotFoundError(path)
+        return path, phase
+    for name, label in (
+        ("b1_pilot_episodes.jsonl", "pilot"),
+        ("b1_full_episodes.jsonl", "full"),
+        ("b1_episodes.jsonl", None),
+    ):
+        path = run_dir / name
+        if path.is_file():
+            return path, label
+    raise FileNotFoundError("No B1 episode file in {}".format(run_dir))
+
+
+def analyze_b1(
+    run_dir: Path,
+    n_bootstrap: int = 5000,
+    seed: int = 20261110,
+    phase: Any = None,
+    reference: int = 8,
+    alpha: float = 0.05,
+    practical_diff: float = 0.08,
+    ceiling_threshold: float = 0.95,
+    floor_threshold: float = 0.05,
+    expected_horizons: Any = None,
+) -> Dict[str, Any]:
     run_dir = Path(run_dir)
-    records = load_jsonl(run_dir / "b1_episodes.jsonl")
+    records_path, phase_label = _select_b1_records(run_dir, phase)
+    records = load_jsonl(records_path)
     if not records:
-        raise ValueError("No B1 episodes found")
+        raise ValueError("No B1 episodes found in {}".format(records_path))
     by_seed: Dict[int, Dict[int, Mapping[str, Any]]] = defaultdict(dict)
     for row in records:
         key = (int(row["seed"]), int(row["horizon"]))
@@ -30,9 +115,15 @@ def analyze_b1(run_dir: Path, n_bootstrap: int = 5000, seed: int = 20261110) -> 
             raise ValueError("Duplicate B1 record for seed/horizon {}".format(key))
         by_seed[key[0]][key[1]] = row
     horizons = sorted({int(row["horizon"]) for row in records})
-    reference = 8
+    if expected_horizons is not None:
+        expected = sorted(int(x) for x in expected_horizons)
+        if horizons != expected:
+            raise ValueError(
+                "B1 horizons {} do not match the amended protocol {}".format(horizons, expected)
+            )
+    reference = int(reference)
     if reference not in horizons:
-        raise ValueError("B1 protocol requires h=8 reference")
+        raise ValueError("B1 protocol requires h={} reference, found {}".format(reference, horizons))
 
     for seed_id, rows in by_seed.items():
         if set(rows) != set(horizons):
@@ -42,41 +133,93 @@ def analyze_b1(run_dir: Path, n_bootstrap: int = 5000, seed: int = 20261110) -> 
             raise ValueError("Initial state pairing failed for seed {}".format(seed_id))
 
     seed_ids = sorted(by_seed)
+    matrix = np.asarray(
+        [[float(bool(by_seed[s][h]["success"])) for h in horizons] for s in seed_ids],
+        dtype=np.float64,
+    )
+    rates = matrix.mean(axis=0)
     result: Dict[str, Any] = {
+        "phase": phase_label,
+        "records_file": records_path.name,
         "n_initial_states": len(seed_ids),
         "horizons": horizons,
         "reference_horizon": reference,
+        "alpha": float(alpha),
+        "practical_diff": float(practical_diff),
         "success_rate": {},
         "paired_risk_difference_vs_h8": {},
-        "bootstrap_method": "paired bootstrap resampling initial-state seeds",
+        "overall_cochran_q": {},
+        "statistical_unit": "initial-state seed; five horizons are paired conditions",
+        "bootstrap_method": "paired cluster bootstrap resampling initial-state seeds",
+        "multiple_comparison": "Holm step-down over comparisons against h={}".format(reference),
     }
-    for horizon in horizons:
-        success = np.asarray([float(by_seed[s][horizon]["success"]) for s in seed_ids])
+    for column, horizon in enumerate(horizons):
+        successes = int(matrix[:, column].sum())
+        low, high = _wilson_interval(successes, len(seed_ids))
         result["success_rate"][str(horizon)] = {
-            "successes": int(success.sum()),
-            "n": int(success.size),
-            "rate": float(success.mean()),
+            "successes": successes,
+            "n": len(seed_ids),
+            "rate": float(rates[column]),
+            "wilson_95ci_low": low,
+            "wilson_95ci_high": high,
         }
+
+    q_value, q_df, q_p = _cochran_q(matrix)
+    result["overall_cochran_q"] = {"q": q_value, "df": q_df, "p_value": q_p}
+
+    ref_index = horizons.index(reference)
+    comparisons = []
+    for column, horizon in enumerate(horizons):
         if horizon == reference:
             continue
-        ref_success = np.asarray([float(by_seed[s][reference]["success"]) for s in seed_ids])
-        paired_diff = success - ref_success
+        paired_diff = matrix[:, column] - matrix[:, ref_index]
         lo, hi = _bootstrap_mean_ci(paired_diff, n_bootstrap, seed + horizon)
-        result["paired_risk_difference_vs_h8"][str(horizon)] = {
+        higher = int(np.sum((matrix[:, column] == 1) & (matrix[:, ref_index] == 0)))
+        lower = int(np.sum((matrix[:, column] == 0) & (matrix[:, ref_index] == 1)))
+        comparisons.append({
+            "horizon": horizon,
             "risk_difference": float(paired_diff.mean()),
             "ci95_low": lo,
             "ci95_high": hi,
             "n_pairs": int(paired_diff.size),
-            "discordant_higher": int(np.sum((success == 1) & (ref_success == 0))),
-            "discordant_lower": int(np.sum((success == 0) & (ref_success == 1))),
+            "discordant_higher": higher,
+            "discordant_lower": lower,
+            "mcnemar_exact_p": _mcnemar_exact(higher, lower),
+            "ci_excludes_zero": bool(lo > 0.0 or hi < 0.0),
+        })
+    holm = _holm_adjust([item["mcnemar_exact_p"] for item in comparisons])
+    for item, adjusted in zip(comparisons, holm):
+        item["holm_adjusted_p"] = float(adjusted)
+        item["practically_significant"] = bool(abs(item["risk_difference"]) >= practical_diff)
+        result["paired_risk_difference_vs_h8"][str(item["horizon"])] = {
+            key: value for key, value in item.items() if key != "horizon"
         }
+
+    pairwise = [
+        abs(float(rates[i] - rates[j]))
+        for i in range(len(horizons))
+        for j in range(i + 1, len(horizons))
+    ]
+    result["max_abs_pairwise_rate_difference"] = max(pairwise) if pairwise else 0.0
+    result["j1_practical_signal"] = bool(
+        result["max_abs_pairwise_rate_difference"] >= float(practical_diff)
+    )
+    result["ceiling_effect"] = bool(float(np.min(rates)) >= float(ceiling_threshold))
+    result["floor_effect"] = bool(float(np.max(rates)) <= float(floor_threshold))
     result["mean_policy_calls"] = {
         str(h): float(np.mean([by_seed[s][h]["policy_calls"] for s in seed_ids])) for h in horizons
     }
     result["mean_wall_time_s"] = {
         str(h): float(np.mean([by_seed[s][h]["wall_time_s"] for s in seed_ids])) for h in horizons
     }
-    write_json(run_dir / "b1_analysis.json", result)
+    result["total_policy_calls"] = {
+        str(h): int(np.sum([by_seed[s][h]["policy_calls"] for s in seed_ids])) for h in horizons
+    }
+    result["total_wall_time_s"] = {
+        str(h): float(np.sum([by_seed[s][h]["wall_time_s"] for s in seed_ids])) for h in horizons
+    }
+    output_name = "b1_{}_analysis.json".format(phase_label) if phase_label else "b1_analysis.json"
+    write_json(run_dir / output_name, result)
     return result
 
 
@@ -183,24 +326,46 @@ def analyze_b2_split(
 def write_markdown_summary(run_dir: Path) -> Path:
     run_dir = Path(run_dir)
     sections = ["# Gate B v2 analysis summary", ""]
-    b1_path = run_dir / "b1_analysis.json"
-    if b1_path.exists():
-        import json
+    import json
+
+    for name, title in (
+        ("b1_pilot_analysis.json", "B1 pilot paired horizon scan"),
+        ("b1_full_analysis.json", "B1 full paired horizon scan"),
+        ("b1_analysis.json", "B1 paired horizon scan"),
+    ):
+        b1_path = run_dir / name
+        if not b1_path.exists():
+            continue
         b1 = json.loads(b1_path.read_text(encoding="utf-8"))
-        sections += ["## B1 paired horizon scan", "", "Initial states: **{}**".format(b1["n_initial_states"]), ""]
-        sections += ["| h | Successes | N | Success rate | Mean policy calls | Mean wall time (s) |", "|---:|---:|---:|---:|---:|---:|"]
+        sections += ["## {}".format(title), "", "Initial states: **{}**".format(b1["n_initial_states"]), ""]
+        sections += ["| h | Successes | N | Success rate | Wilson 95% CI | Mean policy calls | Mean wall time (s) |",
+                     "|---:|---:|---:|---:|---|---:|---:|"]
         for h in b1["horizons"]:
             row = b1["success_rate"][str(h)]
-            sections.append("| {} | {} | {} | {:.3f} | {:.2f} | {:.2f} |".format(
+            sections.append("| {} | {} | {} | {:.3f} | [{:.3f}, {:.3f}] | {:.2f} | {:.2f} |".format(
                 h, row["successes"], row["n"], row["rate"],
+                row.get("wilson_95ci_low", float("nan")), row.get("wilson_95ci_high", float("nan")),
                 b1["mean_policy_calls"][str(h)], b1["mean_wall_time_s"][str(h)],
             ))
         sections.append("")
-        sections.append("Paired risk differences vs h=8 (95% cluster-bootstrap CI):")
+        sections.append("Cochran's Q: q={:.4f}, df={}, p={:.6g}".format(
+            b1["overall_cochran_q"].get("q", float("nan")),
+            b1["overall_cochran_q"].get("df", 0),
+            b1["overall_cochran_q"].get("p_value", float("nan")),
+        ))
+        sections.append("")
+        sections.append("Paired risk differences vs h={} (95% cluster-bootstrap CI, Holm-adjusted p):".format(
+            b1.get("reference_horizon", 8)
+        ))
         for h, row in b1["paired_risk_difference_vs_h8"].items():
-            sections.append("- h={}: {:.3f} [{:.3f}, {:.3f}]".format(
-                h, row["risk_difference"], row["ci95_low"], row["ci95_high"]
+            sections.append("- h={}: {:.3f} [{:.3f}, {:.3f}]; Holm p={:.6g}".format(
+                h, row["risk_difference"], row["ci95_low"], row["ci95_high"],
+                row.get("holm_adjusted_p", float("nan")),
             ))
+        if b1.get("ceiling_effect"):
+            sections.append("- Ceiling effect: all horizon success rates >= threshold.")
+        if b1.get("floor_effect"):
+            sections.append("- Floor effect: all horizon success rates <= threshold.")
         sections.append("")
     for split in ("discovery", "confirmation"):
         path = run_dir / "b2_{}_analysis.json".format(split)

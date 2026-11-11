@@ -137,6 +137,33 @@ def validate_horizons(
     return values
 
 
+B1_PHASES = ("pilot", "full")
+
+
+def b1_records_filename(phase: str) -> str:
+    """Pilot and Full records are separate files by protocol design."""
+    if phase not in B1_PHASES:
+        raise ValueError("B1 phase must be one of {}, got {!r}".format(B1_PHASES, phase))
+    return "b1_{}_episodes.jsonl".format(phase)
+
+
+def b1_run_filename(phase: str) -> str:
+    """Pilot and Full pre-registration metadata are also kept separate."""
+    if phase not in B1_PHASES:
+        raise ValueError("B1 phase must be one of {}, got {!r}".format(B1_PHASES, phase))
+    return "b1_{}_run.json".format(phase)
+
+
+def ensure_new_records_path(path: Path) -> None:
+    """Refuse to append to an existing non-empty B1 record file."""
+    path = Path(path)
+    if path.exists() and path.stat().st_size > 0:
+        raise RuntimeError(
+            "Refusing to append to existing records {}; use a new run directory "
+            "and do not mix or overwrite experiment records.".format(path)
+        )
+
+
 def stack_observation_history(
     history: Sequence[Mapping[str, np.ndarray]],
     n_obs_steps: int,
