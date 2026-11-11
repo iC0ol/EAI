@@ -36,20 +36,26 @@ below.
 - `compileall`: clean.
 - `bash -n` on all launchers: clean.
 
-## Blockers
+## Current status (2026-11-11)
 
-1. **CUDA is unavailable**: loaded NVIDIA kernel module 550.144.03 vs installed
-   userspace/DKMS 580.178.04. A reboot is required. Official B0 has not run.
-2. **B1**: h=16 is not executable with H=16/To=2 (15 future actions). Needs a
-   researcher-approved horizon amendment.
-3. **B2**: insertion-stage window is not frozen; no B2 state was collected.
+1. **CUDA resolved by the authorized reboot**: kernel module and userspace are
+   both 580.178.04; the RTX 3090 passes real matmul and cuDNN checks. A
+   workspace-local `.cuda_compat/libcuda.so` symlink is needed because cuDNN
+   dlopens the unversioned name; no system file was changed.
+2. **Formal B0 completed**: 84/100 (0.84) on seeds 100000–100099, h=8, 500
+   steps, device cuda:0. Wilson 95 % CI 0.7558–0.8990. No episode was skipped
+   or replaced; 16 real failures are retained. See `reports/B0_REPORT.md`.
+3. **B1 remains blocked**: h=16 is not executable with H=16/To=2 (15 future
+   actions). Needs a researcher-approved horizon amendment. Not started.
+4. **B2 remains blocked**: insertion-stage window is not frozen and no
+   snapshot/restore replay was run. No B2 state was collected.
 
-## No scientific result claimed
+## Interpretation limits
 
-The CPU runs validate the implementation. The checkpoint's 1.000 was measured
-on its own `test_start_seed=4,500,000`, not the Gate B seeds 100000–100099.
-No baseline success rate for the protocol seeds is claimed until B0 runs on
-the 3090.
+The checkpoint's 1.000 was measured on its own `test_start_seed=4,500,000`,
+not the Gate B seeds 100000–100099; B0 is a new measurement on the protocol
+seeds under the checkpoint-native 10-D absolute-action semantics. No Gate C
+decision is made.
 
 See `reports/CODE_REVIEW.md`, `reports/B0_STATUS.md` and
 `reports/WORKSTATION_EXECUTION_LOG.md`.

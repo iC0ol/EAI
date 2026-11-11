@@ -25,11 +25,18 @@ Append dated entries here after actual workstation actions. Do not pre-fill succ
 | 2026-11-10 19:41 | — | Read checkpoint `task.env_runner` | `test_start_seed=4,500,000`, `n_test=50` — not the protocol's 100000 | checkpoint payload | B0 is a new measurement |
 | 2026-11-10 19:43→20:01 | — | CPU smoke on checkpoint's own seeds 4,500,000/4,500,001 | **2/2 success** (500 steps, 63 calls each, max_reward 1.0); not an official B0 result | `reports/cpu_official_seeds2_*` | Harness validated |
 | 2026-11-10 18:40 | 3edc36b | `pytest -q`; `compileall`; `bash -n` | 25 passed; clean; clean | `tests/`, `reports/CODE_REVIEW.md` | Commit |
+| 2026-11-11 12:01 | — | Post-reboot CUDA check | Driver 580.178.04 both sides; RTX 3090, sm_86, matmul OK | console | Proceed |
+| 2026-11-11 12:03 | 0559e16 | First GPU smoke attempt | Aborted: cuDNN could not dlopen unversioned `libcuda.so` | `runs/b0_smoke_gpu_20261111/` (preserved) | Fix loader path |
+| 2026-11-11 12:04 | 0559e16 | Added workspace-local `.cuda_compat/libcuda.so` symlink; cuDNN conv test | Conv OK; no system file changed | `reports/B0_SMOKE_GPU.md` | Retry |
+| 2026-11-11 12:03→12:23 | 0559e16 | GPU smoke, independent seeds 4,600,000–4,600,009, h=8 | **10/10 success**, 500 steps, 63 calls, 113 s each; max util 90 %, max mem 3,567 MiB | `reports/b0_smoke_gpu_*` | Proceed to B0 |
+| 2026-11-11 12:23→15:32 | — | **Formal B0, original config, seeds 100000–100099, h=8, 500 steps, cuda:0** | **84/100 success (0.84)**; Wilson CI 0.7558–0.8990; no errors; 16 failures retained | `runs/b0_gpu3090_20261111T1230/` | Complete |
+| 2026-11-11 15:34 | — | Integrity and statistics analysis | 100 unique seeds/states, h=8, 500 steps, 63 calls, no `success_error` | `reports/b0_analysis.json`, `reports/B0_REPORT.md` | Report |
 
 ## Current decision
 
-Official B0 is blocked by the GPU driver mismatch; B1 is additionally blocked
-by the invalid h=16 and by B0; B2 is blocked by the unfrozen stage window and
-by B0/B1. The CPU runs validate the pipeline only. No official success rate is
-claimed. See `reports/B0_STATUS.md`.
+Formal B0 is **COMPLETED** at 84/100 under checkpoint-native 10-D absolute
+action semantics. The written ≥0.70 continuation threshold is met. B1 remains
+blocked by the invalid h=16 (15 future actions) and has not started; B2
+remains blocked by the unfrozen stage window. No Gate C decision is made.
+See `reports/B0_REPORT.md` and `reports/B0_STATUS.md`.
 
