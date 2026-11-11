@@ -1,0 +1,7 @@
+{
+  "samples": 702,
+  "max_util_percent": 90.0,
+  "mean_util_percent": 34.22,
+  "max_memory_MiB": 3567.0,
+  "min_memory_MiB": 570.0
+}

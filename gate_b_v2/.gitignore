@@ -20,3 +20,4 @@ outputs/
 *.npz
 *.log
 reports/train_2_logs.json.txt
+.cuda_compat/

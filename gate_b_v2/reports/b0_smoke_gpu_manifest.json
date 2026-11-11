@@ -1,0 +1,92 @@
+{
+  "abs_action": true,
+  "action_dim": 10,
+  "available_future_actions": 15,
+  "checkpoint": "/home/asus/EAI/gate_b_v2/assets/square_mh/epoch=1950-test_mean_score=1.000.ckpt",
+  "checkpoint_bytes": 4627773609,
+  "checkpoint_sha256": "adaf17854fb8ff8acaccc56adbf6af321c7bec7fecb22de5257772ec81927c6d",
+  "checkpoint_use_ema": true,
+  "cuda_available": true,
+  "dataset": "/home/asus/EAI/gate_b_v2/assets/square_mh/low_dim.hdf5",
+  "dataset_bytes": 123863240,
+  "dataset_sha256": "7e58906366d79996f13785ff2dd0fe346230373532addc2afc7c92611ae42887",
+  "device_requested": "cuda:0",
+  "dp_git_commit": null,
+  "dp_root": "/home/asus/EAI/gate_b_v2/third_party/diffusion_policy",
+  "dp_source_tree_sha256": "aec43e20abb0902b606e61fc4a391605ab755e59233ecb5f6bdbfbe8df372f21",
+  "env_action_dim": 7,
+  "env_kwargs": {
+    "camera_depths": false,
+    "camera_heights": 84,
+    "camera_names": [
+      "agentview",
+      "robot0_eye_in_hand"
+    ],
+    "camera_widths": 84,
+    "control_freq": 20,
+    "controller_configs": {
+      "control_delta": false,
+      "damping": 1,
+      "damping_limits": [
+        0,
+        10
+      ],
+      "impedance_mode": "fixed",
+      "input_max": 1,
+      "input_min": -1,
+      "interpolation": null,
+      "kp": 150,
+      "kp_limits": [
+        0,
+        300
+      ],
+      "orientation_limits": null,
+      "output_max": [
+        0.05,
+        0.05,
+        0.05,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "output_min": [
+        -0.05,
+        -0.05,
+        -0.05,
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "position_limits": null,
+      "ramp_ratio": 0.2,
+      "type": "OSC_POSE",
+      "uncouple_pos_ori": true
+    },
+    "hard_reset": false,
+    "has_offscreen_renderer": false,
+    "has_renderer": false,
+    "ignore_done": true,
+    "reward_shaping": false,
+    "robots": [
+      "Panda"
+    ],
+    "use_camera_obs": false,
+    "use_object_obs": false
+  },
+  "env_name": "NutAssemblySquare",
+  "env_version_dataset": null,
+  "gpu_name": "NVIDIA GeForce RTX 3090",
+  "max_steps": 500,
+  "mujoco_py": "2.0.2.13",
+  "n_action_steps_checkpoint": 8,
+  "n_obs_steps": 2,
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "prediction_horizon": 16,
+  "python": "3.9.13",
+  "robomimic": "0.2.0",
+  "robosuite": "1.2.0",
+  "rotation_rep": "rotation_6d",
+  "run_id": "b0_smoke_gpu_20261111b",
+  "torch": "1.12.1+cu116",
+  "torch_cuda": "11.6"
+}

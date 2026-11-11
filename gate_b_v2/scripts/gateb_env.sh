@@ -17,7 +17,12 @@ export PYTHONPATH="$GATE_B_ROOT/src:$GATE_B_ROOT/third_party/diffusion_policy"
 # the bundled MuJoCo bin and the local OSMesa library must be set here.
 MUJOCO_PY_BIN="$GATE_B_ROOT/.venv/lib/python3.9/site-packages/mujoco_py/binaries/linux/mujoco210/bin"
 export MUJOCO_PY_MUJOCO_PATH="$GATE_B_ROOT/.venv/lib/python3.9/site-packages/mujoco_py/binaries/linux/mujoco210"
-export LD_LIBRARY_PATH="$MUJOCO_PY_BIN:$GATE_B_ROOT/.mesa/usr/lib/x86_64-linux-gnu"
+# The 580 driver installs libcuda.so.1 but no unversioned libcuda.so; cuDNN
+# dlopens the unversioned name. Provide a workspace-local symlink (no system
+# file is modified) and put it first on the loader path.
+mkdir -p "$GATE_B_ROOT/.cuda_compat"
+ln -sfn /usr/lib/x86_64-linux-gnu/libcuda.so.1 "$GATE_B_ROOT/.cuda_compat/libcuda.so"
+export LD_LIBRARY_PATH="$GATE_B_ROOT/.cuda_compat:$MUJOCO_PY_BIN:$GATE_B_ROOT/.mesa/usr/lib/x86_64-linux-gnu"
 export CPATH="$GATE_B_ROOT/.mesa/usr/include${CPATH:+:$CPATH}"
 export LIBRARY_PATH="$MUJOCO_PY_BIN:$GATE_B_ROOT/.mesa/usr/lib/x86_64-linux-gnu${LIBRARY_PATH:+:$LIBRARY_PATH}"
 export MUJOCO_PY_FORCE_CPU=1
