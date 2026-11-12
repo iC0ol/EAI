@@ -70,7 +70,7 @@ manifest definition.
 
 | Check | Result |
 |---|---|
-| `pytest -q` | **114 passed, 0 failed** |
+| `pytest -q` (local, vendored DP present) | **114 passed, 0 failed** |
 | `python -m compileall -q src tests` | clean |
 | `bash -n scripts/*.sh` | clean |
 | YAML parse (config + workflow) | clean |
@@ -80,6 +80,8 @@ manifest definition.
 | Real DP tree hash vs lock | MATCH |
 | B0 artifact SHA256 vs `09e9ca6` | **12/12 unchanged** |
 | B1 CLI options | only `--b1-phase`, `--run-dir` |
+| GitHub Actions current harness | **113 passed, 1 skipped** |
+| GitHub Actions archive audit | **8 passed** |
 
 New lock tests cover: correct fingerprint acceptance; checkpoint, dataset and
 DP-tree hash rejection; max_steps 100/1000 rejection; H/To change rejection;
@@ -92,14 +94,24 @@ DP-tree hash definition when the vendored source is present.
 ### GitHub Actions
 
 The workflow at `.github/workflows/gate-b-v2-source-audit.yml` runs the
-archive audit and the current harness tests. The post-push result for this
-commit is recorded after the push:
+archive audit and the current harness tests. Post-push result for commit
+`412e0db`:
 
-```text
-GitHub Actions result: PENDING AT COMMIT TIME
-```
+| Trigger | Run | Result |
+|---|---|---|
+| push | [43146004714](https://github.com/iC0ol/EAI/actions/runs/43146004714) | **success** |
+| `pull_request` (Draft #1) | [43146013642](https://github.com/iC0ol/EAI/actions/runs/43146013642) | **success** |
 
-No remote success is claimed until the run completes.
+Job logs:
+
+- `source-archive-audit`: **8 passed in 0.12 s**.
+- `current-harness-tests`: **113 passed, 1 skipped in 0.93 s**. The skipped
+  test is the real DP-tree hash check because the vendored `third_party`
+  source is Git-excluded and therefore absent on the CI runner; the same test
+  passes locally (114 passed).
+
+The earlier source-audit runs on `1de8287` and `55a2307` also passed. No
+unexecuted check is reported as successful.
 
 ## 5. B0 historical data protection
 
