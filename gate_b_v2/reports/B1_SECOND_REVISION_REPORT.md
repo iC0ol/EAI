@@ -164,13 +164,23 @@ A corrected workflow is added at
 - a second `current-harness-tests` job that runs the current tree's
   `compileall` and 56-test suite.
 
-The actual post-push Actions result is recorded below after the workflow runs.
+Post-push result for code commit `1de828728c0bf4d740cb0924950e070712315726`:
 
-```text
-GitHub Actions result: PENDING AT COMMIT TIME
-```
+| Trigger | Run | Result |
+|---|---|---|
+| push to `codex/gate-b-v2` | [43141211175](https://github.com/iC0ol/EAI/actions/runs/43141211175) | **success** |
+| `pull_request` (Draft #1) | [43141217110](https://github.com/iC0ol/EAI/actions/runs/43141217110) | **success** |
 
-No claim of a passing remote run is made until the run completes.
+Job results from run 43141217110:
+
+- `source-archive-audit`: success; archive SHA256 verified; **8 passed in 0.09 s**.
+- `current-harness-tests`: success; compileall and **56 passed in 0.50 s**.
+
+The historical failing run
+[42779437780](https://github.com/iC0ol/EAI/actions/runs/42779437780) at
+`d688ec4` failed for the missing `PYTHONPATH`; it was reproduced locally and
+is fixed in the new workflow. The report-only follow-up commit triggers the
+same workflow again; no code change is involved.
 
 ## 9. Experiment status
 
