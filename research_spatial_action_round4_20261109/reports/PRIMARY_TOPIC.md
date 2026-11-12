@@ -28,16 +28,17 @@
 ### 4.1 输入/输出
 
 - **输入：** 当前观测（图像 + proprio，或 Gate B 的特权状态）、策略预测的 H=16 步 action chunk、当前任务空间余量 c_t（nut 坐标系下 peg 外轮廓相对 nut 内孔的最小有符号几何间隙；相对 yaw 由轮廓投影体现，轴向 d_z 单独记录）。
-- **输出：** 本次执行的步数 `h ∈ {1,2,4,8,16}`；剩余 chunk 丢弃，下一步重新预测。
+- **动作接口：** checkpoint-native **10-D absolute action**（3-D position + 6-D rotation + 1-D gripper）。6-D rotation 经 rotation matrix 转为 axis-angle，与 position、gripper 拼成 **7-D OSC_POSE** 环境动作，并设置 `control_delta=false`。H=16、To=2 固定；可执行未来动作 `H_available = 16 − (2−1) = 15`。
+- **输出：** 本次执行的步数 `h ∈ {1,2,4,8,15}`；剩余 chunk 丢弃，下一步重新预测。`h=16` 不可执行，代码必须拒绝，不得补齐、重复或静默截断。
 
 ### 4.2 规则（文字伪代码）
 
 ```
 at decision step t:
     obs   = get_obs()
-    chunk = policy.predict_chunk(obs)          # H=16
+    chunk = policy.predict_chunk(obs)          # H=16, 10-D absolute actions
     c     = clearance(obs)                     # task-space margin, metres
-    for h in [16, 8, 4, 2, 1]:
+    for h in [15, 8, 4, 2, 1]:
         e_hat = error_model(state_t, chunk[:h])  # predicted max task-space error
         if e_hat < c - margin:
             execute(chunk[:h]); break
@@ -60,19 +61,19 @@ at decision step t:
 | 项 | 选择 | 证据/状态 |
 |---|---|---|
 | 主任务 | robomimic **Square**（nut-on-peg 精密插入），mh 优先、ph 备选 | 任务定义/数据公开；DP 图像 avg 0.80–0.92 [F 2303.04137 Table 2] |
-| 策略 | **Diffusion Policy（图像，CNN）** | 官方 repo MIT；`square_image.yaml`；horizon 16 / n_action_steps 8 [静态源码] |
-| 动作接口 | 7-D OSC pose delta + gripper | DP 配置 action shape [7]；robomimic 标准 |
-| 观测 | 2×84×84 RGB（agentview + wrist）+ eef pos/quat + gripper qpos | `square_image.yaml` |
-| 数据/权重 | raw Square ph 69 MB / mh 74 MB；官方 Square-MH image CNN checkpoint：train_2 / epoch=1950-test_mean_score=1.000.ckpt（约 4 GB）；本地加载未验证 | 官方实验档案；checkpoint 优先，失败再训练；预渲染 84.8 GB 包不下载 |
-| 评估 | robomimic env；success = nut on peg；`n_test=50`（Gate B 加到 100） | DP config；robomimic 文档 |
+| 策略 | **Diffusion Policy（图像，CNN）** | 官方 repo MIT；checkpoint 为 `square_mh/diffusion_policy_cnn/train_2` 的 hybrid image workspace；H=16 / To=2 / n_action_steps=8；EMA |
+| 动作接口 | **10-D absolute action**（3 pos + 6-D rot + 1 gripper）→ 6-D→axis-angle → **7-D OSC_POSE**；`control_delta=false` | checkpoint payload `abs_action=true`、`rotation_6d`；`actions.py` 已在 B0 验证 |
+| 观测 | 2×84×84 RGB（agentview + wrist）+ eef pos/quat + gripper qpos | checkpoint `shape_meta`；已在真实环境验证 |
+| 数据/权重 | 官方 Square-MH image CNN checkpoint：train_2 / epoch=1950-test_mean_score=1.000.ckpt（4.63 GB）；**本地已加载并在 RTX 3090 上完成 B0**（84/100） | 官方实验档案；checkpoint 优先；未重训；预渲染 84.8 GB 包未下载 |
+| 评估 | robomimic env；success = 最终状态 nut-on-peg predicate；B0 seeds 100000–100099，h=8，500 steps | B0 报告；协议 §3–§4 |
 | 硬件 | 单卡 3090 24GB；优先复用 Square-MH 官方 checkpoint；仅必要时按发布配置重训；eval 8 envs | DP 官方实验档案；config |
 | 备选任务 | ToolHang（同代码/数据；DP image avg 0.73–0.84；2610.01626 的 K=24 demonstration/rollout 中位 λ 为 0.026） | DP Table 2；2610.01626 |
 | 平台 fallback | ManiSkill3 PickCube + ACT（官方 baseline；正基线数字 PARTIAL） | ManiSkill3 论文；ACT README |
 
 ## 6. 强基线
 
-1. **固定 horizon 8**（DP 原配置）。
-2. 固定 horizon 1 / 2 / 4 / 16。
+1. **固定 horizon 8**（DP 原配置，也是 B1 的预注册参照）。
+2. 固定 horizon 1 / 2 / 4 / 15（不再使用不可执行的 h=16）。
 3. **始终 1 步闭环**（always-short）。
 4. **不确定性触发**：denoising variance / ensemble variance / attention entropy（若可计算）。
 5. **反应式视觉监控**：VLA-Corrector 式 latent visual deviation（作为 baseline）。
@@ -89,18 +90,21 @@ at decision step t:
 
 ## 8. 未验证事项（必须如实标注）
 
-1. **本地 DP Square 正基线**：作者报告 0.80–0.92；官方 Square-MH checkpoint 已确认存在（约 4 GB），但本地尚未加载/评估。先做 checkpoint compatibility test；本地 100-episode 门槛 ≥0.70。
-2. **固定 horizon 的效应量**：DP 论文只给任务级 8 最优；Square 上不同 horizon 的差异未报告。Gate B 测。
-3. **clearance 是否预测 oracle horizon**：未有任何论文直接测；Gate B 测（AUROC ≥0.7）。
-4. **always-short 是否已经最好**：若最好，CAC 的成功率增益消失；Gate B 测。
-5. **DP/robomimic 旧环境在 3090 上能否稳定运行**：未安装；Gate B 前置。
-6. **本地渲染图像与 DP 论文分布是否一致**：未渲染；Gate B 前置。
+1. **本地 DP Square 正基线**：作者报告 0.80–0.92；官方 Square-MH checkpoint 已在本地 RTX 3090 加载并完成 B0：84/100 = 0.84（Wilson 95% CI 0.7558–0.8990），达到 ≥0.70 继续门槛。
+2. **固定 horizon 的效应量**：DP 论文只给任务级 8 最优；Square 上不同 horizon 的差异仍未测量。B1 协议已修订，但**尚未执行**。
+3. **clearance 是否预测 oracle horizon**：未有任何论文直接测；B2 测（交互检验为主，AUROC 为次级摘要），尚未执行。
+4. **always-short 是否已经最好**：若最好，CAC 的成功率增益消失；B1 测。
+5. **DP/robomimic 旧环境在 3090 上能否稳定运行**：已验证；驱动 580.178.04、CUDA 11.6、robomimic 0.2.0、robosuite 1.2.0 完成 GPU smoke 与 B0。
+6. **本地渲染图像与 DP 论文分布是否一致**：已用官方 `image.hdf5` 状态对比；OSMesa 渲染与存储帧直接方向 corr 0.998/0.9998，平均差约 1.5/255。
 7. **方法在图像观测下能否估计 clearance**：Gate C 问题；Gate B 用特权状态。
 8. **与 2609.00908 的 attention entropy 相比是否更好**：Gate B/C 必比；若打平，CAC 不成立。
 
-## 9. 首个待授权实验
+## 9. 实验进度与待授权实验
 
-见 reports/GATE_B_PROTOCOL.md：先加载官方 Square-MH checkpoint 并完成本地 smoke test；兼容后做固定 horizon 扫描，再从共同的插入前状态分支评估不同 horizon 与 clearance 的交互。只有 checkpoint 不兼容/分布明显不符时才按官方配置重训。**不训练 CAC 方法。**
+- **B0：已完成**（种子 100000–100099，h=8，500 steps）：84/100 = 0.84，Wilson 95% CI 0.7558–0.8990。
+- **B1：未执行。** 协议已修订为 `h ∈ {1,2,4,8,15}`；Pilot 使用 200000–200019（20 状态），Full 使用 200020–200119（100 个全新状态），共 120 个互不重叠的初始状态；Pilot/Full 记录、Manifest 和分析分离；统计方案已预注册。须等待独立审查和明确授权后才启动。
+- **B2：未执行。** 插入阶段窗口未冻结，snapshot/restore 未验证；未收集 B2 状态。
+- 只有 checkpoint 不兼容/分布明显不符时才按官方配置重训。**不训练 CAC 方法。**
 
 ## 10. 一句话
 
@@ -116,3 +120,15 @@ at decision step t:
 
 
 - DP 论文评估口径补充：虽然正文说明名义上 3 个训练 seed × 50 个环境初始条件，但脚注披露 robomimic 任务因评估代码 bug 实际只使用 22 个初始条件；本地 Gate B 的 100 个初始状态是独立新评估，不将论文名义数量当作本地基线。
+
+> 2026-11-12 注：本节是历史修订记录，保留原文。其中“本地加载与评估仍待验证”已由 B0 完成（84/100，见 §12 与 `gate_b_v2/reports/B0_REPORT.md`）；旧动作空间/旧 horizon 描述已被 §12 取代。
+
+## 12. 2026-11-12 第二次修订（B0 验收后）
+
+- **动作空间统一为 checkpoint-native 10-D absolute action**：3-D position + 6-D rotation + 1-D gripper；经 6-D→axis-angle 转换送入 7-D OSC_POSE，`control_delta=false`。B0/B1/B2 必须使用同一 checkpoint 和同一转换逻辑，不描述为 7-D delta 实验。
+- **Horizon 定义统一**：prediction horizon `H=16`、`To=2`、可执行未来动作 15；execution horizon 正式为 `h ∈ {1,2,4,8,15}`，`h=16` 由代码拒绝。
+- **B1 种子完全分离**：B0 100000–100099；Pilot 200000–200019（20 个状态）；Full 200020–200119（100 个全新状态）。Full 不复用 Pilot，B1 共 120 个不同初始状态；runner 按完整区间检查重叠。
+- **Pilot/Full 分离与完整性**：Pilot 固定 20×5=100 条，Full 固定 100×5=500 条；记录与 Manifest 分文件；分析前强制校验 seed 区间、horizon 集合、记录数、Manifest、phase 与配对 Hash；Pilot+Full 同时存在时必须显式指定 phase。
+- **B1/B2 阶段隔离**：B1 CLI 和 `run_b1()` 不再提供 B2 状态收集；B2 独立实现保留但未启动。
+- **B0 历史数据未改动**：12/12 证据文件与 commit `09e9ca6` 字节一致；本修订只新增说明和代码/配置/测试。
+- 详见 `gate_b_v2/reports/B1_SECOND_REVISION_REPORT.md` 与 `gate_b_v2/reports/B1_PROTOCOL_AMENDMENT.md`。

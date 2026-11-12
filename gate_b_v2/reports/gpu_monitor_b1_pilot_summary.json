@@ -1,0 +1,9 @@
+{
+  "samples": 1800,
+  "gpu_util_max": 90.0,
+  "gpu_util_mean": 68.01,
+  "gpu_mem_max_MiB": 3550.0,
+  "gpu_mem_mean_MiB": 3549.1,
+  "gpu_temp_max_C": 86.0,
+  "gpu_temp_mean_C": 82.0
+}

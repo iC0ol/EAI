@@ -1,0 +1,96 @@
+name: Gate B v2 source audit
+
+on:
+  push:
+    branches:
+      - codex/gate-b-v2
+    paths:
+      - gate_b_v2_source.tar.xz
+      - .github/workflows/gate-b-v2-source-audit.yml
+      - gate_b_v2/**
+  pull_request:
+    paths:
+      - gate_b_v2_source.tar.xz
+      - .github/workflows/gate-b-v2-source-audit.yml
+      - gate_b_v2/**
+
+permissions:
+  contents: read
+
+jobs:
+  source-archive-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+
+      - name: Install audit dependencies
+        run: python -m pip install --quiet "numpy==1.23.3" "pytest==7.1.2"
+
+      - name: Extract and audit source archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "=== Archive SHA256 ==="
+          echo "5a4a43e0b0a4f1476f10e0c5d6bfe233b64d34fa03dccdc432c7d86a30eaaa7b  gate_b_v2_source.tar.xz" | sha256sum -c -
+          echo "=== Archive members ==="
+          tar -tJf gate_b_v2_source.tar.xz
+          rm -rf /tmp/gate_b_v2_unpack
+          mkdir -p /tmp/gate_b_v2_unpack
+          tar -xJf gate_b_v2_source.tar.xz -C /tmp/gate_b_v2_unpack
+          echo "=== Extracted files ==="
+          find /tmp/gate_b_v2_unpack -type f -printf '%P\n' | sort
+          echo "=== Project metadata ==="
+          find /tmp/gate_b_v2_unpack -maxdepth 3 -type f \( \
+            -name 'pyproject.toml' -o -name 'setup.py' -o -name 'setup.cfg' \
+            -o -name 'requirements*.txt' -o -name 'environment*.yml' \
+            -o -name 'README.md' -o -name 'IMPLEMENTATION_STATUS.md' -o -name 'gate_b.yaml' \
+          \) -print
+          echo "=== Python source compilation ==="
+          python -m compileall -q /tmp/gate_b_v2_unpack/gate_b_v2/src
+          echo "=== Test discovery and execution ==="
+          # The archived package uses a src layout; the historical workflow
+          # omitted this path and failed at import. Set it explicitly.
+          export PYTHONPATH="/tmp/gate_b_v2_unpack/gate_b_v2/src"
+          python -m pytest -q /tmp/gate_b_v2_unpack
+          echo "=== Python version ==="
+          python --version
+
+      - name: Upload extracted source for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gate-b-v2-extracted-source
+          path: /tmp/gate_b_v2_unpack/
+          if-no-files-found: warn
+          retention-days: 7
+
+  current-harness-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: gate_b_v2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+
+      - name: Install current harness test dependencies
+        run: |
+          python -m pip install --quiet \
+            "numpy==1.23.3" "scipy==1.9.1" "PyYAML==6.0" "pytest==7.1.2"
+
+      - name: Compile current harness
+        run: python -m compileall -q src tests
+
+      - name: Run current harness tests
+        run: PYTHONPATH=src python -m pytest -q

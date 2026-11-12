@@ -1,0 +1,13 @@
+{
+  "dp_root_exists": true,
+  "dp_root_has_diffusion_policy": true,
+  "checkpoint_exists": true,
+  "dataset_exists": true,
+  "checkpoint_path": "/home/asus/EAI/gate_b_v2/assets/square_mh/epoch=1950-test_mean_score=1.000.ckpt",
+  "dataset_path": "/home/asus/EAI/gate_b_v2/assets/square_mh/low_dim.hdf5",
+  "dp_root": "/home/asus/EAI/gate_b_v2/third_party/diffusion_policy",
+  "note": "Audit does not load weights, install packages, or start simulation.",
+  "checkpoint_bytes": 4627773609,
+  "dataset_bytes": 123863240
+}
+Wrote /home/asus/EAI/gate_b_v2/audit_assets.json

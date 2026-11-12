@@ -1,0 +1,149 @@
+{
+  "abs_action": true,
+  "action_dim": 10,
+  "available_future_actions": 15,
+  "b1_phase": "pilot",
+  "checkpoint": "/home/asus/EAI/gate_b_v2/assets/square_mh/epoch=1950-test_mean_score=1.000.ckpt",
+  "checkpoint_bytes": 4627773609,
+  "checkpoint_sha256": "adaf17854fb8ff8acaccc56adbf6af321c7bec7fecb22de5257772ec81927c6d",
+  "checkpoint_use_ema": true,
+  "config_critical": {
+    "b0_baseline_episodes": 100,
+    "b0_seed_start": 100000,
+    "b1_alpha": 0.05,
+    "b1_ceiling_threshold": 0.95,
+    "b1_floor_threshold": 0.05,
+    "b1_full_episodes": 100,
+    "b1_full_seed_start": 200020,
+    "b1_pilot_episodes": 20,
+    "b1_pilot_seed_start": 200000,
+    "b1_practical_diff": 0.08,
+    "b1_reference_horizon": 8,
+    "device": "cuda:0",
+    "expected_dataset_type": "mh",
+    "expected_prediction_horizon": 16,
+    "expected_task_name": "square",
+    "horizons": [
+      1,
+      2,
+      4,
+      8,
+      15
+    ],
+    "max_steps": 500,
+    "policy_seed_offset": 700000
+  },
+  "config_fingerprint": "b34de158b416d6cbcc84dfc6bd0a3eb826461f5a7a9d662d236c1b210cd1bcec",
+  "cuda_available": true,
+  "dataset": "/home/asus/EAI/gate_b_v2/assets/square_mh/low_dim.hdf5",
+  "dataset_bytes": 123863240,
+  "dataset_sha256": "7e58906366d79996f13785ff2dd0fe346230373532addc2afc7c92611ae42887",
+  "device": "cuda:0",
+  "device_requested": "cuda:0",
+  "dp_git_commit": null,
+  "dp_root": "/home/asus/EAI/gate_b_v2/third_party/diffusion_policy",
+  "dp_source_tree_sha256": "aec43e20abb0902b606e61fc4a391605ab755e59233ecb5f6bdbfbe8df372f21",
+  "env_action_dim": 7,
+  "env_kwargs": {
+    "camera_depths": false,
+    "camera_heights": 84,
+    "camera_names": [
+      "agentview",
+      "robot0_eye_in_hand"
+    ],
+    "camera_widths": 84,
+    "control_freq": 20,
+    "controller_configs": {
+      "control_delta": false,
+      "damping": 1,
+      "damping_limits": [
+        0,
+        10
+      ],
+      "impedance_mode": "fixed",
+      "input_max": 1,
+      "input_min": -1,
+      "interpolation": null,
+      "kp": 150,
+      "kp_limits": [
+        0,
+        300
+      ],
+      "orientation_limits": null,
+      "output_max": [
+        0.05,
+        0.05,
+        0.05,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "output_min": [
+        -0.05,
+        -0.05,
+        -0.05,
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "position_limits": null,
+      "ramp_ratio": 0.2,
+      "type": "OSC_POSE",
+      "uncouple_pos_ori": true
+    },
+    "hard_reset": false,
+    "has_offscreen_renderer": false,
+    "has_renderer": false,
+    "ignore_done": true,
+    "reward_shaping": false,
+    "robots": [
+      "Panda"
+    ],
+    "use_camera_obs": false,
+    "use_object_obs": false
+  },
+  "env_name": "NutAssemblySquare",
+  "env_version_dataset": null,
+  "episodes": 20,
+  "gpu_name": "NVIDIA GeForce RTX 3090",
+  "horizons": [
+    1,
+    2,
+    4,
+    8,
+    15
+  ],
+  "max_steps": 500,
+  "mujoco_py": "2.0.2.13",
+  "n_action_steps_checkpoint": 8,
+  "n_obs_steps": 2,
+  "note": "Formal B1 count and environment are locked. Pilot and Full use disjoint seed intervals; B2 state collection is not part of B1.",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "policy_seed_offset": 700000,
+  "prediction_horizon": 16,
+  "python": "3.9.13",
+  "records_file": "b1_pilot_episodes.jsonl",
+  "reference_horizon": 8,
+  "robomimic": "0.2.0",
+  "robosuite": "1.2.0",
+  "rotation_rep": "rotation_6d",
+  "run_id": "gateb_20261112T040110Z",
+  "seed_end": 200019,
+  "seed_ranges": {
+    "B0": [
+      100000,
+      100099
+    ],
+    "B1_full": [
+      200020,
+      200119
+    ],
+    "B1_pilot": [
+      200000,
+      200019
+    ]
+  },
+  "seed_start": 200000,
+  "torch": "1.12.1+cu116",
+  "torch_cuda": "11.6"
+}
