@@ -9,6 +9,7 @@ import numpy as np
 from scipy.stats import binomtest, chi2
 
 from .core import load_jsonl, write_json
+from .locks import RECORD_ENVIRONMENT_KEYS, validate_b1_environment
 
 
 def _bootstrap_mean_ci(values: np.ndarray, n_boot: int, seed: int) -> Tuple[float, float]:
@@ -195,6 +196,13 @@ def analyze_b1(
                     manifest_horizons, sorted(int(x) for x in expected_horizons)
                 )
             )
+        validate_b1_environment(
+            manifest,
+            phase=phase_label,
+            seed_start=expected_start,
+            seed_end=expected_end,
+            episodes=expected_count,
+        )
     elif expected_seed_start is not None and expected_episodes is not None:
         expected_start, expected_count = int(expected_seed_start), int(expected_episodes)
 
@@ -241,6 +249,24 @@ def analyze_b1(
         hashes = {rows[h]["initial_state_sha256"] for h in horizons}
         if len(hashes) != 1 or not all(rows[h].get("paired_initial_state_verified", False) for h in horizons):
             raise ValueError("Initial state pairing failed for seed {}".format(seed_id))
+
+    if phase_label in ("pilot", "full"):
+        offset = int(manifest["policy_seed_offset"])
+        for row in records:
+            for key in RECORD_ENVIRONMENT_KEYS:
+                if row.get(key) != manifest.get(key):
+                    raise ValueError(
+                        "B1 record environment mismatch for key {!r}: record={!r} manifest={!r}".format(
+                            key, row.get(key), manifest.get(key)
+                        )
+                    )
+            expected_policy_seed = offset + int(row["seed"])
+            if int(row.get("policy_seed", -1)) != expected_policy_seed:
+                raise ValueError(
+                    "B1 policy seed {} != policy_seed_offset + seed ({}) for seed {}".format(
+                        row.get("policy_seed"), expected_policy_seed, row["seed"]
+                    )
+                )
 
     seed_ids = sorted(by_seed)
     matrix = np.asarray(

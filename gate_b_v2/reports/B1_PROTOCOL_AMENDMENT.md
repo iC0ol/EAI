@@ -122,6 +122,33 @@ manifests. The independent B2 runner and snapshot implementation remain in the
 codebase but B2 is unstarted and requires its own authorization, frozen
 stage window and snapshot/restore validation.
 
+### 2.4.3 Formal runtime environment lock
+
+`locks.py` pins the B0-verified environment and the pre-registered B1
+parameters:
+
+| Item | Locked value |
+|---|---|
+| Checkpoint SHA256 | `adaf17854fb8ff8acaccc56adbf6af321c7bec7fecb22de5257772ec81927c6d` |
+| Dataset SHA256 | `7e58906366d79996f13785ff2dd0fe346230373532addc2afc7c92611ae42887` |
+| DP source tree SHA256 | `aec43e20abb0902b606e61fc4a391605ab755e59233ecb5f6bdbfbe8df372f21` |
+| Max steps | 500 |
+| Prediction horizon / To | 16 / 2 |
+| Execution horizons | `[1,2,4,8,15]` |
+| GPU / CUDA / torch | RTX 3090 / 11.6 / 1.12.1+cu116 |
+| Device | `cuda:0` |
+| robomimic / robosuite / mujoco_py | 0.2.0 / 1.2.0 / 2.0.2.13 |
+| Policy seed offset | 700000 |
+| Config fingerprint | canonical critical-parameter SHA256 |
+
+The B1 CLI exposes only `--b1-phase` and `--run-dir`; it has no
+`--checkpoint`, `--dataset`, `--dp-root`, `--max-steps` or `--config`.
+`_cmd_b1` loads only the fixed project config, and `run_b1()` re-validates all
+critical config values and the **actual** runtime manifest (file hashes,
+versions, GPU, device, steps, horizons, seed range) before writing the run
+manifest or any episode. Every episode row carries the environment fields;
+`analyze_b1()` rejects a manifest or row that does not match the lock.
+
 ### 2.5 Statistical analysis (pre-registered)
 
 - Unit: initial-state seed; five horizons are paired conditions.
@@ -152,9 +179,10 @@ stage window and snapshot/restore validation.
 | `research_spatial_action_round4_20261109/reports/GATE_B_PROTOCOL.md` | Formal protocol amendment: action space, H vs h, h=15, B1 seeds, Pilot/Full, statistics, stage boundaries, current status |
 | `gate_b_v2/configs/gate_b.yaml` | `horizons: [1,2,4,8,15]`; split `b1_pilot_seed_start: 200000` / `b1_full_seed_start: 200020`; reference/alpha/practical/ceiling/floor settings |
 | `gate_b_v2/src/gate_b_v2/core.py` | `B1_PHASES`, record/manifest filenames, no-overwrite guard, complete-interval `validate_seed_ranges` |
-| `gate_b_v2/src/gate_b_v2/runner.py` | Phase-specific seed start, full-interval overlap check, locked counts, separate records/manifests, no B2 collection |
-| `gate_b_v2/src/gate_b_v2/cli.py` | `b1 --b1-phase {pilot,full}` only; no `--episodes`/`--collect-b2-states`; `analyze --b1-phase` passes seed ranges |
-| `gate_b_v2/src/gate_b_v2/analysis.py` | Wilson CI, Cochran's Q, exact McNemar, Holm, ceiling/floor; strict seed/count/manifest/phase/pairing completeness gate; explicit phase when both exist |
+| `gate_b_v2/src/gate_b_v2/runner.py` | Phase-specific seed start, full-interval overlap check, locked counts, separate records/manifests, no B2 collection; runtime manifest and per-row environment fields validated against `locks.py` |
+| `gate_b_v2/src/gate_b_v2/cli.py` | B1 parser only `--b1-phase`/`--run-dir`; fixed config; no checkpoint/dataset/dp-root/max-steps/config overrides |
+| `gate_b_v2/src/gate_b_v2/locks.py` | B0-derived checkpoint/dataset/DP-tree/GPU/version/steps/horizon/config-fingerprint lock and validators |
+| `gate_b_v2/src/gate_b_v2/analysis.py` | Wilson CI, Cochran's Q, exact McNemar, Holm, ceiling/floor; strict seed/count/manifest/phase/pairing completeness gate; environment-fingerprint gate on manifest and every record; explicit phase when both exist |
 | `gate_b_v2/scripts/run_b1_pilot.sh`, `run_b1_full.sh` | Explicit phase; no B2 collection; no custom count |
 | `gate_b_v2/scripts/analyze.sh` | Passes extra analyze arguments through |
 | `gate_b_v2/tests/test_b1_protocol.py`, `test_b1_analysis.py` | Seed-overlap, completeness, manifest, phase, B2-isolation and statistics tests |
@@ -176,6 +204,10 @@ modified.
 | Pilot/Full separate | distinct record and manifest filenames; no-overwrite guard | unit tests |
 | Counts locked | no `--episodes` on B1; Pilot 20×5, Full 100×5 | parser + signature tests |
 | Completeness gate | exact seed set, count, horizons, manifest, phase and pairing required | synthetic-data tests |
+| Environment lock | checkpoint/dataset/DP-tree SHA256, 500 steps, H16/To2, RTX 3090, torch 1.12.1+cu116, CUDA 11.6, `cuda:0`, policy offset 700000 | unit tests + real local hash check |
+| CLI lock | B1 accepts only `--b1-phase` and `--run-dir`; no path/config/max-steps override | parser tests |
+| Manifest and row fingerprint | actual runtime fingerprint written to `b1_{phase}_run.json` and every episode row | unit tests |
+| Analysis lock | rejects wrong hashes, steps, horizons, offset, versions or config fingerprint | synthetic manifest tests |
 | Ambiguous phase | both Pilot and Full present requires explicit `--b1-phase` | unit test |
 | Pairing verified | same `initial_state_sha256` and verified flag across five h | runner + analysis tests |
 | Policy seed recorded | `policy_seed = 700000 + seed` in each row | existing B0/runs + code review |
@@ -187,7 +219,7 @@ modified.
 ## 5. Static verification performed
 
 ```text
-pytest -q                        56 passed
+pytest -q                        114 passed
 python -m compileall -q src tests  clean
 config horizons                  [1, 2, 4, 8, 15]
 seed intervals                   B0 100000–100099; Pilot 200000–200019; Full 200020–200119

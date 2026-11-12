@@ -101,6 +101,7 @@ DP 论文报告的 0.80–0.92 是作者跨实验结果，不是本地验收值�
 - Pilot 和 Full 使用**不同的记录文件**（`b1_pilot_episodes.jsonl`、`b1_full_episodes.jsonl`）和**不同的 Manifest**（`b1_pilot_run.json`、`b1_full_run.json`），统计口径分离；Full 不能与 Pilot 混合成一个数据集。若 Pilot 后改变模型、动作语义、h 列表或其他参数，必须重新建立独立正式数据集。
 - `B0`（100000–100099）、`B1 Pilot`（200000–200019）、`B1 Full`（200020–200119）三个区间必须完全不重叠。runner 启动前按**完整区间**校验，而不是只比较起点；任何重叠直接抛出异常。B1 共使用 120 个不同的初始状态。
 - **正式完整性**：Pilot 必须恰好 20 个 seed × 5 h = 100 条记录；Full 必须恰好 100 个 seed × 5 h = 500 条记录。分析程序同时校验 JSONL 与 Manifest（phase、horizons、episodes、seed 起止、记录覆盖、h 覆盖、配对 Hash、`paired_initial_state_verified`）；任一项失败即拒绝生成统计结果。若同一目录同时存在 Pilot 和 Full，必须显式指定 `--b1-phase`，不得自动优先选择。
+- **正式运行环境锁定**：B1 必须使用 B0 已验证的 checkpoint（SHA256 `adaf1785…27c6d`）、dataset（`7e589063…42887`）和 DP source tree（`aec43e20…72f21`）；`max_steps=500`、`H=16`、`To=2`、GPU `NVIDIA GeForce RTX 3090`、torch `1.12.1+cu116`/CUDA `11.6`、device `cuda:0`、policy seed offset `700000` 全部锁定。B1 CLI 不提供 checkpoint/dataset/dp-root/max-steps/config 覆盖入口；实际 Manifest 与每条 JSONL 记录必须携带实际指纹；分析门禁拒绝任何不一致。不得以警告后继续或自动替换文件的方式绕过。
 - B1 的任务是固定 horizon 扫描；**不得在 B1 运行中收集 B2 状态或 snapshot**。B2 的独立实现和未启动状态保持不变。
 - 同一初始状态在五个 horizon 下配对；必须验证同一 seed 的 `initial_state_sha256` 在五个 h 下完全一致。初始状态一致不代表轨迹一致：不同 h 会导致后续状态分化。
 - 固定环境随机流，并记录 policy sampling seed。当前实现按 policy call index 调度随机种子，使相同 call index 在不同 h 下使用相同噪声种子；这不是整条轨迹共享随机数，报告时必须如实说明轨迹会分化。
@@ -115,6 +116,7 @@ DP 论文报告的 0.80–0.92 是作者跨实验结果，不是本地验收值�
 
 - 统计单位：**初始状态 seed**。五个 horizon 是同一 seed 的配对条件，不是五组独立样本；不得把 500 个 episode 当作完全独立样本。
 - 分析前必须通过完整性门禁：Pilot 恰好 100 条（20×5），Full 恰好 500 条（100×5）；seed 区间、horizon 集合、记录数、Manifest 与 JSONL 必须一致；缺失、重复、越界或未配对数据一律拒绝分析。
+- 分析同时校验环境指纹：checkpoint/dataset/DP-source SHA256、max_steps、H、To、GPU、torch/CUDA、device、policy seed offset、config fingerprint 必须等于 B0 锁定值；Manifest 与每条记录不一致时拒绝生成正式统计。
 - 报告每个 horizon 的原始成功数、成功率及 Wilson 95% 区间。
 - 五水平整体差异：**Cochran's Q** 检验；同时报告按初始状态 seed 聚类的配对 bootstrap 结果。
 - **预先指定 h=8 为唯一参照组**。分别计算 h=1、2、4、15 相对 h=8 的成功率风险差，报告按 seed 聚类的配对 bootstrap 95% CI。

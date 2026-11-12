@@ -125,8 +125,18 @@ def _cmd_b0(args: argparse.Namespace) -> int:
 
 
 def _cmd_b1(args: argparse.Namespace) -> int:
-    config = _load_config(args.config)
-    experiment = _build_experiment(args, config)
+    # Formal B1 ignores user paths/overrides. The fixed project config is
+    # loaded and every critical value is re-validated in run_b1 against the
+    # B0-derived lock.
+    config = _load_config(None)
+    locked_args = argparse.Namespace(
+        dp_root=None,
+        checkpoint=None,
+        dataset=None,
+        max_steps=None,
+        run_dir=args.run_dir,
+    )
+    experiment = _build_experiment(locked_args, config)
     try:
         path = experiment.run_b1(args.b1_phase)
         print("B1 episodes written to {}".format(path))
@@ -234,10 +244,13 @@ def build_parser() -> argparse.ArgumentParser:
     b0.add_argument("--episodes", type=int, default=None)
     b0.set_defaults(func=_cmd_b0)
 
-    b1 = subparsers.add_parser("b1", help="Run paired full-episode horizon sweep")
-    _add_runtime_args(b1)
+    b1 = subparsers.add_parser(
+        "b1",
+        help="Run the locked formal paired horizon sweep (Pilot or Full)",
+    )
     b1.add_argument("--b1-phase", choices=["pilot", "full"], default="pilot",
                     help="Pilot (20 states) or Full (100 states); counts locked by config")
+    b1.add_argument("--run-dir", default=None, help="Existing or new run directory")
     b1.set_defaults(func=_cmd_b1)
 
     b2 = subparsers.add_parser("b2", help="Run matched-state B2 branches from a B1 run directory")

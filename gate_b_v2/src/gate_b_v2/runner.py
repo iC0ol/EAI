@@ -27,6 +27,7 @@ from .core import (
 )
 from .actions import undo_transform_action
 from .env import EpisodeEnv, create_square_image_env, image_for_video
+from .locks import build_b1_run_manifest, record_environment_fields
 from .policy import load_diffusion_policy_checkpoint, predict_full_future_chunk
 from .snapshot import load_snapshot, validate_snapshot_restore
 
@@ -319,23 +320,26 @@ class GateBExperiment:
 
         records_path = self.run_dir / b1_records_filename(phase)
         ensure_new_records_path(records_path)
-        base_policy_seed = int(evaluation.get("policy_seed_offset", 700000))
-        write_json(self.run_dir / b1_run_filename(phase), {
-            "b1_phase": phase,
-            "episodes": count,
-            "seed_start": seed_start,
-            "seed_end": seed_end,
-            "seed_ranges": {name: list(value) for name, value in seed_ranges.items()},
-            "horizons": horizons,
-            "reference_horizon": reference_horizon,
-            "max_steps": self.max_steps,
-            "policy_seed_offset": base_policy_seed,
-            "records_file": records_path.name,
-            "note": (
-                "Formal B1 count is locked by config. Pilot and Full use disjoint "
-                "seed intervals; B2 state collection is not part of B1."
-            ),
-        })
+        b1_manifest = build_b1_run_manifest(
+            config=self.config,
+            max_steps=self.max_steps,
+            runtime_manifest=self.manifest,
+            device=self.device,
+            phase=phase,
+            seed_start=seed_start,
+            seed_end=seed_end,
+            horizons=horizons,
+            records_file=records_path.name,
+        )
+        b1_manifest["reference_horizon"] = reference_horizon
+        b1_manifest["seed_ranges"] = {name: list(value) for name, value in seed_ranges.items()}
+        b1_manifest["note"] = (
+            "Formal B1 count and environment are locked. Pilot and Full use "
+            "disjoint seed intervals; B2 state collection is not part of B1."
+        )
+        write_json(self.run_dir / b1_run_filename(phase), b1_manifest)
+        base_policy_seed = int(b1_manifest["policy_seed_offset"])
+        env_fields = record_environment_fields(b1_manifest)
         for index in range(count):
             seed = seed_start + index
             paired_initial_hash = None
@@ -349,6 +353,7 @@ class GateBExperiment:
                 record["b1_phase"] = phase
                 record["b1_seed_start"] = seed_start
                 record["b1_seed_end"] = seed_end
+                record.update(env_fields)
                 if paired_initial_hash is None:
                     paired_initial_hash = record["initial_state_sha256"]
                 elif record["initial_state_sha256"] != paired_initial_hash:

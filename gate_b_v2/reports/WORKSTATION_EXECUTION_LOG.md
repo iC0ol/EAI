@@ -33,6 +33,7 @@ Append dated entries here after actual workstation actions. Do not pre-fill succ
 | 2026-11-11 15:34 | 09e9ca6 | Integrity and statistics analysis | 100 unique seeds/states, h=8, 500 steps, 63 calls, no `success_error` | `reports/b0_analysis.json`, `reports/B0_REPORT.md` | B0 complete |
 | 2026-11-11 (post-B0) | — | Static protocol amendment and B1 preparation; no simulator/GPU run | h∈{1,2,4,8,15}; B1 seeds 200000+; Pilot/Full separate; 38 tests pass | `reports/B1_PROTOCOL_AMENDMENT.md`, `reports/B1_READINESS_REPORT.md` | Await independent acceptance |
 | 2026-11-12 (second revision) | — | Static code/doc revision: disjoint Pilot/Full seeds, strict completeness gate, B2 isolation, CI audit fix; no simulator/GPU run | 56 tests pass; 12/12 B0 artifacts unchanged; archive audit reproduced and fixed | `reports/B1_SECOND_REVISION_REPORT.md` | Await independent review and B1 authorization |
+| 2026-11-12 (final pre-launch) | — | Runtime parameter lock: B0 fingerprint, CLI/config/runner gates, Manifest and analysis environment checks; static only | 114 tests pass; real checkpoint/dataset/DP-tree hashes match B0; 12/12 B0 artifacts unchanged | `reports/B1_FINAL_READINESS_REPORT.md` | Await independent review and B1 Pilot authorization |
 
 ## Current decision
 

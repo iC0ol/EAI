@@ -10,6 +10,7 @@ from gate_b_v2.analysis import (
     _wilson_interval,
     analyze_b1,
 )
+from gate_b_v2.locks import B1_LOCKED_ENVIRONMENT, record_environment_fields
 
 HORIZONS = [1, 2, 4, 8, 15]
 EXPECTED_RANGES = {"pilot": (200000, 20), "full": (200020, 100)}
@@ -28,12 +29,26 @@ def _write(run_dir, phase="pilot", start=200000, count=20, all_success=False,
            manifest_overrides=None):
     seeds = list(range(start, start + count))
     outcomes = _outcomes(seeds, all_success=all_success)
+    run_dir.mkdir(parents=True, exist_ok=True)
+    records_path = run_dir / "b1_{}_episodes.jsonl".format(phase)
+    manifest = dict(B1_LOCKED_ENVIRONMENT)
+    manifest.update({
+        "b1_phase": phase,
+        "episodes": count,
+        "seed_start": start,
+        "seed_end": start + count - 1,
+        "horizons": HORIZONS,
+        "reference_horizon": 8,
+        "records_file": records_path.name,
+    })
+    manifest.update(manifest_overrides or {})
+    env_fields = record_environment_fields(manifest)
     rows = []
     for seed in seeds:
         initial_hash = "hash_{}".format(seed)
         for horizon in HORIZONS:
             success = outcomes[seed][horizon]
-            rows.append({
+            row = {
                 "seed": seed,
                 "horizon": horizon,
                 "success": success,
@@ -45,21 +60,12 @@ def _write(run_dir, phase="pilot", start=200000, count=20, all_success=False,
                 "max_reward": 1.0 if success else 0.0,
                 "termination": "max_steps",
                 "success_error": None,
+                "policy_seed": int(manifest["policy_seed_offset"]) + seed,
                 "b1_phase": phase,
-            })
-    run_dir.mkdir(parents=True, exist_ok=True)
-    records_path = run_dir / "b1_{}_episodes.jsonl".format(phase)
+            }
+            row.update(env_fields)
+            rows.append(row)
     records_path.write_text("\n".join(json.dumps(row) for row in rows) + "\n", encoding="utf-8")
-    manifest = {
-        "b1_phase": phase,
-        "episodes": count,
-        "seed_start": start,
-        "seed_end": start + count - 1,
-        "horizons": HORIZONS,
-        "reference_horizon": 8,
-        "records_file": records_path.name,
-    }
-    manifest.update(manifest_overrides or {})
     (run_dir / "b1_{}_run.json".format(phase)).write_text(
         json.dumps(manifest), encoding="utf-8"
     )

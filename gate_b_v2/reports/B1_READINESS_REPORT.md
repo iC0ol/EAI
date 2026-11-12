@@ -28,14 +28,18 @@ B1 has **not** been executed and awaits explicit authorization.
 | 16 | B1 cannot collect B2 states | **PASS** | no CLI flag/parameter; no snapshot writes in `run_b1` |
 | 17 | Statistics pre-registered | **PASS** | Cochran Q, paired cluster bootstrap, exact McNemar, Holm, Wilson, ceiling/floor |
 | 18 | Protocol documents updated | **PASS** | `GATE_B_PROTOCOL.md`, `PRIMARY_TOPIC.md`, `README.md`, `IMPLEMENTATION_STATUS.md` |
-| 19 | No B1/B2/simulation/GPU/training run | **PASS** | only static/unit/config checks executed |
+| 19 | Environment fingerprint locked to B0 | **PASS** | checkpoint `adaf…`, dataset `7e58…`, DP tree `aec4…`, 500 steps, H16/To2, RTX 3090, torch/CUDA, `cuda:0`, policy offset 700000 |
+| 20 | B1 CLI has no experiment overrides | **PASS** | only `--b1-phase` and `--run-dir`; parser rejection tests |
+| 21 | Manifest and every row carry actual fingerprint | **PASS** | `locks.build_b1_run_manifest` + `record_environment_fields` |
+| 22 | Analysis rejects environment/config mismatches | **PASS** | manifest and per-record fingerprint gate; synthetic failure tests |
+| 23 | No B1/B2/simulation/GPU/training run | **PASS** | only static/unit/config checks executed |
 
 ## 2. Commands actually run (no experiment)
 
 ```bash
 cd /home/asus/EAI/gate_b_v2
 PYTHONPATH=src .venv/bin/python -m pytest -q
-# 56 passed
+# 114 passed
 
 .venv/bin/python -m compileall -q src tests
 # clean
@@ -73,18 +77,29 @@ Covered:
 - explicit phase required when both Pilot and Full exist;
 - unpaired hash and `paired_initial_state_verified=false` rejection;
 - Holm adjustment and Cochran's Q edge cases, Wilson interval, ceiling;
-- statistics on synthetic 20-seed and 100-seed paired data.
+- statistics on synthetic 20-seed and 100-seed paired data;
+- environment/config lock acceptance and rejection of changed checkpoint,
+  dataset, DP-tree, steps, horizons, offset, GPU/version, device and config
+  fingerprint;
+- B1 CLI rejection of path/config/max-steps overrides;
+- manifest/record fingerprint mismatch rejection;
+- real DP-tree SHA256 matches the B0 definition when the vendored source is
+  present.
 
-Total suite: **56 passed**.
+Total suite: **114 passed**.
 
 ## 4. Is B1 executable under the new protocol?
 
-The code and configuration now support the amended design:
+The code and configuration now support the amended design with a locked
+runtime:
 
 - `bash scripts/run_b1_pilot.sh --run-dir runs/b1_pilot_...` would run
   20 states × 5 horizons with seeds 200000–200019.
 - `bash scripts/run_b1_full.sh --run-dir runs/b1_full_...` would run
   100 **new** states × 5 horizons with seeds 200020–200119 (no Pilot reuse).
+- Both phases validate the actual checkpoint/dataset/DP-tree hashes,
+  max_steps=500, H=16, To=2, RTX 3090, torch/CUDA versions, `cuda:0`, policy
+  offset and config fingerprint before writing the manifest or any episode.
 - Records, pairing hashes, policy seeds and phase-specific manifests are
   written per run; the analyzer refuses incomplete or ambiguous data.
 - `bash scripts/analyze.sh <run-dir> --b1-phase pilot|full` computes the
@@ -110,7 +125,7 @@ as pending validation, not as results.
 | Question | Answer |
 |---|---|
 | Is B0 fully preserved? | **Yes** — 12/12 evidence files match `09e9ca6` byte-for-byte. |
-| Is the new protocol consistent with the code? | **Yes** for the amended horizon, seed, phase, pairing, record and statistics paths, verified by 56 static/unit tests. |
+| Is the new protocol consistent with the code? | **Yes** for the amended horizon, seed, phase, pairing, record and statistics paths, verified by 114 static/unit tests. |
 | Can B1 be executed under the new protocol? | **Code/config: yes. Experiment: not yet** — awaiting authorization; no B1 episode has run. |
 | Are there items that must be confirmed by the research lead? | **Yes** — thresholds, disjoint seed design, B1 authorization, and separately B2 window/snapshot. |
 | Was any formal B1 experiment run this round? | **No.** No Pilot, no Full, no B2, no simulator/GPU run. |

@@ -49,9 +49,12 @@ below.
    (h=16 still rejected). Pilot uses seeds 200000–200019 (20 states) and Full
    uses 200020–200119 (100 new states), 120 disjoint initial states; records,
    manifests and analyses are separate; formal counts are locked at 20×5 and
-   100×5 with a strict completeness gate; B1 cannot collect B2 states. B1
-   awaits independent acceptance and explicit authorization; no B1 episode
-   has been run. See `reports/B1_SECOND_REVISION_REPORT.md`.
+   100×5 with a strict completeness gate; B1 cannot collect B2 states. The
+   runtime is locked to the B0 checkpoint/dataset/DP-tree SHA256,
+   `max_steps=500`, H=16/To=2, RTX 3090, torch/CUDA versions, `cuda:0` and
+   policy offset 700000; B1 accepts only `--b1-phase`/`--run-dir`. B1 awaits
+   independent acceptance and explicit authorization; no B1 episode has been
+   run. See `reports/B1_FINAL_READINESS_REPORT.md`.
 4. **B2 remains blocked**: insertion-stage window is not frozen and no
    snapshot/restore replay was run. No B2 state was collected.
 

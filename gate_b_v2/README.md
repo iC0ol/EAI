@@ -18,7 +18,9 @@ checkpoint. Run `python -m pytest -q` before simulator work.
 `h ∈ {1,2,4,8,15}` because H=16 with To=2 leaves 15 executable future actions; the code still
 refuses h=16. B1 Pilot uses seeds 200000–200019 and B1 Full uses 200020–200119 (120 disjoint
 states, no Pilot reuse), with separate records/manifests, locked 20×5 / 100×5 counts and a strict
-analysis completeness gate. B1 cannot collect B2 states; B2 refuses to collect states until its
-insertion-stage window is researcher-frozen. B0 is complete at 84/100 on the RTX 3090
-(`reports/B0_REPORT.md`). B1 has **not** been run and awaits explicit authorization; see
-`reports/B1_SECOND_REVISION_REPORT.md`.
+analysis completeness gate. B1 is also locked to the B0-verified checkpoint/dataset/DP-tree
+SHA256, max_steps=500, H=16/To=2, RTX 3090, torch/CUDA versions, `cuda:0` and policy offset; the
+B1 CLI accepts only `--b1-phase` and `--run-dir`. B1 cannot collect B2 states; B2 refuses to
+collect states until its insertion-stage window is researcher-frozen. B0 is complete at 84/100 on
+the RTX 3090 (`reports/B0_REPORT.md`). B1 has **not** been run and awaits explicit authorization;
+see `reports/B1_FINAL_READINESS_REPORT.md`.
