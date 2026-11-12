@@ -34,6 +34,7 @@ Append dated entries here after actual workstation actions. Do not pre-fill succ
 | 2026-11-11 (post-B0) | — | Static protocol amendment and B1 preparation; no simulator/GPU run | h∈{1,2,4,8,15}; B1 seeds 200000+; Pilot/Full separate; 38 tests pass | `reports/B1_PROTOCOL_AMENDMENT.md`, `reports/B1_READINESS_REPORT.md` | Await independent acceptance |
 | 2026-11-12 (second revision) | — | Static code/doc revision: disjoint Pilot/Full seeds, strict completeness gate, B2 isolation, CI audit fix; no simulator/GPU run | 56 tests pass; 12/12 B0 artifacts unchanged; archive audit reproduced and fixed | `reports/B1_SECOND_REVISION_REPORT.md` | Await independent review and B1 authorization |
 | 2026-11-12 (final pre-launch) | — | Runtime parameter lock: B0 fingerprint, CLI/config/runner gates, Manifest and analysis environment checks; static only | 114 tests pass; real checkpoint/dataset/DP-tree hashes match B0; 12/12 B0 artifacts unchanged | `reports/B1_FINAL_READINESS_REPORT.md` | Await independent review and B1 Pilot authorization |
+| 2026-11-12 12:01–18:24 | 83c3528 | Formal B1 Pilot: 20 seeds × 5 horizons, seeds 200000–200019, h∈{1,2,4,8,15}, 500 steps, cuda:0 | 100/100 episodes complete; 82 success / 18 retained failures; pairing and environment lock verified; h=15 stable; Cochran Q p=0.1586, no Holm-significant contrast | `runs/gateb_20261112T040110Z/`; `reports/b1_pilot_*` | GO to request separate B1 Full approval |
 
 ## Current decision
 
