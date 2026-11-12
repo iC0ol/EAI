@@ -46,10 +46,12 @@ below.
    steps, device cuda:0. Wilson 95 % CI 0.7558–0.8990. No episode was skipped
    or replaced; 16 real failures are retained. See `reports/B0_REPORT.md`.
 3. **B1 protocol amended, not started**: h list is now `{1,2,4,8,15}`
-   (h=16 still rejected), B1 seeds start at 200000, Pilot (20 states) and
-   Full (100 states) have separate record files, and the paired/cluster
-   statistics are pre-registered. B1 awaits independent acceptance and
-   explicit authorization; no B1 episode has been run.
+   (h=16 still rejected). Pilot uses seeds 200000–200019 (20 states) and Full
+   uses 200020–200119 (100 new states), 120 disjoint initial states; records,
+   manifests and analyses are separate; formal counts are locked at 20×5 and
+   100×5 with a strict completeness gate; B1 cannot collect B2 states. B1
+   awaits independent acceptance and explicit authorization; no B1 episode
+   has been run. See `reports/B1_SECOND_REVISION_REPORT.md`.
 4. **B2 remains blocked**: insertion-stage window is not frozen and no
    snapshot/restore replay was run. No B2 state was collected.
 

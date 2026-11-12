@@ -164,6 +164,36 @@ def ensure_new_records_path(path: Path) -> None:
         )
 
 
+def validate_seed_ranges(ranges: Mapping[str, Sequence[int]]) -> Dict[str, Tuple[int, int]]:
+    """Validate disjoint seed intervals given as name -> (start, count).
+
+    The check uses the complete intervals, not only their start values, so a
+    shifted range that merely has a different start is still rejected if it
+    overlaps another phase.
+    """
+    normalized: Dict[str, Tuple[int, int]] = {}
+    for name, value in ranges.items():
+        if len(value) != 2:
+            raise ValueError("Seed range {!r} must be (start, count)".format(name))
+        start, count = int(value[0]), int(value[1])
+        if count <= 0:
+            raise ValueError("Seed range {!r} needs a positive count".format(name))
+        normalized[str(name)] = (start, start + count - 1)
+    items = sorted(normalized.items())
+    for left in range(len(items)):
+        for right in range(left + 1, len(items)):
+            name_a, (start_a, end_a) = items[left]
+            name_b, (start_b, end_b) = items[right]
+            if not (end_a < start_b or end_b < start_a):
+                raise RuntimeError(
+                    "Seed ranges overlap: {} [{}, {}] and {} [{}, {}]. "
+                    "B0, B1 Pilot and B1 Full must use disjoint initial states.".format(
+                        name_a, start_a, end_a, name_b, start_b, end_b
+                    )
+                )
+    return normalized
+
+
 def stack_observation_history(
     history: Sequence[Mapping[str, np.ndarray]],
     n_obs_steps: int,

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from collections import defaultdict
 from pathlib import Path
 from typing import Any, Dict, List, Mapping, Sequence, Tuple
@@ -70,6 +71,19 @@ def _cochran_q(matrix: np.ndarray) -> Tuple[float, int, float]:
     return q, k - 1, float(chi2.sf(q, k - 1))
 
 
+def _load_b1_manifest(run_dir: Path, phase: str) -> Tuple[Dict[str, Any], Path]:
+    path = run_dir / "b1_{}_run.json".format(phase)
+    if not path.is_file():
+        raise FileNotFoundError(
+            "B1 {} manifest not found: {}. Formal Pilot/Full analysis requires the "
+            "pre-registration manifest.".format(phase, path)
+        )
+    manifest = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(manifest, dict):
+        raise ValueError("B1 manifest {} must contain a JSON object".format(path))
+    return manifest, path
+
+
 def _select_b1_records(run_dir: Path, phase: Any) -> Tuple[Path, Any]:
     from .core import B1_PHASES
 
@@ -80,6 +94,7 @@ def _select_b1_records(run_dir: Path, phase: Any) -> Tuple[Path, Any]:
         if not path.is_file():
             raise FileNotFoundError(path)
         return path, phase
+    present = []
     for name, label in (
         ("b1_pilot_episodes.jsonl", "pilot"),
         ("b1_full_episodes.jsonl", "full"),
@@ -87,7 +102,14 @@ def _select_b1_records(run_dir: Path, phase: Any) -> Tuple[Path, Any]:
     ):
         path = run_dir / name
         if path.is_file():
-            return path, label
+            present.append((path, label))
+    if len(present) > 1:
+        raise ValueError(
+            "Both Pilot and Full records exist in {}; specify --b1-phase explicitly. "
+            "Automatic selection is forbidden when both phases are present.".format(run_dir)
+        )
+    if present:
+        return present[0]
     raise FileNotFoundError("No B1 episode file in {}".format(run_dir))
 
 
@@ -102,6 +124,9 @@ def analyze_b1(
     ceiling_threshold: float = 0.95,
     floor_threshold: float = 0.05,
     expected_horizons: Any = None,
+    expected_seed_start: Any = None,
+    expected_episodes: Any = None,
+    expected_phase_ranges: Any = None,
 ) -> Dict[str, Any]:
     run_dir = Path(run_dir)
     records_path, phase_label = _select_b1_records(run_dir, phase)
@@ -115,15 +140,100 @@ def analyze_b1(
             raise ValueError("Duplicate B1 record for seed/horizon {}".format(key))
         by_seed[key[0]][key[1]] = row
     horizons = sorted({int(row["horizon"]) for row in records})
+
+    expected_start = None
+    expected_count = None
+    manifest_file = None
+    if phase_label in ("pilot", "full"):
+        manifest, manifest_path = _load_b1_manifest(run_dir, phase_label)
+        manifest_file = manifest_path.name
+        if expected_phase_ranges and phase_label in expected_phase_ranges:
+            expected_start = int(expected_phase_ranges[phase_label][0])
+            expected_count = int(expected_phase_ranges[phase_label][1])
+        elif expected_seed_start is not None and expected_episodes is not None:
+            expected_start, expected_count = int(expected_seed_start), int(expected_episodes)
+        else:
+            expected_start = int(manifest["seed_start"])
+            expected_count = int(manifest["episodes"])
+        if int(manifest.get("episodes", -1)) != expected_count:
+            raise ValueError(
+                "B1 {} manifest episodes {} != expected {}".format(
+                    phase_label, manifest.get("episodes"), expected_count
+                )
+            )
+        if int(manifest.get("seed_start", -1)) != expected_start:
+            raise ValueError(
+                "B1 {} manifest seed_start {} != expected {}".format(
+                    phase_label, manifest.get("seed_start"), expected_start
+                )
+            )
+        expected_end = expected_start + expected_count - 1
+        if int(manifest.get("seed_end", -1)) != expected_end:
+            raise ValueError(
+                "B1 {} manifest seed_end {} != expected {}".format(
+                    phase_label, manifest.get("seed_end"), expected_end
+                )
+            )
+        if manifest.get("b1_phase") != phase_label:
+            raise ValueError(
+                "B1 manifest phase {!r} != requested {!r}".format(
+                    manifest.get("b1_phase"), phase_label
+                )
+            )
+        if manifest.get("records_file") != records_path.name:
+            raise ValueError(
+                "B1 manifest records_file {!r} != actual {!r}".format(
+                    manifest.get("records_file"), records_path.name
+                )
+            )
+        manifest_horizons = sorted(int(x) for x in manifest.get("horizons", []))
+        if expected_horizons is None:
+            expected_horizons = manifest_horizons
+        elif manifest_horizons != sorted(int(x) for x in expected_horizons):
+            raise ValueError(
+                "B1 manifest horizons {} != protocol {}".format(
+                    manifest_horizons, sorted(int(x) for x in expected_horizons)
+                )
+            )
+    elif expected_seed_start is not None and expected_episodes is not None:
+        expected_start, expected_count = int(expected_seed_start), int(expected_episodes)
+
     if expected_horizons is not None:
         expected = sorted(int(x) for x in expected_horizons)
         if horizons != expected:
             raise ValueError(
                 "B1 horizons {} do not match the amended protocol {}".format(horizons, expected)
             )
+
+    if expected_start is not None and expected_count is not None:
+        expected_seeds = set(range(expected_start, expected_start + expected_count))
+        actual_seeds = set(by_seed)
+        missing = sorted(expected_seeds - actual_seeds)
+        extra = sorted(actual_seeds - expected_seeds)
+        if missing or extra:
+            raise ValueError(
+                "B1 seed coverage mismatch for phase {!r}: missing={}, extra={}".format(
+                    phase_label, missing, extra
+                )
+            )
+        expected_records = expected_count * len(horizons)
+        if len(records) != expected_records:
+            raise ValueError(
+                "B1 record count {} != expected {} ({} seeds x {} horizons)".format(
+                    len(records), expected_records, expected_count, len(horizons)
+                )
+            )
+
     reference = int(reference)
     if reference not in horizons:
         raise ValueError("B1 protocol requires h={} reference, found {}".format(reference, horizons))
+
+    if phase_label is not None:
+        wrong_phase = sorted({row.get("b1_phase") for row in records if row.get("b1_phase") != phase_label})
+        if wrong_phase:
+            raise ValueError(
+                "B1 records contain phase values {} but expected {!r}".format(wrong_phase, phase_label)
+            )
 
     for seed_id, rows in by_seed.items():
         if set(rows) != set(horizons):
@@ -141,6 +251,15 @@ def analyze_b1(
     result: Dict[str, Any] = {
         "phase": phase_label,
         "records_file": records_path.name,
+        "manifest_file": manifest_file,
+        "seed_start": expected_start if expected_start is not None else min(seed_ids),
+        "seed_end": (
+            expected_start + expected_count - 1
+            if expected_start is not None and expected_count is not None
+            else max(seed_ids)
+        ),
+        "episodes": expected_count if expected_count is not None else len(seed_ids),
+        "completeness_verified": True,
         "n_initial_states": len(seed_ids),
         "horizons": horizons,
         "reference_horizon": reference,

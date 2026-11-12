@@ -128,11 +128,7 @@ def _cmd_b1(args: argparse.Namespace) -> int:
     config = _load_config(args.config)
     experiment = _build_experiment(args, config)
     try:
-        path = experiment.run_b1(
-            args.episodes,
-            collect_b2_states=args.collect_b2_states,
-            phase=args.b1_phase,
-        )
+        path = experiment.run_b1(args.b1_phase)
         print("B1 episodes written to {}".format(path))
         print("Run directory: {}".format(experiment.run_dir))
     finally:
@@ -177,6 +173,12 @@ def _cmd_analyze(args: argparse.Namespace) -> int:
             ceiling_threshold=float(evaluation.get("b1_ceiling_threshold", 0.95)),
             floor_threshold=float(evaluation.get("b1_floor_threshold", 0.05)),
             expected_horizons=[int(x) for x in evaluation.get("horizons", [1, 2, 4, 8, 15])],
+            expected_phase_ranges={
+                "pilot": (int(evaluation.get("b1_pilot_seed_start", 200000)),
+                          int(evaluation.get("b1_pilot_episodes", 20))),
+                "full": (int(evaluation.get("b1_full_seed_start", 200020)),
+                         int(evaluation.get("b1_full_episodes", 100))),
+            },
         )
     elif args.b1_phase is not None:
         raise FileNotFoundError("B1 {} records not found: {}".format(args.b1_phase, b1_file))
@@ -195,6 +197,12 @@ def _cmd_analyze(args: argparse.Namespace) -> int:
             ceiling_threshold=float(evaluation.get("b1_ceiling_threshold", 0.95)),
             floor_threshold=float(evaluation.get("b1_floor_threshold", 0.05)),
             expected_horizons=[int(x) for x in evaluation.get("horizons", [1, 2, 4, 8, 15])],
+            expected_phase_ranges={
+                "pilot": (int(evaluation.get("b1_pilot_seed_start", 200000)),
+                          int(evaluation.get("b1_pilot_episodes", 20))),
+                "full": (int(evaluation.get("b1_full_seed_start", 200020)),
+                         int(evaluation.get("b1_full_episodes", 100))),
+            },
         )
     for split in ("discovery", "confirmation"):
         if (run_dir / "b2_{}_episodes.jsonl".format(split)).is_file():
@@ -228,10 +236,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     b1 = subparsers.add_parser("b1", help="Run paired full-episode horizon sweep")
     _add_runtime_args(b1)
-    b1.add_argument("--episodes", type=int, default=None)
     b1.add_argument("--b1-phase", choices=["pilot", "full"], default="pilot",
-                    help="Pilot (20 states) or Full (100 states); separate records")
-    b1.add_argument("--collect-b2-states", action="store_true")
+                    help="Pilot (20 states) or Full (100 states); counts locked by config")
     b1.set_defaults(func=_cmd_b1)
 
     b2 = subparsers.add_parser("b2", help="Run matched-state B2 branches from a B1 run directory")

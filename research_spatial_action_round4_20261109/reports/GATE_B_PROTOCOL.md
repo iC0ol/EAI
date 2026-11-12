@@ -21,7 +21,7 @@
 
 1. **动作空间**：实际 checkpoint 是 10-D absolute action（3-D position + 6-D rotation + 1-D gripper），不是 7-D delta。实验统一使用 checkpoint-native 动作语义，经 `RotationTransformer` 等价的 6-D→axis-angle 转换送入 7-D OSC_POSE 控制器，并设置 `control_delta=false`。
 2. **Horizon**：固定 prediction horizon `H=16`；`To=2`；可执行未来动作 `H_available = 16 - (2-1) = 15`。B1 的 execution horizon 正式修订为 `h ∈ {1,2,4,8,15}`；`h=16` 仍被代码拒绝。
-3. **B1 设计**：使用独立于 B0 的初始状态种子 200000 起；Pilot 为 20 状态 × 5 horizons = 100 episodes；Full 为 100 状态 × 5 horizons = 500 episodes。Full 的前 20 个状态即 Pilot 状态，二者记录文件分离。
+3. **B1 设计**：Pilot 使用种子 200000–200019（20 个状态），Full 使用 200020–200119（100 个全新状态），共 120 个互不重叠的初始状态；Full 不复用 Pilot 的任何状态。Pilot 为 20×5=100 episodes，Full 为 100×5=500 episodes，记录与 Manifest 文件分离。
 4. **统计**：预注册 h=8 为参照；Cochran's Q 或按初始状态聚类的配对 bootstrap；四个对照使用 Holm 校正；报告 Wilson 区间与效应量；Pilot 不用于挑选 horizon 或阈值。
 5. **B0 历史**：`gate_b_v2/reports/b0_*`、`B0_REPORT.md`、`B0_STATUS.md` 和 commit `09e9ca63b89349c3905a7dc2bca9fd8e2b99844b` 全部保留，未重跑、未覆盖。
 
@@ -97,9 +97,11 @@ DP 论文报告的 0.80–0.92 是作者跨实验结果，不是本地验收值�
 - 正式 execution horizon 列表：**`h ∈ {1,2,4,8,15}`**。`h=16` 不可执行，必须由代码拒绝；不得静默截断、补齐或重复最后一个动作。
 - 每个 episode 全程固定执行长度 h：每次决策仍重新预测 H=16 步，只执行前 h 步，丢弃剩余动作并重新观测/预测。
 - **Pilot**：20 个固定初始状态 × 5 horizons = 100 episodes，种子 **200000–200019**。目的仅为检查五种 h 是否可执行、初始状态配对、记录完整性、环境稳定性和初步 ceiling/floor；不得据 Pilot 结果挑选 horizon 或修改阈值。
-- **Full**：100 个固定初始状态 × 5 horizons = 500 episodes，种子 **200000–200099**。Full 的前 20 个状态与 Pilot 完全相同，另外扩展 80 个状态；前提是 Pilot 仅用于执行与环境可行性检查。
-- Pilot 和 Full 使用**不同的记录文件**（`b1_pilot_episodes.jsonl`、`b1_full_episodes.jsonl`），统计口径分离；Full 不能与 Pilot 混合成一个数据集。若 Pilot 后改变模型、动作语义、h 列表或其他参数，必须重新建立独立正式数据集。
-- `B0` 的种子范围 100000–100099 不作为 B1 的初始状态；B1 使用独立的 200000–200099。
+- **Full**：100 个固定初始状态 × 5 horizons = 500 episodes，种子 **200020–200119**。Full 使用 100 个全新状态，**不复用 Pilot 的任何状态**。
+- Pilot 和 Full 使用**不同的记录文件**（`b1_pilot_episodes.jsonl`、`b1_full_episodes.jsonl`）和**不同的 Manifest**（`b1_pilot_run.json`、`b1_full_run.json`），统计口径分离；Full 不能与 Pilot 混合成一个数据集。若 Pilot 后改变模型、动作语义、h 列表或其他参数，必须重新建立独立正式数据集。
+- `B0`（100000–100099）、`B1 Pilot`（200000–200019）、`B1 Full`（200020–200119）三个区间必须完全不重叠。runner 启动前按**完整区间**校验，而不是只比较起点；任何重叠直接抛出异常。B1 共使用 120 个不同的初始状态。
+- **正式完整性**：Pilot 必须恰好 20 个 seed × 5 h = 100 条记录；Full 必须恰好 100 个 seed × 5 h = 500 条记录。分析程序同时校验 JSONL 与 Manifest（phase、horizons、episodes、seed 起止、记录覆盖、h 覆盖、配对 Hash、`paired_initial_state_verified`）；任一项失败即拒绝生成统计结果。若同一目录同时存在 Pilot 和 Full，必须显式指定 `--b1-phase`，不得自动优先选择。
+- B1 的任务是固定 horizon 扫描；**不得在 B1 运行中收集 B2 状态或 snapshot**。B2 的独立实现和未启动状态保持不变。
 - 同一初始状态在五个 horizon 下配对；必须验证同一 seed 的 `initial_state_sha256` 在五个 h 下完全一致。初始状态一致不代表轨迹一致：不同 h 会导致后续状态分化。
 - 固定环境随机流，并记录 policy sampling seed。当前实现按 policy call index 调度随机种子，使相同 call index 在不同 h 下使用相同噪声种子；这不是整条轨迹共享随机数，报告时必须如实说明轨迹会分化。
 
@@ -112,6 +114,7 @@ DP 论文报告的 0.80–0.92 是作者跨实验结果，不是本地验收值�
 ### 4.3 统计分析（预注册）
 
 - 统计单位：**初始状态 seed**。五个 horizon 是同一 seed 的配对条件，不是五组独立样本；不得把 500 个 episode 当作完全独立样本。
+- 分析前必须通过完整性门禁：Pilot 恰好 100 条（20×5），Full 恰好 500 条（100×5）；seed 区间、horizon 集合、记录数、Manifest 与 JSONL 必须一致；缺失、重复、越界或未配对数据一律拒绝分析。
 - 报告每个 horizon 的原始成功数、成功率及 Wilson 95% 区间。
 - 五水平整体差异：**Cochran's Q** 检验；同时报告按初始状态 seed 聚类的配对 bootstrap 结果。
 - **预先指定 h=8 为唯一参照组**。分别计算 h=1、2、4、15 相对 h=8 的成功率风险差，报告按 seed 聚类的配对 bootstrap 95% CI。
@@ -221,7 +224,7 @@ Gate B 不训练 error model、不实现完整 CAC、不做第二任务、不宣
 | 阶段 | 状态 | 说明 |
 |---|---|---|
 | B0 | **COMPLETED** | RTX 3090，种子 100000–100099，h=8，500 steps；84/100 = 0.84，Wilson 95% CI 0.7558–0.8990。历史数据未改动。 |
-| B1 | **未执行** | 协议已修订为 h∈{1,2,4,8,15}、B1 种子 200000 起、Pilot/Full 分离、统计方案预注册；等待研究负责人独立验收与明确启动授权。 |
+| B1 | **未执行** | 协议已修订为 h∈{1,2,4,8,15}；Pilot 200000–200019、Full 200020–200119（120 个互不重叠状态）；Pilot/Full 记录与 Manifest 分离；完整性门禁与统计方案预注册；等待研究负责人独立验收与明确启动授权。 |
 | B2 | **未执行** | 插入阶段窗口未冻结；snapshot/restore 确定性 replay 未完成；未收集 B2 状态。 |
 
 B0 通过不等于整个 Gate B 通过；B1 不证明 CAC 有效，不得提前开展 B2 分支实验。

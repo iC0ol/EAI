@@ -32,6 +32,7 @@ Append dated entries here after actual workstation actions. Do not pre-fill succ
 | 2026-11-11 12:23→15:32 | — | **Formal B0, original config, seeds 100000–100099, h=8, 500 steps, cuda:0** | **84/100 success (0.84)**; Wilson CI 0.7558–0.8990; no errors; 16 failures retained | `runs/b0_gpu3090_20261111T1230/` | Complete |
 | 2026-11-11 15:34 | 09e9ca6 | Integrity and statistics analysis | 100 unique seeds/states, h=8, 500 steps, 63 calls, no `success_error` | `reports/b0_analysis.json`, `reports/B0_REPORT.md` | B0 complete |
 | 2026-11-11 (post-B0) | — | Static protocol amendment and B1 preparation; no simulator/GPU run | h∈{1,2,4,8,15}; B1 seeds 200000+; Pilot/Full separate; 38 tests pass | `reports/B1_PROTOCOL_AMENDMENT.md`, `reports/B1_READINESS_REPORT.md` | Await independent acceptance |
+| 2026-11-12 (second revision) | — | Static code/doc revision: disjoint Pilot/Full seeds, strict completeness gate, B2 isolation, CI audit fix; no simulator/GPU run | 56 tests pass; 12/12 B0 artifacts unchanged; archive audit reproduced and fixed | `reports/B1_SECOND_REVISION_REPORT.md` | Await independent review and B1 authorization |
 
 ## Current decision
 

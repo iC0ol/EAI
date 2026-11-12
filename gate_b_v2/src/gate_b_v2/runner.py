@@ -22,13 +22,13 @@ from .core import (
     sha256_file,
     utc_run_id,
     validate_horizons,
+    validate_seed_ranges,
     write_json,
 )
 from .actions import undo_transform_action
 from .env import EpisodeEnv, create_square_image_env, image_for_video
-from .geometry import compute_square_clearance
 from .policy import load_diffusion_policy_checkpoint, predict_full_future_chunk
-from .snapshot import load_snapshot, save_snapshot, validate_snapshot_restore
+from .snapshot import load_snapshot, validate_snapshot_restore
 
 
 def _get_cfg_value(cfg: Any, dotted: str, default: Any = None) -> Any:
@@ -293,23 +293,22 @@ class GateBExperiment:
             raise ValueError("B2 z_gap_min_m must be less than z_gap_max_m")
         return gate
 
-    def run_b1(
-        self,
-        episodes: Optional[int] = None,
-        collect_b2_states: bool = False,
-        phase: str = "pilot",
-    ) -> Path:
+    def run_b1(self, phase: str = "pilot") -> Path:
         if phase not in B1_PHASES:
             raise ValueError("B1 phase must be one of {}, got {!r}".format(B1_PHASES, phase))
         evaluation = self.config["evaluation"]
-        default_count = (
-            evaluation.get("b1_pilot_episodes", 20)
-            if phase == "pilot"
-            else evaluation.get("b1_full_episodes", 100)
-        )
-        count = int(episodes if episodes is not None else default_count)
-        if count <= 0:
-            raise ValueError("B1 episode count must be positive")
+        seed_ranges = validate_seed_ranges({
+            "B0": (evaluation.get("seed_start", 100000),
+                   evaluation.get("b0_baseline_episodes", 100)),
+            "B1_pilot": (evaluation.get("b1_pilot_seed_start", 200000),
+                         evaluation.get("b1_pilot_episodes", 20)),
+            "B1_full": (evaluation.get("b1_full_seed_start", 200020),
+                        evaluation.get("b1_full_episodes", 100)),
+        })
+        phase_key = "B1_{}".format(phase)
+        seed_start, seed_end = seed_ranges[phase_key]
+        count = seed_end - seed_start + 1
+
         requested_horizons = [int(x) for x in evaluation.get("horizons", [1, 2, 4, 8, 15])]
         horizons = validate_horizons(requested_horizons, self.prediction_horizon, self.n_obs_steps)
         reference_horizon = int(evaluation.get("b1_reference_horizon", 8))
@@ -317,94 +316,39 @@ class GateBExperiment:
             raise ValueError(
                 "B1 reference horizon h={} is not in horizons {}".format(reference_horizon, horizons)
             )
-        if phase == "full":
-            pilot_count = int(evaluation.get("b1_pilot_episodes", 20))
-            if count < pilot_count:
-                raise ValueError(
-                    "Full B1 must include the pilot states: count {} < pilot {}".format(
-                        count, pilot_count
-                    )
-                )
-        if collect_b2_states:
-            stage_gate = self._stage_gate()
-        else:
-            stage_gate = None
 
         records_path = self.run_dir / b1_records_filename(phase)
         ensure_new_records_path(records_path)
-        state_dir = self.run_dir / "states" / "b2_candidates"
-        candidates: List[Dict[str, Any]] = []
-        seed_start = int(evaluation.get("b1_seed_start", 200000))
-        b0_seed_start = int(evaluation.get("seed_start", 100000))
-        if seed_start == b0_seed_start:
-            raise RuntimeError(
-                "B1 seed_start must be independent of the B0 seed_start ({}); "
-                "do not reuse B0 initial states.".format(b0_seed_start)
-            )
         base_policy_seed = int(evaluation.get("policy_seed_offset", 700000))
         write_json(self.run_dir / b1_run_filename(phase), {
             "b1_phase": phase,
             "episodes": count,
             "seed_start": seed_start,
-            "seed_end": seed_start + count - 1,
+            "seed_end": seed_end,
+            "seed_ranges": {name: list(value) for name, value in seed_ranges.items()},
             "horizons": horizons,
             "reference_horizon": reference_horizon,
             "max_steps": self.max_steps,
             "policy_seed_offset": base_policy_seed,
             "records_file": records_path.name,
             "note": (
-                "Pilot and Full are separate record files. Full repeats the pilot seed "
-                "range first and then extends it; pilot-only checks do not select horizons."
+                "Formal B1 count is locked by config. Pilot and Full use disjoint "
+                "seed intervals; B2 state collection is not part of B1."
             ),
         })
         for index in range(count):
             seed = seed_start + index
             paired_initial_hash = None
             for horizon in horizons:
-                saved_this_episode = [False]
-
-                def maybe_save_state(episode_env: EpisodeEnv, call_index: int) -> None:
-                    if not collect_b2_states or horizon != int(self.config["b2"].get("continuation_horizon", 8)):
-                        return
-                    if saved_this_episode[0] or episode_env.success_seen:
-                        return
-                    try:
-                        geometry = compute_square_clearance(episode_env.robosuite_env)
-                    except Exception as exc:
-                        # Geometry failures are explicit evidence; never replace with a radial proxy.
-                        if not saved_this_episode[0]:
-                            append_jsonl(self.run_dir / "b2_geometry_errors.jsonl", {
-                                "source_seed": seed, "decision_index": call_index, "error": repr(exc)
-                            })
-                        return
-                    if not (
-                        float(stage_gate["z_gap_min_m"]) <= geometry["z_gap_m"] <= float(stage_gate["z_gap_max_m"])
-                        and geometry["xy_center_distance_m"] <= float(stage_gate["max_xy_center_distance_m"])
-                    ):
-                        return
-                    state_id = "sqmh_seed_{}_call_{}".format(seed, call_index)
-                    snapshot = episode_env.snapshot()
-                    path = state_dir / (state_id + ".pkl.gz")
-                    save_snapshot(path, snapshot)
-                    candidates.append({
-                        "state_id": state_id,
-                        "source_seed": seed,
-                        "source_decision_index": call_index,
-                        "snapshot_file": str(path.relative_to(self.run_dir)),
-                        "snapshot_sha256": sha256_file(path),
-                        "geometry": geometry,
-                    })
-                    saved_this_episode[0] = True
-
                 record = self._run_episode(
                     seed=seed,
                     horizon=horizon,
                     policy_seed=base_policy_seed + seed,
-                    decision_callback=maybe_save_state if collect_b2_states else None,
                     phase="B1_{}".format(phase),
                 )
                 record["b1_phase"] = phase
                 record["b1_seed_start"] = seed_start
+                record["b1_seed_end"] = seed_end
                 if paired_initial_hash is None:
                     paired_initial_hash = record["initial_state_sha256"]
                 elif record["initial_state_sha256"] != paired_initial_hash:
@@ -416,22 +360,6 @@ class GateBExperiment:
                     )
                 record["paired_initial_state_verified"] = True
                 append_jsonl(records_path, record)
-
-        if collect_b2_states:
-            # Deterministic alternating split balances the two independent state sets
-            # without looking at branch outcomes or success labels.
-            candidates.sort(key=lambda item: (int(item["source_seed"]), int(item["source_decision_index"])))
-            manifest_path = self.run_dir / "b2_state_manifest.jsonl"
-            for index, item in enumerate(candidates):
-                item["split"] = "discovery" if index % 2 == 0 else "confirmation"
-                append_jsonl(manifest_path, item)
-            write_json(self.run_dir / "b2_state_collection_summary.json", {
-                "n_candidates": len(candidates),
-                "n_discovery": sum(item["split"] == "discovery" for item in candidates),
-                "n_confirmation": sum(item["split"] == "confirmation" for item in candidates),
-                "stage_gate": stage_gate,
-                "note": "State split is assigned before any B2 branch outcomes are observed.",
-            })
         return records_path
 
     def _run_b2_branch(

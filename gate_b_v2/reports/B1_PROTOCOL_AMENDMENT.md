@@ -3,7 +3,7 @@
 Date: 2026-11-11 (Asia/Shanghai).
 Branch: `codex/gate-b-v2`.
 Base commit: `09e9ca63b89349c3905a7dc2bca9fd8e2b99844b`.
-Status: **PROTOCOL_REVISION_COMPLETE** — awaiting independent acceptance and
+Status: **CODE_REVISION_COMPLETE** — awaiting independent acceptance and
 explicit B1 authorization.
 
 This amendment changes the written experiment protocol and the minimal code
@@ -65,15 +65,18 @@ as a 7-D delta-action experiment.
 | | Value |
 |---|---|
 | B0 seeds (historical) | 100000–100099, unchanged |
-| B1 seeds | **200000–200099** |
-| Pilot seeds | 200000–200019 |
-| Full seeds | 200000–200099 |
+| B1 Pilot seeds | **200000–200019** |
+| B1 Full seeds | **200020–200119** |
+| B1 distinct initial states | 120 |
 | Policy seed | 700000 + environment seed |
 
-`runner.run_b1` now reads `evaluation.b1_seed_start` and refuses to run if it
-equals the B0 `evaluation.seed_start`. The runner records `b1_phase` and
-`b1_seed_start` in every episode row and writes a pre-registration file
-`b1_{phase}_run.json` before the first episode.
+`runner.run_b1` reads `evaluation.b1_pilot_seed_start` and
+`evaluation.b1_full_seed_start`, and validates the **complete intervals** of
+B0, Pilot and Full with `core.validate_seed_ranges` before the first episode.
+Any overlap raises `RuntimeError`; comparing only the start values is not
+sufficient. Every episode row records `b1_phase`, `b1_seed_start` and
+`b1_seed_end`; `b1_{phase}_run.json` records the actual range and all three
+ranges.
 
 ### 2.4 Pilot and Full separation
 
@@ -82,15 +85,42 @@ equals the B0 `evaluation.seed_start`. The runner records `b1_phase` and
 | Initial states | 20 | 100 |
 | Horizons | 5 | 5 |
 | Episodes | 100 | 500 |
-| Seed range | 200000–200019 | 200000–200099 |
+| Seed range | 200000–200019 | 200020–200119 |
 | Record file | `b1_pilot_episodes.jsonl` | `b1_full_episodes.jsonl` |
+| Manifest | `b1_pilot_run.json` | `b1_full_run.json` |
 | Analysis file | `b1_pilot_analysis.json` | `b1_full_analysis.json` |
 
-The Full run repeats the Pilot seed range first and then extends by 80 states.
-Pilot is used only for execution/environment feasibility, pairing and record
+Full uses 100 **new** initial states and never reuses a Pilot state. Pilot is
+used only for execution/environment feasibility, pairing and record
 completeness; it must not select horizons or tune thresholds. If any model,
 action or horizon parameter changes after Pilot, a new independent Full
 dataset must be created. Pilot and Full statistics are never pooled.
+
+### 2.4.1 Formal completeness gate
+
+Formal B1 analysis refuses to produce statistics unless:
+
+- Pilot has exactly 20 seeds × 5 horizons = 100 records;
+- Full has exactly 100 seeds × 5 horizons = 500 records;
+- the JSONL seed set exactly equals the phase's declared interval;
+- no duplicate `(seed, horizon)` or missing horizon exists;
+- the Manifest exists and its phase, horizons, episode count, seed start/end
+  and record filename match both the protocol and the JSONL;
+- every row has the expected `b1_phase`;
+- all five rows of a seed share the same initial-state SHA256 and
+  `paired_initial_state_verified=true`.
+
+If both Pilot and Full records exist in one directory, `--b1-phase` must be
+given explicitly; the analyzer no longer silently prefers Pilot. The formal
+counts are locked by config: the B1 CLI has no `--episodes` override.
+
+### 2.4.2 B1/B2 isolation
+
+`b1` no longer exposes `--collect-b2-states`, and `GateBExperiment.run_b1` has
+no state-collection parameter. B1 does not save B2 snapshots or state
+manifests. The independent B2 runner and snapshot implementation remain in the
+codebase but B2 is unstarted and requires its own authorization, frozen
+stage window and snapshot/restore validation.
 
 ### 2.5 Statistical analysis (pre-registered)
 
@@ -120,16 +150,17 @@ dataset must be created. Pilot and Full statistics are never pooled.
 | File | Change |
 |---|---|
 | `research_spatial_action_round4_20261109/reports/GATE_B_PROTOCOL.md` | Formal protocol amendment: action space, H vs h, h=15, B1 seeds, Pilot/Full, statistics, stage boundaries, current status |
-| `gate_b_v2/configs/gate_b.yaml` | `horizons: [1,2,4,8,15]`; `b1_seed_start: 200000`; reference/alpha/practical/ceiling/floor settings |
-| `gate_b_v2/src/gate_b_v2/core.py` | `B1_PHASES`, `b1_records_filename`, `ensure_new_records_path` |
-| `gate_b_v2/src/gate_b_v2/runner.py` | B1 phase argument, independent B1 seed, separate records, pre-registration, no-overwrite guard, B1 fields |
-| `gate_b_v2/src/gate_b_v2/cli.py` | `b1 --b1-phase {pilot,full}`; `analyze --b1-phase`; passes config statistics |
-| `gate_b_v2/src/gate_b_v2/analysis.py` | Wilson CI, Cochran's Q, exact McNemar, Holm, ceiling/floor, separate Pilot/Full analysis output |
-| `gate_b_v2/scripts/run_b1_pilot.sh`, `run_b1_full.sh` | Explicit phase; Full no longer auto-collects B2 states |
+| `gate_b_v2/configs/gate_b.yaml` | `horizons: [1,2,4,8,15]`; split `b1_pilot_seed_start: 200000` / `b1_full_seed_start: 200020`; reference/alpha/practical/ceiling/floor settings |
+| `gate_b_v2/src/gate_b_v2/core.py` | `B1_PHASES`, record/manifest filenames, no-overwrite guard, complete-interval `validate_seed_ranges` |
+| `gate_b_v2/src/gate_b_v2/runner.py` | Phase-specific seed start, full-interval overlap check, locked counts, separate records/manifests, no B2 collection |
+| `gate_b_v2/src/gate_b_v2/cli.py` | `b1 --b1-phase {pilot,full}` only; no `--episodes`/`--collect-b2-states`; `analyze --b1-phase` passes seed ranges |
+| `gate_b_v2/src/gate_b_v2/analysis.py` | Wilson CI, Cochran's Q, exact McNemar, Holm, ceiling/floor; strict seed/count/manifest/phase/pairing completeness gate; explicit phase when both exist |
+| `gate_b_v2/scripts/run_b1_pilot.sh`, `run_b1_full.sh` | Explicit phase; no B2 collection; no custom count |
 | `gate_b_v2/scripts/analyze.sh` | Passes extra analyze arguments through |
-| `gate_b_v2/tests/test_b1_protocol.py`, `test_b1_analysis.py` | New protocol/horizon/seed/record/statistics tests |
-| `gate_b_v2/README.md`, `reports/IMPLEMENTATION_STATUS.md` | Updated B1 status and boundaries |
+| `gate_b_v2/tests/test_b1_protocol.py`, `test_b1_analysis.py` | Seed-overlap, completeness, manifest, phase, B2-isolation and statistics tests |
+| `gate_b_v2/README.md`, `reports/IMPLEMENTATION_STATUS.md` | Updated B1 status, seed ranges and boundaries |
 | `reports/B1_READINESS_REPORT.md` | Readiness checklist and remaining approvals |
+| `reports/B1_SECOND_REVISION_REPORT.md` | Second-revision engineering report and final status |
 | `reports/WORKSTATION_EXECUTION_LOG.md` | Static-work log entry |
 
 No B0 data file, checkpoint, environment, cache or unrelated experiment was
@@ -141,24 +172,31 @@ modified.
 |---|---|---|
 | h=15 accepted | `validate_horizons(...,16,2)` returns 15 | unit test |
 | h=16 rejected | `validate_horizons` raises; no silent truncation | unit test |
-| B1 seeds independent | `evaluation.b1_seed_start=200000`; runner rejects equality with B0 seed | config test + code review |
-| Pilot/Full separate | distinct record filenames; `b1_{phase}_run.json`; no-overwrite guard | unit tests |
-| Pairing verified | same `initial_state_sha256` required across five h | existing runner + analysis tests |
+| B1 seeds independent | B0 100000–100099, Pilot 200000–200019, Full 200020–200119; complete-interval overlap check | config + unit tests |
+| Pilot/Full separate | distinct record and manifest filenames; no-overwrite guard | unit tests |
+| Counts locked | no `--episodes` on B1; Pilot 20×5, Full 100×5 | parser + signature tests |
+| Completeness gate | exact seed set, count, horizons, manifest, phase and pairing required | synthetic-data tests |
+| Ambiguous phase | both Pilot and Full present requires explicit `--b1-phase` | unit test |
+| Pairing verified | same `initial_state_sha256` and verified flag across five h | runner + analysis tests |
 | Policy seed recorded | `policy_seed = 700000 + seed` in each row | existing B0/runs + code review |
 | Final-state success | `is_success()["task"]` on final state; sticky flag diagnostic only | existing implementation/test |
 | Raw JSONL preserved | append-only; refuses existing non-empty file | unit test |
 | Statistics | Cochran Q, cluster bootstrap, exact McNemar, Holm, Wilson, ceiling/floor | synthetic-data tests |
-| B2 not started | no B2 state collection in this round; Full script no longer auto-collects | code/script review |
+| B2 not started | no B1 collection parameter or CLI flag; B2 runner preserved but unstarted | parser/signature tests |
 
 ## 5. Static verification performed
 
 ```text
-pytest -q                        38 passed
+pytest -q                        56 passed
 python -m compileall -q src tests  clean
 config horizons                  [1, 2, 4, 8, 15]
+seed intervals                   B0 100000–100099; Pilot 200000–200019; Full 200020–200119
+overlap check                    passed for config; shift/overlap tests rejected
 available future actions         15
 validate_horizons([...15])       accepted
 validate_horizons([...16])       rejected
+Pilot 20×5 / Full 100×5          completeness gate tests pass
+Manifest/phase/pairing gate      failure tests pass
 B0 evidence SHA256 vs 09e9ca6    12/12 match
 grep old horizon list            no occurrences in active code/config/docs
 bash -n scripts/*.sh             clean
@@ -170,12 +208,12 @@ No simulator, GPU, B1 Pilot/Full, B2, or training command was executed.
 
 1. Accept or revise the pre-registered B1 thresholds: alpha 0.05, practical
    difference 8 pp, Holm family of four comparisons, ceiling 0.95 / floor 0.05.
-2. Confirm that the first 20 Pilot states may be included in the Full run on
-   the stated condition that Pilot is feasibility-only.
+2. Confirm the disjoint seed design: Pilot 200000–200019 and Full
+   200020–200119 (120 distinct states), with Full never reusing Pilot data.
 3. Authorize B1 Pilot execution separately; this round deliberately did not
    start it.
 4. B2 still requires a frozen insertion-stage window and deterministic
    snapshot/restore replay; neither is part of this round.
 
-**Final status: PROTOCOL_REVISION_COMPLETE. Awaiting independent acceptance and
-B1 launch authorization.**
+**Final status: CODE_REVISION_COMPLETE — awaiting independent review and B1
+Pilot authorization. See `B1_SECOND_REVISION_REPORT.md`.**

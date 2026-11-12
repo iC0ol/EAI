@@ -24,9 +24,10 @@ evaluation:
   # B0 uses its own historical seed range; B1 must never reuse these states.
   seed_start: 100000
   b0_baseline_episodes: 100
-  # B1 uses an independent range. Pilot and Full both start here, so the
-  # first 20 states of the 100-state Full run are exactly the Pilot states.
-  b1_seed_start: 200000
+  # B1 Pilot and B1 Full use disjoint initial states. Full never reuses a
+  # Pilot state; the runner validates the complete intervals before starting.
+  b1_pilot_seed_start: 200000
+  b1_full_seed_start: 200020
   b1_pilot_episodes: 20
   b1_full_episodes: 100
   # H (prediction horizon) is fixed at 16 by the checkpoint. h is the
