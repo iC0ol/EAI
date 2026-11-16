@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - codex/gate-b-v2
+      - codex/b2-protocol-20261116
     paths:
       - gate_b_v2_source.tar.xz
       - .github/workflows/gate-b-v2-source-audit.yml
@@ -30,14 +31,15 @@ jobs:
           python-version: "3.9"
 
       - name: Install audit dependencies
-        run: python -m pip install --quiet "numpy==1.23.3" "pytest==7.1.2"
+        run: python -m pip install --quiet \
+          "numpy==1.23.3" "scipy==1.9.1" "PyYAML==6.0" "pytest==7.1.2"
 
       - name: Extract and audit source archive
         shell: bash
         run: |
           set -euo pipefail
           echo "=== Archive SHA256 ==="
-          echo "5a4a43e0b0a4f1476f10e0c5d6bfe233b64d34fa03dccdc432c7d86a30eaaa7b  gate_b_v2_source.tar.xz" | sha256sum -c -
+          echo "e4e392c94f33fa813872f7a8a89c07f6f1e0d4d9df0d4bdaeaa0d1ab87730c1b  gate_b_v2_source.tar.xz" | sha256sum -c -
           echo "=== Archive members ==="
           tar -tJf gate_b_v2_source.tar.xz
           rm -rf /tmp/gate_b_v2_unpack

@@ -398,74 +398,602 @@ def _cluster_bootstrap_slope_ci(
     return point, float(np.quantile(values, 0.025)), float(np.quantile(values, 0.975))
 
 
+def _ols(x: np.ndarray, y: np.ndarray) -> Tuple[float, float]:
+    x = np.asarray(x, dtype=np.float64)
+    y = np.asarray(y, dtype=np.float64)
+    if x.size < 2 or float(np.std(x)) < 1e-15:
+        return float("nan"), float("nan")
+    design = np.column_stack([np.ones(x.size), x])
+    coefficients = np.linalg.lstsq(design, y, rcond=None)[0]
+    return float(coefficients[0]), float(coefficients[1])
+
+
+def _bootstrap_slope_effect(
+    x: np.ndarray,
+    y: np.ndarray,
+    c10: float,
+    c90: float,
+    n_bootstrap: int,
+    seed: int,
+) -> Dict[str, Any]:
+    """State-cluster bootstrap of the linear contrast and E."""
+    x = np.asarray(x, dtype=np.float64)
+    y = np.asarray(y, dtype=np.float64)
+    intercept, slope = _ols(x, y)
+    point_e = float((intercept + slope * c10) - (intercept + slope * c90)) if np.isfinite(slope) else float("nan")
+    rng = np.random.default_rng(int(seed))
+    n = x.size
+    slopes: List[float] = []
+    effects: List[float] = []
+    for _ in range(int(n_bootstrap)):
+        indices = rng.integers(0, n, size=n)
+        sampled_x = x[indices]
+        sampled_y = y[indices]
+        if float(np.std(sampled_x)) < 1e-15:
+            continue
+        b0, b1 = _ols(sampled_x, sampled_y)
+        if not (np.isfinite(b0) and np.isfinite(b1)):
+            continue
+        slopes.append(b1)
+        effects.append(float((b0 + b1 * c10) - (b0 + b1 * c90)))
+    slopes_array = np.asarray(slopes, dtype=np.float64)
+    effects_array = np.asarray(effects, dtype=np.float64)
+    if slopes_array.size == 0:
+        return {
+            "intercept": intercept,
+            "slope_per_m": slope,
+            "slope_per_mm": slope / 1000.0 if np.isfinite(slope) else float("nan"),
+            "predicted_delta_at_c10": float(intercept + slope * c10) if np.isfinite(slope) else float("nan"),
+            "predicted_delta_at_c90": float(intercept + slope * c90) if np.isfinite(slope) else float("nan"),
+            "E": point_e,
+            "E_ci95_low": float("nan"),
+            "E_ci95_high": float("nan"),
+            "slope_ci95_low": float("nan"),
+            "slope_ci95_high": float("nan"),
+            "slope_bootstrap_p": float("nan"),
+            "E_bootstrap_p": float("nan"),
+            "n_bootstrap_used": 0,
+        }
+
+    def two_sided_p(values: np.ndarray) -> float:
+        below = float(np.mean(values <= 0.0))
+        above = float(np.mean(values >= 0.0))
+        return float(min(1.0, 2.0 * min(below, above)))
+
+    return {
+        "intercept": intercept,
+        "slope_per_m": slope,
+        "slope_per_mm": slope / 1000.0 if np.isfinite(slope) else float("nan"),
+        "predicted_delta_at_c10": float(intercept + slope * c10) if np.isfinite(slope) else float("nan"),
+        "predicted_delta_at_c90": float(intercept + slope * c90) if np.isfinite(slope) else float("nan"),
+        "E": point_e,
+        "E_ci95_low": float(np.quantile(effects_array, 0.025)),
+        "E_ci95_high": float(np.quantile(effects_array, 0.975)),
+        "slope_ci95_low": float(np.quantile(slopes_array, 0.025)),
+        "slope_ci95_high": float(np.quantile(slopes_array, 0.975)),
+        "slope_bootstrap_p": two_sided_p(slopes_array),
+        "E_bootstrap_p": two_sided_p(effects_array),
+        "n_bootstrap_used": int(slopes_array.size),
+    }
+
+
+def _bootstrap_mean_and_p(values: np.ndarray, n_bootstrap: int, seed: int) -> Dict[str, Any]:
+    values = np.asarray(values, dtype=np.float64)
+    mean = float(values.mean())
+    rng = np.random.default_rng(int(seed))
+    n = values.size
+    samples = rng.choice(values, size=(int(n_bootstrap), n), replace=True).mean(axis=1)
+    below = float(np.mean(samples <= 0.0))
+    above = float(np.mean(samples >= 0.0))
+    return {
+        "mean": mean,
+        "ci95_low": float(np.quantile(samples, 0.025)),
+        "ci95_high": float(np.quantile(samples, 0.975)),
+        "bootstrap_p": float(min(1.0, 2.0 * min(below, above))),
+        "n_bootstrap": int(n_bootstrap),
+    }
+
+
+def _categorical_interaction(
+    x: np.ndarray,
+    state_means: Mapping[str, Mapping[int, float]],
+    state_ids: Sequence[str],
+    horizons: Sequence[int],
+    reference: int,
+    n_bootstrap: int,
+    seed: int,
+) -> Dict[str, Any]:
+    terms = [int(h) for h in horizons if int(h) != int(reference)]
+    y_rows: List[float] = []
+    x_rows: List[np.ndarray] = []
+    for state_index, state_id in enumerate(state_ids):
+        for horizon in horizons:
+            row = [1.0]
+            row.extend(1.0 if int(horizon) == term else 0.0 for term in terms)
+            row.extend(
+                (1.0 if int(horizon) == term else 0.0) * float(x[state_index])
+                for term in terms
+            )
+            x_rows.append(np.asarray(row, dtype=np.float64))
+            y_rows.append(float(state_means[state_id][int(horizon)]))
+    design = np.asarray(x_rows, dtype=np.float64)
+    response = np.asarray(y_rows, dtype=np.float64)
+    coefficients = np.linalg.lstsq(design, response, rcond=None)[0]
+    names = ["intercept_h{}".format(reference)]
+    names.extend("horizon_main_h{}".format(term) for term in terms)
+    names.extend("interaction_h{}_x_clearance_per_m".format(term) for term in terms)
+
+    rng = np.random.default_rng(int(seed))
+    n_states = len(state_ids)
+    samples: List[np.ndarray] = []
+    for _ in range(int(n_bootstrap)):
+        indices = rng.integers(0, n_states, size=n_states)
+        rows = []
+        values = []
+        for state_index in indices:
+            state_id = state_ids[int(state_index)]
+            for horizon in horizons:
+                row = [1.0]
+                row.extend(1.0 if int(horizon) == term else 0.0 for term in terms)
+                row.extend(
+                    (1.0 if int(horizon) == term else 0.0) * float(x[int(state_index)])
+                    for term in terms
+                )
+                rows.append(np.asarray(row, dtype=np.float64))
+                values.append(float(state_means[state_id][int(horizon)]))
+        sampled = np.linalg.lstsq(np.asarray(rows), np.asarray(values), rcond=None)[0]
+        samples.append(sampled)
+    sample_matrix = np.asarray(samples, dtype=np.float64) if samples else np.empty((0, len(names)))
+    result: Dict[str, Any] = {
+        "model": "linear probability: p_s(h) ~ horizon + horizon x clearance; reference h={}".format(reference),
+        "names": names,
+        "coefficients": {name: float(value) for name, value in zip(names, coefficients)},
+        "ci95": {},
+        "method": "state-cluster bootstrap over whole state IDs; descriptive secondary analysis",
+    }
+    if sample_matrix.size:
+        for index, name in enumerate(names):
+            result["ci95"][name] = {
+                "low": float(np.quantile(sample_matrix[:, index], 0.025)),
+                "high": float(np.quantile(sample_matrix[:, index], 0.975)),
+            }
+    return result
+
+
+def _clearance_bins(
+    x: np.ndarray,
+    state_means: Mapping[str, Mapping[int, float]],
+    state_ids: Sequence[str],
+    horizons: Sequence[int],
+) -> List[Dict[str, Any]]:
+    x = np.asarray(x, dtype=np.float64)
+    edges = np.quantile(x, [0.0, 1.0 / 3.0, 2.0 / 3.0, 1.0])
+    edges = np.unique(edges)
+    bins: List[Dict[str, Any]] = []
+    for index in range(max(1, len(edges) - 1)):
+        low, high = float(edges[index]), float(edges[index + 1])
+        if index == len(edges) - 2:
+            members = [state_id for state_id, value in zip(state_ids, x) if low <= value <= high]
+        else:
+            members = [state_id for state_id, value in zip(state_ids, x) if low <= value < high]
+        if not members:
+            continue
+        bins.append({
+            "bin": index,
+            "clearance_low_m": low,
+            "clearance_high_m": high,
+            "n_states": len(members),
+            "success_rate_by_horizon": {
+                str(horizon): float(np.mean([state_means[state_id][int(horizon)] for state_id in members]))
+                for horizon in horizons
+            },
+            "delta_mean": float(np.mean([
+                0.5 * (state_means[state_id][1] + state_means[state_id][2])
+                - state_means[state_id][15]
+                for state_id in members
+            ])),
+        })
+    return bins
+
+
+def _b2_inputs(run_dir: Path, split: str, config: Mapping[str, Any]):
+    from .b2_protocol import validate_b2_records, validate_state_manifest
+
+    records_path = run_dir / "b2_{}_episodes.jsonl".format(split)
+    state_path = run_dir / "b2_{}_state_manifest.jsonl".format(split)
+    validation_path = run_dir / "b2_{}_snapshot_validation.json".format(split)
+    if not records_path.is_file():
+        raise FileNotFoundError("B2 {} branch records not found: {}".format(split, records_path))
+    if not state_path.is_file():
+        raise FileNotFoundError("B2 {} state manifest not found: {}".format(split, state_path))
+    if not validation_path.is_file():
+        raise FileNotFoundError("B2 {} snapshot validation not found: {}".format(split, validation_path))
+    records = load_jsonl(records_path)
+    states = load_jsonl(state_path)
+    manifest_path = run_dir / "b2_{}_run.json".format(split)
+    run_manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.is_file() else None
+    validate_state_manifest(states, split, config)
+    validation = json.loads(validation_path.read_text(encoding="utf-8"))
+    if not validation.get("all_passed"):
+        raise RuntimeError(
+            "B2 {} snapshot validation did not pass; analysis is BLOCKED".format(split)
+        )
+    validate_b2_records(records, states, split, config, runtime_manifest=run_manifest)
+    return records, states, validation, run_manifest, records_path, state_path, validation_path
+
+
 def analyze_b2_split(
     run_dir: Path,
     split: str,
     n_bootstrap: int = 5000,
     seed: int = 20261110,
+    config: Mapping[str, Any] = None,
 ) -> Dict[str, Any]:
+    """Pre-registered B2 v1.1 state-level analysis for one independent split."""
+    from .locks import B2_LOCKED_CONFIG_VALUES
+
     run_dir = Path(run_dir)
-    records = load_jsonl(run_dir / "b2_{}_episodes.jsonl".format(split))
-    if not records:
-        raise ValueError("No B2 {} episodes found".format(split))
+    if split not in ("discovery", "confirmation"):
+        raise ValueError("split must be discovery or confirmation")
+    config = config or {"b2": dict(B2_LOCKED_CONFIG_VALUES)}
+    records, states, validation, run_manifest, records_path, state_path, validation_path = _b2_inputs(
+        run_dir, split, config
+    )
+    horizons = [int(x) for x in config["b2"]["horizons"]]
+    reference = int(config["b2"]["continuation_horizon"])
+    repeats = int(config["b2"]["repeats_per_state_horizon"])
+    if sorted(horizons) != [1, 2, 4, 8, 15] or reference != 15:
+        raise ValueError("B2 analysis requires horizons [1,2,4,8,15] and reference h=15")
+
     grouped: Dict[str, Dict[int, List[float]]] = defaultdict(lambda: defaultdict(list))
     clearance_by_state: Dict[str, float] = {}
     for row in records:
         state_id = str(row["state_id"])
-        horizon = int(row["horizon"])
-        grouped[state_id][horizon].append(float(bool(row["success"])))
+        grouped[state_id][int(row["horizon"])].append(float(bool(row["success"])))
         value = float(row["clearance_m"])
         if state_id in clearance_by_state and abs(clearance_by_state[state_id] - value) > 1e-9:
             raise ValueError("Clearance changed across branches for state {}".format(state_id))
         clearance_by_state[state_id] = value
 
-    horizons = sorted({int(row["horizon"]) for row in records})
-    reference = 8
-    if reference not in horizons:
-        raise ValueError("B2 protocol requires h=8 continuation/reference")
-    state_ids = sorted(
-        state_id for state_id, values in grouped.items()
-        if reference in values and all(h in values for h in horizons)
-    )
-    if len(state_ids) < 3:
-        raise ValueError("Too few complete matched B2 states: {}".format(len(state_ids)))
+    state_ids = sorted(grouped)
+    for state_id in state_ids:
+        if set(grouped[state_id]) != set(horizons):
+            raise ValueError("State {} does not have all horizons".format(state_id))
+        if any(len(grouped[state_id][horizon]) != repeats for horizon in horizons):
+            raise ValueError("State {} does not have exactly {} repeats".format(state_id, repeats))
 
     x = np.asarray([clearance_by_state[state_id] for state_id in state_ids], dtype=np.float64)
-    state_means = {
-        state_id: {h: float(np.mean(grouped[state_id][h])) for h in horizons}
+    state_means: Dict[str, Dict[int, float]] = {
+        state_id: {
+            horizon: float(np.mean(grouped[state_id][horizon])) for horizon in horizons
+        }
         for state_id in state_ids
     }
-    output: Dict[str, Any] = {
-        "split": split,
+    delta = np.asarray([
+        0.5 * (state_means[state_id][1] + state_means[state_id][2])
+        - state_means[state_id][15]
+        for state_id in state_ids
+    ], dtype=np.float64)
+    c10 = float(np.quantile(x, 0.10))
+    c90 = float(np.quantile(x, 0.90))
+    primary = _bootstrap_slope_effect(x, delta, c10, c90, n_bootstrap, seed)
+    primary.update({
+        "delta_formula": "0.5 * (p_s(1) + p_s(2)) - p_s(15)",
+        "independent_unit": "state_id (not individual branch episodes)",
+        "bootstrap": "state-cluster bootstrap resampling whole state IDs",
         "n_states": len(state_ids),
-        "horizons": horizons,
-        "reference_horizon": reference,
-        "clearance_range_m": [float(np.min(x)), float(np.max(x))],
-        "per_horizon_success_rate": {},
-        "interaction_contrast_vs_h8": {},
-        "method": (
-            "For each state, average stochastic branch outcomes by horizon; regress "
-            "(p_success(h)-p_success(8)) on continuous signed clearance; obtain 95% "
-            "intervals by resampling whole states. This is a descriptive linear-probability "
-            "interaction contrast, not a threshold-selected oracle label."
-        ),
+        "n_branch_episodes": len(records),
+        "clearance_c10_m": c10,
+        "clearance_c90_m": c90,
+        "practical_effect_threshold": float(config["b2"]["practical_effect_threshold"]),
+        "practical_effect_met": bool(primary["E"] >= float(config["b2"]["practical_effect_threshold"])),
+    })
+
+    # Per-horizon rate and state-cluster CI.
+    per_horizon: Dict[str, Any] = {}
+    for horizon in horizons:
+        values = np.asarray([state_means[state_id][horizon] for state_id in state_ids])
+        ci = _bootstrap_mean_and_p(values, n_bootstrap, seed + horizon)
+        successes = int(round(float(values.sum() * repeats)))
+        per_horizon[str(horizon)] = {
+            "mean_state_success_probability": float(values.mean()),
+            "branch_successes": successes,
+            "branch_n": len(records) // len(horizons),
+            "state_cluster_bootstrap_ci95": [ci["ci95_low"], ci["ci95_high"]],
+        }
+
+    # Secondary h-vs-h15 differences and slopes, Holm over the four comparisons.
+    secondary: Dict[str, Any] = {}
+    raw_p = []
+    slope_raw_p = []
+    comparison_horizons = [h for h in (1, 2, 4, 8) if h in horizons]
+    for horizon in comparison_horizons:
+        diff = np.asarray([
+            state_means[state_id][horizon] - state_means[state_id][15]
+            for state_id in state_ids
+        ])
+        diff_stats = _bootstrap_mean_and_p(diff, n_bootstrap, seed + 100 * horizon)
+        slope_stats = _bootstrap_slope_effect(
+            x, diff, c10, c90, n_bootstrap, seed + 200 * horizon
+        )
+        raw_p.append(diff_stats["bootstrap_p"])
+        slope_raw_p.append(slope_stats["slope_bootstrap_p"])
+        secondary[str(horizon)] = {
+            "mean_success_difference_vs_h15": diff_stats["mean"],
+            "difference_ci95": [diff_stats["ci95_low"], diff_stats["ci95_high"]],
+            "difference_bootstrap_p": diff_stats["bootstrap_p"],
+            "clearance_slope_per_m": slope_stats["slope_per_m"],
+            "clearance_slope_per_mm": slope_stats["slope_per_mm"],
+            "clearance_slope_ci95": [slope_stats["slope_ci95_low"], slope_stats["slope_ci95_high"]],
+            "slope_bootstrap_p": slope_stats["slope_bootstrap_p"],
+            "E_h_vs_h15": slope_stats["E"],
+            "E_h_vs_h15_ci95": [slope_stats["E_ci95_low"], slope_stats["E_ci95_high"]],
+        }
+    holm_diff = _holm_adjust(raw_p)
+    holm_slope = _holm_adjust(slope_raw_p)
+    for horizon, adjusted_diff, adjusted_slope in zip(comparison_horizons, holm_diff, holm_slope):
+        secondary[str(horizon)]["difference_holm_adjusted_p"] = float(adjusted_diff)
+        secondary[str(horizon)]["slope_holm_adjusted_p"] = float(adjusted_slope)
+
+    categorical = _categorical_interaction(
+        x, state_means, state_ids, horizons, 15, n_bootstrap, seed + 300
+    )
+    bins = _clearance_bins(x, state_means, state_ids, horizons)
+
+    from scipy.stats import spearmanr
+
+    spearman_delta = spearmanr(x, delta)
+    robustness = {
+        "spearman_clearance_vs_delta": {
+            "rho": float(getattr(spearman_delta, "statistic", spearman_delta.correlation)),
+            "p_value": float(spearman_delta.pvalue),
+        },
+        "spearman_clearance_vs_horizon_success": {},
     }
     for horizon in horizons:
-        y_h = np.asarray([state_means[s][horizon] for s in state_ids], dtype=np.float64)
-        output["per_horizon_success_rate"][str(horizon)] = float(y_h.mean())
-        if horizon == reference:
-            continue
-        diff = np.asarray([state_means[s][horizon] - state_means[s][reference] for s in state_ids])
-        point, lo, hi = _cluster_bootstrap_slope_ci(x, diff, n_bootstrap, seed + horizon)
-        output["interaction_contrast_vs_h8"][str(horizon)] = {
-            "mean_success_difference": float(diff.mean()),
-            "clearance_slope_per_meter": point,
-            "clearance_slope_ci95_low": lo,
-            "clearance_slope_ci95_high": hi,
-            "n_states": len(state_ids),
+        values = np.asarray([state_means[state_id][horizon] for state_id in state_ids])
+        result = spearmanr(x, values)
+        robustness["spearman_clearance_vs_horizon_success"][str(horizon)] = {
+            "rho": float(getattr(result, "statistic", result.correlation)),
+            "p_value": float(result.pvalue),
         }
+
+    cost: Dict[str, Any] = {}
+    for horizon in horizons:
+        rows = [row for row in records if int(row["horizon"]) == horizon]
+        cost[str(horizon)] = {
+            "mean_policy_calls_after_branch": float(np.mean([row["policy_calls_after_branch"] for row in rows])),
+            "mean_wall_time_s": float(np.mean([row["wall_time_s"] for row in rows])),
+            "total_policy_calls": int(np.sum([row["policy_calls_after_branch"] for row in rows])),
+            "total_wall_time_s": float(np.sum([row["wall_time_s"] for row in rows])),
+        }
+
+    snapshot_summary = {
+        "all_passed": bool(validation.get("all_passed")),
+        "n_states": int(validation.get("n_states", len(states))),
+        "max_state_abs_error": max(
+            (float(item["state_max_abs"]) for item in validation.get("per_state", {}).values()),
+            default=float("nan"),
+        ),
+        "max_observation_mean_abs_error": max(
+            (float(item["observation_mean_abs_max"]) for item in validation.get("per_state", {}).values()),
+            default=float("nan"),
+        ),
+        "max_geometry_abs_error": max(
+            (float(item["geometry_abs_max"]) for item in validation.get("per_state", {}).values()),
+            default=float("nan"),
+        ),
+        "validation_file": validation_path.name,
+    }
+
+    if split == "discovery":
+        upper = primary["E_ci95_high"]
+        if not np.isfinite(upper):
+            decision = "BLOCKED_OR_UNINFORMATIVE"
+        elif upper < float(config["b2"]["practical_effect_threshold"]):
+            decision = "STOP_LACKING_PLAUSIBLE_PRACTICAL_EFFECT"
+        elif primary["E_ci95_low"] >= float(config["b2"]["practical_effect_threshold"]):
+            decision = "DISCOVERY_STRONG_SIGNAL_CONFIRMATION_JUSTIFIED"
+        else:
+            decision = "DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED"
+    else:
+        threshold = float(config["b2"]["practical_effect_threshold"])
+        if primary["E"] >= threshold and primary["E_ci95_low"] > 0.0:
+            decision = "CONFIRMATION_SUPPORTS_B2_MECHANISM"
+        elif primary["E_ci95_high"] < threshold:
+            decision = "CONFIRMATION_NO_PRACTICALLY_MEANINGFUL_EFFECT"
+        else:
+            decision = "CONFIRMATION_INCONCLUSIVE"
+
+    output: Dict[str, Any] = {
+        "split": split,
+        "marker": "B2",
+        "protocol_version": "B2_PROTOCOL_REVISION_20261116",
+        "records_file": records_path.name,
+        "state_manifest_file": state_path.name,
+        "run_manifest_file": "b2_{}_run.json".format(split) if run_manifest else None,
+        "n_states": len(state_ids),
+        "n_branch_episodes": len(records),
+        "horizons": horizons,
+        "reference_horizon": reference,
+        "repeats_per_state_horizon": repeats,
+        "bootstrap_samples_requested": int(n_bootstrap),
+        "statistical_unit": "state_id; repeats nested within state x horizon",
+        "clearance_range_m": [float(np.min(x)), float(np.max(x))],
+        "clearance_c10_m": c10,
+        "clearance_c90_m": c90,
+        "primary": primary,
+        "per_horizon": per_horizon,
+        "secondary_vs_h15": secondary,
+        "categorical_interaction": categorical,
+        "clearance_bins_descriptive": bins,
+        "robustness": robustness,
+        "cost": cost,
+        "snapshot_validation": snapshot_summary,
+        "integrity": {
+            "completeness_verified": True,
+            "split_isolation_verified": True,
+            "snapshot_hashes_verified": True,
+            "horizon_order_verified": True,
+            "common_repeat_seed_verified": True,
+        },
+        "decision": decision,
+        "interpretation_limits": [
+            "The independent unit is the matched physical state, not the 450 branch episodes.",
+            "Repeats are nested within state x horizon; bootstrap resamples whole state IDs.",
+            "Discovery and confirmation are analyzed independently and are never pooled.",
+            "A wide interval is inconclusive; non-significance is not proof of no effect.",
+            "B2 does not train CAC or establish a deployment-time visual clearance estimator.",
+        ],
+    }
     write_json(run_dir / "b2_{}_analysis.json".format(split), output)
     return output
+
+
+def write_b2_report(run_dir: Path, split: str, analysis: Mapping[str, Any]) -> Path:
+    run_dir = Path(run_dir)
+    primary = analysis["primary"]
+    lines = [
+        "# B2 {} report — matched-state CAC intervention".format(split.title()),
+        "",
+        "Protocol: `B2_PROTOCOL_REVISION_20261116` (B2 v1.1).",
+        "Marker: **B2** (not PREFLIGHT).",
+        "",
+        "## Integrity",
+        "",
+        "| Check | Result |",
+        "|---|---|",
+        "| States (`state_id` is the independent unit) | {} |".format(analysis["n_states"]),
+        "| Branch episodes | {} (30 x 5 x 3 required) |".format(analysis["n_branch_episodes"]),
+        "| Completeness / duplicate / mixed-split gate | passed |",
+        "| Snapshot validation (every selected state) | {} |".format(
+            "passed" if analysis["snapshot_validation"]["all_passed"] else "FAILED"
+        ),
+        "| Max snapshot state error | {:.3g} |".format(
+            analysis["snapshot_validation"]["max_state_abs_error"]
+        ),
+        "| Max observation MAE | {:.3g} |".format(
+            analysis["snapshot_validation"]["max_observation_mean_abs_error"]
+        ),
+        "| Max geometry error (m) | {:.3g} |".format(
+            analysis["snapshot_validation"]["max_geometry_abs_error"]
+        ),
+        "",
+        "## Per-horizon success",
+        "",
+        "| h | State-mean success probability | State-cluster 95% CI |",
+        "|---:|---:|---|",
+    ]
+    for horizon in analysis["horizons"]:
+        row = analysis["per_horizon"][str(horizon)]
+        lines.append("| {} | {:.3f} | [{:.3f}, {:.3f}] |".format(
+            horizon,
+            row["mean_state_success_probability"],
+            row["state_cluster_bootstrap_ci95"][0],
+            row["state_cluster_bootstrap_ci95"][1],
+        ))
+    lines += [
+        "",
+        "## Primary pre-registered contrast",
+        "",
+        "`p_s(h) = mean(success over 3 repeats)`; `Delta_s = 0.5*(p_s(1)+p_s(2)) - p_s(15)`.",
+        "",
+        "| Quantity | Estimate | 95% state-cluster bootstrap CI |",
+        "|---|---:|---|",
+        "| Slope per metre | {:.4f} | [{:.4f}, {:.4f}] |".format(
+            primary["slope_per_m"], primary["slope_ci95_low"], primary["slope_ci95_high"]
+        ),
+        "| Slope per millimetre | {:.6f} | — |".format(primary["slope_per_mm"]),
+        "| Predicted Delta at c10 | {:.4f} | — |".format(primary["predicted_delta_at_c10"]),
+        "| Predicted Delta at c90 | {:.4f} | — |".format(primary["predicted_delta_at_c90"]),
+        "| **E = pred(c10) - pred(c90)** | **{:.4f}** | **[{:.4f}, {:.4f}]** |".format(
+            primary["E"], primary["E_ci95_low"], primary["E_ci95_high"]
+        ),
+        "",
+        "Pre-registered practical threshold: E >= {:.2f}. Point estimate meets threshold: **{}**.".format(
+            primary["practical_effect_threshold"], primary["practical_effect_met"]
+        ),
+        "",
+        "Clearance c10/c90: {:.6f} / {:.6f} m.".format(
+            primary["clearance_c10_m"], primary["clearance_c90_m"]
+        ),
+        "",
+        "## Secondary h-vs-h15 comparisons",
+        "",
+        "| h | Mean success difference vs h=15 | 95% CI | Holm p (difference) | Clearance slope / m | 95% CI | Holm p (slope) |",
+        "|---:|---:|---|---:|---:|---|---:|",
+    ]
+    for horizon in [1, 2, 4, 8]:
+        row = analysis["secondary_vs_h15"].get(str(horizon))
+        if not row:
+            continue
+        lines.append(
+            "| {} | {:.3f} | [{:.3f}, {:.3f}] | {:.4g} | {:.4f} | [{:.4f}, {:.4f}] | {:.4g} |".format(
+                horizon,
+                row["mean_success_difference_vs_h15"],
+                row["difference_ci95"][0], row["difference_ci95"][1],
+                row["difference_holm_adjusted_p"],
+                row["clearance_slope_per_m"],
+                row["clearance_slope_ci95"][0], row["clearance_slope_ci95"][1],
+                row["slope_holm_adjusted_p"],
+            )
+        )
+    lines += [
+        "",
+        "## Categorical h x clearance interaction (secondary)",
+        "",
+        "Linear probability model over state-level `p_s(h)`, reference h=15, state-cluster bootstrap CIs.",
+        "",
+        "| Term | Coefficient | 95% CI |",
+        "|---|---:|---|",
+    ]
+    for name in analysis["categorical_interaction"]["names"]:
+        value = analysis["categorical_interaction"]["coefficients"][name]
+        ci = analysis["categorical_interaction"]["ci95"].get(name, {})
+        lines.append("| `{}` | {:.4f} | [{:.4f}, {:.4f}] |".format(
+            name, value, ci.get("low", float("nan")), ci.get("high", float("nan"))
+        ))
+    lines += [
+        "",
+        "## Cost",
+        "",
+        "| h | Mean policy calls after branch | Mean wall time (s) | Total calls |",
+        "|---:|---:|---:|---:|",
+    ]
+    for horizon in analysis["horizons"]:
+        row = analysis["cost"][str(horizon)]
+        lines.append("| {} | {:.2f} | {:.2f} | {} |".format(
+            horizon, row["mean_policy_calls_after_branch"], row["mean_wall_time_s"], row["total_policy_calls"]
+        ))
+    lines += [
+        "",
+        "## Descriptive clearance bins",
+        "",
+        "| Bin | Clearance range (m) | States | Delta mean |",
+        "|---:|---|---:|---:|",
+    ]
+    for row in analysis["clearance_bins_descriptive"]:
+        lines.append("| {} | [{:.6f}, {:.6f}] | {} | {:.3f} |".format(
+            row["bin"], row["clearance_low_m"], row["clearance_high_m"],
+            row["n_states"], row["delta_mean"],
+        ))
+    lines += [
+        "",
+        "## Decision",
+        "",
+        "**{}**".format(analysis["decision"]),
+        "",
+        "This is a protocol-level statistical decision for the {} split only. It is"
+        " not a claim that B2 has passed, and the other split is not pooled.".format(split),
+        "",
+        "## Interpretation limits",
+        "",
+    ]
+    lines.extend("- " + item for item in analysis["interpretation_limits"])
+    lines.append("")
+    path = run_dir / "b2_{}_report.md".format(split)
+    path.write_text("\n".join(lines), encoding="utf-8")
+    return path
 
 
 def write_markdown_summary(run_dir: Path) -> Path:
@@ -517,13 +1045,27 @@ def write_markdown_summary(run_dir: Path) -> Path:
         if path.exists():
             import json
             b2 = json.loads(path.read_text(encoding="utf-8"))
-            sections += ["## B2 {} matched-state branches".format(split.title()), "", "States: **{}**".format(b2["n_states"]), ""]
-            for h, row in b2["interaction_contrast_vs_h8"].items():
+            primary = b2["primary"]
+            sections += [
+                "## B2 {} matched-state branches".format(split.title()),
+                "",
+                "States: **{}**; branch episodes: **{}**.".format(
+                    b2["n_states"], b2["n_branch_episodes"]
+                ),
+                "",
+                "Primary E = pred(Delta|c10) - pred(Delta|c90): **{:.4f}** "
+                "[{:.4f}, {:.4f}] (threshold {:.2f}); decision: **{}**.".format(
+                    primary["E"], primary["E_ci95_low"], primary["E_ci95_high"],
+                    primary["practical_effect_threshold"], b2["decision"],
+                ),
+                "",
+            ]
+            for h, row in b2["per_horizon"].items():
                 sections.append(
-                    "- h={}: mean Δsuccess={:.3f}; clearance slope={:.4f} "
-                    "[{:.4f}, {:.4f}] per meter".format(
-                        h, row["mean_success_difference"], row["clearance_slope_per_meter"],
-                        row["clearance_slope_ci95_low"], row["clearance_slope_ci95_high"],
+                    "- h={}: state-mean success={:.3f} [{:.3f}, {:.3f}]".format(
+                        h, row["mean_state_success_probability"],
+                        row["state_cluster_bootstrap_ci95"][0],
+                        row["state_cluster_bootstrap_ci95"][1],
                     )
                 )
             sections.append("")

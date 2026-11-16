@@ -173,9 +173,9 @@ class EpisodeEnv:
     def current_sim_state(self) -> np.ndarray:
         return np.asarray(self.robomimic_env.get_state()["states"]).copy()
 
-    def snapshot(self) -> Dict[str, Any]:
+    def snapshot(self, metadata: Optional[Mapping[str, Any]] = None) -> Dict[str, Any]:
         from .snapshot import capture_episode_snapshot
-        return capture_episode_snapshot(self)
+        return capture_episode_snapshot(self, metadata=metadata)
 
     def restore(self, snapshot: Mapping[str, Any]) -> Dict[str, np.ndarray]:
         from .snapshot import restore_episode_snapshot

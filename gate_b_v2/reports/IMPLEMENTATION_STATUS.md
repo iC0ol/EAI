@@ -1,6 +1,6 @@
 # Gate B v2 code implementation status
 
-Updated: 2026-11-10 after workstation integration.
+Updated: 2026-11-16 after B2 v1.1 implementation and PREFLIGHT.
 
 ## Authoring baseline (unchanged facts)
 
@@ -51,9 +51,17 @@ below.
    df=4, p=6.78e-7. h=1 and h=2 are significantly below h=8 after Holm
    correction; h=15 is non-inferior and substantially cheaper. B1 does not
    prove CAC. See `reports/B1_FULL_REPORT.md`.
-4. **B2 remains blocked**: insertion-stage window is not frozen and no
-   snapshot/restore replay was run. No B2 state was collected and B2 was not
-   started.
+4. **B2 v1.1 implementation (2026-11-16)**: the frozen B2 protocol was
+   implemented on branch `codex/b2-protocol-20261116` at protocol commit
+   `4e7fcd5f856a8fae4d0d7844569c4c2c17a1c957`. Added independent B2 state
+   harvesting, live collision-geometry audit, geometry-derived stage gate,
+   strengthened snapshot/restore validation, h=15 continuation, deterministic
+   branch order with common policy-noise seeds, strict 30×5×3 completeness
+   checks, the state-level primary contrast with 5,000 state-cluster bootstrap,
+   and locked B2 CLI/config. The live geometry audit PASSed and the reserved
+   seed-299999 snapshot/replay PREFLIGHT PASSed. No formal discovery or
+   confirmation state was collected and no B2 branch episode was run. Full
+   evidence is in `reports/B2_IMPLEMENTATION_ACCEPTANCE_REPORT.md`.
 
 ## Interpretation limits
 

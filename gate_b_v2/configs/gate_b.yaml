@@ -10,6 +10,9 @@ paths:
   # Evaluation needs only the dataset's env_args metadata, not the images.
   # The official low-dim MH HDF5 carries the same Square/Panda/OSC metadata.
   dataset: assets/square_mh/low_dim.hdf5
+  # B2 reads the accepted B1 Full manifest from disk and verifies every locked
+  # fingerprint.  No abbreviated hash from prose is used.
+  b1_full_manifest: reports/b1_full_run.json
   output_root: runs
 
 evaluation:
@@ -44,21 +47,39 @@ evaluation:
   bootstrap_samples: 5000
 
 b2:
-  enabled: true
-  continuation_horizon: 8
+  # Frozen B2 v1.1 amendment: research_spatial_action_round4_20261109/
+  # reports/B2_PROTOCOL_REVISION_20261116.md.  The stage gate is derived from
+  # live collision geometry; there are deliberately no numeric z/xy bounds.
+  protocol_version: B2_PROTOCOL_REVISION_20261116
+  stage_gate_version: B2_GEOMETRY_GATE_V1_20261116
+  source_horizon: 8
+  continuation_horizon: 15
+  horizons: [1, 2, 4, 8, 15]
   repeats_per_state_horizon: 3
-  min_discovery_states: 30
-  min_confirmation_states: 30
-  # Deliberately not frozen: the written protocol requires the insertion-stage
-  # window to be fixed before inspecting outcomes. DeepSeek must not invent it.
-  stage_gate:
-    frozen: false
-    z_gap_min_m: null
-    z_gap_max_m: null
-    max_xy_center_distance_m: null
+  selected_states: 30
+  discovery:
+    primary_seed_start: 300000
+    primary_seed_count: 100
+    extension_seed_start: 300100
+    extension_seed_count: 100
+    selection_seed: 20261116
+  confirmation:
+    primary_seed_start: 310000
+    primary_seed_count: 100
+    extension_seed_start: 310100
+    extension_seed_count: 100
+    selection_seed: 20261117
+  source_policy_seed_offset: 900000
+  branch_order_seed_base: 20261118
+  branch_order_seed_stride: 5
+  repeat_seed_base: 1000000
+  repeat_seed_stride: 17
+  bootstrap_samples: 5000
+  practical_effect_threshold: 0.08
   snapshot_validation:
     state_atol: 1.0e-7
     observation_mean_abs_tol: 1.0e-3
+    geometry_atol: 1.0e-6
 
 runtime:
   capture_video: true

@@ -8,8 +8,11 @@ from typing import Any, Dict, Optional
 
 import yaml
 
-from .analysis import analyze_b1, analyze_b2_split, write_markdown_summary
+from .analysis import analyze_b1, analyze_b2_split, write_b2_report, write_markdown_summary
 from .core import utc_run_id, write_json
+from .geometry import run_live_geometry_audit
+from .harvest import harvest_split, run_preflight_smoke, run_source_episode
+from .locks import load_b1_full_manifest, validate_b2_config
 from .runner import GateBExperiment, _resolve_runtime_paths
 
 
@@ -146,12 +149,107 @@ def _cmd_b1(args: argparse.Namespace) -> int:
     return 0
 
 
+def _build_b2_experiment(args: argparse.Namespace, require_existing: bool) -> GateBExperiment:
+    """Build the B2 experiment from the fixed config only.
+
+    B2 deliberately exposes no checkpoint/dataset/DP-root/max-steps/device or
+    config override.  The only user-supplied path is the run directory.
+    """
+    config = _load_config(None)
+    validate_b2_config(config)
+    locked_args = argparse.Namespace(
+        dp_root=None,
+        checkpoint=None,
+        dataset=None,
+        max_steps=None,
+        run_dir=args.run_dir,
+    )
+    return _build_experiment(locked_args, config, require_existing=require_existing)
+
+
+def _cmd_b2_geometry_audit(args: argparse.Namespace) -> int:
+    experiment = _build_b2_experiment(args, require_existing=False)
+    try:
+        experiment.env.reset(299999)
+        output = Path(args.output).expanduser() if args.output else (
+            experiment.run_dir / "b2_geometry_audit.json"
+        )
+        if not output.is_absolute():
+            output = (experiment.run_dir / output).resolve()
+        audit = run_live_geometry_audit(experiment.env.robosuite_env, output)
+        print("Geometry audit written to {}".format(output))
+        print(json.dumps({"status": audit["status"], "reason": audit.get("reason")}, indent=2))
+        return 0 if audit["status"] == "PASS" else 2
+    finally:
+        experiment.close()
+
+
+def _cmd_b2_harvest(args: argparse.Namespace) -> int:
+    experiment = _build_b2_experiment(args, require_existing=False)
+    try:
+        path = harvest_split(experiment, args.split)
+        print("B2 {} state manifest written to {}".format(args.split, path))
+    finally:
+        experiment.close()
+    return 0
+
+
 def _cmd_b2(args: argparse.Namespace) -> int:
-    config = _load_config(args.config)
-    experiment = _build_experiment(args, config, require_existing=True)
+    experiment = _build_b2_experiment(args, require_existing=True)
     try:
         path = experiment.run_b2(args.split)
-        print("B2 episodes written to {}".format(path))
+        print("B2 {} branch episodes written to {}".format(args.split, path))
+    finally:
+        experiment.close()
+    return 0
+
+
+def _cmd_b2_preflight(args: argparse.Namespace) -> int:
+    experiment = _build_b2_experiment(args, require_existing=False)
+    try:
+        preflight_dir = experiment.run_dir
+        audit_path = preflight_dir / "b2_geometry_audit.json"
+        experiment.env.reset(int(args.seed))
+        audit = run_live_geometry_audit(experiment.env.robosuite_env, audit_path)
+
+        experiment.env.reset(int(args.seed))
+        snapshot_dir = preflight_dir / "snapshots" / "preflight"
+        record = run_source_episode(
+            experiment,
+            "preflight",
+            int(args.seed),
+            snapshot_dir,
+            preflight=True,
+            fallback_step=int(args.fallback_step),
+        )
+        if record is None:
+            raise RuntimeError("PREFLIGHT snapshot capture failed for seed {}".format(args.seed))
+        validation_path = experiment._validate_all_b2_snapshots([record], "preflight")
+        validation = json.loads(validation_path.read_text(encoding="utf-8"))
+        smoke_records = None
+        if args.smoke_seeds:
+            smoke_seeds = [int(item.strip()) for item in args.smoke_seeds.split(",") if item.strip()]
+            smoke_records = run_preflight_smoke(
+                experiment, preflight_dir / "state_smoke", smoke_seeds
+            )
+        summary = {
+            "marker": "PREFLIGHT",
+            "scientific_data": False,
+            "seed": int(args.seed),
+            "geometry_audit": audit_path.name,
+            "geometry_status": audit["status"],
+            "snapshot_file": record["snapshot_file"],
+            "snapshot_sha256": record["snapshot_sha256"],
+            "gate_reached": bool(not record.get("preflight_fallback", False)),
+            "snapshot_validation": validation_path.name,
+            "snapshot_validation_all_passed": bool(validation["all_passed"]),
+            "state_smoke_records": str(smoke_records) if smoke_records is not None else None,
+            "note": "Throwaway preflight; excluded from B2 formal discovery/confirmation data.",
+        }
+        write_json(preflight_dir / "b2_preflight_summary.json", summary)
+        print(json.dumps(summary, indent=2))
+        if audit["status"] != "PASS" or not validation["all_passed"]:
+            return 2
     finally:
         experiment.close()
     return 0
@@ -216,9 +314,11 @@ def _cmd_analyze(args: argparse.Namespace) -> int:
         )
     for split in ("discovery", "confirmation"):
         if (run_dir / "b2_{}_episodes.jsonl".format(split)).is_file():
-            results["b2_{}".format(split)] = analyze_b2_split(
-                run_dir, split, n_bootstrap=n_bootstrap, seed=seed
+            analysis = analyze_b2_split(
+                run_dir, split, n_bootstrap=n_bootstrap, seed=seed, config=config
             )
+            write_b2_report(run_dir, split, analysis)
+            results["b2_{}".format(split)] = analysis
     summary = write_markdown_summary(run_dir)
     print("Analysis complete: {}".format(summary))
     print(json.dumps({key: value.get("n_initial_states", value.get("n_states")) for key, value in results.items()}, indent=2))
@@ -253,9 +353,41 @@ def build_parser() -> argparse.ArgumentParser:
     b1.add_argument("--run-dir", default=None, help="Existing or new run directory")
     b1.set_defaults(func=_cmd_b1)
 
-    b2 = subparsers.add_parser("b2", help="Run matched-state B2 branches from a B1 run directory")
-    _add_runtime_args(b2)
+    b2_geometry = subparsers.add_parser(
+        "b2-geometry-audit",
+        help="Run the live MuJoCo collision-geometry audit (PREFLIGHT only)",
+    )
+    b2_geometry.add_argument("--run-dir", default=None, help="Run directory for audit output")
+    b2_geometry.add_argument("--output", default=None, help="Audit JSON path (default: run dir)")
+    b2_geometry.set_defaults(func=_cmd_b2_geometry_audit)
+
+    b2_harvest = subparsers.add_parser(
+        "b2-harvest",
+        help="Harvest and deterministically select 30 B2 states for one split",
+    )
+    b2_harvest.add_argument("--split", choices=["discovery", "confirmation"], required=True)
+    b2_harvest.add_argument("--run-dir", default=None, help="Run directory (new for each split)")
+    b2_harvest.set_defaults(func=_cmd_b2_harvest)
+
+    b2_preflight = subparsers.add_parser(
+        "b2-preflight",
+        help="Reserved-seed snapshot/restore and geometry PREFLIGHT; never scientific data",
+    )
+    b2_preflight.add_argument("--run-dir", default=None, help="Preflight run directory")
+    b2_preflight.add_argument("--seed", type=int, default=299999,
+                              help="Reserved preflight seed (default 299999)")
+    b2_preflight.add_argument("--fallback-step", type=int, default=500,
+                              help="Capture a preflight snapshot at this step if the gate is not reached")
+    b2_preflight.add_argument("--smoke-seeds", default=None,
+                              help="Optional comma-separated non-formal seeds for a throwaway state smoke test")
+    b2_preflight.set_defaults(func=_cmd_b2_preflight)
+
+    b2 = subparsers.add_parser(
+        "b2",
+        help="Run the locked B2 matched-state branch experiment for one split",
+    )
     b2.add_argument("--split", choices=["discovery", "confirmation"], required=True)
+    b2.add_argument("--run-dir", default=None, help="Existing B2 run directory")
     b2.set_defaults(func=_cmd_b2)
 
     analyze = subparsers.add_parser("analyze", help="Analyze saved B1/B2 JSONL results")
