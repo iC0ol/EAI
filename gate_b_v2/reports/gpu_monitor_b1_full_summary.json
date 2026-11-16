@@ -1,0 +1,23 @@
+{
+  "run_start_epoch": 1794542503,
+  "run_end_epoch": 1794657329,
+  "run_duration_h": 31.896,
+  "samples": 11451,
+  "gpu_util_max": 91.0,
+  "gpu_util_mean": 65.49,
+  "gpu_mem_max_MiB": 3550.0,
+  "gpu_mem_mean_MiB": 3548.5,
+  "gpu_temp_max_C": 86.0,
+  "gpu_temp_mean_C": 82.01,
+  "gpu_power_max_W": 326.77,
+  "gpu_power_mean_W": 281.5,
+  "gpu_sm_clock_max_MHz": 1935.0,
+  "gpu_sm_clock_mean_MHz": 1799.6,
+  "throttle_bits": {
+    "0x0000000000000001": 1,
+    "0x0000000000000000": 857,
+    "0x0000000000000004": 3499,
+    "0x0000000000000020": 6058,
+    "0x0000000000000024": 1036
+  }
+}

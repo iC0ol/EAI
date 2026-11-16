@@ -1,0 +1,20 @@
+{
+  "cuda_available": false,
+  "diffusers": "0.11.1",
+  "dill": "0.3.5.1",
+  "gym": "0.21.0",
+  "h5py": "3.7.0",
+  "hydra": "1.2.0",
+  "mujoco_py": "2.0.2.13",
+  "numba": "0.56.4",
+  "numpy": "1.23.3",
+  "omegaconf": "2.3.1",
+  "platform": "Linux-6.8.0-60-generic-x86_64-with-glibc2.35",
+  "python": "3.9.13",
+  "robomimic": "0.2.0",
+  "robosuite": "1.2.0",
+  "scipy": "1.9.1",
+  "torch": "1.12.1+cu116",
+  "torch_cuda": "11.6",
+  "torchvision": "0.13.1+cu116"
+}

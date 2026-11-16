@@ -1,0 +1,42 @@
+{
+  "1": {
+    "successes": 66,
+    "episodes": 100,
+    "total_calls": 50000,
+    "total_wall_s": 50080.82584005009,
+    "calls_per_success": 757.5757575757576,
+    "wall_per_success_s": 758.8003915159105
+  },
+  "2": {
+    "successes": 72,
+    "episodes": 100,
+    "total_calls": 25000,
+    "total_wall_s": 27847.435697746143,
+    "calls_per_success": 347.22222222222223,
+    "wall_per_success_s": 386.7699402464742
+  },
+  "4": {
+    "successes": 81,
+    "episodes": 100,
+    "total_calls": 12500,
+    "total_wall_s": 16737.865843542328,
+    "calls_per_success": 154.320987654321,
+    "wall_per_success_s": 206.6403190560781
+  },
+  "8": {
+    "successes": 87,
+    "episodes": 100,
+    "total_calls": 6300,
+    "total_wall_s": 11292.776200425084,
+    "calls_per_success": 72.41379310344827,
+    "wall_per_success_s": 129.80202529224235
+  },
+  "15": {
+    "successes": 93,
+    "episodes": 100,
+    "total_calls": 3400,
+    "total_wall_s": 8792.211791940965,
+    "calls_per_success": 36.55913978494624,
+    "wall_per_success_s": 94.5399117413007
+  }
+}

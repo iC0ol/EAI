@@ -1,0 +1,67 @@
+project:
+  name: gate_b_v2_square_mh
+  seed: 20261110
+
+paths:
+  # Override with CLI flags if the workstation uses another layout.
+  # All local assets live inside gate_b_v2/ and are excluded from Git.
+  dp_root: third_party/diffusion_policy
+  checkpoint: assets/square_mh/epoch=1950-test_mean_score=1.000.ckpt
+  # Evaluation needs only the dataset's env_args metadata, not the images.
+  # The official low-dim MH HDF5 carries the same Square/Panda/OSC metadata.
+  dataset: assets/square_mh/low_dim.hdf5
+  output_root: runs
+
+evaluation:
+  device: cuda:0
+  expected_task_name: square
+  expected_dataset_type: mh
+  expected_prediction_horizon: 16
+  smoke_horizon: 8
+  smoke_episodes: 10
+  smoke_video_episodes: 2
+  max_steps: null # null = read the official checkpoint runner config; expected 500 for MH
+  # B0 uses its own historical seed range; B1 must never reuse these states.
+  seed_start: 100000
+  b0_baseline_episodes: 100
+  # B1 Pilot and B1 Full use disjoint initial states. Full never reuses a
+  # Pilot state; the runner validates the complete intervals before starting.
+  b1_pilot_seed_start: 200000
+  b1_full_seed_start: 200020
+  b1_pilot_episodes: 20
+  b1_full_episodes: 100
+  # H (prediction horizon) is fixed at 16 by the checkpoint. h is the
+  # execution horizon; H - (To - 1) = 15 is the largest legal value.
+  horizons: [1, 2, 4, 8, 15]
+  b1_reference_horizon: 8
+  # Pre-registered B1 analysis settings (no Pilot-based threshold tuning).
+  b1_alpha: 0.05
+  b1_practical_diff: 0.08
+  b1_ceiling_threshold: 0.95
+  b1_floor_threshold: 0.05
+  policy_seed_offset: 700000
+  success_threshold: 0.99
+  bootstrap_samples: 5000
+
+b2:
+  enabled: true
+  continuation_horizon: 8
+  repeats_per_state_horizon: 3
+  min_discovery_states: 30
+  min_confirmation_states: 30
+  # Deliberately not frozen: the written protocol requires the insertion-stage
+  # window to be fixed before inspecting outcomes. DeepSeek must not invent it.
+  stage_gate:
+    frozen: false
+    z_gap_min_m: null
+    z_gap_max_m: null
+    max_xy_center_distance_m: null
+  snapshot_validation:
+    state_atol: 1.0e-7
+    observation_mean_abs_tol: 1.0e-3
+
+runtime:
+  capture_video: true
+  video_fps: 10
+  video_frame_stride: 2
+  image_keys: [agentview_image, robot0_eye_in_hand_image]

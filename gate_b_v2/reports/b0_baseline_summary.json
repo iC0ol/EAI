@@ -1,0 +1,8 @@
+{
+  "mean_policy_calls": 63.0,
+  "mean_steps": 500.0,
+  "mean_wall_time_s": 112.7079132933698,
+  "n": 100,
+  "success_rate": 0.84,
+  "successes": 84
+}

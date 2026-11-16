@@ -1,0 +1,12 @@
+{
+  "samples": 1143,
+  "gpu_util_max_percent": 90.0,
+  "gpu_util_mean_percent": 42.28,
+  "gpu_memory_max_MiB": 3570.0,
+  "gpu_memory_mean_MiB": 3523.4,
+  "gpu_temp_max_C": 82.0,
+  "gpu_temp_mean_C": 76.6,
+  "ram_used_max_MB": 12862.0,
+  "ram_available_min_MB": 18566.0,
+  "disk_available_last": "151G"
+}

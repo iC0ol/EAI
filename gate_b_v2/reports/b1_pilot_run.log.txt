@@ -1,0 +1,17 @@
+/home/asus/EAI/gate_b_v2/.venv/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and will be removed in 0.15, please use 'weights' instead.
+  warnings.warn(
+/home/asus/EAI/gate_b_v2/.venv/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and will be removed in 0.15. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs modality: low_dim with keys: ['robot0_eef_quat', 'robot0_gripper_qpos', 'robot0_eef_pos']
+using obs modality: rgb with keys: ['robot0_eye_in_hand_image', 'agentview_image']
+using obs modality: depth with keys: []
+using obs modality: scan with keys: []
+Diffusion params: 2.556120e+08
+Vision params: 2.239418e+07
+Created environment with name NutAssemblySquare
+Action size is 7
+B1 episodes written to /home/asus/EAI/gate_b_v2/runs/gateb_20261112T040110Z/b1_pilot_episodes.jsonl
+Run directory: /home/asus/EAI/gate_b_v2/runs/gateb_20261112T040110Z

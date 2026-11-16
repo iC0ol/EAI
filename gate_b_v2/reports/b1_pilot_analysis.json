@@ -1,0 +1,147 @@
+{
+  "alpha": 0.05,
+  "bootstrap_method": "paired cluster bootstrap resampling initial-state seeds",
+  "ceiling_effect": false,
+  "completeness_verified": true,
+  "episodes": 20,
+  "floor_effect": false,
+  "horizons": [
+    1,
+    2,
+    4,
+    8,
+    15
+  ],
+  "j1_practical_signal": true,
+  "manifest_file": "b1_pilot_run.json",
+  "max_abs_pairwise_rate_difference": 0.20000000000000007,
+  "mean_policy_calls": {
+    "1": 500.0,
+    "15": 34.0,
+    "2": 250.0,
+    "4": 125.0,
+    "8": 63.0
+  },
+  "mean_wall_time_s": {
+    "1": 501.3569108233467,
+    "15": 87.88279948324998,
+    "2": 279.18587211119956,
+    "4": 167.4077639281997,
+    "8": 112.73721449444929
+  },
+  "multiple_comparison": "Holm step-down over comparisons against h=8",
+  "n_initial_states": 20,
+  "overall_cochran_q": {
+    "df": 4,
+    "p_value": 0.15859761982533205,
+    "q": 6.6
+  },
+  "paired_risk_difference_vs_h8": {
+    "1": {
+      "ci95_high": 0.0,
+      "ci95_low": -0.3,
+      "ci_excludes_zero": false,
+      "discordant_higher": 0,
+      "discordant_lower": 3,
+      "holm_adjusted_p": 0.75,
+      "mcnemar_exact_p": 0.25,
+      "n_pairs": 20,
+      "practically_significant": true,
+      "risk_difference": -0.15
+    },
+    "15": {
+      "ci95_high": 0.2,
+      "ci95_low": -0.2,
+      "ci_excludes_zero": false,
+      "discordant_higher": 2,
+      "discordant_lower": 2,
+      "holm_adjusted_p": 1.0,
+      "mcnemar_exact_p": 1.0,
+      "n_pairs": 20,
+      "practically_significant": false,
+      "risk_difference": 0.0
+    },
+    "2": {
+      "ci95_high": -0.05,
+      "ci95_low": -0.4,
+      "ci_excludes_zero": true,
+      "discordant_higher": 0,
+      "discordant_lower": 4,
+      "holm_adjusted_p": 0.5,
+      "mcnemar_exact_p": 0.125,
+      "n_pairs": 20,
+      "practically_significant": true,
+      "risk_difference": -0.2
+    },
+    "4": {
+      "ci95_high": 0.1,
+      "ci95_low": -0.25,
+      "ci_excludes_zero": false,
+      "discordant_higher": 1,
+      "discordant_lower": 2,
+      "holm_adjusted_p": 1.0,
+      "mcnemar_exact_p": 1.0,
+      "n_pairs": 20,
+      "practically_significant": false,
+      "risk_difference": -0.05
+    }
+  },
+  "phase": "pilot",
+  "practical_diff": 0.08,
+  "records_file": "b1_pilot_episodes.jsonl",
+  "reference_horizon": 8,
+  "seed_end": 200019,
+  "seed_start": 200000,
+  "statistical_unit": "initial-state seed; five horizons are paired conditions",
+  "success_rate": {
+    "1": {
+      "n": 20,
+      "rate": 0.75,
+      "successes": 15,
+      "wilson_95ci_high": 0.8881382985923343,
+      "wilson_95ci_low": 0.531299122381256
+    },
+    "15": {
+      "n": 20,
+      "rate": 0.9,
+      "successes": 18,
+      "wilson_95ci_high": 0.9721335187862319,
+      "wilson_95ci_low": 0.6989663547715128
+    },
+    "2": {
+      "n": 20,
+      "rate": 0.7,
+      "successes": 14,
+      "wilson_95ci_high": 0.8545227551323956,
+      "wilson_95ci_low": 0.4810271816464765
+    },
+    "4": {
+      "n": 20,
+      "rate": 0.85,
+      "successes": 17,
+      "wilson_95ci_high": 0.9476312541037835,
+      "wilson_95ci_low": 0.6395811352592431
+    },
+    "8": {
+      "n": 20,
+      "rate": 0.9,
+      "successes": 18,
+      "wilson_95ci_high": 0.9721335187862319,
+      "wilson_95ci_low": 0.6989663547715128
+    }
+  },
+  "total_policy_calls": {
+    "1": 10000,
+    "15": 680,
+    "2": 5000,
+    "4": 2500,
+    "8": 1260
+  },
+  "total_wall_time_s": {
+    "1": 10027.138216466934,
+    "15": 1757.6559896649997,
+    "2": 5583.717442223991,
+    "4": 3348.155278563994,
+    "8": 2254.744289888986
+  }
+}
