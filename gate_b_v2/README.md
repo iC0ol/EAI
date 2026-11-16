@@ -22,5 +22,7 @@ analysis completeness gate. B1 is also locked to the B0-verified checkpoint/data
 SHA256, max_steps=500, H=16/To=2, RTX 3090, torch/CUDA versions, `cuda:0` and policy offset; the
 B1 CLI accepts only `--b1-phase` and `--run-dir`. B1 cannot collect B2 states; B2 refuses to
 collect states until its insertion-stage window is researcher-frozen. B0 is complete at 84/100 on
-the RTX 3090 (`reports/B0_REPORT.md`). B1 has **not** been run and awaits explicit authorization;
-see `reports/B1_FINAL_READINESS_REPORT.md`.
+the RTX 3090 (`reports/B0_REPORT.md`). B1 Pilot (100 episodes) and B1 Full (500 episodes) are
+complete: Full succeeded 399/500; h=1 and h=2 are significantly below h=8 after Holm correction,
+while h=15 is non-inferior and uses about half the policy calls. B2 has **not** been run and no B2
+state was collected; see `reports/B1_FULL_REPORT.md`.

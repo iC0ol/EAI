@@ -45,18 +45,15 @@ below.
 2. **Formal B0 completed**: 84/100 (0.84) on seeds 100000–100099, h=8, 500
    steps, device cuda:0. Wilson 95 % CI 0.7558–0.8990. No episode was skipped
    or replaced; 16 real failures are retained. See `reports/B0_REPORT.md`.
-3. **B1 protocol amended, not started**: h list is now `{1,2,4,8,15}`
-   (h=16 still rejected). Pilot uses seeds 200000–200019 (20 states) and Full
-   uses 200020–200119 (100 new states), 120 disjoint initial states; records,
-   manifests and analyses are separate; formal counts are locked at 20×5 and
-   100×5 with a strict completeness gate; B1 cannot collect B2 states. The
-   runtime is locked to the B0 checkpoint/dataset/DP-tree SHA256,
-   `max_steps=500`, H=16/To=2, RTX 3090, torch/CUDA versions, `cuda:0` and
-   policy offset 700000; B1 accepts only `--b1-phase`/`--run-dir`. B1 awaits
-   independent acceptance and explicit authorization; no B1 episode has been
-   run. See `reports/B1_FINAL_READINESS_REPORT.md`.
+3. **B1 completed**: Pilot 100/100 episodes (82 success) and Full 500/500
+   episodes (399 success) ran under the locked environment. Full results:
+   h=1 0.66, h=2 0.72, h=4 0.81, h=8 0.87, h=15 0.93; Cochran Q=34.2,
+   df=4, p=6.78e-7. h=1 and h=2 are significantly below h=8 after Holm
+   correction; h=15 is non-inferior and substantially cheaper. B1 does not
+   prove CAC. See `reports/B1_FULL_REPORT.md`.
 4. **B2 remains blocked**: insertion-stage window is not frozen and no
-   snapshot/restore replay was run. No B2 state was collected.
+   snapshot/restore replay was run. No B2 state was collected and B2 was not
+   started.
 
 ## Interpretation limits
 

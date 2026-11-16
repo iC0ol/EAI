@@ -102,8 +102,8 @@ at decision step t:
 ## 9. 实验进度与待授权实验
 
 - **B0：已完成**（种子 100000–100099，h=8，500 steps）：84/100 = 0.84，Wilson 95% CI 0.7558–0.8990。
-- **B1：未执行。** 协议已修订为 `h ∈ {1,2,4,8,15}`；Pilot 使用 200000–200019（20 状态），Full 使用 200020–200119（100 个全新状态），共 120 个互不重叠的初始状态；Pilot/Full 记录、Manifest 和分析分离；统计方案已预注册。须等待独立审查和明确授权后才启动。
-- **B2：未执行。** 插入阶段窗口未冻结，snapshot/restore 未验证；未收集 B2 状态。
+- **B1：已完成。** Pilot（200000–200019，20 状态）100/100，82 成功；Full（200020–200119，100 状态）500/500，399 成功。Full 各 h 成功率：1=0.66、2=0.72、4=0.81、8=0.87、15=0.93；Cochran Q=34.2，df=4，p=6.78×10⁻⁷；h=1/h=2 经 Holm 校正后显著低于 h=8，h=15 与 h=8 无显著差异但 policy calls 约减半。B1 只证明全局 horizon 效应，不证明 CAC 有效。详见 `gate_b_v2/reports/B1_FULL_REPORT.md`。
+- **B2：未执行。** 插入阶段窗口未冻结，snapshot/restore 未验证；未收集 B2 状态。B1 Full 的结论是 CONDITIONAL GO：若继续 B2，必须把 h=15 作为强固定基线，并在冻结窗口和完成 snapshot/restore 验证后检验 horizon × clearance 交互。
 - 只有 checkpoint 不兼容/分布明显不符时才按官方配置重训。**不训练 CAC 方法。**
 
 ## 10. 一句话
@@ -132,3 +132,12 @@ at decision step t:
 - **B1/B2 阶段隔离**：B1 CLI 和 `run_b1()` 不再提供 B2 状态收集；B2 独立实现保留但未启动。
 - **B0 历史数据未改动**：12/12 证据文件与 commit `09e9ca6` 字节一致；本修订只新增说明和代码/配置/测试。
 - 详见 `gate_b_v2/reports/B1_SECOND_REVISION_REPORT.md` 与 `gate_b_v2/reports/B1_PROTOCOL_AMENDMENT.md`。
+
+## 13. 2026-11-16 B1 Full 完成
+
+- **实验**：B1 Full，100 个初始状态（种子 200020–200119）× 5 horizons = 500 episodes；h∈{1,2,4,8,15}，Max Steps 500，RTX 3090。
+- **数据完整性**：500/500 完成；seed、horizon、初态 Hash、环境指纹和 policy seed 全部通过；101 个任务失败全部保留；无 `success_error`、NaN/Inf、CUDA/OOM。
+- **成功率**：h=1 0.66（Wilson 0.563–0.745）、h=2 0.72（0.625–0.799）、h=4 0.81（0.722–0.875）、h=8 0.87（0.790–0.922）、h=15 0.93（0.863–0.966）。
+- **统计**：Cochran Q=34.2，df=4，p=6.78×10⁻⁷；相对 h=8，h=1 风险差 −0.21（Holm p=0.0013）、h=2 −0.15（Holm p=0.0244）显著；h=4 −0.06、h=15 +0.06 不显著。h=15 与 h=8 成功率无显著差异，但 policy calls 34 vs 63、wall time 87.9 vs 112.9 s。
+- **研究判断**：B1 证明全局 execution-horizon 效应存在，短 horizon（1/2）显著降低成功率；h=15 是非劣且更高效的固定基线。B1 不检验状态相关的 horizon × clearance 交互，不能证明 CAC 有效。下一阶段为 **CONDITIONAL GO**：仅以 h=15 为强基线、在冻结插入窗口并完成 snapshot/restore 验证后，才值得推进 B2。
+- **状态**：B2 未执行，未收集任何 B2 状态，未训练 CAC。详见 `gate_b_v2/reports/B1_FULL_REPORT.md`。
