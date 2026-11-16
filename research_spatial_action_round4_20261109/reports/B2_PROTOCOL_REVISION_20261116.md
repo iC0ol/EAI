@@ -149,6 +149,11 @@ These ranges are disjoint from B0 (100000–100099), B1 Pilot (200000–200019),
 
 For each split:
 
+- Source environment reset seed is the source seed itself.
+- Source policy sampling seed is `900000 + source_seed`.
+- Discovery candidate-selection seed is `20261116`; confirmation candidate-selection seed is `20261117`.
+- These seeds are fixed protocol constants; do not draw them from wall-clock time or an unrecorded RNG.
+
 1. Process the full primary 100-seed block.
 2. If at least 30 eligible candidate states exist, select exactly 30 by a deterministic, split-specific pseudorandom sample from eligible states. Save the selection seed and the complete candidate list.
 3. If fewer than 30 eligible states exist, process the pre-registered 100-seed extension block. If the combined pool still has fewer than 30, mark that split BLOCKED for insufficient stage coverage. Do not widen or retune the stage gate.
@@ -208,8 +213,8 @@ For each of the 30 selected states in each split:
 
 ### 6.1 Randomization and common random numbers
 
-- Randomize horizon execution order within each state × repeat using a deterministic, recorded permutation seed. Do not always run h=1,2,4,8,15 in the same order; this reduces horizon confounding with GPU thermal drift and wall-clock order.
-- For a given state and repeat index, use the same policy-noise seed schedule across all five horizons (common random numbers at matching policy-call indices). Subsequent trajectories are expected to diverge; do not claim identical full-trajectory randomness.
+- Randomize horizon execution order within each state × repeat using `branch_order_seed = 20261118 + source_seed * 5 + repeat_index` and `numpy.random.default_rng(branch_order_seed).permutation([1,2,4,8,15])`. Record the seed and realized order. Do not always run h=1,2,4,8,15 in the same order; this reduces horizon confounding with GPU thermal drift and wall-clock order.
+- For a given state and repeat index, use `repeat_seed = 1000000 + source_seed * 17 + repeat_index` as the common policy-noise seed schedule across all five horizons (matching policy-call indices). Subsequent trajectories are expected to diverge; do not claim identical full-trajectory randomness.
 - Every branch must restore the same snapshot and reset the policy before execution.
 - Record branch order, repeat seed, policy-noise seed schedule, and environment fingerprints.
 
