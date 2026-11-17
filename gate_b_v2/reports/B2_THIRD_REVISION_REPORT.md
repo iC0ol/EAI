@@ -30,7 +30,7 @@ Schema 1 和 2 继续由旧版接口恢复。正式 B2 要求 schema 3 的源参
 
 `gate_b_v2_source.tar.xz` 的 SHA256 为 `909086eedbdc9f71ca0e6bf232ae00d8011d8c0f1dff882eb0b41d566e9f1f0e`。README 和 GitHub Actions 固定同一校验值。CI 另外比对解包后的源码、测试、配置、脚本、工具和 PREFLIGHT JSON 与检出版本。 [源码归档](../../gate_b_v2_source.tar.xz)
 
-GitHub CI 等待本次源码归档和验收证据提交的运行结果。
+GitHub Actions 在源码归档和验收证据提交 `86e7587ad578fb91cc3f3e3720b429398aa9571f` 上通过。Push 和 PR 两次运行的 `current-harness-tests` 与 `source-archive-audit` 均为 **success**。 [Push 运行 44037055112](https://github.com/iC0ol/EAI/actions/runs/44037055112) · [PR 运行 44037064333](https://github.com/iC0ol/EAI/actions/runs/44037064333)
 
 ## 修改文件
 
