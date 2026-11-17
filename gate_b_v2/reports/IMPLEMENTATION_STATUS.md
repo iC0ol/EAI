@@ -1,6 +1,6 @@
 # Gate B v2 code implementation status
 
-Updated: 2026-11-16 after B2 v1.1 implementation and PREFLIGHT.
+Updated: 2026-11-17 after the B2 v1.1 second revision, tests and PREFLIGHT.
 
 ## Authoring baseline (unchanged facts)
 
@@ -60,8 +60,19 @@ below.
    checks, the state-level primary contrast with 5,000 state-cluster bootstrap,
    and locked B2 CLI/config. The live geometry audit PASSed and the reserved
    seed-299999 snapshot/replay PREFLIGHT PASSed. No formal discovery or
-   confirmation state was collected and no B2 branch episode was run. Full
-   evidence is in `reports/B2_IMPLEMENTATION_ACCEPTANCE_REPORT.md`.
+   confirmation state was collected and no B2 branch episode was run.
+5. **B2 v1.1 second revision (2026-11-17)**: fixed the independent-review
+   findings on branch `codex/b2-protocol-20261116` (baseline
+   `b6dcf00a54fda5141e452c3d2a3b16b881198efe`). Added fail-closed
+   preflight/Discovery/Confirmation authorization gates, fixed preflight
+   seed/fallback handling, required B2 run manifests and fixed-config analysis,
+   replaced bootstrap p-values with state-level permutation tests (100,000
+   draws), strengthened the B1 Full environment lock, made policy reset failure
+   a blocker, and protected interrupted-harvest artifacts. The live
+   geometry audit and seed-299999 PREFLIGHT PASSed again with the revised code.
+   The source archive was rebuilt and audited. **B2 code has not yet passed the
+   second independent review; Discovery and Confirmation are both unauthorized
+   and no formal B2 data exist.** See `reports/B2_SECOND_REVISION_REPORT.md`.
 
 ## Interpretation limits
 

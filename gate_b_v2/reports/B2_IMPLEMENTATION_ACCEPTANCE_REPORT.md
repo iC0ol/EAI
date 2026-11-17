@@ -5,9 +5,10 @@ Repository: `iC0ol/EAI`
 Branch: `codex/b2-protocol-20261116`
 Protocol commit: `4e7fcd5f856a8fae4d0d7844569c4c2c17a1c957`
 Protocol: `research_spatial_action_round4_20261109/reports/B2_PROTOCOL_REVISION_20261116.md`
-Status: **B2 CODE IMPLEMENTED; LIVE GEOMETRY AUDIT PASS; SEED-299999 SNAPSHOT
-PREFLIGHT PASS; AWAITING INDEPENDENT CODE ACCEPTANCE. NO B2 DISCOVERY OR
-CONFIRMATION STATE WAS COLLECTED AND NO BRANCH EPISODE WAS RUN.**
+Status: **B2 v1.1 FIRST IMPLEMENTATION + SECOND REVISION; LIVE GEOMETRY AUDIT
+PASS; SEED-299999 SNAPSHOT PREFLIGHT PASS; NOT YET ACCEPTED BY THE SECOND
+INDEPENDENT REVIEW. NO B2 DISCOVERY OR CONFIRMATION STATE WAS COLLECTED, NO
+BRANCH EPISODE WAS RUN, AND NEITHER SPLIT IS AUTHORIZED.**
 
 ## 1. Scope and boundaries
 
@@ -24,6 +25,35 @@ This round implemented the frozen B2 v1.1 protocol only. It did not:
 
 All preflight artifacts are marked `PREFLIGHT` and `scientific_data=false`.
 
+## 1.1 Second-revision fixes (2026-11-17)
+
+The second revision addresses the independent-review findings without changing
+the frozen research question, horizons, seed pools, `E` definition, 0.08
+threshold, or B0/B1 history:
+
+- added a fail-closed authorization module; formal discovery/confirmation
+  harvesting and branch execution require the same run directory's PASS
+  PREFLIGHT plus a researcher-created authorization JSON;
+- confirmation additionally requires completed, integrity-checked discovery
+  data, discovery analysis and `B2_REPORT.md`, a non-STOP decision, and the
+  discovery analysis SHA256 in the confirmation authorization;
+- fixed preflight seed handling (only `299999`) and made the fallback snapshot
+  diagnostic-only; PASS requires the real stage gate;
+- B2 analysis now always uses the fixed project config and requires a complete
+  B2 run manifest with protocol/split/config/B1-manifest/runtime fingerprint
+  checks;
+- replaced invalid bootstrap p-values with 100,000-draw state-level permutation
+  tests (paired sign-flip for horizon differences, clearance permutation for
+  slopes), while retaining 5,000 state-cluster bootstrap confidence intervals;
+- strengthened `load_b1_full_manifest()` by validating the accepted B1 Full
+  manifest itself against the full B0/B1 environment lock;
+- made policy reset failure a hard blocker;
+- made interrupted harvest artifacts block reuse of a run directory;
+- added public PREFLIGHT JSON evidence and a second-revision report.
+
+The code is still awaiting the second independent review. No authorization file
+was created by this work.
+
 ## 2. Modified and added files
 
 Modified:
@@ -35,6 +65,7 @@ Modified:
 - `gate_b_v2/src/gate_b_v2/analysis.py`
 - `gate_b_v2/src/gate_b_v2/cli.py`
 - `gate_b_v2/src/gate_b_v2/locks.py`
+- `gate_b_v2/src/gate_b_v2/policy.py`
 - `gate_b_v2/src/gate_b_v2/env.py`
 - `gate_b_v2/scripts/run_b2_discovery.sh`
 - `gate_b_v2/scripts/run_b2_confirmation.sh`
@@ -45,6 +76,8 @@ Modified:
 Added:
 
 - `gate_b_v2/src/gate_b_v2/b2_protocol.py`
+- `gate_b_v2/src/gate_b_v2/authorization.py` (second revision)
+- `gate_b_v2/src/gate_b_v2/evidence.py` (second revision)
 - `gate_b_v2/src/gate_b_v2/harvest.py`
 - `gate_b_v2/scripts/run_b2_geometry_audit.sh`
 - `gate_b_v2/scripts/run_b2_harvest_discovery.sh`
@@ -56,8 +89,15 @@ Added:
 - `gate_b_v2/tests/test_b2_harvest.py`
 - `gate_b_v2/tests/test_b2_branch.py`
 - `gate_b_v2/tests/test_b2_analysis.py`
+- `gate_b_v2/tests/test_b2_authorization.py` (second revision)
 - `gate_b_v2/tests/test_b2_cli.py`
+- `gate_b_v2/reports/preflight/b2_geometry_audit.json`
+- `gate_b_v2/reports/preflight/b2_preflight_summary.json`
+- `gate_b_v2/reports/preflight/b2_preflight_snapshot_validation.json`
+- `gate_b_v2/reports/preflight/b2_preflight_environment.json`
+- `gate_b_v2/reports/preflight/PREFLIGHT_EVIDENCE_MANIFEST.json`
 - `gate_b_v2/reports/B2_IMPLEMENTATION_ACCEPTANCE_REPORT.md`
+- `gate_b_v2/reports/B2_SECOND_REVISION_REPORT.md` (second revision)
 - repository-root `gate_b_v2_source.tar.xz` (rebuilt)
 
 No B0/B1 source behavior was intentionally changed. Existing B0/B1 tests remain
@@ -138,13 +178,19 @@ in the suite and pass.
 - `Delta_s = 0.5*(p_s(1)+p_s(2)) - p_s(15)`.
 - OLS slope of `Delta_s` on clearance, reported per metre and per millimetre.
 - `E = predicted_Delta(c_10) - predicted_Delta(c_90)` with 5,000 state-cluster
-  bootstrap resamples; practical threshold `E >= 0.08`.
+  bootstrap resamples for confidence intervals; practical threshold `E >= 0.08`.
+- Hypothesis tests use explicit state-level permutation nulls with 100,000
+  draws: paired sign-flip for horizon differences and clearance permutation for
+  slopes. Bootstrap distributions are no longer used as p-values.
 - Secondary analyses: per-horizon rates with state-cluster CIs, h-vs-15
-  differences and slopes with Holm correction, categorical h×clearance linear
-  probability interaction, Spearman robustness, clearance bins, policy calls and
-  wall-clock.
+  differences and slopes, Holm correction over the four comparisons using the
+  permutation p-values, categorical h×clearance linear probability interaction,
+  Spearman robustness, clearance bins, policy calls and wall-clock.
 - Discovery and confirmation are analyzed independently; decision rules are
   pre-registered in code and reported without pooling.
+- B2 analysis always loads the fixed project config, requires
+  `b2_{split}_run.json`, validates protocol/split/config/B1-manifest/runtime
+  fingerprints, and rejects missing manifests or bootstrap/threshold overrides.
 - B2 commands expose only the run directory and split (plus PREFLIGHT-only
   arguments). Checkpoint, dataset, DP root, max-steps, device and config
   overrides are absent.
@@ -162,7 +208,7 @@ python -m compileall -q src tests
 python -m pytest -q
 ```
 
-Result: **149 passed** (one harmless SciPy constant-input warning in a synthetic
+Result: **210 passed** (one harmless SciPy constant-input warning in a synthetic
 analysis test). Coverage includes:
 
 1. geometry sign and nut-local frame tests for positive/zero/negative `c_xy` and
@@ -174,9 +220,13 @@ analysis test). Coverage includes:
 5. seed-pool isolation and deterministic candidate selection tests;
 6. B2 30×5×3 completeness, duplicate/missing/extra/mixed-split rejection;
 7. horizon-order reproducibility and common policy-noise tests;
-8. state-cluster bootstrap and primary `E` contrast tests;
+8. state-cluster bootstrap and permutation-test correctness/reproducibility;
 9. CLI lock tests proving no asset/runtime overrides;
-10. existing B0/B1 regression tests.
+10. unauthorized discovery/confirmation rejection, confirmation missing-discovery
+    rejection, preflight seed/fallback rejection, missing-run-manifest rejection,
+    B1 Full manifest field-tampering rejection, policy-reset failure and
+    interrupted-harvest overwrite protection;
+11. existing B0/B1 regression tests.
 
 No old test was deleted or weakened.
 
@@ -185,11 +235,13 @@ No old test was deleted or weakened.
 Command:
 
 ```bash
-python -m gate_b_v2.cli b2-geometry-audit --run-dir runs/b2_geometry_audit_preflight
+python -m gate_b_v2.cli b2-preflight \
+  --run-dir runs/b2_preflight_second_revision_final --seed 299999
 ```
 
 Result: **PASS**. Evidence:
-`runs/b2_geometry_audit_preflight/b2_geometry_audit.json`.
+`runs/b2_preflight_second_revision_final/b2_geometry_audit.json` and the public copy
+`reports/preflight/b2_geometry_audit.json`.
 
 Key live values on the RTX 3090 environment:
 
@@ -215,7 +267,8 @@ model; collision geometry remains authoritative.
 Command:
 
 ```bash
-python -m gate_b_v2.cli b2-preflight --run-dir runs/b2_preflight_det_c --seed 299999
+python -m gate_b_v2.cli b2-preflight \
+  --run-dir runs/b2_preflight_second_revision_final --seed 299999
 ```
 
 The fixed-h=8 source rollout reached the stage gate at source step **124**. The
@@ -240,17 +293,16 @@ identical snapshot SHA256:
 c52aaa5c2b5c83374da376891d521b28baeaa0f8790ee6435dfb33316f9cb5b3
 ```
 
-The final comprehensive run `runs/b2_preflight_final/` reproduced the same
-snapshot SHA256 and validation result, and additionally ran the state smoke test.
-Evidence: `runs/b2_preflight_final/`, `runs/b2_preflight_det_c/`,
-`runs/b2_preflight_det_d/` and `runs/b2_preflight_299999/`.
+The second-revision run `runs/b2_preflight_second_revision_final/` reproduced the same
+snapshot SHA256 and validation result, and additionally ran the state smoke
+test. Public PREFLIGHT evidence is exported under `reports/preflight/`.
 
 A throwaway first-entry state-harvest smoke used non-formal seeds 299990 and
 299991 (source steps 208 and 259). Both records are explicitly `PREFLIGHT`,
 `scientific_data=false`, and are excluded from all B2 formal manifests and
 results:
 
-`runs/b2_preflight_final/state_smoke/b2_preflight_state_smoke.jsonl`.
+`runs/b2_preflight_second_revision_final/state_smoke/b2_preflight_state_smoke.jsonl`.
 
 ## 7. Environment fingerprint
 
@@ -263,6 +315,10 @@ The B2 lock reads and verifies these values from the accepted B1 Full manifest
 | Dataset SHA256 | `7e58906366d79996f13785ff2dd0fe346230373532addc2afc7c92611ae42887` |
 | DP source-tree SHA256 | `aec43e20abb0902b606e61fc4a391605ab755e59233ecb5f6bdbfbe8df372f21` |
 | B1 Full manifest SHA256 | `1619fa873df00628cc7ec0d414ee5f8d029ae30e0808ab1e00a2905ef41c4175` |
+| B2 config fingerprint | `ea97483ae300a74c1b4390270e8578bbd5f17896540d3e086fa1797bb0ca242c` |
+| B2 source-tree SHA256 | `3a06883b65bbfd40e80a3cff35b534f0c6b514af3a47a4d06d3f153ee6e10d15` |
+| Preflight environment fingerprint SHA256 | `84647b606c8cf107cb73e44491a351ee93a119fede8e51734911a2373e33f276` |
+| Preflight implementation commit | `e8f4f4aa4e143c3a288701b2fc4a8e929254e6d6` |
 | GPU | NVIDIA GeForce RTX 3090 |
 | PyTorch / CUDA | 1.12.1+cu116 / 11.6 |
 | Device | `cuda:0` |
@@ -280,15 +336,16 @@ Repository-root archive: `gate_b_v2_source.tar.xz`.
 Archive SHA256:
 
 ```text
-e4e392c94f33fa813872f7a8a89c07f6f1e0d4d9df0d4bdaeaa0d1ab87730c1b
+befdd3bcf84ee5c7c27afdf775f86803bc3f51f4fa6f58dc79d48d7297e44848
 ```
 
 The archive contains the B2 source, tests, configs, scripts, README, the required
-B1 Full lock manifest and the implementation/execution logs. It excludes run
-data, assets, checkpoints, datasets, virtual environments, caches, credentials
-and this acceptance report (the repository copy is authoritative; embedding the
-archive hash in a packaged report would be self-referential). The packaged README
-also omits the archive's own hash for the same reason.
+B1 Full lock manifest, implementation/execution logs and the small public
+PREFLIGHT JSON evidence. It excludes run data, snapshot binaries, assets,
+checkpoints, datasets, virtual environments, caches, credentials, this acceptance
+report and the second-revision report (repository copies are authoritative;
+embedding the archive hash in packaged reports would be self-referential). The
+packaged README also omits the archive's own hash for the same reason.
 
 Source Archive Audit (clean extraction under `/tmp/gate_b_v2_archive_audit`):
 
@@ -297,14 +354,18 @@ Source Archive Audit (clean extraction under `/tmp/gate_b_v2_archive_audit`):
   `AGENTS.md`, B1 Full manifest and execution logs are byte-identical to the
   workstation source;
 - `python -m compileall` is clean;
-- `pytest -q` from the extracted archive: **148 passed, 1 skipped** (the
+- `pytest -q` from the extracted archive: **209 passed, 1 skipped** (the
   existing B1 lock test that requires the vendored DP source, which is not
   packaged);
-- the workspace test run is **149 passed** because the vendored DP source is
+- the workspace test run is **210 passed** because the vendored DP source is
   present locally.
 
 ## 9. Unresolved issues and limitations
 
+- **The B2 code has not passed the second independent review.** This report
+  supplies second-revision evidence; it is not an acceptance decision.
+- No `B2_DISCOVERY_AUTHORIZATION.json` or `B2_CONFIRMATION_AUTHORIZATION.json`
+  exists. Discovery and Confirmation are both unauthorized.
 - No formal B2 discovery or confirmation state has been collected. This report
   does not claim that B2 data exist or that B2 passed.
 - The live audit and snapshot preflight used only the reserved seed 299999 and
@@ -323,11 +384,14 @@ Source Archive Audit (clean extraction under `/tmp/gate_b_v2_archive_audit`):
 
 ## 10. Acceptance condition
 
-**Code-level B2 acceptance conditions are met:** implementation against the
-frozen v1.1 protocol, full regression tests, live geometry audit PASS,
-seed-299999 snapshot/replay PREFLIGHT PASS, deterministic snapshot SHA, source
-archive audit, and no unauthorized formal data collection.
+**Second-revision code-level evidence is supplied:** implementation against the
+frozen v1.1 protocol, fail-closed authorization gates, 210 passing regression
+tests, live geometry audit PASS, seed-299999 snapshot/replay PREFLIGHT PASS,
+deterministic snapshot SHA, source archive audit, and no unauthorized formal data
+collection.
 
-**This is not B2 scientific acceptance.** Formal discovery remains unauthorized
-until the GitHub commit, this report and the source archive pass independent
-review and the research lead gives explicit authorization.
+**This is not an acceptance decision and not B2 scientific acceptance.** The B2
+code remains unaccepted until the second independent review passes. No
+Discovery or Confirmation authorization file exists; neither split may start
+without the researcher-created authorization required by the code. No B2
+scientific result exists.

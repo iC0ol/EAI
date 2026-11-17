@@ -39,7 +39,7 @@ jobs:
         run: |
           set -euo pipefail
           echo "=== Archive SHA256 ==="
-          echo "e4e392c94f33fa813872f7a8a89c07f6f1e0d4d9df0d4bdaeaa0d1ab87730c1b  gate_b_v2_source.tar.xz" | sha256sum -c -
+          echo "befdd3bcf84ee5c7c27afdf775f86803bc3f51f4fa6f58dc79d48d7297e44848  gate_b_v2_source.tar.xz" | sha256sum -c -
           echo "=== Archive members ==="
           tar -tJf gate_b_v2_source.tar.xz
           rm -rf /tmp/gate_b_v2_unpack

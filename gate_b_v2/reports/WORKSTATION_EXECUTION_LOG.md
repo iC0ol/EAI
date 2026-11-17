@@ -5,7 +5,7 @@ Append dated entries here after actual workstation actions. Do not pre-fill succ
 | Date/time (Asia/Shanghai) | Commit | Command/action | Result | Evidence paths | Decision |
 |---|---|---|---|---|---|
 | 2026-11-10 18:03 | 7a8d7de | `git switch codex/gate-b-v2`; inspected working tree | No tracked modifications; 95 untracked KYC experiment files preserved untouched | `git status` | Proceed |
-| 2026-11-10 18:04 | 7a8d7de | `sha256sum gate_b_v2_source.tar.xz`; extract to isolated staging dir | SHA256 matched `5a4a43e0…aaa7b`; 26 source files | `.gate_b_v2_unpack/` | Organize into `gate_b_v2/` |
+| 2026-11-10 18:04 | 7a8d7de | `sha256sum gate_b_v2_source.tar.xz`; extract to isolated staging dir | Archive hash matched the historical README; 26 source files | `.gate_b_v2_unpack/` | Organize into `gate_b_v2/` |
 | 2026-11-10 18:06 | 7a8d7de | Downloaded Square-MH checkpoint and low-dim dataset | 4,627,773,609 B; 123,863,240 B | `reports/ASSETS.md` | Continue |
 | 2026-11-10 18:13 | 7a8d7de | Checkpoint SHA256 / zip check | `adaf1785…27c6d`; `7e589063…42887` | `reports/ASSETS.md` | Continue |
 | 2026-11-10 18:14 | 7a8d7de | Created isolated venv; pinned torch 1.12.1+cu116 | Aliyun mirror stalled; restarted against official PyPI | `reports/ENVIRONMENT.md`, `reports/requirements.lock` | Continue |
@@ -44,13 +44,21 @@ Append dated entries here after actual workstation actions. Do not pre-fill succ
 | 2026-11-16 | — | Two independent seed-299999 PREFLIGHT runs after deterministic gzip/tensor RNG serialization | Identical snapshot SHA256 `c52aaa5c2b5c83374da376891d521b28baeaa0f8790ee6435dfb33316f9cb5b3` | `runs/b2_preflight_det_c/`, `runs/b2_preflight_det_d/` | Deterministic |
 | 2026-11-16 | — | Throwaway state-harvest smoke with non-formal seeds 299990, 299991 | 2/2 first-entry captures; both records explicitly `PREFLIGHT`, `scientific_data=false` | `runs/b2_preflight_smoke/state_smoke/` | Smoke only |
 | 2026-11-16 | — | Final comprehensive PREFLIGHT with frozen code: seed 299999 plus smoke seeds 299990,299991 | Geometry PASS; gate at step 124; snapshot SHA `c52aaa5c…a37b2d`; all restore/replay errors 0; 2/2 PREFLIGHT smoke records | `runs/b2_preflight_final/` | PASS |
-| 2026-11-16 | — | Rebuilt `gate_b_v2_source.tar.xz`; extracted to clean `/tmp` directory; source archive audit | SHA256 `f26f2ad2…c1fbe0`; code/tests/config/scripts byte-identical; 148 passed, 1 skipped (vendored DP source not packaged) | `gate_b_v2_source.tar.xz` | Audit PASS |
+| 2026-11-16 | — | Rebuilt `gate_b_v2_source.tar.xz`; extracted to clean `/tmp` directory; source archive audit | Code/tests/config/scripts byte-identical; 148 passed, 1 skipped (vendored DP source not packaged). Authoritative archive hash is recorded only in the independent acceptance report and CI configuration. | `gate_b_v2_source.tar.xz` | Audit PASS |
+| 2026-11-17 | `b6dcf00` | Synced `codex/b2-protocol-20261116`; verified baseline and clean tracked tree | Baseline matched; pre-existing untracked KYC files preserved | `git status`, `git rev-parse HEAD` | Second revision |
+| 2026-11-17 | `b23a65d` | Implemented second-revision fixes: authorization gates, preflight seed/fallback, fixed-config analysis, permutation tests, B1 lock, policy reset, harvest overwrite protection | **210 tests pass**; no formal discovery/confirmation/branch run | `gate_b_v2/src`, `gate_b_v2/tests` | Continue |
+| 2026-11-17 | `e8f4f4a` | Live geometry audit + seed-299999 PREFLIGHT with final revised code | Geometry PASS; gate at source step 124; snapshot SHA `c52aaa5c…a37b2d`; all restore/replay errors 0; non-formal state smoke 2/2 marked PREFLIGHT | `runs/b2_preflight_second_revision_final/` | PASS |
+| 2026-11-17 | `b23a65d` | Exported public PREFLIGHT JSON evidence | Small JSON only; marker PREFLIGHT; scientific_data=false; no snapshot binary | `gate_b_v2/reports/preflight/` | Evidence |
+| 2026-11-17 | — | Source archive rebuilt, clean extraction and audit | Code/tests/config/scripts/PREFLIGHT evidence byte-identical; 209 passed, 1 skipped; archive hash recorded in independent report/CI, not in this log | `gate_b_v2_source.tar.xz` | Audit PASS |
 
 ## Current decision
 
 Formal B0 is **COMPLETED** at 84/100 under checkpoint-native 10-D absolute
-action semantics. The written ≥0.70 continuation threshold is met. B1 remains
-blocked by the invalid h=16 (15 future actions) and has not started; B2
-remains blocked by the unfrozen stage window. No Gate C decision is made.
-See `reports/B0_REPORT.md` and `reports/B0_STATUS.md`.
+action semantics. B1 Pilot and B1 Full are **COMPLETED**; B1 Full is
+independently reviewed. The B2 v1.1 protocol is frozen. The B2 code has a
+first implementation and a second revision, with a passing live geometry audit
+and seed-299999 PREFLIGHT, but it has **not yet passed the second independent
+review**. No Discovery or Confirmation authorization file exists; neither split
+is authorized. No B2 state or branch episode has been collected, and no Gate C
+decision is made. See `reports/B2_SECOND_REVISION_REPORT.md`.
 

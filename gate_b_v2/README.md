@@ -8,7 +8,7 @@ tar -xJf gate_b_v2_source.tar.xz -C .
 cd gate_b_v2
 ```
 
-Archive SHA256: `e4e392c94f33fa813872f7a8a89c07f6f1e0d4d9df0d4bdaeaa0d1ab87730c1b`.
+Archive SHA256: `befdd3bcf84ee5c7c27afdf775f86803bc3f51f4fa6f58dc79d48d7297e44848`.
 (The packaged copy inside the archive omits this value because embedding the archive's own hash
 would change the archive hash.)
 
@@ -40,13 +40,44 @@ Locked B2 values:
 | Primary contrast | `Delta_s = 0.5*(p_s(1)+p_s(2)) - p_s(15)` |
 | Primary effect | `E = predicted_Delta(c_10) - predicted_Delta(c_90)` |
 | Practical threshold | `E >= 0.08` |
-| Bootstrap | 5,000 state-cluster resamples |
+| Confidence intervals | 5,000 state-cluster bootstrap resamples |
+| Hypothesis tests | 100,000 state-level permutation draws |
 
 The B2 runner reads the real accepted B1 Full manifest (`reports/b1_full_run.json`) and verifies
-the complete checkpoint/dataset/DP-tree/runtime fingerprint. It fails closed on any mismatch.
-The B2 CLI exposes only `--run-dir` and `--split` (plus PREFLIGHT-only arguments for the
-`b2-preflight` command); it exposes no checkpoint, dataset, DP-root, max-steps, device or config
-override.
+the complete checkpoint/dataset/DP-tree/runtime/config fingerprint against the frozen B0/B1 lock.
+It fails closed on any mismatch. The B2 CLI exposes only `--run-dir` and `--split` (plus
+PREFLIGHT-only arguments for the `b2-preflight` command); it exposes no checkpoint, dataset,
+DP-root, max-steps, device or config override.
+
+## Formal authorization gates
+
+Formal discovery/confirmation harvesting and branch execution are blocked unless the **same run
+directory** contains a passing PREFLIGHT and the researcher has created the relevant authorization
+file. Code never creates these files.
+
+Discovery requires all of:
+
+- `b2_preflight_summary.json` with `marker=PREFLIGHT`, `scientific_data=false`, `status=PASS`,
+  seed `299999`, `gate_reached=true`, `fallback_used=false`, and
+  `snapshot_validation_all_passed=true`;
+- `b2_geometry_audit.json` with `status=PASS`;
+- matching preflight environment and source-tree fingerprints;
+- `B2_DISCOVERY_AUTHORIZATION.json` with `approved=true`, `protocol_version`,
+  `implementation_commit`, `preflight_summary_sha256`, `authorized_by`, `authorized_at`, and
+  `authorized_scope` containing `discovery`.
+
+Confirmation additionally requires `B2_CONFIRMATION_AUTHORIZATION.json`, which must reference the
+completed discovery run and the SHA256 of `b2_discovery_analysis.json`. Discovery must have a
+complete 450-row dataset, passing snapshot validation, an existing `B2_REPORT.md`, and a decision
+that is not STOP/BLOCKED.
+
+Preflight seed is frozen at `299999`; any other seed is rejected before simulation. A fallback
+snapshot taken without reaching the stage gate is diagnostic only and can never produce PASS.
+
+The PREFLIGHT summary and geometry audit include the implementation source-tree fingerprint, so
+documentation/evidence-only commits do not invalidate a passing preflight as long as
+`src/gate_b_v2` is unchanged. Authorization still requires the researcher-created file; no
+authorization exists in this repository.
 
 ## Collision geometry and stage gate
 
@@ -97,7 +128,12 @@ PREFLIGHT only (this implementation round):
 ```bash
 python -m gate_b_v2.cli b2-geometry-audit --run-dir runs/b2_geometry_audit
 python -m gate_b_v2.cli b2-preflight --run-dir runs/b2_preflight --seed 299999
+python -m gate_b_v2.cli b2-export-preflight-evidence \
+  --run-dir runs/b2_preflight --output-dir reports/preflight
 ```
+
+The exported evidence contains only small JSON records marked `PREFLIGHT` and
+`scientific_data=false`; it never contains snapshot binaries, checkpoints, datasets or environments.
 
 Formal B2 commands (not authorized in this round):
 
@@ -122,13 +158,17 @@ branch-result files. A single command never starts both splits.
 - B1 Pilot: completed (`reports/B1_PILOT_REPORT.md`).
 - B1 Full: completed and independently reviewed; 399/500 (`reports/B1_FULL_REPORT.md`).
 - B2 protocol: frozen v1.1.
-- B2 code: implemented, unit-tested, live geometry audit PASS, and seed-299999 snapshot/replay
-  PREFLIGHT PASS. Awaiting independent code acceptance.
+- B2 code: second revision implemented and unit-tested; live geometry audit PASS and
+  seed-299999 snapshot/replay PREFLIGHT PASS. **Not yet accepted by the second independent
+  review.**
+- B2 discovery authorization: **not present**; discovery not authorized.
+- B2 confirmation authorization: **not present**; confirmation not authorized.
 - B2 discovery/confirmation states: **not collected**.
 - B2 branch episodes: **not run**.
 - Training/fine-tuning: **none**.
 - Gate C: not authorized.
 
-The complete acceptance evidence is in `reports/B2_IMPLEMENTATION_ACCEPTANCE_REPORT.md`. No B2
-scientific result exists yet; protocol completion and code acceptance are not experiment
-completion.
+Public PREFLIGHT evidence is in `reports/preflight/`. The first-round acceptance evidence and
+second-round fix report are `reports/B2_IMPLEMENTATION_ACCEPTANCE_REPORT.md` and
+`reports/B2_SECOND_REVISION_REPORT.md`. No B2 scientific result exists yet; protocol completion
+and code acceptance are not experiment completion.

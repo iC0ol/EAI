@@ -1,0 +1,98 @@
+{
+  "all_passed": true,
+  "marker": "PREFLIGHT",
+  "n_states": 1,
+  "per_state": {
+    "pre_299999": {
+      "checks": {
+        "deterministic_geometry": true,
+        "deterministic_observation": true,
+        "deterministic_state": true,
+        "geometry_restore": true,
+        "model_xml_restore": true,
+        "observation_restore": true,
+        "state_restore": true
+      },
+      "geometry_abs_by_metric": {
+        "clearance_m": 0.0,
+        "clearance_x_negative_m": 0.0,
+        "clearance_x_positive_m": 0.0,
+        "clearance_y_negative_m": 0.0,
+        "clearance_y_positive_m": 0.0,
+        "d_xy_m": 0.0,
+        "dx_m": 0.0,
+        "dy_m": 0.0,
+        "hole_half_x_m": 0.0,
+        "hole_half_y_m": 0.0,
+        "nut_bottom_local_z_m": 0.0,
+        "peg_half_x_m": 0.0,
+        "peg_half_y_m": 0.0,
+        "peg_top_local_z_m": 0.0,
+        "r_hole_m": 0.0,
+        "r_peg_m": 0.0,
+        "relative_yaw_rad": 0.0,
+        "t_nut_m": 0.0,
+        "z_gap_m": 0.0
+      },
+      "geometry_abs_max": 0.0,
+      "geometry_atol": 1e-06,
+      "observation_mean_abs_by_key": {
+        "agentview_image": 0.0,
+        "robot0_eef_pos": 0.0,
+        "robot0_eef_quat": 0.0,
+        "robot0_eye_in_hand_image": 0.0,
+        "robot0_gripper_qpos": 0.0
+      },
+      "observation_mean_abs_max": 0.0,
+      "observation_mean_abs_tol": 0.001,
+      "passed": true,
+      "replay_geometry_abs_by_metric": {
+        "clearance_m": 0.0,
+        "clearance_x_negative_m": 0.0,
+        "clearance_x_positive_m": 0.0,
+        "clearance_y_negative_m": 0.0,
+        "clearance_y_positive_m": 0.0,
+        "d_xy_m": 0.0,
+        "dx_m": 0.0,
+        "dy_m": 0.0,
+        "hole_half_x_m": 0.0,
+        "hole_half_y_m": 0.0,
+        "nut_bottom_local_z_m": 0.0,
+        "peg_half_x_m": 0.0,
+        "peg_half_y_m": 0.0,
+        "peg_top_local_z_m": 0.0,
+        "r_hole_m": 0.0,
+        "r_peg_m": 0.0,
+        "relative_yaw_rad": 0.0,
+        "t_nut_m": 0.0,
+        "z_gap_m": 0.0
+      },
+      "replay_geometry_abs_max": 0.0,
+      "replay_observation_mean_abs_by_key": {
+        "agentview_image": 0.0,
+        "robot0_eef_pos": 0.0,
+        "robot0_eef_quat": 0.0,
+        "robot0_eye_in_hand_image": 0.0,
+        "robot0_gripper_qpos": 0.0
+      },
+      "replay_observation_mean_abs_max": 0.0,
+      "replay_state_max_abs": 0.0,
+      "snapshot_model_xml_sha256": "68b478b7e9bb3b6bd2bcba4c9b75078859b4c959f92a2ddd1cc8aad2ab636ac4",
+      "snapshot_schema_version": 2,
+      "snapshot_sim_state_sha256": "912730e8116c0fe10f67be3eee91bba383daac9f2a13b25da084f004047facf8",
+      "state_atol": 1e-07,
+      "state_hash_a": "e8a27a6a13ec2c5af17bf4f682531fc9caf6539973215db17ba11c41db423ab1",
+      "state_hash_after_restore": "e8a27a6a13ec2c5af17bf4f682531fc9caf6539973215db17ba11c41db423ab1",
+      "state_hash_replay_a": "a9a137b0ce9a929bdc3d0ae1029e5539352892cddc4d3fdcf879248c76a91518",
+      "state_hash_replay_b": "a9a137b0ce9a929bdc3d0ae1029e5539352892cddc4d3fdcf879248c76a91518",
+      "state_max_abs": 0.0
+    }
+  },
+  "scientific_data": false,
+  "split": "preflight",
+  "thresholds": {
+    "geometry_atol": 1e-06,
+    "observation_mean_abs_tol": 0.001,
+    "state_atol": 1e-07
+  }
+}
