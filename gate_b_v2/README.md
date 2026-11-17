@@ -8,7 +8,7 @@ tar -xJf gate_b_v2_source.tar.xz -C .
 cd gate_b_v2
 ```
 
-Archive SHA256: `befdd3bcf84ee5c7c27afdf775f86803bc3f51f4fa6f58dc79d48d7297e44848`.
+Archive SHA256: `909086eedbdc9f71ca0e6bf232ae00d8011d8c0f1dff882eb0b41d566e9f1f0e`.
 (The packaged copy inside the archive omits this value because embedding the archive's own hash
 would change the archive hash.)
 
@@ -105,21 +105,27 @@ before any B2 state collection.
 
 ## Snapshot / restore
 
-Each snapshot stores the MuJoCo state and model XML, robosuite counters and task state, controller
-and gripper fields (with an explicit capture audit), the `To=2` observation history, the
-environment/NumPy/Python/PyTorch CPU/CUDA RNG states, and episode diagnostics. Controller/gripper
-fields that cannot be serialized are classified; an unknown mutable field is a hard error rather
-than a silent omission.
+B2 schema 3 stores two reads of the live source at the first eligible control step. The restore
+payload includes the MuJoCo state, XML, integration inputs, observable sampling state,
+controller/gripper fields, `To=2` history and environment/global RNG states. The separate
+validation reference captures source values and hashes before any restore, including a forced
+RGB and low-dimensional observation. Schema 1 and 2 snapshots remain readable by the legacy
+restore API. Formal B2 validation requires schema 3.
 
-Every selected snapshot is validated, not only the first:
+MuJoCo's Euler step computes the camera and collision transforms before integrating `qpos`.
+Schema 3 retains the pose used for those transforms, recomputes them on restore and reapplies the
+integration endpoint. The validator independently compares the source and restored simulator
+state (max absolute error ≤ `1e-7`), model XML and controller/gripper fields. It checks both the
+restored observation history and a fresh read of each sensor (MAE ≤ `1e-3`). Geometry uses
+`1e-6 m` for lengths and `1e-6 rad` for wrapped relative yaw. Two independent restores with the
+same probe action also have to agree. Every selected state must pass before branches start, and
+the runner checks the snapshot file SHA256 before each branch.
 
-- simulator state max absolute error ≤ `1e-7`;
-- observation mean absolute error ≤ `1e-3`;
-- geometry absolute error ≤ `1e-6 m`;
-- two restores followed by the same fixed probe action are deterministic;
-- the snapshot SHA256 is checked before every branch.
-
-If any selected snapshot fails, the split is BLOCKED and the state is not replaced.
+The branch command refuses an existing formal output, including empty files, before writing
+results or starting rollouts. It reads the completed Harvest and PREFLIGHT from the run directory.
+Invalid execution or a failed snapshot validation sets the Split status to `BLOCKED`. A row
+enters the episodes file only after it passes validation, and analysis requires a `COMPLETE`
+Split with exactly 450 validated records.
 
 ## Commands
 
@@ -129,7 +135,7 @@ PREFLIGHT only (this implementation round):
 python -m gate_b_v2.cli b2-geometry-audit --run-dir runs/b2_geometry_audit
 python -m gate_b_v2.cli b2-preflight --run-dir runs/b2_preflight --seed 299999
 python -m gate_b_v2.cli b2-export-preflight-evidence \
-  --run-dir runs/b2_preflight --output-dir reports/preflight
+  --run-dir runs/b2_preflight --output-dir reports/preflight_third_revision
 ```
 
 The exported evidence contains only small JSON records marked `PREFLIGHT` and
@@ -158,9 +164,8 @@ branch-result files. A single command never starts both splits.
 - B1 Pilot: completed (`reports/B1_PILOT_REPORT.md`).
 - B1 Full: completed and independently reviewed; 399/500 (`reports/B1_FULL_REPORT.md`).
 - B2 protocol: frozen v1.1.
-- B2 code: second revision implemented and unit-tested; live geometry audit PASS and
-  seed-299999 snapshot/replay PREFLIGHT PASS. **Not yet accepted by the second independent
-  review.**
+- B2 code: third revision tested on the workstation. The live geometry audit and the independent
+  seed-299999 Snapshot PREFLIGHT passed. **Awaiting independent review.**
 - B2 discovery authorization: **not present**; discovery not authorized.
 - B2 confirmation authorization: **not present**; confirmation not authorized.
 - B2 discovery/confirmation states: **not collected**.
@@ -168,7 +173,6 @@ branch-result files. A single command never starts both splits.
 - Training/fine-tuning: **none**.
 - Gate C: not authorized.
 
-Public PREFLIGHT evidence is in `reports/preflight/`. The first-round acceptance evidence and
-second-round fix report are `reports/B2_IMPLEMENTATION_ACCEPTANCE_REPORT.md` and
-`reports/B2_SECOND_REVISION_REPORT.md`. No B2 scientific result exists yet; protocol completion
-and code acceptance are not experiment completion.
+The third revision's public PREFLIGHT evidence is in `reports/preflight_third_revision/`.
+See the [independent Snapshot report](reports/B2_SNAPSHOT_INDEPENDENT_VALIDATION_REPORT.md)
+and the [third-revision report](reports/B2_THIRD_REVISION_REPORT.md).

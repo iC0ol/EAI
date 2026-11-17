@@ -39,12 +39,20 @@ jobs:
         run: |
           set -euo pipefail
           echo "=== Archive SHA256 ==="
-          echo "befdd3bcf84ee5c7c27afdf775f86803bc3f51f4fa6f58dc79d48d7297e44848  gate_b_v2_source.tar.xz" | sha256sum -c -
+          echo "909086eedbdc9f71ca0e6bf232ae00d8011d8c0f1dff882eb0b41d566e9f1f0e  gate_b_v2_source.tar.xz" | sha256sum -c -
           echo "=== Archive members ==="
           tar -tJf gate_b_v2_source.tar.xz
           rm -rf /tmp/gate_b_v2_unpack
           mkdir -p /tmp/gate_b_v2_unpack
           tar -xJf gate_b_v2_source.tar.xz -C /tmp/gate_b_v2_unpack
+          echo "=== Packaged files match checkout ==="
+          unpacked=/tmp/gate_b_v2_unpack/gate_b_v2
+          for path in src tests configs scripts tools reports/preflight reports/preflight_third_revision; do
+            diff -r "gate_b_v2/$path" "$unpacked/$path"
+          done
+          for path in pyproject.toml AGENTS.md reports/b1_full_run.json; do
+            cmp "gate_b_v2/$path" "$unpacked/$path"
+          done
           echo "=== Extracted files ==="
           find /tmp/gate_b_v2_unpack -type f -printf '%P\n' | sort
           echo "=== Project metadata ==="
@@ -54,7 +62,7 @@ jobs:
             -o -name 'README.md' -o -name 'IMPLEMENTATION_STATUS.md' -o -name 'gate_b.yaml' \
           \) -print
           echo "=== Python source compilation ==="
-          python -m compileall -q /tmp/gate_b_v2_unpack/gate_b_v2/src
+          python -m compileall -q "$unpacked/src" "$unpacked/tests"
           echo "=== Test discovery and execution ==="
           # The archived package uses a src layout; the historical workflow
           # omitted this path and failed at import. Set it explicitly.

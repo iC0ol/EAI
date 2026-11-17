@@ -1,0 +1,511 @@
+{
+  "legacy_schema_2": {
+    "forward_changes_current_state": {
+      "changes": [
+        [
+          20,
+          0.9999999999810034,
+          0.9999999999810032,
+          2.220446049250313e-16
+        ],
+        [
+          21,
+          4.761308049056866e-15,
+          4.761308049056865e-15,
+          7.888609052210118e-31
+        ],
+        [
+          22,
+          6.16388717759504e-06,
+          6.163887177595038e-06,
+          1.6940658945086007e-21
+        ],
+        [
+          23,
+          6.472633024386614e-11,
+          6.472633024386612e-11,
+          1.2924697071141057e-26
+        ]
+      ],
+      "dtype": [
+        "float64",
+        "float64"
+      ],
+      "hash": [
+        "912730e8116c0fe10f67be3eee91bba383daac9f2a13b25da084f004047facf8",
+        "e8a27a6a13ec2c5af17bf4f682531fc9caf6539973215db17ba11c41db423ab1"
+      ],
+      "max": 2.220446049250313e-16,
+      "shape": [
+        [
+          45
+        ],
+        [
+          45
+        ]
+      ],
+      "strides": [
+        [
+          8
+        ],
+        [
+          8
+        ]
+      ]
+    },
+    "old_saved_vs_current_original": {
+      "changes": [],
+      "dtype": [
+        "float64",
+        "float64"
+      ],
+      "hash": [
+        "912730e8116c0fe10f67be3eee91bba383daac9f2a13b25da084f004047facf8",
+        "912730e8116c0fe10f67be3eee91bba383daac9f2a13b25da084f004047facf8"
+      ],
+      "max": 0.0,
+      "shape": [
+        [
+          45
+        ],
+        [
+          45
+        ]
+      ],
+      "strides": [
+        [
+          8
+        ],
+        [
+          8
+        ]
+      ]
+    },
+    "old_states_at_restore_substages": {
+      "force_observation": {
+        "changes": [
+          [
+            20,
+            0.9999999999810034,
+            0.9999999999810032,
+            2.220446049250313e-16
+          ],
+          [
+            21,
+            4.761308049056866e-15,
+            4.761308049056865e-15,
+            7.888609052210118e-31
+          ],
+          [
+            22,
+            6.16388717759504e-06,
+            6.163887177595038e-06,
+            1.6940658945086007e-21
+          ],
+          [
+            23,
+            6.472633024386614e-11,
+            6.472633024386612e-11,
+            1.2924697071141057e-26
+          ]
+        ],
+        "dtype": [
+          "float64",
+          "float64"
+        ],
+        "hash": [
+          "912730e8116c0fe10f67be3eee91bba383daac9f2a13b25da084f004047facf8",
+          "e8a27a6a13ec2c5af17bf4f682531fc9caf6539973215db17ba11c41db423ab1"
+        ],
+        "max": 2.220446049250313e-16,
+        "shape": [
+          [
+            45
+          ],
+          [
+            45
+          ]
+        ],
+        "strides": [
+          [
+            8
+          ],
+          [
+            8
+          ]
+        ]
+      },
+      "forward": {
+        "changes": [
+          [
+            20,
+            0.9999999999810034,
+            0.9999999999810032,
+            2.220446049250313e-16
+          ],
+          [
+            21,
+            4.761308049056866e-15,
+            4.761308049056865e-15,
+            7.888609052210118e-31
+          ],
+          [
+            22,
+            6.16388717759504e-06,
+            6.163887177595038e-06,
+            1.6940658945086007e-21
+          ],
+          [
+            23,
+            6.472633024386614e-11,
+            6.472633024386612e-11,
+            1.2924697071141057e-26
+          ]
+        ],
+        "dtype": [
+          "float64",
+          "float64"
+        ],
+        "hash": [
+          "912730e8116c0fe10f67be3eee91bba383daac9f2a13b25da084f004047facf8",
+          "e8a27a6a13ec2c5af17bf4f682531fc9caf6539973215db17ba11c41db423ab1"
+        ],
+        "max": 2.220446049250313e-16,
+        "shape": [
+          [
+            45
+          ],
+          [
+            45
+          ]
+        ],
+        "strides": [
+          [
+            8
+          ],
+          [
+            8
+          ]
+        ]
+      },
+      "set_state": {
+        "changes": [],
+        "dtype": [
+          "float64",
+          "float64"
+        ],
+        "hash": [
+          "912730e8116c0fe10f67be3eee91bba383daac9f2a13b25da084f004047facf8",
+          "912730e8116c0fe10f67be3eee91bba383daac9f2a13b25da084f004047facf8"
+        ],
+        "max": 0.0,
+        "shape": [
+          [
+            45
+          ],
+          [
+            45
+          ]
+        ],
+        "strides": [
+          [
+            8
+          ],
+          [
+            8
+          ]
+        ]
+      }
+    },
+    "original_cached_vs_fresh_after_forward": {
+      "agentview_image": {
+        "dtype": [
+          "float32",
+          "float32"
+        ],
+        "mae": 0.0024430144112557173,
+        "max": 0.3960784375667572
+      },
+      "robot0_eef_pos": {
+        "dtype": [
+          "float64",
+          "float64"
+        ],
+        "mae": 7.819618163120341e-05,
+        "max": 0.0001544366442478573
+      },
+      "robot0_eef_quat": {
+        "dtype": [
+          "float64",
+          "float64"
+        ],
+        "mae": 2.6364698705166716e-05,
+        "max": 6.971828534863e-05
+      },
+      "robot0_eye_in_hand_image": {
+        "dtype": [
+          "float32",
+          "float32"
+        ],
+        "mae": 0.0006484076147899032,
+        "max": 0.22745099663734436
+      },
+      "robot0_gripper_qpos": {
+        "dtype": [
+          "float64",
+          "float64"
+        ],
+        "mae": 0.0,
+        "max": 0.0
+      }
+    },
+    "original_cached_vs_fresh_at_gate": {
+      "agentview_image": {
+        "dtype": [
+          "float32",
+          "float32"
+        ],
+        "mae": 0.0,
+        "max": 0.0
+      },
+      "robot0_eef_pos": {
+        "dtype": [
+          "float64",
+          "float64"
+        ],
+        "mae": 0.0,
+        "max": 0.0
+      },
+      "robot0_eef_quat": {
+        "dtype": [
+          "float64",
+          "float64"
+        ],
+        "mae": 0.0,
+        "max": 0.0
+      },
+      "robot0_eye_in_hand_image": {
+        "dtype": [
+          "float32",
+          "float32"
+        ],
+        "mae": 0.0,
+        "max": 0.0
+      },
+      "robot0_gripper_qpos": {
+        "dtype": [
+          "float64",
+          "float64"
+        ],
+        "mae": 0.0,
+        "max": 0.0
+      }
+    },
+    "original_cached_vs_restored_fresh": {
+      "agentview_image": {
+        "dtype": [
+          "float32",
+          "float32"
+        ],
+        "mae": 0.0024443112779408693,
+        "max": 0.3960784375667572
+      },
+      "robot0_eef_pos": {
+        "dtype": [
+          "float64",
+          "float64"
+        ],
+        "mae": 7.819618163116641e-05,
+        "max": 0.00015443664424774628
+      },
+      "robot0_eef_quat": {
+        "dtype": [
+          "float64",
+          "float64"
+        ],
+        "mae": 2.6336865765560873e-05,
+        "max": 6.960950699269608e-05
+      },
+      "robot0_eye_in_hand_image": {
+        "dtype": [
+          "float32",
+          "float32"
+        ],
+        "mae": 0.0006493339315056801,
+        "max": 0.22745099663734436
+      },
+      "robot0_gripper_qpos": {
+        "dtype": [
+          "float64",
+          "float64"
+        ],
+        "mae": 0.0,
+        "max": 0.0
+      }
+    },
+    "original_geometry_vs_after_forward": {
+      "clearance_m": 2.520814996674614e-05,
+      "clearance_x_negative_m": 4.985308428265625e-05,
+      "clearance_x_positive_m": 4.7246712271492575e-05,
+      "clearance_y_negative_m": 2.520814996674614e-05,
+      "clearance_y_positive_m": 3.113755194869734e-05,
+      "d_xy_m": 5.585510405284322e-05,
+      "dx_m": 4.854989827707268e-05,
+      "dy_m": 2.8172850957724344e-05,
+      "hole_half_x_m": 1.734723475976807e-17,
+      "hole_half_y_m": 3.469446951953614e-18,
+      "nut_bottom_local_z_m": 1.214306433183765e-17,
+      "nut_collision_thickness_m": 2.42861286636753e-17,
+      "peg_half_x_m": 0.0,
+      "peg_half_y_m": 0.0,
+      "peg_half_z_m": 0.0,
+      "peg_top_local_z_m": 0.00015565795711623004,
+      "r_hole_m": 1.3877787807814457e-17,
+      "r_peg_m": 0.0,
+      "relative_yaw_rad": 0.00014702039762060082,
+      "t_nut_m": 2.42861286636753e-17,
+      "world_vs_local_z_gap_difference_m": 2.2736696570976878e-07,
+      "world_z_gap_naive_m": 0.00015588532408195022,
+      "xy_center_distance_m": 5.585510405284322e-05,
+      "z_gap_m": 0.00015565795711624045
+    },
+    "original_geometry_vs_restored": {
+      "clearance_m": 2.520814996674614e-05,
+      "clearance_x_negative_m": 4.985308428265625e-05,
+      "clearance_x_positive_m": 4.7246712271492575e-05,
+      "clearance_y_negative_m": 2.520814996674614e-05,
+      "clearance_y_positive_m": 3.113755194869734e-05,
+      "d_xy_m": 5.585510405284322e-05,
+      "dx_m": 4.854989827707268e-05,
+      "dy_m": 2.8172850957724344e-05,
+      "hole_half_x_m": 1.734723475976807e-17,
+      "hole_half_y_m": 3.469446951953614e-18,
+      "nut_bottom_local_z_m": 1.214306433183765e-17,
+      "nut_collision_thickness_m": 2.42861286636753e-17,
+      "peg_half_x_m": 0.0,
+      "peg_half_y_m": 0.0,
+      "peg_half_z_m": 0.0,
+      "peg_top_local_z_m": 0.00015565795711623004,
+      "r_hole_m": 1.3877787807814457e-17,
+      "r_peg_m": 0.0,
+      "relative_yaw_rad": 0.00014702039762060082,
+      "t_nut_m": 2.42861286636753e-17,
+      "world_vs_local_z_gap_difference_m": 2.2736696570976878e-07,
+      "world_z_gap_naive_m": 0.00015588532408195022,
+      "xy_center_distance_m": 5.585510405284322e-05,
+      "z_gap_m": 0.00015565795711624045
+    }
+  },
+  "marker": "PREFLIGHT",
+  "schema_3_render_isolation": {
+    "model_and_pose_delta_after_reload": {
+      "body_pos": {
+        "different_values": 1,
+        "mae": 1.423362852083534e-18,
+        "max": 1.1102230246251565e-16
+      },
+      "body_quat": {
+        "different_values": 2,
+        "mae": 1.3692001928612163e-09,
+        "max": 1.0066920869133966e-07
+      },
+      "cam_fovy": {
+        "different_values": 0,
+        "mae": 0.0,
+        "max": 0.0
+      },
+      "cam_pos": {
+        "different_values": 3,
+        "mae": 2.909703146392205e-07,
+        "max": 2.7785897565024698e-06
+      },
+      "cam_quat": {
+        "different_values": 4,
+        "mae": 1.1099046416930143e-08,
+        "max": 1.6471061214939908e-07
+      },
+      "cam_xmat": {
+        "different_values": 18,
+        "mae": 2.860676204169153e-08,
+        "max": 3.4650290492432845e-07
+      },
+      "cam_xpos": {
+        "different_values": 6,
+        "mae": 2.916121679157674e-07,
+        "max": 2.7785897565024698e-06
+      },
+      "geom_pos": {
+        "different_values": 12,
+        "mae": 3.00060276925718e-18,
+        "max": 5.551115123125783e-17
+      },
+      "geom_quat": {
+        "different_values": 28,
+        "mae": 1.9285272871892766e-08,
+        "max": 4.5884904925630465e-07
+      },
+      "geom_rgba": {
+        "different_values": 0,
+        "mae": 0.0,
+        "max": 0.0
+      },
+      "geom_size": {
+        "different_values": 4,
+        "mae": 1.0002009230857266e-18,
+        "max": 5.551115123125783e-17
+      },
+      "geom_xmat": {
+        "different_values": 160,
+        "mae": 4.209657271834633e-08,
+        "max": 7.023760839608428e-07
+      },
+      "geom_xpos": {
+        "different_values": 38,
+        "mae": 1.6029046889848349e-10,
+        "max": 5.951249631985789e-09
+      },
+      "light_dir": {
+        "different_values": 4,
+        "mae": 1.4995929069801703e-07,
+        "max": 3.911982184023888e-07
+      },
+      "light_pos": {
+        "different_values": 0,
+        "mae": 0.0,
+        "max": 0.0
+      },
+      "mat_rgba": {
+        "different_values": 0,
+        "mae": 0.0,
+        "max": 0.0
+      }
+    },
+    "same_native_model_vs_source": {
+      "agentview_image": {
+        "different_values": 0,
+        "mae": 0.0,
+        "max": 0.0
+      },
+      "robot0_eye_in_hand_image": {
+        "different_values": 0,
+        "mae": 0.0,
+        "max": 0.0
+      }
+    },
+    "xml_reloaded_model_vs_source": {
+      "agentview_image": {
+        "different_values": 1,
+        "mae": 1.8525927785843137e-07,
+        "max": 0.003921568393707275
+      },
+      "robot0_eye_in_hand_image": {
+        "different_values": 247,
+        "mae": 9.892848112640828e-05,
+        "max": 0.039215683937072754
+      }
+    }
+  },
+  "scientific_data": false,
+  "seed": 299999,
+  "source_step": 124
+}
