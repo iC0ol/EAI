@@ -252,6 +252,8 @@ def validate_b2_records(
             raise ValueError("Branch record {} has a mismatched snapshot SHA256".format(key))
         if bool(row.get("preflight", False)):
             raise ValueError("Branch record {} is marked PREFLIGHT".format(key))
+        if row.get("policy_reset_verified") is not True:
+            raise ValueError("Branch record {} did not verify policy reset".format(key))
         for geometry_key in (
             "clearance_m", "z_gap_m", "dx_m", "dy_m", "d_xy_m", "relative_yaw_rad",
         ):
