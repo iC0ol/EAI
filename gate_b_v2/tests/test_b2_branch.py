@@ -1,6 +1,7 @@
 from types import SimpleNamespace
 
 import numpy as np
+import pytest
 
 import gate_b_v2.runner as runner_module
 from gate_b_v2.runner import GateBExperiment
@@ -55,6 +56,42 @@ def _fake_self(max_steps=40):
         max_steps_value=max_steps,
         _env_action=lambda action: np.asarray(action),
     )
+
+
+class FailingPolicy:
+    def reset(self):
+        raise RuntimeError("controller reset unavailable")
+
+
+class NoResetPolicy:
+    pass
+
+
+def test_branch_policy_reset_failure_is_blocked(monkeypatch):
+    monkeypatch.setattr(runner_module, "seed_policy_rng", lambda torch, seed: None)
+    monkeypatch.setattr(
+        runner_module, "predict_full_future_chunk",
+        lambda *args, **kwargs: np.zeros((15, 10), dtype=np.float32),
+    )
+    state = {"state_id": "disc_300000", "source_seed": 300000, "source_step": 1,
+             "geometry": {}}
+    snapshot = {"schema_version": 2, "episode": {"steps": 0}}
+    for policy in (FailingPolicy(), NoResetPolicy()):
+        fake = _fake_self(max_steps=10)
+        fake.policy = policy
+        with pytest.raises(RuntimeError, match="policy reset"):
+            GateBExperiment._run_b2_branch(
+                fake,
+                snapshot=snapshot,
+                state_record=state,
+                first_horizon=1,
+                repeat_seed_value=123,
+                split="discovery",
+                repeat_index=0,
+                randomized_order_index=0,
+                order_seed=999,
+                horizon_order=[1, 2, 4, 8, 15],
+            )
 
 
 def test_branch_executes_first_h_then_continuation_15(monkeypatch):

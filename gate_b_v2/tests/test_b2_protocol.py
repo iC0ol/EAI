@@ -100,6 +100,7 @@ def _records(states, config):
                     "randomized_order_index": order_index,
                     "continuation_horizon": 15,
                     "preflight": False,
+                    "policy_reset_verified": True,
                     "snapshot_sha256": state["snapshot_sha256"],
                     "clearance_m": state["clearance_m"],
                     "z_gap_m": state["z_gap_m"],

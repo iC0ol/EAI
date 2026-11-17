@@ -107,6 +107,22 @@ def _cfg_get(cfg: Any, dotted: str, default: Any = None) -> Any:
     return value
 
 
+def reset_policy_or_block(policy: Any) -> None:
+    """Reset policy-local state or fail closed.
+
+    A branch may not execute while action-queue or other policy-local state from
+    a previous branch could remain.  The official Diffusion Policy exposes
+    ``reset()``; if it is missing or raises, B2 is BLOCKED.
+    """
+    reset = getattr(policy, "reset", None)
+    if not callable(reset):
+        raise RuntimeError("B2 BLOCKED: policy reset is unavailable")
+    try:
+        reset()
+    except Exception as exc:
+        raise RuntimeError("B2 BLOCKED: policy reset failed: {}: {}".format(type(exc).__name__, exc))
+
+
 def predict_full_future_chunk(
     policy: Any,
     torch_module: Any,

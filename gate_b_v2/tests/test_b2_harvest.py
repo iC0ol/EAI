@@ -3,8 +3,14 @@ from pathlib import Path
 
 import numpy as np
 
+import pytest
+
 import gate_b_v2.harvest as harvest_module
-from gate_b_v2.harvest import run_source_episode
+from gate_b_v2.harvest import (
+    _check_no_partial_harvest_artifacts,
+    harvest_split,
+    run_source_episode,
+)
 
 
 def _config():
@@ -101,6 +107,7 @@ class FakeExperiment:
         self.n_obs_steps = 2
         self.prediction_horizon = 16
         self.manifest = {}
+        self.project_root = Path(__file__).resolve().parents[1]
         self.policy_reset_calls = 0
 
     def reset(self):
@@ -155,3 +162,56 @@ def test_source_episode_returns_none_without_gate(monkeypatch, tmp_path):
     )
     assert record is None
     assert experiment.env.snapshot_calls == 0
+
+
+def test_source_episode_policy_reset_failure_is_blocked(monkeypatch, tmp_path):
+    experiment = FakeExperiment()
+
+    def fail_reset():
+        raise RuntimeError("reset unavailable")
+
+    experiment.reset = fail_reset
+    monkeypatch.setattr(harvest_module, "seed_everything", lambda seed: None)
+    monkeypatch.setattr(harvest_module, "seed_policy_rng", lambda torch, seed: None)
+    monkeypatch.setattr(
+        harvest_module, "predict_full_future_chunk",
+        lambda *args, **kwargs: np.zeros((15, 10), dtype=np.float32),
+    )
+    with pytest.raises(RuntimeError, match="policy reset"):
+        run_source_episode(
+            experiment, "discovery", 300000, tmp_path / "snapshots", preflight=False
+        )
+
+
+@pytest.mark.parametrize(
+    "artifact",
+    [
+        "b2_discovery_harvest_manifest.json",
+        "b2_discovery_candidates.json",
+        "b2_discovery_state_manifest.jsonl",
+        "b2_discovery_harvest_summary.json",
+        "b2_discovery_status.json",
+        "b2_discovery_episodes.jsonl",
+        "b2_discovery_run.json",
+        "snapshots/discovery",
+    ],
+)
+def test_partial_harvest_artifacts_block_overwrite(tmp_path, artifact):
+    path = tmp_path / artifact
+    if artifact.endswith("discovery"):
+        path.mkdir(parents=True)
+        (path / "partial.pkl.gz").write_bytes(b"partial")
+    else:
+        path.write_text("partial", encoding="utf-8")
+    with pytest.raises(RuntimeError, match="Refusing to overwrite prior B2 discovery"):
+        _check_no_partial_harvest_artifacts(tmp_path, "discovery")
+    assert path.exists()
+
+
+def test_harvest_split_refuses_partial_run_before_rollout(monkeypatch, tmp_path):
+    experiment = FakeExperiment()
+    experiment.run_dir = tmp_path
+    (tmp_path / "b2_discovery_harvest_manifest.json").write_text("{}", encoding="utf-8")
+    monkeypatch.setattr(harvest_module, "validate_formal_authorization", lambda *a, **k: {})
+    with pytest.raises(RuntimeError, match="Refusing to overwrite prior B2 discovery"):
+        harvest_split(experiment, "discovery")

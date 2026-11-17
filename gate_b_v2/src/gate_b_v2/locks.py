@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple
 
@@ -233,6 +234,7 @@ B2_LOCKED_CONFIG_VALUES: Dict[str, Any] = {
     "repeat_seed_base": 1000000,
     "repeat_seed_stride": 17,
     "bootstrap_samples": 5000,
+    "permutation_samples": 100000,
     "practical_effect_threshold": 0.08,
     "snapshot_state_atol": 1.0e-7,
     "snapshot_observation_mean_abs_tol": 1.0e-3,
@@ -315,6 +317,15 @@ def load_b1_full_manifest(path: Path) -> Dict[str, Any]:
         )
     if sorted(int(x) for x in manifest.get("horizons", [])) != [1, 2, 4, 8, 15]:
         raise ValueError("B1 Full manifest horizons are not [1,2,4,8,15]")
+    # Do not merely compare a runtime manifest to whatever file was read.
+    # The accepted B1 Full manifest itself must match the frozen B0/B1 lock.
+    validate_b1_environment(
+        manifest,
+        phase="full",
+        seed_start=200020,
+        seed_end=200119,
+        episodes=100,
+    )
     manifest["_manifest_path"] = str(manifest_path)
     manifest["_manifest_sha256"] = hashlib.sha256(payload).hexdigest()
     return manifest
@@ -351,6 +362,7 @@ def critical_b2_config(config: Mapping[str, Any]) -> Dict[str, Any]:
             "repeat_seed_base": int(b2["repeat_seed_base"]),
             "repeat_seed_stride": int(b2["repeat_seed_stride"]),
             "bootstrap_samples": int(b2["bootstrap_samples"]),
+            "permutation_samples": int(b2["permutation_samples"]),
             "practical_effect_threshold": float(b2["practical_effect_threshold"]),
             "snapshot_state_atol": float(validation["state_atol"]),
             "snapshot_observation_mean_abs_tol": float(validation["observation_mean_abs_tol"]),
@@ -434,3 +446,101 @@ def build_b2_run_manifest(
 
 def b2_record_environment_fields(manifest: Mapping[str, Any]) -> Dict[str, Any]:
     return {key: _b2_environment_value(manifest, key) for key in B2_RECORD_ENVIRONMENT_KEYS}
+
+
+B2_PROTOCOL_VERSION = "B2_PROTOCOL_REVISION_20261116"
+PREFLIGHT_SEED = 299999
+
+
+def _default_project_root() -> Path:
+    return Path(__file__).resolve().parents[2]
+
+
+def load_fixed_project_config(project_root: Optional[Path] = None) -> Dict[str, Any]:
+    """Load the fixed project YAML config; B2 analysis never accepts overrides."""
+    import yaml
+
+    root = Path(project_root).resolve() if project_root is not None else _default_project_root()
+    path = root / "configs" / "gate_b.yaml"
+    if not path.is_file():
+        raise FileNotFoundError("Fixed project config not found: {}".format(path))
+    with path.open("r", encoding="utf-8") as stream:
+        config = yaml.safe_load(stream)
+    if not isinstance(config, dict):
+        raise ValueError("Fixed project config root must be a mapping")
+    return config
+
+
+def current_git_commit(project_root: Optional[Path] = None) -> Optional[str]:
+    """Return the current repository HEAD when available, else None."""
+    root = Path(project_root).resolve() if project_root is not None else _default_project_root()
+    candidates = [root]
+    if root.parent != root:
+        candidates.append(root.parent)
+    for candidate in candidates:
+        if not (candidate / ".git").exists():
+            continue
+        try:
+            result = subprocess.run(
+                ["git", "-C", str(candidate), "rev-parse", "HEAD"],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            return result.stdout.strip() or None
+        except Exception:
+            continue
+    return None
+
+
+def validate_b2_run_manifest(
+    manifest: Mapping[str, Any],
+    split: str,
+    b1_full_manifest: Mapping[str, Any],
+) -> None:
+    """Fail closed unless a B2 run manifest is complete and frozen-config-locked."""
+    if split not in ("discovery", "confirmation", "preflight"):
+        raise ValueError("invalid B2 split {!r}".format(split))
+    required = (
+        "phase", "split", "command", "protocol_version", "config_fingerprint",
+        "config_critical", "b1_full_manifest_sha256", "source_horizon",
+        "continuation_horizon", "branch_horizons", "repeats_per_state_horizon",
+    )
+    missing = [key for key in required if key not in manifest]
+    if missing:
+        raise RuntimeError("B2 run manifest is missing required fields: {}".format(missing))
+    if manifest.get("phase") != "B2":
+        raise RuntimeError("B2 run manifest phase is not 'B2'")
+    if manifest.get("split") != split:
+        raise RuntimeError(
+            "B2 run manifest split {!r} != requested {!r}".format(manifest.get("split"), split)
+        )
+    if manifest.get("protocol_version") != B2_PROTOCOL_VERSION:
+        raise RuntimeError(
+            "B2 run manifest protocol_version {!r} != {!r}".format(
+                manifest.get("protocol_version"), B2_PROTOCOL_VERSION
+            )
+        )
+    if manifest.get("config_fingerprint") != B2_CONFIG_FINGERPRINT:
+        raise RuntimeError(
+            "B2 run manifest config fingerprint {!r} != frozen {!r}".format(
+                manifest.get("config_fingerprint"), B2_CONFIG_FINGERPRINT
+            )
+        )
+    if manifest.get("config_critical") != B2_LOCKED_CONFIG_VALUES:
+        raise RuntimeError("B2 run manifest critical config does not equal the frozen lock")
+    if manifest.get("b1_full_manifest_sha256") != b1_full_manifest.get("_manifest_sha256"):
+        raise RuntimeError(
+            "B2 run manifest B1 Full SHA256 {!r} != actual {!r}".format(
+                manifest.get("b1_full_manifest_sha256"), b1_full_manifest.get("_manifest_sha256")
+            )
+        )
+    if int(manifest.get("source_horizon", -1)) != 8:
+        raise RuntimeError("B2 run manifest source horizon is not 8")
+    if int(manifest.get("continuation_horizon", -1)) != 15:
+        raise RuntimeError("B2 run manifest continuation horizon is not 15")
+    if [int(x) for x in manifest.get("branch_horizons", [])] != [1, 2, 4, 8, 15]:
+        raise RuntimeError("B2 run manifest branch horizons are not [1,2,4,8,15]")
+    if int(manifest.get("repeats_per_state_horizon", -1)) != 3:
+        raise RuntimeError("B2 run manifest repeat count is not 3")
+    validate_b2_environment(manifest, b1_full_manifest)

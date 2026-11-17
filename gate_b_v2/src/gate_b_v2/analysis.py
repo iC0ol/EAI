@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 from collections import defaultdict
 from pathlib import Path
@@ -9,7 +10,17 @@ import numpy as np
 from scipy.stats import binomtest, chi2
 
 from .core import load_jsonl, write_json
-from .locks import RECORD_ENVIRONMENT_KEYS, validate_b1_environment
+from .locks import (
+    B2_CONFIG_FINGERPRINT,
+    B2_LOCKED_CONFIG_VALUES,
+    B2_PROTOCOL_VERSION,
+    RECORD_ENVIRONMENT_KEYS,
+    load_b1_full_manifest,
+    load_fixed_project_config,
+    validate_b1_environment,
+    validate_b2_config,
+    validate_b2_run_manifest,
+)
 
 
 def _bootstrap_mean_ci(values: np.ndarray, n_boot: int, seed: int) -> Tuple[float, float]:
@@ -450,15 +461,10 @@ def _bootstrap_slope_effect(
             "E_ci95_high": float("nan"),
             "slope_ci95_low": float("nan"),
             "slope_ci95_high": float("nan"),
-            "slope_bootstrap_p": float("nan"),
-            "E_bootstrap_p": float("nan"),
+            "bootstrap_seed": int(seed),
+            "n_bootstrap_requested": int(n_bootstrap),
             "n_bootstrap_used": 0,
         }
-
-    def two_sided_p(values: np.ndarray) -> float:
-        below = float(np.mean(values <= 0.0))
-        above = float(np.mean(values >= 0.0))
-        return float(min(1.0, 2.0 * min(below, above)))
 
     return {
         "intercept": intercept,
@@ -471,26 +477,127 @@ def _bootstrap_slope_effect(
         "E_ci95_high": float(np.quantile(effects_array, 0.975)),
         "slope_ci95_low": float(np.quantile(slopes_array, 0.025)),
         "slope_ci95_high": float(np.quantile(slopes_array, 0.975)),
-        "slope_bootstrap_p": two_sided_p(slopes_array),
-        "E_bootstrap_p": two_sided_p(effects_array),
+        "bootstrap_seed": int(seed),
+        "n_bootstrap_requested": int(n_bootstrap),
         "n_bootstrap_used": int(slopes_array.size),
     }
 
 
-def _bootstrap_mean_and_p(values: np.ndarray, n_bootstrap: int, seed: int) -> Dict[str, Any]:
+def _bootstrap_state_mean_ci(values: np.ndarray, n_bootstrap: int, seed: int) -> Dict[str, Any]:
+    """State-cluster bootstrap CI for a state-level mean (no invalid bootstrap p)."""
     values = np.asarray(values, dtype=np.float64)
     mean = float(values.mean())
     rng = np.random.default_rng(int(seed))
     n = values.size
     samples = rng.choice(values, size=(int(n_bootstrap), n), replace=True).mean(axis=1)
-    below = float(np.mean(samples <= 0.0))
-    above = float(np.mean(samples >= 0.0))
     return {
         "mean": mean,
         "ci95_low": float(np.quantile(samples, 0.025)),
         "ci95_high": float(np.quantile(samples, 0.975)),
-        "bootstrap_p": float(min(1.0, 2.0 * min(below, above))),
+        "bootstrap_seed": int(seed),
+        "n_bootstrap_requested": int(n_bootstrap),
         "n_bootstrap": int(n_bootstrap),
+    }
+
+
+def _sign_flip_permutation_test(
+    values: np.ndarray,
+    n_permutations: int = 100000,
+    seed: int = 20261110,
+    chunk_size: int = 10000,
+) -> Dict[str, Any]:
+    """Paired state-level sign-flip permutation test for a mean difference.
+
+    Under H0 the paired differences are symmetric about zero, so each state's
+    sign is exchangeable.  This constructs an explicit null distribution instead
+    of treating the bootstrap distribution as a p-value.
+    """
+    values = np.asarray(values, dtype=np.float64)
+    observed = float(values.mean()) if values.size else float("nan")
+    n = values.size
+    if n == 0 or not np.isfinite(observed):
+        return {
+            "method": "paired state-level sign-flip permutation",
+            "observed_mean": observed,
+            "p_value": float("nan"),
+            "seed": int(seed),
+            "n_permutations": 0,
+        }
+    rng = np.random.default_rng(int(seed))
+    extreme = 0
+    used = 0
+    threshold = abs(observed) - 1e-15
+    remaining = int(n_permutations)
+    while remaining > 0:
+        size = min(int(chunk_size), remaining)
+        signs = rng.integers(0, 2, size=(size, n), dtype=np.int8) * 2 - 1
+        means = (signs.astype(np.float64) * values[None, :]).mean(axis=1)
+        extreme += int(np.count_nonzero(np.abs(means) >= threshold))
+        used += size
+        remaining -= size
+    p_value = float((1 + extreme) / (1 + used))
+    return {
+        "method": "paired state-level sign-flip permutation",
+        "observed_mean": observed,
+        "p_value": p_value,
+        "seed": int(seed),
+        "n_permutations": int(used),
+    }
+
+
+def _clearance_permutation_test(
+    x: np.ndarray,
+    y: np.ndarray,
+    n_permutations: int = 100000,
+    seed: int = 20261110,
+    chunk_size: int = 10000,
+) -> Dict[str, Any]:
+    """State-level permutation test for the clearance slope.
+
+    The null is no association between clearance and the state-level outcome
+    contrast; clearance values are permuted relative to outcomes.
+    """
+    x = np.asarray(x, dtype=np.float64)
+    y = np.asarray(y, dtype=np.float64)
+    _, observed_slope = _ols(x, y)
+    n = x.size
+    if n < 3 or not np.isfinite(observed_slope):
+        return {
+            "method": "state-level clearance permutation",
+            "observed_slope_per_m": observed_slope,
+            "p_value": float("nan"),
+            "seed": int(seed),
+            "n_permutations": 0,
+        }
+    rng = np.random.default_rng(int(seed))
+    y_centered = y - y.mean()
+    extreme = 0
+    used = 0
+    threshold = abs(observed_slope) - 1e-15
+    remaining = int(n_permutations)
+    while remaining > 0:
+        size = min(int(chunk_size), remaining)
+        # Each row is an independent permutation of clearance values.
+        order = np.argsort(rng.random((size, n)), axis=1)
+        permuted = x[order]
+        centered = permuted - permuted.mean(axis=1, keepdims=True)
+        denominator = np.sum(centered * centered, axis=1)
+        slopes = np.divide(
+            centered.dot(y_centered),
+            denominator,
+            out=np.full(size, np.nan),
+            where=denominator > 0,
+        )
+        extreme += int(np.count_nonzero(np.abs(slopes) >= threshold))
+        used += size
+        remaining -= size
+    p_value = float((1 + extreme) / (1 + used))
+    return {
+        "method": "state-level clearance permutation",
+        "observed_slope_per_m": float(observed_slope),
+        "p_value": p_value,
+        "seed": int(seed),
+        "n_permutations": int(used),
     }
 
 
@@ -596,49 +703,92 @@ def _clearance_bins(
     return bins
 
 
-def _b2_inputs(run_dir: Path, split: str, config: Mapping[str, Any]):
+def _b2_inputs(
+    run_dir: Path,
+    split: str,
+    config: Mapping[str, Any],
+    project_root: Path = None,
+):
     from .b2_protocol import validate_b2_records, validate_state_manifest
 
+    validate_b2_config(config)
     records_path = run_dir / "b2_{}_episodes.jsonl".format(split)
     state_path = run_dir / "b2_{}_state_manifest.jsonl".format(split)
     validation_path = run_dir / "b2_{}_snapshot_validation.json".format(split)
+    manifest_path = run_dir / "b2_{}_run.json".format(split)
     if not records_path.is_file():
         raise FileNotFoundError("B2 {} branch records not found: {}".format(split, records_path))
     if not state_path.is_file():
         raise FileNotFoundError("B2 {} state manifest not found: {}".format(split, state_path))
     if not validation_path.is_file():
         raise FileNotFoundError("B2 {} snapshot validation not found: {}".format(split, validation_path))
+    if not manifest_path.is_file():
+        raise FileNotFoundError(
+            "B2 {} run manifest not found: {}; analysis is BLOCKED because the "
+            "complete environment fingerprint cannot be verified".format(split, manifest_path)
+        )
+
+    root = Path(project_root).resolve() if project_root is not None else Path(__file__).resolve().parents[2]
+    b1_manifest_path = Path(str(config["paths"]["b1_full_manifest"]))
+    if not b1_manifest_path.is_absolute():
+        b1_manifest_path = (root / b1_manifest_path).resolve()
+    b1_full_manifest = load_b1_full_manifest(b1_manifest_path)
+
     records = load_jsonl(records_path)
     states = load_jsonl(state_path)
-    manifest_path = run_dir / "b2_{}_run.json".format(split)
-    run_manifest = json.loads(manifest_path.read_text(encoding="utf-8")) if manifest_path.is_file() else None
+    run_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    validate_b2_run_manifest(run_manifest, split, b1_full_manifest)
     validate_state_manifest(states, split, config)
     validation = json.loads(validation_path.read_text(encoding="utf-8"))
+    if validation.get("marker") != "B2":
+        raise RuntimeError("B2 {} snapshot validation marker is not B2".format(split))
+    if bool(validation.get("scientific_data")) is not True:
+        raise RuntimeError("B2 {} snapshot validation is not formally marked".format(split))
     if not validation.get("all_passed"):
         raise RuntimeError(
             "B2 {} snapshot validation did not pass; analysis is BLOCKED".format(split)
         )
+    if int(validation.get("n_states", -1)) != int(config["b2"]["selected_states"]):
+        raise RuntimeError(
+            "B2 {} snapshot validation n_states is not {}".format(
+                split, config["b2"]["selected_states"]
+            )
+        )
     validate_b2_records(records, states, split, config, runtime_manifest=run_manifest)
-    return records, states, validation, run_manifest, records_path, state_path, validation_path
+    return (
+        records, states, validation, run_manifest,
+        records_path, state_path, validation_path, manifest_path, b1_full_manifest,
+    )
 
 
 def analyze_b2_split(
     run_dir: Path,
     split: str,
-    n_bootstrap: int = 5000,
+    n_bootstrap: int = None,
     seed: int = 20261110,
     config: Mapping[str, Any] = None,
+    project_root: Path = None,
 ) -> Dict[str, Any]:
     """Pre-registered B2 v1.1 state-level analysis for one independent split."""
-    from .locks import B2_LOCKED_CONFIG_VALUES
-
     run_dir = Path(run_dir)
     if split not in ("discovery", "confirmation"):
         raise ValueError("split must be discovery or confirmation")
-    config = config or {"b2": dict(B2_LOCKED_CONFIG_VALUES)}
-    records, states, validation, run_manifest, records_path, state_path, validation_path = _b2_inputs(
-        run_dir, split, config
-    )
+    config = config or load_fixed_project_config(project_root)
+    lock = validate_b2_config(config)
+    frozen_bootstrap = int(lock["values"]["bootstrap_samples"])
+    frozen_permutations = int(lock["values"]["permutation_samples"])
+    if n_bootstrap is not None and int(n_bootstrap) != frozen_bootstrap:
+        raise RuntimeError(
+            "B2 analysis bootstrap samples are frozen at {}; override {} is rejected".format(
+                frozen_bootstrap, n_bootstrap
+            )
+        )
+    n_bootstrap = frozen_bootstrap
+    seed = int(seed)
+    (
+        records, states, validation, run_manifest,
+        records_path, state_path, validation_path, manifest_path, b1_full_manifest,
+    ) = _b2_inputs(run_dir, split, config, project_root)
     horizons = [int(x) for x in config["b2"]["horizons"]]
     reference = int(config["b2"]["continuation_horizon"])
     repeats = int(config["b2"]["repeats_per_state_horizon"])
@@ -677,10 +827,21 @@ def analyze_b2_split(
     c10 = float(np.quantile(x, 0.10))
     c90 = float(np.quantile(x, 0.90))
     primary = _bootstrap_slope_effect(x, delta, c10, c90, n_bootstrap, seed)
+    primary_sign_permutation = _clearance_permutation_test(
+        x, delta, frozen_permutations, seed + 400
+    )
     primary.update({
         "delta_formula": "0.5 * (p_s(1) + p_s(2)) - p_s(15)",
         "independent_unit": "state_id (not individual branch episodes)",
         "bootstrap": "state-cluster bootstrap resampling whole state IDs",
+        "bootstrap_samples": int(n_bootstrap),
+        "bootstrap_samples_used": int(primary["n_bootstrap_used"]),
+        "bootstrap_seed": int(seed),
+        "slope_permutation_method": primary_sign_permutation["method"],
+        "slope_permutation_p": float(primary_sign_permutation["p_value"]),
+        "E_permutation_p": float(primary_sign_permutation["p_value"]),
+        "permutation_samples": int(primary_sign_permutation["n_permutations"]),
+        "permutation_seed": int(primary_sign_permutation["seed"]),
         "n_states": len(state_ids),
         "n_branch_episodes": len(records),
         "clearance_c10_m": c10,
@@ -693,16 +854,19 @@ def analyze_b2_split(
     per_horizon: Dict[str, Any] = {}
     for horizon in horizons:
         values = np.asarray([state_means[state_id][horizon] for state_id in state_ids])
-        ci = _bootstrap_mean_and_p(values, n_bootstrap, seed + horizon)
+        ci = _bootstrap_state_mean_ci(values, n_bootstrap, seed + horizon)
         successes = int(round(float(values.sum() * repeats)))
         per_horizon[str(horizon)] = {
             "mean_state_success_probability": float(values.mean()),
             "branch_successes": successes,
             "branch_n": len(records) // len(horizons),
             "state_cluster_bootstrap_ci95": [ci["ci95_low"], ci["ci95_high"]],
+            "bootstrap_seed": int(seed + horizon),
+            "bootstrap_samples": int(n_bootstrap),
         }
 
-    # Secondary h-vs-h15 differences and slopes, Holm over the four comparisons.
+    # Secondary h-vs-h15 differences and slopes.  CIs use the state-cluster
+    # bootstrap; p-values use explicit state-level permutation nulls.
     secondary: Dict[str, Any] = {}
     raw_p = []
     slope_raw_p = []
@@ -712,20 +876,32 @@ def analyze_b2_split(
             state_means[state_id][horizon] - state_means[state_id][15]
             for state_id in state_ids
         ])
-        diff_stats = _bootstrap_mean_and_p(diff, n_bootstrap, seed + 100 * horizon)
+        diff_stats = _bootstrap_state_mean_ci(diff, n_bootstrap, seed + 100 * horizon)
+        diff_permutation = _sign_flip_permutation_test(
+            diff, frozen_permutations, seed + 1000 + horizon
+        )
         slope_stats = _bootstrap_slope_effect(
             x, diff, c10, c90, n_bootstrap, seed + 200 * horizon
         )
-        raw_p.append(diff_stats["bootstrap_p"])
-        slope_raw_p.append(slope_stats["slope_bootstrap_p"])
+        slope_permutation = _clearance_permutation_test(
+            x, diff, frozen_permutations, seed + 2000 + horizon
+        )
+        raw_p.append(diff_permutation["p_value"])
+        slope_raw_p.append(slope_permutation["p_value"])
         secondary[str(horizon)] = {
             "mean_success_difference_vs_h15": diff_stats["mean"],
             "difference_ci95": [diff_stats["ci95_low"], diff_stats["ci95_high"]],
-            "difference_bootstrap_p": diff_stats["bootstrap_p"],
+            "difference_permutation_method": diff_permutation["method"],
+            "difference_permutation_p": float(diff_permutation["p_value"]),
+            "difference_permutation_samples": int(diff_permutation["n_permutations"]),
+            "difference_permutation_seed": int(diff_permutation["seed"]),
             "clearance_slope_per_m": slope_stats["slope_per_m"],
             "clearance_slope_per_mm": slope_stats["slope_per_mm"],
             "clearance_slope_ci95": [slope_stats["slope_ci95_low"], slope_stats["slope_ci95_high"]],
-            "slope_bootstrap_p": slope_stats["slope_bootstrap_p"],
+            "slope_permutation_method": slope_permutation["method"],
+            "slope_permutation_p": float(slope_permutation["p_value"]),
+            "slope_permutation_samples": int(slope_permutation["n_permutations"]),
+            "slope_permutation_seed": int(slope_permutation["seed"]),
             "E_h_vs_h15": slope_stats["E"],
             "E_h_vs_h15_ci95": [slope_stats["E_ci95_low"], slope_stats["E_ci95_high"]],
         }
@@ -734,6 +910,9 @@ def analyze_b2_split(
     for horizon, adjusted_diff, adjusted_slope in zip(comparison_horizons, holm_diff, holm_slope):
         secondary[str(horizon)]["difference_holm_adjusted_p"] = float(adjusted_diff)
         secondary[str(horizon)]["slope_holm_adjusted_p"] = float(adjusted_slope)
+        secondary[str(horizon)]["holm_correction_scope"] = (
+            "four h-vs-h15 comparisons; p-values from state-level permutation tests"
+        )
 
     categorical = _categorical_interaction(
         x, state_means, state_ids, horizons, 15, n_bootstrap, seed + 300
@@ -769,6 +948,8 @@ def analyze_b2_split(
         }
 
     snapshot_summary = {
+        "marker": validation.get("marker"),
+        "scientific_data": validation.get("scientific_data"),
         "all_passed": bool(validation.get("all_passed")),
         "n_states": int(validation.get("n_states", len(states))),
         "max_state_abs_error": max(
@@ -808,16 +989,26 @@ def analyze_b2_split(
     output: Dict[str, Any] = {
         "split": split,
         "marker": "B2",
-        "protocol_version": "B2_PROTOCOL_REVISION_20261116",
+        "protocol_version": B2_PROTOCOL_VERSION,
         "records_file": records_path.name,
         "state_manifest_file": state_path.name,
-        "run_manifest_file": "b2_{}_run.json".format(split) if run_manifest else None,
+        "run_manifest_file": manifest_path.name,
+        "run_manifest_sha256": hashlib.sha256(manifest_path.read_bytes()).hexdigest(),
+        "b1_full_manifest_sha256": b1_full_manifest.get("_manifest_sha256"),
+        "config_fingerprint": B2_CONFIG_FINGERPRINT,
         "n_states": len(state_ids),
         "n_branch_episodes": len(records),
         "horizons": horizons,
         "reference_horizon": reference,
         "repeats_per_state_horizon": repeats,
         "bootstrap_samples_requested": int(n_bootstrap),
+        "bootstrap_samples_used": int(primary.get("bootstrap_samples_used", 0)),
+        "bootstrap_seed": int(seed),
+        "permutation_samples": int(frozen_permutations),
+        "permutation_method": (
+            "paired state-level sign-flip test for horizon differences; "
+            "state-level clearance permutation test for slopes"
+        ),
         "statistical_unit": "state_id; repeats nested within state x horizon",
         "clearance_range_m": [float(np.min(x)), float(np.max(x))],
         "clearance_c10_m": c10,
@@ -841,6 +1032,8 @@ def analyze_b2_split(
         "interpretation_limits": [
             "The independent unit is the matched physical state, not the 450 branch episodes.",
             "Repeats are nested within state x horizon; bootstrap resamples whole state IDs.",
+            "Hypothesis-test p-values come from state-level permutation nulls, not from "
+            "the bootstrap distribution.",
             "Discovery and confirmation are analyzed independently and are never pooled.",
             "A wide interval is inconclusive; non-significance is not proof of no effect.",
             "B2 does not train CAC or establish a deployment-time visual clearance estimator.",
@@ -850,7 +1043,12 @@ def analyze_b2_split(
     return output
 
 
-def write_b2_report(run_dir: Path, split: str, analysis: Mapping[str, Any]) -> Path:
+def write_b2_report(
+    run_dir: Path,
+    split: str,
+    analysis: Mapping[str, Any],
+    filename: str = None,
+) -> Path:
     run_dir = Path(run_dir)
     primary = analysis["primary"]
     lines = [
@@ -918,7 +1116,17 @@ def write_b2_report(run_dir: Path, split: str, analysis: Mapping[str, Any]) -> P
             primary["clearance_c10_m"], primary["clearance_c90_m"]
         ),
         "",
+        "Statistical method: 5,000 state-cluster bootstrap resamples for confidence intervals; "
+        "{:,} state-level clearance permutations for the slope null; slope permutation p={:.6g}. "
+        "E has the same permutation p because c10/c90 are fixed.".format(
+            int(primary["permutation_samples"]), primary["slope_permutation_p"]
+        ),
+        "",
         "## Secondary h-vs-h15 comparisons",
+        "",
+        "CIs: state-cluster bootstrap. p-values: paired sign-flip (difference) and clearance "
+        "permutation (slope), each with {:,} permutations; Holm correction over the four "
+        "h-vs-h15 comparisons.".format(int(primary["permutation_samples"])),
         "",
         "| h | Mean success difference vs h=15 | 95% CI | Holm p (difference) | Clearance slope / m | 95% CI | Holm p (slope) |",
         "|---:|---:|---|---:|---:|---|---:|",
@@ -991,7 +1199,7 @@ def write_b2_report(run_dir: Path, split: str, analysis: Mapping[str, Any]) -> P
     ]
     lines.extend("- " + item for item in analysis["interpretation_limits"])
     lines.append("")
-    path = run_dir / "b2_{}_report.md".format(split)
+    path = run_dir / (filename or "b2_{}_report.md".format(split))
     path.write_text("\n".join(lines), encoding="utf-8")
     return path
 

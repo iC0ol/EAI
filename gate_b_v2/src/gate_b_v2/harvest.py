@@ -11,6 +11,7 @@ from typing import Any, Dict, List, Mapping, Optional, Sequence
 
 import numpy as np
 
+from .authorization import validate_formal_authorization
 from .b2_protocol import (
     assert_state_seed_in_split,
     discovery_confirmation_seed_ranges,
@@ -44,7 +45,7 @@ from .locks import (
     build_b2_run_manifest,
     load_b1_full_manifest,
 )
-from .policy import predict_full_future_chunk
+from .policy import predict_full_future_chunk, reset_policy_or_block
 from .snapshot import save_snapshot
 
 
@@ -107,6 +108,7 @@ def _candidate_record(
         "snapshot_schema_version": int(snapshot["schema_version"]),
         "controller_gripper_capture_audit": snapshot.get("controller_gripper_audit", []),
         "snapshot_capabilities": snapshot.get("snapshot_capabilities", {}),
+        "policy_reset_verified": True,
         "preflight": bool(preflight),
         "scientific_data": not bool(preflight),
     }
@@ -136,10 +138,7 @@ def run_source_episode(
     source_horizon = int(experiment.config["b2"]["source_horizon"])
     seed_everything(int(source_seed))
     env.reset(int(source_seed))
-    try:
-        experiment.policy.reset()
-    except Exception:
-        pass
+    reset_policy_or_block(experiment.policy)
 
     rs_env = env.robosuite_env
     previous = compute_square_geometry(rs_env)
@@ -222,6 +221,34 @@ def run_source_episode(
     return None
 
 
+def _check_no_partial_harvest_artifacts(output_dir: Path, split: str) -> None:
+    """Refuse to continue in a directory containing any prior harvest artifact.
+
+    A failed or interrupted harvest must be rerun in a brand-new run directory.
+    This function never deletes or cleans old data.
+    """
+    candidates = [
+        output_dir / "b2_{}_harvest_manifest.json".format(split),
+        output_dir / "b2_{}_candidates.json".format(split),
+        output_dir / "b2_{}_state_manifest.jsonl".format(split),
+        output_dir / "b2_{}_harvest_summary.json".format(split),
+        output_dir / "b2_{}_status.json".format(split),
+        output_dir / "b2_{}_episodes.jsonl".format(split),
+        output_dir / "b2_{}_run.json".format(split),
+    ]
+    snapshot_dir = output_dir / "snapshots" / split
+    existing = [str(path) for path in candidates if path.exists()]
+    if snapshot_dir.exists():
+        existing.append(str(snapshot_dir))
+    if existing:
+        raise RuntimeError(
+            "Refusing to overwrite prior B2 {} harvest artifacts in {}: {}. "
+            "Use a brand-new run directory; old data is never deleted automatically.".format(
+                split, output_dir, existing
+            )
+        )
+
+
 def harvest_split(experiment: Any, split: str) -> Path:
     """Harvest and deterministically select 30 states for one split."""
     if split not in ("discovery", "confirmation"):
@@ -232,13 +259,18 @@ def harvest_split(experiment: Any, split: str) -> Path:
     manifest_path = output_dir / "b2_{}_state_manifest.jsonl".format(split)
     candidates_path = output_dir / "b2_{}_candidates.json".format(split)
     summary_path = output_dir / "b2_{}_harvest_summary.json".format(split)
+
+    # Formal harvesting is impossible without a same-directory PASS preflight and
+    # a researcher-created split authorization file.
+    validate_formal_authorization(
+        output_dir,
+        split,
+        experiment.manifest,
+        config=config,
+        project_root=experiment.project_root,
+    )
+    _check_no_partial_harvest_artifacts(output_dir, split)
     ensure_new_records_path(manifest_path)
-    if candidates_path.exists() or summary_path.exists():
-        raise RuntimeError(
-            "Refusing to overwrite B2 {} harvest artifacts in {}; use a new run directory".format(
-                split, output_dir
-            )
-        )
 
     config_manifest_path = Path(str(config["paths"]["b1_full_manifest"]))
     if not config_manifest_path.is_absolute():

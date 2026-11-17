@@ -25,6 +25,7 @@ from .core import (
     write_json,
 )
 from .actions import undo_transform_action
+from .authorization import validate_formal_authorization
 from .b2_protocol import (
     branch_order,
     branch_order_seed,
@@ -41,7 +42,7 @@ from .locks import (
     load_b1_full_manifest,
     record_environment_fields,
 )
-from .policy import load_diffusion_policy_checkpoint, predict_full_future_chunk
+from .policy import load_diffusion_policy_checkpoint, predict_full_future_chunk, reset_policy_or_block
 from .snapshot import (
     load_snapshot,
     validate_snapshot_restore,
@@ -195,10 +196,7 @@ class GateBExperiment:
         seed_everything(int(seed))
         initial_obs = self.env.reset(int(seed))
         initial_state_hash = self.env.initial_state_hash()
-        try:
-            self.policy.reset()
-        except Exception:
-            pass
+        reset_policy_or_block(self.policy)
 
         frames: List[np.ndarray] = []
         capture = video_path is not None and bool(self.config["runtime"].get("capture_video", True))
@@ -454,6 +452,7 @@ class GateBExperiment:
                 write_json(validation_path, {
                     "split": split,
                     "marker": "PREFLIGHT" if split == "preflight" else "B2",
+                    "scientific_data": bool(split != "preflight"),
                     "all_passed": False,
                     "per_state": per_state,
                     "thresholds": {
@@ -471,6 +470,7 @@ class GateBExperiment:
         write_json(validation_path, {
             "split": split,
             "marker": "PREFLIGHT" if split == "preflight" else "B2",
+            "scientific_data": bool(split != "preflight"),
             "all_passed": True,
             "n_states": len(states),
             "per_state": per_state,
@@ -496,10 +496,7 @@ class GateBExperiment:
     ) -> Dict[str, Any]:
         # Restore the same snapshot anew before every horizon x repeat branch.
         self.env.restore(snapshot)
-        try:
-            self.policy.reset()
-        except Exception:
-            pass
+        reset_policy_or_block(self.policy)
         call_index = 0
         first_commitment = True
         env_done = False
@@ -542,6 +539,7 @@ class GateBExperiment:
             "randomized_order_index": int(randomized_order_index),
             "horizon_order": [int(value) for value in horizon_order],
             "policy_noise_seed_schedule": noise_schedule,
+            "policy_reset_verified": True,
             "success": bool(self.env.success(threshold)),
             "success_seen": bool(self.env.success_seen),
             "success_error": self.env.success_error,
@@ -581,6 +579,14 @@ class GateBExperiment:
         if split not in ("discovery", "confirmation"):
             raise ValueError("split must be discovery or confirmation")
         gate = self._stage_gate()
+        # Revalidate authorization at execution time, not only in the CLI.
+        validate_formal_authorization(
+            self.run_dir,
+            split,
+            self.manifest,
+            config=self.config,
+            project_root=self.project_root,
+        )
         from .core import load_jsonl
 
         config_manifest_path = Path(str(self.config["paths"]["b1_full_manifest"]))

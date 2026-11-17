@@ -75,6 +75,7 @@ b2:
   repeat_seed_base: 1000000
   repeat_seed_stride: 17
   bootstrap_samples: 5000
+  permutation_samples: 100000
   practical_effect_threshold: 0.08
   snapshot_validation:
     state_atol: 1.0e-7
