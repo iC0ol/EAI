@@ -171,8 +171,26 @@ Source Archive Audit (clean extraction under `/tmp/gate_b_v2_archive_audit`):
 
 ## 6. GitHub CI
 
-CI result placeholder: to be replaced with the actual GitHub Actions run IDs and
-status after pushing this revision.
+GitHub Actions (`Gate B v2 source audit`) for commit
+`ae4a973bc6e381ba75f87f7c86c826aff79c148a`:
+
+| Trigger | Run ID | Result |
+|---|---:|---|
+| Push to `codex/b2-protocol-20261116` | `44017383378` | **success** |
+| Pull request event for the same commit | `44017391408` | **success** |
+
+Both jobs passed in the push run:
+
+- `current-harness-tests` — success (37 s);
+- `source-archive-audit` — success (41 s), including archive SHA check,
+  clean extraction, source compilation and extracted-archive tests.
+
+The only annotation was the GitHub Actions Node.js 20 deprecation notice; it
+does not affect the test or archive audit result.
+
+The CI result above is for the code/evidence commit. Any later documentation-only
+commit (including this report's CI-result update) does not change
+`src/gate_b_v2`, the source tree fingerprint or `gate_b_v2_source.tar.xz`.
 
 ## 7. Authorization status
 

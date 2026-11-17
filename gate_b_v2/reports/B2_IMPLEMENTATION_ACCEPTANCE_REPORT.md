@@ -360,6 +360,10 @@ Source Archive Audit (clean extraction under `/tmp/gate_b_v2_archive_audit`):
 - the workspace test run is **210 passed** because the vendored DP source is
   present locally.
 
+GitHub Actions for commit `ae4a973bc6e381ba75f87f7c86c826aff79c148a`:
+push run `44017383378` and pull-request run `44017391408` both **succeeded**
+(`current-harness-tests` and `source-archive-audit`).
+
 ## 9. Unresolved issues and limitations
 
 - **The B2 code has not passed the second independent review.** This report
