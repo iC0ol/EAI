@@ -63,3 +63,12 @@ def test_image_camera_names_fail_closed_without_rgb():
 
     with pytest.raises(RuntimeError, match="no RGB image"):
         image_camera_names({"obs": {"robot0_eef_pos": {"shape": [3]}}})
+
+
+def test_b2_success_predicate_exception_does_not_become_a_task_failure():
+    import pytest
+
+    env = _episode_env(_RobomimicEnv(error=RuntimeError("bad state")))
+    with pytest.raises(RuntimeError, match="B2 task success predicate failed"):
+        env.success(strict=True)
+    assert env.success_error == "RuntimeError('bad state')"

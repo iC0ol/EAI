@@ -24,6 +24,7 @@ from .locks import (
     validate_b2_config,
     validate_b2_run_manifest,
 )
+from .snapshot import require_passed_snapshot_validation
 
 PREFLIGHT_SUMMARY_FILENAME = "b2_preflight_summary.json"
 GEOMETRY_AUDIT_FILENAME = "b2_geometry_audit.json"
@@ -154,6 +155,7 @@ def validate_preflight_gate(
         "geometry_audit", "geometry_status", "geometry_audit_sha256",
         "snapshot_validation", "snapshot_validation_sha256",
         "snapshot_validation_all_passed", "gate_reached",
+        "snapshot_sha256",
         "environment_fingerprint", "environment_fingerprint_sha256",
     ), "B2 preflight summary")
     if summary.get("marker") != "PREFLIGHT":
@@ -213,12 +215,10 @@ def validate_preflight_gate(
     validation = _load_json(validation_path, "B2 preflight snapshot validation")
     if sha256_file(validation_path) != str(summary.get("snapshot_validation_sha256")):
         raise AuthorizationError("B2 snapshot validation SHA256 does not match the preflight summary")
-    if bool(validation.get("all_passed")) is not True:
-        raise AuthorizationError("B2 snapshot validation all_passed is not true")
-    if validation.get("marker") != "PREFLIGHT":
-        raise AuthorizationError("B2 snapshot validation marker is not PREFLIGHT")
-    if bool(validation.get("scientific_data", True)) is not False:
-        raise AuthorizationError("B2 snapshot validation must have scientific_data=false")
+    try:
+        require_passed_snapshot_validation(validation, "preflight", {"pre_299999": summary["snapshot_sha256"]})
+    except RuntimeError as exc:
+        raise AuthorizationError(str(exc)) from exc
 
     recorded_environment = summary.get("environment_fingerprint")
     if not isinstance(recorded_environment, dict):
@@ -353,6 +353,7 @@ def validate_confirmation_authorization(
         "episodes": discovery_dir / "b2_discovery_episodes.jsonl",
         "states": discovery_dir / "b2_discovery_state_manifest.jsonl",
         "run_manifest": discovery_dir / "b2_discovery_run.json",
+        "snapshot_validation": discovery_dir / "b2_discovery_snapshot_validation.json",
         "summary": discovery_dir / "b2_discovery_summary.json",
         "status": discovery_dir / "b2_discovery_status.json",
         "analysis": discovery_dir / "b2_discovery_analysis.json",
@@ -382,6 +383,13 @@ def validate_confirmation_authorization(
     discovery_states = load_jsonl(required_discovery["states"])
     discovery_records = load_jsonl(required_discovery["episodes"])
     validate_state_manifest(discovery_states, "discovery", config)
+    validation = _load_json(required_discovery["snapshot_validation"], "B2 discovery snapshot validation")
+    try:
+        require_passed_snapshot_validation(
+            validation, "discovery", {state["state_id"]: state["snapshot_sha256"] for state in discovery_states},
+        )
+    except RuntimeError as exc:
+        raise AuthorizationError(str(exc)) from exc
     validate_b2_records(
         discovery_records,
         discovery_states,

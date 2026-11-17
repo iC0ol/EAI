@@ -29,7 +29,7 @@ from .locks import (
     load_b1_full_manifest,
     validate_b2_config,
 )
-from .runner import GateBExperiment, _resolve_runtime_paths
+from .runner import GateBExperiment, _resolve_runtime_paths, ensure_new_b2_branch_outputs
 
 
 def _project_root() -> Path:
@@ -69,7 +69,10 @@ def _new_run_dir(config: Dict[str, Any], project_root: Path, explicit: Optional[
     return output_root / utc_run_id()
 
 
-def _build_experiment(args: argparse.Namespace, config: Dict[str, Any], require_existing: bool = False) -> GateBExperiment:
+def _build_experiment(
+    args: argparse.Namespace, config: Dict[str, Any], require_existing: bool = False,
+    branch_split: Optional[str] = None,
+) -> GateBExperiment:
     project_root = _project_root()
     dp_root, checkpoint, dataset = _resolve_runtime_paths(
         config, project_root,
@@ -78,6 +81,8 @@ def _build_experiment(args: argparse.Namespace, config: Dict[str, Any], require_
     run_dir = _new_run_dir(config, project_root, getattr(args, "run_dir", None))
     if require_existing and not run_dir.is_dir():
         raise FileNotFoundError("Run directory does not exist: {}".format(run_dir))
+    if branch_split is not None:
+        ensure_new_b2_branch_outputs(run_dir, branch_split)
     return GateBExperiment(
         config=config,
         project_root=project_root,
@@ -86,6 +91,7 @@ def _build_experiment(args: argparse.Namespace, config: Dict[str, Any], require_
         dataset=dataset,
         run_dir=run_dir,
         max_steps_override=args.max_steps,
+        write_environment_manifest=branch_split is None,
     )
 
 
@@ -165,7 +171,9 @@ def _cmd_b1(args: argparse.Namespace) -> int:
     return 0
 
 
-def _build_b2_experiment(args: argparse.Namespace, require_existing: bool) -> GateBExperiment:
+def _build_b2_experiment(
+    args: argparse.Namespace, require_existing: bool, branch_split: Optional[str] = None,
+) -> GateBExperiment:
     """Build the B2 experiment from the fixed config only.
 
     B2 deliberately exposes no checkpoint/dataset/DP-root/max-steps/device or
@@ -180,7 +188,7 @@ def _build_b2_experiment(args: argparse.Namespace, require_existing: bool) -> Ga
         max_steps=None,
         run_dir=args.run_dir,
     )
-    return _build_experiment(locked_args, config, require_existing=require_existing)
+    return _build_experiment(locked_args, config, require_existing=require_existing, branch_split=branch_split)
 
 
 def _b1_full_manifest_for(config: Dict[str, Any], project_root: Path) -> Dict[str, Any]:
@@ -225,15 +233,8 @@ def _cmd_b2_harvest(args: argparse.Namespace) -> int:
 
 
 def _cmd_b2(args: argparse.Namespace) -> int:
-    experiment = _build_b2_experiment(args, require_existing=True)
+    experiment = _build_b2_experiment(args, require_existing=True, branch_split=args.split)
     try:
-        validate_formal_authorization(
-            experiment.run_dir,
-            args.split,
-            experiment.manifest,
-            config=experiment.config,
-            project_root=experiment.project_root,
-        )
         path = experiment.run_b2(args.split)
         print("B2 {} branch episodes written to {}".format(args.split, path))
     finally:
@@ -360,6 +361,8 @@ def _cmd_b2_preflight(args: argparse.Namespace) -> int:
             "fallback_used": bool(fallback_used),
             "snapshot_file": snapshot_relative,
             "snapshot_sha256": record["snapshot_sha256"],
+            "source_step": record["source_step"],
+            "snapshot_schema_version": record["snapshot_schema_version"],
             "snapshot_validation": validation_path.name,
             "snapshot_validation_sha256": sha256_file(validation_path),
             "snapshot_validation_all_passed": bool(validation["all_passed"]),
@@ -376,7 +379,9 @@ def _cmd_b2_preflight(args: argparse.Namespace) -> int:
                 "and cannot make preflight PASS."
             )
         elif not validation["all_passed"]:
-            summary["reason"] = "Snapshot restore or deterministic replay validation failed."
+            summary["reason"] = "Independent snapshot validation failed for {}.".format(
+                validation["failed_states"]
+            )
         write_json(preflight_dir / "b2_preflight_summary.json", summary)
         print(json.dumps(summary, indent=2))
         return 0 if passed else 2
@@ -453,7 +458,8 @@ def _cmd_analyze(args: argparse.Namespace) -> int:
     # The B1 --config/--bootstrap-samples overrides above cannot affect B2.
     b2_config = _load_config(None)
     for split in ("discovery", "confirmation"):
-        if (run_dir / "b2_{}_episodes.jsonl".format(split)).is_file():
+        if any((run_dir / "b2_{}_{}".format(split, suffix)).is_file()
+               for suffix in ("episodes.jsonl", "run.json", "status.json")):
             analysis = analyze_b2_split(
                 run_dir, split, seed=20261110, config=b2_config
             )

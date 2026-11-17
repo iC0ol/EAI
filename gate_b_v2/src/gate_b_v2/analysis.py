@@ -21,6 +21,7 @@ from .locks import (
     validate_b2_config,
     validate_b2_run_manifest,
 )
+from .snapshot import require_passed_snapshot_validation
 
 
 def _bootstrap_mean_ci(values: np.ndarray, n_boot: int, seed: int) -> Tuple[float, float]:
@@ -716,6 +717,7 @@ def _b2_inputs(
     state_path = run_dir / "b2_{}_state_manifest.jsonl".format(split)
     validation_path = run_dir / "b2_{}_snapshot_validation.json".format(split)
     manifest_path = run_dir / "b2_{}_run.json".format(split)
+    status_path = run_dir / "b2_{}_status.json".format(split)
     if not records_path.is_file():
         raise FileNotFoundError("B2 {} branch records not found: {}".format(split, records_path))
     if not state_path.is_file():
@@ -740,20 +742,14 @@ def _b2_inputs(
     validate_b2_run_manifest(run_manifest, split, b1_full_manifest)
     validate_state_manifest(states, split, config)
     validation = json.loads(validation_path.read_text(encoding="utf-8"))
-    if validation.get("marker") != "B2":
-        raise RuntimeError("B2 {} snapshot validation marker is not B2".format(split))
-    if bool(validation.get("scientific_data")) is not True:
-        raise RuntimeError("B2 {} snapshot validation is not formally marked".format(split))
-    if not validation.get("all_passed"):
-        raise RuntimeError(
-            "B2 {} snapshot validation did not pass; analysis is BLOCKED".format(split)
-        )
-    if int(validation.get("n_states", -1)) != int(config["b2"]["selected_states"]):
-        raise RuntimeError(
-            "B2 {} snapshot validation n_states is not {}".format(
-                split, config["b2"]["selected_states"]
-            )
-        )
+    require_passed_snapshot_validation(
+        validation, split, {state["state_id"]: state["snapshot_sha256"] for state in states},
+    )
+    status = json.loads(status_path.read_text(encoding="utf-8"))
+    if (status.get("status") != "COMPLETE" or status.get("split") != split
+            or status.get("completeness_verified") is not True
+            or status.get("snapshot_validation_all_passed") is not True):
+        raise RuntimeError("B2 {} branch status is not COMPLETE; analysis is BLOCKED".format(split))
     validate_b2_records(records, states, split, config, runtime_manifest=run_manifest)
     return (
         records, states, validation, run_manifest,
@@ -799,7 +795,7 @@ def analyze_b2_split(
     clearance_by_state: Dict[str, float] = {}
     for row in records:
         state_id = str(row["state_id"])
-        grouped[state_id][int(row["horizon"])].append(float(bool(row["success"])))
+        grouped[state_id][int(row["horizon"])].append(float(row["success"]))
         value = float(row["clearance_m"])
         if state_id in clearance_by_state and abs(clearance_by_state[state_id] - value) > 1e-9:
             raise ValueError("Clearance changed across branches for state {}".format(state_id))

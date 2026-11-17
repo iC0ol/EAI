@@ -1,10 +1,10 @@
 from __future__ import annotations
 
 import copy
-import hashlib
 from collections import deque
+from contextlib import contextmanager
 from pathlib import Path
-from typing import Any, Deque, Dict, List, Mapping, Optional, Sequence, Tuple
+from typing import Any, Deque, Dict, List, Mapping, Optional, Tuple
 
 import numpy as np
 
@@ -133,8 +133,25 @@ class EpisodeEnv:
     def policy_observation(self) -> Dict[str, np.ndarray]:
         return stack_observation_history(list(self.history), self.n_obs_steps, self.shape_meta)
 
-    def step(self, action: np.ndarray):
-        obs, reward, done, info = self.wrapper.step(np.asarray(action, dtype=np.float32))
+    def step(self, action: np.ndarray, *, strict: bool = False):
+        action = np.asarray(action, dtype=np.float32)
+        if strict and not np.isfinite(action).all():
+            raise RuntimeError("Non-finite B2 environment action")
+        if strict:
+            sim = self.robosuite_env.sim
+            previous_time = float(sim.data.time)
+        obs, reward, done, info = self.wrapper.step(action)
+        if strict:
+            if not isinstance(done, (bool, np.bool_)):
+                raise RuntimeError("Invalid B2 environment termination signal: {!r}".format(done))
+            if not np.isfinite(reward):
+                raise RuntimeError("Non-finite B2 environment reward: {!r}".format(reward))
+            if not np.isfinite(sim.get_state().flatten()).all() or not sim.data.time > previous_time:
+                raise RuntimeError("Invalid or non-advancing B2 simulator state after step")
+            if set(obs) != set(self.shape_meta["obs"]) or any(
+                not np.isfinite(value).all() for value in obs.values()
+            ):
+                raise RuntimeError("Missing, unexpected or non-finite B2 step observation")
         self.history.append({k: np.array(v, copy=True) for k, v in obs.items()})
         self.steps += 1
         self.max_reward = max(self.max_reward, float(reward))
@@ -143,14 +160,17 @@ class EpisodeEnv:
         if isinstance(success, Mapping):
             success = success.get("task", False)
         if not bool(success):
-            try:
-                success = self.robomimic_env.is_success().get("task", False)
-            except Exception:
-                success = False
+            if strict:
+                success = self.success(strict=True)
+            else:
+                try:
+                    success = self.robomimic_env.is_success().get("task", False)
+                except Exception:
+                    success = False
         self.success_seen = self.success_seen or bool(success)
         return obs, float(reward), bool(done), self.last_info
 
-    def success(self, threshold: Optional[float] = None) -> bool:
+    def success(self, threshold: Optional[float] = None, *, strict: bool = False) -> bool:
         # Use the robomimic/robosuite is_success task predicate on the final
         # simulator state, matching robomimic's own rollout evaluation. The sticky
         # success_seen flag is logged separately as a diagnostic, not as success.
@@ -158,8 +178,15 @@ class EpisodeEnv:
         # argument is retained for API compatibility but intentionally unused.
         try:
             value = self.robomimic_env.is_success()
+            if strict:
+                if isinstance(value, Mapping):
+                    value = value["task"]
+                if not isinstance(value, (bool, np.bool_)):
+                    raise ValueError("task success must be boolean, got {!r}".format(value))
         except Exception as exc:
             self.success_error = repr(exc)
+            if strict:
+                raise RuntimeError("B2 task success predicate failed: {}".format(self.success_error)) from exc
             return False
         self.success_error = None
         if isinstance(value, Mapping):
@@ -173,9 +200,43 @@ class EpisodeEnv:
     def current_sim_state(self) -> np.ndarray:
         return np.asarray(self.robomimic_env.get_state()["states"]).copy()
 
-    def snapshot(self, metadata: Optional[Mapping[str, Any]] = None) -> Dict[str, Any]:
+    @contextmanager
+    def track_b2_observation_pose(self):
+        """Remember the qpos used by the final Euler substep's forward kinematics."""
+        sim = self.robosuite_env.sim
+        if (sim.nsubsteps != 1 or sim.udd_callback is not None or sim.udd_state
+                or sim.substep_callback_ptr or int(sim.model.opt.integrator) != 0):
+            raise RuntimeError("B2 observation timing requires the locked single-substep Euler simulator")
+        pose = np.empty_like(sim.data.qpos)
+
+        def before_physics_step(live_sim):
+            pose[:] = live_sim.data.qpos
+            return {}
+
+        sim.udd_callback = before_physics_step
+        try:
+            yield pose
+        finally:
+            sim.udd_callback = None
+
+    def fresh_observation(self) -> Dict[str, np.ndarray]:
+        """Force robosuite sensors, including camera renders, at the live pose."""
+        rs_env = self.robosuite_env
+        cache = rs_env._obs_cache
+        rs_env._obs_cache = {}
+        try:
+            raw_obs = rs_env._get_observations(force_update=True)
+        finally:
+            rs_env._obs_cache = cache
+        obs = self.wrapper.get_observation(self.robomimic_env.get_observation(raw_obs))
+        return {key: np.array(value, copy=True) for key, value in obs.items()}
+
+    def snapshot(
+        self, metadata: Optional[Mapping[str, Any]] = None,
+        observation_qpos: Optional[np.ndarray] = None,
+    ) -> Dict[str, Any]:
         from .snapshot import capture_episode_snapshot
-        return capture_episode_snapshot(self, metadata=metadata)
+        return capture_episode_snapshot(self, metadata=metadata, observation_qpos=observation_qpos)
 
     def restore(self, snapshot: Mapping[str, Any]) -> Dict[str, np.ndarray]:
         from .snapshot import restore_episode_snapshot

@@ -3,6 +3,8 @@ from collections import defaultdict
 import numpy as np
 import pytest
 
+from b2_test_data import RUNTIME, branch_record, state_record
+
 from gate_b_v2.b2_protocol import (
     assert_state_seed_in_split,
     branch_order,
@@ -54,63 +56,19 @@ def _config():
 
 
 def _states(count=30, split="discovery", start=300000):
-    result = []
-    for index in range(count):
-        seed = start + index
-        result.append({
-            "state_id": state_id(split, seed),
-            "split": split,
-            "source_seed": seed,
-            "source_step": 100 + index,
-            "source_horizon": 8,
-            "stage_gate_version": "B2_GEOMETRY_GATE_V1_20261116",
-            "clearance_m": -0.01 + 0.001 * index,
-            "z_gap_m": 0.005,
-            "dx_m": 0.0,
-            "dy_m": 0.0,
-            "d_xy_m": 0.01,
-            "relative_yaw_rad": 0.0,
-            "t_nut_m": 0.02,
-            "r_hole_m": 0.032,
-            "r_peg_m": 0.022,
-            "snapshot_file": "snapshots/{}.pkl.gz".format(
-                state_id(split, seed)
-            ),
-            "snapshot_sha256": "sha-{}".format(seed),
-        })
-    return result
+    return [
+        state_record(split, start + index, 100 + index, -0.01 + 0.001 * index)
+        for index in range(count)
+    ]
 
 
 def _records(states, config):
-    records = []
-    for state in states:
-        for repeat_index in range(int(config["b2"]["repeats_per_state_horizon"])):
-            order = branch_order(config, int(state["source_seed"]), repeat_index)
-            order_seed = branch_order_seed(config, int(state["source_seed"]), repeat_index)
-            common_repeat_seed = repeat_seed(config, int(state["source_seed"]), repeat_index)
-            for order_index, horizon in enumerate(order):
-                records.append({
-                    "split": state["split"],
-                    "state_id": state["state_id"],
-                    "source_seed": state["source_seed"],
-                    "horizon": horizon,
-                    "repeat_index": repeat_index,
-                    "repeat_seed": common_repeat_seed,
-                    "branch_order_seed": order_seed,
-                    "randomized_order_index": order_index,
-                    "continuation_horizon": 15,
-                    "preflight": False,
-                    "policy_reset_verified": True,
-                    "snapshot_sha256": state["snapshot_sha256"],
-                    "clearance_m": state["clearance_m"],
-                    "z_gap_m": state["z_gap_m"],
-                    "dx_m": state["dx_m"],
-                    "dy_m": state["dy_m"],
-                    "d_xy_m": state["d_xy_m"],
-                    "relative_yaw_rad": state["relative_yaw_rad"],
-                    "policy_noise_seed_schedule": [1000 + call for call in range(3)],
-                })
-    return records
+    return [
+        branch_record(config, state, repeat, horizon)
+        for state in states
+        for repeat in range(config["b2"]["repeats_per_state_horizon"])
+        for horizon in branch_order(config, state["source_seed"], repeat)
+    ]
 
 
 def test_frozen_seed_pools_are_exact_and_disjoint():
@@ -174,7 +132,7 @@ def test_complete_b2_records_pass_strict_gate():
     states = _states()
     records = _records(states, config)
     assert len(records) == 30 * 5 * 3
-    summary = validate_b2_records(records, states, "discovery", config)
+    summary = validate_b2_records(records, states, "discovery", config, RUNTIME)
     assert summary["completeness_verified"] is True
     assert summary["n_branch_records"] == 450
 
@@ -185,21 +143,21 @@ def test_missing_duplicate_extra_and_mixed_split_are_rejected():
     records = _records(states, config)
 
     with pytest.raises(ValueError, match="missing"):
-        validate_b2_records(records[:-1], states, "discovery", config)
+        validate_b2_records(records[:-1], states, "discovery", config, RUNTIME)
 
     duplicate = records + [dict(records[0])]
     with pytest.raises(ValueError, match="Duplicate"):
-        validate_b2_records(duplicate, states, "discovery", config)
+        validate_b2_records(duplicate, states, "discovery", config, RUNTIME)
 
     extra = records + [dict(records[0], horizon=2, repeat_index=0,
                              randomized_order_index=4)]
     with pytest.raises(ValueError, match="Duplicate|missing|extra"):
-        validate_b2_records(extra, states, "discovery", config)
+        validate_b2_records(extra, states, "discovery", config, RUNTIME)
 
     mixed = [dict(row) for row in records]
     mixed[0]["split"] = "confirmation"
     with pytest.raises(ValueError, match="not from split"):
-        validate_b2_records(mixed, states, "discovery", config)
+        validate_b2_records(mixed, states, "discovery", config, RUNTIME)
 
 
 def test_state_manifest_requires_exactly_thirty_and_split_isolation():
@@ -223,3 +181,55 @@ def test_common_repeat_seed_is_shared_across_horizons():
         grouped[(row["state_id"], row["repeat_index"])].add(row["repeat_seed"])
     assert all(len(values) == 1 for values in grouped.values())
     assert len({next(iter(values)) for values in grouped.values()}) > 1
+
+
+@pytest.mark.parametrize(("field", "invalid", "message"), [
+    ("success_error", "predicate failed", "success_error"),
+    ("success", 0, "boolean success"),
+    ("max_reward", float("nan"), "Non-finite"),
+    ("wall_time_s", float("inf"), "Non-finite"),
+    ("policy_noise_seed_schedule", [0, float("-inf")], "Non-finite"),
+    ("termination", "simulation_error", "termination"),
+    ("steps_from_episode_start", 501, "step counts"),
+    ("steps_from_episode_start", 499.0, "integer"),
+    ("steps_after_branch", 0, "step counts"),
+    ("source_step", -1, "step counts"),
+    ("policy_calls_after_branch", 1, "policy call count"),
+    ("policy_calls_after_branch", False, "integer"),
+    ("policy_reset_verified", False, "policy reset"),
+    ("snapshot_sha256", "incorrect", "snapshot SHA256"),
+    ("checkpoint_sha256", "incorrect", "environment mismatch"),
+    ("clearance_x_positive_m", 4.2, "inconsistent geometry"),
+    ("randomized_order_index", 7, "horizon order"),
+])
+def test_abnormal_rows_are_rejected_from_an_otherwise_complete_split(field, invalid, message):
+    config = _config()
+    states = _states()
+    records = _records(states, config)
+    records[0][field] = invalid
+    with pytest.raises(ValueError, match=message):
+        validate_b2_records(records, states, "discovery", config, RUNTIME)
+
+
+def test_missing_statistics_field_is_rejected():
+    config = _config()
+    states = _states()
+    records = _records(states, config)
+    records[0].pop("wall_time_s")
+    with pytest.raises(ValueError, match="wall_time_s"):
+        validate_b2_records(records, states, "discovery", config, RUNTIME)
+
+
+def test_environment_termination_and_max_steps_counts_must_agree():
+    config = _config()
+    states = _states()
+    records = _records(states, config)
+    row = records[0]
+    row["steps_from_episode_start"] = row["source_step"] + 1
+    row["steps_after_branch"] = 1
+    row["policy_calls_after_branch"] = 1
+    row["policy_noise_seed_schedule"] = row["policy_noise_seed_schedule"][:1]
+    with pytest.raises(ValueError, match="termination"):
+        validate_b2_records(records, states, "discovery", config, RUNTIME)
+    row["termination"] = "environment_done"
+    assert validate_b2_records(records, states, "discovery", config, RUNTIME)["n_branch_records"] == 450

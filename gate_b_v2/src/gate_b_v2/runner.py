@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import math
 import time
 from pathlib import Path
 from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple
@@ -16,6 +15,7 @@ from .core import (
     ensure_new_records_path,
     environment_fingerprint,
     jsonable,
+    load_jsonl,
     policy_noise_seed,
     seed_everything,
     seed_policy_rng,
@@ -27,9 +27,11 @@ from .core import (
 from .actions import undo_transform_action
 from .authorization import validate_formal_authorization
 from .b2_protocol import (
+    B2_BRANCH_GEOMETRY_FIELDS,
     branch_order,
     branch_order_seed,
     repeat_seed,
+    validate_b2_record,
     validate_b2_records,
     validate_state_manifest,
 )
@@ -45,9 +47,30 @@ from .locks import (
 from .policy import load_diffusion_policy_checkpoint, predict_full_future_chunk, reset_policy_or_block
 from .snapshot import (
     load_snapshot,
+    require_passed_snapshot_validation,
+    validate_snapshot_reference,
     validate_snapshot_restore,
     verify_snapshot_sha256,
 )
+
+
+def ensure_new_b2_branch_outputs(run_dir: Path, split: str) -> None:
+    if split not in ("discovery", "confirmation"):
+        raise ValueError("split must be discovery or confirmation")
+    names = ["b2_{}_{}".format(split, suffix) for suffix in (
+        "run.json", "episodes.jsonl", "snapshot_validation.json", "summary.json",
+        "status.json", "analysis.json", "report.md",
+    )]
+    if split == "discovery":
+        names.append("B2_REPORT.md")
+    names.extend([name + ".tmp" for name in names if name.endswith(".json")])
+    conflicts = [name for name in names if (run_dir / name).exists() or (run_dir / name).is_symlink()]
+    if conflicts:
+        raise FileExistsError(
+            "Refusing to overwrite B2 {} branch outputs in {}: {}. Use a new run directory.".format(
+                split, run_dir, ", ".join(conflicts),
+            )
+        )
 
 
 def _get_cfg_value(cfg: Any, dotted: str, default: Any = None) -> Any:
@@ -84,6 +107,7 @@ class GateBExperiment:
         dataset: Path,
         run_dir: Path,
         max_steps_override: Optional[int] = None,
+        write_environment_manifest: bool = True,
     ):
         self.config = dict(config)
         self.project_root = Path(project_root).resolve()
@@ -152,7 +176,8 @@ class GateBExperiment:
             "max_steps": self.max_steps,
             "env_kwargs": self.env_meta.get("env_kwargs", {}),
         })
-        write_json(self.run_dir / "environment_manifest.json", self.manifest)
+        if write_environment_manifest:
+            write_json(self.run_dir / "environment_manifest.json", self.manifest)
 
     def close(self) -> None:
         self.env.close()
@@ -408,71 +433,54 @@ class GateBExperiment:
         geometry_tol = float(thresholds.get("geometry_atol", 1e-6))
         validation_path = self.run_dir / "b2_{}_snapshot_validation.json".format(split)
         per_state: Dict[str, Any] = {}
-        first = True
+        initialized = False
         for state_record in states:
-            snapshot_path = self._snapshot_path(state_record)
-            if not snapshot_path.is_file():
-                raise FileNotFoundError("Snapshot missing: {}".format(snapshot_path))
-            verify_snapshot_sha256(snapshot_path, str(state_record["snapshot_sha256"]))
-            snapshot = load_snapshot(snapshot_path)
-            if first:
-                # Initialise the renderer/live environment before the first reset_to.
-                self.env.reset(int(state_record["source_seed"]))
-                first = False
-            self.env.restore(snapshot)
-            # A fixed, non-branch probe seed makes the probe action reproducible.
-            seed_policy_rng(self.torch, 424242)
-            probe_chunk = predict_full_future_chunk(
-                self.policy,
-                self.torch,
-                self.env.policy_observation(),
-                self.device,
-                self.n_obs_steps,
-                self.prediction_horizon,
-            )
-            report = validate_snapshot_restore(
-                self.env,
-                snapshot,
-                self._env_action(probe_chunk[0]),
-                state_atol=state_atol,
-                observation_mean_abs_tol=observation_tol,
-                geometry_atol=geometry_tol,
-            )
-            per_state[str(state_record["state_id"])] = report
-            if not report["passed"]:
-                write_json(self.run_dir / "b2_{}_status.json".format(split), {
-                    "status": "BLOCKED",
-                    "split": split,
-                    "reason": "Snapshot/restore validation failed for state {}".format(
-                        state_record["state_id"]
-                    ),
-                    "failed_state": str(state_record["state_id"]),
-                    "validation": report,
-                })
-                write_json(validation_path, {
-                    "split": split,
-                    "marker": "PREFLIGHT" if split == "preflight" else "B2",
-                    "scientific_data": bool(split != "preflight"),
-                    "all_passed": False,
-                    "per_state": per_state,
-                    "thresholds": {
-                        "state_atol": state_atol,
-                        "observation_mean_abs_tol": observation_tol,
-                        "geometry_atol": geometry_tol,
-                    },
-                })
-                raise RuntimeError(
-                    "B2 BLOCKED: snapshot/restore validation failed for state {}; "
-                    "do not drop or replace the state after seeing outcomes".format(
-                        state_record["state_id"]
-                    )
+            state_id = str(state_record["state_id"])
+            try:
+                snapshot_path = self._snapshot_path(state_record)
+                snapshot = load_snapshot(snapshot_path, expected_sha256=state_record["snapshot_sha256"])
+                validate_snapshot_reference(snapshot, state_record)
+                if not initialized:
+                    self.env.reset(int(state_record["source_seed"]))
+                    initialized = True
+                # Use the original policy observation to choose a reproducible probe.
+                reset_policy_or_block(self.policy)
+                seed_policy_rng(self.torch, 424242)
+                probe_chunk = predict_full_future_chunk(
+                    self.policy,
+                    self.torch,
+                    snapshot["validation_reference"]["policy_observation"],
+                    self.device,
+                    self.n_obs_steps,
+                    self.prediction_horizon,
                 )
+                report = validate_snapshot_restore(
+                    self.env,
+                    snapshot,
+                    self._env_action(probe_chunk[0]),
+                    state_atol=state_atol,
+                    observation_mean_abs_tol=observation_tol,
+                    geometry_atol=geometry_tol,
+                )
+            except Exception as exc:
+                report = {
+                    "status": "BLOCKED",
+                    "passed": False,
+                    "error": "{}: {}".format(type(exc).__name__, exc),
+                    "source_step": state_record["source_step"],
+                }
+            report["snapshot_sha256"] = state_record["snapshot_sha256"]
+            per_state[state_id] = report
+
+        failed_states = [state_id for state_id, report in per_state.items() if not report["passed"]]
         write_json(validation_path, {
             "split": split,
             "marker": "PREFLIGHT" if split == "preflight" else "B2",
-            "scientific_data": bool(split != "preflight"),
-            "all_passed": True,
+            "scientific_data": split != "preflight",
+            "status": "PASS" if per_state and not failed_states else "BLOCKED",
+            "all_passed": bool(per_state) and not failed_states,
             "n_states": len(states),
+            "failed_states": failed_states,
             "per_state": per_state,
             "thresholds": {
                 "state_atol": state_atol,
@@ -496,6 +504,14 @@ class GateBExperiment:
     ) -> Dict[str, Any]:
         # Restore the same snapshot anew before every horizon x repeat branch.
         self.env.restore(snapshot)
+        source_step = int(state_record["source_step"])
+        original = snapshot["validation_reference"]["sim_state"]
+        restored = self.env.current_sim_state()
+        state_atol = self.config["b2"].get("snapshot_validation", {}).get("state_atol", 1e-7)
+        if (self.env.steps != source_step or snapshot["robosuite_internal"]["done"]
+                or original.shape != restored.shape or not np.isfinite(restored).all()
+                or not np.all(np.abs(original - restored) <= state_atol)):
+            raise RuntimeError("B2 restored branch start disagrees with the original snapshot reference")
         reset_policy_or_block(self.policy)
         call_index = 0
         first_commitment = True
@@ -514,9 +530,11 @@ class GateBExperiment:
                 self.policy, self.torch, self.env.policy_observation(), self.device,
                 self.n_obs_steps, self.prediction_horizon,
             )
+            if not np.isfinite(chunk).all():
+                raise RuntimeError("Non-finite B2 policy action chunk")
             execute_n = min(h, self.max_steps - self.env.steps)
             for action_index in range(execute_n):
-                _, _, done, _ = self.env.step(self._env_action(chunk[action_index]))
+                _, _, done, _ = self.env.step(self._env_action(chunk[action_index]), strict=True)
                 if done:
                     env_done = True
                     break
@@ -524,13 +542,16 @@ class GateBExperiment:
             first_commitment = False
         elapsed = time.perf_counter() - started
         threshold = float(self.config["evaluation"].get("success_threshold", 0.99))
-        geometry = state_record["geometry"]
+        success = self.env.success(threshold, strict=True)
+        if self.env.success_error:
+            raise RuntimeError("B2 task success predicate failed: {}".format(self.env.success_error))
         return {
             "phase": "B2",
             "split": split,
+            "preflight": False,
             "state_id": state_record["state_id"],
             "source_seed": int(state_record["source_seed"]),
-            "source_step": int(state_record["source_step"]),
+            "source_step": source_step,
             "horizon": int(first_horizon),
             "continuation_horizon": int(continuation_h),
             "repeat_index": int(repeat_index),
@@ -540,46 +561,23 @@ class GateBExperiment:
             "horizon_order": [int(value) for value in horizon_order],
             "policy_noise_seed_schedule": noise_schedule,
             "policy_reset_verified": True,
-            "success": bool(self.env.success(threshold)),
+            "success": success,
             "success_seen": bool(self.env.success_seen),
             "success_error": self.env.success_error,
             "max_reward": float(self.env.max_reward),
             "steps_from_episode_start": int(self.env.steps),
-            "steps_after_branch": int(self.env.steps - int(snapshot["episode"]["steps"])),
+            "steps_after_branch": int(self.env.steps - source_step),
             "policy_calls_after_branch": int(call_index),
             "wall_time_s": float(elapsed),
-            "clearance_m": float(geometry["clearance_m"]),
-            "clearance_x_positive_m": float(geometry["clearance_x_positive_m"]),
-            "clearance_x_negative_m": float(geometry["clearance_x_negative_m"]),
-            "clearance_y_positive_m": float(geometry["clearance_y_positive_m"]),
-            "clearance_y_negative_m": float(geometry["clearance_y_negative_m"]),
-            "dx_m": float(geometry["dx_m"]),
-            "dy_m": float(geometry["dy_m"]),
-            "d_xy_m": float(geometry["d_xy_m"]),
-            "relative_yaw_rad": float(geometry["relative_yaw_rad"]),
-            "z_gap_m": float(geometry["z_gap_m"]),
-            "nut_bottom_local_z_m": float(geometry["nut_bottom_local_z_m"]),
-            "peg_top_local_z_m": float(geometry["peg_top_local_z_m"]),
-            "t_nut_m": float(geometry["t_nut_m"]),
-            "nut_collision_thickness_m": float(geometry["nut_collision_thickness_m"]),
-            "r_hole_m": float(geometry["r_hole_m"]),
-            "r_peg_m": float(geometry["r_peg_m"]),
-            "hole_half_x_m": float(geometry["hole_half_x_m"]),
-            "hole_half_y_m": float(geometry["hole_half_y_m"]),
-            "peg_half_x_m": float(geometry["peg_half_x_m"]),
-            "peg_half_y_m": float(geometry["peg_half_y_m"]),
-            "geometry_fingerprint": str(geometry["geometry_fingerprint"]),
-            "aperture_bar_geom_ids": list(geometry["aperture_bar_geom_ids"]),
+            **{key: state_record["geometry"][key] for key in B2_BRANCH_GEOMETRY_FIELDS},
             "snapshot_sha256": state_record["snapshot_sha256"],
             "snapshot_schema_version": int(snapshot.get("schema_version", -1)),
             "termination": "environment_done" if env_done else "max_steps",
         }
 
     def run_b2(self, split: str) -> Path:
-        if split not in ("discovery", "confirmation"):
-            raise ValueError("split must be discovery or confirmation")
+        ensure_new_b2_branch_outputs(self.run_dir, split)
         gate = self._stage_gate()
-        # Revalidate authorization at execution time, not only in the CLI.
         validate_formal_authorization(
             self.run_dir,
             split,
@@ -587,11 +585,7 @@ class GateBExperiment:
             config=self.config,
             project_root=self.project_root,
         )
-        from .core import load_jsonl
-
-        config_manifest_path = Path(str(self.config["paths"]["b1_full_manifest"]))
-        if not config_manifest_path.is_absolute():
-            config_manifest_path = (self.project_root / config_manifest_path).resolve()
+        config_manifest_path = self.project_root / self.config["paths"]["b1_full_manifest"]
         b1_full_manifest = load_b1_full_manifest(config_manifest_path)
         b2_run_manifest = build_b2_run_manifest(
             config=self.config,
@@ -601,59 +595,66 @@ class GateBExperiment:
             command="b2-branch",
         )
         b2_run_manifest["stage_gate"] = dict(gate)
-        write_json(self.run_dir / "b2_{}_run.json".format(split), b2_run_manifest)
+        prefix = "b2_{}_".format(split)
+        run_path = self.run_dir / (prefix + "run.json")
+        status_path = self.run_dir / (prefix + "status.json")
+        records_path = self.run_dir / (prefix + "episodes.jsonl")
+        # Exclusive creation reserves this run even if two invocations pass the
+        # read-only precheck at the same time. The losing process writes nothing.
+        with run_path.open("x", encoding="utf-8") as stream:
+            json.dump(jsonable(b2_run_manifest), stream, indent=2, sort_keys=True, allow_nan=False)
+            stream.write("\n")
 
-        manifest_path = self.run_dir / "b2_{}_state_manifest.jsonl".format(split)
-        if not manifest_path.is_file():
-            raise FileNotFoundError("B2 {} state manifest not found: {}".format(split, manifest_path))
-        states = load_jsonl(manifest_path)
-        validate_state_manifest(states, split, self.config)
-
-        # Split isolation: if the other split's manifest is present in this run
-        # directory, no source seed may be shared.
-        other = "confirmation" if split == "discovery" else "discovery"
-        other_manifest = self.run_dir / "b2_{}_state_manifest.jsonl".format(other)
-        if other_manifest.is_file():
-            other_states = load_jsonl(other_manifest)
-            shared = {int(item["source_seed"]) for item in states} & {
-                int(item["source_seed"]) for item in other_states
-            }
-            if shared:
-                raise RuntimeError(
-                    "B2 discovery/confirmation state manifests share source seeds: {}".format(
-                        sorted(shared)
-                    )
-                )
-
-        validation_path = self._validate_all_b2_snapshots(states, split)
-        records_path = self.run_dir / "b2_{}_episodes.jsonl".format(split)
-        ensure_new_records_path(records_path)
-        env_fields = b2_record_environment_fields(b2_run_manifest)
-        horizons = [int(x) for x in self.config["b2"]["horizons"]]
-        repeats = int(self.config["b2"]["repeats_per_state_horizon"])
-
+        progress: Dict[str, Any] = {"stage": "harvest inputs"}
+        valid_records = 0
         try:
+            manifest_path = self.run_dir / (prefix + "state_manifest.jsonl")
+            harvest_path = self.run_dir / (prefix + "harvest_summary.json")
+            states = load_jsonl(manifest_path)
+            validate_state_manifest(states, split, self.config)
+            harvest = json.loads(harvest_path.read_text(encoding="utf-8"))
+            if (harvest.get("status") != "COMPLETE" or harvest.get("split") != split
+                    or harvest.get("manifest_file") != manifest_path.name
+                    or harvest.get("selected_source_seeds") != [item["source_seed"] for item in states]):
+                raise RuntimeError("B2 requires a completed Harvest for the selected state manifest")
+            env_fields = b2_record_environment_fields(b2_run_manifest)
             for state_record in states:
+                if any(state_record.get(key) != value for key, value in env_fields.items()):
+                    raise RuntimeError("B2 harvested environment mismatch for {}".format(state_record["state_id"]))
+
+            other = "confirmation" if split == "discovery" else "discovery"
+            other_manifest = self.run_dir / "b2_{}_state_manifest.jsonl".format(other)
+            if other_manifest.is_file():
+                other_states = load_jsonl(other_manifest)
+                for key in ("source_seed", "state_id", "snapshot_sha256"):
+                    shared = {item[key] for item in states} & {item[key] for item in other_states}
+                    if shared:
+                        raise RuntimeError("B2 split manifests share {} values: {}".format(key, sorted(shared)))
+
+            progress = {"stage": "snapshot validation"}
+            validation_path = self._validate_all_b2_snapshots(states, split)
+            validation = json.loads(validation_path.read_text(encoding="utf-8"))
+            if validation["all_passed"] is not True:
+                progress["failed_states"] = validation["failed_states"]
+                progress["snapshot_validation"] = validation_path.name
+                raise RuntimeError("Independent snapshot validation failed for {}".format(validation["failed_states"]))
+            require_passed_snapshot_validation(
+                validation, split, {state["state_id"]: state["snapshot_sha256"] for state in states},
+            )
+
+            progress = {"stage": "branch execution"}
+            for state_record in states:
+                progress = {"stage": "branch execution", "state_id": state_record["state_id"]}
                 snapshot_path = self._snapshot_path(state_record)
-                verify_snapshot_sha256(snapshot_path, str(state_record["snapshot_sha256"]))
-                snapshot = load_snapshot(snapshot_path)
-                for repeat_index in range(repeats):
-                    order_seed = branch_order_seed(
-                        self.config, int(state_record["source_seed"]), repeat_index
-                    )
-                    order = branch_order(
-                        self.config, int(state_record["source_seed"]), repeat_index
-                    )
-                    if sorted(order) != sorted(horizons):
-                        raise RuntimeError("Branch order is not a permutation of the frozen horizons")
-                    repeat_seed_value = repeat_seed(
-                        self.config, int(state_record["source_seed"]), repeat_index
-                    )
+                snapshot = load_snapshot(snapshot_path, expected_sha256=state_record["snapshot_sha256"])
+                source_seed = state_record["source_seed"]
+                for repeat_index in range(self.config["b2"]["repeats_per_state_horizon"]):
+                    order_seed = branch_order_seed(self.config, source_seed, repeat_index)
+                    order = branch_order(self.config, source_seed, repeat_index)
+                    repeat_seed_value = repeat_seed(self.config, source_seed, repeat_index)
                     for order_index, horizon in enumerate(order):
-                        # Confirm the snapshot SHA immediately before every branch.
-                        verify_snapshot_sha256(
-                            snapshot_path, str(state_record["snapshot_sha256"])
-                        )
+                        progress.update({"horizon": horizon, "repeat_index": repeat_index})
+                        verify_snapshot_sha256(snapshot_path, state_record["snapshot_sha256"])
                         record = self._run_b2_branch(
                             snapshot=snapshot,
                             state_record=state_record,
@@ -666,38 +667,39 @@ class GateBExperiment:
                             horizon_order=order,
                         )
                         record.update(env_fields)
+                        validate_b2_record(record, state_record, split, self.config, b2_run_manifest)
                         append_jsonl(records_path, record)
+                        valid_records += 1
+
+            progress = {"stage": "record completeness"}
+            summary = validate_b2_records(
+                load_jsonl(records_path), states, split, self.config, runtime_manifest=b2_run_manifest,
+            )
+            summary.update({
+                "status": "COMPLETE",
+                "records_file": records_path.name,
+                "run_manifest": run_path.name,
+                "snapshot_validation": validation_path.name,
+                "stage_gate": dict(gate),
+                "preflight": False,
+            })
+            write_json(self.run_dir / (prefix + "summary.json"), summary)
+            write_json(status_path, {
+                "status": "COMPLETE",
+                "split": split,
+                "completeness_verified": True,
+                "snapshot_validation_all_passed": True,
+                "n_branch_records": valid_records,
+            })
         except Exception as exc:
-            write_json(self.run_dir / "b2_{}_status.json".format(split), {
+            write_json(status_path, {
                 "status": "BLOCKED",
                 "split": split,
-                "reason": "B2 branch execution failed: {}: {}".format(type(exc).__name__, exc),
+                "reason": "{}: {}".format(type(exc).__name__, exc),
+                "success_error": getattr(self.env, "success_error", None),
                 "partial_records": records_path.name if records_path.exists() else None,
+                "valid_records_before_failure": valid_records,
+                **progress,
             })
             raise
-
-        records = load_jsonl(records_path)
-        summary = validate_b2_records(
-            records,
-            states,
-            split,
-            self.config,
-            runtime_manifest=b2_run_manifest,
-        )
-        summary.update({
-            "status": "COMPLETE",
-            "records_file": records_path.name,
-            "run_manifest": "b2_{}_run.json".format(split),
-            "snapshot_validation": validation_path.name,
-            "stage_gate": dict(gate),
-            "preflight": False,
-        })
-        write_json(self.run_dir / "b2_{}_summary.json".format(split), summary)
-        write_json(self.run_dir / "b2_{}_status.json".format(split), {
-            "status": "COMPLETE",
-            "split": split,
-            "completeness_verified": True,
-            "snapshot_validation_all_passed": True,
-            "n_branch_records": len(records),
-        })
         return records_path

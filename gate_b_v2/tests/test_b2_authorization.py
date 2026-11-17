@@ -4,6 +4,8 @@ from pathlib import Path
 
 import pytest
 
+from b2_test_data import passing_snapshot_validation, state_record
+
 from gate_b_v2.authorization import (
     AuthorizationError,
     DISCOVERY_AUTHORIZATION_FILENAME,
@@ -64,12 +66,7 @@ def _preflight_run(run_dir: Path, summary_overrides=None):
     }
     audit_path.write_text(json.dumps(audit), encoding="utf-8")
     validation_path = run_dir / "b2_preflight_snapshot_validation.json"
-    validation = {
-        "marker": "PREFLIGHT",
-        "scientific_data": False,
-        "all_passed": True,
-        "n_states": 1,
-    }
+    validation = passing_snapshot_validation("preflight", {"pre_299999": "snapsha"})
     validation_path.write_text(json.dumps(validation), encoding="utf-8")
 
     summary = {
@@ -224,7 +221,14 @@ def _discovery_artifacts(root: Path, config, runtime, b1):
     manifest = build_b2_run_manifest(config, runtime, b1, split="discovery", command="test")
     (root / "b2_discovery_run.json").write_text(json.dumps(manifest), encoding="utf-8")
     (root / "b2_discovery_episodes.jsonl").write_text("{}\n", encoding="utf-8")
-    (root / "b2_discovery_state_manifest.jsonl").write_text("{}\n", encoding="utf-8")
+    states = [state_record("discovery", 300000 + index, 100 + index, 0.001) for index in range(30)]
+    (root / "b2_discovery_state_manifest.jsonl").write_text(
+        "".join(json.dumps(state) + "\n" for state in states), encoding="utf-8",
+    )
+    validation = passing_snapshot_validation(
+        "discovery", {state["state_id"]: state["snapshot_sha256"] for state in states},
+    )
+    (root / "b2_discovery_snapshot_validation.json").write_text(json.dumps(validation), encoding="utf-8")
     (root / "b2_discovery_summary.json").write_text(json.dumps({
         "status": "COMPLETE", "completeness_verified": True, "n_branch_records": 450,
     }), encoding="utf-8")

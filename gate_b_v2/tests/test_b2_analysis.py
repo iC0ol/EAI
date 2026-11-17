@@ -4,6 +4,8 @@ from pathlib import Path
 import numpy as np
 import pytest
 
+from b2_test_data import branch_record, passing_snapshot_validation, state_record
+
 from gate_b_v2.analysis import (
     _bootstrap_slope_effect,
     _clearance_permutation_test,
@@ -11,12 +13,6 @@ from gate_b_v2.analysis import (
     _sign_flip_permutation_test,
     analyze_b2_split,
     write_b2_report,
-)
-from gate_b_v2.b2_protocol import (
-    branch_order,
-    branch_order_seed,
-    repeat_seed,
-    state_id,
 )
 from gate_b_v2.locks import (
     b2_record_environment_fields,
@@ -54,60 +50,15 @@ def _dataset(run_dir: Path, split="discovery", n_states=30):
     for index in range(n_states):
         seed = (300000 if split == "discovery" else 310000) + index
         clearance = -0.02 + 0.04 * index / (n_states - 1)
-        item = {
-            "state_id": state_id(split, seed),
-            "split": split,
-            "source_seed": seed,
-            "source_step": 100 + index,
-            "source_horizon": 8,
-            "stage_gate_version": "B2_GEOMETRY_GATE_V1_20261116",
-            "clearance_m": clearance,
-            "z_gap_m": 0.005,
-            "dx_m": 0.0,
-            "dy_m": 0.0,
-            "d_xy_m": 0.01,
-            "relative_yaw_rad": 0.0,
-            "t_nut_m": 0.02,
-            "r_hole_m": 0.032,
-            "r_peg_m": 0.022,
-            "snapshot_file": "snapshots/{}.pkl.gz".format(state_id(split, seed)),
-            "snapshot_sha256": "sha-{}".format(seed),
-        }
+        item = state_record(split, seed, 100 + index, clearance, **env_fields)
         states.append(item)
         tight = clearance < 0.0
         successes = {1: 3 if tight else 2, 2: 3 if tight else 2, 4: 2, 8: 2, 15: 2}
         for repeat_index in range(3):
-            order = branch_order(config, seed, repeat_index)
-            order_seed = branch_order_seed(config, seed, repeat_index)
-            common_repeat_seed = repeat_seed(config, seed, repeat_index)
-            for order_index, horizon in enumerate(order):
-                success = repeat_index < successes[horizon]
-                records.append({
-                    "split": split,
-                    "state_id": item["state_id"],
-                    "source_seed": seed,
-                    "source_step": item["source_step"],
-                    "horizon": horizon,
-                    "repeat_index": repeat_index,
-                    "repeat_seed": common_repeat_seed,
-                    "branch_order_seed": order_seed,
-                    "randomized_order_index": order_index,
-                    "continuation_horizon": 15,
-                    "preflight": False,
-                    "policy_reset_verified": True,
-                    "snapshot_sha256": item["snapshot_sha256"],
-                    "clearance_m": clearance,
-                    "z_gap_m": 0.005,
-                    "dx_m": 0.0,
-                    "dy_m": 0.0,
-                    "d_xy_m": 0.01,
-                    "relative_yaw_rad": 0.0,
-                    "success": bool(success),
-                    "policy_calls_after_branch": 10 + horizon,
-                    "wall_time_s": 1.0 + 0.1 * horizon,
-                    "policy_noise_seed_schedule": [1000 + call for call in range(3)],
-                    **env_fields,
-                })
+            for horizon in config["b2"]["horizons"]:
+                records.append(branch_record(
+                    config, item, repeat_index, horizon, repeat_index < successes[horizon],
+                ))
     run_dir.mkdir(parents=True, exist_ok=True)
     with (run_dir / "b2_{}_state_manifest.jsonl".format(split)).open("w", encoding="utf-8") as stream:
         for item in states:
@@ -118,21 +69,9 @@ def _dataset(run_dir: Path, split="discovery", n_states=30):
     (run_dir / "b2_{}_run.json".format(split)).write_text(
         json.dumps(b2_manifest), encoding="utf-8"
     )
-    validation = {
-        "split": split,
-        "marker": "B2",
-        "scientific_data": True,
-        "all_passed": True,
-        "n_states": n_states,
-        "per_state": {
-            item["state_id"]: {
-                "state_max_abs": 1e-9,
-                "observation_mean_abs_max": 1e-6,
-                "geometry_abs_max": 1e-9,
-            }
-            for item in states
-        },
-    }
+    validation = passing_snapshot_validation(
+        split, {item["state_id"]: item["snapshot_sha256"] for item in states},
+    )
     (run_dir / "b2_{}_snapshot_validation.json".format(split)).write_text(
         json.dumps(validation), encoding="utf-8"
     )
@@ -140,7 +79,8 @@ def _dataset(run_dir: Path, split="discovery", n_states=30):
         "status": "COMPLETE", "completeness_verified": True, "n_branch_records": 450,
     }), encoding="utf-8")
     (run_dir / "b2_{}_status.json".format(split)).write_text(json.dumps({
-        "status": "COMPLETE", "snapshot_validation_all_passed": True,
+        "status": "COMPLETE", "split": split, "completeness_verified": True,
+        "snapshot_validation_all_passed": True,
     }), encoding="utf-8")
     (run_dir / "B2_REPORT.md").write_text("# discovery\n", encoding="utf-8")
     return config, states, records
@@ -257,3 +197,24 @@ def test_threshold_override_is_rejected_by_config_lock():
     broken["b2"]["practical_effect_threshold"] = 0.5
     with pytest.raises(RuntimeError, match="B2 config lock failed"):
         validate_b2_config(broken)
+
+
+def test_analysis_rejects_blocked_status_even_with_450_rows(tmp_path):
+    config, _, _ = _dataset(tmp_path)
+    path = tmp_path / "b2_discovery_status.json"
+    status = json.loads(path.read_text())
+    path.write_text(json.dumps(dict(status, status="BLOCKED")))
+    with pytest.raises(RuntimeError, match="branch status is not COMPLETE"):
+        analyze_b2_split(tmp_path, "discovery", config=config)
+    assert not (tmp_path / "b2_discovery_analysis.json").exists()
+
+
+def test_analysis_rejects_a_missing_independent_render_check(tmp_path):
+    config, states, _ = _dataset(tmp_path)
+    path = tmp_path / "b2_discovery_snapshot_validation.json"
+    validation = json.loads(path.read_text())
+    del validation["per_state"][states[0]["state_id"]]["checks"]["fresh_observation_restore"]
+    path.write_text(json.dumps(validation))
+    with pytest.raises(RuntimeError, match="snapshot validation evidence"):
+        analyze_b2_split(tmp_path, "discovery", config=config)
+    assert not (tmp_path / "b2_discovery_analysis.json").exists()

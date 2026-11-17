@@ -1,4 +1,4 @@
-import json
+from contextlib import contextmanager
 from pathlib import Path
 
 import numpy as np
@@ -6,6 +6,7 @@ import numpy as np
 import pytest
 
 import gate_b_v2.harvest as harvest_module
+from gate_b_v2.snapshot import load_snapshot
 from gate_b_v2.harvest import (
     _check_no_partial_harvest_artifacts,
     harvest_split,
@@ -76,7 +77,7 @@ class FakeEnv:
         self.steps = 0
         self.history = [{"obs": np.asarray([seed], dtype=float)}]
 
-    def step(self, action):
+    def step(self, action, *, strict=False):
         self.steps += 1
         self.history.append({"obs": np.asarray([self.steps], dtype=float)})
         return self.history[-1], 0.0, False, {}
@@ -84,10 +85,14 @@ class FakeEnv:
     def policy_observation(self):
         return {"obs": np.asarray([[0.0]])}
 
-    def snapshot(self, metadata=None):
+    @contextmanager
+    def track_b2_observation_pose(self):
+        yield np.zeros(1)
+
+    def snapshot(self, metadata=None, observation_qpos=None):
         self.snapshot_calls += 1
         return {
-            "schema_version": 2,
+            "schema_version": 3,
             "sim_state_sha256": "sim-{}".format(self.steps),
             "model_xml_sha256": "model",
             "controller_gripper_audit": [],
@@ -130,6 +135,19 @@ def test_source_episode_stops_at_first_gate_and_captures_one_state(monkeypatch, 
         lambda rs_env: _geometry(experiment.env.steps),
     )
 
+    def capture_reference(env, geometry):
+        return {
+            "source_step": env.steps,
+            "sim_state": np.array([env.steps], dtype=float),
+            "model_xml_sha256": "model",
+            "step_observation": env.history[-1],
+            "fresh_observation": env.history[-1],
+            "policy_observation": env.policy_observation(),
+            "observation_history_sha256": [],
+            "geometry": geometry,
+        }
+
+    monkeypatch.setattr(harvest_module, "capture_validation_reference", capture_reference)
     record = run_source_episode(
         experiment, "discovery", 300000, tmp_path / "snapshots", preflight=False
     )
@@ -139,6 +157,10 @@ def test_source_episode_stops_at_first_gate_and_captures_one_state(monkeypatch, 
     assert experiment.env.snapshot_calls == 1  # exactly one state per source episode
     snapshot_path = Path(record["snapshot_file"])
     assert snapshot_path.is_file()
+    saved = load_snapshot(snapshot_path, expected_sha256=record["snapshot_sha256"])
+    assert saved["validation_reference"]["source_step"] == 2
+    assert saved["validation_reference"]["sim_state"].tolist() == [2.0]
+    assert record["sim_state_sha256"] != saved["sim_state_sha256"]
     assert record["stage_gate_version"] == "B2_GEOMETRY_GATE_V1_20261116"
     assert record["stage_gate"]["eligible"] is True
     assert record["scientific_data"] is True

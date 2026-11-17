@@ -30,7 +30,6 @@ from .core import (
     policy_noise_seed,
     seed_everything,
     seed_policy_rng,
-    sha256_array,
     write_json,
 )
 from .geometry import (
@@ -46,34 +45,39 @@ from .locks import (
     load_b1_full_manifest,
 )
 from .policy import predict_full_future_chunk, reset_policy_or_block
-from .snapshot import save_snapshot
-
-
-def _observation_hashes(observation: Mapping[str, np.ndarray]) -> Dict[str, str]:
-    return {str(key): sha256_array(np.asarray(value)) for key, value in observation.items()}
-
-
-def _history_hashes(history: Sequence[Mapping[str, np.ndarray]]) -> List[Dict[str, str]]:
-    return [_observation_hashes(item) for item in history]
+from .snapshot import capture_validation_reference, save_snapshot, validation_reference_hashes
 
 
 def _candidate_record(
     experiment: Any,
     split: str,
     source_seed: int,
-    source_step: int,
-    snapshot_path: Path,
-    snapshot: Mapping[str, Any],
+    snapshot_dir: Path,
+    observation_qpos: np.ndarray,
     geometry: Mapping[str, Any],
     gate: Mapping[str, Any],
     preflight: bool,
+    fallback: bool = False,
 ) -> Dict[str, Any]:
     env = experiment.env
-    # Save the snapshot captured at the eligible step, not one captured later.
+    source_step = env.steps
+    identifier = state_id(split, source_seed) if not preflight else "pre_{:06d}".format(source_seed)
+    snapshot_path = snapshot_dir / "{}.pkl.gz".format(identifier)
+    snapshot = env.snapshot(metadata={
+        "split": split,
+        "source_seed": source_seed,
+        "source_step": source_step,
+        "stage_gate_version": STAGE_GATE_VERSION,
+        "preflight": preflight,
+        "fallback": fallback,
+    }, observation_qpos=observation_qpos)
+    # Two reads of the live source at the same control step. The reference also
+    # forces both cameras and the low-dimensional sensors before any restore.
+    reference = capture_validation_reference(env, geometry)
+    snapshot["validation_reference"] = reference
     snapshot_sha256 = save_snapshot(snapshot_path, snapshot)
-    current_obs = env.history[-1] if env.history else {}
     record: Dict[str, Any] = {
-        "state_id": state_id(split, source_seed) if not preflight else "pre_{:06d}".format(int(source_seed)),
+        "state_id": identifier,
         "split": split,
         "source_seed": int(source_seed),
         "source_step": int(source_step),
@@ -101,10 +105,7 @@ def _candidate_record(
         "peg_half_y_m": float(geometry["peg_half_y_m"]),
         "snapshot_file": str(snapshot_path),
         "snapshot_sha256": str(snapshot_sha256),
-        "sim_state_sha256": snapshot["sim_state_sha256"],
-        "model_xml_sha256": snapshot["model_xml_sha256"],
-        "observation_key_sha256": _observation_hashes(current_obs),
-        "observation_history_sha256": _history_hashes(env.history),
+        **validation_reference_hashes(reference),
         "snapshot_schema_version": int(snapshot["schema_version"]),
         "controller_gripper_capture_audit": snapshot.get("controller_gripper_audit", []),
         "snapshot_capabilities": snapshot.get("snapshot_capabilities", {}),
@@ -140,51 +141,13 @@ def run_source_episode(
     env.reset(int(source_seed))
     reset_policy_or_block(experiment.policy)
 
-    rs_env = env.robosuite_env
-    previous = compute_square_geometry(rs_env)
-    call_index = 0
-    done = False
-    policy_seed = source_policy_seed(experiment.config, source_seed)
-    while env.steps < env.max_steps and not done:
-        seed_policy_rng(experiment.torch, policy_noise_seed(policy_seed, call_index))
-        chunk = predict_full_future_chunk(
-            experiment.policy,
-            experiment.torch,
-            env.policy_observation(),
-            experiment.device,
-            experiment.n_obs_steps,
-            experiment.prediction_horizon,
-        )
-        execute_n = min(source_horizon, env.max_steps - env.steps)
-        for action_index in range(execute_n):
-            _, _, done, _ = env.step(experiment._env_action(chunk[action_index]))
-            geometry = compute_square_geometry(rs_env)
-            gate = evaluate_stage_gate(geometry, previous["z_gap_m"])
-            previous = geometry
-            if gate["eligible"]:
-                snapshot_path = Path(snapshot_dir) / "{}.pkl.gz".format(
-                    state_id(split, source_seed) if not preflight else "pre_{:06d}".format(int(source_seed))
-                )
-                # Capture the snapshot before any further environment step.
-                snapshot = env.snapshot(metadata={
-                    "split": split,
-                    "source_seed": int(source_seed),
-                    "source_step": int(env.steps),
-                    "stage_gate_version": STAGE_GATE_VERSION,
-                    "preflight": bool(preflight),
-                })
-                return _candidate_record(
-                    experiment, split, source_seed, int(env.steps),
-                    snapshot_path, snapshot, geometry, gate, preflight,
-                )
-            if done:
-                break
-        call_index += 1
-
-    if preflight and fallback_step is not None:
-        # Deterministic preflight fallback, clearly not a stage-gate candidate.
-        while env.steps < min(int(fallback_step), env.max_steps) and not done:
-            # Continue the same fixed-h rollout without selecting a formal state.
+    with env.track_b2_observation_pose() as observation_qpos:
+        rs_env = env.robosuite_env
+        previous = compute_square_geometry(rs_env)
+        call_index = 0
+        done = False
+        policy_seed = source_policy_seed(experiment.config, source_seed)
+        while env.steps < env.max_steps and not done:
             seed_policy_rng(experiment.torch, policy_noise_seed(policy_seed, call_index))
             chunk = predict_full_future_chunk(
                 experiment.policy,
@@ -196,28 +159,30 @@ def run_source_episode(
             )
             execute_n = min(source_horizon, env.max_steps - env.steps)
             for action_index in range(execute_n):
-                _, _, done, _ = env.step(experiment._env_action(chunk[action_index]))
+                _, _, done, _ = env.step(experiment._env_action(chunk[action_index]), strict=True)
+                geometry = compute_square_geometry(rs_env)
+                gate = evaluate_stage_gate(geometry, previous["z_gap_m"])
+                previous = geometry
+                if gate["eligible"]:
+                    return _candidate_record(
+                        experiment, split, source_seed, Path(snapshot_dir), observation_qpos,
+                        geometry, gate, preflight,
+                    )
                 if done:
                     break
             call_index += 1
-        geometry = compute_square_geometry(rs_env)
-        gate = evaluate_stage_gate(geometry, previous["z_gap_m"])
-        snapshot_path = Path(snapshot_dir) / "pre_{:06d}.pkl.gz".format(int(source_seed))
-        snapshot = env.snapshot(metadata={
-            "split": split,
-            "source_seed": int(source_seed),
-            "source_step": int(env.steps),
-            "stage_gate_version": STAGE_GATE_VERSION,
-            "preflight": True,
-            "fallback": True,
-        })
-        record = _candidate_record(
-            experiment, split, source_seed, int(env.steps),
-            snapshot_path, snapshot, geometry, gate, preflight=True,
-        )
-        record["preflight_fallback"] = True
-        record["gate_reached"] = False
-        return record
+
+        if preflight and fallback_step is not None:
+            # The rollout reached its terminal step without a gate entry.
+            geometry = compute_square_geometry(rs_env)
+            gate = evaluate_stage_gate(geometry, previous["z_gap_m"])
+            record = _candidate_record(
+                experiment, split, source_seed, Path(snapshot_dir), observation_qpos,
+                geometry, gate, preflight=True, fallback=True,
+            )
+            record["preflight_fallback"] = True
+            record["gate_reached"] = False
+            return record
     return None
 
 
