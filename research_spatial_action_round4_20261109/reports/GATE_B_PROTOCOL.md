@@ -232,3 +232,17 @@ Gate B 不训练 error model、不实现完整 CAC、不做第二任务、不宣
 | B2 | **PROTOCOL FROZEN / IMPLEMENTATION PENDING** | 2026-11-16 冻结 v1.1：几何派生 stage gate；h=15 branch continuation/primary comparator；30 states × 5 horizons × 3 repeats；独立 discovery/confirmation；每个 snapshot 逐一验证。代码、live geometry audit 与 snapshot preflight 尚未验收；未收集 B2 状态，未授权 B2 分支实验。详见 `B2_PROTOCOL_REVISION_20261116.md`。 |
 
 B0 通过不等于整个 Gate B 通过；B1 不证明 CAC 有效，不得提前开展 B2 分支实验。
+
+## 11. 状态更新（2026-11-18）
+
+| 阶段 | 状态 | 证据或条件 |
+|---|---|---|
+| B1 Full | **COMPLETED** | 500 条评估，399 条成功。 |
+| B2 Discovery | **COMPLETED** | Square-MH 主种子块得到 90 个候选，随机选择 30 个状态。30/30 快照通过独立验证，450 条 Branch 通过完整性检查。 |
+| Discovery 文档收尾 | **COMPLETED** | 依据原始记录独立复核统计和净空覆盖。 |
+| Confirmation 授权准备 | **COMPLETED** | 预注册继续条件满足，待独立审查。 |
+| Confirmation 正式授权 | **NOT AUTHORIZED** | 需要研究者独立批准。 |
+| Confirmation Harvest / Branch | **NOT STARTED** | 独立 seed pool 和独立快照。 |
+| Gate C | **NOT AUTHORIZED** | 确认阶段决策待定。 |
+
+预注册 Discovery 主效应 `E = 0.055707`，95% CI `[−0.015805, 0.156406]`，置换 `p = 0.343857`。区间涵盖零和 `0.08` 阈值，结论为 `DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED`。B2 独立验证仍待 Confirmation。实验定义见 B2 v1.1 各节。 [Discovery 结果与局限](../../gate_b_v2/reports/b2_discovery_20261117/B2_DISCOVERY_CLOSEOUT.md) · [B2 v1.1](B2_PROTOCOL_REVISION_20261116.md) · [Confirmation 准备](../../gate_b_v2/reports/B2_CONFIRMATION_EXECUTION_PLAN.md)

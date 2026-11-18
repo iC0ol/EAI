@@ -1,15 +1,29 @@
 {
   "analysis_reproduced_from_published_inputs": true,
   "decision": "DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED",
+  "documentation_revisions": [
+    {
+      "date": "2026-11-18",
+      "previous_checksum_manifest_sha256": "7ab09bf4e7f2488a59290fe821cb5462b43570881a79a438a2d296f701bb820c",
+      "previous_document_sha256": {
+        "B2_DISCOVERY_CLOSEOUT.md": "9ec4081cd2e36b01b74b37e225e9bec3a536f11b5cd8af8361e972f53ce11732",
+        "B2_REPORT.md": "77d9400d1015abee8f59119a65db33b6f72662768cff452150acfc2686dbaa59",
+        "README.md": "f334e95e88682130298ff314a6a4b568aabddff6a5d33166e3fdbc0e66b32e71"
+      },
+      "previous_publication_manifest_sha256": "6f45775ce691d71bba8740005a8880a178ba26e949d8810565bcdc7513e1536c",
+      "raw_data_sha256_reverified": true,
+      "reviewed_publication_commit": "d0da736c4c9df35b9b8a51be4c4f6c4fd11fccd0"
+    }
+  ],
   "files": {
     "B2_DISCOVERY_CLOSEOUT.md": {
-      "publication_change": "evidence and checksums linked to the public package",
-      "published_sha256": "9ec4081cd2e36b01b74b37e225e9bec3a536f11b5cd8af8361e972f53ce11732",
+      "publication_change": "2026-11-18 Discovery documentation and scientific limitations",
+      "published_sha256": "6331389bc861d9d3be8b7d66416e13155c92a8598bccfbc0615b6eb8a350dbaf",
       "source_sha256": "08c4ccd1c1b5826cca5695e37a42da99423bd072f4290ff43ab85d6512b22744"
     },
     "B2_REPORT.md": {
-      "publication_change": "byte-for-byte",
-      "published_sha256": "77d9400d1015abee8f59119a65db33b6f72662768cff452150acfc2686dbaa59",
+      "publication_change": "2026-11-18 Discovery documentation and scientific limitations",
+      "published_sha256": "e72aabcac08b2ea3ca83e51c1c57d5e88a4670b0ff8a9c1e1db121a103ca3a50",
       "source_sha256": "77d9400d1015abee8f59119a65db33b6f72662768cff452150acfc2686dbaa59"
     },
     "b2_discovery_analysis.json": {

@@ -102,3 +102,13 @@ This is a protocol-level statistical decision for the discovery split only. It i
 - Discovery and confirmation are analyzed independently and are never pooled.
 - A wide interval is inconclusive; non-significance is not proof of no effect.
 - B2 does not train CAC or establish a deployment-time visual clearance estimator.
+
+## 2026-11-18 status update and scientific limitations
+
+**B2 Discovery COMPLETED.** Independent readback reproduced the frozen sample of 30 physical states, matched the 30 passing snapshot reports to the corresponding states, and verified 450 distinct state × Horizon × repeat combinations. Each episode reached the 500-step limit, and every final task predicate returned a boolean with an empty `success_error`. Reanalysis from raw Branch records reproduced the full preregistered analysis, including its effect estimates, bootstrap intervals, and permutation tests. [Episodes](b2_discovery_episodes.jsonl) · [Snapshot validation](b2_discovery_snapshot_validation.json) · [Analysis JSON](b2_discovery_analysis.json)
+
+- **Clearance coverage.** The harvested pool contained 89 negative and one positive projected clearance. The 30 randomly selected states all had negative clearance, from −52.708 to −0.348 mm. The observations cover variation within this negative-clearance range. Positive clearance remains an open empirical question. [Candidates](b2_discovery_candidates.json) · [State manifest](b2_discovery_state_manifest.jsonl)
+- **Success ceiling.** Success ranged from 93.33% to 94.44% across first horizons. The primary contrast `Delta_s` was zero in 26 of 30 states and nonzero in four. This concentrates the observed between-horizon differences in a small number of independent states and limits precision. The state-cluster interval spans zero and the 0.08 practical threshold. [Clearance figure](b2_discovery_clearance.png)
+- **Geometric associations.** Among the 30 selected states, clearance had Pearson r = −0.977183 with XY centre distance (`d_xy_m`) and r = 0.648548 with axial gap (`z_gap_m`). These metrics co-vary in the sampled approach states. The estimated trend is an association in that geometry distribution, and isolating XY clearance would require a design that varies the geometric quantities more independently. [State manifest](b2_discovery_state_manifest.jsonl)
+
+The decision remains `DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED`. The upper confidence bound meets the preregistered Discovery continuation condition. Independent Confirmation remains **NOT AUTHORIZED**, with Harvest and Branch **NOT STARTED**. Gate C is **NOT AUTHORIZED**. [Confirmation authorization template](../B2_CONFIRMATION_AUTHORIZATION.md) · [Execution plan](../B2_CONFIRMATION_EXECUTION_PLAN.md)

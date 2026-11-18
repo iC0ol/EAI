@@ -74,10 +74,9 @@ that is not STOP/BLOCKED.
 Preflight seed is frozen at `299999`; any other seed is rejected before simulation. A fallback
 snapshot taken without reaching the stage gate is diagnostic only and can never produce PASS.
 
-The PREFLIGHT summary and geometry audit include the implementation source-tree fingerprint, so
-documentation/evidence-only commits do not invalidate a passing preflight as long as
-`src/gate_b_v2` is unchanged. Authorization still requires the researcher-created file; no
-authorization exists in this repository.
+The PREFLIGHT summary locks the implementation source-tree fingerprint and the SHA256 of the
+geometry audit and snapshot validation. The gate resolves the authorization JSON and its matching
+PREFLIGHT from the workstation run directory.
 
 ## Collision geometry and stage gate
 
@@ -129,7 +128,7 @@ Split with exactly 450 validated records.
 
 ## Commands
 
-PREFLIGHT only (this implementation round):
+PREFLIGHT entry points for reserved-seed engineering checks:
 
 ```bash
 python -m gate_b_v2.cli b2-geometry-audit --run-dir runs/b2_geometry_audit
@@ -141,7 +140,7 @@ python -m gate_b_v2.cli b2-export-preflight-evidence \
 The exported evidence contains only small JSON records marked `PREFLIGHT` and
 `scientific_data=false`; it never contains snapshot binaries, checkpoints, datasets or environments.
 
-Formal B2 commands (not authorized in this round):
+Formal B2 entry points for individually authorized runs:
 
 ```bash
 # One split at a time; these are separate commands by protocol design.
@@ -155,23 +154,23 @@ python -m gate_b_v2.cli analyze --run-dir runs/b2_discovery
 python -m gate_b_v2.cli analyze --run-dir runs/b2_confirmation
 ```
 
-Discovery and confirmation use separate seed pools, state manifests, snapshot directories and
-branch-result files. A single command never starts both splits.
+Discovery and Confirmation use separate seed pools, state manifests, snapshot directories and
+branch-result files. For Confirmation, review the cross-directory inventory check and execution
+sequence in the [execution plan](reports/B2_CONFIRMATION_EXECUTION_PLAN.md).
 
-## Current status
+## Current status (2026-11-18)
 
 - B0: completed at 84/100 (`reports/B0_REPORT.md`).
 - B1 Pilot: completed (`reports/B1_PILOT_REPORT.md`).
 - B1 Full: completed and independently reviewed; 399/500 (`reports/B1_FULL_REPORT.md`).
 - B2 protocol: frozen v1.1.
-- B2 code: third revision tested on the workstation. The live geometry audit and the independent
-  seed-299999 Snapshot PREFLIGHT passed. **Awaiting independent review.**
-- B2 discovery authorization: **not present**; discovery not authorized.
-- B2 confirmation authorization: **not present**; confirmation not authorized.
-- B2 discovery/confirmation states: **not collected**.
-- B2 branch episodes: **not run**.
-- Training/fine-tuning: **none**.
-- Gate C: not authorized.
+- B2 Discovery: **COMPLETED**. All 30 selected snapshots passed independent validation and all
+  450 Branch records passed the integrity gate. The decision is
+  `DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED`. [Results and scientific limits](reports/b2_discovery_20261117/B2_DISCOVERY_CLOSEOUT.md)
+- Discovery documentation and Confirmation preparation: **COMPLETED**. Discovery met the
+  preregistered continuation condition. [Pending authorization template](reports/B2_CONFIRMATION_AUTHORIZATION.md)
+- Confirmation authorization: **NOT AUTHORIZED**. Confirmation Harvest and Branch: **NOT STARTED**.
+- Gate C: **NOT AUTHORIZED**.
 
 The third revision's public PREFLIGHT evidence is in `reports/preflight_third_revision/`.
 See the [independent Snapshot report](reports/B2_SNAPSHOT_INDEPENDENT_VALIDATION_REPORT.md)

@@ -352,3 +352,18 @@ After code, tests, live geometry audit, snapshot preflight, and source-archive a
 | Gate C | NOT AUTHORIZED |
 
 **No B2 scientific result exists yet. Protocol completion is not experiment completion.**
+
+## 11. Status update (2026-11-18)
+
+| Item | Current status |
+|---|---|
+| B1 Full | **COMPLETED** |
+| B2 Discovery | **COMPLETED** at 00:42:41 Asia/Shanghai |
+| Discovery documentation and data readback | **COMPLETED** |
+| Confirmation preparation | **COMPLETED**, pending independent review |
+| Confirmation authorization | **NOT AUTHORIZED** |
+| Confirmation Harvest | **NOT STARTED** |
+| Confirmation Branch | **NOT STARTED** |
+| Gate C | **NOT AUTHORIZED** |
+
+Discovery contains 30 independently validated physical states and 450 protocol-valid branches. Raw-data readback reproduced `E = 0.055707`, 95% state-cluster CI `[−0.015805, 0.156406]` and permutation `p = 0.343857`. The result remains uncertain and satisfies §7.3's Discovery continuation condition. The decision is `DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED`. The observed clearance coverage and other scientific limitations are documented in the Discovery report. The original sections above contain the frozen design and decision rules. [Discovery report](../../gate_b_v2/reports/b2_discovery_20261117/B2_REPORT.md) · [Confirmation authorization template](../../gate_b_v2/reports/B2_CONFIRMATION_AUTHORIZATION.md) · [Execution plan](../../gate_b_v2/reports/B2_CONFIRMATION_EXECUTION_PLAN.md)
