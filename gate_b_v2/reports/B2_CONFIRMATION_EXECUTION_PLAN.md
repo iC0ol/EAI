@@ -23,6 +23,8 @@ python -m gate_b_v2.cli analyze --help
 (cd "$GATEB_DISCOVERY_RUN" && sha256sum --check --quiet B2_DISCOVERY_SHA256SUMS.txt)
 ```
 
+`GATEB_DISCOVERY_RUN` 指向工作站的原始 Discovery 运行目录。RTX 3090 工作站已用该目录中的 `B2_DISCOVERY_SHA256SUMS.txt` 实测，116 项全部通过。GitHub 公开发布目录 `reports/b2_discovery_20261117/` 使用自己的 `SHA256SUMS`，在发布目录内执行 `sha256sum --check SHA256SUMS` 校验公开文件。 [公开校验清单](b2_discovery_20261117/SHA256SUMS)
+
 下列只读检查重新计算官方 Checkpoint、Dataset 和 Diffusion Policy 源树的 SHA256，并通过 `validate_preflight_gate()` 对照 B1 Full Runtime Manifest、冻结配置、当前 B2 源树及 PREFLIGHT。PREFLIGHT 须为 `PASS`，保留 seed `299999` 须真实触发 Stage Gate，几何和独立恢复验证通过。实际 Harvest 和 Branch 各自构建活体 Runtime Manifest 并重复检查锁定值。 [环境及配置锁](../src/gate_b_v2/locks.py) · [PREFLIGHT 门禁](../src/gate_b_v2/authorization.py)
 
 ```bash

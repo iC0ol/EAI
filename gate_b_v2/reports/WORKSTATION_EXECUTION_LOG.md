@@ -51,7 +51,7 @@ Append dated entries here after actual workstation actions. Do not pre-fill succ
 | 2026-11-17 | `b23a65d` | Exported public PREFLIGHT JSON evidence | Small JSON only; marker PREFLIGHT; scientific_data=false; no snapshot binary | `gate_b_v2/reports/preflight/` | Evidence |
 | 2026-11-17 | — | Source archive rebuilt, clean extraction and audit | Code/tests/config/scripts/PREFLIGHT evidence byte-identical; 209 passed, 1 skipped; archive hash recorded in independent report/CI, not in this log | `gate_b_v2_source.tar.xz` | Audit PASS |
 
-## Current decision
+## Historical decision snapshot (as of 2026-11-17, before Discovery completion)
 
 Formal B0 is **COMPLETED** at 84/100 under checkpoint-native 10-D absolute
 action semantics. B1 Pilot and B1 Full are **COMPLETED**; B1 Full is
@@ -74,3 +74,28 @@ decision is made. See `reports/B2_SECOND_REVISION_REPORT.md`.
 | 2026-11-17 15:36:16 to 2026-11-18 00:42:41 | `f1e63c5` (`2f1a495` implementation) | Discovery launcher ran `b2-harvest` followed by `b2`, both with `--split discovery` and the same run directory | RTX 3090, Python 3.9.13, PyTorch 1.12.1+cu116 and CUDA 11.6. Harvest selected 30 of 90 eligible states from the primary pool. Snapshot validation passed for all 30 states. 450 Branch records passed integrity checks. Launcher exited 0 after 9 h 06 min 25 s. | `runs/b2_discovery_20261117T153523/b2_discovery_launcher.log` |
 | 2026-11-18 | `f1e63c5` | Verified the raw run and executed `python -u -m gate_b_v2.cli analyze --run-dir runs/b2_discovery_20261117T153523` | All 109 originals passed post-analysis SHA256 verification. Independent recomputation matched E = 0.055707 and its 95% CI [-0.015805, 0.156406]. `DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED` permits separate Confirmation review. | [Published results and closeout](b2_discovery_20261117/README.md) |
 | 2026-11-18 | `d0da736` reviewed baseline | `sha256sum` for the local run and public bundle, read-only `analyze_b2_split()` on the published records, live asset fingerprint check, `validate_formal_authorization()`, B2 CLI help, and `python -m pytest -q` | 116 local and 16 public checksums verified before the documentation update. The frozen analysis and all 450 records matched. Clearance coverage, ceiling and geometric associations were derived from raw data. Runtime and PREFLIGHT locks passed. The Confirmation gate refused the missing authorization. 271 tests passed. | [Discovery closeout](b2_discovery_20261117/B2_DISCOVERY_CLOSEOUT.md) · [Confirmation execution plan](B2_CONFIRMATION_EXECUTION_PLAN.md) |
+
+## Current decision (2026-11-18)
+
+| Item | Current status |
+|---|---|
+| B0 | COMPLETED |
+| B1 Pilot | COMPLETED |
+| B1 Full | COMPLETED |
+| B2 v1.1 Protocol | FROZEN |
+| B2 Discovery | COMPLETED |
+| Discovery data integrity | 30/30 snapshots PASS, 450/450 branches PASS |
+| Discovery documentation closeout | COMPLETED |
+| Confirmation preparation | COMPLETED |
+| Confirmation independent review | 待最终验收 |
+| Confirmation Authorization | NOT AUTHORIZED |
+| Confirmation Harvest | NOT STARTED |
+| Confirmation Branch | NOT STARTED |
+| Gate C | NOT AUTHORIZED |
+
+- E = 0.055707
+- 95% CI = [-0.015805, 0.156406]
+- permutation p = 0.343857
+- Decision = `DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED`
+
+The Discovery decision meets the preregistered continuation condition. Confirmation requires separate authorization after final independent review. The RTX 3090 workstation rechecked all 116 entries in the original `B2_DISCOVERY_SHA256SUMS.txt` with `sha256sum --check`. [Discovery closeout](b2_discovery_20261117/B2_DISCOVERY_CLOSEOUT.md)
