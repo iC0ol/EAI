@@ -1,0 +1,55 @@
+{
+  "candidates_file": "b2_discovery_candidates.json",
+  "eligible_candidates": 90,
+  "manifest_file": "b2_discovery_state_manifest.jsonl",
+  "preflight": false,
+  "processed_blocks": [
+    {
+      "block": "primary",
+      "count": 100,
+      "end": 300099,
+      "start": 300000
+    }
+  ],
+  "seed_range": [
+    300000,
+    300199
+  ],
+  "selected_source_seeds": [
+    300010,
+    300012,
+    300013,
+    300014,
+    300015,
+    300018,
+    300021,
+    300022,
+    300025,
+    300029,
+    300031,
+    300032,
+    300037,
+    300040,
+    300041,
+    300045,
+    300046,
+    300053,
+    300058,
+    300066,
+    300067,
+    300073,
+    300077,
+    300083,
+    300085,
+    300086,
+    300090,
+    300091,
+    300092,
+    300094
+  ],
+  "selected_states": 30,
+  "selection_seed": 20261116,
+  "snapshot_dir": "snapshots/discovery",
+  "split": "discovery",
+  "status": "COMPLETE"
+}
