@@ -123,3 +123,13 @@ At handoff the launcher was collecting Confirmation source states. It checks Har
 | 2026-11-19 | Recomputed frozen analysis from the prepared publication inputs | All statistics matched the workstation results. The published analysis binds the public run manifest and uses JSON null for the undefined Spearman values. |
 
 Gate C status is **NOT AUTHORIZED**. [Closeout and interpretation limits](b2_confirmation_20261118/B2_CONFIRMATION_CLOSEOUT.md) · [Published evidence](b2_confirmation_20261118/README.md)
+
+## B2 Confirmation Continuation-h4 engineering checks
+
+| Date (Asia/Shanghai) | Command/action | Workstation readback |
+|---|---|---|
+| 2026-11-19 | `git fetch origin`, checkout of `codex/b2-continuation-h4-20261119` | Started from the accepted Confirmation closeout `6d2165418c84b5300eb9a041df56ebf39218da4a`. The tracked tree was clean. |
+| 2026-11-19 | `source scripts/gateb_env.sh`, diagnostic `--check-source`, and `nvidia-smi` | All 111 original checksums passed. Original authorization, 30 snapshot references, and 450 baseline pairs verified. The frozen B2 source fingerprint matched. Python 3.9.13, PyTorch 1.12.1+cu116, CUDA 11.6 and RTX 3090 driver 580.178.04 matched the workstation record. |
+| 2026-11-19 | Full pytest suite with `tests` and `diagnostics/continuation_h4`, then `bash -n` on the launcher | 299 passed. The original constant-input SciPy warning recurred in the frozen analysis test. Launcher syntax passed. |
+
+The diagnostic uses the existing Confirmation snapshots and the original seed order. Live snapshot recheck, Branch progress, GPU telemetry and terminal exit status are recorded in the dedicated run directory. [Diagnostic commands and outputs](../diagnostics/continuation_h4/README.md)
