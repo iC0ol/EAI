@@ -1,8 +1,10 @@
-# B2 v1.1 Confirmation 待审批授权模板
+# B2 v1.1 Confirmation 授权记录与历史模板
 
-**NOT AUTHORIZED · 2026-11-18 · 待独立审查。** Discovery 的结论为 `DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED`。95% CI 上界 `0.156406` 达到冻结协议规定的继续条件。Confirmation 需要研究者单独批准。 [Discovery 独立复核](b2_discovery_20261117/B2_DISCOVERY_CLOSEOUT.md)
+**AUTHORIZED · 2026-11-18 11:03:31（北京时间）。** 研究者明确批准了本次 Confirmation。授权绑定实现提交 `2f1a495e495d926a91a317948c80184eccfc464d`、工作站验收 HEAD `684f2cc89fd96c52d00a005d16c3c001650eb94b`、通过验证的 PREFLIGHT 和原机 Discovery 分析。工作站的授权 JSON SHA256 为 `a32ddfb43f73f628ea07e32b127cc7d396dfbfb56bd5e7f2093bdb33f63f99e5`。实验已于 19:53:35 完成。 [授权核验指纹](b2_confirmation_20261118/PUBLICATION_MANIFEST.json) · [收尾报告](b2_confirmation_20261118/B2_CONFIRMATION_CLOSEOUT.md)
 
-## 待填写审批记录
+Discovery 的结论为 `DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED`。95% CI 上界 `0.156406` 达到冻结协议规定的继续条件。 [Discovery 独立复核](b2_discovery_20261117/B2_DISCOVERY_CLOSEOUT.md)
+
+## 历史审批模板
 
 | 字段 | 待研究者填写 |
 |---|---|

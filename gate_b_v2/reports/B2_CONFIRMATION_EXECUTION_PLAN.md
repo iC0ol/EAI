@@ -1,6 +1,6 @@
 # B2 v1.1 Confirmation 独立执行计划
 
-**2026-11-18 · 准备 COMPLETED · NOT AUTHORIZED · Harvest 和 Branch 均为 NOT STARTED。** 独立审查与研究者的单独批准是正式实验前置条件。 [待审批授权模板](B2_CONFIRMATION_AUTHORIZATION.md) · [Discovery 收尾](b2_discovery_20261117/B2_DISCOVERY_CLOSEOUT.md) · [冻结协议](../../research_spatial_action_round4_20261109/reports/B2_PROTOCOL_REVISION_20261116.md)
+**2026-11-19 · Confirmation COMPLETED。** 工作站通过独立审查与正式授权后完成了 Harvest、跨 Split 隔离核验和 450 条 Branch。以下为本次执行所使用的计划。 [Confirmation 收尾](b2_confirmation_20261118/B2_CONFIRMATION_CLOSEOUT.md) · [授权记录](B2_CONFIRMATION_AUTHORIZATION.md) · [冻结协议](../../research_spatial_action_round4_20261109/reports/B2_PROTOCOL_REVISION_20261116.md)
 
 ## 1. 授权前的工作站检查
 
@@ -207,7 +207,7 @@ python -m gate_b_v2.cli analyze --run-dir "$GATEB_CONFIRMATION_RUN"
 
 分析入口使用冻结配置。它同时生成 `b2_confirmation_analysis.json`、`b2_confirmation_report.md` 和 `ANALYSIS.md`。核验所用输入为 `b2_confirmation_episodes.jsonl`、`b2_confirmation_state_manifest.jsonl`、`b2_confirmation_run.json`、`b2_confirmation_snapshot_validation.json` 和 `b2_confirmation_status.json`。运行结束另核对 `b2_confirmation_summary.json` 的记录数量和完整性字段。 [分析及报告实现](../src/gate_b_v2/analysis.py) · [CLI](../src/gate_b_v2/cli.py)
 
-本轮以 CLI 帮助、单元测试和只读门禁检查核实路径。Confirmation 的正式产物和实际运行结果待独立授权后获得。
+工作站在授权前以 CLI 帮助、单元测试和只读门禁检查核实路径。完成后对原始运行目录执行了上述完整性与冻结分析核验。 [正式产物](b2_confirmation_20261118/README.md)
 
 ## 7. 预注册的 Confirmation 判定
 

@@ -1,0 +1,55 @@
+{
+  "candidates_file": "b2_confirmation_candidates.json",
+  "eligible_candidates": 91,
+  "manifest_file": "b2_confirmation_state_manifest.jsonl",
+  "preflight": false,
+  "processed_blocks": [
+    {
+      "block": "primary",
+      "count": 100,
+      "end": 310099,
+      "start": 310000
+    }
+  ],
+  "seed_range": [
+    310000,
+    310199
+  ],
+  "selected_source_seeds": [
+    310000,
+    310004,
+    310010,
+    310015,
+    310017,
+    310024,
+    310032,
+    310035,
+    310037,
+    310044,
+    310047,
+    310052,
+    310053,
+    310055,
+    310057,
+    310060,
+    310062,
+    310066,
+    310068,
+    310069,
+    310076,
+    310078,
+    310083,
+    310084,
+    310085,
+    310087,
+    310091,
+    310093,
+    310097,
+    310099
+  ],
+  "selected_states": 30,
+  "selection_seed": 20261117,
+  "snapshot_dir": "snapshots/confirmation",
+  "split": "confirmation",
+  "status": "COMPLETE"
+}

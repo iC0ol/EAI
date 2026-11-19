@@ -75,7 +75,7 @@ decision is made. See `reports/B2_SECOND_REVISION_REPORT.md`.
 | 2026-11-18 | `f1e63c5` | Verified the raw run and executed `python -u -m gate_b_v2.cli analyze --run-dir runs/b2_discovery_20261117T153523` | All 109 originals passed post-analysis SHA256 verification. Independent recomputation matched E = 0.055707 and its 95% CI [-0.015805, 0.156406]. `DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED` permits separate Confirmation review. | [Published results and closeout](b2_discovery_20261117/README.md) |
 | 2026-11-18 | `d0da736` reviewed baseline | `sha256sum` for the local run and public bundle, read-only `analyze_b2_split()` on the published records, live asset fingerprint check, `validate_formal_authorization()`, B2 CLI help, and `python -m pytest -q` | 116 local and 16 public checksums verified before the documentation update. The frozen analysis and all 450 records matched. Clearance coverage, ceiling and geometric associations were derived from raw data. Runtime and PREFLIGHT locks passed. The Confirmation gate refused the missing authorization. 271 tests passed. | [Discovery closeout](b2_discovery_20261117/B2_DISCOVERY_CLOSEOUT.md) · [Confirmation execution plan](B2_CONFIRMATION_EXECUTION_PLAN.md) |
 
-## Current decision (2026-11-18)
+## Discovery closeout decision (2026-11-18, before Confirmation authorization)
 
 | Item | Current status |
 |---|---|
@@ -99,3 +99,27 @@ decision is made. See `reports/B2_SECOND_REVISION_REPORT.md`.
 - Decision = `DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED`
 
 The Discovery decision meets the preregistered continuation condition. Confirmation requires separate authorization after final independent review. The RTX 3090 workstation rechecked all 116 entries in the original `B2_DISCOVERY_SHA256SUMS.txt` with `sha256sum --check`. [Discovery closeout](b2_discovery_20261117/B2_DISCOVERY_CLOSEOUT.md)
+
+## B2 v1.1 Confirmation launch
+
+| Date/time (Asia/Shanghai) | Command/action | Workstation readback |
+|---|---|---|
+| 2026-11-18 10:59–11:03 | `git fetch origin`, `source scripts/gateb_env.sh`, `nvidia-smi`, Python runtime and asset checks, `df -h .` | Local and remote `codex/b2-protocol-20261116` at `684f2cc89fd96c52d00a005d16c3c001650eb94b`. Clean tracked tree at launch. RTX 3090 on `cuda:0`, driver 580.178.04, Python 3.9.13, PyTorch 1.12.1+cu116, CUDA 11.6, robomimic 0.2.0, robosuite 1.2.0 and mujoco_py 2.0.2.13. Disk available 151 GiB. |
+| 2026-11-18 11:03:31 | `sha256sum --check --quiet B2_DISCOVERY_SHA256SUMS.txt`, live `validate_preflight_gate()`, `cmp` and `sha256sum` of all three PREFLIGHT copies, independent `validate_formal_authorization()` | All 116 original Discovery checksums passed. 450 records and the `DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED` decision were verified. PREFLIGHT and Confirmation authorization passed. Authorization SHA256 `a32ddfb43f73f628ea07e32b127cc7d396dfbfb56bd5e7f2093bdb33f63f99e5`. |
+| 2026-11-18 11:07:24 | Existing unit tests, `bash -n`, execution-plan section 4 code comparison, then `nohup setsid bash "$RUN_DIR/launch_b2_confirmation.sh" > "$RUN_DIR/b2_confirmation_launcher.log" 2>&1 < /dev/null &` | 271 tests passed with the existing SciPy constant-input warning. Launcher 2282469 began `b2-harvest --split confirmation` as PID 2282486 under `runs/b2_confirmation_20261118T110331/`. |
+| 2026-11-18 11:08:08 and 11:09:15 | `ps`, launcher status and log readback, `nvidia-smi` and `nvidia-smi pmon` | `HARVEST_RUNNING`. The launcher leads an independent session under the user systemd process with no TTY. The 44-second check confirmed process and log activity during initialization. The GPU follow-up matched Harvest PID 2282486 to 2992 MiB and sampled 45% SM utilization. Candidate snapshots began appearing. Startup log showed the torchvision deprecation warnings and no authorization, CUDA or environment errors. |
+
+The frozen implementation is `2f1a495e495d926a91a317948c80184eccfc464d` with source tree SHA256 `e52aeb4a25a4f94e4684f622a0b806164caf20d339c05e8de114b3b261175378`. The workstation recomputed the B1 Full manifest SHA256 `1619fa873df00628cc7ec0d414ee5f8d029ae30e0808ab1e00a2905ef41c4175` and PREFLIGHT environment fingerprint SHA256 `84647b606c8cf107cb73e44491a351ee93a119fede8e51734911a2373e33f276`.
+
+At handoff the launcher was collecting Confirmation source states. It checks Harvest completion and deterministic cross-split isolation before invoking the frozen Branch runner, which validates all 30 snapshots before the first Branch.
+
+## B2 v1.1 Confirmation closeout
+
+| Date/time (Asia/Shanghai) | Command/action | Workstation readback |
+|---|---|---|
+| 2026-11-18 19:53:35 | Launcher Branch readback and shutdown | `COMPLETE`, exit 0. Total 8 h 46 min 11 s. Primary Harvest produced 91 candidates and selected 30 states. Cross-split isolation and all 30 independent snapshot checks passed. |
+| 2026-11-19 | `sha256sum --check --quiet`, live `validate_formal_authorization()`, execution plan section 4, `_b2_inputs()` | 116 Discovery checksums and 111 Confirmation checksums passed. Live asset, runtime, source and authorization fingerprints matched. The 450 Branch keys, serialized order, deterministic selection, and common policy-noise seeds matched the protocol. All 91 candidate snapshot hashes matched. |
+| 2026-11-19 | `python -u -B -m gate_b_v2.cli analyze --run-dir runs/b2_confirmation_20261118T110331` and independent raw-data recomputation | E = 0.00 percentage points with a 95% state-cluster bootstrap interval of [0.00, 0.00] percentage points and permutation p = 1. The primary state contrast was constant. SciPy reported the corresponding undefined Spearman statistic. Decision `CONFIRMATION_NO_PRACTICALLY_MEANINGFUL_EFFECT`. All 111 original checksums were rechecked after analysis. |
+| 2026-11-19 | Recomputed frozen analysis from the prepared publication inputs | All statistics matched the workstation results. The published analysis binds the public run manifest and uses JSON null for the undefined Spearman values. |
+
+Gate C status is **NOT AUTHORIZED**. [Closeout and interpretation limits](b2_confirmation_20261118/B2_CONFIRMATION_CLOSEOUT.md) · [Published evidence](b2_confirmation_20261118/README.md)

@@ -158,7 +158,7 @@ Discovery and Confirmation use separate seed pools, state manifests, snapshot di
 branch-result files. For Confirmation, review the cross-directory inventory check and execution
 sequence in the [execution plan](reports/B2_CONFIRMATION_EXECUTION_PLAN.md).
 
-## Current status (2026-11-18)
+## Current status (2026-11-19)
 
 - B0: completed at 84/100 (`reports/B0_REPORT.md`).
 - B1 Pilot: completed (`reports/B1_PILOT_REPORT.md`).
@@ -167,9 +167,10 @@ sequence in the [execution plan](reports/B2_CONFIRMATION_EXECUTION_PLAN.md).
 - B2 Discovery: **COMPLETED**. All 30 selected snapshots passed independent validation and all
   450 Branch records passed the integrity gate. The decision is
   `DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED`. [Results and scientific limits](reports/b2_discovery_20261117/B2_DISCOVERY_CLOSEOUT.md)
-- Discovery documentation and Confirmation preparation: **COMPLETED**. Discovery met the
-  preregistered continuation condition. [Pending authorization template](reports/B2_CONFIRMATION_AUTHORIZATION.md)
-- Confirmation authorization: **NOT AUTHORIZED**. Confirmation Harvest and Branch: **NOT STARTED**.
+- B2 Confirmation **COMPLETED** at 19:53:35 Asia/Shanghai on 2026-11-18. All 30 selected snapshots
+  and 450 Branch records passed independent readback. The primary effect was 0.00 percentage points
+  with a 95% state-cluster bootstrap interval of [0.00, 0.00] percentage points. The frozen decision
+  is `CONFIRMATION_NO_PRACTICALLY_MEANINGFUL_EFFECT`. [Confirmation closeout](reports/b2_confirmation_20261118/B2_CONFIRMATION_CLOSEOUT.md) · [Authorization record](reports/B2_CONFIRMATION_AUTHORIZATION.md)
 - Gate C: **NOT AUTHORIZED**.
 
 The third revision's public PREFLIGHT evidence is in `reports/preflight_third_revision/`.
