@@ -1,0 +1,1144 @@
+{
+  "all_passed": true,
+  "failed_states": [],
+  "marker": "PREFLIGHT",
+  "n_states": 1,
+  "per_state": {
+    "pre_299999": {
+      "checks": {
+        "controller_gripper_restore": true,
+        "deterministic_geometry": true,
+        "deterministic_observation": true,
+        "deterministic_state": true,
+        "fresh_observation_restore": true,
+        "geometry_restore": true,
+        "model_xml_restore": true,
+        "mujoco_dynamics_inputs_restore": true,
+        "observation_restore": true,
+        "snapshot_payload_matches_source": true,
+        "state_restore": true
+      },
+      "controller_gripper": {
+        "0.controller": {
+          "mismatched_fields": [],
+          "original_audit": {
+            "capture_complete": true,
+            "captured_fields": [
+              "J_full",
+              "J_ori",
+              "J_pos",
+              "action_input_transform",
+              "action_output_transform",
+              "action_scale",
+              "actuator_max",
+              "actuator_min",
+              "control_dim",
+              "control_freq",
+              "damping_ratio_max",
+              "damping_ratio_min",
+              "ee_ori_mat",
+              "ee_ori_vel",
+              "ee_pos",
+              "ee_pos_vel",
+              "eef_name",
+              "goal_ori",
+              "goal_pos",
+              "impedance_mode",
+              "initial_ee_ori_mat",
+              "initial_ee_pos",
+              "initial_joint",
+              "input_max",
+              "input_min",
+              "interpolator_ori",
+              "interpolator_pos",
+              "joint_dim",
+              "joint_index",
+              "joint_pos",
+              "joint_vel",
+              "kd",
+              "kp",
+              "kp_max",
+              "kp_min",
+              "mass_matrix",
+              "model_timestep",
+              "name_suffix",
+              "new_update",
+              "ori_ref",
+              "orientation_limits",
+              "output_max",
+              "output_min",
+              "position_limits",
+              "qpos_index",
+              "qvel_index",
+              "relative_ori",
+              "torques",
+              "uncoupling",
+              "use_delta",
+              "use_ori"
+            ],
+            "class": "robosuite.controllers.osc.OperationalSpaceController",
+            "object": "controller",
+            "skipped_fields": [
+              {
+                "blocking": false,
+                "classification": "object_reference_not_serialized",
+                "field": "sim",
+                "type": "mujoco_py.cymj.MjSim"
+              }
+            ]
+          },
+          "original_field_sha256": {
+            "J_full": "8ac6f9042abc0b2e3ad213c33519410c2c54fb6821fcaa59c2c0fb8fc706a6a4",
+            "J_ori": "00ab1c7189d124176efd12339f687a751d2ef34854b384ec949a2d5f52d823d5",
+            "J_pos": "caeeae51f2d9e1780d2972f172708171e0db886dca067a345c7bfd62980c646e",
+            "action_input_transform": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "action_output_transform": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "action_scale": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "actuator_max": "773cf51fb4a62a3d9f14348e9929fe4ddbbdde6f8c149268d7db1ba7ebea4c81",
+            "actuator_min": "5f73cf836c2af8a6c576bc43f184538dbbc3657216e198a8897cb7fc1df67aea",
+            "control_dim": "019550a8070776d0e76021287add35a8b8659ca97172a378da825ced13ae98af",
+            "control_freq": "47256b4f96280bd6b7611f759a601078b886fe5c47dc85c428945b6953693727",
+            "damping_ratio_max": "b59ebe39a61444a3acfa2c1cc65f2d7b277512590210106f1cd35ef05cb50a02",
+            "damping_ratio_min": "578eb258435495c0c1035f3fea1c187f8aa4897650aa3f533d18b9bcab736f87",
+            "ee_ori_mat": "5e1f7091b0c16269c12f4fe00c2527d33885186160ab1da212ad1df648eedeeb",
+            "ee_ori_vel": "f8af4c54d6e02ba7191024b720252e9f7ce8c27e6a813929397d925a964658e1",
+            "ee_pos": "0871bbfcb2aaf4bc39174572d6a600c361de74cc24026c01679cc088b6196f01",
+            "ee_pos_vel": "f6fb8bd864bf215c82acbd74b11e50e7b096033b1e1d05471e3ec103137e2fc7",
+            "eef_name": "5a3c835c081a30d553d9b86c2e6c6ef4744b8d52adde0d14dc8cfade1376f28a",
+            "goal_ori": "5d1cb72e32cac16153bb277875176cdea1df0297aa501607771e9458f83d3a8e",
+            "goal_pos": "27a9ee3dd57df3dbdcfee590b349879aa87d714e041ad5edef2c345e79d6e6f0",
+            "impedance_mode": "4d7aefd5da9412f40e1cfc5c5207938e73cc392c4c2751a0b2872a07277a2481",
+            "initial_ee_ori_mat": "9912dfa930729ec447a712aea635bf99baa223c08fd26564cff63b610a82f006",
+            "initial_ee_pos": "421a944a94a88ba1ed0c0169cd3e0b2df62631ca5e6eb160839a6b7988440f7e",
+            "initial_joint": "76d281c388aa60dc586b7ad010fdaa39f20d294497c9c6fe9d4be5c3c33b4451",
+            "input_max": "29ff4bb4ba3775d50816474538663af8a57920754f591577cfdb03cbf1acee89",
+            "input_min": "28e8e8d2403787c4c48ed6b82e4f74f2d19e9cabe1dd16603adfa7512949bb6c",
+            "interpolator_ori": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "interpolator_pos": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "joint_dim": "4ee5d22e9e44ec6480a2fc727c72c7886855f94562e8549cfae9a33f7361574b",
+            "joint_index": "ae87194a7175623c402ed0ceb135d95613f1ec2b830890a90de34d1ec61550ca",
+            "joint_pos": "e807657473e949080edc3c5976b41524d1aaa003e48d51a12fddca56ea5a3c65",
+            "joint_vel": "2b8fb74b946f799ff83286ebac87006e79133db1bcf0c540adf5284a70c97061",
+            "kd": "c4472ac165682624224d816b1ef33d9a6a58fd0f72575131f99656c7d45d1bf1",
+            "kp": "84546c83e1d637b9e9211bab41cda7df7980aa44edfdeafafa0c2aa751674923",
+            "kp_max": "21a41d2a30b7cd2df8440b1298ed5fe3360942c0309eabf505c48eaa23a96ef7",
+            "kp_min": "578eb258435495c0c1035f3fea1c187f8aa4897650aa3f533d18b9bcab736f87",
+            "mass_matrix": "548f681a6248059e83bbce761119115fa4bc0e3a035f92bae0c9568e69e1b153",
+            "model_timestep": "6d680594c8771aaecdef3409c494993b4fc8d52a8b23cb86fe86110b28040ed0",
+            "name_suffix": "b17d1474bb24f2af0397b46d40a560aa9fe47caa2e25f5ce4dd74b5f6d4f6da5",
+            "new_update": "112bda3b495d867b6a98c899fac7c25eb60ca4b6e6fe5ec7ab9299f93e8274bc",
+            "ori_ref": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "orientation_limits": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "output_max": "fc581dbd0d0891e1c061652ad759884965cfc4ac5e9981bce7d8a37bce55d845",
+            "output_min": "3c8871088e17f172dfdcbf38b7c1c9efcbdb8719d31eb2d827e1711b4844de37",
+            "position_limits": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "qpos_index": "ae87194a7175623c402ed0ceb135d95613f1ec2b830890a90de34d1ec61550ca",
+            "qvel_index": "ae87194a7175623c402ed0ceb135d95613f1ec2b830890a90de34d1ec61550ca",
+            "relative_ori": "c19418705ac851e3f0462d2d2cae9b013d47319d45d972ee351bfca2dfc90f3e",
+            "torques": "dad85efe747771d52635b1dd8a71e96a63e1377a2dc2e19d2bc78b23204784ae",
+            "uncoupling": "112bda3b495d867b6a98c899fac7c25eb60ca4b6e6fe5ec7ab9299f93e8274bc",
+            "use_delta": "24a5341c9a6e30357187cbeaebee0a02714ee3b3d6cead951a613e96ffb746dc",
+            "use_ori": "112bda3b495d867b6a98c899fac7c25eb60ca4b6e6fe5ec7ab9299f93e8274bc"
+          },
+          "passed": true,
+          "restored_audit": {
+            "capture_complete": true,
+            "captured_fields": [
+              "J_full",
+              "J_ori",
+              "J_pos",
+              "action_input_transform",
+              "action_output_transform",
+              "action_scale",
+              "actuator_max",
+              "actuator_min",
+              "control_dim",
+              "control_freq",
+              "damping_ratio_max",
+              "damping_ratio_min",
+              "ee_ori_mat",
+              "ee_ori_vel",
+              "ee_pos",
+              "ee_pos_vel",
+              "eef_name",
+              "goal_ori",
+              "goal_pos",
+              "impedance_mode",
+              "initial_ee_ori_mat",
+              "initial_ee_pos",
+              "initial_joint",
+              "input_max",
+              "input_min",
+              "interpolator_ori",
+              "interpolator_pos",
+              "joint_dim",
+              "joint_index",
+              "joint_pos",
+              "joint_vel",
+              "kd",
+              "kp",
+              "kp_max",
+              "kp_min",
+              "mass_matrix",
+              "model_timestep",
+              "name_suffix",
+              "new_update",
+              "ori_ref",
+              "orientation_limits",
+              "output_max",
+              "output_min",
+              "position_limits",
+              "qpos_index",
+              "qvel_index",
+              "relative_ori",
+              "torques",
+              "uncoupling",
+              "use_delta",
+              "use_ori"
+            ],
+            "class": "robosuite.controllers.osc.OperationalSpaceController",
+            "object": "controller",
+            "skipped_fields": [
+              {
+                "blocking": false,
+                "classification": "object_reference_not_serialized",
+                "field": "sim",
+                "type": "mujoco_py.cymj.MjSim"
+              }
+            ]
+          },
+          "restored_field_sha256": {
+            "J_full": "8ac6f9042abc0b2e3ad213c33519410c2c54fb6821fcaa59c2c0fb8fc706a6a4",
+            "J_ori": "00ab1c7189d124176efd12339f687a751d2ef34854b384ec949a2d5f52d823d5",
+            "J_pos": "caeeae51f2d9e1780d2972f172708171e0db886dca067a345c7bfd62980c646e",
+            "action_input_transform": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "action_output_transform": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "action_scale": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "actuator_max": "773cf51fb4a62a3d9f14348e9929fe4ddbbdde6f8c149268d7db1ba7ebea4c81",
+            "actuator_min": "5f73cf836c2af8a6c576bc43f184538dbbc3657216e198a8897cb7fc1df67aea",
+            "control_dim": "019550a8070776d0e76021287add35a8b8659ca97172a378da825ced13ae98af",
+            "control_freq": "47256b4f96280bd6b7611f759a601078b886fe5c47dc85c428945b6953693727",
+            "damping_ratio_max": "b59ebe39a61444a3acfa2c1cc65f2d7b277512590210106f1cd35ef05cb50a02",
+            "damping_ratio_min": "578eb258435495c0c1035f3fea1c187f8aa4897650aa3f533d18b9bcab736f87",
+            "ee_ori_mat": "5e1f7091b0c16269c12f4fe00c2527d33885186160ab1da212ad1df648eedeeb",
+            "ee_ori_vel": "f8af4c54d6e02ba7191024b720252e9f7ce8c27e6a813929397d925a964658e1",
+            "ee_pos": "0871bbfcb2aaf4bc39174572d6a600c361de74cc24026c01679cc088b6196f01",
+            "ee_pos_vel": "f6fb8bd864bf215c82acbd74b11e50e7b096033b1e1d05471e3ec103137e2fc7",
+            "eef_name": "5a3c835c081a30d553d9b86c2e6c6ef4744b8d52adde0d14dc8cfade1376f28a",
+            "goal_ori": "5d1cb72e32cac16153bb277875176cdea1df0297aa501607771e9458f83d3a8e",
+            "goal_pos": "27a9ee3dd57df3dbdcfee590b349879aa87d714e041ad5edef2c345e79d6e6f0",
+            "impedance_mode": "4d7aefd5da9412f40e1cfc5c5207938e73cc392c4c2751a0b2872a07277a2481",
+            "initial_ee_ori_mat": "9912dfa930729ec447a712aea635bf99baa223c08fd26564cff63b610a82f006",
+            "initial_ee_pos": "421a944a94a88ba1ed0c0169cd3e0b2df62631ca5e6eb160839a6b7988440f7e",
+            "initial_joint": "76d281c388aa60dc586b7ad010fdaa39f20d294497c9c6fe9d4be5c3c33b4451",
+            "input_max": "29ff4bb4ba3775d50816474538663af8a57920754f591577cfdb03cbf1acee89",
+            "input_min": "28e8e8d2403787c4c48ed6b82e4f74f2d19e9cabe1dd16603adfa7512949bb6c",
+            "interpolator_ori": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "interpolator_pos": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "joint_dim": "4ee5d22e9e44ec6480a2fc727c72c7886855f94562e8549cfae9a33f7361574b",
+            "joint_index": "ae87194a7175623c402ed0ceb135d95613f1ec2b830890a90de34d1ec61550ca",
+            "joint_pos": "e807657473e949080edc3c5976b41524d1aaa003e48d51a12fddca56ea5a3c65",
+            "joint_vel": "2b8fb74b946f799ff83286ebac87006e79133db1bcf0c540adf5284a70c97061",
+            "kd": "c4472ac165682624224d816b1ef33d9a6a58fd0f72575131f99656c7d45d1bf1",
+            "kp": "84546c83e1d637b9e9211bab41cda7df7980aa44edfdeafafa0c2aa751674923",
+            "kp_max": "21a41d2a30b7cd2df8440b1298ed5fe3360942c0309eabf505c48eaa23a96ef7",
+            "kp_min": "578eb258435495c0c1035f3fea1c187f8aa4897650aa3f533d18b9bcab736f87",
+            "mass_matrix": "548f681a6248059e83bbce761119115fa4bc0e3a035f92bae0c9568e69e1b153",
+            "model_timestep": "6d680594c8771aaecdef3409c494993b4fc8d52a8b23cb86fe86110b28040ed0",
+            "name_suffix": "b17d1474bb24f2af0397b46d40a560aa9fe47caa2e25f5ce4dd74b5f6d4f6da5",
+            "new_update": "112bda3b495d867b6a98c899fac7c25eb60ca4b6e6fe5ec7ab9299f93e8274bc",
+            "ori_ref": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "orientation_limits": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "output_max": "fc581dbd0d0891e1c061652ad759884965cfc4ac5e9981bce7d8a37bce55d845",
+            "output_min": "3c8871088e17f172dfdcbf38b7c1c9efcbdb8719d31eb2d827e1711b4844de37",
+            "position_limits": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "qpos_index": "ae87194a7175623c402ed0ceb135d95613f1ec2b830890a90de34d1ec61550ca",
+            "qvel_index": "ae87194a7175623c402ed0ceb135d95613f1ec2b830890a90de34d1ec61550ca",
+            "relative_ori": "c19418705ac851e3f0462d2d2cae9b013d47319d45d972ee351bfca2dfc90f3e",
+            "torques": "dad85efe747771d52635b1dd8a71e96a63e1377a2dc2e19d2bc78b23204784ae",
+            "uncoupling": "112bda3b495d867b6a98c899fac7c25eb60ca4b6e6fe5ec7ab9299f93e8274bc",
+            "use_delta": "24a5341c9a6e30357187cbeaebee0a02714ee3b3d6cead951a613e96ffb746dc",
+            "use_ori": "112bda3b495d867b6a98c899fac7c25eb60ca4b6e6fe5ec7ab9299f93e8274bc"
+          }
+        },
+        "0.gripper": {
+          "mismatched_fields": [],
+          "original_audit": {
+            "capture_complete": true,
+            "captured_fields": [
+              "_actuators",
+              "_base_offset",
+              "_bodies",
+              "_contact_geoms",
+              "_joints",
+              "_root_body",
+              "_sensors",
+              "_sites",
+              "_visual_geoms",
+              "current_action",
+              "file",
+              "folder",
+              "idn",
+              "mount",
+              "rotation_offset"
+            ],
+            "class": "robosuite.models.grippers.panda_gripper.PandaGripper",
+            "object": "gripper",
+            "skipped_fields": [
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "tree",
+                "type": "xml.etree.ElementTree.ElementTree"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "root",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "worldbody",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "actuator",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "sensor",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "asset",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "tendon",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "equality",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "contact",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "_elements",
+                "type": "builtins.dict"
+              }
+            ]
+          },
+          "original_field_sha256": {
+            "_actuators": "85560d0440f9321844240ab8fb5457463cd0bf251f68a23061d23b20b638c44d",
+            "_base_offset": "c19418705ac851e3f0462d2d2cae9b013d47319d45d972ee351bfca2dfc90f3e",
+            "_bodies": "9f90f44ecccde6fba4b459926ea5fe3c7c7b89faf74e6922fc8dfcd6c4ad2639",
+            "_contact_geoms": "312c82128976e71291fe3859db77e4915622427f0401a20abacc1bf4959d0d83",
+            "_joints": "e536d3efe5328c96ffc44e8015c1077d916e9e42e40f4a0b54e65690c675bf6b",
+            "_root_body": "1f105ab31176960d427b7741fc1e85d75b02bce854cbf2b173869d040233eafc",
+            "_sensors": "5d7c62b69ac262def980ea13e55520243d891c53bf28993668496930ec96ab31",
+            "_sites": "333ba55824d1189a5f3b7e8e73a103ead5ffcb8b7ee84dde84830de4404db870",
+            "_visual_geoms": "c70ca5731f62111ef404d1ee1ee160a3d962bdb1ff41f9b54e0c38f7f659f75e",
+            "current_action": "84b283548a96338d16ec45a707cc6f4eb084942ce2b19733761e6231c441f2f3",
+            "file": "5e6598d433dadd440bf736bf55c4585102409014c9de83c9e5df6904603aa087",
+            "folder": "1f2b4e94ef757931705de18d12473ae8d95ca7e98db60b072fe8aa97007f0603",
+            "idn": "ac57d54dcc34f2ebf6f410f6d7fab436eb84f8f6b640782134b3d8062ebf71d0",
+            "mount": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "rotation_offset": "3d57179505ce8b547ebca24ddff4513e7e222ad312266da12bc08011fe9c742e"
+          },
+          "passed": true,
+          "restored_audit": {
+            "capture_complete": true,
+            "captured_fields": [
+              "_actuators",
+              "_base_offset",
+              "_bodies",
+              "_contact_geoms",
+              "_joints",
+              "_root_body",
+              "_sensors",
+              "_sites",
+              "_visual_geoms",
+              "current_action",
+              "file",
+              "folder",
+              "idn",
+              "mount",
+              "rotation_offset"
+            ],
+            "class": "robosuite.models.grippers.panda_gripper.PandaGripper",
+            "object": "gripper",
+            "skipped_fields": [
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "tree",
+                "type": "xml.etree.ElementTree.ElementTree"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "root",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "worldbody",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "actuator",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "sensor",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "asset",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "tendon",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "equality",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "contact",
+                "type": "xml.etree.ElementTree.Element"
+              },
+              {
+                "blocking": false,
+                "classification": "immutable_model_metadata",
+                "field": "_elements",
+                "type": "builtins.dict"
+              }
+            ]
+          },
+          "restored_field_sha256": {
+            "_actuators": "85560d0440f9321844240ab8fb5457463cd0bf251f68a23061d23b20b638c44d",
+            "_base_offset": "c19418705ac851e3f0462d2d2cae9b013d47319d45d972ee351bfca2dfc90f3e",
+            "_bodies": "9f90f44ecccde6fba4b459926ea5fe3c7c7b89faf74e6922fc8dfcd6c4ad2639",
+            "_contact_geoms": "312c82128976e71291fe3859db77e4915622427f0401a20abacc1bf4959d0d83",
+            "_joints": "e536d3efe5328c96ffc44e8015c1077d916e9e42e40f4a0b54e65690c675bf6b",
+            "_root_body": "1f105ab31176960d427b7741fc1e85d75b02bce854cbf2b173869d040233eafc",
+            "_sensors": "5d7c62b69ac262def980ea13e55520243d891c53bf28993668496930ec96ab31",
+            "_sites": "333ba55824d1189a5f3b7e8e73a103ead5ffcb8b7ee84dde84830de4404db870",
+            "_visual_geoms": "c70ca5731f62111ef404d1ee1ee160a3d962bdb1ff41f9b54e0c38f7f659f75e",
+            "current_action": "84b283548a96338d16ec45a707cc6f4eb084942ce2b19733761e6231c441f2f3",
+            "file": "5e6598d433dadd440bf736bf55c4585102409014c9de83c9e5df6904603aa087",
+            "folder": "1f2b4e94ef757931705de18d12473ae8d95ca7e98db60b072fe8aa97007f0603",
+            "idn": "ac57d54dcc34f2ebf6f410f6d7fab436eb84f8f6b640782134b3d8062ebf71d0",
+            "mount": "9c298d589a2158eb513cb52191144518a2acab2cb0c04f1df14fca0f712fa4a1",
+            "rotation_offset": "3d57179505ce8b547ebca24ddff4513e7e222ad312266da12bc08011fe9c742e"
+          }
+        }
+      },
+      "fresh_observation_comparison": {
+        "by_key": {
+          "agentview_image": {
+            "max_abs_error": 0.003921568393707275,
+            "mean_abs_error": 1.8525927785843137e-07,
+            "modality": "rgb",
+            "observation_key": "agentview_image",
+            "original_dtype": "float32",
+            "original_sha256": "13dded5e44928c732f25a41af0798695bede707ee3f5088c7c126eee78b655c7",
+            "original_shape": [
+              3,
+              84,
+              84
+            ],
+            "passed": true,
+            "restored_dtype": "float32",
+            "restored_sha256": "c9aa67afc26416478eade98e4c95a69789153e160860b23673ec9455c7842256",
+            "restored_shape": [
+              3,
+              84,
+              84
+            ]
+          },
+          "robot0_eef_pos": {
+            "max_abs_error": 2.7755575615628914e-17,
+            "mean_abs_error": 9.25185853854297e-18,
+            "modality": "low_dim",
+            "observation_key": "robot0_eef_pos",
+            "original_dtype": "float64",
+            "original_sha256": "a0c304d8a4e463281ea6ce255bdf3d648ec2a102bf1922f7655fc49b1618bbb6",
+            "original_shape": [
+              3
+            ],
+            "passed": true,
+            "restored_dtype": "float64",
+            "restored_sha256": "3cd29d32ae36cccec82b534366bbac27a2343dd7798207bcd95b3a347ac4aa24",
+            "restored_shape": [
+              3
+            ]
+          },
+          "robot0_eef_quat": {
+            "max_abs_error": 1.087785039817317e-07,
+            "mean_abs_error": 2.948843851730259e-08,
+            "modality": "low_dim",
+            "observation_key": "robot0_eef_quat",
+            "original_dtype": "float64",
+            "original_sha256": "06764149ac5f82f1cab71470b0d7c983e7cf25cee6559d35775b1bedd59ae2f9",
+            "original_shape": [
+              4
+            ],
+            "passed": true,
+            "restored_dtype": "float64",
+            "restored_sha256": "713aea0b1924591c46323906890016d6a003bc77cd409bbce330d841458f16eb",
+            "restored_shape": [
+              4
+            ]
+          },
+          "robot0_eye_in_hand_image": {
+            "max_abs_error": 0.039215683937072754,
+            "mean_abs_error": 9.892848112640828e-05,
+            "modality": "rgb",
+            "observation_key": "robot0_eye_in_hand_image",
+            "original_dtype": "float32",
+            "original_sha256": "cf40b6db80a5e9a1619d490ea4058806b9f524b113a4d00dd6ebba1c865b569b",
+            "original_shape": [
+              3,
+              84,
+              84
+            ],
+            "passed": true,
+            "restored_dtype": "float32",
+            "restored_sha256": "4db22d5c84cbe85445e50ec326b5f7e0b87e9efff37548bb243b9351471b344f",
+            "restored_shape": [
+              3,
+              84,
+              84
+            ]
+          },
+          "robot0_gripper_qpos": {
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "modality": "low_dim",
+            "observation_key": "robot0_gripper_qpos",
+            "original_dtype": "float64",
+            "original_sha256": "7893987f964a2f7715d293537aaa90c8e02da6137e841f9e0f8ac2c03f6adef4",
+            "original_shape": [
+              2
+            ],
+            "passed": true,
+            "restored_dtype": "float64",
+            "restored_sha256": "7893987f964a2f7715d293537aaa90c8e02da6137e841f9e0f8ac2c03f6adef4",
+            "restored_shape": [
+              2
+            ]
+          }
+        },
+        "max_mean_abs_error": 9.892848112640828e-05,
+        "passed": true
+      },
+      "fresh_observation_status": "PASS",
+      "geometry_abs_max": 0.0,
+      "geometry_comparison": {
+        "abs_error_by_metric_m": {
+          "clearance_m": 0.0,
+          "clearance_x_negative_m": 0.0,
+          "clearance_x_positive_m": 0.0,
+          "clearance_y_negative_m": 0.0,
+          "clearance_y_positive_m": 0.0,
+          "d_xy_m": 0.0,
+          "dx_m": 0.0,
+          "dy_m": 0.0,
+          "hole_half_x_m": 0.0,
+          "hole_half_y_m": 0.0,
+          "nut_bottom_local_z_m": 0.0,
+          "nut_collision_thickness_m": 0.0,
+          "peg_half_x_m": 0.0,
+          "peg_half_y_m": 0.0,
+          "peg_half_z_m": 0.0,
+          "peg_top_local_z_m": 0.0,
+          "r_hole_m": 0.0,
+          "r_peg_m": 0.0,
+          "t_nut_m": 0.0,
+          "z_gap_m": 0.0
+        },
+        "geometry_fingerprint_matches": true,
+        "max_abs_error_m": 0.0,
+        "metric_tolerance_m": 1e-06,
+        "passed": true,
+        "relative_yaw_abs_error_rad": 0.0,
+        "relative_yaw_tolerance_rad": 1e-06
+      },
+      "mujoco_dynamics_inputs_comparison": {
+        "ctrl": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "original_dtype": "float64",
+          "original_shape": [
+            9
+          ],
+          "restored_dtype": "float64",
+          "restored_shape": [
+            9
+          ]
+        },
+        "qacc_warmstart": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "original_dtype": "float64",
+          "original_shape": [
+            21
+          ],
+          "restored_dtype": "float64",
+          "restored_shape": [
+            21
+          ]
+        },
+        "qfrc_applied": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "original_dtype": "float64",
+          "original_shape": [
+            21
+          ],
+          "restored_dtype": "float64",
+          "restored_shape": [
+            21
+          ]
+        },
+        "xfrc_applied": {
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "original_dtype": "float64",
+          "original_shape": [
+            26,
+            6
+          ],
+          "restored_dtype": "float64",
+          "restored_shape": [
+            26,
+            6
+          ]
+        }
+      },
+      "observation_history_comparison": {
+        "by_key": {
+          "agentview_image": {
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "modality": "rgb",
+            "observation_key": "agentview_image",
+            "original_dtype": "float32",
+            "original_sha256": "5b86a3ba885bcb0b541d0ce27ff5f2b74dc6630c7baa8dcec778eb1626153b22",
+            "original_shape": [
+              2,
+              3,
+              84,
+              84
+            ],
+            "passed": true,
+            "restored_dtype": "float32",
+            "restored_sha256": "5b86a3ba885bcb0b541d0ce27ff5f2b74dc6630c7baa8dcec778eb1626153b22",
+            "restored_shape": [
+              2,
+              3,
+              84,
+              84
+            ]
+          },
+          "robot0_eef_pos": {
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "modality": "low_dim",
+            "observation_key": "robot0_eef_pos",
+            "original_dtype": "float32",
+            "original_sha256": "478244f04a8f62f801b0ca0baa26aef1d680d2678f8f4b1cebc3b0217a04b632",
+            "original_shape": [
+              2,
+              3
+            ],
+            "passed": true,
+            "restored_dtype": "float32",
+            "restored_sha256": "478244f04a8f62f801b0ca0baa26aef1d680d2678f8f4b1cebc3b0217a04b632",
+            "restored_shape": [
+              2,
+              3
+            ]
+          },
+          "robot0_eef_quat": {
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "modality": "low_dim",
+            "observation_key": "robot0_eef_quat",
+            "original_dtype": "float32",
+            "original_sha256": "d4cd0a2aa0d81732bff350501430928fae61305b99953198f676f995d374094b",
+            "original_shape": [
+              2,
+              4
+            ],
+            "passed": true,
+            "restored_dtype": "float32",
+            "restored_sha256": "d4cd0a2aa0d81732bff350501430928fae61305b99953198f676f995d374094b",
+            "restored_shape": [
+              2,
+              4
+            ]
+          },
+          "robot0_eye_in_hand_image": {
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "modality": "rgb",
+            "observation_key": "robot0_eye_in_hand_image",
+            "original_dtype": "float32",
+            "original_sha256": "37655741b660433b82171394e8edf5382111e529680ca2680e74cf01543a0348",
+            "original_shape": [
+              2,
+              3,
+              84,
+              84
+            ],
+            "passed": true,
+            "restored_dtype": "float32",
+            "restored_sha256": "37655741b660433b82171394e8edf5382111e529680ca2680e74cf01543a0348",
+            "restored_shape": [
+              2,
+              3,
+              84,
+              84
+            ]
+          },
+          "robot0_gripper_qpos": {
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "modality": "low_dim",
+            "observation_key": "robot0_gripper_qpos",
+            "original_dtype": "float32",
+            "original_sha256": "3515fb8a9ca974d7d8dd8a9b899fe1292100e62a2b794283e0c7b2f06d061ef5",
+            "original_shape": [
+              2,
+              2
+            ],
+            "passed": true,
+            "restored_dtype": "float32",
+            "restored_sha256": "3515fb8a9ca974d7d8dd8a9b899fe1292100e62a2b794283e0c7b2f06d061ef5",
+            "restored_shape": [
+              2,
+              2
+            ]
+          }
+        },
+        "max_mean_abs_error": 0.0,
+        "original_frame_sha256": [
+          {
+            "agentview_image": "4a921f296c49de73522965bf9e424110830cd011e1619906a0918107e12c213b",
+            "robot0_eef_pos": "7cb7246fc047d39eed275c164e696fff3faf4f156788cdf95be317b19641ac93",
+            "robot0_eef_quat": "6266f6c6d574b65ae93f6d80649367e728d74f8089e7ba45d2ee1741cbdacb48",
+            "robot0_eye_in_hand_image": "dc47f43c6858d08b8dfad48499eb15f82317cbd3e7d392a1b0dded18323333b2",
+            "robot0_gripper_qpos": "d07406c0ae1305fafb940bc402717658cd04401778796f3679ff23730c584243"
+          },
+          {
+            "agentview_image": "13dded5e44928c732f25a41af0798695bede707ee3f5088c7c126eee78b655c7",
+            "robot0_eef_pos": "a0c304d8a4e463281ea6ce255bdf3d648ec2a102bf1922f7655fc49b1618bbb6",
+            "robot0_eef_quat": "06764149ac5f82f1cab71470b0d7c983e7cf25cee6559d35775b1bedd59ae2f9",
+            "robot0_eye_in_hand_image": "cf40b6db80a5e9a1619d490ea4058806b9f524b113a4d00dd6ebba1c865b569b",
+            "robot0_gripper_qpos": "7893987f964a2f7715d293537aaa90c8e02da6137e841f9e0f8ac2c03f6adef4"
+          }
+        ],
+        "passed": true,
+        "raw_frames_match": true,
+        "restored_frame_sha256": [
+          {
+            "agentview_image": "4a921f296c49de73522965bf9e424110830cd011e1619906a0918107e12c213b",
+            "robot0_eef_pos": "7cb7246fc047d39eed275c164e696fff3faf4f156788cdf95be317b19641ac93",
+            "robot0_eef_quat": "6266f6c6d574b65ae93f6d80649367e728d74f8089e7ba45d2ee1741cbdacb48",
+            "robot0_eye_in_hand_image": "dc47f43c6858d08b8dfad48499eb15f82317cbd3e7d392a1b0dded18323333b2",
+            "robot0_gripper_qpos": "d07406c0ae1305fafb940bc402717658cd04401778796f3679ff23730c584243"
+          },
+          {
+            "agentview_image": "13dded5e44928c732f25a41af0798695bede707ee3f5088c7c126eee78b655c7",
+            "robot0_eef_pos": "a0c304d8a4e463281ea6ce255bdf3d648ec2a102bf1922f7655fc49b1618bbb6",
+            "robot0_eef_quat": "06764149ac5f82f1cab71470b0d7c983e7cf25cee6559d35775b1bedd59ae2f9",
+            "robot0_eye_in_hand_image": "cf40b6db80a5e9a1619d490ea4058806b9f524b113a4d00dd6ebba1c865b569b",
+            "robot0_gripper_qpos": "7893987f964a2f7715d293537aaa90c8e02da6137e841f9e0f8ac2c03f6adef4"
+          }
+        ]
+      },
+      "observation_mean_abs_max": 9.892848112640828e-05,
+      "original_model_xml_sha256": "68b478b7e9bb3b6bd2bcba4c9b75078859b4c959f92a2ddd1cc8aad2ab636ac4",
+      "original_state_sha256": "c9e856dd81ce235c818215601d7eb1e35dbc2292de24d554c1346bb67adc8e5f",
+      "original_vs_restored_max_abs_error": 0.0,
+      "passed": true,
+      "reference_source": "source_rollout_at_capture",
+      "replay": {
+        "error": null,
+        "geometry_comparison": {
+          "abs_error_by_metric_m": {
+            "clearance_m": 0.0,
+            "clearance_x_negative_m": 0.0,
+            "clearance_x_positive_m": 0.0,
+            "clearance_y_negative_m": 0.0,
+            "clearance_y_positive_m": 0.0,
+            "d_xy_m": 0.0,
+            "dx_m": 0.0,
+            "dy_m": 0.0,
+            "hole_half_x_m": 0.0,
+            "hole_half_y_m": 0.0,
+            "nut_bottom_local_z_m": 0.0,
+            "nut_collision_thickness_m": 0.0,
+            "peg_half_x_m": 0.0,
+            "peg_half_y_m": 0.0,
+            "peg_half_z_m": 0.0,
+            "peg_top_local_z_m": 0.0,
+            "r_hole_m": 0.0,
+            "r_peg_m": 0.0,
+            "t_nut_m": 0.0,
+            "z_gap_m": 0.0
+          },
+          "geometry_fingerprint_matches": true,
+          "max_abs_error_m": 0.0,
+          "metric_tolerance_m": 1e-06,
+          "passed": true,
+          "relative_yaw_abs_error_rad": 0.0,
+          "relative_yaw_tolerance_rad": 1e-06
+        },
+        "observation_comparison": {
+          "by_key": {
+            "agentview_image": {
+              "max_abs_error": 0.0,
+              "mean_abs_error": 0.0,
+              "modality": "rgb",
+              "observation_key": "agentview_image",
+              "original_dtype": "float32",
+              "original_sha256": "167ef3c896564139e0da353e85e58ba28c445c9d9b80ba799228c809f8d7f831",
+              "original_shape": [
+                2,
+                3,
+                84,
+                84
+              ],
+              "passed": true,
+              "restored_dtype": "float32",
+              "restored_sha256": "167ef3c896564139e0da353e85e58ba28c445c9d9b80ba799228c809f8d7f831",
+              "restored_shape": [
+                2,
+                3,
+                84,
+                84
+              ]
+            },
+            "robot0_eef_pos": {
+              "max_abs_error": 0.0,
+              "mean_abs_error": 0.0,
+              "modality": "low_dim",
+              "observation_key": "robot0_eef_pos",
+              "original_dtype": "float32",
+              "original_sha256": "6d9a20a438eae9fb9aa35a695160bd9550e7afa06abd8727ccc4f0bf700eaddd",
+              "original_shape": [
+                2,
+                3
+              ],
+              "passed": true,
+              "restored_dtype": "float32",
+              "restored_sha256": "6d9a20a438eae9fb9aa35a695160bd9550e7afa06abd8727ccc4f0bf700eaddd",
+              "restored_shape": [
+                2,
+                3
+              ]
+            },
+            "robot0_eef_quat": {
+              "max_abs_error": 0.0,
+              "mean_abs_error": 0.0,
+              "modality": "low_dim",
+              "observation_key": "robot0_eef_quat",
+              "original_dtype": "float32",
+              "original_sha256": "f01b7f522af84f9724d4499560338e51282c6841c12dc91c9a675e377b45acf1",
+              "original_shape": [
+                2,
+                4
+              ],
+              "passed": true,
+              "restored_dtype": "float32",
+              "restored_sha256": "f01b7f522af84f9724d4499560338e51282c6841c12dc91c9a675e377b45acf1",
+              "restored_shape": [
+                2,
+                4
+              ]
+            },
+            "robot0_eye_in_hand_image": {
+              "max_abs_error": 0.0,
+              "mean_abs_error": 0.0,
+              "modality": "rgb",
+              "observation_key": "robot0_eye_in_hand_image",
+              "original_dtype": "float32",
+              "original_sha256": "1c3a1b99bea7bf8bcbf9b212c4bd3857139c54746e2435b0dc5fe1365bab2184",
+              "original_shape": [
+                2,
+                3,
+                84,
+                84
+              ],
+              "passed": true,
+              "restored_dtype": "float32",
+              "restored_sha256": "1c3a1b99bea7bf8bcbf9b212c4bd3857139c54746e2435b0dc5fe1365bab2184",
+              "restored_shape": [
+                2,
+                3,
+                84,
+                84
+              ]
+            },
+            "robot0_gripper_qpos": {
+              "max_abs_error": 0.0,
+              "mean_abs_error": 0.0,
+              "modality": "low_dim",
+              "observation_key": "robot0_gripper_qpos",
+              "original_dtype": "float32",
+              "original_sha256": "9617ef8031d8fd8fbe17451090bbbde6ca115fd2d934b65513fb3762172e6b54",
+              "original_shape": [
+                2,
+                2
+              ],
+              "passed": true,
+              "restored_dtype": "float32",
+              "restored_sha256": "9617ef8031d8fd8fbe17451090bbbde6ca115fd2d934b65513fb3762172e6b54",
+              "restored_shape": [
+                2,
+                2
+              ]
+            }
+          },
+          "max_mean_abs_error": 0.0,
+          "passed": true
+        },
+        "state_comparison": {
+          "changed_flat_indices_first_16": [],
+          "changed_value_count": 0,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "normalization": "SHA256(dtype, shape, C-order little-endian float64 bytes; zero signs normalized)",
+          "original_dtype": "float64",
+          "original_dtype_with_byte_order": "<f8",
+          "original_legacy_sha256": "38a174797109c8b1071a3b72123404050521085c2bce60b4b67e956132d7f7ca",
+          "original_shape": [
+            45
+          ],
+          "original_state_sha256": "068c086f14464c98a52b28788a123be07ae0e0466635caf18ba56e14ab7138db",
+          "original_strides": [
+            8
+          ],
+          "restored_dtype": "float64",
+          "restored_dtype_with_byte_order": "<f8",
+          "restored_legacy_sha256": "38a174797109c8b1071a3b72123404050521085c2bce60b4b67e956132d7f7ca",
+          "restored_shape": [
+            45
+          ],
+          "restored_state_sha256": "068c086f14464c98a52b28788a123be07ae0e0466635caf18ba56e14ab7138db",
+          "restored_strides": [
+            8
+          ]
+        }
+      },
+      "restore_fresh_observation_error": null,
+      "restored_model_xml_sha256": "68b478b7e9bb3b6bd2bcba4c9b75078859b4c959f92a2ddd1cc8aad2ab636ac4",
+      "restored_state_sha256": "c9e856dd81ce235c818215601d7eb1e35dbc2292de24d554c1346bb67adc8e5f",
+      "snapshot_schema_version": 3,
+      "snapshot_sha256": "f918716d31e67aaf10ed626ec821653e7db1a51bac7e62d0f54a3fc57e3cc66e",
+      "snapshot_sim_state_sha256": "c9e856dd81ce235c818215601d7eb1e35dbc2292de24d554c1346bb67adc8e5f",
+      "source_fresh_observation_error": null,
+      "source_step": 124,
+      "source_step_observation_vs_restored_fresh": {
+        "by_key": {
+          "agentview_image": {
+            "max_abs_error": 0.003921568393707275,
+            "mean_abs_error": 1.8525927785843137e-07,
+            "modality": "rgb",
+            "observation_key": "agentview_image",
+            "original_dtype": "float32",
+            "original_sha256": "13dded5e44928c732f25a41af0798695bede707ee3f5088c7c126eee78b655c7",
+            "original_shape": [
+              3,
+              84,
+              84
+            ],
+            "passed": true,
+            "restored_dtype": "float32",
+            "restored_sha256": "c9aa67afc26416478eade98e4c95a69789153e160860b23673ec9455c7842256",
+            "restored_shape": [
+              3,
+              84,
+              84
+            ]
+          },
+          "robot0_eef_pos": {
+            "max_abs_error": 2.7755575615628914e-17,
+            "mean_abs_error": 9.25185853854297e-18,
+            "modality": "low_dim",
+            "observation_key": "robot0_eef_pos",
+            "original_dtype": "float64",
+            "original_sha256": "a0c304d8a4e463281ea6ce255bdf3d648ec2a102bf1922f7655fc49b1618bbb6",
+            "original_shape": [
+              3
+            ],
+            "passed": true,
+            "restored_dtype": "float64",
+            "restored_sha256": "3cd29d32ae36cccec82b534366bbac27a2343dd7798207bcd95b3a347ac4aa24",
+            "restored_shape": [
+              3
+            ]
+          },
+          "robot0_eef_quat": {
+            "max_abs_error": 1.087785039817317e-07,
+            "mean_abs_error": 2.948843851730259e-08,
+            "modality": "low_dim",
+            "observation_key": "robot0_eef_quat",
+            "original_dtype": "float64",
+            "original_sha256": "06764149ac5f82f1cab71470b0d7c983e7cf25cee6559d35775b1bedd59ae2f9",
+            "original_shape": [
+              4
+            ],
+            "passed": true,
+            "restored_dtype": "float64",
+            "restored_sha256": "713aea0b1924591c46323906890016d6a003bc77cd409bbce330d841458f16eb",
+            "restored_shape": [
+              4
+            ]
+          },
+          "robot0_eye_in_hand_image": {
+            "max_abs_error": 0.039215683937072754,
+            "mean_abs_error": 9.892848112640828e-05,
+            "modality": "rgb",
+            "observation_key": "robot0_eye_in_hand_image",
+            "original_dtype": "float32",
+            "original_sha256": "cf40b6db80a5e9a1619d490ea4058806b9f524b113a4d00dd6ebba1c865b569b",
+            "original_shape": [
+              3,
+              84,
+              84
+            ],
+            "passed": true,
+            "restored_dtype": "float32",
+            "restored_sha256": "4db22d5c84cbe85445e50ec326b5f7e0b87e9efff37548bb243b9351471b344f",
+            "restored_shape": [
+              3,
+              84,
+              84
+            ]
+          },
+          "robot0_gripper_qpos": {
+            "max_abs_error": 0.0,
+            "mean_abs_error": 0.0,
+            "modality": "low_dim",
+            "observation_key": "robot0_gripper_qpos",
+            "original_dtype": "float64",
+            "original_sha256": "7893987f964a2f7715d293537aaa90c8e02da6137e841f9e0f8ac2c03f6adef4",
+            "original_shape": [
+              2
+            ],
+            "passed": true,
+            "restored_dtype": "float64",
+            "restored_sha256": "7893987f964a2f7715d293537aaa90c8e02da6137e841f9e0f8ac2c03f6adef4",
+            "restored_shape": [
+              2
+            ]
+          }
+        },
+        "max_mean_abs_error": 9.892848112640828e-05,
+        "passed": true
+      },
+      "state_comparison": {
+        "changed_flat_indices_first_16": [],
+        "changed_value_count": 0,
+        "max_abs_error": 0.0,
+        "mean_abs_error": 0.0,
+        "normalization": "SHA256(dtype, shape, C-order little-endian float64 bytes; zero signs normalized)",
+        "original_dtype": "float64",
+        "original_dtype_with_byte_order": "<f8",
+        "original_legacy_sha256": "912730e8116c0fe10f67be3eee91bba383daac9f2a13b25da084f004047facf8",
+        "original_shape": [
+          45
+        ],
+        "original_state_sha256": "c9e856dd81ce235c818215601d7eb1e35dbc2292de24d554c1346bb67adc8e5f",
+        "original_strides": [
+          8
+        ],
+        "restored_dtype": "float64",
+        "restored_dtype_with_byte_order": "<f8",
+        "restored_legacy_sha256": "912730e8116c0fe10f67be3eee91bba383daac9f2a13b25da084f004047facf8",
+        "restored_shape": [
+          45
+        ],
+        "restored_state_sha256": "c9e856dd81ce235c818215601d7eb1e35dbc2292de24d554c1346bb67adc8e5f",
+        "restored_strides": [
+          8
+        ]
+      },
+      "state_max_abs": 0.0,
+      "state_source_vs_payload": {
+        "changed_flat_indices_first_16": [],
+        "changed_value_count": 0,
+        "max_abs_error": 0.0,
+        "mean_abs_error": 0.0,
+        "normalization": "SHA256(dtype, shape, C-order little-endian float64 bytes; zero signs normalized)",
+        "original_dtype": "float64",
+        "original_dtype_with_byte_order": "<f8",
+        "original_legacy_sha256": "912730e8116c0fe10f67be3eee91bba383daac9f2a13b25da084f004047facf8",
+        "original_shape": [
+          45
+        ],
+        "original_state_sha256": "c9e856dd81ce235c818215601d7eb1e35dbc2292de24d554c1346bb67adc8e5f",
+        "original_strides": [
+          8
+        ],
+        "restored_dtype": "float64",
+        "restored_dtype_with_byte_order": "<f8",
+        "restored_legacy_sha256": "912730e8116c0fe10f67be3eee91bba383daac9f2a13b25da084f004047facf8",
+        "restored_shape": [
+          45
+        ],
+        "restored_state_sha256": "c9e856dd81ce235c818215601d7eb1e35dbc2292de24d554c1346bb67adc8e5f",
+        "restored_strides": [
+          8
+        ]
+      },
+      "status": "PASS"
+    }
+  },
+  "scientific_data": false,
+  "split": "preflight",
+  "status": "PASS",
+  "thresholds": {
+    "geometry_atol": 1e-06,
+    "observation_mean_abs_tol": 0.001,
+    "state_atol": 1e-07
+  }
+}

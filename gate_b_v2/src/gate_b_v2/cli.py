@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -8,9 +9,27 @@ from typing import Any, Dict, Optional
 
 import yaml
 
-from .analysis import analyze_b1, analyze_b2_split, write_markdown_summary
-from .core import utc_run_id, write_json
-from .runner import GateBExperiment, _resolve_runtime_paths
+from .analysis import analyze_b1, analyze_b2_split, write_b2_report, write_markdown_summary
+from .authorization import (
+    STAGE_GATE_VERSION,
+    preflight_status,
+    require_preflight_seed,
+    sha256_file,
+    validate_formal_authorization,
+)
+from .core import sha256_tree, utc_run_id, write_json
+from .evidence import export_preflight_evidence
+from .geometry import run_live_geometry_audit
+from .harvest import harvest_split, run_preflight_smoke, run_source_episode
+from .locks import (
+    B2_PROTOCOL_VERSION,
+    b2_record_environment_fields,
+    build_b2_run_manifest,
+    current_git_commit,
+    load_b1_full_manifest,
+    validate_b2_config,
+)
+from .runner import GateBExperiment, _resolve_runtime_paths, ensure_new_b2_branch_outputs
 
 
 def _project_root() -> Path:
@@ -50,7 +69,10 @@ def _new_run_dir(config: Dict[str, Any], project_root: Path, explicit: Optional[
     return output_root / utc_run_id()
 
 
-def _build_experiment(args: argparse.Namespace, config: Dict[str, Any], require_existing: bool = False) -> GateBExperiment:
+def _build_experiment(
+    args: argparse.Namespace, config: Dict[str, Any], require_existing: bool = False,
+    branch_split: Optional[str] = None,
+) -> GateBExperiment:
     project_root = _project_root()
     dp_root, checkpoint, dataset = _resolve_runtime_paths(
         config, project_root,
@@ -59,6 +81,8 @@ def _build_experiment(args: argparse.Namespace, config: Dict[str, Any], require_
     run_dir = _new_run_dir(config, project_root, getattr(args, "run_dir", None))
     if require_existing and not run_dir.is_dir():
         raise FileNotFoundError("Run directory does not exist: {}".format(run_dir))
+    if branch_split is not None:
+        ensure_new_b2_branch_outputs(run_dir, branch_split)
     return GateBExperiment(
         config=config,
         project_root=project_root,
@@ -67,6 +91,7 @@ def _build_experiment(args: argparse.Namespace, config: Dict[str, Any], require_
         dataset=dataset,
         run_dir=run_dir,
         max_steps_override=args.max_steps,
+        write_environment_manifest=branch_split is None,
     )
 
 
@@ -146,14 +171,229 @@ def _cmd_b1(args: argparse.Namespace) -> int:
     return 0
 
 
-def _cmd_b2(args: argparse.Namespace) -> int:
-    config = _load_config(args.config)
-    experiment = _build_experiment(args, config, require_existing=True)
+def _build_b2_experiment(
+    args: argparse.Namespace, require_existing: bool, branch_split: Optional[str] = None,
+) -> GateBExperiment:
+    """Build the B2 experiment from the fixed config only.
+
+    B2 deliberately exposes no checkpoint/dataset/DP-root/max-steps/device or
+    config override.  The only user-supplied path is the run directory.
+    """
+    config = _load_config(None)
+    validate_b2_config(config)
+    locked_args = argparse.Namespace(
+        dp_root=None,
+        checkpoint=None,
+        dataset=None,
+        max_steps=None,
+        run_dir=args.run_dir,
+    )
+    return _build_experiment(locked_args, config, require_existing=require_existing, branch_split=branch_split)
+
+
+def _b1_full_manifest_for(config: Dict[str, Any], project_root: Path) -> Dict[str, Any]:
+    path = Path(str(config["paths"]["b1_full_manifest"]))
+    if not path.is_absolute():
+        path = (Path(project_root) / path).resolve()
+    return load_b1_full_manifest(path)
+
+
+def _cmd_b2_geometry_audit(args: argparse.Namespace) -> int:
+    experiment = _build_b2_experiment(args, require_existing=False)
     try:
-        path = experiment.run_b2(args.split)
-        print("B2 episodes written to {}".format(path))
+        experiment.env.reset(299999)
+        output = Path(args.output).expanduser() if args.output else (
+            experiment.run_dir / "b2_geometry_audit.json"
+        )
+        if not output.is_absolute():
+            output = (experiment.run_dir / output).resolve()
+        audit = run_live_geometry_audit(experiment.env.robosuite_env, output)
+        print("Geometry audit written to {}".format(output))
+        print(json.dumps({"status": audit["status"], "reason": audit.get("reason")}, indent=2))
+        return 0 if audit["status"] == "PASS" else 2
     finally:
         experiment.close()
+
+
+def _cmd_b2_harvest(args: argparse.Namespace) -> int:
+    experiment = _build_b2_experiment(args, require_existing=False)
+    try:
+        validate_formal_authorization(
+            experiment.run_dir,
+            args.split,
+            experiment.manifest,
+            config=experiment.config,
+            project_root=experiment.project_root,
+        )
+        path = harvest_split(experiment, args.split)
+        print("B2 {} state manifest written to {}".format(args.split, path))
+    finally:
+        experiment.close()
+    return 0
+
+
+def _cmd_b2(args: argparse.Namespace) -> int:
+    experiment = _build_b2_experiment(args, require_existing=True, branch_split=args.split)
+    try:
+        path = experiment.run_b2(args.split)
+        print("B2 {} branch episodes written to {}".format(args.split, path))
+    finally:
+        experiment.close()
+    return 0
+
+
+def _cmd_b2_preflight(args: argparse.Namespace) -> int:
+    # The formal preflight seed is frozen. Reject any other value before
+    # loading the checkpoint or starting MuJoCo.
+    seed = require_preflight_seed(args.seed)
+    experiment = _build_b2_experiment(args, require_existing=False)
+    try:
+        preflight_dir = experiment.run_dir
+        config = experiment.config
+        b1_full_manifest = _b1_full_manifest_for(config, experiment.project_root)
+        b2_manifest = build_b2_run_manifest(
+            config=config,
+            runtime_manifest=experiment.manifest,
+            b1_full_manifest=b1_full_manifest,
+            split="preflight",
+            command="b2-preflight",
+        )
+        environment_fingerprint = b2_record_environment_fields(b2_manifest)
+        environment_fingerprint_sha256 = hashlib.sha256(
+            json.dumps(
+                environment_fingerprint,
+                sort_keys=True,
+                separators=(",", ":"),
+                ensure_ascii=True,
+            ).encode("utf-8")
+        ).hexdigest()
+        implementation_commit = current_git_commit(experiment.project_root)
+
+        audit_path = preflight_dir / "b2_geometry_audit.json"
+        experiment.env.reset(seed)
+        audit = run_live_geometry_audit(experiment.env.robosuite_env, audit_path)
+        base_summary = {
+            "marker": "PREFLIGHT",
+            "scientific_data": False,
+            "seed": seed,
+            "preflight_seed": seed,
+            "protocol_version": B2_PROTOCOL_VERSION,
+            "stage_gate_version": STAGE_GATE_VERSION,
+            "implementation_commit": implementation_commit,
+            "source_tree_sha256": sha256_tree(experiment.project_root / "src" / "gate_b_v2"),
+            "geometry_audit": audit_path.name,
+            "geometry_status": audit["status"],
+            "geometry_audit_sha256": sha256_file(audit_path),
+            "environment_fingerprint": environment_fingerprint,
+            "environment_fingerprint_sha256": environment_fingerprint_sha256,
+        }
+        if audit["status"] != "PASS":
+            summary = dict(base_summary)
+            summary.update({
+                "status": "BLOCKED",
+                "gate_reached": False,
+                "fallback_used": False,
+                "snapshot_validation": None,
+                "snapshot_validation_sha256": None,
+                "snapshot_validation_all_passed": False,
+                "snapshot_file": None,
+                "snapshot_sha256": None,
+                "state_smoke_records": None,
+                "reason": "Live geometry audit did not pass; no snapshot preflight was attempted.",
+                "note": "PREFLIGHT only; not scientific data.",
+            })
+            write_json(preflight_dir / "b2_preflight_summary.json", summary)
+            print(json.dumps(summary, indent=2))
+            return 2
+
+        experiment.env.reset(seed)
+        snapshot_dir = preflight_dir / "snapshots" / "preflight"
+        record = run_source_episode(
+            experiment,
+            "preflight",
+            seed,
+            snapshot_dir,
+            preflight=True,
+            fallback_step=int(args.fallback_step),
+        )
+        if record is None:
+            summary = dict(base_summary)
+            summary.update({
+                "status": "BLOCKED",
+                "gate_reached": False,
+                "fallback_used": False,
+                "snapshot_validation": None,
+                "snapshot_validation_sha256": None,
+                "snapshot_validation_all_passed": False,
+                "snapshot_file": None,
+                "snapshot_sha256": None,
+                "state_smoke_records": None,
+                "reason": "No stage-gate snapshot was captured.",
+                "note": "PREFLIGHT only; not scientific data.",
+            })
+            write_json(preflight_dir / "b2_preflight_summary.json", summary)
+            print(json.dumps(summary, indent=2))
+            return 2
+
+        fallback_used = bool(record.get("preflight_fallback", False))
+        gate_reached = not fallback_used
+        validation_path = experiment._validate_all_b2_snapshots([record], "preflight")
+        validation = json.loads(validation_path.read_text(encoding="utf-8"))
+        smoke_records = None
+        if args.smoke_seeds:
+            smoke_seeds = [int(item.strip()) for item in args.smoke_seeds.split(",") if item.strip()]
+            smoke_records = run_preflight_smoke(
+                experiment, preflight_dir / "state_smoke", smoke_seeds
+            )
+        snapshot_path = Path(str(record["snapshot_file"]))
+        try:
+            snapshot_relative = str(snapshot_path.resolve().relative_to(preflight_dir.resolve()))
+        except ValueError:
+            snapshot_relative = snapshot_path.name
+        status = preflight_status(
+            audit["status"], gate_reached, validation["all_passed"], fallback_used
+        )
+        passed = status == "PASS"
+        summary = dict(base_summary)
+        summary.update({
+            "status": status,
+            "gate_reached": bool(gate_reached),
+            "fallback_used": bool(fallback_used),
+            "snapshot_file": snapshot_relative,
+            "snapshot_sha256": record["snapshot_sha256"],
+            "source_step": record["source_step"],
+            "snapshot_schema_version": record["snapshot_schema_version"],
+            "snapshot_validation": validation_path.name,
+            "snapshot_validation_sha256": sha256_file(validation_path),
+            "snapshot_validation_all_passed": bool(validation["all_passed"]),
+            "state_smoke_records": (
+                str(smoke_records.relative_to(preflight_dir))
+                if smoke_records is not None and smoke_records.is_relative_to(preflight_dir)
+                else (str(smoke_records) if smoke_records is not None else None)
+            ),
+            "note": "PREFLIGHT only; not scientific data.",
+        })
+        if fallback_used:
+            summary["reason"] = (
+                "The stage gate was not reached; the fallback snapshot is diagnostic only "
+                "and cannot make preflight PASS."
+            )
+        elif not validation["all_passed"]:
+            summary["reason"] = "Independent snapshot validation failed for {}.".format(
+                validation["failed_states"]
+            )
+        write_json(preflight_dir / "b2_preflight_summary.json", summary)
+        print(json.dumps(summary, indent=2))
+        return 0 if passed else 2
+    finally:
+        experiment.close()
+
+
+def _cmd_b2_export_preflight_evidence(args: argparse.Namespace) -> int:
+    run_dir = Path(args.run_dir).expanduser().resolve()
+    output_dir = Path(args.output_dir).expanduser().resolve()
+    manifest = export_preflight_evidence(run_dir, output_dir)
+    print("PREFLIGHT evidence manifest written to {}".format(manifest))
     return 0
 
 
@@ -214,11 +454,19 @@ def _cmd_analyze(args: argparse.Namespace) -> int:
                          int(evaluation.get("b1_full_episodes", 100))),
             },
         )
+    # B2 analysis always uses the fixed project config and frozen parameters.
+    # The B1 --config/--bootstrap-samples overrides above cannot affect B2.
+    b2_config = _load_config(None)
     for split in ("discovery", "confirmation"):
-        if (run_dir / "b2_{}_episodes.jsonl".format(split)).is_file():
-            results["b2_{}".format(split)] = analyze_b2_split(
-                run_dir, split, n_bootstrap=n_bootstrap, seed=seed
+        if any((run_dir / "b2_{}_{}".format(split, suffix)).is_file()
+               for suffix in ("episodes.jsonl", "run.json", "status.json")):
+            analysis = analyze_b2_split(
+                run_dir, split, seed=20261110, config=b2_config
             )
+            write_b2_report(run_dir, split, analysis)
+            if split == "discovery":
+                write_b2_report(run_dir, split, analysis, filename="B2_REPORT.md")
+            results["b2_{}".format(split)] = analysis
     summary = write_markdown_summary(run_dir)
     print("Analysis complete: {}".format(summary))
     print(json.dumps({key: value.get("n_initial_states", value.get("n_states")) for key, value in results.items()}, indent=2))
@@ -253,10 +501,50 @@ def build_parser() -> argparse.ArgumentParser:
     b1.add_argument("--run-dir", default=None, help="Existing or new run directory")
     b1.set_defaults(func=_cmd_b1)
 
-    b2 = subparsers.add_parser("b2", help="Run matched-state B2 branches from a B1 run directory")
-    _add_runtime_args(b2)
+    b2_geometry = subparsers.add_parser(
+        "b2-geometry-audit",
+        help="Run the live MuJoCo collision-geometry audit (PREFLIGHT only)",
+    )
+    b2_geometry.add_argument("--run-dir", default=None, help="Run directory for audit output")
+    b2_geometry.add_argument("--output", default=None, help="Audit JSON path (default: run dir)")
+    b2_geometry.set_defaults(func=_cmd_b2_geometry_audit)
+
+    b2_harvest = subparsers.add_parser(
+        "b2-harvest",
+        help="Harvest and deterministically select 30 B2 states for one split",
+    )
+    b2_harvest.add_argument("--split", choices=["discovery", "confirmation"], required=True)
+    b2_harvest.add_argument("--run-dir", default=None, help="Run directory (new for each split)")
+    b2_harvest.set_defaults(func=_cmd_b2_harvest)
+
+    b2_preflight = subparsers.add_parser(
+        "b2-preflight",
+        help="Reserved-seed snapshot/restore and geometry PREFLIGHT; never scientific data",
+    )
+    b2_preflight.add_argument("--run-dir", default=None, help="Preflight run directory")
+    b2_preflight.add_argument("--seed", type=int, default=299999,
+                              help="Reserved preflight seed (default 299999)")
+    b2_preflight.add_argument("--fallback-step", type=int, default=500,
+                              help="Capture a preflight snapshot at this step if the gate is not reached")
+    b2_preflight.add_argument("--smoke-seeds", default=None,
+                              help="Optional comma-separated non-formal seeds for a throwaway state smoke test")
+    b2_preflight.set_defaults(func=_cmd_b2_preflight)
+
+    b2 = subparsers.add_parser(
+        "b2",
+        help="Run the locked B2 matched-state branch experiment for one split",
+    )
     b2.add_argument("--split", choices=["discovery", "confirmation"], required=True)
+    b2.add_argument("--run-dir", default=None, help="Existing B2 run directory")
     b2.set_defaults(func=_cmd_b2)
+
+    b2_evidence = subparsers.add_parser(
+        "b2-export-preflight-evidence",
+        help="Export small PREFLIGHT-only JSON evidence; never snapshot binaries",
+    )
+    b2_evidence.add_argument("--run-dir", required=True, help="Completed PASS preflight run directory")
+    b2_evidence.add_argument("--output-dir", required=True, help="Public evidence output directory")
+    b2_evidence.set_defaults(func=_cmd_b2_export_preflight_evidence)
 
     analyze = subparsers.add_parser("analyze", help="Analyze saved B1/B2 JSONL results")
     analyze.add_argument("--run-dir", required=True)

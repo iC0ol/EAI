@@ -1,0 +1,668 @@
+{
+  "audit": "B2_LIVE_GEOMETRY_AUDIT",
+  "collision_geometry": {
+    "aperture_bars_exactly_four": true,
+    "collision_geom_sizes_m": [
+      0.016,
+      0.016,
+      0.1
+    ],
+    "handle_boxes_excluded": [
+      50
+    ],
+    "nut_collision_boxes": [
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "peg_collision_geoms": [
+      13
+    ],
+    "peg_geom_correctly_identified": true,
+    "visual_collision_identical": true,
+    "visual_geom_sizes_m": [
+      [
+        0.016,
+        0.016,
+        0.1
+      ]
+    ]
+  },
+  "environment": {
+    "env_name": "NutAssemblySquare",
+    "model_xml_sha256": "68b478b7e9bb3b6bd2bcba4c9b75078859b4c959f92a2ddd1cc8aad2ab636ac4",
+    "mujoco_py_version": "2.0.2.13",
+    "nbody": 26,
+    "ngeom": 74,
+    "robosuite_version": "1.2.0"
+  },
+  "finite_checks": {
+    "all_finite": true,
+    "n_states": 5,
+    "states": [
+      {
+        "clearance_m": -0.3196950385586631,
+        "d_xy_m": 0.3485311613006028,
+        "finite": true,
+        "step": 0,
+        "z_gap_m": -0.06999999999999998
+      },
+      {
+        "clearance_m": -0.3196950385586628,
+        "d_xy_m": 0.348530680213491,
+        "finite": true,
+        "step": 1,
+        "z_gap_m": -0.08174268469062268
+      },
+      {
+        "clearance_m": -0.3196950385586628,
+        "d_xy_m": 0.34853199043961897,
+        "finite": true,
+        "step": 2,
+        "z_gap_m": -0.11768440147864966
+      },
+      {
+        "clearance_m": -0.3196950385586628,
+        "d_xy_m": 0.3485342097459704,
+        "finite": true,
+        "step": 3,
+        "z_gap_m": -0.13772968050483061
+      },
+      {
+        "clearance_m": -0.31969503855866277,
+        "d_xy_m": 0.3485318855933172,
+        "finite": true,
+        "step": 4,
+        "z_gap_m": -0.1339380015475737
+      }
+    ]
+  },
+  "frame_convention": {
+    "axial_gap": "nut_bottom_local_z - peg_top_local_z",
+    "frame": "SquareNut body frame (nut-local)",
+    "negative_z": "axial overlap",
+    "positive_z": "peg tip below the nut lower aperture plane",
+    "projected_clearance": "min(hole_half_x - max(peg_xy_x), hole_half_x + min(peg_xy_x), hole_half_y - max(peg_xy_y), hole_half_y + min(peg_xy_y))",
+    "world_z_retained_as": "world_z_gap_naive_m (audit comparison only; not used by the gate)",
+    "z_axis": "nut-local +z"
+  },
+  "marker": "PREFLIGHT",
+  "nut": {
+    "aperture_bar_geom_ids": [
+      46,
+      47,
+      48,
+      49
+    ],
+    "aperture_bars": [
+      {
+        "center_local": [
+          -0.03324999999999999,
+          6.938893903907228e-18,
+          0.0
+        ],
+        "extent_local": [
+          0.010499999999999992,
+          0.04374999999999998,
+          0.010000000000000007
+        ],
+        "geom_id": 46,
+        "lower_local": [
+          -0.043749999999999976,
+          -0.043749999999999976,
+          -0.010000000000000007
+        ],
+        "record": {
+          "body_id": 24,
+          "body_name": "SquareNut_main",
+          "geom_conaffinity": 1,
+          "geom_contype": 1,
+          "geom_friction": [
+            0.95,
+            0.3,
+            0.2
+          ],
+          "geom_group": 0,
+          "geom_id": 46,
+          "geom_quat": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "geom_solimp": [
+            0.998,
+            0.998,
+            0.001,
+            0.5,
+            2.0
+          ],
+          "geom_solref": [
+            0.02,
+            1.0
+          ],
+          "geom_type": 6,
+          "pos": [
+            -0.03325,
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.0105,
+            0.04375,
+            0.01
+          ]
+        },
+        "role": "x",
+        "upper_local": [
+          -0.022749999999999992,
+          0.04374999999999999,
+          0.010000000000000007
+        ]
+      },
+      {
+        "center_local": [
+          5.204170427930421e-18,
+          0.03325,
+          0.0
+        ],
+        "extent_local": [
+          0.031249999999999986,
+          0.010500000000000002,
+          0.010000000000000007
+        ],
+        "geom_id": 47,
+        "lower_local": [
+          -0.031249999999999983,
+          0.02275,
+          -0.010000000000000007
+        ],
+        "record": {
+          "body_id": 24,
+          "body_name": "SquareNut_main",
+          "geom_conaffinity": 1,
+          "geom_contype": 1,
+          "geom_friction": [
+            0.95,
+            0.3,
+            0.1
+          ],
+          "geom_group": 0,
+          "geom_id": 47,
+          "geom_quat": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "geom_solimp": [
+            0.998,
+            0.998,
+            0.001,
+            0.5,
+            2.0
+          ],
+          "geom_solref": [
+            0.02,
+            1.0
+          ],
+          "geom_type": 6,
+          "pos": [
+            0.0,
+            0.03325,
+            0.0
+          ],
+          "size": [
+            0.03125,
+            0.0105,
+            0.01
+          ]
+        },
+        "role": "y",
+        "upper_local": [
+          0.031249999999999993,
+          0.043750000000000004,
+          0.010000000000000007
+        ]
+      },
+      {
+        "center_local": [
+          -1.214306433183765e-17,
+          -0.033249999999999995,
+          0.0
+        ],
+        "extent_local": [
+          0.031249999999999993,
+          0.010499999999999997,
+          0.010000000000000007
+        ],
+        "geom_id": 48,
+        "lower_local": [
+          -0.03125000000000001,
+          -0.04374999999999999,
+          -0.010000000000000007
+        ],
+        "record": {
+          "body_id": 24,
+          "body_name": "SquareNut_main",
+          "geom_conaffinity": 1,
+          "geom_contype": 1,
+          "geom_friction": [
+            0.95,
+            0.3,
+            0.1
+          ],
+          "geom_group": 0,
+          "geom_id": 48,
+          "geom_quat": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "geom_solimp": [
+            0.998,
+            0.998,
+            0.001,
+            0.5,
+            2.0
+          ],
+          "geom_solref": [
+            0.02,
+            1.0
+          ],
+          "geom_type": 6,
+          "pos": [
+            0.0,
+            -0.03325,
+            0.0
+          ],
+          "size": [
+            0.03125,
+            0.0105,
+            0.01
+          ]
+        },
+        "role": "y",
+        "upper_local": [
+          0.031249999999999983,
+          -0.022749999999999996,
+          0.010000000000000007
+        ]
+      },
+      {
+        "center_local": [
+          0.03324999999999999,
+          -1.3877787807814457e-17,
+          0.0
+        ],
+        "extent_local": [
+          0.010499999999999992,
+          0.04374999999999999,
+          0.010000000000000007
+        ],
+        "geom_id": 49,
+        "lower_local": [
+          0.02275,
+          -0.043750000000000004,
+          -0.010000000000000007
+        ],
+        "record": {
+          "body_id": 24,
+          "body_name": "SquareNut_main",
+          "geom_conaffinity": 1,
+          "geom_contype": 1,
+          "geom_friction": [
+            0.95,
+            0.3,
+            0.1
+          ],
+          "geom_group": 0,
+          "geom_id": 49,
+          "geom_quat": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "geom_solimp": [
+            0.998,
+            0.998,
+            0.001,
+            0.5,
+            2.0
+          ],
+          "geom_solref": [
+            0.02,
+            1.0
+          ],
+          "geom_type": 6,
+          "pos": [
+            0.03325,
+            0.0,
+            0.0
+          ],
+          "size": [
+            0.0105,
+            0.04375,
+            0.01
+          ]
+        },
+        "role": "x",
+        "upper_local": [
+          0.04374999999999998,
+          0.043749999999999976,
+          0.010000000000000007
+        ]
+      }
+    ],
+    "aperture_center_local_m": [
+      0.0,
+      0.0
+    ],
+    "handle_geom_ids": [
+      50
+    ],
+    "handle_geoms": [
+      {
+        "body_id": 24,
+        "body_name": "SquareNut_main",
+        "geom_conaffinity": 1,
+        "geom_contype": 1,
+        "geom_friction": [
+          0.95,
+          0.3,
+          0.1
+        ],
+        "geom_group": 0,
+        "geom_id": 50,
+        "geom_quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "geom_solimp": [
+          0.998,
+          0.998,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "geom_solref": [
+          0.02,
+          1.0
+        ],
+        "geom_type": 6,
+        "pos": [
+          0.054,
+          0.0,
+          0.0
+        ],
+        "size": [
+          0.02525,
+          0.015875,
+          0.01
+        ]
+      }
+    ],
+    "hole_half_extents_m": [
+      0.022749999999999996,
+      0.02275
+    ],
+    "hole_half_x_m": 0.022749999999999996,
+    "hole_half_y_m": 0.02275,
+    "identification": "four mirror-paired collision boxes; handle boxes excluded by lack of mirror partner",
+    "nut_body_id": 24,
+    "nut_bottom_local_z_m": -0.010000000000000007,
+    "nut_collision_thickness_m": 0.020000000000000014,
+    "nut_geom_ids": [
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "nut_name": "SquareNut",
+    "nut_top_local_z_m": 0.010000000000000007,
+    "t_nut_m": 0.020000000000000014,
+    "x_pair_geom_ids": [
+      46,
+      49
+    ],
+    "y_pair_geom_ids": [
+      47,
+      48
+    ]
+  },
+  "peg": {
+    "geom_records": [
+      {
+        "body_id": 2,
+        "body_name": "peg1",
+        "geom_conaffinity": 1,
+        "geom_contype": 1,
+        "geom_friction": [
+          1.0,
+          0.005,
+          0.0001
+        ],
+        "geom_group": 0,
+        "geom_id": 13,
+        "geom_quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "geom_solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "geom_solref": [
+          0.02,
+          1.0
+        ],
+        "geom_type": 6,
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size": [
+          0.016,
+          0.016,
+          0.1
+        ]
+      },
+      {
+        "body_id": 2,
+        "body_name": "peg1",
+        "geom_conaffinity": 0,
+        "geom_contype": 0,
+        "geom_friction": [
+          1.0,
+          0.005,
+          0.0001
+        ],
+        "geom_group": 1,
+        "geom_id": 14,
+        "geom_quat": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "geom_solimp": [
+          0.9,
+          0.95,
+          0.001,
+          0.5,
+          2.0
+        ],
+        "geom_solref": [
+          0.02,
+          1.0
+        ],
+        "geom_type": 6,
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size": [
+          0.016,
+          0.016,
+          0.1
+        ]
+      }
+    ],
+    "peg_body_id": 2,
+    "peg_collision_geom_ids": [
+      13
+    ],
+    "peg_geom_id": 13,
+    "peg_half_x_m": 0.016,
+    "peg_half_y_m": 0.016,
+    "peg_half_z_m": 0.1,
+    "peg_size_m": [
+      0.016,
+      0.016,
+      0.1
+    ],
+    "peg_visual_geom_ids": [
+      14
+    ],
+    "peg_visual_sizes_m": [
+      [
+        0.016,
+        0.016,
+        0.1
+      ]
+    ],
+    "visual_collision_identical": true
+  },
+  "representative_states": [],
+  "reset_geometry": {
+    "aperture_bar_geom_ids": [
+      46,
+      47,
+      48,
+      49
+    ],
+    "clearance_m": -0.319695038558663,
+    "clearance_x_negative_m": -0.1371181907512364,
+    "clearance_x_positive_m": 0.13814077856336737,
+    "clearance_y_negative_m": 0.32071762637079393,
+    "clearance_y_positive_m": -0.319695038558663,
+    "d_xy_m": 0.34853116130060263,
+    "dx_m": -0.13762948465730188,
+    "dy_m": 0.3202063324647284,
+    "geometry_fingerprint": "300a377b671f95920f6f445c5c3e3f3c316c0c0986f70a854e18352430ae50b3",
+    "handle_geom_ids": [
+      50
+    ],
+    "hole_half_x_m": 0.022749999999999996,
+    "hole_half_y_m": 0.02275,
+    "nut_body_id": 24,
+    "nut_bottom_local_z_m": -0.010000000000000007,
+    "nut_collision_thickness_m": 0.020000000000000014,
+    "nut_geom_ids": [
+      46,
+      47,
+      48,
+      49,
+      50
+    ],
+    "peg_body_id": 2,
+    "peg_geom_id": 13,
+    "peg_half_x_m": 0.016,
+    "peg_half_y_m": 0.016,
+    "peg_half_z_m": 0.1,
+    "peg_top_local_z_m": 0.059999999999999935,
+    "r_hole_m": 0.03217335854398791,
+    "r_peg_m": 0.02262741699796952,
+    "relative_yaw_rad": 2.170570306538507,
+    "stage_gate_version": "B2_GEOMETRY_GATE_V1_20261116",
+    "t_nut_m": 0.020000000000000014,
+    "world_vs_local_z_gap_difference_m": -1.3877787807814457e-17,
+    "world_z_gap_naive_m": -0.06999999999999995,
+    "xy_center_distance_m": 0.34853116130060263,
+    "z_gap_m": -0.06999999999999994
+  },
+  "scientific_data": false,
+  "sign_checks": {
+    "c_xy_sign": {
+      "negative": {
+        "clearance_m": -0.009999999999999967,
+        "dx_m": -0.016749999999999987,
+        "dy_m": 0.0,
+        "nut_x_offset_m": 0.016749999999999994,
+        "z_gap_m": 0.050000000000000044
+      },
+      "positive": {
+        "clearance_m": 0.006749999999999992,
+        "dx_m": 0.0,
+        "dy_m": 0.0,
+        "nut_x_offset_m": 0.0,
+        "z_gap_m": 0.050000000000000044
+      },
+      "zero": {
+        "clearance_m": 0.0,
+        "dx_m": -0.006750000000000006,
+        "dy_m": 0.0,
+        "nut_x_offset_m": 0.006749999999999996,
+        "z_gap_m": 0.050000000000000044
+      }
+    },
+    "expected": {
+      "clearance_negative": true,
+      "clearance_positive": true,
+      "clearance_zero": true,
+      "finite": true,
+      "tilted_local_differs_from_world": true,
+      "z_negative": true,
+      "z_positive": true,
+      "z_zero": true
+    },
+    "interpretation": {
+      "frame": "nut-local +z; z_gap = nut_bottom_local_z - peg_top_local_z",
+      "negative_clearance": "at least one projected aperture half-space is violated",
+      "negative_z_gap": "axial overlap",
+      "positive_clearance": "projected peg rectangle fits inside the aperture",
+      "positive_z_gap": "peg tip below and separated from the nut lower aperture plane",
+      "zero_clearance": "projected boundary contact"
+    },
+    "tilted_frame": {
+      "clearance_m": -0.13110640646055108,
+      "difference_m": -0.0018172863405993556,
+      "tilt_deg": 30.0,
+      "z_gap_nut_local_m": 0.05128203230275502,
+      "z_gap_world_naive_m": 0.049464745962155665
+    },
+    "z_gap_sign": {
+      "negative": {
+        "requested_z_gap_m": -0.01,
+        "world_z_gap_naive_m": -0.010000000000000009,
+        "z_gap_m": -0.010000000000000009
+      },
+      "positive": {
+        "requested_z_gap_m": 0.01,
+        "world_z_gap_naive_m": 0.010000000000000009,
+        "z_gap_m": 0.010000000000000009
+      },
+      "zero": {
+        "requested_z_gap_m": 0.0,
+        "world_z_gap_naive_m": 0.0,
+        "z_gap_m": 0.0
+      }
+    }
+  },
+  "stage_gate_version": "B2_GEOMETRY_GATE_V1_20261116",
+  "status": "PASS"
+}

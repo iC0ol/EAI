@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - codex/gate-b-v2
+      - codex/b2-protocol-20261116
     paths:
       - gate_b_v2_source.tar.xz
       - .github/workflows/gate-b-v2-source-audit.yml
@@ -30,19 +31,28 @@ jobs:
           python-version: "3.9"
 
       - name: Install audit dependencies
-        run: python -m pip install --quiet "numpy==1.23.3" "pytest==7.1.2"
+        run: python -m pip install --quiet \
+          "numpy==1.23.3" "scipy==1.9.1" "PyYAML==6.0" "pytest==7.1.2"
 
       - name: Extract and audit source archive
         shell: bash
         run: |
           set -euo pipefail
           echo "=== Archive SHA256 ==="
-          echo "5a4a43e0b0a4f1476f10e0c5d6bfe233b64d34fa03dccdc432c7d86a30eaaa7b  gate_b_v2_source.tar.xz" | sha256sum -c -
+          echo "909086eedbdc9f71ca0e6bf232ae00d8011d8c0f1dff882eb0b41d566e9f1f0e  gate_b_v2_source.tar.xz" | sha256sum -c -
           echo "=== Archive members ==="
           tar -tJf gate_b_v2_source.tar.xz
           rm -rf /tmp/gate_b_v2_unpack
           mkdir -p /tmp/gate_b_v2_unpack
           tar -xJf gate_b_v2_source.tar.xz -C /tmp/gate_b_v2_unpack
+          echo "=== Packaged files match checkout ==="
+          unpacked=/tmp/gate_b_v2_unpack/gate_b_v2
+          for path in src tests configs scripts tools reports/preflight reports/preflight_third_revision; do
+            diff -r "gate_b_v2/$path" "$unpacked/$path"
+          done
+          for path in pyproject.toml AGENTS.md reports/b1_full_run.json; do
+            cmp "gate_b_v2/$path" "$unpacked/$path"
+          done
           echo "=== Extracted files ==="
           find /tmp/gate_b_v2_unpack -type f -printf '%P\n' | sort
           echo "=== Project metadata ==="
@@ -52,7 +62,7 @@ jobs:
             -o -name 'README.md' -o -name 'IMPLEMENTATION_STATUS.md' -o -name 'gate_b.yaml' \
           \) -print
           echo "=== Python source compilation ==="
-          python -m compileall -q /tmp/gate_b_v2_unpack/gate_b_v2/src
+          python -m compileall -q "$unpacked/src" "$unpacked/tests"
           echo "=== Test discovery and execution ==="
           # The archived package uses a src layout; the historical workflow
           # omitted this path and failed at import. Set it explicitly.

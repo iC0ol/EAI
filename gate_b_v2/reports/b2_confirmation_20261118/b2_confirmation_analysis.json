@@ -1,0 +1,434 @@
+{
+  "b1_full_manifest_sha256": "1619fa873df00628cc7ec0d414ee5f8d029ae30e0808ab1e00a2905ef41c4175",
+  "bootstrap_samples_requested": 5000,
+  "bootstrap_samples_used": 5000,
+  "bootstrap_seed": 20261110,
+  "categorical_interaction": {
+    "ci95": {
+      "horizon_main_h1": {
+        "high": 0.011297378538608753,
+        "low": -0.012338835844878934
+      },
+      "horizon_main_h2": {
+        "high": 2.0145018465866907e-16,
+        "low": -0.15545929925367707
+      },
+      "horizon_main_h4": {
+        "high": 1.8065127566361728e-16,
+        "low": -0.15545929925367702
+      },
+      "horizon_main_h8": {
+        "high": 0.066668280120959,
+        "low": -0.014958079686384004
+      },
+      "interaction_h1_x_clearance_per_m": {
+        "high": 2.6928385601010123e-14,
+        "low": -1.5803109800903425
+      },
+      "interaction_h2_x_clearance_per_m": {
+        "high": 1.239581218703473e-15,
+        "low": -4.740932940271031
+      },
+      "interaction_h4_x_clearance_per_m": {
+        "high": 1.1951406186862388e-15,
+        "low": -4.740932940271001
+      },
+      "interaction_h8_x_clearance_per_m": {
+        "high": 1.3715395978468432,
+        "low": -6.380979728978774e-15
+      },
+      "intercept_h15": {
+        "high": 1.0000000000000016,
+        "low": 0.9333333333333338
+      }
+    },
+    "coefficients": {
+      "horizon_main_h1": 0.0005716390499822515,
+      "horizon_main_h2": -0.042729527294522215,
+      "horizon_main_h4": -0.04272952729452174,
+      "horizon_main_h8": 0.01791853692230951,
+      "interaction_h1_x_clearance_per_m": -0.43242633949714293,
+      "interaction_h2_x_clearance_per_m": -1.2972790184915104,
+      "interaction_h4_x_clearance_per_m": -1.2972790184915126,
+      "interaction_h8_x_clearance_per_m": 0.2793033852038389,
+      "intercept_h15": 0.9777777777777786
+    },
+    "method": "state-cluster bootstrap over whole state IDs; descriptive secondary analysis",
+    "model": "linear probability: p_s(h) ~ horizon + horizon x clearance; reference h=15",
+    "names": [
+      "intercept_h15",
+      "horizon_main_h1",
+      "horizon_main_h2",
+      "horizon_main_h4",
+      "horizon_main_h8",
+      "interaction_h1_x_clearance_per_m",
+      "interaction_h2_x_clearance_per_m",
+      "interaction_h4_x_clearance_per_m",
+      "interaction_h8_x_clearance_per_m"
+    ]
+  },
+  "clearance_bins_descriptive": [
+    {
+      "bin": 0,
+      "clearance_high_m": -0.03015343495119186,
+      "clearance_low_m": -0.056950571484734175,
+      "delta_mean": 0.0,
+      "n_states": 10,
+      "success_rate_by_horizon": {
+        "1": 1.0,
+        "15": 1.0,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 0.9666666666666666
+      }
+    },
+    {
+      "bin": 1,
+      "clearance_high_m": -0.011350878302481238,
+      "clearance_low_m": -0.03015343495119186,
+      "delta_mean": 0.0,
+      "n_states": 10,
+      "success_rate_by_horizon": {
+        "1": 0.9666666666666666,
+        "15": 0.9333333333333332,
+        "2": 0.9,
+        "4": 0.9,
+        "8": 1.0
+      }
+    },
+    {
+      "bin": 2,
+      "clearance_high_m": -0.003891293480062199,
+      "clearance_low_m": -0.011350878302481238,
+      "delta_mean": 0.0,
+      "n_states": 10,
+      "success_rate_by_horizon": {
+        "1": 1.0,
+        "15": 1.0,
+        "2": 1.0,
+        "4": 1.0,
+        "8": 1.0
+      }
+    }
+  ],
+  "clearance_c10_m": -0.04951021554382207,
+  "clearance_c90_m": -0.006682155996049904,
+  "clearance_range_m": [
+    -0.056950571484734175,
+    -0.003891293480062199
+  ],
+  "config_fingerprint": "ea97483ae300a74c1b4390270e8578bbd5f17896540d3e086fa1797bb0ca242c",
+  "cost": {
+    "1": {
+      "mean_policy_calls_after_branch": 23.1,
+      "mean_wall_time_s": 57.66386946243519,
+      "total_policy_calls": 2079,
+      "total_wall_time_s": 5189.748251619167
+    },
+    "15": {
+      "mean_policy_calls_after_branch": 22.133333333333333,
+      "mean_wall_time_s": 56.89476669326864,
+      "total_policy_calls": 1992,
+      "total_wall_time_s": 5120.529002394178
+    },
+    "2": {
+      "mean_policy_calls_after_branch": 23.033333333333335,
+      "mean_wall_time_s": 57.66946089545575,
+      "total_policy_calls": 2073,
+      "total_wall_time_s": 5190.251480591018
+    },
+    "4": {
+      "mean_policy_calls_after_branch": 22.966666666666665,
+      "mean_wall_time_s": 57.68909490469248,
+      "total_policy_calls": 2067,
+      "total_wall_time_s": 5192.018541422323
+    },
+    "8": {
+      "mean_policy_calls_after_branch": 22.533333333333335,
+      "mean_wall_time_s": 57.17472902815272,
+      "total_policy_calls": 2028,
+      "total_wall_time_s": 5145.725612533744
+    }
+  },
+  "decision": "CONFIRMATION_NO_PRACTICALLY_MEANINGFUL_EFFECT",
+  "horizons": [
+    1,
+    2,
+    4,
+    8,
+    15
+  ],
+  "integrity": {
+    "common_repeat_seed_verified": true,
+    "completeness_verified": true,
+    "horizon_order_verified": true,
+    "snapshot_hashes_verified": true,
+    "split_isolation_verified": true
+  },
+  "interpretation_limits": [
+    "The independent unit is the matched physical state, not the 450 branch episodes.",
+    "Repeats are nested within state x horizon; bootstrap resamples whole state IDs.",
+    "Hypothesis-test p-values come from state-level permutation nulls, not from the bootstrap distribution.",
+    "Discovery and confirmation are analyzed independently and are never pooled.",
+    "A wide interval is inconclusive; non-significance is not proof of no effect.",
+    "B2 does not train CAC or establish a deployment-time visual clearance estimator."
+  ],
+  "marker": "B2",
+  "n_branch_episodes": 450,
+  "n_states": 30,
+  "per_horizon": {
+    "1": {
+      "bootstrap_samples": 5000,
+      "bootstrap_seed": 20261111,
+      "branch_n": 90,
+      "branch_successes": 89,
+      "mean_state_success_probability": 0.9888888888888888,
+      "state_cluster_bootstrap_ci95": [
+        0.9666666666666667,
+        1.0
+      ]
+    },
+    "15": {
+      "bootstrap_samples": 5000,
+      "bootstrap_seed": 20261125,
+      "branch_n": 90,
+      "branch_successes": 88,
+      "mean_state_success_probability": 0.9777777777777777,
+      "state_cluster_bootstrap_ci95": [
+        0.9333333333333332,
+        1.0
+      ]
+    },
+    "2": {
+      "bootstrap_samples": 5000,
+      "bootstrap_seed": 20261112,
+      "branch_n": 90,
+      "branch_successes": 87,
+      "mean_state_success_probability": 0.9666666666666667,
+      "state_cluster_bootstrap_ci95": [
+        0.9,
+        1.0
+      ]
+    },
+    "4": {
+      "bootstrap_samples": 5000,
+      "bootstrap_seed": 20261114,
+      "branch_n": 90,
+      "branch_successes": 87,
+      "mean_state_success_probability": 0.9666666666666667,
+      "state_cluster_bootstrap_ci95": [
+        0.9,
+        1.0
+      ]
+    },
+    "8": {
+      "bootstrap_samples": 5000,
+      "bootstrap_seed": 20261118,
+      "branch_n": 90,
+      "branch_successes": 89,
+      "mean_state_success_probability": 0.9888888888888888,
+      "state_cluster_bootstrap_ci95": [
+        0.9666666666666667,
+        1.0
+      ]
+    }
+  },
+  "permutation_method": "paired state-level sign-flip test for horizon differences; state-level clearance permutation test for slopes",
+  "permutation_samples": 100000,
+  "primary": {
+    "E": 0.0,
+    "E_ci95_high": 0.0,
+    "E_ci95_low": 0.0,
+    "E_permutation_p": 1.0,
+    "bootstrap": "state-cluster bootstrap resampling whole state IDs",
+    "bootstrap_samples": 5000,
+    "bootstrap_samples_used": 5000,
+    "bootstrap_seed": 20261110,
+    "clearance_c10_m": -0.04951021554382207,
+    "clearance_c90_m": -0.006682155996049904,
+    "delta_formula": "0.5 * (p_s(1) + p_s(2)) - p_s(15)",
+    "independent_unit": "state_id (not individual branch episodes)",
+    "intercept": 0.0,
+    "n_bootstrap_requested": 5000,
+    "n_bootstrap_used": 5000,
+    "n_branch_episodes": 450,
+    "n_states": 30,
+    "permutation_samples": 100000,
+    "permutation_seed": 20261510,
+    "practical_effect_met": false,
+    "practical_effect_threshold": 0.08,
+    "predicted_delta_at_c10": 0.0,
+    "predicted_delta_at_c90": 0.0,
+    "slope_ci95_high": 0.0,
+    "slope_ci95_low": 0.0,
+    "slope_per_m": 0.0,
+    "slope_per_mm": 0.0,
+    "slope_permutation_method": "state-level clearance permutation",
+    "slope_permutation_p": 1.0
+  },
+  "protocol_version": "B2_PROTOCOL_REVISION_20261116",
+  "records_file": "b2_confirmation_episodes.jsonl",
+  "reference_horizon": 15,
+  "repeats_per_state_horizon": 3,
+  "robustness": {
+    "spearman_clearance_vs_delta": {
+      "p_value": null,
+      "rho": null
+    },
+    "spearman_clearance_vs_horizon_success": {
+      "1": {
+        "p_value": 0.6933121455934067,
+        "rho": -0.07508960548047908
+      },
+      "15": {
+        "p_value": 0.6933121455934067,
+        "rho": -0.07508960548047908
+      },
+      "2": {
+        "p_value": 0.6933121455934067,
+        "rho": -0.07508960548047908
+      },
+      "4": {
+        "p_value": 0.6933121455934067,
+        "rho": -0.07508960548047908
+      },
+      "8": {
+        "p_value": 0.46236506349638384,
+        "rho": 0.13945212446374686
+      }
+    }
+  },
+  "run_manifest_file": "b2_confirmation_run.json",
+  "run_manifest_sha256": "f75e14106f097aba3402ba5a075264b151507461f606b0a2ff1f4b5608a0d8e9",
+  "secondary_vs_h15": {
+    "1": {
+      "E_h_vs_h15": -0.018519981018009963,
+      "E_h_vs_h15_ci95": [
+        -0.06509045460136663,
+        0.0
+      ],
+      "clearance_slope_ci95": [
+        0.0,
+        1.519808632206698
+      ],
+      "clearance_slope_per_m": 0.4324263394971706,
+      "clearance_slope_per_mm": 0.0004324263394971706,
+      "difference_ci95": [
+        0.0,
+        0.03333333333333333
+      ],
+      "difference_holm_adjusted_p": 1.0,
+      "difference_permutation_method": "paired state-level sign-flip permutation",
+      "difference_permutation_p": 1.0,
+      "difference_permutation_samples": 100000,
+      "difference_permutation_seed": 20262111,
+      "holm_correction_scope": "four h-vs-h15 comparisons; p-values from state-level permutation tests",
+      "mean_success_difference_vs_h15": 0.01111111111111111,
+      "slope_holm_adjusted_p": 1.0,
+      "slope_permutation_method": "state-level clearance permutation",
+      "slope_permutation_p": 0.6667433325666743,
+      "slope_permutation_samples": 100000,
+      "slope_permutation_seed": 20263111
+    },
+    "2": {
+      "E_h_vs_h15": 0.018519981018009963,
+      "E_h_vs_h15_ci95": [
+        0.0,
+        0.06549233020203343
+      ],
+      "clearance_slope_ci95": [
+        -1.5291920972740016,
+        0.0
+      ],
+      "clearance_slope_per_m": -0.4324263394971706,
+      "clearance_slope_per_mm": -0.0004324263394971706,
+      "difference_ci95": [
+        -0.03333333333333333,
+        0.0
+      ],
+      "difference_holm_adjusted_p": 1.0,
+      "difference_permutation_method": "paired state-level sign-flip permutation",
+      "difference_permutation_p": 1.0,
+      "difference_permutation_samples": 100000,
+      "difference_permutation_seed": 20262112,
+      "holm_correction_scope": "four h-vs-h15 comparisons; p-values from state-level permutation tests",
+      "mean_success_difference_vs_h15": -0.01111111111111111,
+      "slope_holm_adjusted_p": 1.0,
+      "slope_permutation_method": "state-level clearance permutation",
+      "slope_permutation_p": 0.6671233287667123,
+      "slope_permutation_samples": 100000,
+      "slope_permutation_seed": 20263112
+    },
+    "4": {
+      "E_h_vs_h15": 0.018519981018009963,
+      "E_h_vs_h15_ci95": [
+        0.0,
+        0.068053439071042
+      ],
+      "clearance_slope_ci95": [
+        -1.5889918849844789,
+        0.0
+      ],
+      "clearance_slope_per_m": -0.4324263394971706,
+      "clearance_slope_per_mm": -0.0004324263394971706,
+      "difference_ci95": [
+        -0.03333333333333333,
+        0.0
+      ],
+      "difference_holm_adjusted_p": 1.0,
+      "difference_permutation_method": "paired state-level sign-flip permutation",
+      "difference_permutation_p": 1.0,
+      "difference_permutation_samples": 100000,
+      "difference_permutation_seed": 20262114,
+      "holm_correction_scope": "four h-vs-h15 comparisons; p-values from state-level permutation tests",
+      "mean_success_difference_vs_h15": -0.01111111111111111,
+      "slope_holm_adjusted_p": 1.0,
+      "slope_permutation_method": "state-level clearance permutation",
+      "slope_permutation_p": 0.6651333486665133,
+      "slope_permutation_samples": 100000,
+      "slope_permutation_seed": 20263114
+    },
+    "8": {
+      "E_h_vs_h15": -0.049001984049424255,
+      "E_h_vs_h15_ci95": [
+        -0.15699552774616632,
+        0.0
+      ],
+      "clearance_slope_ci95": [
+        0.0,
+        3.6657165746920413
+      ],
+      "clearance_slope_per_m": 1.1441560641981794,
+      "clearance_slope_per_mm": 0.0011441560641981794,
+      "difference_ci95": [
+        -0.03333333333333333,
+        0.06666666666666667
+      ],
+      "difference_holm_adjusted_p": 1.0,
+      "difference_permutation_method": "paired state-level sign-flip permutation",
+      "difference_permutation_p": 1.0,
+      "difference_permutation_samples": 100000,
+      "difference_permutation_seed": 20262118,
+      "holm_correction_scope": "four h-vs-h15 comparisons; p-values from state-level permutation tests",
+      "mean_success_difference_vs_h15": 0.011111111111111112,
+      "slope_holm_adjusted_p": 1.0,
+      "slope_permutation_method": "state-level clearance permutation",
+      "slope_permutation_p": 0.46741532584674156,
+      "slope_permutation_samples": 100000,
+      "slope_permutation_seed": 20263118
+    }
+  },
+  "snapshot_validation": {
+    "all_passed": true,
+    "marker": "B2",
+    "max_geometry_abs_error": 0.0,
+    "max_observation_mean_abs_error": 0.0001754405818885236,
+    "max_state_abs_error": 0.0,
+    "n_states": 30,
+    "scientific_data": true,
+    "validation_file": "b2_confirmation_snapshot_validation.json"
+  },
+  "split": "confirmation",
+  "state_manifest_file": "b2_confirmation_state_manifest.jsonl",
+  "statistical_unit": "state_id; repeats nested within state x horizon"
+}

@@ -1,0 +1,16 @@
+{
+  "files": {
+    "b2_geometry_audit.json": "171aca9cb91cfb76b3eddac6fb496f51be53cda646ca60c9b6ee5eb3087ec851",
+    "b2_preflight_environment.json": "2a3bd5f84bfe284359d941b6550ca18ce1e57be14ab646e621ba701b7f4a8366",
+    "b2_preflight_restore_diagnostics.json": "93d35c79b65d1dd63815b2e95df3e80061244f83c2c96104e4f7aca8b1995916",
+    "b2_preflight_snapshot_validation.json": "b432cce5f056332b0beea24538022ce1229cc2fbf9e471734061714d8ca75ffd",
+    "b2_preflight_summary.json": "a662ef27fbdaa9c4e5741b313528977454ade5413de944eb974d5c541ace6e82"
+  },
+  "marker": "PREFLIGHT",
+  "note": "PREFLIGHT engineering evidence only. No discovery/confirmation state, branch episode, snapshot binary, checkpoint, dataset or environment is included.",
+  "preflight_seed": 299999,
+  "protocol_version": "B2_PROTOCOL_REVISION_20261116",
+  "scientific_data": false,
+  "source_run_directory_name": "b2_preflight_third_revision",
+  "stage_gate_version": "B2_GEOMETRY_GATE_V1_20261116"
+}

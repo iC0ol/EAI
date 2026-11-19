@@ -1,7 +1,9 @@
 # Gate B v2.0：几何余量感知的动作块提交（CAC）
 
 - 修订日期：2026-11-11（B0 验收后协议修订）
-- 状态：**B0 已完成；协议已修订；B1 未执行，等待研究负责人授权。**
+- 状态：**B0、B1 Pilot、B1 Full 已完成；B2 协议 v1.1 已于 2026-11-16 冻结，等待代码实现与验收；B2 实验尚未授权。**
+
+> **重要：** 本文第 6–9 节中的早期 B2 设计已被 [`B2_PROTOCOL_REVISION_20261116.md`](./B2_PROTOCOL_REVISION_20261116.md) 覆盖。后续实现必须以该 v1.1 修订为唯一 B2 规范；不得沿用旧版 h=8 continuation、旧的未冻结数值 stage gate 或旧统计参照。B0/B1 协议和历史数据不受影响。
 - 目标：验证平台基线、固定 horizon 的效果，以及局部几何 clearance 是否调节不同 horizon 的任务结果。**不训练 CAC，不声称方法有效。**
 - 主任务：robomimic Square-MH + Diffusion Policy image CNN。
 - 硬件：单卡 RTX 3090 24 GB；本地驱动、CUDA、MuJoCo 与 checkpoint 已实际验证。
@@ -227,6 +229,20 @@ Gate B 不训练 error model、不实现完整 CAC、不做第二任务、不宣
 |---|---|---|
 | B0 | **COMPLETED** | RTX 3090，种子 100000–100099，h=8，500 steps；84/100 = 0.84，Wilson 95% CI 0.7558–0.8990。历史数据未改动。 |
 | B1 | **COMPLETED** | Pilot 100/100（82 成功）；Full 500/500（399 成功），种子 200020–200119。Full：h=1 0.66、h=2 0.72、h=4 0.81、h=8 0.87、h=15 0.93；Cochran Q=34.2，df=4，p=6.78×10⁻⁷；h=1/h=2 经 Holm 校正后显著低于 h=8，h=15 与 h=8 无显著差异但调用更少。B1 不证明 CAC 有效。详见 `gate_b_v2/reports/B1_FULL_REPORT.md`。 |
-| B2 | **未执行** | 插入阶段窗口未冻结；snapshot/restore 确定性 replay 未完成；未收集 B2 状态。 |
+| B2 | **PROTOCOL FROZEN / IMPLEMENTATION PENDING** | 2026-11-16 冻结 v1.1：几何派生 stage gate；h=15 branch continuation/primary comparator；30 states × 5 horizons × 3 repeats；独立 discovery/confirmation；每个 snapshot 逐一验证。代码、live geometry audit 与 snapshot preflight 尚未验收；未收集 B2 状态，未授权 B2 分支实验。详见 `B2_PROTOCOL_REVISION_20261116.md`。 |
 
 B0 通过不等于整个 Gate B 通过；B1 不证明 CAC 有效，不得提前开展 B2 分支实验。
+
+## 11. 状态更新（2026-11-18）
+
+| 阶段 | 状态 | 证据或条件 |
+|---|---|---|
+| B1 Full | **COMPLETED** | 500 条评估，399 条成功。 |
+| B2 Discovery | **COMPLETED** | Square-MH 主种子块得到 90 个候选，随机选择 30 个状态。30/30 快照通过独立验证，450 条 Branch 通过完整性检查。 |
+| Discovery 文档收尾 | **COMPLETED** | 依据原始记录独立复核统计和净空覆盖。 |
+| Confirmation 授权准备 | **COMPLETED** | 预注册继续条件满足，待独立审查。 |
+| Confirmation 正式授权 | **NOT AUTHORIZED** | 需要研究者独立批准。 |
+| Confirmation Harvest / Branch | **NOT STARTED** | 独立 seed pool 和独立快照。 |
+| Gate C | **NOT AUTHORIZED** | 确认阶段决策待定。 |
+
+预注册 Discovery 主效应 `E = 0.055707`，95% CI `[−0.015805, 0.156406]`，置换 `p = 0.343857`。区间涵盖零和 `0.08` 阈值，结论为 `DISCOVERY_UNCERTAIN_CONFIRMATION_JUSTIFIED`。B2 独立验证仍待 Confirmation。实验定义见 B2 v1.1 各节。 [Discovery 结果与局限](../../gate_b_v2/reports/b2_discovery_20261117/B2_DISCOVERY_CLOSEOUT.md) · [B2 v1.1](B2_PROTOCOL_REVISION_20261116.md) · [Confirmation 准备](../../gate_b_v2/reports/B2_CONFIRMATION_EXECUTION_PLAN.md)
