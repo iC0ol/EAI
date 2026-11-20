@@ -27,3 +27,7 @@ nohup setsid bash diagnostics/continuation_h4/launch_b2_continuation_h4.sh "$RUN
 The launcher records its PID, the worker PID, a diagnostic log and 30-second GPU samples. The status JSON records the current stage and the count of validated branches. If a gate or rollout fails, the operator can inspect the failure and any partial records in that directory.
 
 The integrity JSON ties the complete 450-row stream to the diagnostic manifest, live snapshot recheck and original Confirmation hashes. Use `first_horizon` for the diagnostic and `horizon` for the original when pairing on state, first horizon and repeat index. The two branches share the initial snapshot and call-index seed rule.
+
+## Completed diagnostic
+
+The workstation finished at 06:45:42 Asia/Shanghai on 2026-11-20. The report covers all 450 matched branches. Analysis uses the physical state as the resampling unit. [Diagnostic report](../../reports/b2_continuation_h4_20261119/B2_CONTINUATION_H4_DIAGNOSTIC_REPORT.md) · [Execution and reproduction](../../reports/b2_continuation_h4_20261119/B2_CONTINUATION_H4_EXECUTION_LOG.md)

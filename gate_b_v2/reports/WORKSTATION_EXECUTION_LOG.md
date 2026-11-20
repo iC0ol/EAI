@@ -133,3 +133,14 @@ Gate C status is **NOT AUTHORIZED**. [Closeout and interpretation limits](b2_con
 | 2026-11-19 | Full pytest suite with `tests` and `diagnostics/continuation_h4`, then `bash -n` on the launcher | 299 passed. The original constant-input SciPy warning recurred in the frozen analysis test. Launcher syntax passed. |
 
 The diagnostic uses the existing Confirmation snapshots and the original seed order. Live snapshot recheck, Branch progress, GPU telemetry and terminal exit status are recorded in the dedicated run directory. [Diagnostic commands and outputs](../diagnostics/continuation_h4/README.md)
+
+## B2 Confirmation Continuation-h4 closeout
+
+| Date/time (Asia/Shanghai) | Command/action | Workstation readback |
+|---|---|---|
+| 2026-11-19 17:05:45 to 2026-11-20 06:45:45 | `nohup setsid bash diagnostics/continuation_h4/launch_b2_continuation_h4.sh` on the fresh diagnostic run directory | 30 live snapshot checks passed. 450 Branch records committed to the diagnostic stream. Worker and Launcher exited 0. |
+| 2026-11-20 | `sha256sum --check --quiet`, diagnostic `verify_source()` and `validate_complete()` | Original 111 and diagnostic 10 SHA256 entries passed. Exact state, snapshot, horizon order, repeat and common call-index pairing passed for all 450 rows. |
+| 2026-11-20 | `analyze_b2_continuation_h4.py` and independent count and permutation readback | 440/450 original successes and 430/450 diagnostic successes. Paired overall change −2.22 percentage points. Exact p = 0.65625 overall, 1.0 for the short-first interaction and 0.9375 for the omnibus interaction. |
+| 2026-11-20 | Full pytest suite and launcher syntax check | 305 tests passed with the existing constant-input SciPy warning. `bash -n` passed. |
+
+[Diagnostic report](b2_continuation_h4_20261119/B2_CONTINUATION_H4_DIAGNOSTIC_REPORT.md) · [Execution record](b2_continuation_h4_20261119/B2_CONTINUATION_H4_EXECUTION_LOG.md)
