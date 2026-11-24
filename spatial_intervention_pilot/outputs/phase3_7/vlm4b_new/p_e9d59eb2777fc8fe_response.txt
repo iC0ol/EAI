@@ -1,4 +1,0 @@
-{
-  "passable": true,
-  "explanation": "Robot can move diagonally from Start to Goal, avoiding walls and obstacles within workspace boundaries."
-}

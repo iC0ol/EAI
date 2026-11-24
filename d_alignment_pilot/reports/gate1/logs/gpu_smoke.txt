@@ -1,1 +1,0 @@
-GPU forward/backward OK: 0.440s; no optimizer update performed

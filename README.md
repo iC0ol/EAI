@@ -1,58 +1,18 @@
-# EAI — Spatial Intervention Pilot
+# EAI · Square-MH 动作块提交研究
 
-**Phase 3.5 错误来源定位已完成，等待研究者复核。**
-[完整诊断报告](spatial_intervention_pilot/reports/phase3_5/phase3_5_diagnostic.md) ·
-[独立后态图预览](spatial_intervention_pilot/reports/phase3_5/poststate_inputs_montage.png) ·
-[30 次诊断原始结果](spatial_intervention_pilot/outputs/phase3_5/predictions.jsonl)。
+Gate B 使用 robomimic Square-MH 和官方图像 Diffusion Policy 检查固定执行步长的影响，以及插入前的几何余量能否预测短首次提交相对长首次提交的收益。B0、B1、B2 和 continuation-h4 均已完成并冻结。**Gate C 尚未授权，新方向仍在讨论。**
 
-24 张后态图全部被模型判为不可达，14/24 正确，等同恒不可达基线；18 项与旧实验配对，7 项恢复、5 项退化。
-独立目标重叠诊断有 14/54 个假阳性（真值全为负例）；240 次几何扰动搜索无标签变化。
-这些结果不支持把错误单独归因于组合推理。原 Phase 3 全部结果保留，94 项测试通过，环境未升级。
+| 阶段 | 结果 | 报告 |
+| --- | --- | --- |
+| B0 | 固定 `h=8`，成功 84/100 | [基线报告](gate_b_v2/reports/B0_REPORT.md) |
+| B1 Pilot | 20 个初始状态、100 条记录，成功 82/100 | [Pilot 报告](gate_b_v2/reports/B1_PILOT_REPORT.md) |
+| B1 Full | 100 个新初始状态、500 条记录，成功 399/500。在 `h=1,2,4,8,15` 下分别成功 66、72、81、87、93 次 | [Full 报告](gate_b_v2/reports/B1_FULL_REPORT.md) |
+| B2 Discovery | 30 个状态、450 条分支。主效应 +5.57 个百分点，95% CI [−1.58, +15.64]，达到独立 Confirmation 的审查条件 | [Discovery 收尾](gate_b_v2/reports/b2_discovery_20261117/B2_DISCOVERY_CLOSEOUT.md) |
+| B2 Confirmation | 30 个新状态、450 条分支。主效应 0.00 个百分点，95% CI [0.00, 0.00]。按冻结规则判定未达到 8 个百分点的实际意义阈值 | [Confirmation 收尾](gate_b_v2/reports/b2_confirmation_20261118/B2_CONFIRMATION_CLOSEOUT.md) |
+| Continuation-h4 | 事后配对诊断，在 Confirmation 原状态上完成 450 个配对。后续 `h=4` 成功 430/450，原 `h=15` 成功 440/450。配对差 −2.22 个百分点，95% CI [−10.44, +3.78] | [h4 诊断报告](gate_b_v2/reports/b2_continuation_h4_20261119/B2_CONTINUATION_H4_DIAGNOSTIC_REPORT.md) |
 
-用于 VLM 空间可执行性与假设场景编辑诊断的离线先导实验。**Phase 0–2 / Checkpoint B 已经研究者检查**，
-已完成 Phase 3：独立部署 Qwen3-VL-4B-Instruct，并对六核心样本做固定 prompt 的推理冒烟。
-不训练、不微调、不扩充研究数据集。
+## 协议与复核
 
-Phase 3 的实际结果：F_A 3/6、F_B 2/6、F_AB 1/6，完整三状态组合 0/6；JSON 解析 6/6 成功。
-没有出现“F_A 与 F_B 均正确而 F_AB 错误”的样本，不能据此独立确认纯组合推理错误。
-单次生成平均 4.91 秒，torch 峰值显存 8842.2MiB，没有 OOM。原 62 项几何测试及新增 13 项测试全部通过。
-这只是六样本冒烟，不构成统计结论；已停止，等待研究者检查。
-
-全部项目文件位于 [`spatial_intervention_pilot/`](spatial_intervention_pilot/)，
-Python 环境独立，不修改已有 inspection_robot、ROS2、NVIDIA 驱动或系统 CUDA。
-
-- [项目结构与重现说明](spatial_intervention_pilot/README.md)
-- [Phase 3 模型实际结果与错误案例](spatial_intervention_pilot/reports/phase3/smoke_report.md)
-- [六核心原始回答与结构化预测](spatial_intervention_pilot/outputs/phase3/core/predictions.jsonl)
-- [75 项 Phase 3 完整测试日志](spatial_intervention_pilot/reports/phase3/logs/all_tests.log)
-- [Phase 0–2 几何结果与限制（历史）](spatial_intervention_pilot/reports/pilot_summary.md)
-- [工作站与环境审计](spatial_intervention_pilot/reports/environment.md)
-- [62 项自动测试日志](spatial_intervention_pilot/reports/logs/tests.log)
-- [六个核心实例的四状态对照图](spatial_intervention_pilot/reports/qc_core_edits.png)
-- [原始模型输入](spatial_intervention_pilot/data/public_inputs.jsonl) / [几何真值](spatial_intervention_pilot/data/private_labels.jsonl)
-
-三类各 4 个场景，共 12 个（其中 6 个核心实例）。48 个状态在 0.10 / 0.05 / 0.025m 网格上的可达标签一致；
-独立重生成的 26 个数据文件逐字节一致，生成失败 0、oracle 未决 0。
-
-| 场景类型 | NONE | A | B | A+B |
-|---|---:|---:|---:|---:|
-| 串联阻塞 | 0 | 0 | 0 | 1 |
-| 替代路线 | 0 | 1 | 1 | 1 |
-| 修改引入新阻塞 | 0 | 1 | 0 | 0 |
-
-![12 个原始场景及几何标签](spatial_intervention_pilot/reports/qc_montage.png)
-
-在 Linux 工作站重现：
-
-```bash
-cd /home/asus/EAI/spatial_intervention_pilot
-bash scripts/bootstrap.sh   # 环境尚未建立时执行
-bash scripts/run.sh all
-```
-
-随机种子为 `20261020`；Python、包版本、下载哈希、字体/GEOS 版本、生成时 Git commit 均有记录。
-仓库不含 Python 运行时、venv 或缓存。“private_labels”和私有 QC 只是模型不可见的评估数据，
-在本公开仓库中一并提供，禁止将它们放入 VLM 输入。
-
-这些标签仅针对有限分辨率几何模型；F=0 不能证明连续空间不可达，编辑后可达也不等于能真实搬动物体。
-12 张图含参数变化与受控旋转/镜像，尚不足以支持关于 VLM 的 H1/H2 研究结论。
+- [Gate B 协议与 B0/B1 设计](research_spatial_action_round4_20261109/reports/GATE_B_PROTOCOL.md) · [B2 v1.1 冻结协议](research_spatial_action_round4_20261109/reports/B2_PROTOCOL_REVISION_20261116.md) · [选题背景](research_spatial_action_round4_20261109/reports/PRIMARY_TOPIC.md)
+- [Gate B 实现和复核说明](gate_b_v2/README.md) · [源码包](gate_b_v2_source.tar.xz) · [源码包 CI 核验](.github/workflows/gate-b-v2-source-audit.yml)
+- 工作站的环境、权重、原始运行记录、二进制快照和哈希清单留在 `gate_b_v2/`。三份离线安装源位于本地的 `gate_b_v2/assets/workstation-installers/`。公开原始记录与校验清单可从上表各报告进入。

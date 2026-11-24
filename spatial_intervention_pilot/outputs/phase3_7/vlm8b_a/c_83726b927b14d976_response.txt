@@ -1,4 +1,0 @@
-{
-  "passable": true,
-  "explanation": "Robot can navigate around obstacles to reach goal without touching walls or obstacles."
-}

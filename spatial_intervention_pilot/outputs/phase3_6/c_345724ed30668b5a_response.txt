@@ -1,4 +1,0 @@
-{
-  "passable": false,
-  "explanation": "Obstacle blocks direct path; robot cannot navigate around it without touching it, given its radius and fixed positions."
-}

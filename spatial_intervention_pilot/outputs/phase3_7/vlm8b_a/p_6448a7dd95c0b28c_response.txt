@@ -1,1 +1,0 @@
-{"passable": false, "explanation": "Robot radius 0.25m prevents reaching goal due to L-shaped obstacle blocking direct path."}

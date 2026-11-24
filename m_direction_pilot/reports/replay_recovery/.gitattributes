@@ -1,4 +1,0 @@
-# Source excerpts preserve upstream trailing spaces, with pinned file hashes.
-R0_source_audit.md -whitespace
-# Generated Matplotlib SVG paths preserve their own whitespace.
-*.svg -whitespace

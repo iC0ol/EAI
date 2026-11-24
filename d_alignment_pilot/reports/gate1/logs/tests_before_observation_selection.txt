@@ -1,3 +1,0 @@
-.............                                                            [100%]
-- generated xml file: /home/asus/EAI/d_alignment_pilot/reports/gate1/tests.xml -
-13 passed in 3.38s

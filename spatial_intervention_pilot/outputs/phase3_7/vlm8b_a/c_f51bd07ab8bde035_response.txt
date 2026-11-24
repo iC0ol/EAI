@@ -1,1 +1,0 @@
-{"passable": false, "explanation": "Robot radius 0.25m prevents reaching goal without touching U-shaped obstacle or walls."}

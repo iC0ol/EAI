@@ -1,4 +1,0 @@
-{
-  "passable": false,
-  "explanation": "Diagonal wall blocks direct path; robot cannot navigate around it without touching obstacle or wall."
-}
