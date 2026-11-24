@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import time
 from pathlib import Path
@@ -190,6 +191,11 @@ def _osc_commands(experiment: GateBExperiment, actions: np.ndarray) -> np.ndarra
     return commands
 
 
+def _observation_sha256(observation: dict[str, np.ndarray]) -> str:
+    fields = [(key, sha256_array(observation[key])) for key in sorted(observation)]
+    return hashlib.sha256(json.dumps(fields, separators=(",", ":")).encode("utf-8")).hexdigest()
+
+
 def _mid_evidence(
     t: int,
     decision: MidDecision,
@@ -263,6 +269,11 @@ def run_episode(experiment: GateBExperiment, seed: int, arm: str) -> dict:
     env = experiment.env
     seed_everything(seed)
     env.reset(seed)
+    gripper = env.robosuite_env.robots[0].gripper
+    pre_normalization_gripper_command = gripper.current_action.tolist()
+    # Robosuite's soft reset reuses the Panda gripper and leaves this integrator intact.
+    gripper.current_action = np.zeros(gripper.dof)
+    initial_gripper_command = gripper.current_action.tolist()
     initial_state_hash = env.initial_state_hash()
     reset_policy_or_block(experiment.policy)
     geometry = LiveTaskGeometry(env.robosuite_env) if arm != "fixed15" else None
@@ -272,6 +283,7 @@ def run_episode(experiment: GateBExperiment, seed: int, arm: str) -> dict:
     task_success_bits = []
     inference_seconds = 0.0
     first_success_step = None
+    prefix6_evidence = None
 
     def sample(t: int, phase: str, count: int) -> list[np.ndarray]:
         nonlocal inference_seconds
@@ -299,7 +311,7 @@ def run_episode(experiment: GateBExperiment, seed: int, arm: str) -> dict:
         return chunks
 
     def take_steps(commands: np.ndarray, track_geometry: LiveTaskGeometry | None = None) -> list[np.ndarray]:
-        nonlocal first_success_step
+        nonlocal first_success_step, prefix6_evidence
         centers = []
         for command in commands:
             expected_step = env.steps + 1
@@ -311,6 +323,12 @@ def run_episode(experiment: GateBExperiment, seed: int, arm: str) -> dict:
             if first_success_step is None and env.task_success:
                 first_success_step = int(env.steps)
             task_success_bits.append("1" if env.task_success else "0")
+            if expected_step == MID_OFFSET:
+                prefix6_evidence = {
+                    "prefix6_state_sha256": env.initial_state_hash(),
+                    "prefix6_observation_sha256": _observation_sha256(env.policy_observation()),
+                    "prefix6_gripper_command": gripper.current_action.tolist(),
+                }
             if track_geometry is not None:
                 centers.append(track_geometry.hole_center())
         return centers
@@ -343,11 +361,16 @@ def run_episode(experiment: GateBExperiment, seed: int, arm: str) -> dict:
     expected_budget = (34, 34, 0) if geometry is None else (67, 100, 33)
     if env.steps != MAX_STEPS or (policy_queries, policy_samples, len(events)) != expected_budget:
         raise RuntimeError("Square-MH rollout did not complete the frozen step and sampling schedule")
+    if prefix6_evidence is None:
+        raise RuntimeError("Square-MH rollout is missing its common six-step prefix evidence")
     return {
         "seed": seed,
         "arm": arm,
         "initial_state_hash": initial_state_hash,
         "first_chunk_sha256": query_schedule[0]["chunk_sha256"][0],
+        "pre_normalization_gripper_command": pre_normalization_gripper_command,
+        "initial_gripper_command": initial_gripper_command,
+        **prefix6_evidence,
         "steps": int(env.steps),
         "success": task_success_bits[-1] == "1",
         "first_success_step": first_success_step,

@@ -18,7 +18,8 @@ class FakeSquareWrapper:
         self.seed_state_map = {}
         self.success_checks = []
         self.commands = []
-        gripper = object()
+        self.gripper = SimpleNamespace(dof=1, current_action=np.zeros(1))
+        self.finger_qpos = np.zeros(2)
         nut = SimpleNamespace(name="SquareNut", contact_geoms=["nut_contact"])
         model = SimpleNamespace(
             geom_bodyid=np.array([1, 1]), geom_type=np.array([6, 6]), geom_group=np.array([0, 1]),
@@ -34,10 +35,10 @@ class FakeSquareWrapper:
             body_xpos=np.array([[0.03, 0.0, 0.1]]),
         )
         sim = SimpleNamespace(data=self.data, model=model, get_state=lambda: np.array([self.data.time]))
-        robot = SimpleNamespace(controller=SimpleNamespace(eef_name="osc_site"), eef_site_id=0, gripper=gripper)
+        robot = SimpleNamespace(controller=SimpleNamespace(eef_name="osc_site"), eef_site_id=0, gripper=self.gripper)
 
         def check_grasp(current_gripper, contact_geoms):
-            assert current_gripper is gripper
+            assert current_gripper is self.gripper
             assert contact_geoms is nut.contact_geoms
             return True
 
@@ -46,7 +47,7 @@ class FakeSquareWrapper:
             peg1_body_id=1, _check_grasp=check_grasp,
         )
         self.env = SimpleNamespace(
-            env=rs, is_success=self.is_success, get_state=lambda: {"states": np.array([self.initial_seed])},
+            env=rs, is_success=self.is_success, get_state=self.get_state,
         )
 
     def seed(self, seed):
@@ -55,10 +56,14 @@ class FakeSquareWrapper:
     def observation(self):
         return {"frame": np.array([self.steps], dtype=np.float32)}
 
+    def get_state(self):
+        return {"states": np.array([self.initial_seed, self.steps, *self.finger_qpos])}
+
     def reset(self):
         self.steps = 0
         self.data.time = 0.0
         self.data.body_xpos[0, 2] = 0.1
+        self.finger_qpos[:] = 0.0
         self.success_checks.clear()
         self.commands.clear()
         return self.observation()
@@ -67,6 +72,9 @@ class FakeSquareWrapper:
         assert command.shape == (7,) and command.dtype == np.float32
         self.commands.append(command.copy())
         self.steps += 1
+        direction = np.array([-1.0, 1.0]) * 0.01 * np.sign(command[-1])
+        self.gripper.current_action = np.clip(self.gripper.current_action + direction, -1.0, 1.0)
+        self.finger_qpos[:] = self.gripper.current_action
         self.data.time += 0.05
         self.data.body_xpos[0, 2] = (0.1, 0.101, 0.099)[self.steps % 3]
         return self.observation(), 0.0, self.steps == self.done_at, {"is_success": self.steps == 3}
@@ -111,10 +119,18 @@ def fake_experiment(monkeypatch, done_at=500):
 def test_five_arms_pair_reset_first_chunk_and_physical_query_times(monkeypatch):
     experiment, wrapper, reset_calls, sample_times = fake_experiment(monkeypatch)
     paired_keys = set()
+    wrapper.gripper.current_action = np.array([0.75, -0.25])
     for arm in rollout.ARMS:
         sample_times.clear()
+        carried_gripper_command = wrapper.gripper.current_action.tolist()
         row = rollout.run_episode(experiment, 520000, arm)
-        paired_keys.add((row["initial_state_hash"], row["first_chunk_sha256"]))
+        assert carried_gripper_command != [0.0]
+        assert row["pre_normalization_gripper_command"] == carried_gripper_command
+        assert row["initial_gripper_command"] == [0.0]
+        assert row["prefix6_gripper_command"] == pytest.approx([-0.06, 0.06])
+        assert row["prefix6_state_sha256"] != row["initial_state_hash"]
+        assert row["prefix6_observation_sha256"] == rollout._observation_sha256({"frame": np.array([[5], [6]], dtype=np.float32)})
+        paired_keys.add((row["initial_state_hash"], row["first_chunk_sha256"], row["prefix6_state_sha256"]))
         assert wrapper.success_checks == list(range(1, 501))
         assert row["task_success_bits"] == "0" * 10 + "11" + "0" * 488
         assert len(wrapper.commands) == row["steps"] == 500
@@ -176,3 +192,14 @@ def test_early_done_aborts_instead_of_emitting_short_row(monkeypatch):
 def test_policy_noise_is_unique_across_study_seed_and_time_coordinates():
     seeds = range(520000, 520101)
     assert len({rollout.policy_noise_seed(seed, t, k) for seed in seeds for t in range(500) for k in (0, 1)}) == len(seeds) * 500 * 2
+
+
+def test_observation_hash_is_order_independent_and_covers_names_shape_dtype_and_bytes():
+    first = np.array([[1], [2]], dtype=np.float32)
+    second = np.array([[3], [4]], dtype=np.float32)
+    reference = rollout._observation_sha256({"first": first, "second": second})
+    assert rollout._observation_sha256({"second": second, "first": first}) == reference
+    assert rollout._observation_sha256({"other": first, "second": second}) != reference
+    assert rollout._observation_sha256({"first": first.ravel(), "second": second}) != reference
+    assert rollout._observation_sha256({"first": first.astype(np.float64), "second": second}) != reference
+    assert rollout._observation_sha256({"first": first[::-1], "second": second}) != reference

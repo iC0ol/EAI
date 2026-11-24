@@ -30,6 +30,8 @@ def fake_row(seed, arm, first=120):
                                issued_gripper_max_abs_error=0.0,
                                issued_hole_axial_minus_old_m=[0.0]*9, issued_hole_axial_minus_new_m=[0.0]*9))
     return dict(seed=seed, arm=arm, initial_state_hash=initial, first_chunk_sha256=initial, steps=500,
+                initial_gripper_command=[0.0], prefix6_gripper_command=[1.0, -1.0],
+                prefix6_state_sha256=initial, prefix6_observation_sha256=initial,
                 success=first is not None, first_success_step=first, wall_seconds=2.0, inference_seconds=1.0,
                 task_success_bits="0"*500 if first is None else "0"*(first-1) + "1"*(501-first),
                 query_schedule=queries, policy_queries=len(queries), policy_samples=sum(q["candidate_count"] for q in queries),

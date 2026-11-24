@@ -31,7 +31,10 @@ def audit(directory: Path, seeds, analysis=None):
         first = first + 1 if first >= 0 else None
         final = bits[-1] == "1"
         check(first == row["first_success_step"] and final == row["success"], "raw versus reported success")
-        observations[seed, arm] = (first, final, row["initial_state_hash"], row["first_chunk_sha256"])
+        check(row["initial_gripper_command"] == [0.0], "initial gripper command accumulator")
+        observations[seed, arm] = (first, final, row["initial_state_hash"], row["first_chunk_sha256"],
+                                   row["prefix6_state_sha256"], row["prefix6_observation_sha256"],
+                                   tuple(row["prefix6_gripper_command"]))
         hashes[path.name] = hashlib.sha256(path.read_bytes()).hexdigest()
         schedule = row["query_schedule"]
         ordinary = list(range(0, 500, 15))

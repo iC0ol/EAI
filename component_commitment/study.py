@@ -90,8 +90,10 @@ def check_record(row):
     arm, seed = row["arm"], row["seed"]
     require(arm in ARMS and type(seed) is int, "Unexpected episode key")
     require(type(row["steps"]) is int and row["steps"] == 500, "Incomplete control-step budget")
-    for key in ("initial_state_hash", "first_chunk_sha256"):
+    for key in ("initial_state_hash", "first_chunk_sha256", "prefix6_state_sha256", "prefix6_observation_sha256"):
         require(isinstance(row[key], str) and re.fullmatch(r"[0-9a-f]{64}", row[key]), key)
+    require(row["initial_gripper_command"] == [0.0] and len(row["prefix6_gripper_command"]) == 2
+            and all(math.isfinite(v) for v in row["prefix6_gripper_command"]), "Gripper controller state")
     first = row["first_success_step"]
     require(first is None or (type(first) is int and 1 <= first <= 500), "Invalid first success")
     require(type(row["success"]) is bool and (not row["success"] or first is not None),
@@ -161,11 +163,17 @@ def check_record(row):
 
 def validate_pairs(rows):
     paired = {}
+    mid_predictions = {}
     state_to_seed = {}
     for (seed, _), row in rows.items():
-        pair = (row["initial_state_hash"], row["first_chunk_sha256"])
-        require(paired.setdefault(seed, pair) == pair, "Initial state or first chunk differs by arm")
+        pair = (row["initial_state_hash"], row["first_chunk_sha256"], row["prefix6_state_sha256"],
+                row["prefix6_observation_sha256"], tuple(row["prefix6_gripper_command"]))
+        require(paired.setdefault(seed, pair) == pair, "Initial state, first chunk or common six-step prefix differs by arm")
         require(state_to_seed.setdefault(pair[0], seed) == seed, "Duplicate physical initial state")
+        if row["arm"] != "fixed15":
+            mid_hashes = row["query_schedule"][1]["chunk_sha256"]
+            require(mid_predictions.setdefault(seed, mid_hashes) == mid_hashes,
+                    "First same-time mid-cycle candidates differ before treatment")
 
 
 def records(directory, stage, fingerprint):
