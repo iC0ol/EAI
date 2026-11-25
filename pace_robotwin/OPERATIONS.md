@@ -6,7 +6,7 @@
 
 推理端使用 `policy/`、`runtime/policy/`、`assets/policy/` 和 `vendor/Openpi-PACE/`。仿真端使用 `sim/`、`runtime/sim/`、`assets/sim/` 和 `vendor/RoboTwin-PACE/`。未修改的对照源码在 `vendor/PACE/`。分量控制器及其测试在 `controller/`。当前线程的小时续办任务名为「续办 PACE 双任务配对实验」。它在额度可用后读取这些记录，主线程负责工程验收。
 
-`bash pace_robotwin/run.sh engineer` 在用户级服务启动独立 seed 2 配对工程批次。它为每项任务在同一工程场景各执行五个方法。工程记录位置由 `pace_robotwin/runs/ENGINEERING_PATH.json` 指向。独立复核命令为 `bash pace_robotwin/run.sh audit engineering`。主线程检查真实 TCP、计时、资源、配对与工程记录后运行 `bash pace_robotwin/run.sh accept`，生成绑定清单的验收记录。
+`bash pace_robotwin/run.sh engineer` 在用户级服务启动独立 seed 2 配对工程批次。它为每项任务在同一工程场景各执行五个方法。服务先按官方发布清单固定所有参数分片哈希。叠块模型与仿真就绪便可开始叠块工程回合，手机模型可同时下载。每一项都在投入使用前逐文件核验，正式启动还会核验全部资产。工程记录位置由 `pace_robotwin/runs/ENGINEERING_PATH.json` 指向。服务在完整工程批次结束后调用 `bash pace_robotwin/run.sh audit engineering`。主线程检查真实 TCP、计时、资源、配对与工程记录后运行 `bash pace_robotwin/run.sh accept`，生成绑定清单的验收记录。
 
 ## 正式运行
 

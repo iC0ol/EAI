@@ -39,7 +39,7 @@ def checked_files(base, entries):
     return output
 
 
-def make_manifest():
+def make_manifest(verify_tasks=TASKS):
     candidate = ROOT / "assets/policy"
     policy = read_json(candidate / "manifest.json")
     if file_hash(candidate / "manifest.json") != "2337bd9e7244fc3f6d51b0b830a9cdfc8d6e683decf2c398a431bc5800696c41":
@@ -47,13 +47,15 @@ def make_manifest():
     if policy["openpi_pace_revision"] != OPENPI_REVISION:
         raise ValueError("official OpenPI commit does not match")
     released = {m["task"]: m for m in policy["models"]}
-    entries = [policy["tokenizer"]]
-    for task in TASKS:
-        entries.extend(released[task]["files"])
-    policy_files = checked_files(candidate, entries)
+    entries = [policy["tokenizer"], *(entry for task in TASKS for entry in released[task]["files"])]
+    policy_files = {entry["path"]: entry["sha256"] for entry in entries}
+    checked_files(candidate, [policy["tokenizer"], *(entry for task in verify_tasks for entry in released[task]["files"])])
     models = ROOT / "assets/sim/robotwin"
     sim = read_json(models / "asset_manifest.json")
     environment_files = checked_files(models, [f for a in sim["archives"].values() for f in a["files"]])
+    for name in ("objects", "embodiments"):
+        if (SIM / "assets" / name).resolve() != (models / name).resolve():
+            raise ValueError(f"installed simulation assets differ from their verified source: {name}")
     pace_commit = "5d0f4a92415f8899963cba7f0f929f1b9c5f75db"
     sources = [ROOT / p for p in ("PROTOCOL.md", "design.py", "trial.py")]
     for folder in ("controller", "sim", "policy"):

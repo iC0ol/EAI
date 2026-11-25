@@ -79,7 +79,7 @@ def report_progress():
 
 
 def freeze_for_engineering():
-    manifest = make_manifest()
+    manifest = make_manifest(verify_tasks=(TASKS[0],))
     prior = engineering_path()
     if prior and read_json(prior / "MANIFEST.json") == manifest:
         return prior
@@ -90,23 +90,28 @@ def freeze_for_engineering():
     return root
 
 
-def wait_for_engineering_inputs():
-    locations = {name: ROOT / f"runtime/{name}/READY.json" for name in ("policy", "sim")}
+def wait_for_engineering_inputs(task):
+    stack_probe = ROOT / f"runtime/policy/engineering/{TASKS[0]}.probe.json"
+    policy_ready = ROOT / "runtime/policy/READY.json"
+    locations = {"policy": stack_probe if task == TASKS[0] else policy_ready, "sim": ROOT / "runtime/sim/READY.json"}
     while True:
         ready = {name: path.is_file() for name, path in locations.items()}
         write_json(RUNS / "SETUP.json", {"state": "VERIFYING_INPUTS" if all(ready.values()) else "WAITING_FOR_INPUTS",
-                                         "checked_beijing": now().isoformat(timespec="seconds"), "ready": ready})
+                                         "task": task, "checked_beijing": now().isoformat(timespec="seconds"), "ready": ready})
         if all(ready.values()):
             break
         time.sleep(45)
-    probes = read_json(locations["policy"])["probes"]
-    if set(probes) != set(TASKS):
-        raise ValueError("two task-specific GPU policy probes are required")
-    for task, relative in probes.items():
+    if task == TASKS[0]:
+        probes = {task: str(stack_probe.relative_to(ROOT))}
+    else:
+        probes = read_json(policy_ready)["probes"]
+        if set(probes) != set(TASKS):
+            raise ValueError("two task-specific GPU policy probes are required")
+    for probed_task, relative in probes.items():
         result = read_json(ROOT / relative)
-        if not (result["same_seed_exact"] and result["matches_upstream_seed_zero_sequence"]
-                and result["metadata"]["task"] == task and result["metadata"]["candidate_count"] == 1):
-            raise ValueError(f"failed real GPU inference/replay on {task}")
+        if not (result["same_seed_exact"] and result["different_seed_differs"] and result["matches_upstream_seed_zero_sequence"]
+                and result["metadata"]["task"] == probed_task and result["metadata"]["candidate_count"] == 1):
+            raise ValueError(f"failed real GPU inference/replay on {probed_task}")
     sim = {}
     for relative in read_json(locations["sim"])["reports"]:
         result = read_json(ROOT / relative)
@@ -116,13 +121,13 @@ def wait_for_engineering_inputs():
             sim[item["task"]] = item
     if set(sim) != set(TASKS):
         raise ValueError("two physical simulator probes are required")
-    for task, item in sim.items():
+    for sim_task, item in sim.items():
         if not (item["scene_cache_seed"] == 2 and item["executed_test_actions"] == 1 and
                 item["reset"] == {"action_count": 0, "success": False} and math.isfinite(item["joint_change_l2"])
                 and item["joint_change_l2"] > 0 and item["state_shape"] == [14] and len(item["cameras"]) == 3):
-            raise ValueError(f"invalid native reset or joint command evidence on {task}")
+            raise ValueError(f"invalid native reset or joint command evidence on {sim_task}")
     write_json(RUNS / "SETUP.json", {"state": "INPUT_PROBES_VERIFIED", "policy": probes,
-                                     "sim": list(sim), "checked_beijing": now().isoformat(timespec="seconds")})
+                                     "task": task, "sim": list(sim), "checked_beijing": now().isoformat(timespec="seconds")})
 
 
 def accepted_root(check_assets):
@@ -245,15 +250,22 @@ def run_queue(mode):
     with (RUNS / "workstation.lock").open("a") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         if mode == "engineering":
-            wait_for_engineering_inputs()
+            wait_for_engineering_inputs(TASKS[0])
         outroot = freeze_for_engineering() if mode == "engineering" else prepare_formal()
         manifest_hash = file_hash(outroot / "MANIFEST.json")
         stages = ("engineering",) if mode == "engineering" else ("reproduction", "heldout")
         try:
             for stage in stages:
                 for task in TASKS:
+                    if stage == "engineering" and task == TASKS[1]:
+                        wait_for_engineering_inputs(task)
+                        if read_json(outroot / "MANIFEST.json") != make_manifest():
+                            raise ValueError("inputs changed between the two engineering tasks")
                     write_json(outroot / "STATUS.json", {"state": "PREPARING", "active": f"{stage}/{task}", **report_progress()})
-                    run_task(outroot, stage, task, manifest_hash)
+                    # The standalone phone policy probe uses the same lock. Take it only during GPU work.
+                    with (ROOT / "runtime/probe-gpu.lock").open("a") as gpu_lock:
+                        fcntl.flock(gpu_lock, fcntl.LOCK_EX)
+                        run_task(outroot, stage, task, manifest_hash)
             info = report_progress()
             observed = info["engineering_completed"] if mode == "engineering" else info["completed"]
             if observed != (10 if mode == "engineering" else 1600):
