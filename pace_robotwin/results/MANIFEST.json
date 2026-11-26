@@ -1,0 +1,1831 @@
+{
+  "adapters": {
+    "PROTOCOL.md": "9046445999f78797b0901f493230e8bbb8aaf3360cf1a3d0fc5f0f85677f0bd6",
+    "controller/__init__.py": "83f6a2a3082f7da51ccaa3860482415e1b1d2bed85c4d573664133c2a1e950ed",
+    "controller/component.py": "6630a8882ccd5a8f3d36954423e13abcb30398cfb8b807abe33656b640224db1",
+    "controller/kinematics.py": "4580533a9ad8afaac0ad4eb5b33b3ef99a93d30656e71b3b8790101efa2e42e5",
+    "controller/test_component.py": "5f8a963ff278d18c38a4db6be21a6f135688d5c83cc4ba1c09bdcf40a23ddcee",
+    "controller/test_kinematics.py": "ead84f3b1fe7c9e19d722e134cf9fa296cbd178fa463c8a0125c4c107952e328",
+    "controller/validation.py": "dc3bff49734def387c8c7d229ee348deb9ae6558a6fbfbe31fdcb2b345377993",
+    "design.py": "2b35bb99e7f4a6bdbffeacf659ead8ab169d2a00f5268d7a195f321a67271102",
+    "policy/env.sh": "ec66d4cb3b8624ab8a06382c256c4b03cee6f0947fb7c805d7794e3262b123f2",
+    "policy/fetch_checkpoints.py": "49e33230ca25bff44d67c668d9357772f5779fe35a1d37022effcb4e9e7adac1",
+    "policy/install.sh": "fcf6189914bdd57b8b3ced8408ecf8cea5cf793b72cb32c607a6c82762cefba0",
+    "policy/probe_policy.py": "bf986934a1abc09edf00615059b9d19786b975208da660cbc07b621ecaf57cbe",
+    "policy/serve.sh": "00fcfc550001e21812b9a9045550a36d855752f6d6c011ad696abaefe3daf218",
+    "policy/serve_policy.py": "d5ddab9de0be464f3805845e22e795e692819644d22cbfbee5d03e207bb68e34",
+    "sim/fetch_assets.py": "d97eeea63ffa12edb8fccdd3df5c0593d1368cb0425121df1a7eba20d916a82c",
+    "sim/install_runtime.sh": "91a3a6b897fe2059b77ed19c1fa5f2f41cfff3c1dca6a5f24402eb9b3af89ccf",
+    "sim/patch_runtime.py": "dc4718543edfb297674b7c7e61e8135554ee073ceadaf83c37eb8af1a50248f1",
+    "sim/requirements.txt": "4555c726c049c46281ddfbb27eed5550d11bb4d85aba0a7984af0fe673d63e89",
+    "sim/runtime.sh": "b999f9d07071ec4d957a4cc84369011f65074588ad78d8c75d1c3ffb60f4fc43",
+    "sim/verify_environment.py": "8c790e8c94e7091873676f5809b19a880cea3dadb14410cc7a0e007a65256953",
+    "trial.py": "40ea197a172ecfcd9764d8b0db7df7be8831da96db4a31dc73fb2057377c60e2"
+  },
+  "official_policy_manifest_sha256": "2337bd9e7244fc3f6d51b0b830a9cdfc8d6e683decf2c398a431bc5800696c41",
+  "openpi": {
+    "changed_tracked_paths": [],
+    "commit": "ba9876639cb7a4bf0c7db00ec39eeb9c8efd8b12",
+    "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "pace": {
+    "changed_tracked_paths": [],
+    "commit": "5d0f4a92415f8899963cba7f0f929f1b9c5f75db",
+    "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "policy_files": {
+    "place_phone_stand/assets/robotwin/norm_stats.json": "ba97e675f335587d9504dbf148c02b925c4f64ff61989fa6bf681556013b24bc",
+    "place_phone_stand/params/_METADATA": "f27d21952e602528615298c668b588ba14ae8268e03e94598ea0235eaea52a5f",
+    "place_phone_stand/params/_sharding": "7e65c8b63fafedfedb52bf416d6bfde394c1c88fd28dc02f18a7911f2581c183",
+    "place_phone_stand/params/array_metadatas/process_0": "b6f4c56c01a8b73c9db955c4c68dd0b74d7fdda723831715dcbcd18ba5ddd4ab",
+    "place_phone_stand/params/d/2fe2494475969a4e4b1d7454f3cf8e91": "dc84bd6d738e4e7587bb3fb15928e286845d271c2defa87f066990131610c3a8",
+    "place_phone_stand/params/manifest.ocdbt": "e36e86c904993e3c79a91378fe39cb437d9951272a3fb67142ad77ed2a2e7712",
+    "place_phone_stand/params/ocdbt.process_0/d/24e2e435ca0d3e94d519d708215bc1db": "6a85d5f465cefd4e419cf84235c8029a4f6be2d0f9151ceb363f93c102c5d793",
+    "place_phone_stand/params/ocdbt.process_0/d/26b2d0f2d968abf2ae5e6d387197958a": "96310cc3171f3435ad6e88b12a695c4718a3aa0985dee2f334fe7d427e3e75de",
+    "place_phone_stand/params/ocdbt.process_0/d/3b28ca350a9072f332b8764ef2b19bb3": "f79d31871371e1a55c32fa1dfd7027a7db729d97a98297e7e227a0edadd9e41e",
+    "place_phone_stand/params/ocdbt.process_0/d/52dcef978e90606b04499787dc73288b": "031a3f5fd21e74507ab716dcae7a48ee14847d4f344559cfc2027931faeaa793",
+    "place_phone_stand/params/ocdbt.process_0/d/5378e573b28b80df23833e34f918eba6": "3e7fa6cd190fb69040e9160592b3af190fe57924e58583d109e4712f36198f20",
+    "place_phone_stand/params/ocdbt.process_0/d/539a5a79e2a7a6ee3a4a78de584c6925": "403b7a666ba720d036357b10d20827e94305ca67c306c53966c4f03142155c7c",
+    "place_phone_stand/params/ocdbt.process_0/d/803d525ce2b355ba1e976a2ef59d78d9": "8707d1aa894962c16c9d56ad70a67f61858fa29abf81df78bf35b8ef9f1aeaa8",
+    "place_phone_stand/params/ocdbt.process_0/d/8304f914dadc0c08906f4e345ad83ed4": "fff2f8b328c86ab34912c01d5758210df1805bcd73e3709be401d1989b9b18c3",
+    "place_phone_stand/params/ocdbt.process_0/d/8947d3e58fa2c5c03692b9aeb19117ab": "dcacda14f48944491c25f5b5594ee6a8e2785908238f08a459613cfaa1cae7f9",
+    "place_phone_stand/params/ocdbt.process_0/d/8b0cb1ce19163a395ec20eaac076fbd3": "0d41eedcd4f9077854d854e84ddab0c6d2c2f8189e8737b8e0dc6411a311e117",
+    "place_phone_stand/params/ocdbt.process_0/d/98ff57d08a1b615a750f8910269c4d3f": "dd502088d6e891824f28708832c2ed79d5f092940ac2b20014b455c9debc75b9",
+    "place_phone_stand/params/ocdbt.process_0/d/a033a0d596a46ca5214a39d0e5e251ef": "7ecc244f4d6e2c2dc5e5494d1ed8c91425ff3025b24cdfcd96a5a7f028591ce6",
+    "place_phone_stand/params/ocdbt.process_0/d/a7be8568cae6684cbc69071a7fa0c3da": "6a85d5f465cefd4e419cf84235c8029a4f6be2d0f9151ceb363f93c102c5d793",
+    "place_phone_stand/params/ocdbt.process_0/d/aa80a7a872c785e92c1bb3e31121611f": "b31a755002a2fe5e22fff0c2be99ddd9f8b4236c7b4724643776d9d109474db2",
+    "place_phone_stand/params/ocdbt.process_0/d/bbdd32d086f4091143f610a10397a2b7": "914972a8fa3c34478032da73cb27d1806f46ccbf47269e7bba8602422608e145",
+    "place_phone_stand/params/ocdbt.process_0/d/c18b3970a4fc957765df31b073b4bac4": "ca9539ebc0589cc30365e48a16b70a0f058526cd1e85f37b077c8427fa06cfbe",
+    "place_phone_stand/params/ocdbt.process_0/d/d5282f0b1ca9bc8fad6f130e46f9f82b": "0dd2caf8f8e65837dd56bd124689df8899520485b4d5e2c63feda716c64dabbe",
+    "place_phone_stand/params/ocdbt.process_0/d/df92edc0736122bcb820680d36093d85": "e520d4caff20cc59306a011cf61173153aa205047b25b713dcb0cd0f83983cec",
+    "place_phone_stand/params/ocdbt.process_0/d/efa1e505d8591399b4e505d4ee1f681b": "513f54fb60e1b6e363d7cd800a7202a202dff3a2e9e81e4320951569d34c7e9d",
+    "place_phone_stand/params/ocdbt.process_0/manifest.ocdbt": "264f1a7d348c656519a1af8aafa484a06d7a2f9a39837e7538e031f24e427f37",
+    "stack_blocks_three/assets/robotwin/norm_stats.json": "ea9e63564d56a8931f1fd925259238bf625d69b884331d49e8a3fa3df766b822",
+    "stack_blocks_three/params/_METADATA": "f27d21952e602528615298c668b588ba14ae8268e03e94598ea0235eaea52a5f",
+    "stack_blocks_three/params/_sharding": "7e65c8b63fafedfedb52bf416d6bfde394c1c88fd28dc02f18a7911f2581c183",
+    "stack_blocks_three/params/array_metadatas/process_0": "b6f4c56c01a8b73c9db955c4c68dd0b74d7fdda723831715dcbcd18ba5ddd4ab",
+    "stack_blocks_three/params/d/661e55677c5bbe360821bded2ef7a4c2": "6387d482a3f728865add63f06c0634075916ea95833c71ddd20d0b42a811991d",
+    "stack_blocks_three/params/manifest.ocdbt": "b31d7534cf8926f4edfbbbc37bbc7ef2a16039ce8a577b9c3b0cc3414e6c3856",
+    "stack_blocks_three/params/ocdbt.process_0/d/102300b276babe99a1267a57314a3353": "caab84932d7c4811a832ce31bb0a01d2d9670d61cb7d4ae36e0db9d5e13e58cd",
+    "stack_blocks_three/params/ocdbt.process_0/d/258d355e95b61a04d0a5c8e3c4a4b806": "368d101c0aaaf3cb22b108f266b2ba760811dd039b7bf1a3075289aed29cbb91",
+    "stack_blocks_three/params/ocdbt.process_0/d/39e6d492fe5f8d5bd57518cfa42ac106": "2b03e155a19400c09efd6ec3944dbc76d825cb619a6f43c5300a58d5f71623a3",
+    "stack_blocks_three/params/ocdbt.process_0/d/39e878ca37a8b3244bf65256d114e212": "b639035a7aea7716193787f792ab5e80a91e084e20434bec491eea06ee07ad67",
+    "stack_blocks_three/params/ocdbt.process_0/d/3a1b334052870b2cfede20a642702d05": "855aba97f8ddeeed55b16013463036866b95114caa4d2bbb6bf26a1fee181a86",
+    "stack_blocks_three/params/ocdbt.process_0/d/57b5c44e61b7979ef460e8f797b038b2": "ab51b970550c6b56dde1a364b7933f359d51cb135b7185db2595fc1126398a50",
+    "stack_blocks_three/params/ocdbt.process_0/d/5e9a8687a29f25e2578a7800f6e8d354": "ba9f059c237e461dae11fdd613e673c2e9b51ef3f0218945b9b6ee7ca6455a21",
+    "stack_blocks_three/params/ocdbt.process_0/d/60d24c27e8294b17425cbd4328843446": "96eb38b4a9a5b75698363241de12fdcaa69aea6f0220d7ff4ce783b6112855cb",
+    "stack_blocks_three/params/ocdbt.process_0/d/6ad0569d22cac3a4a66798cbed3d2464": "edf95da708933cb4200cf63aefa628e26987264de9331ecb7fc9039944cd64ca",
+    "stack_blocks_three/params/ocdbt.process_0/d/76535fa86ba46ef5bf2954ea8857dc73": "272a3c54c24c6f203b22fd5b55ec285b62950d501188cebfce4df191b57bae4f",
+    "stack_blocks_three/params/ocdbt.process_0/d/82810dc3b68f73c5784f21e00f86a7d5": "50acd0b54843df84c97ee72f5fc98b46456ce5d3e83615f1aa1ad274bcf59a1e",
+    "stack_blocks_three/params/ocdbt.process_0/d/875e4f7b48d8eda84aa3bc9d6c9ca962": "5e48c56e03039e89b2318e7fd3e8e2a4aec5e186237764d07d610317d24e920b",
+    "stack_blocks_three/params/ocdbt.process_0/d/904f07f5fa3e7c5fe624102597fba1e7": "c8dbfb110b1e425686840e9455c232b69342035b3642d0487dae52c398674b58",
+    "stack_blocks_three/params/ocdbt.process_0/d/90dcb6956c319e2e4d9ba5cbdcf6c784": "022d9c170fc7734c458da7889577f206e257ffde278cab225844280fa06ab299",
+    "stack_blocks_three/params/ocdbt.process_0/d/9eecb0f5acc44286db990a5015841d19": "2aba77ab4711b84d61a5bbf79cfb6de54972e39fe062882f6e5924222b22a768",
+    "stack_blocks_three/params/ocdbt.process_0/d/ae4d11ce23e9ccbee909170f463854f6": "fff2f8b328c86ab34912c01d5758210df1805bcd73e3709be401d1989b9b18c3",
+    "stack_blocks_three/params/ocdbt.process_0/d/b47f117142ed7e4ee790c4e763f6da55": "f0d2812eec2cc85c436299a2f9b6ca18d761201564dc4cb7f66119fc56409159",
+    "stack_blocks_three/params/ocdbt.process_0/d/b5ec4d05a9cea5c7dc74661f87c8e130": "33c7414461b4ad28df1c985ba7260cb0719837597d9d70a384c12201c09276f5",
+    "stack_blocks_three/params/ocdbt.process_0/d/c59473c882c7d022def57ea45723ad19": "997abb0123d5c50d9e59f4d381da38b8e2612ece3311a046b1f0be0b10d5b5fd",
+    "stack_blocks_three/params/ocdbt.process_0/d/c8f0449e53e4b52f7ca1a28fdef55bfe": "b639035a7aea7716193787f792ab5e80a91e084e20434bec491eea06ee07ad67",
+    "stack_blocks_three/params/ocdbt.process_0/d/ceac9e5ed82f3045a0e1a70c7762b524": "3d703d98117f6242767da8f1c335e76184e22ea7b269136d2bffad7e9a73a76f",
+    "stack_blocks_three/params/ocdbt.process_0/d/f1389465fd8e8a07f6de9520b5904879": "cc4b13e553f47b7287a546a5dd2e9b07a1ad9682cb2af381e98b8189d7c4030d",
+    "stack_blocks_three/params/ocdbt.process_0/d/f15244c64f47d2c53fd908a0df971b1e": "6b4667a5fabb5cc714e3d8ad81067ce2e880677b0408c010fb677cf587d48f19",
+    "stack_blocks_three/params/ocdbt.process_0/manifest.ocdbt": "99d858a3c6041196d15a005033414ff8ac68e48b3e0028b9bf27ecce8b1dcc0e",
+    "tokenizer.model": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6"
+  },
+  "policy_revision": "17ef545270cf26ed81169893b60f845f80ce6557",
+  "policy_runtime": {
+    "distributions": [
+      [
+        "Farama-Notifications",
+        "0.0.4"
+      ],
+      [
+        "Flask",
+        "3.1.1"
+      ],
+      [
+        "GitPython",
+        "3.1.44"
+      ],
+      [
+        "Jinja2",
+        "3.1.6"
+      ],
+      [
+        "MarkupSafe",
+        "3.0.2"
+      ],
+      [
+        "PyOpenGL",
+        "3.1.9"
+      ],
+      [
+        "PySocks",
+        "1.7.1"
+      ],
+      [
+        "PyYAML",
+        "6.0.2"
+      ],
+      [
+        "Pygments",
+        "2.19.1"
+      ],
+      [
+        "Tree",
+        "0.2.4"
+      ],
+      [
+        "Werkzeug",
+        "3.1.3"
+      ],
+      [
+        "absl-py",
+        "2.3.0"
+      ],
+      [
+        "aiohappyeyeballs",
+        "2.6.1"
+      ],
+      [
+        "aiohttp",
+        "3.12.4"
+      ],
+      [
+        "aiosignal",
+        "1.3.2"
+      ],
+      [
+        "annotated-types",
+        "0.7.0"
+      ],
+      [
+        "antlr4-python3-runtime",
+        "4.9.3"
+      ],
+      [
+        "asttokens",
+        "3.0.0"
+      ],
+      [
+        "attrs",
+        "25.3.0"
+      ],
+      [
+        "augmax",
+        "0.4.1"
+      ],
+      [
+        "av",
+        "14.4.0"
+      ],
+      [
+        "beartype",
+        "0.19.0"
+      ],
+      [
+        "beautifulsoup4",
+        "4.13.4"
+      ],
+      [
+        "blinker",
+        "1.9.0"
+      ],
+      [
+        "cachetools",
+        "5.5.2"
+      ],
+      [
+        "certifi",
+        "2025.4.26"
+      ],
+      [
+        "cffi",
+        "1.17.1"
+      ],
+      [
+        "cfgv",
+        "3.4.0"
+      ],
+      [
+        "charset-normalizer",
+        "3.4.2"
+      ],
+      [
+        "chex",
+        "0.1.89"
+      ],
+      [
+        "click",
+        "8.2.1"
+      ],
+      [
+        "cloudpickle",
+        "3.1.1"
+      ],
+      [
+        "cmake",
+        "4.0.2"
+      ],
+      [
+        "comm",
+        "0.2.2"
+      ],
+      [
+        "contourpy",
+        "1.3.2"
+      ],
+      [
+        "crc32c",
+        "2.7.1"
+      ],
+      [
+        "cycler",
+        "0.12.1"
+      ],
+      [
+        "datasets",
+        "3.6.0"
+      ],
+      [
+        "debugpy",
+        "1.8.14"
+      ],
+      [
+        "decorator",
+        "5.2.1"
+      ],
+      [
+        "deepdiff",
+        "8.5.0"
+      ],
+      [
+        "diffusers",
+        "0.33.1"
+      ],
+      [
+        "dill",
+        "0.3.8"
+      ],
+      [
+        "distlib",
+        "0.3.9"
+      ],
+      [
+        "dm-control",
+        "1.0.14"
+      ],
+      [
+        "dm-env",
+        "1.6"
+      ],
+      [
+        "dm-tree",
+        "0.1.9"
+      ],
+      [
+        "docker-pycreds",
+        "0.4.0"
+      ],
+      [
+        "docstring_parser",
+        "0.16"
+      ],
+      [
+        "donfig",
+        "0.8.1.post1"
+      ],
+      [
+        "draccus",
+        "0.10.0"
+      ],
+      [
+        "einops",
+        "0.8.1"
+      ],
+      [
+        "equinox",
+        "0.12.2"
+      ],
+      [
+        "etils",
+        "1.12.2"
+      ],
+      [
+        "evdev",
+        "1.9.2"
+      ],
+      [
+        "executing",
+        "2.2.0"
+      ],
+      [
+        "filelock",
+        "3.18.0"
+      ],
+      [
+        "flatbuffers",
+        "25.2.10"
+      ],
+      [
+        "flax",
+        "0.10.2"
+      ],
+      [
+        "fonttools",
+        "4.58.1"
+      ],
+      [
+        "frozenlist",
+        "1.6.0"
+      ],
+      [
+        "fsspec",
+        "2025.3.0"
+      ],
+      [
+        "gcsfs",
+        "2025.3.0"
+      ],
+      [
+        "gdown",
+        "5.2.0"
+      ],
+      [
+        "gitdb",
+        "4.0.12"
+      ],
+      [
+        "glfw",
+        "2.9.0"
+      ],
+      [
+        "google-api-core",
+        "2.24.2"
+      ],
+      [
+        "google-auth",
+        "2.40.2"
+      ],
+      [
+        "google-auth-oauthlib",
+        "1.2.2"
+      ],
+      [
+        "google-cloud-core",
+        "2.4.3"
+      ],
+      [
+        "google-cloud-storage",
+        "3.1.0"
+      ],
+      [
+        "google-crc32c",
+        "1.7.1"
+      ],
+      [
+        "google-resumable-media",
+        "2.7.2"
+      ],
+      [
+        "googleapis-common-protos",
+        "1.70.0"
+      ],
+      [
+        "gym-aloha",
+        "0.1.1"
+      ],
+      [
+        "gymnasium",
+        "0.29.1"
+      ],
+      [
+        "h5py",
+        "3.13.0"
+      ],
+      [
+        "hf-xet",
+        "1.1.2"
+      ],
+      [
+        "hf_transfer",
+        "0.1.9"
+      ],
+      [
+        "huggingface-hub",
+        "0.32.3"
+      ],
+      [
+        "humanize",
+        "4.12.3"
+      ],
+      [
+        "identify",
+        "2.6.12"
+      ],
+      [
+        "idna",
+        "3.10"
+      ],
+      [
+        "imageio",
+        "2.37.0"
+      ],
+      [
+        "imageio-ffmpeg",
+        "0.6.0"
+      ],
+      [
+        "importlib_metadata",
+        "8.7.0"
+      ],
+      [
+        "importlib_resources",
+        "6.5.2"
+      ],
+      [
+        "iniconfig",
+        "2.1.0"
+      ],
+      [
+        "inquirerpy",
+        "0.3.4"
+      ],
+      [
+        "ipykernel",
+        "6.29.5"
+      ],
+      [
+        "ipython",
+        "9.2.0"
+      ],
+      [
+        "ipython_pygments_lexers",
+        "1.1.1"
+      ],
+      [
+        "ipywidgets",
+        "8.1.7"
+      ],
+      [
+        "itsdangerous",
+        "2.2.0"
+      ],
+      [
+        "jax",
+        "0.5.3"
+      ],
+      [
+        "jax-cuda12-pjrt",
+        "0.5.3"
+      ],
+      [
+        "jax-cuda12-plugin",
+        "0.5.3"
+      ],
+      [
+        "jaxlib",
+        "0.5.3"
+      ],
+      [
+        "jaxtyping",
+        "0.2.36"
+      ],
+      [
+        "jedi",
+        "0.19.2"
+      ],
+      [
+        "jsonlines",
+        "4.0.0"
+      ],
+      [
+        "jupyter_client",
+        "8.6.3"
+      ],
+      [
+        "jupyter_core",
+        "5.8.1"
+      ],
+      [
+        "jupyterlab_widgets",
+        "3.0.15"
+      ],
+      [
+        "kiwisolver",
+        "1.4.8"
+      ],
+      [
+        "labmaze",
+        "1.0.6"
+      ],
+      [
+        "lerobot",
+        "0.1.0"
+      ],
+      [
+        "llvmlite",
+        "0.44.0"
+      ],
+      [
+        "lxml",
+        "5.4.0"
+      ],
+      [
+        "markdown-it-py",
+        "3.0.0"
+      ],
+      [
+        "matplotlib",
+        "3.10.3"
+      ],
+      [
+        "matplotlib-inline",
+        "0.1.7"
+      ],
+      [
+        "mdurl",
+        "0.1.2"
+      ],
+      [
+        "mergedeep",
+        "1.3.4"
+      ],
+      [
+        "ml-dtypes",
+        "0.4.1"
+      ],
+      [
+        "ml_collections",
+        "1.0.0"
+      ],
+      [
+        "mpmath",
+        "1.3.0"
+      ],
+      [
+        "msgpack",
+        "1.1.0"
+      ],
+      [
+        "mujoco",
+        "2.3.7"
+      ],
+      [
+        "multidict",
+        "6.4.4"
+      ],
+      [
+        "multiprocess",
+        "0.70.16"
+      ],
+      [
+        "mypy_extensions",
+        "1.1.0"
+      ],
+      [
+        "nest-asyncio",
+        "1.6.0"
+      ],
+      [
+        "networkx",
+        "3.5"
+      ],
+      [
+        "nodeenv",
+        "1.9.1"
+      ],
+      [
+        "numba",
+        "0.61.2"
+      ],
+      [
+        "numcodecs",
+        "0.16.1"
+      ],
+      [
+        "numpy",
+        "1.26.4"
+      ],
+      [
+        "numpydantic",
+        "1.6.9"
+      ],
+      [
+        "nvidia-cublas-cu12",
+        "12.6.4.1"
+      ],
+      [
+        "nvidia-cuda-cupti-cu12",
+        "12.6.80"
+      ],
+      [
+        "nvidia-cuda-nvcc-cu12",
+        "12.9.41"
+      ],
+      [
+        "nvidia-cuda-nvrtc-cu12",
+        "12.6.77"
+      ],
+      [
+        "nvidia-cuda-runtime-cu12",
+        "12.6.77"
+      ],
+      [
+        "nvidia-cudnn-cu12",
+        "9.5.1.17"
+      ],
+      [
+        "nvidia-cufft-cu12",
+        "11.3.0.4"
+      ],
+      [
+        "nvidia-cufile-cu12",
+        "1.11.1.6"
+      ],
+      [
+        "nvidia-curand-cu12",
+        "10.3.7.77"
+      ],
+      [
+        "nvidia-cusolver-cu12",
+        "11.7.1.2"
+      ],
+      [
+        "nvidia-cusparse-cu12",
+        "12.5.4.2"
+      ],
+      [
+        "nvidia-cusparselt-cu12",
+        "0.6.3"
+      ],
+      [
+        "nvidia-ml-py",
+        "12.575.51"
+      ],
+      [
+        "nvidia-nccl-cu12",
+        "2.26.2"
+      ],
+      [
+        "nvidia-nvjitlink-cu12",
+        "12.6.85"
+      ],
+      [
+        "nvidia-nvtx-cu12",
+        "12.6.77"
+      ],
+      [
+        "oauthlib",
+        "3.2.2"
+      ],
+      [
+        "omegaconf",
+        "2.3.0"
+      ],
+      [
+        "opencv-python",
+        "4.11.0.86"
+      ],
+      [
+        "opencv-python-headless",
+        "4.11.0.86"
+      ],
+      [
+        "openpi",
+        "0.1.0"
+      ],
+      [
+        "openpi-client",
+        "0.1.0"
+      ],
+      [
+        "opt_einsum",
+        "3.4.0"
+      ],
+      [
+        "optax",
+        "0.2.4"
+      ],
+      [
+        "orbax-checkpoint",
+        "0.11.13"
+      ],
+      [
+        "orderly-set",
+        "5.4.1"
+      ],
+      [
+        "packaging",
+        "25.0"
+      ],
+      [
+        "pandas",
+        "2.2.3"
+      ],
+      [
+        "parso",
+        "0.8.4"
+      ],
+      [
+        "pexpect",
+        "4.9.0"
+      ],
+      [
+        "pfzy",
+        "0.3.4"
+      ],
+      [
+        "pillow",
+        "11.2.1"
+      ],
+      [
+        "platformdirs",
+        "4.3.8"
+      ],
+      [
+        "pluggy",
+        "1.6.0"
+      ],
+      [
+        "polars",
+        "1.30.0"
+      ],
+      [
+        "pre_commit",
+        "4.2.0"
+      ],
+      [
+        "prompt_toolkit",
+        "3.0.51"
+      ],
+      [
+        "propcache",
+        "0.3.1"
+      ],
+      [
+        "proto-plus",
+        "1.26.1"
+      ],
+      [
+        "protobuf",
+        "4.25.8"
+      ],
+      [
+        "psutil",
+        "7.0.0"
+      ],
+      [
+        "ptyprocess",
+        "0.7.0"
+      ],
+      [
+        "pure_eval",
+        "0.2.3"
+      ],
+      [
+        "pyarrow",
+        "20.0.0"
+      ],
+      [
+        "pyasn1",
+        "0.6.1"
+      ],
+      [
+        "pyasn1_modules",
+        "0.4.2"
+      ],
+      [
+        "pycparser",
+        "2.22"
+      ],
+      [
+        "pydantic",
+        "2.11.5"
+      ],
+      [
+        "pydantic_core",
+        "2.33.2"
+      ],
+      [
+        "pymunk",
+        "7.0.0"
+      ],
+      [
+        "pynput",
+        "1.8.1"
+      ],
+      [
+        "pynvml",
+        "12.0.0"
+      ],
+      [
+        "pyparsing",
+        "3.2.3"
+      ],
+      [
+        "pytest",
+        "8.3.5"
+      ],
+      [
+        "python-dateutil",
+        "2.9.0.post0"
+      ],
+      [
+        "python-xlib",
+        "0.33"
+      ],
+      [
+        "pytz",
+        "2025.2"
+      ],
+      [
+        "pyyaml-include",
+        "1.4.1"
+      ],
+      [
+        "pyzmq",
+        "26.4.0"
+      ],
+      [
+        "regex",
+        "2024.11.6"
+      ],
+      [
+        "requests",
+        "2.32.3"
+      ],
+      [
+        "requests-oauthlib",
+        "2.0.0"
+      ],
+      [
+        "rerun-sdk",
+        "0.23.1"
+      ],
+      [
+        "rich",
+        "14.0.0"
+      ],
+      [
+        "rsa",
+        "4.9.1"
+      ],
+      [
+        "ruff",
+        "0.11.12"
+      ],
+      [
+        "safetensors",
+        "0.5.3"
+      ],
+      [
+        "scipy",
+        "1.15.3"
+      ],
+      [
+        "sentencepiece",
+        "0.2.0"
+      ],
+      [
+        "sentry-sdk",
+        "2.29.1"
+      ],
+      [
+        "setproctitle",
+        "1.3.6"
+      ],
+      [
+        "setuptools",
+        "80.9.0"
+      ],
+      [
+        "shtab",
+        "1.7.2"
+      ],
+      [
+        "simplejson",
+        "3.20.1"
+      ],
+      [
+        "six",
+        "1.17.0"
+      ],
+      [
+        "smmap",
+        "5.0.2"
+      ],
+      [
+        "soupsieve",
+        "2.7"
+      ],
+      [
+        "stack-data",
+        "0.6.3"
+      ],
+      [
+        "svgwrite",
+        "1.4.3"
+      ],
+      [
+        "sympy",
+        "1.14.0"
+      ],
+      [
+        "tensorstore",
+        "0.1.74"
+      ],
+      [
+        "termcolor",
+        "3.1.0"
+      ],
+      [
+        "tokenizers",
+        "0.21.1"
+      ],
+      [
+        "toml",
+        "0.10.2"
+      ],
+      [
+        "toolz",
+        "1.0.0"
+      ],
+      [
+        "torch",
+        "2.7.1"
+      ],
+      [
+        "torchcodec",
+        "0.4.0"
+      ],
+      [
+        "torchvision",
+        "0.22.1"
+      ],
+      [
+        "tornado",
+        "6.5.1"
+      ],
+      [
+        "tqdm",
+        "4.67.1"
+      ],
+      [
+        "tqdm-loggable",
+        "0.2"
+      ],
+      [
+        "traitlets",
+        "5.14.3"
+      ],
+      [
+        "transformers",
+        "4.53.2"
+      ],
+      [
+        "treescope",
+        "0.1.9"
+      ],
+      [
+        "triton",
+        "3.3.1"
+      ],
+      [
+        "typeguard",
+        "4.4.2"
+      ],
+      [
+        "typing-inspect",
+        "0.9.0"
+      ],
+      [
+        "typing-inspection",
+        "0.4.1"
+      ],
+      [
+        "typing_extensions",
+        "4.13.2"
+      ],
+      [
+        "tyro",
+        "0.9.22"
+      ],
+      [
+        "tzdata",
+        "2025.2"
+      ],
+      [
+        "urllib3",
+        "2.4.0"
+      ],
+      [
+        "virtualenv",
+        "20.31.2"
+      ],
+      [
+        "wadler_lindig",
+        "0.1.6"
+      ],
+      [
+        "wandb",
+        "0.19.11"
+      ],
+      [
+        "wcwidth",
+        "0.2.13"
+      ],
+      [
+        "websockets",
+        "15.0.1"
+      ],
+      [
+        "widgetsnbextension",
+        "4.0.14"
+      ],
+      [
+        "wrapt",
+        "1.14.1"
+      ],
+      [
+        "xxhash",
+        "3.5.0"
+      ],
+      [
+        "yarl",
+        "1.20.0"
+      ],
+      [
+        "zarr",
+        "3.0.8"
+      ],
+      [
+        "zipp",
+        "3.22.0"
+      ]
+    ],
+    "python": "3.11.14 (main, Feb  3 2026, 22:51:56) [Clang 21.1.4 ]"
+  },
+  "scene_cache_sha256": "12ac49e3913308901113cc8ddd9f71f0987ce8c9ebd83f03c308c759bdbeb939",
+  "schema": 1,
+  "simulation": {
+    "changed_tracked_paths": [],
+    "commit": "5d0f4a92415f8899963cba7f0f929f1b9c5f75db",
+    "tracked_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "simulation_assets": {
+    "embodiments/aloha-agilex/collision_aloha_left.yml": "19e21fbba8b6657ffc6d405ac53b277902ce118821b818aa77aad2e0b0d7f83d",
+    "embodiments/aloha-agilex/collision_aloha_right.yml": "d22850769a5c28fec35434e12ffb597837853cb4dd916b74969e6e615faf5cdd",
+    "embodiments/aloha-agilex/config.yml": "a4f043d2d4b44cca5ec47fb498a3194da3f87ff9530dcbfdcee1539a44423d57",
+    "embodiments/aloha-agilex/curobo_left_tmp.yml": "5860346baf83c74da3dfacbc548f3165fe6caba5797fd28da158a618576556c8",
+    "embodiments/aloha-agilex/curobo_right_tmp.yml": "bebc418e0bb02cc70a4cb124b9cda6c4c12ce27c5bdbf1b4153654d781fb62f8",
+    "embodiments/aloha-agilex/meshes/Image_0.png": "68be90aadacc218aa9ac4c2c4dd9dcda39e5a7b30c791ccfafce2c86fd6c1b0a",
+    "embodiments/aloha-agilex/meshes/Image_290.png": "6c6a1150da771c04ede783ae05194b2d8359292196809fff137e76f31a5bf974",
+    "embodiments/aloha-agilex/meshes/Image_442.png": "c7592ae2330254399b5dde4920302a5fe36468315e44ac496d1abdf8c97d913f",
+    "embodiments/aloha-agilex/meshes/base_arm.STL": "3d6524754df3c5b50ea4196c473b447cd7dc0c00afb9a31e7db3bb6d1cd52c60",
+    "embodiments/aloha-agilex/meshes/base_link.STL": "e227e452102c9be1bb7effc579fd876771c9d075ee84f0368c5fed6f21cb58e6",
+    "embodiments/aloha-agilex/meshes/box1_Link.STL": "e48fbe760dc7c1d98c3e655ca5788dd09a1c1c6544b1ad3f0aeaaaa2c8121917",
+    "embodiments/aloha-agilex/meshes/box2_Link.STL": "1df67ea5a9c57759ab51e54e23687a439e0598d478ca84c485b1a01eb5c7ea25",
+    "embodiments/aloha-agilex/meshes/box2_Link.dae": "511af26229e2ec9c9c014c12b04bfda50253b800dbaa129aca69c2c2b81ecc74",
+    "embodiments/aloha-agilex/meshes/caster.stl": "481e84ec3f7c17fef8f8b74f0c6d821595dfecfcef137d37fc1a50b14e23eb3f",
+    "embodiments/aloha-agilex/meshes/caster_L.stl": "ccdcddd66710a71c5a04475aa16269ef73e5bdba6818d5632ca5c5d4e046497d",
+    "embodiments/aloha-agilex/meshes/castor.dae": "0a61bca6839f37ebebd89021474821abfd908d2b50867f221e3504db4d84a06a",
+    "embodiments/aloha-agilex/meshes/castor_joint.dae": "901cad2da533c8fd0f3e3ce25a4d5b5d1c689d5f852640cd7dab041dc647d629",
+    "embodiments/aloha-agilex/meshes/d435.dae": "df2f22fce9f1865fe5a1597b16d43f6aca62b694c573b8d195c36c945bdf26a6",
+    "embodiments/aloha-agilex/meshes/d435.dae.backup": "42f3b66f47a1f8f425a2e4dc07c1d9c283183167d8441f520a15623d98f9bf78",
+    "embodiments/aloha-agilex/meshes/link1.STL": "079a59fd0a94237c5042d6c7542b79bdc4c8db396758fdb7860f7b464e3c25ed",
+    "embodiments/aloha-agilex/meshes/link2.STL": "87e1386ed2533e68743f50f448e8cbdc366c2b37f0df3ede1fa2de340666786c",
+    "embodiments/aloha-agilex/meshes/link3.STL": "76ded14e5f919e7a77ae7501883d55fb349be5c3c16499f59c1de5b552cad842",
+    "embodiments/aloha-agilex/meshes/link4.STL": "d234f4b96822ecf8a2f62219031053f7950d685faa15b4d23f8115c1b434cbbd",
+    "embodiments/aloha-agilex/meshes/link5.STL": "dc58ea92599295aaa980e090a034c68397e505b79b681a223cd98ba7f10bab03",
+    "embodiments/aloha-agilex/meshes/link6.STL": "ffb2de0357066957db00fd7599dd4a7fbc147c8ef5916a492aa9070fdbdf5740",
+    "embodiments/aloha-agilex/meshes/link7.STL": "ec3d40b39cccde0075ca3d16603f14f180fce41a46b446473d384def7a1b0be0",
+    "embodiments/aloha-agilex/meshes/link8.STL": "29f7a8379cad81797e82e4ba099455cc275ac6ac5bb9e264ce46719fd7d2bb60",
+    "embodiments/aloha-agilex/meshes/right_cam_link.dae": "58d9ac989e277bc14669990db5e89f317cf5d9cf0d7373de8ab27b056ce503e6",
+    "embodiments/aloha-agilex/meshes/tracer_base_link.dae": "53c27a6f52d019e02f93748e463448e0c5173d256a9a5772a1b7267047d15c08",
+    "embodiments/aloha-agilex/meshes/tracer_base_link_no_wheel.dae": "d3a1ee3b34dbc418e888d68148d04fccda589e00d5100fbd3cbc2f17154e0a08",
+    "embodiments/aloha-agilex/meshes/tracer_wheel.dae": "42784402bca05e9f406f4e08d8ea1cc7ff57db9fee0e0b0b557670d0ee1d10c1",
+    "embodiments/aloha-agilex/srdf/arx5_description_isaac.srdf": "ee5669f617d1d4806998da3ab890bc487d0eba06692f4b5498ac3d5c5fccff66",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/BrushedAluminum_BaseColor.jpg": "10c220f63daf3f9be7bb0cac60a9584aec1090aa9949e280a5d7feb7519e1089",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/Image_0.png": "68be90aadacc218aa9ac4c2c4dd9dcda39e5a7b30c791ccfafce2c86fd6c1b0a",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/Image_100.png": "9e3510daf08a666c32cfcca0c91ac1ee9e2f042c1a4de1052e7f1aa100891061",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/Image_269.png": "372012c8cb6982b9a7ee254beb825aab80af143a832f664eaecf69fdbd9987e6",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/Image_290.png": "6c6a1150da771c04ede783ae05194b2d8359292196809fff137e76f31a5bf974",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/Image_442.png": "c7592ae2330254399b5dde4920302a5fe36468315e44ac496d1abdf8c97d913f",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/back_link7.STL": "baea38e3edf22c80d6cbe813bfdc01439dc51406fa176c1f62732fba380267c5",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/back_link7.dae": "5ef2f06e003b0463868460504951fc864130779cc35e87bb54a8ad7c524bc513",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/base_arm.STL": "3d6524754df3c5b50ea4196c473b447cd7dc0c00afb9a31e7db3bb6d1cd52c60",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/base_arm.dae": "cfe3f44bf9860d72acac2abd21a50422d72efd4de6fac72af44e02b2ea6a52df",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/base_link.STL": "e227e452102c9be1bb7effc579fd876771c9d075ee84f0368c5fed6f21cb58e6",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/box1_Link.STL": "e48fbe760dc7c1d98c3e655ca5788dd09a1c1c6544b1ad3f0aeaaaa2c8121917",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/box1_Link.STL.convex.stl": "e48fbe760dc7c1d98c3e655ca5788dd09a1c1c6544b1ad3f0aeaaaa2c8121917",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/box2_Link.STL": "1df67ea5a9c57759ab51e54e23687a439e0598d478ca84c485b1a01eb5c7ea25",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/box2_Link.dae": "511af26229e2ec9c9c014c12b04bfda50253b800dbaa129aca69c2c2b81ecc74",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/camera_base_link.STL": "d4cf9f1b01727e55283b7ac1c311eca1e807908e2d2c8e9e43bf7f6936b6e847",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/camera_base_link.dae": "2392dd35f69ea9f364e0acd30951cc0128ba51baa662513d7dbf52a87b2ba346",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/camera_link1.STL": "e37b71296958e665006034f3432ac4f74b25aea8268dfaa9bfb2164d452ac015",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/camera_link1.dae": "0692aa9f29f5d3aa9c21b81bff671e22128ae9110f3af809196a0d1f9a1b2e02",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/camera_link2.STL": "e37b71296958e665006034f3432ac4f74b25aea8268dfaa9bfb2164d452ac015",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/camera_link2.dae": "0692aa9f29f5d3aa9c21b81bff671e22128ae9110f3af809196a0d1f9a1b2e02",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/caster.stl": "481e84ec3f7c17fef8f8b74f0c6d821595dfecfcef137d37fc1a50b14e23eb3f",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/caster_L.stl": "ccdcddd66710a71c5a04475aa16269ef73e5bdba6818d5632ca5c5d4e046497d",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/castor.dae": "0a61bca6839f37ebebd89021474821abfd908d2b50867f221e3504db4d84a06a",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/castor_joint.dae": "901cad2da533c8fd0f3e3ce25a4d5b5d1c689d5f852640cd7dab041dc647d629",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/d435.dae": "552a84a19ffbce76329911860095f1b16e5f837cc4228d35d6481b178a721f8e",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/d435_back.dae": "df2f22fce9f1865fe5a1597b16d43f6aca62b694c573b8d195c36c945bdf26a6",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/d435_back1.dae": "42f3b66f47a1f8f425a2e4dc07c1d9c283183167d8441f520a15623d98f9bf78",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link1.STL": "079a59fd0a94237c5042d6c7542b79bdc4c8db396758fdb7860f7b464e3c25ed",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link1.dae": "49480bb69e5daffdd9092b33d9af6c6b3e6b9a069419e3e76fb9947e3e1753f9",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link2.STL": "87e1386ed2533e68743f50f448e8cbdc366c2b37f0df3ede1fa2de340666786c",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link2.dae": "9bb90c7a6c6d9bfab562349bf647f833433d71f2804a7981eba775f31e78723d",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link3.STL": "76ded14e5f919e7a77ae7501883d55fb349be5c3c16499f59c1de5b552cad842",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link3.dae": "1eabf99eb30c6cc9bf7c61bf650102fd22d35ac2ce67f36e42d700e3e2442318",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link4.STL": "d234f4b96822ecf8a2f62219031053f7950d685faa15b4d23f8115c1b434cbbd",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link4.dae": "3b50cf11a5271fe34aca0c186e623137875fd02c764cb7238c20b898f175f150",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link5.STL": "dc58ea92599295aaa980e090a034c68397e505b79b681a223cd98ba7f10bab03",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link5.dae": "c8a96bc00fa9c67723d0a2626bfd015b00a872d7be1588b61f0ae002dd189b13",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link6.STL": "ffb2de0357066957db00fd7599dd4a7fbc147c8ef5916a492aa9070fdbdf5740",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link6.dae": "e0c0f316065921fdab8704e5301baaa2b8c50867846a19c489393bc4ab83cbfa",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link7.STL": "ec3d40b39cccde0075ca3d16603f14f180fce41a46b446473d384def7a1b0be0",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link7.dae": "cf87ef550d6ab5d71058e7da63ba6ac4c492a9385b3ca0eed37eee0fd0cab97e",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link8.STL": "29f7a8379cad81797e82e4ba099455cc275ac6ac5bb9e264ce46719fd7d2bb60",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/link8.dae": "e58e8cbc674bb7465ec81a2db6c4b1d08ccf1d63352e245739aa6418d62b0fd7",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/right_cam_link.dae": "58d9ac989e277bc14669990db5e89f317cf5d9cf0d7373de8ab27b056ce503e6",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/tracer_base_link.STL": "bf816a05cd083357ebd4ccc554b0bedf4d1459c60359db425b813a797bfec216",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/tracer_base_link.dae": "53c27a6f52d019e02f93748e463448e0c5173d256a9a5772a1b7267047d15c08",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/tracer_base_link_no_wheel.dae": "d3a1ee3b34dbc418e888d68148d04fccda589e00d5100fbd3cbc2f17154e0a08",
+    "embodiments/aloha-agilex/urdf/aloha_maniskill_sim/meshes/tracer_wheel.dae": "42784402bca05e9f406f4e08d8ea1cc7ff57db9fee0e0b0b557670d0ee1d10c1",
+    "embodiments/aloha-agilex/urdf/arx5_description_isaac.urdf": "097c59fb19a7b482249c6097df8319586ea7cfd268c015516f103b289a7e761a",
+    "objects/077_phone/collision/base0.glb": "6e4406e88b8bf618e3bee9fd441bb00e1d64f997ad526b6a743a571e67917b62",
+    "objects/077_phone/collision/base1.glb": "a9a3a37aa85536c7f0caf1cfea0bf02d2a2d060a509462a81f068992ab14248d",
+    "objects/077_phone/collision/base2.glb": "75aed0e19e16cbe401fd2984d9efb30dc6d956150c19577328544fa52f56aa4b",
+    "objects/077_phone/collision/base3.glb": "ded3f2fc3922fbbf05bb1917d216c08bd57fd3d0ad7b9282c1f0cd360a4c18c8",
+    "objects/077_phone/collision/base4.glb": "ba289fbf275bccf43b477cc8d504a5baf17802d3131ee3a3b99dc971f7c2e29b",
+    "objects/077_phone/model_data0.json": "dd1e9b5af53636a53dea72611fd638c183d83f9817d2d50239a46bd69d84bd46",
+    "objects/077_phone/model_data1.json": "2d7fae4a0413c5b156959a3a5cfaabd60072bcc2dae7aad535dd0bd292b267ac",
+    "objects/077_phone/model_data2.json": "14f2917bf417ebc8efa8ff631dc17fdd8697fcb181ea95e5660c96767ecb4139",
+    "objects/077_phone/model_data3.json": "fea6aa40ff10e8fae40009ddd9da8b851156880fc78fbb7e671fedd14f9d07f2",
+    "objects/077_phone/model_data4.json": "db17091e9b80082b5124c94a3b0070d1b056417a2849cf8bd659251f4c59e59d",
+    "objects/077_phone/points_info.json": "4fc1962709490146955bbb31b02b0ef5612be80c3c465d093085fd2723d78e67",
+    "objects/077_phone/visual/base0.glb": "d1f6392eba9eb06f63a07645f79edf8b45bfc0468d4df55d17697a31a208736e",
+    "objects/077_phone/visual/base1.glb": "41a4c1fa556c21243e93fcad756bbd99be7a6e68deb6b8234f07e8501a960e0d",
+    "objects/077_phone/visual/base2.glb": "758396aa4b2a505554ff8d523654e357c415c52cb13596e20abc4b69b253875f",
+    "objects/077_phone/visual/base3.glb": "f26c43aa03192726a40b81e5b57d451b3824f0de509a2d78228a50af3157db1c",
+    "objects/077_phone/visual/base4.glb": "6a25a9ae794e739a20a3a830603c0c37bf323ab1c387fe091755bd40e1023759",
+    "objects/078_phonestand/collision/base0.glb": "bb65251677359c8fd34ad2da71d5398808a8de87fffc91171fcd9182f4a94ccf",
+    "objects/078_phonestand/collision/base1.glb": "184d6261b7ad6e161eb0023002457ae709104eb9c40dd559964419cf2416d15b",
+    "objects/078_phonestand/collision/base2.glb": "b60a4e4b0b99806ce6e5eee3a7724bccf2bb1f7286b45015163f5d01386c732f",
+    "objects/078_phonestand/collision/base3.glb": "1a33d88f23c12aaeda95258a00c3e2672b4fb1ebec8db03a879d2afa2d191c9e",
+    "objects/078_phonestand/collision/base4.glb": "77551b518716d6f624df645ddefe24aeb872ba6461d551ae3a0b3a8aebdffe7c",
+    "objects/078_phonestand/collision/base5.glb": "b6d7eaeb2dadc94b03abc913f041b7909fb2ac0a0528586d24d8d3ff27f846f6",
+    "objects/078_phonestand/collision/base6.glb": "49717de566e702071dc225e731a46294f007b3a293a35ef36ae271b21b2659f1",
+    "objects/078_phonestand/model_data0.json": "3b225d5231a63233ceba1fe886db721ca7da4d0121918bc953224c430b4af3da",
+    "objects/078_phonestand/model_data1.json": "48789245a8cd6947951e57db4131758a2becda4ae4922c19f5b6b17b6f993cab",
+    "objects/078_phonestand/model_data2.json": "b6777d63e03ba32d4e1aeb202c70aaf484ca2c155a045ccec4a6807c55fe792b",
+    "objects/078_phonestand/model_data3.json": "8721937172e029c1e87e1af60c3f271cda82cc6ff2362cabf4d8d159ac21f716",
+    "objects/078_phonestand/model_data4.json": "165791883a273ee090c9cf9d73088e308c7fb0a6d184eebfd67b6277ef39b606",
+    "objects/078_phonestand/model_data5.json": "90f0b4877bebc6d8d921ebac86bc75dc173090a11734ceef18eb513dd2f4823e",
+    "objects/078_phonestand/model_data6.json": "b13814191cc87f6e4bafca792e14d16dca6cdec5c88531d0f8e38dfd86771a09",
+    "objects/078_phonestand/points_info.json": "4a0fc5dee6f9e32bbcb55b4df963ab50273a646f04d1b764a2c270bc7ef741ff",
+    "objects/078_phonestand/visual/base0.glb": "7764d07ead9e23e64817e0f00721aa2f2ba3f8002829ced4e914f2f6e7fb6e63",
+    "objects/078_phonestand/visual/base1.glb": "a350ef78307b7ad10c6e39e8cc352c839808be4012e75599a3ed866385386ea9",
+    "objects/078_phonestand/visual/base2.glb": "37e94e5a59c763fabe17b4bdfebe0381a7b221e2021179c8c40128d96dc4f244",
+    "objects/078_phonestand/visual/base3.glb": "0b220002ed34024cde4e1524c2b0a89308d2aa8388f138a7b3c3c7293c3a5e31",
+    "objects/078_phonestand/visual/base4.glb": "535ac35beb896fb341ef1175944ed3295067cbd376c219f4a5ab4ea65867dee9",
+    "objects/078_phonestand/visual/base5.glb": "ff537a281edbf602e0bb7fac580ac8857463a8bcb3ff5d2e8a0ae17c872f1842",
+    "objects/078_phonestand/visual/base6.glb": "9974711f81c07e43be641f1c27acf47238940831d302467135cafff13cb997f7",
+    "objects/objaverse/list.json": "9c33b70f6e91788033d6cc3e1d58fe0ad09ced472679440083b31513f9c4bc6f",
+    "objects/same.json": "3bcaa1618ff9d0b50478dd22183f77ca3557d9d5406442b17e39337e68cb5edd"
+  },
+  "simulation_assets_manifest_sha256": "238a07eec3a3a48e0b646a7430babf40108465e64dde739f5d32041c9a2bf564",
+  "simulation_assets_revision": "3dc3b798668feb99ac61cc9086d84cbcc3d79186",
+  "simulation_runtime": {
+    "distributions": [
+      [
+        "ConfigArgParse",
+        "1.10.2"
+      ],
+      [
+        "Farama-Notifications",
+        "0.0.6"
+      ],
+      [
+        "Flask",
+        "3.1.3"
+      ],
+      [
+        "Jinja2",
+        "3.1.6"
+      ],
+      [
+        "MarkupSafe",
+        "3.0.4"
+      ],
+      [
+        "PyYAML",
+        "6.0.4"
+      ],
+      [
+        "Pygments",
+        "2.21.0"
+      ],
+      [
+        "Tree",
+        "0.2.4"
+      ],
+      [
+        "Werkzeug",
+        "3.1.9"
+      ],
+      [
+        "absl-py",
+        "2.5.1"
+      ],
+      [
+        "addict",
+        "2.4.0"
+      ],
+      [
+        "annotated-types",
+        "0.8.0"
+      ],
+      [
+        "anyio",
+        "4.16.0"
+      ],
+      [
+        "asttokens",
+        "3.0.2"
+      ],
+      [
+        "attrs",
+        "26.1.0"
+      ],
+      [
+        "blinker",
+        "1.9.0"
+      ],
+      [
+        "certifi",
+        "2026.11.20"
+      ],
+      [
+        "chardet",
+        "7.7.0"
+      ],
+      [
+        "charset-normalizer",
+        "3.5.3"
+      ],
+      [
+        "click",
+        "8.5.1"
+      ],
+      [
+        "cloudpickle",
+        "3.1.3"
+      ],
+      [
+        "colorlog",
+        "6.12.0"
+      ],
+      [
+        "comm",
+        "0.2.3"
+      ],
+      [
+        "contourpy",
+        "1.3.2"
+      ],
+      [
+        "cycler",
+        "0.12.1"
+      ],
+      [
+        "dash",
+        "4.5.1"
+      ],
+      [
+        "decorator",
+        "5.3.2"
+      ],
+      [
+        "dm-tree",
+        "0.1.10"
+      ],
+      [
+        "embreex",
+        "4.4.0.post1"
+      ],
+      [
+        "exceptiongroup",
+        "1.3.2"
+      ],
+      [
+        "executing",
+        "2.3.0"
+      ],
+      [
+        "fastjsonschema",
+        "2.22.3"
+      ],
+      [
+        "filelock",
+        "4.1.0"
+      ],
+      [
+        "fonttools",
+        "4.65.0"
+      ],
+      [
+        "fsspec",
+        "2026.9.0"
+      ],
+      [
+        "gymnasium",
+        "0.29.1"
+      ],
+      [
+        "h11",
+        "0.16.0"
+      ],
+      [
+        "h5py",
+        "3.16.0"
+      ],
+      [
+        "hatchling",
+        "1.33.0"
+      ],
+      [
+        "httpcore",
+        "1.0.9"
+      ],
+      [
+        "httpx",
+        "0.28.1"
+      ],
+      [
+        "idna",
+        "3.20"
+      ],
+      [
+        "imageio",
+        "2.34.2"
+      ],
+      [
+        "importlib_metadata",
+        "9.0.1"
+      ],
+      [
+        "importlib_resources",
+        "7.1.0"
+      ],
+      [
+        "ipython",
+        "8.39.0"
+      ],
+      [
+        "ipywidgets",
+        "8.1.9"
+      ],
+      [
+        "itsdangerous",
+        "2.2.0"
+      ],
+      [
+        "janus",
+        "2.0.0"
+      ],
+      [
+        "jedi",
+        "0.20.1"
+      ],
+      [
+        "joblib",
+        "1.6.0"
+      ],
+      [
+        "jsonschema",
+        "4.26.0"
+      ],
+      [
+        "jsonschema-specifications",
+        "2025.9.1"
+      ],
+      [
+        "jupyter_core",
+        "5.9.1"
+      ],
+      [
+        "jupyterlab_widgets",
+        "3.0.17"
+      ],
+      [
+        "kiwisolver",
+        "1.5.1"
+      ],
+      [
+        "lazy-loader",
+        "0.6"
+      ],
+      [
+        "lxml",
+        "6.1.3"
+      ],
+      [
+        "manifold3d",
+        "3.5.5"
+      ],
+      [
+        "matplotlib",
+        "3.10.9"
+      ],
+      [
+        "matplotlib-inline",
+        "0.2.2"
+      ],
+      [
+        "mplib",
+        "0.2.1"
+      ],
+      [
+        "mpmath",
+        "1.3.0"
+      ],
+      [
+        "msgpack",
+        "1.2.4"
+      ],
+      [
+        "narwhals",
+        "2.29.0"
+      ],
+      [
+        "nbformat",
+        "5.11.1"
+      ],
+      [
+        "nest-asyncio",
+        "1.6.0"
+      ],
+      [
+        "networkx",
+        "3.4.2"
+      ],
+      [
+        "ninja",
+        "1.13.2"
+      ],
+      [
+        "numpy",
+        "1.26.4"
+      ],
+      [
+        "numpy-quaternion",
+        "2024.0.13"
+      ],
+      [
+        "nvidia-cublas-cu11",
+        "11.11.3.6"
+      ],
+      [
+        "nvidia-cuda-cupti-cu11",
+        "11.8.87"
+      ],
+      [
+        "nvidia-cuda-nvrtc-cu11",
+        "11.8.89"
+      ],
+      [
+        "nvidia-cuda-runtime-cu11",
+        "11.8.89"
+      ],
+      [
+        "nvidia-cudnn-cu11",
+        "9.1.0.70"
+      ],
+      [
+        "nvidia-cufft-cu11",
+        "10.9.0.58"
+      ],
+      [
+        "nvidia-curand-cu11",
+        "10.3.0.86"
+      ],
+      [
+        "nvidia-cusolver-cu11",
+        "11.4.1.48"
+      ],
+      [
+        "nvidia-cusparse-cu11",
+        "11.7.5.86"
+      ],
+      [
+        "nvidia-nccl-cu11",
+        "2.20.5"
+      ],
+      [
+        "nvidia-nvtx-cu11",
+        "11.8.86"
+      ],
+      [
+        "nvidia_curobo",
+        "0.7.8"
+      ],
+      [
+        "open3d",
+        "0.18.0"
+      ],
+      [
+        "opencv-python",
+        "4.11.0.86"
+      ],
+      [
+        "openpi-client",
+        "0.1.0"
+      ],
+      [
+        "packaging",
+        "26.4"
+      ],
+      [
+        "pandas",
+        "2.3.3"
+      ],
+      [
+        "parso",
+        "0.8.7"
+      ],
+      [
+        "pathspec",
+        "1.1.1"
+      ],
+      [
+        "pexpect",
+        "4.9.0"
+      ],
+      [
+        "pillow",
+        "12.3.0"
+      ],
+      [
+        "pip",
+        "25.3"
+      ],
+      [
+        "platformdirs",
+        "4.12.4"
+      ],
+      [
+        "plotly",
+        "7.2.0"
+      ],
+      [
+        "pluggy",
+        "1.7.0"
+      ],
+      [
+        "prompt_toolkit",
+        "3.0.53"
+      ],
+      [
+        "ptyprocess",
+        "0.7.0"
+      ],
+      [
+        "pure_eval",
+        "0.2.4"
+      ],
+      [
+        "pybind11",
+        "3.1.0"
+      ],
+      [
+        "pycollada",
+        "0.9.3"
+      ],
+      [
+        "pydantic",
+        "2.14.4"
+      ],
+      [
+        "pydantic_core",
+        "2.50.5"
+      ],
+      [
+        "pyglet",
+        "1.5.31"
+      ],
+      [
+        "pyparsing",
+        "3.3.3"
+      ],
+      [
+        "pyperclip",
+        "1.11.0"
+      ],
+      [
+        "pyquaternion",
+        "0.9.9"
+      ],
+      [
+        "python-dateutil",
+        "3.0.0"
+      ],
+      [
+        "pytz",
+        "2026.6"
+      ],
+      [
+        "referencing",
+        "0.37.0"
+      ],
+      [
+        "requests",
+        "2.34.2"
+      ],
+      [
+        "retrying",
+        "1.4.2"
+      ],
+      [
+        "robotwin-pace",
+        "0.1.0"
+      ],
+      [
+        "robotwin-pace",
+        "0.1.0"
+      ],
+      [
+        "rpds-py",
+        "0.30.0"
+      ],
+      [
+        "rtree",
+        "1.4.1"
+      ],
+      [
+        "sapien",
+        "3.0.0b1"
+      ],
+      [
+        "scikit-image",
+        "0.25.2"
+      ],
+      [
+        "scikit-learn",
+        "1.7.2"
+      ],
+      [
+        "scipy",
+        "1.15.3"
+      ],
+      [
+        "setuptools",
+        "69.5.1"
+      ],
+      [
+        "setuptools-scm",
+        "8.3.1"
+      ],
+      [
+        "shapely",
+        "2.1.2"
+      ],
+      [
+        "six",
+        "1.17.0"
+      ],
+      [
+        "stack-data",
+        "0.6.3"
+      ],
+      [
+        "svg.path",
+        "7.1"
+      ],
+      [
+        "svgwrite",
+        "1.4.3"
+      ],
+      [
+        "sympy",
+        "1.14.0"
+      ],
+      [
+        "threadpoolctl",
+        "3.8.0"
+      ],
+      [
+        "tifffile",
+        "2025.5.10"
+      ],
+      [
+        "tomli",
+        "2.5.0"
+      ],
+      [
+        "tomlkit",
+        "0.15.3"
+      ],
+      [
+        "toppra",
+        "0.6.11"
+      ],
+      [
+        "torch",
+        "2.4.1+cu118"
+      ],
+      [
+        "torchvision",
+        "0.19.1+cu118"
+      ],
+      [
+        "tqdm",
+        "4.70.1"
+      ],
+      [
+        "traitlets",
+        "5.16.1"
+      ],
+      [
+        "transforms3d",
+        "0.4.2"
+      ],
+      [
+        "trimesh",
+        "4.4.3"
+      ],
+      [
+        "triton",
+        "3.0.0"
+      ],
+      [
+        "trove-classifiers",
+        "2026.9.21.13"
+      ],
+      [
+        "typing-inspection",
+        "0.4.5"
+      ],
+      [
+        "typing_extensions",
+        "4.16.0"
+      ],
+      [
+        "tzdata",
+        "2026.6"
+      ],
+      [
+        "urllib3",
+        "2.8.0"
+      ],
+      [
+        "vhacdx",
+        "0.1.1"
+      ],
+      [
+        "warp-lang",
+        "1.12.0"
+      ],
+      [
+        "wcwidth",
+        "0.9.5"
+      ],
+      [
+        "websockets",
+        "16.1.1"
+      ],
+      [
+        "wheel",
+        "0.48.0"
+      ],
+      [
+        "widgetsnbextension",
+        "4.0.16"
+      ],
+      [
+        "wrapt",
+        "2.5.2"
+      ],
+      [
+        "xatlas",
+        "0.0.11"
+      ],
+      [
+        "xxhash",
+        "4.1.0"
+      ],
+      [
+        "yourdfpy",
+        "0.0.60"
+      ],
+      [
+        "zipp",
+        "4.1.2"
+      ]
+    ],
+    "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]"
+  }
+}

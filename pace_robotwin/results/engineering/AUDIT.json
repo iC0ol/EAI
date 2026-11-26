@@ -1,0 +1,19 @@
+{
+  "manifest_sha256": "7fdeee097809f1e74eafaffdb91e692c0c0faaa620d339d7e4a73a2a4cf5d069",
+  "record_manifests": {
+    "engineering/place_phone_stand/scene_000/component": "8bf112207564514b69dab74611ea1d2f488ec6efe796268a7795d39a93dd7dd8",
+    "engineering/place_phone_stand/scene_000/fixed25": "9892ee1179c21d2fe44eaf9f2a73ddbd4b570e5c2a4c812c402df97a4dbcf3c1",
+    "engineering/place_phone_stand/scene_000/fixed5": "f7287d0d3ad054170a59efe2a0ed8c4f4cbeee555e1765e3b206eba78b48389b",
+    "engineering/place_phone_stand/scene_000/fixed50": "8094880542439b2473a9b74c23b0ba9af32f083ec50ca7e46b1c9811ae560eba",
+    "engineering/place_phone_stand/scene_000/pace": "ae4967f25e6885649bd82d3c1ed042eae95c5f5fbcf7d943b79d6fee2685d22c",
+    "engineering/stack_blocks_three/scene_000/component": "393d4af7c457e7887c705e313fc477c9d5efc4f102b1ff2b3173c9b5b8eb2bf2",
+    "engineering/stack_blocks_three/scene_000/fixed25": "bec3d73ea3a721f364badb1d5eee65f031014a247a920f3ad2e6d0947c867823",
+    "engineering/stack_blocks_three/scene_000/fixed5": "a665f257d0e2982d45562f83823e65470d3db5d2efa7464241a69e531d43647e",
+    "engineering/stack_blocks_three/scene_000/fixed50": "1a0bc0ae22dca52dcef23fb625023c9b0897ff873d7d3179790c9ca1ca2cc7e9",
+    "engineering/stack_blocks_three/scene_000/pace": "f0d25ca78964f2542f1c2806246cd2b82c69aaeb3c6258a967caddf7e38ae561"
+  },
+  "verified_control_steps": 7793,
+  "verified_pairs": 2,
+  "verified_records": 10,
+  "verified_single_candidate_queries": 499
+}

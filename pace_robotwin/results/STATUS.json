@@ -1,0 +1,91 @@
+{
+  "cells": {
+    "heldout/place_phone_stand/component": {
+      "complete": 100,
+      "mean_seconds": 14.88215375263011,
+      "total": 100
+    },
+    "heldout/place_phone_stand/fixed25": {
+      "complete": 100,
+      "mean_seconds": 13.72646642711712,
+      "total": 100
+    },
+    "heldout/place_phone_stand/fixed50": {
+      "complete": 100,
+      "mean_seconds": 14.118775652097538,
+      "total": 100
+    },
+    "heldout/place_phone_stand/pace": {
+      "complete": 100,
+      "mean_seconds": 14.3489856428653,
+      "total": 100
+    },
+    "heldout/stack_blocks_three/component": {
+      "complete": 100,
+      "mean_seconds": 48.06977131069172,
+      "total": 100
+    },
+    "heldout/stack_blocks_three/fixed25": {
+      "complete": 100,
+      "mean_seconds": 51.76152306850301,
+      "total": 100
+    },
+    "heldout/stack_blocks_three/fixed50": {
+      "complete": 100,
+      "mean_seconds": 53.405479672492945,
+      "total": 100
+    },
+    "heldout/stack_blocks_three/pace": {
+      "complete": 100,
+      "mean_seconds": 47.61270718320273,
+      "total": 100
+    },
+    "reproduction/place_phone_stand/fixed25": {
+      "complete": 100,
+      "mean_seconds": 15.423691954906099,
+      "total": 100
+    },
+    "reproduction/place_phone_stand/fixed5": {
+      "complete": 100,
+      "mean_seconds": 32.14790243790252,
+      "total": 100
+    },
+    "reproduction/place_phone_stand/fixed50": {
+      "complete": 100,
+      "mean_seconds": 14.824425119578372,
+      "total": 100
+    },
+    "reproduction/place_phone_stand/pace": {
+      "complete": 100,
+      "mean_seconds": 15.906257712044754,
+      "total": 100
+    },
+    "reproduction/stack_blocks_three/fixed25": {
+      "complete": 100,
+      "mean_seconds": 46.278158844509164,
+      "total": 100
+    },
+    "reproduction/stack_blocks_three/fixed5": {
+      "complete": 100,
+      "mean_seconds": 90.71125877739861,
+      "total": 100
+    },
+    "reproduction/stack_blocks_three/fixed50": {
+      "complete": 100,
+      "mean_seconds": 50.734993053188084,
+      "total": 100
+    },
+    "reproduction/stack_blocks_three/pace": {
+      "complete": 100,
+      "mean_seconds": 48.359887865206694,
+      "total": 100
+    }
+  },
+  "checked_beijing": "2026-11-26T14:54:45+08:00",
+  "completed": 1600,
+  "engineering_completed": 10,
+  "estimated_finish_beijing_while_running": null,
+  "estimated_remaining_hours_at_observed_speed": 0.0,
+  "expected": 1600,
+  "state": "AUDITED"
+}

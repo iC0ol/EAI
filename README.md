@@ -1,6 +1,17 @@
-# EAI · Square-MH 动作块提交研究
+# EAI · 机器人自适应动作块执行研究
 
-Gate B 使用 robomimic Square-MH 和官方图像 Diffusion Policy 检查固定执行步长的影响，以及插入前的几何余量能否预测短首次提交相对长首次提交的收益。B0、B1、B2 和 continuation-h4 均已完成并冻结。**Gate C 尚未授权，新方向仍在讨论。**
+我们研究冻结的机器人策略在什么时候值得重观察，以及观察后哪些动作值得延续。**最新双任务实验已完成 1600 回合。** 在 100 个独立叠块场景上，原版 PACE 和分量更新均成功 52 次，固定完整动作块 H=50 成功 24 次。在 100 个手机入支架场景上，三者依次成功 64、61 和 61 次。分量更新未达到预先登记的提升门槛。[项目交接与小论文目标](当前阶段的交接文档.md) · [双任务正式报告](pace_robotwin/RESULTS.md)
+
+| 最近实验 | 设计与证据 |
+| --- | --- |
+| PACE / RoboTwin 2.0 双任务 | [冻结协议](pace_robotwin/PROTOCOL.md) · [1600 个回合的结果](pace_robotwin/results/episodes.jsonl) · [完整统计](pace_robotwin/results/ANALYSIS.json) · [独立审计](pace_robotwin/results/AUDIT.json) |
+| Square-MH 分量更新先导 | [32 个初态、5 组的配对报告](component_commitment/results/REPORT.md) · [结果解释](component_commitment/FINDINGS.md) |
+
+从仓库根目录运行 `python3 -B pace_robotwin/verify_public.py` 可核验公开结果并复算主比较，需要 NumPy 和 SciPy。原始动作、图像、权重与仿真环境保存在工作站。
+
+## Square-MH 早期实验
+
+Gate B 使用 robomimic Square-MH 和官方图像 Diffusion Policy 检查固定执行步长的影响，以及插入前的几何余量能否预测短首次提交相对长首次提交的收益。B0、B1、B2 和 continuation-h4 均已完成并冻结。历史 Gate C 尚未授权。
 
 | 阶段 | 结果 | 报告 |
 | --- | --- | --- |
