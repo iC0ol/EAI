@@ -1,0 +1,316 @@
+{
+  "action_s": 20.36465405509807,
+  "attempt_s": 25.818904276005924,
+  "cache_sha256": "12ac49e3913308901113cc8ddd9f71f0987ce8c9ebd83f03c308c759bdbeb939",
+  "first_raw_sha256": "2e798086acbe29092d912572c8200347f7569479dfa5314e30a80dd3fc75fc10",
+  "index": 57,
+  "initial_sha256": "95dd303339775e947662d23e7e1de8f7a541526aadc4c6d6f45077dc76be6c77",
+  "instruction": "Bring red block, green block, and blue block to the table's center. Stack green block on red block and blue block on green block.",
+  "manifest_sha256": "7fdeee097809f1e74eafaffdb91e692c0c0faaa620d339d7e4a73a2a4cf5d069",
+  "method": "pace",
+  "native_fk": {},
+  "native_reset": {
+    "cam_high": {
+      "mean_gray": 0.0,
+      "native_sha256": "b7ef91933178c2adb4e9a81915b77573a1465b1851b3133ed1936819266a477f",
+      "p99_gray": 0.0
+    },
+    "cam_left_wrist": {
+      "mean_gray": 0.0,
+      "native_sha256": "f4e7e683e20a458cb4f4a93b232aae0b968ce331125a20952fa642deefc7d6c9",
+      "p99_gray": 0.0
+    },
+    "cam_right_wrist": {
+      "mean_gray": 0.0,
+      "native_sha256": "e76163d5b9f7c049d02677013436f5364ffe48e55af5c2c4850c9363b60cda27",
+      "p99_gray": 0.0
+    },
+    "physics_max": 0.0,
+    "state_max": 0.0
+  },
+  "observation_s": 2.0703661208972335,
+  "policy_metadata": {
+    "action_dim": 14,
+    "action_horizon": 50,
+    "action_space": "absolute_joint",
+    "asset_id": "robotwin",
+    "candidate_count": 1,
+    "checkpoint_revision": "17ef545270cf26ed81169893b60f845f80ce6557",
+    "config": "pi05_robotwin_stack_blocks_three",
+    "denoising_steps": 10,
+    "episode_seeding": "jax.random.key(episode_seed), sequential split at zero-based query_index",
+    "norm_stats_sha256": "ea9e63564d56a8931f1fd925259238bf625d69b884331d49e8a3fa3df766b822",
+    "openpi_revision": "ba9876639cb7a4bf0c7db00ec39eeb9c8efd8b12",
+    "orbax_restore_concurrent_gb": 6,
+    "task": "stack_blocks_three",
+    "tokenizer_sha256": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6"
+  },
+  "predicate_initial": {
+    "grippers": [
+      1.0,
+      1.0
+    ],
+    "native_predicate": false,
+    "points": [
+      [
+        -0.21770045161247253,
+        -0.0617557018995285,
+        0.7650007605552673
+      ],
+      [
+        0.14634278416633606,
+        -0.06301663815975189,
+        0.7650007605552673
+      ],
+      [
+        -0.17441090941429138,
+        0.04118543490767479,
+        0.765000581741333
+      ]
+    ]
+  },
+  "predicate_terminal": {
+    "grippers": [
+      0.8003619833149911,
+      0.9999607748177847
+    ],
+    "native_predicate": true,
+    "points": [
+      [
+        -0.0006141086341813207,
+        -0.13281355798244476,
+        0.7649975419044495
+      ],
+      [
+        -0.0004907605471089482,
+        -0.13954386115074158,
+        0.8150085210800171
+      ],
+      [
+        0.0012813538778573275,
+        -0.12306306511163712,
+        0.8650063872337341
+      ]
+    ]
+  },
+  "queries": 19,
+  "query_log": [
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 13,
+      "index": 0,
+      "policy_s": 0.12185800517909229,
+      "rpc_s": 0.1585828319657594,
+      "selection_s": 0.000860914122313261,
+      "server_s": 0.15765920304693282,
+      "step": 0
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 50,
+      "index": 1,
+      "policy_s": 0.12168044783174992,
+      "rpc_s": 0.16154469992034137,
+      "selection_s": 0.0008716571610420942,
+      "server_s": 0.157651447923854,
+      "step": 13
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 20,
+      "index": 2,
+      "policy_s": 0.12333012884482741,
+      "rpc_s": 0.1656093979254365,
+      "selection_s": 0.00094407401047647,
+      "server_s": 0.16178826917894185,
+      "step": 63
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 18,
+      "index": 3,
+      "policy_s": 0.1223339808639139,
+      "rpc_s": 0.16187593806535006,
+      "selection_s": 0.0008719060570001602,
+      "server_s": 0.15806686598807573,
+      "step": 83
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 27,
+      "index": 4,
+      "policy_s": 0.12213678518310189,
+      "rpc_s": 0.16160122700966895,
+      "selection_s": 0.0008718410972505808,
+      "server_s": 0.15782526088878512,
+      "step": 101
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 26,
+      "index": 5,
+      "policy_s": 0.12221099901944399,
+      "rpc_s": 0.16207777499221265,
+      "selection_s": 0.000859512947499752,
+      "server_s": 0.1582460580393672,
+      "step": 128
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 36,
+      "index": 6,
+      "policy_s": 0.12257060687988997,
+      "rpc_s": 0.1660625811200589,
+      "selection_s": 0.0008953460492193699,
+      "server_s": 0.16229021502658725,
+      "step": 154
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 25,
+      "index": 7,
+      "policy_s": 0.12559612793847919,
+      "rpc_s": 0.16523896087892354,
+      "selection_s": 0.000863668043166399,
+      "server_s": 0.1614458840340376,
+      "step": 190
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 16,
+      "index": 8,
+      "policy_s": 0.12213633302599192,
+      "rpc_s": 0.16293518291786313,
+      "selection_s": 0.0009102739859372377,
+      "server_s": 0.15903716417960823,
+      "step": 215
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 18,
+      "index": 9,
+      "policy_s": 0.12257382785901427,
+      "rpc_s": 0.16235558409243822,
+      "selection_s": 0.0008585350587964058,
+      "server_s": 0.15849250089377165,
+      "step": 231
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 50,
+      "index": 10,
+      "policy_s": 0.12248223018832505,
+      "rpc_s": 0.1621139959897846,
+      "selection_s": 0.000881304033100605,
+      "server_s": 0.15830520307645202,
+      "step": 249
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 5,
+      "index": 11,
+      "policy_s": 0.12372192903421819,
+      "rpc_s": 0.1634325790219009,
+      "selection_s": 0.0008614889811724424,
+      "server_s": 0.15961228008382022,
+      "step": 299
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 33,
+      "index": 12,
+      "policy_s": 0.12278635310940444,
+      "rpc_s": 0.16252249502576888,
+      "selection_s": 0.0008575930260121822,
+      "server_s": 0.15875281998887658,
+      "step": 304
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 25,
+      "index": 13,
+      "policy_s": 0.12543212110176682,
+      "rpc_s": 0.16515045193955302,
+      "selection_s": 0.0008761619683355093,
+      "server_s": 0.16141745308414102,
+      "step": 337
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 7,
+      "index": 14,
+      "policy_s": 0.12199930800125003,
+      "rpc_s": 0.16278236988000572,
+      "selection_s": 0.000862322049215436,
+      "server_s": 0.15894997213035822,
+      "step": 362
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 21,
+      "index": 15,
+      "policy_s": 0.12219910998828709,
+      "rpc_s": 0.16202120785601437,
+      "selection_s": 0.0008735458832234144,
+      "server_s": 0.15823468496091664,
+      "step": 369
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 22,
+      "index": 16,
+      "policy_s": 0.12218670197762549,
+      "rpc_s": 0.16218834603205323,
+      "selection_s": 0.0008619970176368952,
+      "server_s": 0.15841286606155336,
+      "step": 390
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 19,
+      "index": 17,
+      "policy_s": 0.12268718890845776,
+      "rpc_s": 0.16285533318296075,
+      "selection_s": 0.0008677830919623375,
+      "server_s": 0.15904210484586656,
+      "step": 412
+    },
+    {
+      "component_s": 0.0,
+      "decision": null,
+      "h": 27,
+      "index": 18,
+      "policy_s": 0.12308963597752154,
+      "rpc_s": 0.16307042283006012,
+      "selection_s": 0.0008666268549859524,
+      "server_s": 0.15927487099543214,
+      "step": 431
+    }
+  ],
+  "rollout_s": 25.559790360974148,
+  "scene_seed": 200060,
+  "setup_s": 0.25901857716962695,
+  "stage": "heldout",
+  "step_limit": 1200,
+  "steps": 434,
+  "success": true,
+  "task": "stack_blocks_three"
+}

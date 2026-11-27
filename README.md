@@ -7,7 +7,7 @@
 | PACE / RoboTwin 2.0 双任务 | [冻结协议](pace_robotwin/PROTOCOL.md) · [1600 个回合的结果](pace_robotwin/results/episodes.jsonl) · [完整统计](pace_robotwin/results/ANALYSIS.json) · [独立审计](pace_robotwin/results/AUDIT.json) |
 | Square-MH 分量更新先导 | [32 个初态、5 组的配对报告](component_commitment/results/REPORT.md) · [结果解释](component_commitment/FINDINGS.md) |
 
-从仓库根目录运行 `python3 -B pace_robotwin/verify_public.py` 可核验公开结果并复算主比较，需要 NumPy 和 SciPy。原始动作、图像、权重与仿真环境保存在工作站。
+从仓库根目录运行 `python3 -B pace_robotwin/verify_public.py` 可核验公开结果并复算主比较，需要 NumPy 和 SciPy。叠块的 26 个分歧场景另提供两种方法的逐查询记录、实发动作数组和共享首帧，便于工具按场景分析。[26 对原始记录与下载入口](pace_robotwin/results/discordant_stack/README.md)
 
 ## Square-MH 早期实验
 

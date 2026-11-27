@@ -1,0 +1,1012 @@
+{
+  "schema_version": 1,
+  "stage": "heldout",
+  "task": "stack_blocks_three",
+  "official_cache_seed": 1,
+  "source_publication_commit": "183bd486e84641b69b75775a6e2f2d9eb5795beb",
+  "source_audit_sha256": "95d2337fcdd96a2f38d7d80e3f4d72e11bf2d6e8a7d11e0aefbe25fec05d894e",
+  "source_manifest_sha256": "7fdeee097809f1e74eafaffdb91e692c0c0faaa620d339d7e4a73a2a4cf5d069",
+  "source_scene_count": 100,
+  "source_outcome_counts": {
+    "both_failure": 35,
+    "both_success": 39,
+    "component_only": 13,
+    "pace_only": 13
+  },
+  "selected_scene_count": 26,
+  "selected_episode_count": 52,
+  "raw_file_count": 234,
+  "json_base_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/",
+  "archive_url": "https://github.com/iC0ol/EAI/releases/download/pace-stack-discordant-seed1-v1/pace-stack-discordant-seed1-v1.zip",
+  "archive_checksum_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/ARCHIVE.sha256",
+  "cases": [
+    {
+      "group": "component_only",
+      "scene": "scene_004",
+      "index": 4,
+      "scene_seed": 200005,
+      "instruction": "Bring red block, green block, and blue block to the table's center. Stack green block on red block and blue block on green block.",
+      "initial": "component_only/scene_004/initial.npz",
+      "initial_sha256": "4f78dc085ea7925fb075027ae17642821314f62efbb1ac3f60b780e0ac15ac3f",
+      "first_raw_sha256": "52d78285218199828905ea9417e5a37479021cfa43f0b5afaafb9ffff6798f69",
+      "methods": {
+        "component": {
+          "success": true,
+          "steps": 484,
+          "queries": 20,
+          "attempt_s": 27.638302742969245,
+          "source_key": "heldout/stack_blocks_three/scene_004/component",
+          "record_manifest_sha256": "a13a7f45dc6ea4b1c3caf35d597c93e1e920118f070f54849a9cd64dd08a4ba3",
+          "record": "component_only/scene_004/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_004/component/record.json",
+          "timing": "component_only/scene_004/component/timing.json",
+          "checksums": "component_only/scene_004/component/sha256.json",
+          "chunks": "component_only/scene_004/component/chunks.npz"
+        },
+        "pace": {
+          "success": false,
+          "steps": 1200,
+          "queries": 39,
+          "attempt_s": 50.57355957617983,
+          "source_key": "heldout/stack_blocks_three/scene_004/pace",
+          "record_manifest_sha256": "db677c9c32beb6593ce3cea5e16dd9a23aca67f42bcf6c5490177a1707d5508f",
+          "record": "component_only/scene_004/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_004/pace/record.json",
+          "timing": "component_only/scene_004/pace/timing.json",
+          "checksums": "component_only/scene_004/pace/sha256.json",
+          "chunks": "component_only/scene_004/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "component_only",
+      "scene": "scene_010",
+      "index": 10,
+      "scene_seed": 200011,
+      "instruction": "Bring red block, green block, and blue block to the center, stacking blue block on green block and green block on red block.",
+      "initial": "component_only/scene_010/initial.npz",
+      "initial_sha256": "12847dfdcad68a20f1735619ee3031bbba614324810ca70fccbe408f62b5f690",
+      "first_raw_sha256": "49302b592ad8a8745c15c554f2ca371b99edc37292629740311e5ecd0dc1342a",
+      "methods": {
+        "component": {
+          "success": true,
+          "steps": 428,
+          "queries": 20,
+          "attempt_s": 24.509647955885157,
+          "source_key": "heldout/stack_blocks_three/scene_010/component",
+          "record_manifest_sha256": "ee00c2e63f934a77f11ec8228e5863c282d4d74b37ce3dfd609055f49e59c9c7",
+          "record": "component_only/scene_010/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_010/component/record.json",
+          "timing": "component_only/scene_010/component/timing.json",
+          "checksums": "component_only/scene_010/component/sha256.json",
+          "chunks": "component_only/scene_010/component/chunks.npz"
+        },
+        "pace": {
+          "success": false,
+          "steps": 1200,
+          "queries": 59,
+          "attempt_s": 94.2654984460678,
+          "source_key": "heldout/stack_blocks_three/scene_010/pace",
+          "record_manifest_sha256": "d0b74a0648e544e1e0aa18135edb6e4fb85e7636e310580838706dde0ef70b0d",
+          "record": "component_only/scene_010/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_010/pace/record.json",
+          "timing": "component_only/scene_010/pace/timing.json",
+          "checksums": "component_only/scene_010/pace/sha256.json",
+          "chunks": "component_only/scene_010/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "component_only",
+      "scene": "scene_021",
+      "index": 21,
+      "scene_seed": 200023,
+      "instruction": "Move red block, green block, and blue block to the center, then stack green block over red block and blue block over green block.",
+      "initial": "component_only/scene_021/initial.npz",
+      "initial_sha256": "2fb28ae7a12a550ebd5f12c9bb506ef811fc06964a63217ad9f5d8a4b6a93872",
+      "first_raw_sha256": "7e0189f573110d941fd963331f19a83925db619fe41b1da7e5a531a034048a9e",
+      "methods": {
+        "component": {
+          "success": true,
+          "steps": 442,
+          "queries": 18,
+          "attempt_s": 24.992273415904492,
+          "source_key": "heldout/stack_blocks_three/scene_021/component",
+          "record_manifest_sha256": "d9bdaa2041a07c517bd33e5ae7a95e3359b7f14a935bc2063d627a219c944e52",
+          "record": "component_only/scene_021/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_021/component/record.json",
+          "timing": "component_only/scene_021/component/timing.json",
+          "checksums": "component_only/scene_021/component/sha256.json",
+          "chunks": "component_only/scene_021/component/chunks.npz"
+        },
+        "pace": {
+          "success": false,
+          "steps": 1200,
+          "queries": 46,
+          "attempt_s": 59.54176574596204,
+          "source_key": "heldout/stack_blocks_three/scene_021/pace",
+          "record_manifest_sha256": "8ed7778b6d5603de54a3d392491416259ecb1fbc69eb60106fcd32fbc452062d",
+          "record": "component_only/scene_021/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_021/pace/record.json",
+          "timing": "component_only/scene_021/pace/timing.json",
+          "checksums": "component_only/scene_021/pace/sha256.json",
+          "chunks": "component_only/scene_021/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "component_only",
+      "scene": "scene_029",
+      "index": 29,
+      "scene_seed": 200032,
+      "instruction": "Place red block, green block, and blue block at the table's center, then stack blue block on green block and green block on red block.",
+      "initial": "component_only/scene_029/initial.npz",
+      "initial_sha256": "2ecc7d46008a1fc9d794944e635b181834300b9a4ecb54b4ec8be2a1e12c4df1",
+      "first_raw_sha256": "41d465145d209dc394cfd9174a86fb6262484db362b495f1ce7cfe98c1c07aeb",
+      "methods": {
+        "component": {
+          "success": true,
+          "steps": 457,
+          "queries": 21,
+          "attempt_s": 27.675135409925133,
+          "source_key": "heldout/stack_blocks_three/scene_029/component",
+          "record_manifest_sha256": "6e52a9926d0bed87ea806d078b5f76b3b5eb9ef0c3983075aa76e9c02ea8d552",
+          "record": "component_only/scene_029/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_029/component/record.json",
+          "timing": "component_only/scene_029/component/timing.json",
+          "checksums": "component_only/scene_029/component/sha256.json",
+          "chunks": "component_only/scene_029/component/chunks.npz"
+        },
+        "pace": {
+          "success": false,
+          "steps": 1200,
+          "queries": 47,
+          "attempt_s": 60.45646710996516,
+          "source_key": "heldout/stack_blocks_three/scene_029/pace",
+          "record_manifest_sha256": "fc12728faae5915e41407cde810114924b484ad496857f43f3d90b52bbe7bf6b",
+          "record": "component_only/scene_029/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_029/pace/record.json",
+          "timing": "component_only/scene_029/pace/timing.json",
+          "checksums": "component_only/scene_029/pace/sha256.json",
+          "chunks": "component_only/scene_029/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "component_only",
+      "scene": "scene_035",
+      "index": 35,
+      "scene_seed": 200038,
+      "instruction": "Move red block, green block, and blue block to the center, then stack green block over red block and blue block over green block.",
+      "initial": "component_only/scene_035/initial.npz",
+      "initial_sha256": "f38f7b9892e725b95a24aad7c28b60e99aa3eb9ffd98aa721d84335209c783f9",
+      "first_raw_sha256": "ac0120a796748b173dd07b778e706933055b922b7384d810ab547950fc97664e",
+      "methods": {
+        "component": {
+          "success": true,
+          "steps": 449,
+          "queries": 20,
+          "attempt_s": 54.342202885076404,
+          "source_key": "heldout/stack_blocks_three/scene_035/component",
+          "record_manifest_sha256": "11f4b178860eca48f4d749196d46e9ac7648bda4b704832814b0cde56bd1c5cc",
+          "record": "component_only/scene_035/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_035/component/record.json",
+          "timing": "component_only/scene_035/component/timing.json",
+          "checksums": "component_only/scene_035/component/sha256.json",
+          "chunks": "component_only/scene_035/component/chunks.npz"
+        },
+        "pace": {
+          "success": false,
+          "steps": 1200,
+          "queries": 53,
+          "attempt_s": 66.40499665704556,
+          "source_key": "heldout/stack_blocks_three/scene_035/pace",
+          "record_manifest_sha256": "11bff49a8286da545278765c1037df424e1f45163eba1571264a95a5ee66acad",
+          "record": "component_only/scene_035/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_035/pace/record.json",
+          "timing": "component_only/scene_035/pace/timing.json",
+          "checksums": "component_only/scene_035/pace/sha256.json",
+          "chunks": "component_only/scene_035/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "component_only",
+      "scene": "scene_036",
+      "index": 36,
+      "scene_seed": 200039,
+      "instruction": "Bring red block, green block, blue block to the table's center and stack them: blue block on green block, green block on red block.",
+      "initial": "component_only/scene_036/initial.npz",
+      "initial_sha256": "f45bee6d6342621d2c94620afbb057aa38a3f759d9bea7a061e58afcf27bcfb7",
+      "first_raw_sha256": "33580f1cfa54b915ae93b537937ee1ff5d723b86cce9a84acedc4906cdfe35ea",
+      "methods": {
+        "component": {
+          "success": true,
+          "steps": 456,
+          "queries": 21,
+          "attempt_s": 25.880411102902144,
+          "source_key": "heldout/stack_blocks_three/scene_036/component",
+          "record_manifest_sha256": "e77035b4ac66006f33924e9381b7a3b9862349d153a5e3ab03df5756cd4ae19d",
+          "record": "component_only/scene_036/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_036/component/record.json",
+          "timing": "component_only/scene_036/component/timing.json",
+          "checksums": "component_only/scene_036/component/sha256.json",
+          "chunks": "component_only/scene_036/component/chunks.npz"
+        },
+        "pace": {
+          "success": false,
+          "steps": 1200,
+          "queries": 51,
+          "attempt_s": 67.49019808112644,
+          "source_key": "heldout/stack_blocks_three/scene_036/pace",
+          "record_manifest_sha256": "657457967d50a0638df7a4e46b8930ec47739be31519003056ae566961146a52",
+          "record": "component_only/scene_036/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_036/pace/record.json",
+          "timing": "component_only/scene_036/pace/timing.json",
+          "checksums": "component_only/scene_036/pace/sha256.json",
+          "chunks": "component_only/scene_036/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "component_only",
+      "scene": "scene_046",
+      "index": 46,
+      "scene_seed": 200049,
+      "instruction": "Bring red block, green block, blue block to the table's center and stack them: blue block on green block, green block on red block.",
+      "initial": "component_only/scene_046/initial.npz",
+      "initial_sha256": "a502e1f4ffa8c182a2415a93122687ed416dfedecd4ac45e4f8c624beea15375",
+      "first_raw_sha256": "eb5857e8ad846a1d76bad6b5fd88fd35acff83a7ab92ccfd1c23d676981879d3",
+      "methods": {
+        "component": {
+          "success": true,
+          "steps": 472,
+          "queries": 23,
+          "attempt_s": 29.014847262995318,
+          "source_key": "heldout/stack_blocks_three/scene_046/component",
+          "record_manifest_sha256": "573d4982e38de2040599982addf2543e99d4be7176469e6a8a31062edd93625c",
+          "record": "component_only/scene_046/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_046/component/record.json",
+          "timing": "component_only/scene_046/component/timing.json",
+          "checksums": "component_only/scene_046/component/sha256.json",
+          "chunks": "component_only/scene_046/component/chunks.npz"
+        },
+        "pace": {
+          "success": false,
+          "steps": 1200,
+          "queries": 62,
+          "attempt_s": 66.36490512499586,
+          "source_key": "heldout/stack_blocks_three/scene_046/pace",
+          "record_manifest_sha256": "42d068271ac5a7e46d6eb65d0d36225e99d4ac6f2483860ec6fe86146510ef11",
+          "record": "component_only/scene_046/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_046/pace/record.json",
+          "timing": "component_only/scene_046/pace/timing.json",
+          "checksums": "component_only/scene_046/pace/sha256.json",
+          "chunks": "component_only/scene_046/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "component_only",
+      "scene": "scene_049",
+      "index": 49,
+      "scene_seed": 200052,
+      "instruction": "Move red block, green block, and blue block to the center, then stack blue block on green block, and green block on red block.",
+      "initial": "component_only/scene_049/initial.npz",
+      "initial_sha256": "f2ca43a3aa0d742efa0555e14b4544cab55ac04f6ee592e5645598491dc741f1",
+      "first_raw_sha256": "14809f190f4ff44511c990d446ae019709022631338aee7a6506a4008eb2001a",
+      "methods": {
+        "component": {
+          "success": true,
+          "steps": 698,
+          "queries": 29,
+          "attempt_s": 38.02132246596739,
+          "source_key": "heldout/stack_blocks_three/scene_049/component",
+          "record_manifest_sha256": "b87a92eb882d4c1614b0459d1e191638a96f7433ad7e6c4d817e531eaad37a88",
+          "record": "component_only/scene_049/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_049/component/record.json",
+          "timing": "component_only/scene_049/component/timing.json",
+          "checksums": "component_only/scene_049/component/sha256.json",
+          "chunks": "component_only/scene_049/component/chunks.npz"
+        },
+        "pace": {
+          "success": false,
+          "steps": 1200,
+          "queries": 55,
+          "attempt_s": 63.55738849402405,
+          "source_key": "heldout/stack_blocks_three/scene_049/pace",
+          "record_manifest_sha256": "5b33eccd7c966130375b5d7c45510976eaae21c866d171f7e0ce854eac154e33",
+          "record": "component_only/scene_049/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_049/pace/record.json",
+          "timing": "component_only/scene_049/pace/timing.json",
+          "checksums": "component_only/scene_049/pace/sha256.json",
+          "chunks": "component_only/scene_049/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "component_only",
+      "scene": "scene_055",
+      "index": 55,
+      "scene_seed": 200058,
+      "instruction": "Bring red block, green block, and blue block to the center, stacking blue block on green block and green block on red block.",
+      "initial": "component_only/scene_055/initial.npz",
+      "initial_sha256": "edc5519681aba11ff8d3fba9e19f5b0a159a7c39f78da228220e676c8f6c4ec7",
+      "first_raw_sha256": "77a4c3ec1c5e97efb517117308dac0f367c078ac63a52c3d4368410359a7c591",
+      "methods": {
+        "component": {
+          "success": true,
+          "steps": 461,
+          "queries": 18,
+          "attempt_s": 54.94085733802058,
+          "source_key": "heldout/stack_blocks_three/scene_055/component",
+          "record_manifest_sha256": "7b95c1bda7b83218e2cab0ebcf1dbe604c08aa83c32553980af4310fdfed5276",
+          "record": "component_only/scene_055/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_055/component/record.json",
+          "timing": "component_only/scene_055/component/timing.json",
+          "checksums": "component_only/scene_055/component/sha256.json",
+          "chunks": "component_only/scene_055/component/chunks.npz"
+        },
+        "pace": {
+          "success": false,
+          "steps": 1200,
+          "queries": 60,
+          "attempt_s": 75.3247708841227,
+          "source_key": "heldout/stack_blocks_three/scene_055/pace",
+          "record_manifest_sha256": "eb84e6545025f2dd618f2c441bcbb7259203d5e3cefca2051e374efe056d30f9",
+          "record": "component_only/scene_055/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_055/pace/record.json",
+          "timing": "component_only/scene_055/pace/timing.json",
+          "checksums": "component_only/scene_055/pace/sha256.json",
+          "chunks": "component_only/scene_055/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "component_only",
+      "scene": "scene_061",
+      "index": 61,
+      "scene_seed": 200064,
+      "instruction": "Move red block, green block, and blue block to the table's center and stack them.",
+      "initial": "component_only/scene_061/initial.npz",
+      "initial_sha256": "21b6aefcb0828896fd338efd44860fbba365af78667cb834dae0b8fbf7930ba0",
+      "first_raw_sha256": "9eb32c0890ed275275ecd2fb644b9874745ca936797cfbbe74c1128c79072b53",
+      "methods": {
+        "component": {
+          "success": true,
+          "steps": 475,
+          "queries": 18,
+          "attempt_s": 27.515213943086565,
+          "source_key": "heldout/stack_blocks_three/scene_061/component",
+          "record_manifest_sha256": "33d2b0dc1a0a84781e1afc96a72ff2887f7d0ed2f21713bcdec1d4e47dbb8a1d",
+          "record": "component_only/scene_061/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_061/component/record.json",
+          "timing": "component_only/scene_061/component/timing.json",
+          "checksums": "component_only/scene_061/component/sha256.json",
+          "chunks": "component_only/scene_061/component/chunks.npz"
+        },
+        "pace": {
+          "success": false,
+          "steps": 1200,
+          "queries": 54,
+          "attempt_s": 66.32120450702496,
+          "source_key": "heldout/stack_blocks_three/scene_061/pace",
+          "record_manifest_sha256": "37c8b78758048e5034a76f2b93f5ea3bb00db6e0f82ae3692cd20c691bcb8a27",
+          "record": "component_only/scene_061/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_061/pace/record.json",
+          "timing": "component_only/scene_061/pace/timing.json",
+          "checksums": "component_only/scene_061/pace/sha256.json",
+          "chunks": "component_only/scene_061/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "component_only",
+      "scene": "scene_075",
+      "index": 75,
+      "scene_seed": 200078,
+      "instruction": "Transfer red block, green block, and blue block to the middle, then stack blue block over green block and green block over red block.",
+      "initial": "component_only/scene_075/initial.npz",
+      "initial_sha256": "8710e1d5a49f5e53d455556d02e47c2badd6fbbec6556795142f9f6ee6eccdb6",
+      "first_raw_sha256": "dad2fb188c54926f0c0727151862c377363e1914fe87a6054848143773f75ba1",
+      "methods": {
+        "component": {
+          "success": true,
+          "steps": 490,
+          "queries": 25,
+          "attempt_s": 58.185974976979196,
+          "source_key": "heldout/stack_blocks_three/scene_075/component",
+          "record_manifest_sha256": "4343e9789a6b58d5aa92a017b070ab184d2f708ec5659acfdb11fe3715beb4e5",
+          "record": "component_only/scene_075/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_075/component/record.json",
+          "timing": "component_only/scene_075/component/timing.json",
+          "checksums": "component_only/scene_075/component/sha256.json",
+          "chunks": "component_only/scene_075/component/chunks.npz"
+        },
+        "pace": {
+          "success": false,
+          "steps": 1200,
+          "queries": 59,
+          "attempt_s": 72.27834352711216,
+          "source_key": "heldout/stack_blocks_three/scene_075/pace",
+          "record_manifest_sha256": "3b46e79c6fb0387ac1636d04595ee3e1e2ed84a5f2b6a57b9b1c9295207cacd4",
+          "record": "component_only/scene_075/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_075/pace/record.json",
+          "timing": "component_only/scene_075/pace/timing.json",
+          "checksums": "component_only/scene_075/pace/sha256.json",
+          "chunks": "component_only/scene_075/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "component_only",
+      "scene": "scene_076",
+      "index": 76,
+      "scene_seed": 200079,
+      "instruction": "Bring red block, green block, and blue block to the center, stacking blue block on green block and green block on red block.",
+      "initial": "component_only/scene_076/initial.npz",
+      "initial_sha256": "a03de76808795f2f015a90ec50dec671810f306082da4367307e5419630c9a71",
+      "first_raw_sha256": "fb42d87dd1b7524862b24c5f150eb105c09a4ed60c761e3ed0f743e0751f686d",
+      "methods": {
+        "component": {
+          "success": true,
+          "steps": 424,
+          "queries": 18,
+          "attempt_s": 25.334092099918053,
+          "source_key": "heldout/stack_blocks_three/scene_076/component",
+          "record_manifest_sha256": "a76700fe50b25f13e67506b43c9f43ff614eeb6de3779ddc8f1f4ef28c5bbf6f",
+          "record": "component_only/scene_076/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_076/component/record.json",
+          "timing": "component_only/scene_076/component/timing.json",
+          "checksums": "component_only/scene_076/component/sha256.json",
+          "chunks": "component_only/scene_076/component/chunks.npz"
+        },
+        "pace": {
+          "success": false,
+          "steps": 1200,
+          "queries": 57,
+          "attempt_s": 70.8261716531124,
+          "source_key": "heldout/stack_blocks_three/scene_076/pace",
+          "record_manifest_sha256": "722ca419428f30ce0587715697b34dad8506428f70995b22bd288044ef90be93",
+          "record": "component_only/scene_076/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_076/pace/record.json",
+          "timing": "component_only/scene_076/pace/timing.json",
+          "checksums": "component_only/scene_076/pace/sha256.json",
+          "chunks": "component_only/scene_076/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "component_only",
+      "scene": "scene_086",
+      "index": 86,
+      "scene_seed": 200090,
+      "instruction": "Transfer red block, green block, and blue block to the middle, then stack blue block over green block and green block over red block.",
+      "initial": "component_only/scene_086/initial.npz",
+      "initial_sha256": "c562391f188cbcb14de08933f01ad94fd5d633150e5c0adefea2bf2d93ac9b70",
+      "first_raw_sha256": "647ffb302a73f49a12f168d409dfc3948006f6fe4ac3b6c1bda3ca4653d93fef",
+      "methods": {
+        "component": {
+          "success": true,
+          "steps": 433,
+          "queries": 22,
+          "attempt_s": 24.97959287604317,
+          "source_key": "heldout/stack_blocks_three/scene_086/component",
+          "record_manifest_sha256": "cb16310b4029ab7c90570a254361cc02999eb58bdab0b311092f5ed63f32f7ce",
+          "record": "component_only/scene_086/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_086/component/record.json",
+          "timing": "component_only/scene_086/component/timing.json",
+          "checksums": "component_only/scene_086/component/sha256.json",
+          "chunks": "component_only/scene_086/component/chunks.npz"
+        },
+        "pace": {
+          "success": false,
+          "steps": 1200,
+          "queries": 56,
+          "attempt_s": 76.03875364805572,
+          "source_key": "heldout/stack_blocks_three/scene_086/pace",
+          "record_manifest_sha256": "4e0884264da2e907cc64580261bb40eb5aee5ad7343d96bcd6b3680396c80efa",
+          "record": "component_only/scene_086/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/component_only/scene_086/pace/record.json",
+          "timing": "component_only/scene_086/pace/timing.json",
+          "checksums": "component_only/scene_086/pace/sha256.json",
+          "chunks": "component_only/scene_086/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "pace_only",
+      "scene": "scene_005",
+      "index": 5,
+      "scene_seed": 200006,
+      "instruction": "Move red block, green block, and blue block to the center of the table, then stack blue block on green block and green block on red block.",
+      "initial": "pace_only/scene_005/initial.npz",
+      "initial_sha256": "6474fb2df7192f2c0dbcb5ebaf626ce2adc0a8c1eea9ea58818fb5ebbe39c4f6",
+      "first_raw_sha256": "a0cc9c87cc0e5f0a385ebe3705ae55f3d72f6e1aeb377bbff9901d3e28bdfa40",
+      "methods": {
+        "component": {
+          "success": false,
+          "steps": 1200,
+          "queries": 52,
+          "attempt_s": 70.59778677788563,
+          "source_key": "heldout/stack_blocks_three/scene_005/component",
+          "record_manifest_sha256": "12ea2882c640f5187641e1bc3920c0be3f48e681c44c951b201ae889065b4ca7",
+          "record": "pace_only/scene_005/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_005/component/record.json",
+          "timing": "pace_only/scene_005/component/timing.json",
+          "checksums": "pace_only/scene_005/component/sha256.json",
+          "chunks": "pace_only/scene_005/component/chunks.npz"
+        },
+        "pace": {
+          "success": true,
+          "steps": 510,
+          "queries": 23,
+          "attempt_s": 29.701934800948948,
+          "source_key": "heldout/stack_blocks_three/scene_005/pace",
+          "record_manifest_sha256": "8e2a9047a3ab60eb3435a9a977b5674934ee4c058ac7398e6b069a6ef5dcf99a",
+          "record": "pace_only/scene_005/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_005/pace/record.json",
+          "timing": "pace_only/scene_005/pace/timing.json",
+          "checksums": "pace_only/scene_005/pace/sha256.json",
+          "chunks": "pace_only/scene_005/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "pace_only",
+      "scene": "scene_015",
+      "index": 15,
+      "scene_seed": 200016,
+      "instruction": "Bring red block, green block, and blue block to the table's center. Stack green block on red block and blue block on green block.",
+      "initial": "pace_only/scene_015/initial.npz",
+      "initial_sha256": "f7e7bea87782babd3b26f27c4e2bc5cbb41fdf5148dcdcf1f689c4ade8453478",
+      "first_raw_sha256": "0fe577123ce1d837aa803e32f78f97d5320933de7f88aa1b30326d085dcc564b",
+      "methods": {
+        "component": {
+          "success": false,
+          "steps": 1200,
+          "queries": 48,
+          "attempt_s": 92.98849473404698,
+          "source_key": "heldout/stack_blocks_three/scene_015/component",
+          "record_manifest_sha256": "c3d0158a53118a66ffde638d204f3b11ebee3ca109bbcdaca997682a02fb72e8",
+          "record": "pace_only/scene_015/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_015/component/record.json",
+          "timing": "pace_only/scene_015/component/timing.json",
+          "checksums": "pace_only/scene_015/component/sha256.json",
+          "chunks": "pace_only/scene_015/component/chunks.npz"
+        },
+        "pace": {
+          "success": true,
+          "steps": 457,
+          "queries": 20,
+          "attempt_s": 27.17511358880438,
+          "source_key": "heldout/stack_blocks_three/scene_015/pace",
+          "record_manifest_sha256": "529f16eed3729a0a25cd761d97c0cdcd88ee21fa2e183058b0a23a5800be8cfd",
+          "record": "pace_only/scene_015/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_015/pace/record.json",
+          "timing": "pace_only/scene_015/pace/timing.json",
+          "checksums": "pace_only/scene_015/pace/sha256.json",
+          "chunks": "pace_only/scene_015/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "pace_only",
+      "scene": "scene_020",
+      "index": 20,
+      "scene_seed": 200022,
+      "instruction": "Bring red block, green block, and blue block to the center, stacking blue block on green block and green block on red block.",
+      "initial": "pace_only/scene_020/initial.npz",
+      "initial_sha256": "2b95b6f5dceb29935876c0e2e8f9383790a5ffaae3c6d90a1c8f4e20b21c18c6",
+      "first_raw_sha256": "e2a0ffec5d4a383ef6efd25283387078a58fafcf99538b324bfa234212eb5d33",
+      "methods": {
+        "component": {
+          "success": false,
+          "steps": 1200,
+          "queries": 54,
+          "attempt_s": 67.05158323189244,
+          "source_key": "heldout/stack_blocks_three/scene_020/component",
+          "record_manifest_sha256": "412f28590b17c112a25f6e7ec4e0621f11320d7eb68c99345416039dcf18850b",
+          "record": "pace_only/scene_020/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_020/component/record.json",
+          "timing": "pace_only/scene_020/component/timing.json",
+          "checksums": "pace_only/scene_020/component/sha256.json",
+          "chunks": "pace_only/scene_020/component/chunks.npz"
+        },
+        "pace": {
+          "success": true,
+          "steps": 463,
+          "queries": 20,
+          "attempt_s": 27.82283145398833,
+          "source_key": "heldout/stack_blocks_three/scene_020/pace",
+          "record_manifest_sha256": "50c6990ee6f55355f6eef858af8f492887f427e2e61318bdbec87736352c6b0b",
+          "record": "pace_only/scene_020/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_020/pace/record.json",
+          "timing": "pace_only/scene_020/pace/timing.json",
+          "checksums": "pace_only/scene_020/pace/sha256.json",
+          "chunks": "pace_only/scene_020/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "pace_only",
+      "scene": "scene_026",
+      "index": 26,
+      "scene_seed": 200029,
+      "instruction": "Move red block, green block, and blue block to the center, then stack blue block on green block, and green block on red block.",
+      "initial": "pace_only/scene_026/initial.npz",
+      "initial_sha256": "619908c137fb5734fcb9d1c6fcae2f283f9bf603d8620c86e781f2660cb2d53e",
+      "first_raw_sha256": "98c0bbdc795e568f03ee08dca598f04e32e865dd901187e84dd34b6c158678b8",
+      "methods": {
+        "component": {
+          "success": false,
+          "steps": 1200,
+          "queries": 57,
+          "attempt_s": 65.84252086887136,
+          "source_key": "heldout/stack_blocks_three/scene_026/component",
+          "record_manifest_sha256": "a3c54f0a35984ed05a7d992a63ffa3a274ba7ce6b06a850286e841959b294261",
+          "record": "pace_only/scene_026/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_026/component/record.json",
+          "timing": "pace_only/scene_026/component/timing.json",
+          "checksums": "pace_only/scene_026/component/sha256.json",
+          "chunks": "pace_only/scene_026/component/chunks.npz"
+        },
+        "pace": {
+          "success": true,
+          "steps": 447,
+          "queries": 19,
+          "attempt_s": 24.523119254037738,
+          "source_key": "heldout/stack_blocks_three/scene_026/pace",
+          "record_manifest_sha256": "054b5d9321e15fd7da089608c2e8a14df9774bda82b2a2ae6320aebfbecb695f",
+          "record": "pace_only/scene_026/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_026/pace/record.json",
+          "timing": "pace_only/scene_026/pace/timing.json",
+          "checksums": "pace_only/scene_026/pace/sha256.json",
+          "chunks": "pace_only/scene_026/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "pace_only",
+      "scene": "scene_043",
+      "index": 43,
+      "scene_seed": 200046,
+      "instruction": "Move red block, green block, and blue block to the table's center and stack them.",
+      "initial": "pace_only/scene_043/initial.npz",
+      "initial_sha256": "ce7debe4b43de8539a47877c64c4c88cd79b14d386c994cb38a15baa030503ad",
+      "first_raw_sha256": "9ada7dbe097a9a3424bc4356e5d331e42e68117ed88bd10214d187779c7ef28f",
+      "methods": {
+        "component": {
+          "success": false,
+          "steps": 1200,
+          "queries": 53,
+          "attempt_s": 64.18608238897286,
+          "source_key": "heldout/stack_blocks_three/scene_043/component",
+          "record_manifest_sha256": "dcae5c13e0c0ebe726a8a30fccff9b0151f5273711af61c8c4e83d3a6ee91ef7",
+          "record": "pace_only/scene_043/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_043/component/record.json",
+          "timing": "pace_only/scene_043/component/timing.json",
+          "checksums": "pace_only/scene_043/component/sha256.json",
+          "chunks": "pace_only/scene_043/component/chunks.npz"
+        },
+        "pace": {
+          "success": true,
+          "steps": 473,
+          "queries": 18,
+          "attempt_s": 32.361853605136275,
+          "source_key": "heldout/stack_blocks_three/scene_043/pace",
+          "record_manifest_sha256": "6c346238ce2801132f0856afb7984166f49edf3827edd26c60565cadbb400917",
+          "record": "pace_only/scene_043/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_043/pace/record.json",
+          "timing": "pace_only/scene_043/pace/timing.json",
+          "checksums": "pace_only/scene_043/pace/sha256.json",
+          "chunks": "pace_only/scene_043/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "pace_only",
+      "scene": "scene_054",
+      "index": 54,
+      "scene_seed": 200057,
+      "instruction": "Bring red block, green block, blue block to the table's center and stack them: blue block on green block, green block on red block.",
+      "initial": "pace_only/scene_054/initial.npz",
+      "initial_sha256": "c7500698e1a00a29347d52c6c860d6b1d1db03638ddddd9884d20d4e79cb4cc2",
+      "first_raw_sha256": "21518d5c7e1d43bd5359963a7acfc4d3db0c5830347a2af7f3219fc1f85891ed",
+      "methods": {
+        "component": {
+          "success": false,
+          "steps": 1200,
+          "queries": 53,
+          "attempt_s": 64.65568863390945,
+          "source_key": "heldout/stack_blocks_three/scene_054/component",
+          "record_manifest_sha256": "fdd700e8d93fe40003c52da5a34b035ec8325cc143ad16cb848b82cc4309c75a",
+          "record": "pace_only/scene_054/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_054/component/record.json",
+          "timing": "pace_only/scene_054/component/timing.json",
+          "checksums": "pace_only/scene_054/component/sha256.json",
+          "chunks": "pace_only/scene_054/component/chunks.npz"
+        },
+        "pace": {
+          "success": true,
+          "steps": 448,
+          "queries": 19,
+          "attempt_s": 29.98526454414241,
+          "source_key": "heldout/stack_blocks_three/scene_054/pace",
+          "record_manifest_sha256": "9bf17142a7ae397258c74b56e48aaffa59530ceaae5715a30d3d58c54e1946eb",
+          "record": "pace_only/scene_054/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_054/pace/record.json",
+          "timing": "pace_only/scene_054/pace/timing.json",
+          "checksums": "pace_only/scene_054/pace/sha256.json",
+          "chunks": "pace_only/scene_054/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "pace_only",
+      "scene": "scene_056",
+      "index": 56,
+      "scene_seed": 200059,
+      "instruction": "Move red block, green block, and blue block to the center, then stack blue block on green block, and green block on red block.",
+      "initial": "pace_only/scene_056/initial.npz",
+      "initial_sha256": "8d3ff2a80b7d5ea259ea1e12eee407278943acc4734e96e9c6131aed186aea37",
+      "first_raw_sha256": "34c64a9712eb7d27ec84a7bb409c870197dede2a0db3ac9b234cbbfcec5f0269",
+      "methods": {
+        "component": {
+          "success": false,
+          "steps": 1200,
+          "queries": 52,
+          "attempt_s": 75.38983025006019,
+          "source_key": "heldout/stack_blocks_three/scene_056/component",
+          "record_manifest_sha256": "bdb0530f382e4c7917d90486504efcaa387f8dd011a835e488454e481ee67444",
+          "record": "pace_only/scene_056/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_056/component/record.json",
+          "timing": "pace_only/scene_056/component/timing.json",
+          "checksums": "pace_only/scene_056/component/sha256.json",
+          "chunks": "pace_only/scene_056/component/chunks.npz"
+        },
+        "pace": {
+          "success": true,
+          "steps": 433,
+          "queries": 20,
+          "attempt_s": 26.15694731893018,
+          "source_key": "heldout/stack_blocks_three/scene_056/pace",
+          "record_manifest_sha256": "39d8399995c96817fbb3f3d31414fa44af5e214c5e159160db5813e452e2b4d7",
+          "record": "pace_only/scene_056/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_056/pace/record.json",
+          "timing": "pace_only/scene_056/pace/timing.json",
+          "checksums": "pace_only/scene_056/pace/sha256.json",
+          "chunks": "pace_only/scene_056/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "pace_only",
+      "scene": "scene_057",
+      "index": 57,
+      "scene_seed": 200060,
+      "instruction": "Bring red block, green block, and blue block to the table's center. Stack green block on red block and blue block on green block.",
+      "initial": "pace_only/scene_057/initial.npz",
+      "initial_sha256": "95dd303339775e947662d23e7e1de8f7a541526aadc4c6d6f45077dc76be6c77",
+      "first_raw_sha256": "2e798086acbe29092d912572c8200347f7569479dfa5314e30a80dd3fc75fc10",
+      "methods": {
+        "component": {
+          "success": false,
+          "steps": 1200,
+          "queries": 52,
+          "attempt_s": 66.20090754888952,
+          "source_key": "heldout/stack_blocks_three/scene_057/component",
+          "record_manifest_sha256": "1ef72d824fc5a81d60878dbccee22d144efc5831f5e167103d100e22eef74cce",
+          "record": "pace_only/scene_057/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_057/component/record.json",
+          "timing": "pace_only/scene_057/component/timing.json",
+          "checksums": "pace_only/scene_057/component/sha256.json",
+          "chunks": "pace_only/scene_057/component/chunks.npz"
+        },
+        "pace": {
+          "success": true,
+          "steps": 434,
+          "queries": 19,
+          "attempt_s": 25.818904276005924,
+          "source_key": "heldout/stack_blocks_three/scene_057/pace",
+          "record_manifest_sha256": "aa4af5f18e1514d9727e482ad552fa583ca7c37edcd1a6f186d4542c76b0cb4d",
+          "record": "pace_only/scene_057/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_057/pace/record.json",
+          "timing": "pace_only/scene_057/pace/timing.json",
+          "checksums": "pace_only/scene_057/pace/sha256.json",
+          "chunks": "pace_only/scene_057/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "pace_only",
+      "scene": "scene_064",
+      "index": 64,
+      "scene_seed": 200067,
+      "instruction": "Move red block, green block, and blue block to the center, then stack blue block on green block, and green block on red block.",
+      "initial": "pace_only/scene_064/initial.npz",
+      "initial_sha256": "55e17987ff5a6fbc1101e632fa8447fa1b6b86b657938675a78b77f0bfdaf368",
+      "first_raw_sha256": "757eb8259dfa93f3baef54bb46fe66f91d2f5122cac7cbcc7a2ee19d5c8949e3",
+      "methods": {
+        "component": {
+          "success": false,
+          "steps": 1200,
+          "queries": 55,
+          "attempt_s": 66.54694731393829,
+          "source_key": "heldout/stack_blocks_three/scene_064/component",
+          "record_manifest_sha256": "694c4ad62e148f353bc5962d0cd291ed577e41eaad832a3439fbb4b05c9230dc",
+          "record": "pace_only/scene_064/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_064/component/record.json",
+          "timing": "pace_only/scene_064/component/timing.json",
+          "checksums": "pace_only/scene_064/component/sha256.json",
+          "chunks": "pace_only/scene_064/component/chunks.npz"
+        },
+        "pace": {
+          "success": true,
+          "steps": 450,
+          "queries": 16,
+          "attempt_s": 26.138498989865184,
+          "source_key": "heldout/stack_blocks_three/scene_064/pace",
+          "record_manifest_sha256": "8358d687fa0a6e47cfe227333241cb0be70c5229d2426c87a84986fd6558ed79",
+          "record": "pace_only/scene_064/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_064/pace/record.json",
+          "timing": "pace_only/scene_064/pace/timing.json",
+          "checksums": "pace_only/scene_064/pace/sha256.json",
+          "chunks": "pace_only/scene_064/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "pace_only",
+      "scene": "scene_068",
+      "index": 68,
+      "scene_seed": 200071,
+      "instruction": "Bring red block, green block, and blue block to the center, stacking blue block on green block and green block on red block.",
+      "initial": "pace_only/scene_068/initial.npz",
+      "initial_sha256": "9aa83b729a5bb110800898cd60ac8e2524eef50ef35cd9a159561c7484fa8f5c",
+      "first_raw_sha256": "8e205e109ec5fb4e7a7824694fe593cda3078a1ef1fc96ee6000a0915f9df406",
+      "methods": {
+        "component": {
+          "success": false,
+          "steps": 1200,
+          "queries": 54,
+          "attempt_s": 77.86316852876917,
+          "source_key": "heldout/stack_blocks_three/scene_068/component",
+          "record_manifest_sha256": "6286d5da104570dbf39ea03cbcd9a6cb476e3306861babdb78cc5a5341c668db",
+          "record": "pace_only/scene_068/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_068/component/record.json",
+          "timing": "pace_only/scene_068/component/timing.json",
+          "checksums": "pace_only/scene_068/component/sha256.json",
+          "chunks": "pace_only/scene_068/component/chunks.npz"
+        },
+        "pace": {
+          "success": true,
+          "steps": 428,
+          "queries": 21,
+          "attempt_s": 29.79545607510954,
+          "source_key": "heldout/stack_blocks_three/scene_068/pace",
+          "record_manifest_sha256": "45ec041759433ac3ea79fc58e86e3ecfa4c95dff3c60da2d7b4436ca95e81137",
+          "record": "pace_only/scene_068/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_068/pace/record.json",
+          "timing": "pace_only/scene_068/pace/timing.json",
+          "checksums": "pace_only/scene_068/pace/sha256.json",
+          "chunks": "pace_only/scene_068/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "pace_only",
+      "scene": "scene_079",
+      "index": 79,
+      "scene_seed": 200083,
+      "instruction": "Move red block, green block, and blue block to the center of the table, then stack blue block on green block and green block on red block.",
+      "initial": "pace_only/scene_079/initial.npz",
+      "initial_sha256": "01d97fc28b998bb6cb5fdf60025a92e7b4b5981aa47343f9d63cd3f404f68d92",
+      "first_raw_sha256": "4acedccbe9c8ca2f61d048e4a4c1b1b0914489ec3cbf8b54023f2ac2c8406e0b",
+      "methods": {
+        "component": {
+          "success": false,
+          "steps": 1200,
+          "queries": 52,
+          "attempt_s": 69.33374840510078,
+          "source_key": "heldout/stack_blocks_three/scene_079/component",
+          "record_manifest_sha256": "1f5f00d97d681b29b74d52929b241daf61ceee42055d5ef20f72b7f5d58fb4e2",
+          "record": "pace_only/scene_079/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_079/component/record.json",
+          "timing": "pace_only/scene_079/component/timing.json",
+          "checksums": "pace_only/scene_079/component/sha256.json",
+          "chunks": "pace_only/scene_079/component/chunks.npz"
+        },
+        "pace": {
+          "success": true,
+          "steps": 450,
+          "queries": 21,
+          "attempt_s": 26.09440645785071,
+          "source_key": "heldout/stack_blocks_three/scene_079/pace",
+          "record_manifest_sha256": "239c29f38b71a86390c051c9d18fca2ba94231874d86f683aee817494e99ed5a",
+          "record": "pace_only/scene_079/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_079/pace/record.json",
+          "timing": "pace_only/scene_079/pace/timing.json",
+          "checksums": "pace_only/scene_079/pace/sha256.json",
+          "chunks": "pace_only/scene_079/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "pace_only",
+      "scene": "scene_080",
+      "index": 80,
+      "scene_seed": 200084,
+      "instruction": "Bring red block, green block, blue block to the table's center and stack them: blue block on green block, green block on red block.",
+      "initial": "pace_only/scene_080/initial.npz",
+      "initial_sha256": "cf9e7dd4170389f81a1561300c50957a04b5090a2b9040ed18c65170d2cbca64",
+      "first_raw_sha256": "20a08da14ae6f870de09c072be8fd7adb103eb733159e662e252b8312fe58ccd",
+      "methods": {
+        "component": {
+          "success": false,
+          "steps": 1200,
+          "queries": 54,
+          "attempt_s": 64.63091032579541,
+          "source_key": "heldout/stack_blocks_three/scene_080/component",
+          "record_manifest_sha256": "4cff1e4370a67e0b8fe68a53c82220fa07cea1bc874bc58f524f7c7aa1cdad7a",
+          "record": "pace_only/scene_080/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_080/component/record.json",
+          "timing": "pace_only/scene_080/component/timing.json",
+          "checksums": "pace_only/scene_080/component/sha256.json",
+          "chunks": "pace_only/scene_080/component/chunks.npz"
+        },
+        "pace": {
+          "success": true,
+          "steps": 436,
+          "queries": 21,
+          "attempt_s": 25.010084581095725,
+          "source_key": "heldout/stack_blocks_three/scene_080/pace",
+          "record_manifest_sha256": "16a0e3263cd0ae25ac7adab4ab8842c7f8530146736df9b3e6c43522e2af4b94",
+          "record": "pace_only/scene_080/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_080/pace/record.json",
+          "timing": "pace_only/scene_080/pace/timing.json",
+          "checksums": "pace_only/scene_080/pace/sha256.json",
+          "chunks": "pace_only/scene_080/pace/chunks.npz"
+        }
+      }
+    },
+    {
+      "group": "pace_only",
+      "scene": "scene_089",
+      "index": 89,
+      "scene_seed": 200093,
+      "instruction": "Bring red block, green block, and blue block to the center, stacking blue block on green block and green block on red block.",
+      "initial": "pace_only/scene_089/initial.npz",
+      "initial_sha256": "4627bdf7e539b6441eac24be4cede5860c351fdeb69104b260edf9c5ab1ab643",
+      "first_raw_sha256": "c9b501d197c58c1f6239c74d91cf2602139c15370bb17d4185b0fa78d9723790",
+      "methods": {
+        "component": {
+          "success": false,
+          "steps": 1200,
+          "queries": 54,
+          "attempt_s": 69.82576163904741,
+          "source_key": "heldout/stack_blocks_three/scene_089/component",
+          "record_manifest_sha256": "6a11014438dae1919ae71550a18a326dfa3e5ead801f105977621f4c8abeac0e",
+          "record": "pace_only/scene_089/component/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_089/component/record.json",
+          "timing": "pace_only/scene_089/component/timing.json",
+          "checksums": "pace_only/scene_089/component/sha256.json",
+          "chunks": "pace_only/scene_089/component/chunks.npz"
+        },
+        "pace": {
+          "success": true,
+          "steps": 455,
+          "queries": 18,
+          "attempt_s": 25.70473513309844,
+          "source_key": "heldout/stack_blocks_three/scene_089/pace",
+          "record_manifest_sha256": "4e4fa5e077e2f0b35ec1e46f62bd34d7b341036bb9bb2559af68e31d8400bec4",
+          "record": "pace_only/scene_089/pace/record.json",
+          "record_url": "https://raw.githubusercontent.com/iC0ol/EAI/pace-stack-discordant-seed1-v1/pace_robotwin/results/discordant_stack/pace_only/scene_089/pace/record.json",
+          "timing": "pace_only/scene_089/pace/timing.json",
+          "checksums": "pace_only/scene_089/pace/sha256.json",
+          "chunks": "pace_only/scene_089/pace/chunks.npz"
+        }
+      }
+    }
+  ]
+}
